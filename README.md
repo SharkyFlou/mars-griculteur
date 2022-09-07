@@ -2,7 +2,7 @@
 
 Nom du groupe : LE groupe
 Code du groupe : PEC22-T3-A
-Participants : Charly FLU, Paolo HOOGLANG, Elise MARQUE, Léo NIEDERBERGER
+Participants : Charly FLU, Paolo HOOGLAND, Elise MARQUE, Léo NIEDERBERGER
 
 - p1
 - p2
