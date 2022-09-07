@@ -24,7 +24,7 @@ Participants : Charly FLU, Paolo HOOGLANG, Elise MARQUE, Léo NIEDERBERGER
 
 ## Objectif pédagogique
 
-
+Le joueur doit apprendre la dynamique entre l’offre et la demande, qui détermine les prix d’un produit : l’augmentation ou diminution de celles-ci cherche un équilibre, jusqu’à retrouver une concurrence pure et parfaite (CPP). Cependant, cet équilibre n’est pas exempt des possibles pénuries et aléas qui peuvent découler de l’extérieur du marché : ces chocs bouleversent le marché, et créent des phénomènes auxquels les joueurs devront s’adapter. 
 
 ## Type de jeu et mécanismes d'apprentissage
 
