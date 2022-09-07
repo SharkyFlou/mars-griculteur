@@ -28,9 +28,17 @@ Participants : Charly FLU, Paolo HOOGLANG, Elise MARQUE, Léo NIEDERBERGER
 
 ## Type de jeu et mécanismes d'apprentissage
 
-Mars'griculteur est un jeu de type tycoon, où le joueur incarne un fermier martien, qui doit gérer sa ferme, et vendre ses produits.
+Mars'griculteur est un jeu de type tycoon, où le joueur incarne un fermier martien, qui doit gérer sa ferme, puis vendre ses produits.
 
-Il doit donc ensuite essayer de revendre ses produits depuis son stand, en fixant lui même les prix.
+Le jeu se déroule en 2 étapes qui se répète.
+
+- Le joueur accède à sa ferme, choisit ce qu'il veut faire pousser, achète si il veut des nouvelles parcelles, mais cela augmentera le prix de loyer (cout fixe ++), ou en vend. Achète de nouveaux outils pour accélérer les récoltes, ou maximiser le rendement (engrais, tracteurs...)
+
+Puis le joueur valide ses choix
+
+- Le joueur accède a son stand, où il retrouve le fruit de ses récoltes, fixe le prix de ses produits en fonction des prix du marché, et des évènements en cours.
+
+Un nouvel évènement arrive, et le cycle recommence
 
 ## Liste des principales fonctionnalités
 
