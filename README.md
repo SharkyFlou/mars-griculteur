@@ -4,7 +4,7 @@ Nom du groupe : LE groupe
 Code du groupe : PEC22-T3-A  
 Participants : Charly FLU, Paolo HOOGLAND, Elise MARQUE, Léo NIEDERBERGER
 
-Lien des consigne : [git de Julien Gossa](https://git.unistra.fr/T234/T3)
+Lien des consigne : [https://git.unistra.fr/T234/T3](https://www.youtube.com/watch?v=xvFZjo5PgG0)
 
 ## Méta-Todo
 
