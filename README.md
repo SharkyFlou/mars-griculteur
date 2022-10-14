@@ -4,15 +4,15 @@ Nom du groupe : LE groupe
 Code du groupe : PEC22-T3-A  
 Participants : Charly FLU, Paolo HOOGLAND, Elise MARQUE, Léo NIEDERBERGER
 
-Lien des consigne : [https://git.unistra.fr/T234/T3](https://www.youtube.com/watch?v=xvFZjo5PgG0)
+Lien des consigne : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T234/T3)
 
 ## Méta-Todo
 
 - [X] Mettre en place son GIT et préparer les milestones
-- [ ] Acquérir le sujet et définir un objectif pédagogique
-- [ ] Concevoir un poster qui décrit cet objectif pédagogique 
-- [ ] Définir le type de jeu et les mécanismes d'apprentissage (Septembre)
-- [ ] Définir la liste des principales fonctionnalités 
+- [X] Acquérir le sujet et définir un objectif pédagogique
+- [X] Concevoir un poster qui décrit cet objectif pédagogique 
+- [X] Définir le type de jeu et les mécanismes d'apprentissage (Septembre)
+- [X] Définir la liste des principales fonctionnalités 
 - [ ] Développer ces fonctionnalités 
 - [ ] Evaluation à mi-parcours (Octobre)
 - [ ] Tester et équilibrer 
@@ -22,7 +22,9 @@ Lien des consigne : [https://git.unistra.fr/T234/T3](https://www.youtube.com/wat
 
 ## Objectif pédagogique
 
-Le joueur doit apprendre la dynamique entre l’offre et la demande, qui détermine les prix d’un produit : l’augmentation ou diminution de celles-ci cherche un équilibre, jusqu’à retrouver une concurrence pure et parfaite (CPP). Cependant, cet équilibre n’est pas exempt des possibles pénuries et aléas qui peuvent découler de l’extérieur du marché : ces chocs bouleversent le marché, et créent des phénomènes auxquels les joueurs devront s’adapter. 
+Le joueur doit apprendre la dynamique entre l’offre et la demande, qui détermine les prix d’un produit : l’augmentation ou diminution de celles-ci cherche un équilibre, jusqu’à retrouver une concurrence pure et parfaite (CPP).
+
+Cependant, cet équilibre n’est pas exempt des possibles pénuries et aléas qui peuvent découler de l’extérieur du marché : ces chocs bouleversent le marché, et créent des phénomènes auxquels les joueurs devront s’adapter. 
 
 ## Type de jeu et mécanismes d'apprentissage
 

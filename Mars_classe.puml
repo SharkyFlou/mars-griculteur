@@ -88,6 +88,8 @@ class Seed extends BasicPlant{
     - description : String
     - spriteLink : String
     - weight : Integer
+    - price : Integer
+    + getPrice() : Integer
     + getName() : String
     + getTimeGrowth() : Integer
     + getDescription() : String
@@ -111,7 +113,7 @@ class PlantedPlant extends BasicPlant{
     - spriteLinks : List<String>
     + getName() : String
     + getDescription() : String
-    + getSpriteLink() : String
+    + getSpriteLinks() : List<String>
 }
 
 enum EnumTypePlant{
@@ -191,16 +193,18 @@ class ToolsNoStack extends Tools{
 
 }
 
-class Notification{
+class Notification extends BasicItem{
     - name : String
     - description : String
     - imageLink : String
-    - date : Date
+    + month : Integer
+    + year : Integer
 }
 
 class Market{
     - history : Dictonary<EnumTypePlant,List<Integer>>
     - activeEvents : Dictionary<EventInfo,Integer>
+    - impossibleEvents : Dictionary<EventInfo,Integer>
 
     'Est executé au lancement de l'appli, recup l'historique des prix et des events
     + initMarket()
@@ -214,9 +218,8 @@ class Market{
 
 
 class AllEvents {
-    - allEventtDico : Dictionary<String,EventInfo>
-    - allEventNotPossible : Dictionary<String,Integer>
-    + getRandomEvent(month : Integer): Event
+    - allEventDico : Dictionary<String,EventInfo>
+    + getRandomEvent(month : Integer): EventInfo
 }
 
 
