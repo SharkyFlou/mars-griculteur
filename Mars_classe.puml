@@ -120,7 +120,16 @@ enum EnumTypePlant{
     AJOS
     AZLOC
     SIAM
+    ZIR
+    NICIR
+    AONIUQ
     OUCH
+    EVARETTEB
+    EUTIAL
+    TOCIRAH
+    LOSENRUOT
+    SIOP
+    NIPUL
     ECHAV
     ONTOUM
     ELUOP
@@ -156,6 +165,22 @@ abstract Tools extends BasicItem{
     - imageLink : String
     - price : Integer
     + getPrice() : Integer
+}
+
+enum EnumTools{
+    CHEBE
+    LLEPE
+    CHEPIO
+    CHEFOUR
+    TEAURA
+    CHEHA
+    CHETTEHA
+    TEURTRAC
+    SONNEUSEMOIS
+    RISATEURPULVE
+    DEUREPAN
+    RUECHAR
+    SEHER
 }
 
 class ToolsStack extends Tools{
