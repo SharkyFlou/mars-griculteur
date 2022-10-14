@@ -18,13 +18,13 @@ class Game{
 }
 
 class Shop{
-    - stock : Dictionnary[obj,Integer]
+    - stock : Dictionnary<BasicItem,Integer>
     - getAllPrice()
 }
 
-class Plot{
+class Plot extends BasicItem{
     - typePlot : EnumTypePlot
-    - isPlanted : boolean
+    - isPlanted : Boolean
     - currentPlant : PlantedPlant
     - timeGrown : Integer
     + getTypePlant() : EnumTypePlant
@@ -45,7 +45,7 @@ enum EnumTypePlot{
 
 abstract Inventory{
     - weightMax : Integer
-    - slots : Dictionnary[obj,Integer]
+    - slots : Dictionnary<BasicItem,Integer>
     + getInfoSlot() : String
 }
 
@@ -65,8 +65,17 @@ class InventoryToolsNoStack extends Inventory{
 
 }
 
+abstract BasicItem{
+    + id : Integer
+    - name : String
+    - description : String
+    - imageLink : String
+    - price : Integer
+    + getPrice() : Integer
+}
 
-abstract BasicPlant{
+
+abstract BasicPlant extends BasicItem{
      - description : String
      - typePlante : EnumTypePlant
      + getName() : String
@@ -118,15 +127,15 @@ enum EnumTypePlant{
     NIPAL
 }
 
-class allSeedPlant{
-    - allPlantDico : Dictionnary<EnumTypePlant,allPlantInfo>
+class AllSeedPlant{
+    - allPlantDico : Dictionnary<EnumTypePlant,AllPlantInfo>
     + createPlant(typePlant : EnumTypePlant) : Plant
     + createSeed(typePlant : EnumTypePlant) : Seed
     + createPlantedPlant(typePlant : EnumTypePlant) : PlantedPlant
     + getAllPlantTypes() : List<EnumTypePlant>
 }
 
-class plantInfo{
+class PlantInfo{
      + namePlant : EnumTypePlant
      + descriptions : String
      + growthTime : Integer
@@ -141,12 +150,12 @@ class plantInfo{
 }
 
 
-abstract Tools{
+abstract Tools extends BasicItem{
     - name : String
     - description : String
     - imageLink : String
     - price : Integer
-    + getPrice()
+    + getPrice() : Integer
 }
 
 class ToolsStack extends Tools{
@@ -161,12 +170,12 @@ class Notification{
     - name : String
     - description : String
     - imageLink : String
-    - date : date
+    - date : Date
 }
 
 class Market{
     - history : Dictonnary<EnumTypePlant,List<Integer>>
-    - activeEvents : Dictionnary<eventInfo,Integer>
+    - activeEvents : Dictionnary<EventInfo,Integer>
 
     'Est executé au lancement de l'appli, recup l'historique des prix et des events
     + initMarket()
@@ -179,21 +188,21 @@ class Market{
 }
 
 
-class allEvents {
+class AllEvents {
     - allEventtDico : Dictionnary<String,eventInfo>
     - allEventNotPossible : Dictionnary<String,Integer>
     + getRandomEvent(month : Integer): Event
 }
 
 
-class eventInfo{
+class EventInfo{
     + name : String
     + description : String
     + length : Integer
     + mutliplier : Real
-    + targetSeed : boolean
-    + targetPlant : boolean
-    + targetTool : boolean
+    + targetSeed : Boolean
+    + targetPlant : Boolean
+    + targetTool : Boolean
     + targetsPlant : List<EnumTypePlant>
     + targetsTool : List<Tool>
     + probabilities : Integer
@@ -210,19 +219,20 @@ Game *-d-> "notifcations \n*" Notification : <<own>> >
 Game *-d-> "inventory \n1" Inventory : <<own>> >
 Game *-d-> "shop \n1" Shop : <<own>> >
 
-Shop ..> Tools : <<uses>> >
-Shop ..> Seed : <<uses>> >
-Shop ..> Plot : <<uses>> >
-Shop ..> allSeedPlant : <<uses>> >
+
+
+Shop ..> BasicItem : <<uses>> >
+Shop ..> AllSeedPlant : <<uses>> >
 Shop ..> Market : <<interact>> >
 
-Notification..> allEvents : <<defined by>> >
+
+Notification..> AllEvents : <<defined by>> >
 
 
 Market ..> Plant : <<uses>> >
 Market ..> Seed : <<uses>> >
-Market ..>  "activeEvents\n*"allEvents : <<affected by / create>> >
-Market ..> allSeedPlant : <<uses>> >
+Market ..>  "activeEvents\n*"AllEvents : <<affected by / create>> >
+Market ..> AllSeedPlant : <<uses>> >
 
 
 Seed *--> "typePlante\n1" EnumTypePlant : <<type of>> >
@@ -231,9 +241,9 @@ Plant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
 
 Plot *--> EnumTypePlot : <<of type>> >
 
-allEvents *--> eventInfo
+AllEvents *--> EventInfo
 
-allSeedPlant *--> "allPlantDico \n*" plantInfo : <<own>> >
+AllSeedPlant *--> "allPlantDico \n*" PlantInfo : <<own>> >
 
 PlantedPlant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
 
