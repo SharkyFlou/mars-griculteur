@@ -1,0 +1,240 @@
+@startuml
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+hide enum methods
+
+class Game{
+    - market : Market
+    - shop : Shop
+    - inventory : Inventory
+    - notification : List<Notification>
+    + startGame()
+    + endGame()
+    - sellItems()
+    - eachMonth()
+    - displayNotification()
+
+}
+
+class Shop{
+    - stock : Dictionnary[obj,Integer]
+    - getAllPrice()
+}
+
+class Plot{
+    - typePlot : EnumTypePlot
+    - isPlanted : boolean
+    - currentPlant : PlantedPlant
+    - timeGrown : Integer
+    + getTypePlant() : EnumTypePlant
+    + getTimeGrowth() : Integer
+    + getCapacity() : Integer
+    + getQuantitySeed() : Integer
+    + growSeed() : Integer
+    - changePlantSprite()
+}
+
+enum EnumTypePlot{
+    DRY
+    RADIOACTIVE
+    RED
+    LUCKY
+    POISONOUS
+}
+
+abstract Inventory{
+    - weightMax : Integer
+    - slots : Dictionnary[obj,Integer]
+    + getInfoSlot() : String
+}
+
+class InventorySeed extends Inventory{
+
+}
+
+class InventoryPlant extends Inventory{
+
+}
+
+class InventoryToolsStack extends Inventory{
+
+}
+
+class InventoryToolsNoStack extends Inventory{
+
+}
+
+
+abstract BasicPlant{
+     - description : String
+     - typePlante : EnumTypePlant
+     + getName() : String
+     + getDescription() : String
+}
+
+class Seed extends BasicPlant{
+    - typePlante : EnumTypePlant
+    - timeGrowth : Integer
+    - description : String
+    - spriteLink : String
+    - weight : Integer
+    + getName() : String
+    + getTimeGrowth() : Integer
+    + getDescription() : String
+    + getWeight() : Integer
+    + getSpriteLink() : String
+}
+
+class Plant extends BasicPlant{
+    - description : String
+    - typePlante : EnumTypePlant
+    - spriteLink : String
+    + getName() : String
+    + getDescription() : String
+    + getSpriteLink() : String
+}
+
+class PlantedPlant extends BasicPlant{
+    - description : String
+    - typePlante : EnumTypePlant
+    - growthTime : Integer
+    - spriteLinks : List<String>
+    + getName() : String
+    + getDescription() : String
+    + getSpriteLink() : String
+}
+
+enum EnumTypePlant{
+    ELB
+    EGRO
+    AJOS
+    AZLOC
+    SIAM
+    OUCH
+    ECHAV
+    ONTOUM
+    ELUOP
+    NIPAL
+}
+
+class allSeedPlant{
+    - allPlantDico : Dictionnary<EnumTypePlant,allPlantInfo>
+    + createPlant(typePlant : EnumTypePlant) : Plant
+    + createSeed(typePlant : EnumTypePlant) : Seed
+    + createPlantedPlant(typePlant : EnumTypePlant) : PlantedPlant
+    + getAllPlantTypes() : List<EnumTypePlant>
+}
+
+class plantInfo{
+     + namePlant : EnumTypePlant
+     + descriptions : String
+     + growthTime : Integer
+     + seedSpriteLink : String
+     + plantSpriteLink : String
+     + plantedPlantSpriteLinks : List<String>
+     + seedWeight : Integer
+     + plantWeight : Integer
+     + basicSeedPrice : Integer
+     'the list is 12 long
+     + basicPlantPrice : List<Integer>
+}
+
+
+abstract Tools{
+    - name : String
+    - description : String
+    - imageLink : String
+    - price : Integer
+    + getPrice()
+}
+
+class ToolsStack extends Tools{
+
+}
+
+class ToolsNoStack extends Tools{
+
+}
+
+class Notification{
+    - name : String
+    - description : String
+    - imageLink : String
+    - date : date
+}
+
+class Market{
+    - history : Dictonnary<EnumTypePlant,List<Integer>>
+    - activeEvents : Dictionnary<eventInfo,Integer>
+
+    'Est executé au lancement de l'appli, recup l'historique des prix et des events
+    + initMarket()
+    + nextMonth() : Event
+    + getHistory() : Dictonnary<EnumTypePlant,List<Integer>>
+    + getLastPricePlant(plante : EnumTypePlant) : Integer
+    + getLastPriceSeed(plante : EnumTypePlant) : Integer
+    - createNewEvent() : Event
+    + nbrSell(plante : EnumTypePlant, number : Integer,price : Integer) : Integer
+}
+
+
+class allEvents {
+    - allEventtDico : Dictionnary<String,eventInfo>
+    - allEventNotPossible : Dictionnary<String,Integer>
+    + getRandomEvent(month : Integer): Event
+}
+
+
+class eventInfo{
+    + name : String
+    + description : String
+    + length : Integer
+    + mutliplier : Real
+    + targetSeed : boolean
+    + targetPlant : boolean
+    + targetTool : boolean
+    + targetsPlant : List<EnumTypePlant>
+    + targetsTool : List<Tool>
+    + probabilities : Integer
+    'Permet de dire qu'un event est dispo que a partir du mois 0, du 1, du 2....
+    + unlockableAfter : Integer
+    + imageLink : String
+    + timeBetween : Integer
+}
+
+
+
+Game *-d-> "market \n1" Market : <<own>> >
+Game *-d-> "notifcations \n*" Notification : <<own>> >
+Game *-d-> "inventory \n1" Inventory : <<own>> >
+Game *-d-> "shop \n1" Shop : <<own>> >
+
+Shop ..> Tools : <<uses>> >
+Shop ..> Seed : <<uses>> >
+Shop ..> Plot : <<uses>> >
+Shop ..> allSeedPlant : <<uses>> >
+Shop ..> Market : <<interact>> >
+
+Notification..> allEvents : <<defined by>> >
+
+
+Market ..> Plant : <<uses>> >
+Market ..> Seed : <<uses>> >
+Market ..>  "activeEvents\n*"allEvents : <<affected by / create>> >
+Market ..> allSeedPlant : <<uses>> >
+
+
+Seed *--> "typePlante\n1" EnumTypePlant : <<type of>> >
+
+Plant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
+
+Plot *--> EnumTypePlot : <<of type>> >
+
+allEvents *--> eventInfo
+
+allSeedPlant *--> "allPlantDico \n*" plantInfo : <<own>> >
+
+PlantedPlant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
+
+@enduml
