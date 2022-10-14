@@ -31,7 +31,7 @@ class Plot extends BasicItem{
     + getTimeGrowth() : Integer
     + getCapacity() : Integer
     + getQuantitySeed() : Integer
-    + growSeed() : Integer
+    + growSeed()
     - changePlantSprite()
 }
 
@@ -205,7 +205,7 @@ class Market{
     'Est executé au lancement de l'appli, recup l'historique des prix et des events
     + initMarket()
     + nextMonth() : Event
-    + getHistory() : Dictonnary<EnumTypePlant,List<Integer>>
+    + getHistory() : Dictonary<EnumTypePlant,List<Integer>>
     + getLastPricePlant(plante : EnumTypePlant) : Integer
     + getLastPriceSeed(plante : EnumTypePlant) : Integer
     - createNewEvent() : Event
