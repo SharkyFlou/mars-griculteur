@@ -18,7 +18,7 @@ class Game{
 }
 
 class Shop{
-    - stock : Dictionnary<BasicItem,Integer>
+    - stock : Dictionary<BasicItem,Integer>
     - getAllPrice()
 }
 
@@ -45,7 +45,7 @@ enum EnumTypePlot{
 
 abstract Inventory{
     - weightMax : Integer
-    - slots : Dictionnary<BasicItem,Integer>
+    - slots : Dictionary<BasicItem,Integer>
     + getInfoSlot() : String
 }
 
@@ -137,7 +137,7 @@ enum EnumTypePlant{
 }
 
 class AllSeedPlant{
-    - allPlantDico : Dictionnary<EnumTypePlant,AllPlantInfo>
+    - allPlantDico : Dictionary<EnumTypePlant,AllPlantInfo>
     + createPlant(typePlant : EnumTypePlant) : Plant
     + createSeed(typePlant : EnumTypePlant) : Seed
     + createPlantedPlant(typePlant : EnumTypePlant) : PlantedPlant
@@ -199,8 +199,8 @@ class Notification{
 }
 
 class Market{
-    - history : Dictonnary<EnumTypePlant,List<Integer>>
-    - activeEvents : Dictionnary<EventInfo,Integer>
+    - history : Dictonary<EnumTypePlant,List<Integer>>
+    - activeEvents : Dictionary<EventInfo,Integer>
 
     'Est executé au lancement de l'appli, recup l'historique des prix et des events
     + initMarket()
@@ -214,8 +214,8 @@ class Market{
 
 
 class AllEvents {
-    - allEventtDico : Dictionnary<String,eventInfo>
-    - allEventNotPossible : Dictionnary<String,Integer>
+    - allEventtDico : Dictionary<String,EventInfo>
+    - allEventNotPossible : Dictionary<String,Integer>
     + getRandomEvent(month : Integer): Event
 }
 
