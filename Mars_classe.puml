@@ -18,19 +18,19 @@ class Game{
 }
 
 class Shop{
-    - stock : Dictionnary[obj,Integer]
+    - stock : Dictionary<BasicItem,Integer>
     - getAllPrice()
 }
 
-class Plot{
+class Plot extends BasicItem{
     - typePlot : EnumTypePlot
-    - isPlanted : boolean
+    - isPlanted : Boolean
     - currentPlant : PlantedPlant
     - timeGrown : Integer
-    + getTypePlant()
-    + getTimeGrowth()
-    + getCapacity()
-    + getQuantitySeed()
+    + getTypePlant() : EnumTypePlant
+    + getTimeGrowth() : Integer
+    + getCapacity() : Integer
+    + getQuantitySeed() : Integer
     + growSeed()
     - changePlantSprite()
 }
@@ -45,8 +45,8 @@ enum EnumTypePlot{
 
 abstract Inventory{
     - weightMax : Integer
-    - slots : Dictionnary[obj,Integer]
-    + getInfoSlot()
+    - slots : Dictionary<BasicItem,Integer>
+    + getInfoSlot() : String
 }
 
 class InventorySeed extends Inventory{
@@ -65,8 +65,17 @@ class InventoryToolsNoStack extends Inventory{
 
 }
 
+abstract BasicItem{
+    + id : Integer
+    - name : String
+    - description : String
+    - imageLink : String
+    - price : Integer
+    + getPrice() : Integer
+}
 
-abstract BasicPlant{
+
+abstract BasicPlant extends BasicItem{
      - description : String
      - typePlante : EnumTypePlant
      + getName() : String
@@ -80,10 +89,10 @@ class Seed extends BasicPlant{
     - spriteLink : String
     - weight : Integer
     + getName() : String
-    + getTimeGrowth : Integer
-    + getDescription : String
-    + getWeight : Integer
-    + getSpriteLink : String
+    + getTimeGrowth() : Integer
+    + getDescription() : String
+    + getWeight() : Integer
+    + getSpriteLink() : String
 }
 
 class Plant extends BasicPlant{
@@ -101,8 +110,8 @@ class PlantedPlant extends BasicPlant{
     - growthTime : Integer
     - spriteLinks : List<String>
     + getName() : String
-    + getDescription : String
-    + getSpriteLink : String
+    + getDescription() : String
+    + getSpriteLink() : String
 }
 
 enum EnumTypePlant{
@@ -119,7 +128,7 @@ enum EnumTypePlant{
 }
 
 class AllSeedPlant{
-    - allPlantDico : Dictionnary<EnumTypePlant,allPlantInfo>
+    - allPlantDico : Dictionary<EnumTypePlant,AllPlantInfo>
     + createPlant(typePlant : EnumTypePlant) : Plant
     + createSeed(typePlant : EnumTypePlant) : Seed
     + createPlantedPlant(typePlant : EnumTypePlant) : PlantedPlant
@@ -141,12 +150,12 @@ class PlantInfo{
 }
 
 
-abstract Tools{
+abstract Tools extends BasicItem{
     - name : String
     - description : String
     - imageLink : String
     - price : Integer
-    + getPrice
+    + getPrice() : Integer
 }
 
 class ToolsStack extends Tools{
@@ -161,17 +170,17 @@ class Notification{
     - name : String
     - description : String
     - imageLink : String
-    - date : date
+    - date : Date
 }
 
 class Market{
-    - history : Dictonnary<EnumTypePlant,List<Integer>>
-    - activeEvents : Dictionnary<eventInfo,Integer>
+    - history : Dictonary<EnumTypePlant,List<Integer>>
+    - activeEvents : Dictionary<EventInfo,Integer>
 
     'Est executé au lancement de l'appli, recup l'historique des prix et des events
     + initMarket()
     + nextMonth() : Event
-    + getHistory() : Dictonnary<EnumTypePlant,List<Integer>>
+    + getHistory() : Dictonary<EnumTypePlant,List<Integer>>
     + getLastPricePlant(plante : EnumTypePlant) : Integer
     + getLastPriceSeed(plante : EnumTypePlant) : Integer
     - createNewEvent() : Event
@@ -180,8 +189,8 @@ class Market{
 
 
 class AllEvents {
-    - allEventDico : Dictionnary<String,eventInfo>
-    - allEventNotPossible : Dictionnary<String,Integer>
+    - allEventtDico : Dictionary<String,EventInfo>
+    - allEventNotPossible : Dictionary<String,Integer>
     + getRandomEvent(month : Integer): Event
 }
 
@@ -191,9 +200,9 @@ class EventInfo{
     + description : String
     + length : Integer
     + mutliplier : Real
-    + targetSeed : boolean
-    + targetPlant : boolean
-    + targetTool : boolean
+    + targetSeed : Boolean
+    + targetPlant : Boolean
+    + targetTool : Boolean
     + targetsPlant : List<EnumTypePlant>
     + targetsTool : List<Tool>
     + probabilities : Integer
@@ -210,19 +219,20 @@ Game *-d-> "notifcations \n*" Notification : <<own>> >
 Game *-d-> "inventory \n1" Inventory : <<own>> >
 Game *-d-> "shop \n1" Shop : <<own>> >
 
-Shop ..> Tools : <<uses>> >
-Shop ..> Seed : <<uses>> >
-Shop ..> Plot : <<uses>> >
-Shop ..> allSeedPlant : <<uses>> >
+
+
+Shop ..> BasicItem : <<uses>> >
+Shop ..> AllSeedPlant : <<uses>> >
 Shop ..> Market : <<interact>> >
 
-Notification..> allEvents : <<defined by>> >
+
+Notification..> AllEvents : <<defined by>> >
 
 
 Market ..> Plant : <<uses>> >
 Market ..> Seed : <<uses>> >
-Market ..>  "activeEvents\n*"allEvents : <<affected by / create>> >
-Market ..> allSeedPlant : <<uses>> >
+Market ..>  "activeEvents\n*"AllEvents : <<affected by / create>> >
+Market ..> AllSeedPlant : <<uses>> >
 
 
 Seed *--> "typePlante\n1" EnumTypePlant : <<type of>> >
@@ -231,9 +241,9 @@ Plant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
 
 Plot *--> EnumTypePlot : <<of type>> >
 
-allEvents *--> eventInfo
+AllEvents *--> EventInfo
 
-allSeedPlant *--> "allPlantDico \n*" plantInfo : <<own>> >
+AllSeedPlant *--> "allPlantDico \n*" PlantInfo : <<own>> >
 
 PlantedPlant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
 
