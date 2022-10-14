@@ -9,7 +9,5 @@ public enum TypePlant{
     Ontoum,
     Eluop,
     Nipal,
-    Azloc,
-    Eloup,
-    
+    Azloc    
 }
