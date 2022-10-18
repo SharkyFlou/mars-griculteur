@@ -20,9 +20,13 @@ namespace game
         }
 
 
-        public void createMarket()
+        public void createMarket(AllEvents allEvents)
         {
-
+            for(int i =0; i<12; i++)
+            {
+                nextMonth(allEvents,i,false);
+            }
+            //LEO need to save it (the history)
         }
 
         private void nextActiveEvent()
@@ -77,11 +81,11 @@ namespace game
             return;
         }
 
-        public EventInfo nextMonth(AllEvents allEvents, int month)
+        public EventInfo nextMonth(AllEvents allEvents, int month, bool eventON)
         {
             nextActiveEvent();
             nextImpossibleEvents();
-            generateNewHistoryMonth(month, true);
+            generateNewHistoryMonth(month, eventON);
 
 
             //LEO modify the history for each plant, and save it
