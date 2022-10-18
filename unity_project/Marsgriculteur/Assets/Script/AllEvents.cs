@@ -7,11 +7,12 @@ namespace game
     public class AllEvents
     {
         private Dictionary<string, EventInfo> allEventDico;
+
+
         public EventInfo getRandomEvent(int month)
         {
             return new EventInfo();
         }
 
     }
-
 }
