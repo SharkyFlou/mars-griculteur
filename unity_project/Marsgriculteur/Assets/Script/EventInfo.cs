@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace game
 {
-    public class EventInfo : MonoBehaviour
+    public class EventInfo
     {
         public string namee;
         public string description;
