@@ -9,30 +9,41 @@ namespace game
     {
         private EnumTypePlot typePlot;
         private bool isPlanted;
-        private PlantedPlant currentPlant;
+        private EnumTypePlant currentPlant;
         private int timeGrown;
         private int capacity;
         private int number;
 
+        public Plot(EnumTypePlot paraTypePlot, EnumTypePlant paraCurrentPlant, int paraTimeGrown, int paraCapacity, int paraNumber){
+            this.typePlot = paraTypePlot;
+            this.isPlanted = false;
+            this.currentPlant = paraCurrentPlant;
+            this.timeGrown = paraTimeGrown;
+            this.capacity = paraCapacity;
+            this.number = paraNumber;
+        }
 
+        public bool setIsPlanted(bool paraIsPlanted){
+            return this.isPlanted = paraIsPlanted;
+        }
         public int getTimeGrown()
         {
-            return timeGrown;
+            return this.timeGrown;  
         }
 
         public EnumTypePlant getTypePlant()
         {
-            return EnumTypePlant.ELB;
+            return this.currentPlant;
         }
 
         public int getCapacity()
         {
-            return capacity;
+            return this.capacity;
         }
 
         public int getQuantitySeed()
         {
-            return number;
+            return this.number;
         }
 
         public void growSeed()

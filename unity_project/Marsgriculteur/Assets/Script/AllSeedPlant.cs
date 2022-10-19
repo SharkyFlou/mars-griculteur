@@ -12,19 +12,19 @@ namespace game
 
         public Plant createPlant(EnumTypePlant typePlant)
         {
-            Plant pl = new Plant();
+            Plant pl = new Plant(typePlant);
             return pl;
         }
 
         public Seed createSeed(EnumTypePlant typePlant)
         {
-            Seed pl = new Seed();
+            Seed pl = new Seed(typePlant, 2, 30, 4);
             return pl;
         }
 
         public PlantedPlant createPlantedPlant(EnumTypePlant typePlant)
         {
-            PlantedPlant pl = new PlantedPlant();
+            PlantedPlant pl = new PlantedPlant(typePlant, 3);
             return pl;
         }
 
@@ -32,20 +32,6 @@ namespace game
         {
             List<EnumTypePlant> liste = new List<EnumTypePlant>();
             return liste;
-        }
-
-
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 

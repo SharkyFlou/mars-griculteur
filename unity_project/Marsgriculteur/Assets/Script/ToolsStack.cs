@@ -7,7 +7,9 @@ namespace game
 {
     public class ToolsStack : Tool
     {
-
+        public ToolsStack(){
+            
+        }
     }
 
 }
