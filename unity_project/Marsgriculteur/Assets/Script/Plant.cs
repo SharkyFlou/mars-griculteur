@@ -6,18 +6,10 @@ namespace game
 {
     public class Plant : BasicPlant
     {
+        private EnumTypePlant typePlant;
 
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+        public Plant(EnumTypePlant typePlante){
+            this.typePlant = typePlante;
         }
     }
 

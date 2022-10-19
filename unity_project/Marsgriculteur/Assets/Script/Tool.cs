@@ -5,9 +5,17 @@ using UnityEngine;
 
 namespace game
 {
-    public class Tool : BasicItem
+    abstract public class Tool : BasicItem
     {
         private int price;
+
+         public Tool(){
+            price = 666;
+        }
+
+        public Tool(int paraPrice){
+            price = paraPrice;
+        }
 
         public int getPrice()
         {

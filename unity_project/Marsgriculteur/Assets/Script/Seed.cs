@@ -7,35 +7,31 @@ namespace game
 {
     public class Seed : BasicPlant
     {
+        private EnumTypePlant name;
         private int timeGrowth;
         private int weight;
         private int price;
 
+        public Seed(EnumTypePlant paraName, int paraTimeGrowth, int paraWeight, int paraPrice){
+            this.name = paraName;
+            this.timeGrowth = paraTimeGrowth;
+            this.weight = paraWeight;
+            this.price = paraPrice;
+        }
+
         public int getPrice()
         {
-            return price;
+            return this.price;
         }
 
         public int getTimeGrowth()
         {
-            return timeGrowth;
+            return this.timeGrowth;
         }
 
         public int getWeighth()
         {
-            return weight;
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            return this.weight;
         }
     }
 

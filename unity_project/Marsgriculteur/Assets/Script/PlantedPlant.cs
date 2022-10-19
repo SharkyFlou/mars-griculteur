@@ -9,6 +9,13 @@ namespace game
     {
         private List<string> spriteLinks = new List<string>();
         private int growthTime;
+        private EnumTypePlant typePlant;
+
+        public PlantedPlant(EnumTypePlant paraTypePlant, int paraGrowthTime)
+        {
+            this.typePlant = paraTypePlant;
+            this.growthTime = paraGrowthTime;
+        }
 
         public List<string> getSpriteLinks()
         {
@@ -18,18 +25,6 @@ namespace game
         public int getGrowthTime()
         {
             return growthTime;
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 
