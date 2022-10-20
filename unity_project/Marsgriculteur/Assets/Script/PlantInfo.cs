@@ -7,6 +7,7 @@ namespace game
 {
     public class PlantInfo
     {
+        public int id;
         public EnumTypePlant namePlant;
         public string description;
         public int growthTime;

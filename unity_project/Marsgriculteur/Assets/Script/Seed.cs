@@ -11,6 +11,30 @@ namespace game
         private int weight;
         private int price;
 
+        public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, string paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
+        {
+            this.typePlante = paraTypePlant;
+            this.id = paraId;
+            this.name = paraName;
+            this.description = paraDescription;
+            this.imageLink = paraImagelink;
+            this.timeGrowth = paraTimeGroth;
+            this.weight = paraWeight;
+            this.price = paraPrice;
+        }
+
+        public Seed()
+        {
+            this.typePlante = EnumTypePlant.ELB;
+            this.id = 666;
+            this.name = "Error";
+            this.description = "Error, using an empty constructor";
+            this.imageLink = Game.getDefaultImage();
+            this.timeGrowth = -1;
+            this.weight = -1;
+            this.price = -1;
+        }
+
         public int getPrice()
         {
             return price;
