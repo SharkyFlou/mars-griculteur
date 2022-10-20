@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace game
 {
-    enum EnumTypePlot
+    public enum EnumTypePlot
     {
         DRY,
         RADIOACTIVE,

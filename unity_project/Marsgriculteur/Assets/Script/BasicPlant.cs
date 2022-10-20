@@ -6,24 +6,19 @@ namespace game
 {
     abstract public class BasicPlant : BasicItem
     {
-        private EnumTypePlant typePlante;
+        protected EnumTypePlant typePlante;
 
+        public BasicPlant(){
+            typePlante = EnumTypePlant.ELB;
+        }
+
+        public BasicPlant(EnumTypePlant paraTypePlant){
+            this.typePlante = paraTypePlant;
+        }
 
         public EnumTypePlant getTypePlante()
         {
             return typePlante;
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 }

@@ -7,7 +7,8 @@ namespace game
 {
     public class ToolsNoStack : Tool
     {
-
+        public ToolsNoStack(){
+            
+        }
     }
 }
-
