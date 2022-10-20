@@ -7,9 +7,9 @@ namespace game
     abstract public class BasicItem
     {
         public int id;
-        private string name;
-        private string description;
-        private string imageLink;
+        protected string name;
+        protected string description;
+        protected string imageLink;
 
         public BasicItem()
         {

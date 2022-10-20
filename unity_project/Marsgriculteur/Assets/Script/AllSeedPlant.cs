@@ -12,7 +12,7 @@ namespace game
 
         public Plant createPlant(EnumTypePlant typePlant)
         {
-            Plant pl = new Plant(typePlant);
+            Plant pl = new Plant(typePlant, 122, "ba", "ba", "ba");
             return pl;
         }
 
