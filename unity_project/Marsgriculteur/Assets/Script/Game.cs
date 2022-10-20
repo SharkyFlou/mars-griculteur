@@ -11,8 +11,7 @@ namespace game
         private Shop shop;
         private InventoryPlant inventoryPlant;
         private InventorySeed inventorySeed;
-        private InventoryToolsNoStack inventoryToolsNoStack;
-        private InventoryToolsStack inventoryToolsStack;
+        private List<Notification> notification = new List<Notification>();
 
         public void startGame()
         {
@@ -35,18 +34,6 @@ namespace game
         }
 
         private void displayNotification()
-        {
-
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
         {
 
         }
