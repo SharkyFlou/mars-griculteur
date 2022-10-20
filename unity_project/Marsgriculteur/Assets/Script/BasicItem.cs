@@ -11,32 +11,31 @@ namespace game
         protected string description;
         protected string imageLink;
 
+        public BasicItem()
+        {
+
+        }
+
+        public BasicItem(int paraId, string paraName, string paraDescription, string paraImageLink){
+            this.id = paraId;
+            this.name = paraName;
+            this.description = paraDescription;
+            this.imageLink = paraImageLink;
+        }
+
         public string getImageLink()
         {
-            return imageLink;
-        }
+            return this.imageLink;
+        }   
 
         public string getDescription()
         {
-            return description;
+            return this.description;
         }
 
         public string getName()
         {
-            return name;
-        }
-
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            return this.name;
         }
     }
 
