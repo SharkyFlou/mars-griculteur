@@ -11,14 +11,14 @@ namespace game
         private int weight;
         private int price;
 
-        public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, string paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
+        public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, string paraImagelink, int paraTimeGrowth, int paraWeight, int paraPrice)
         {
             this.typePlante = paraTypePlant;
             this.id = paraId;
             this.name = paraName;
             this.description = paraDescription;
             this.imageLink = paraImagelink;
-            this.timeGrowth = paraTimeGroth;
+            this.timeGrowth = paraTimeGrowth;
             this.weight = paraWeight;
             this.price = paraPrice;
         }
@@ -45,21 +45,9 @@ namespace game
             return timeGrowth;
         }
 
-        public int getWeighth()
+        public int getWeight()
         {
             return weight;
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
         }
     }
 
