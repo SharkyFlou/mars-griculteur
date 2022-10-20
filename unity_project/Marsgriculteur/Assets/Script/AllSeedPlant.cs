@@ -5,9 +5,10 @@ using UnityEngine;
 
 namespace game
 {
+    [System.Serializable]
     public class AllSeedPlant
     {
-        private Dictionary<EnumTypePlant, PlantInfo> allPlantDico = new Dictionary<EnumTypePlant, PlantInfo>();
+        public Dictionary<EnumTypePlant, PlantInfo> allPlantDico = new Dictionary<EnumTypePlant, PlantInfo>();
 
         public AllSeedPlant()
         {
@@ -83,6 +84,31 @@ namespace game
             
             return listPl;
         }
+
+        override public string ToString()
+        {
+            string rtrn = string.Empty;
+            foreach(KeyValuePair<EnumTypePlant, PlantInfo> kvp in allPlantDico)
+            {
+                rtrn += kvp.Key + " : \n{";
+                rtrn += "\t" + kvp.Value.id.ToString() + "\n";
+                rtrn += "\t" + kvp.Value.namePlant + "\n";
+                rtrn += "\t" + kvp.Value.description + "\n";
+                rtrn += "\t" + kvp.Value.growthTime.ToString() + "\n";
+                rtrn += "\t" + kvp.Value.seedSpriteLink + "\n";
+                rtrn += "\t" + kvp.Value.plantSpriteLink + "\n";
+                rtrn += "\t" + kvp.Value.plantedPlantSpriteLink + "\n";
+                rtrn += "\t" + kvp.Value.seedWeight.ToString() + "\n";
+                rtrn += "\t" + kvp.Value.plantWeight.ToString() + "\n";
+                rtrn += "\t" + kvp.Value.basicSeedPrice.ToString() + "\n";
+                rtrn += "\t" + kvp.Value.basicPlantPrice + "\n";
+                rtrn += "}";
+            }
+
+
+            return rtrn;
+        }
+
     }
 
 }

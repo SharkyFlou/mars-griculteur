@@ -5,6 +5,7 @@ using System;
 
 namespace game
 {
+    [System.Serializable]
     public class PlantInfo
     {
         public int id;
@@ -19,5 +20,6 @@ namespace game
         public int basicSeedPrice;
         public List<int> basicPlantPrice;
     }
+
 }
 
