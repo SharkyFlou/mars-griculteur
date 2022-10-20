@@ -10,6 +10,12 @@ namespace game
 
         private Dictionary<EnumTypePlant, PlantInfo> allPlantDico = new Dictionary<EnumTypePlant, PlantInfo>();
 
+        public AllSeedPlant()
+        {
+
+        }
+
+
         public Plant createPlant(EnumTypePlant typePlant)
         {
             Plant pl = new Plant();
@@ -33,6 +39,8 @@ namespace game
             List<EnumTypePlant> liste = new List<EnumTypePlant>();
             return liste;
         }
+
+
 
 
 

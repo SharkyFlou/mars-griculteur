@@ -1,0 +1,35 @@
+@startuml
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+
+class Inventory{
+    -StackableItems[*]
+    +Inventory()
+}
+
+class StackableItems{
+    -quantity : int
+    -Item : item
+    +StackableItems
+}
+
+class Item{
+    -ItemId : Enum
+    -Description : String
+}
+
+class Seed extends Item{
+    -ItemId : EnumPlant
+    -growthTime : int
+    -weight : int
+    -price : int
+}
+
+class Plant extends Item{
+    -ItemId : EnumPlant
+}
+
+
+
+@enduml
