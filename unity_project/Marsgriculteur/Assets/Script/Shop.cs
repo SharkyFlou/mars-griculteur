@@ -7,22 +7,9 @@ namespace game
 {
     public class Shop : MonoBehaviour
     {
-        private Dictionary<object, int> stock = new Dictionary<object, int>();
+        private Dictionary<BasicItem, int> stock = new Dictionary<BasicItem, int>();
 
         public void getAllPrice()
-        {
-
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-
-        // Update is called once per frame
-        void Update()
         {
 
         }

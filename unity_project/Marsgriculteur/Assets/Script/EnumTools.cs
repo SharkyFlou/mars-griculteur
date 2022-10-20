@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace game
 {
-    enum EnumTools
+    public enum EnumTools
     {
         CHEBE,
         LLEPE,
