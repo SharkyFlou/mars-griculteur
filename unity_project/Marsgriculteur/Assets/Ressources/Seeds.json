@@ -1,0 +1,112 @@
+{
+    "seeds" : [
+        {
+            "plantId": "ELB",
+            "growth": 2,
+            "weigth": 1,
+            "price": 4
+        },
+        {
+            "plantId": "EGRO",
+            "growth": 2,
+            "weigth": 1,
+            "price": 4
+        },
+        {
+            "plantId": "AJOS",
+            "growth": 2,
+            "weigth": 1,
+            "price": 4
+        },
+        {
+            "plantId": "AZLOC",
+            "growth": 2,
+            "weigth": 1,
+            "price": 4
+        },
+        {
+            "plantId": "SIAM",
+            "growth": 2,
+            "weigth": 2,
+            "price": 4
+        },
+        {
+            "plantId": "NICIR",
+            "growth": 2,
+            "weigth": 1,
+            "price": 4
+        },
+        {
+            "plantId": "AONIUQ",
+            "growth": 2,
+            "weigth": 2,
+            "price": 4
+        },
+        {
+            "plantId": "OUCH",
+            "growth": 2,
+            "weigth": 3,
+            "price": 4
+        },
+        {
+            "plantId": "EVARETTEB",
+            "growth": 2,
+            "weigth": 2,
+            "price": 4
+        },
+        {
+            "plantId": "EUTIAL",
+            "growth": 2,
+            "weigth": 3,
+            "price": 4
+        },
+        {
+            "plantId": "TOCIRAH",
+            "growth": 2,
+            "weigth": 2,
+            "price": 4
+        },
+        {
+            "plantId": "LOSENRUOT",
+            "growth": 2,
+            "weigth": 1,
+            "price": 4
+        },
+        {
+            "plantId": "SIOP",
+            "growth": 2,
+            "weigth": 1,
+            "price": 4
+        },
+        {
+            "plantId": "NIPUL",
+            "growth": 2,
+            "weigth": 1,
+            "price": 4
+        },
+        {
+            "plantId": "ECHAV",
+            "growth": 2,
+            "weigth": 20,
+            "price": 4
+        },
+        {
+            "plantId": "ONTOUM",
+            "growth": 2,
+            "weigth": 10,
+            "price": 4
+        },
+        {
+            "plantId": "ELUOP",
+            "growth": 2,
+            "weigth": 5,
+            "price": 4
+        },
+        {
+            "plantId": "NIPAL",
+            "growth": 2,
+            "weigth": 5,
+            "price": 4
+        }
+    ]
+}
