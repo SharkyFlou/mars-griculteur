@@ -6,7 +6,7 @@ namespace game
 {
     abstract public class BasicPlant : BasicItem
     {
-        private EnumTypePlant typePlante;
+        protected EnumTypePlant typePlante;
 
         public BasicPlant(){
             typePlante = EnumTypePlant.ELB;
