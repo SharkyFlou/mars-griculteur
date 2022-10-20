@@ -50,6 +50,11 @@ namespace game
         {
 
         }
+
+        public static string getDefaultImage()
+        {
+            return "default.png";
+        }
     }
 
 }

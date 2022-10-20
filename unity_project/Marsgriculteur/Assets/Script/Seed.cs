@@ -7,31 +7,59 @@ namespace game
 {
     public class Seed : BasicPlant
     {
-        private EnumTypePlant name;
         private int timeGrowth;
         private int weight;
         private int price;
 
-        public Seed(EnumTypePlant paraName, int paraTimeGrowth, int paraWeight, int paraPrice){
+        public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, string paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
+        {
+            this.typePlante = paraTypePlant;
+            this.id = paraId;
             this.name = paraName;
-            this.timeGrowth = paraTimeGrowth;
+            this.description = paraDescription;
+            this.imageLink = paraImagelink;
+            this.timeGrowth = paraTimeGroth;
             this.weight = paraWeight;
             this.price = paraPrice;
         }
 
+        public Seed()
+        {
+            this.typePlante = EnumTypePlant.ELB;
+            this.id = 666;
+            this.name = "Error";
+            this.description = "Error, using an empty constructor";
+            this.imageLink = Game.getDefaultImage();
+            this.timeGrowth = -1;
+            this.weight = -1;
+            this.price = -1;
+        }
+
         public int getPrice()
         {
-            return this.price;
+            return price;
         }
 
         public int getTimeGrowth()
         {
-            return this.timeGrowth;
+            return timeGrowth;
         }
 
         public int getWeighth()
         {
-            return this.weight;
+            return weight;
+        }
+
+        // Start is called before the first frame update
+        void Start()
+        {
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+
         }
     }
 

@@ -6,6 +6,7 @@ namespace game
 {
     public class InventoryToolsNoStack : Inventory
     {
+
     }
 }
 
