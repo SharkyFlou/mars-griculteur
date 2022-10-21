@@ -11,6 +11,41 @@ namespace game
         //name in first, and YES it already exist in the info of eventInfo, but i dont car 
         private Dictionary<string, EventInfo> allEventDico = new Dictionary<string, EventInfo>();
 
+        public AllEvents()
+        {
+            allEventDico.Clear();
+            List<EnumTypePlant> plants = new List<EnumTypePlant>();
+            plants.Add(EnumTypePlant.ELB);
+
+            allEventDico.Add("maladieElb", new EventInfo("maladieEbl",
+                "Une maladie touche les recoltes de ble qui fait tomber malade les gens le mangeant",
+                3,
+                0.4,
+                true,
+                false,
+                false,
+                plants,
+                new List<string>(),
+                12,
+                0,
+                "Assets/Sprites/EventSprites/e_maladieElb",
+                4));
+
+
+            allEventDico.Add("echavBonQuali", new EventInfo("echavBonQuali",
+                "Une mutation génétique phénoménal fait que les vaches sont plus appétissantes",
+                3,
+                0.4,
+                true,
+                false,
+                false,
+                plants,
+                new List<string>(),
+                12,
+                0,
+                "Assets/Sprites/EventSprites/e_maladieElb",
+                4));
+        }
 
         //get a new event depending on the fact
         public EventInfo getRandomEvent(int month, Dictionary<EventInfo, int> impossibleEvents)
@@ -70,11 +105,5 @@ namespace game
             }
             return newDico;
         }
-
-        public void loadAllEvents()
-        {
-            //LEO fill dico
-        }
-
     }
 }

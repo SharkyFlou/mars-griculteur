@@ -37,29 +37,17 @@ namespace game
 
         public int getPrice()
         {
-            return price;
+            return this.price;
         }
 
         public int getTimeGrowth()
         {
-            return timeGrowth;
+            return this.timeGrowth;
         }
 
         public int getWeighth()
         {
-            return weight;
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
+            return this.weight;
         }
     }
 
