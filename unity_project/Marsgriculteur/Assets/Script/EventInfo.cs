@@ -8,7 +8,7 @@ namespace game
     {
         public string namee;
         public string description;
-        public int lenght;
+        public int length;
         public double mutliplier;
         public bool targetPlant;
         public bool targetSeed;

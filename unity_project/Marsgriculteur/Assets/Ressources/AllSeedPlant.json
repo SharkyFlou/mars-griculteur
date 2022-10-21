@@ -1,0 +1,92 @@
+{
+    "allPlantDico" : {
+        "ELB" :
+        {
+            "id" : 1,
+            "namePlant" : "ELB",
+            "description" : "Graine de blé",
+            "growthTime" : 1,
+            "seedSpriteLink" : "simage.png",
+            "plantSpriteLink" : "pimage.png",
+            "plantedPlantSpriteLink" : [
+                "image1.png",
+                "image2.png",
+                "image3.png"
+            ],
+            "seedWeight" : 1,
+            "plantWeight" : 5,
+            "basicSeedPrice" : 10,
+            "basicPlantPrice" : [
+                20,
+                25,
+                12
+            ]
+        },  
+        "EGRO" :
+        {
+            "id" : 2,
+            "namePlant" : "EGRO",
+            "description" : "Graine de blé",
+            "growthTime" : 1,
+            "seedSpriteLink" : "simage.png",
+            "plantSpriteLink" : "pimage.png",
+            "plantedPlantSpriteLink" : [
+                "image1.png",
+                "image2.png",
+                "image3.png"
+            ],
+            "seedWeight" : 1,
+            "plantWeight" : 5,
+            "basicSeedPrice" : 10,
+            "basicPlantPrice" : [
+                20,
+                25,
+                12
+            ]
+        },
+        "AJOS" :
+        {
+            "id" : 3,
+            "namePlant" : "AJOS",
+            "description" : "Graine de blé",
+            "growthTime" : 1,
+            "seedSpriteLink" : "simage.png",
+            "plantSpriteLink" : "pimage.png",
+            "plantedPlantSpriteLink" : [
+                "image1.png",
+                "image2.png",
+                "image3.png"
+            ],
+            "seedWeight" : 1,
+            "plantWeight" : 5,
+            "basicSeedPrice" : 10,
+            "basicPlantPrice" : [
+                20,
+                25,
+                12
+            ]
+        },
+        "AZLOC" :
+        {
+            "id" : 4,
+            "namePlant" : "AZLOC",
+            "description" : "Graine de blé",
+            "growthTime" : 1,
+            "seedSpriteLink" : "simage.png",
+            "plantSpriteLink" : "pimage.png",
+            "plantedPlantSpriteLink" : [
+                "image1.png",
+                "image2.png",
+                "image3.png"
+            ],
+            "seedWeight" : 1,
+            "plantWeight" : 5,
+            "basicSeedPrice" : 10,
+            "basicPlantPrice" : [
+                20,
+                25,
+                12
+            ]
+        }
+    }
+}
