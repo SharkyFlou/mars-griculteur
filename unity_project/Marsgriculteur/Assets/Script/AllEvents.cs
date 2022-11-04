@@ -104,7 +104,7 @@ namespace game
 
         }
 
-        //get a new event depending on the fact
+        //get a new event depending on the month, and the impossible event
         public EventInfo getRandomEvent(int month, Dictionary<EventInfo, int> impossibleEvents)
         {
 
