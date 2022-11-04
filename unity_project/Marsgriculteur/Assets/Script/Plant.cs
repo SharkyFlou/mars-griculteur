@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,11 @@ namespace game
             this.imageLink = Game.getDefaultImage();
             this.basicPlantPrice = new List<int>();
             this.plantWeight = -1;
+        }
+
+        public int getPrice(int month)
+        {
+            return basicPlantPrice[month];
         }
     }
 

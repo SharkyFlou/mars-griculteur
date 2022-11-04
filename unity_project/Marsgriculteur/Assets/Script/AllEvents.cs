@@ -13,18 +13,74 @@ namespace game
 
         public AllEvents()
         {
+            //********************************************************************
+            //************************ EVENTS COOL *******************************
+            //********************************************************************
+
+            List<EnumTypePlant> listAnim = new List<EnumTypePlant>();
+            listAnim.Add(EnumTypePlant.ECHAV);
+            listAnim.Add(EnumTypePlant.ONTOUM);
+            listAnim.Add(EnumTypePlant.ELUOP);
+            listAnim.Add(EnumTypePlant.NIPAL);
+            allEventDico.Add("qualiMeat", new EventInfo("qualiMeat",
+                "Une radiation donne un goût plus salé et très appréciés aux animaux ",
+                2,
+                1.3,
+                true,
+                false,
+                false,
+                listAnim,
+                new List<string>(),
+                6,
+                0,
+                "Assets/Sprites/EventSprites/e_maladieElb",
+                7));
+
+
+
+
+            //ELB, EGRO, AJOS, AZLOC
+            //ECHAV, ONTOUM, ELUOP, NIPAL
+
+            List<EnumTypePlant> listPl = new List<EnumTypePlant>();
+            listPl.Add(EnumTypePlant.ELB);
+            listPl.Add(EnumTypePlant.EGRO);
+            listPl.Add(EnumTypePlant.AJOS);
+            listPl.Add(EnumTypePlant.AZLOC);
+
+            allEventDico.Add("solarStorm", new EventInfo("solarStorm",
+                "Une tempête solaire font griller vos plantes, les gens en rafolent",
+                2,
+                1.3,
+                true,
+                false,
+                false,
+                listPl,
+                new List<string>(),
+                6,
+                0,
+                "Assets/Sprites/EventSprites/e_maladieElb",
+                7));
+
+
+
+            //********************************************************************
+            //************************ EVENTS NOT COOL ***************************
+            //********************************************************************
+
             allEventDico.Clear();
-            List<EnumTypePlant> plants = new List<EnumTypePlant>();
-            plants.Add(EnumTypePlant.ELB);
+            List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>();
+            listElbEgr.Add(EnumTypePlant.ELB);
+            listElbEgr.Add(EnumTypePlant.EGRO);
 
-            allEventDico.Add("maladieElb", new EventInfo("maladieEbl",
-                "Une maladie touche les recoltes de ble qui fait tomber malade les gens le mangeant",
+            allEventDico.Add("wartElbEgr", new EventInfo("wartElbEgr",
+                "Des verrus martiennes touchent les recoltes d'EBL et d'EGRO, ça n'a pas bon goût",
                 3,
                 0.4,
                 true,
                 false,
                 false,
-                plants,
+                listElbEgr,
                 new List<string>(),
                 12,
                 0,
@@ -32,19 +88,20 @@ namespace game
                 4));
 
 
-            allEventDico.Add("echavBonQuali", new EventInfo("echavBonQuali",
-                "Une mutation génétique phénoménal fait que les vaches sont plus appétissantes",
-                3,
-                0.4,
+            allEventDico.Add("vegeTrend", new EventInfo("vegeTrend",
+                "Une trend végétarienne se développe",
+                4,
+                0.6,
                 true,
                 false,
                 false,
-                plants,
+                listAnim,
                 new List<string>(),
-                12,
-                0,
+                6,
+                2,
                 "Assets/Sprites/EventSprites/e_maladieElb",
-                4));
+                0));
+
         }
 
         //get a new event depending on the fact

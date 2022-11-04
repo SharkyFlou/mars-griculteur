@@ -37,7 +37,7 @@ namespace game
         {
             this.namee = namee;
             this.description = description;
-            this.lenght = lenght;
+            this.length = lenght;
             this.mutliplier = mutliplier;
             this.targetPlant = targetPlant;
             this.targetSeed = targetSeed;
@@ -54,7 +54,7 @@ namespace game
         {
             this.namee = "Error";
             this.description = "Error, using an empty constructor";
-            this.lenght = -1;
+            this.length = -1;
             this.mutliplier = -1;
             this.targetPlant = false;
             this.targetSeed = false;
