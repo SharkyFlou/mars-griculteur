@@ -11,8 +11,100 @@ namespace game
         //name in first, and YES it already exist in the info of eventInfo, but i dont car 
         private Dictionary<string, EventInfo> allEventDico = new Dictionary<string, EventInfo>();
 
+        public AllEvents()
+        {
+            //********************************************************************
+            //************************ EVENTS COOL *******************************
+            //********************************************************************
 
-        //get a new event depending on the fact
+            List<EnumTypePlant> listAnim = new List<EnumTypePlant>();
+            listAnim.Add(EnumTypePlant.ECHAV);
+            listAnim.Add(EnumTypePlant.ONTOUM);
+            listAnim.Add(EnumTypePlant.ELUOP);
+            listAnim.Add(EnumTypePlant.NIPAL);
+            allEventDico.Add("qualiMeat", new EventInfo("qualiMeat",
+                "Une radiation donne un goût plus salé et très appréciés aux animaux ",
+                2,
+                1.3,
+                true,
+                false,
+                false,
+                listAnim,
+                new List<string>(),
+                6,
+                0,
+                "Assets/Sprites/EventSprites/e_maladieElb",
+                7));
+
+
+
+
+            //ELB, EGRO, AJOS, AZLOC
+            //ECHAV, ONTOUM, ELUOP, NIPAL
+
+            List<EnumTypePlant> listPl = new List<EnumTypePlant>();
+            listPl.Add(EnumTypePlant.ELB);
+            listPl.Add(EnumTypePlant.EGRO);
+            listPl.Add(EnumTypePlant.AJOS);
+            listPl.Add(EnumTypePlant.AZLOC);
+
+            allEventDico.Add("solarStorm", new EventInfo("solarStorm",
+                "Une tempête solaire font griller vos plantes, les gens en rafolent",
+                2,
+                1.3,
+                true,
+                false,
+                false,
+                listPl,
+                new List<string>(),
+                6,
+                0,
+                "Assets/Sprites/EventSprites/e_maladieElb",
+                7));
+
+
+
+            //********************************************************************
+            //************************ EVENTS NOT COOL ***************************
+            //********************************************************************
+
+            allEventDico.Clear();
+            List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>();
+            listElbEgr.Add(EnumTypePlant.ELB);
+            listElbEgr.Add(EnumTypePlant.EGRO);
+
+            allEventDico.Add("wartElbEgr", new EventInfo("wartElbEgr",
+                "Des verrus martiennes touchent les recoltes d'EBL et d'EGRO, ça n'a pas bon goût",
+                3,
+                0.4,
+                true,
+                false,
+                false,
+                listElbEgr,
+                new List<string>(),
+                12,
+                0,
+                "Assets/Sprites/EventSprites/e_maladieElb",
+                4));
+
+
+            allEventDico.Add("vegeTrend", new EventInfo("vegeTrend",
+                "Une trend végétarienne se développe",
+                4,
+                0.6,
+                true,
+                false,
+                false,
+                listAnim,
+                new List<string>(),
+                6,
+                2,
+                "Assets/Sprites/EventSprites/e_maladieElb",
+                0));
+
+        }
+
+        //get a new event depending on the month, and the impossible event
         public EventInfo getRandomEvent(int month, Dictionary<EventInfo, int> impossibleEvents)
         {
 
@@ -70,11 +162,5 @@ namespace game
             }
             return newDico;
         }
-
-        public void loadAllEvents()
-        {
-            //LEO fill dico
-        }
-
     }
 }

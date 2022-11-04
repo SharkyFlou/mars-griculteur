@@ -5,23 +5,28 @@ using UnityEngine;
 
 namespace game
 {
-    abstract public class Tool : BasicItem
+    public class Tool : BasicItem
     {
         private int price;
 
-         public Tool(){
+
+        public Tool(){
             price = 666;
         }
 
-        public Tool(int paraPrice){
-            price = paraPrice;
+        public Tool(int paraPrice, string name, int id, string description, string imageLink){
+            this.name = name;
+            this.id = id;
+            this.description = description;
+            this.imageLink = imageLink;
+            this.price = paraPrice;
         }
+
 
         public int getPrice()
         {
             return price;
         }
-
     }
 
 }

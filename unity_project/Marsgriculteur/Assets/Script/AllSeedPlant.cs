@@ -22,7 +22,7 @@ namespace game
             if (allPlantDico.ContainsKey(typePlant))
             {
                 Plant pl = new Plant(typePlant,
-                    allPlantDico[typePlant].id,
+                    allPlantDico[typePlant].id+100,
                     typePlant.ToString(),
                     allPlantDico[typePlant].description,
                     allPlantDico[typePlant].plantSpriteLink,

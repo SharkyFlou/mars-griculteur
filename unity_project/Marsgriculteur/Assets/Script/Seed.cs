@@ -11,14 +11,14 @@ namespace game
         private int weight;
         private int price;
 
-        public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, string paraImagelink, int paraTimeGrowth, int paraWeight, int paraPrice)
+        public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, string paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
         {
             this.typePlante = paraTypePlant;
             this.id = paraId;
             this.name = paraName;
             this.description = paraDescription;
             this.imageLink = paraImagelink;
-            this.timeGrowth = paraTimeGrowth;
+            this.timeGrowth = paraTimeGroth;
             this.weight = paraWeight;
             this.price = paraPrice;
         }
@@ -37,17 +37,17 @@ namespace game
 
         public int getPrice()
         {
-            return price;
+            return this.price;
         }
 
         public int getTimeGrowth()
         {
-            return timeGrowth;
+            return this.timeGrowth;
         }
 
-        public int getWeight()
+        public int getWeighth()
         {
-            return weight;
+            return this.weight;
         }
     }
 

@@ -14,19 +14,13 @@ namespace game
         //event in cooldown
         private Dictionary<EventInfo, int> impossibleEvents = new Dictionary<EventInfo, int>();
 
-        public void initMarket()
-        {
-            //LEO need to get the market from somewhere
-        }
 
-
-        public void createMarket(AllEvents allEvents)
+        public void createMarket(AllEvents allEvents, AllSeedPlant dicoPlant)
         {
             for(int i =0; i<12; i++)
             {
-                nextMonth(allEvents,i,false);
+                nextMonth(allEvents,i,false, dicoPlant);
             }
-            //LEO need to save it (the history)
         }
 
         private void nextActiveEvent()
@@ -51,12 +45,12 @@ namespace game
             }
         }
 
-        private void generateNewHistoryMonth(int month, bool eventActiveON) 
+        private void generateNewHistoryMonth(int month, bool eventActiveON, AllSeedPlant dicoPlant) 
         {
             foreach(EnumTypePlant plant in history.Keys)
             {
-                //LEO get the price of the plant for the month
-                int thisPlantPrice = 69; //bullshit
+                Plant pl = dicoPlant.createPlant(plant);
+                int thisPlantPrice = pl.getPrice(month);
                 System.Random rnd = new System.Random();
                 thisPlantPrice = Convert.ToInt32((thisPlantPrice * rnd.NextDouble() * (1.1- 0.9)) + 0.9) ; //multiply by a number between 0.9 and 0.1
 
@@ -81,14 +75,12 @@ namespace game
             return;
         }
 
-        public EventInfo nextMonth(AllEvents allEvents, int month, bool eventON)
+        public EventInfo nextMonth(AllEvents allEvents, int month, bool eventON, AllSeedPlant dicoPlant)
         {
             nextActiveEvent();
             nextImpossibleEvents();
-            generateNewHistoryMonth(month, eventON);
+            generateNewHistoryMonth(month, eventON, dicoPlant);
 
-
-            //LEO modify the history for each plant, and save it
             EventInfo newEvent = createNewEvent(allEvents, month);
 
             return newEvent;
