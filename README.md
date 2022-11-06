@@ -50,6 +50,8 @@ Il devra donc comprendre et prévoir l'évolution de prix du marché afin de pou
 ## Lien de téléchargement
 
 ## Captures d'écran
-
+- UML
+- MAP
+- différentes fenêtres (shop, market, ...)
 ## Procédures d'installation et d'exécution
 
