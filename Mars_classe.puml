@@ -145,10 +145,6 @@ package game{
         + getGrowthTime() : Integer
     }
 
-    class TypePlante{
-
-    }
-
     enum EnumTypePlant{
         ELB
         EGRO
@@ -182,6 +178,7 @@ package game{
     class AllPlot{
         + createPlot(typePlot : EnumTypePlot, currentPlant : EnumTypePlant) : Plot
         + getAllPlot() : List<EnumTypePlot>
+    }
 
     class PlantInfo{
          + id : Integer
@@ -273,11 +270,12 @@ package game{
     }
 }
 
-
+MainMenu *-d-> Game
 Game *-d-> "market \n1" Market : <<own>> >
 Game *-d-> "notifcations \n*" Notification : <<own>> >
 Game *-d-> "inventory \n1" Inventory : <<own>> >
 Game *-d-> "shop \n1" Shop : <<own>> >
+Game *-d-> CameraMovement : <<own>> >
 
 
 
@@ -293,6 +291,7 @@ Market ..> Plant : <<uses>> >
 Market ..> Seed : <<uses>> >
 Market ..>  "activeEvents\n*"AllEvents : <<affected by / create>> >
 Market ..> AllSeedPlant : <<uses>> >
+Market ..> AllPlot : <<uses>> >
 
 
 Seed *--> "typePlante\n1" EnumTypePlant : <<type of>> >
@@ -301,7 +300,10 @@ Plant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
 
 Plot *--> EnumTypePlot : <<of type>> >
 
+Tool *--> EnumTools : <<type of>> >
+
 AllEvents *--> EventInfo
+
 
 AllSeedPlant *--> "allPlantDico \n*" PlantInfo : <<own>> >
 

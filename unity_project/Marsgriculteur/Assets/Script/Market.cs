@@ -137,7 +137,7 @@ namespace game
 
         //give the thearical nbr of sell for a certain number of a certain plant plant at a given price
         //calculated from the price of the month before, so change to next month before making the sell
-        private int nbrSell(EnumTypePlant plant, int number, int price)
+        public int nbrSell(EnumTypePlant plant, int number, int price)
         {
             int currentPriceMarket = getLastPricePlant(plant);
             double ratio = ((currentPriceMarket * 100.0) / price ) - 100; //if its 9, then the pllayer price is 9% more than the market
