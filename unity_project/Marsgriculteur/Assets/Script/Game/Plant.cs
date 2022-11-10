@@ -9,7 +9,7 @@ namespace game
     {
         public List<int> basicPlantPrice;
         public int plantWeight;
-        public Plant(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, string paraImagelink, List<int> paraBasicPlantPrice, int paraPlantWeight)
+        public Plant(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, List<int> paraBasicPlantPrice, int paraPlantWeight)
         {
             this.typePlante = paraTypePlant;
             this.id = paraId;
@@ -26,7 +26,7 @@ namespace game
             this.id = 666;
             this.name = "Error";
             this.description = "Error, using an empty constructor";
-            this.imageLink = Game.getDefaultImage();
+            this.imageLink = Game.getDefaultSprite();
             this.basicPlantPrice = new List<int>();
             this.plantWeight = -1;
         }

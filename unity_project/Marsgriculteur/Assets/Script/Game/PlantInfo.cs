@@ -12,8 +12,8 @@ namespace game
         public EnumTypePlant namePlant;
         public string description;
         public int growthTime;
-        public string seedSpriteLink;
-        public string plantSpriteLink;
+        public Sprite seedSpriteLink;
+        public Sprite plantSpriteLink;
         public List<string> plantedPlantSpriteLink;
         public int seedWeight;
         public int plantWeight;

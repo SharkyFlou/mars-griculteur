@@ -14,7 +14,7 @@ namespace game
             price = 666;
         }
 
-        public Tool(int paraPrice, string name, int id, string description, string imageLink){
+        public Tool(int paraPrice, string name, int id, string description, Sprite imageLink){
             this.name = name;
             this.id = id;
             this.description = description;

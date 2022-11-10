@@ -9,21 +9,21 @@ namespace game
         public int id;
         protected string name;
         protected string description;
-        protected string imageLink;
+        protected Sprite imageLink;
 
         public BasicItem()
         {
 
         }
 
-        public BasicItem(int paraId, string paraName, string paraDescription, string paraImageLink){
+        public BasicItem(int paraId, string paraName, string paraDescription, Sprite paraImageLink){
             this.id = paraId;
             this.name = paraName;
             this.description = paraDescription;
             this.imageLink = paraImageLink;
         }
 
-        public string getImageLink()
+        public Sprite getImageLink()
         {
             return this.imageLink;
         }   

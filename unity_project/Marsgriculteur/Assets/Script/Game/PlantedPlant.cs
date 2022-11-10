@@ -17,7 +17,7 @@ namespace game
             this.growthTime = paraGrowthTime;
         }
 
-        public PlantedPlant(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, string paraImagelink, List<string> paraSpriteLinks, int paraGrowthTime)
+        public PlantedPlant(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, List<string> paraSpriteLinks, int paraGrowthTime)
         {
             this.typePlante = paraTypePlant;
             this.id = paraId;
@@ -34,7 +34,7 @@ namespace game
             this.id = 666;
             this.name = "Error";
             this.description = "Error, using an empty constructor";
-            this.imageLink = Game.getDefaultImage();
+            this.imageLink = Game.getDefaultSprite();
             this.spriteLinks  = new List<string>();
             this.growthTime = -1;
 

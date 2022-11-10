@@ -33,7 +33,7 @@ namespace game
                 new List<string>(),
                 6,
                 0,
-                "Assets/Sprites/EventSprites/e_maladieElb",
+                Game.getDefaultSprite(),
                 7));
 
 
@@ -59,7 +59,7 @@ namespace game
                 new List<string>(),
                 6,
                 0,
-                "Assets/Sprites/EventSprites/e_maladieElb",
+                Game.getDefaultSprite(),
                 7));
 
 
@@ -84,7 +84,7 @@ namespace game
                 new List<string>(),
                 12,
                 0,
-                "Assets/Sprites/EventSprites/e_maladieElb",
+                Game.getDefaultSprite(),
                 4));
 
 
@@ -99,7 +99,7 @@ namespace game
                 new List<string>(),
                 6,
                 2,
-                "Assets/Sprites/EventSprites/e_maladieElb",
+                Game.getDefaultSprite(),
                 0));
 
         }

@@ -11,7 +11,7 @@ namespace game
         private int weight;
         private int price;
 
-        public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, string paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
+        public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
         {
             this.typePlante = paraTypePlant;
             this.id = paraId;
@@ -29,7 +29,7 @@ namespace game
             this.id = 666;
             this.name = "Error";
             this.description = "Error, using an empty constructor";
-            this.imageLink = Game.getDefaultImage();
+            this.imageLink = Game.getDefaultSprite();
             this.timeGrowth = -1;
             this.weight = -1;
             this.price = -1;
