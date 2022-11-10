@@ -17,7 +17,7 @@ namespace game
         public List<string> targetsTool = new List<string>();
         public int probability;
         public int unlockableAfter;
-        public string imageLink;
+        public Sprite imageLink;
         public int timeBetween;
 
 
@@ -32,7 +32,7 @@ namespace game
             List<string> targetsTool,
             int probability,
             int unlockableAfter,
-            string imageLink,
+            Sprite imageLink,
             int timeBetween)
         {
             this.namee = namee;
@@ -63,7 +63,7 @@ namespace game
             this.targetsTool = new List<string>();
             this.probability = -1;
             this.unlockableAfter = -1;
-            this.imageLink = Game.getDefaultImage();
+            this.imageLink = Game.getDefaultSprite();
             this.timeBetween = -1;
         }
     }
