@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Scripting;
 
 namespace game
 {
@@ -40,10 +41,14 @@ namespace game
 
         }
 
-        public static string getDefaultImage()
+        public static Sprite getDefaultSprite()
         {
-            return "default.png";
+            Sprite newSprite = Resources.Load<Sprite>("Sprites/bg_of_bg");
+            return newSprite;
         }
+
+
+
     }
 
 }
