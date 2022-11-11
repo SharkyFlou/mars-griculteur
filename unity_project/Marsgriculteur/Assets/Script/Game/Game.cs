@@ -46,9 +46,6 @@ namespace game
             Sprite newSprite = Resources.Load<Sprite>("Sprites/bg_of_bg");
             return newSprite;
         }
-
-
-
     }
 
 }

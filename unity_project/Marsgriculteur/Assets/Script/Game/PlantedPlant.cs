@@ -7,7 +7,7 @@ namespace game
 {
     public class PlantedPlant : BasicPlant
     {
-        private List<string> spriteLinks;
+        private List<Sprite> spriteLinks;
         private int growthTime;
         private EnumTypePlant typePlant;
 
@@ -17,7 +17,7 @@ namespace game
             this.growthTime = paraGrowthTime;
         }
 
-        public PlantedPlant(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, List<string> paraSpriteLinks, int paraGrowthTime)
+        public PlantedPlant(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, List<Sprite> paraSpriteLinks, int paraGrowthTime)
         {
             this.typePlante = paraTypePlant;
             this.id = paraId;
@@ -35,12 +35,12 @@ namespace game
             this.name = "Error";
             this.description = "Error, using an empty constructor";
             this.imageLink = Game.getDefaultSprite();
-            this.spriteLinks  = new List<string>();
+            this.spriteLinks  = new List<Sprite>();
             this.growthTime = -1;
 
         }
 
-        public List<string> getSpriteLinks()
+        public List<Sprite> getSpriteLinks()
         {
             return spriteLinks;
         }

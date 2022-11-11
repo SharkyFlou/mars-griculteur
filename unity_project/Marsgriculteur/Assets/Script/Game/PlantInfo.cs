@@ -14,7 +14,7 @@ namespace game
         public int growthTime;
         public Sprite seedSpriteLink;
         public Sprite plantSpriteLink;
-        public List<string> plantedPlantSpriteLink;
+        public List<Sprite> plantedPlantSpriteLink;
         public int seedWeight;
         public int plantWeight;
         public int basicSeedPrice;
