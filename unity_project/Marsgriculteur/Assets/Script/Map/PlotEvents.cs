@@ -42,11 +42,9 @@ public class PlotEvents : MonoBehaviour
             }
         }
 
-        Debug.Log("test");
 
         PlantedPlant pplant = CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB);
 
-        Debug.Log("Nombre de sprite " + pplant.getSpriteLinks().Count);
 
 
         donnePlantedPlante(pplant);
@@ -61,9 +59,7 @@ public class PlotEvents : MonoBehaviour
         growthTime = pl.getGrowthTime();
         growthStatus = 0;
 
-        Debug.Log("marche " + seed_sprite.name);
         seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite;
-        Debug.Log("marche pas " + seedImage.gameObject.GetComponent<SpriteRenderer>().sprite.name);
         contientGraine = true;
     }
 
