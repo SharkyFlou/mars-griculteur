@@ -15,19 +15,13 @@ namespace game{
         {
             dicoPlant = JsonConvert.DeserializeObject<AllSeedPlant>(txtJSON.text);
 
-            Debug.Log(dicoPlant.ToString());
+            //Debug.Log(dicoPlant.ToString());
             /*
             foreach (KeyValuePair<EnumTypePlant, PlantInfo> kvp in dicoPlant.allPlantDico)
             {
                 Debug.Log(kvp.Key);
                 Debug.Log(kvp.Value.id);
             }*/
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
         }
     }
 }

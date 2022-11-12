@@ -26,8 +26,7 @@ public class PlotEvents : MonoBehaviour
 
     private void Start()
     {
-        PlantedPlant pplant = CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB);
-
+        
         List<Transform> children = GetChildren(transform);
         foreach(Transform child in children)
         {
@@ -35,15 +34,22 @@ public class PlotEvents : MonoBehaviour
             {
                 seedImage = child;
                 seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite;
-                Debug.Log("Creation du transform seed");
             }
             else
             {
                 plotImage = child;
                 plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite;
-                Debug.Log("Creation du transform plot");
             }
         }
+
+        Debug.Log("test");
+
+        PlantedPlant pplant = CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB);
+
+        Debug.Log("Nombre de sprite " + pplant.getSpriteLinks().Count);
+
+
+        donnePlantedPlante(pplant);
     }
 
     public void donnePlantedPlante(PlantedPlant pl)
@@ -55,7 +61,9 @@ public class PlotEvents : MonoBehaviour
         growthTime = pl.getGrowthTime();
         growthStatus = 0;
 
+        Debug.Log("marche " + seed_sprite.name);
         seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite;
+        Debug.Log("marche pas " + seedImage.gameObject.GetComponent<SpriteRenderer>().sprite.name);
         contientGraine = true;
     }
 
@@ -82,7 +90,7 @@ public class PlotEvents : MonoBehaviour
         //donne les trucs au joueur
     }
 
-    public void plantePlant()
+    public void planteGraine()
     {
         //ouvre l'inventaire, pour planter une graine
     }
@@ -96,7 +104,7 @@ public class PlotEvents : MonoBehaviour
         }
         else if(!contientGraine)
         {
-            plantePlant();
+            planteGraine();
         }
 
     }
