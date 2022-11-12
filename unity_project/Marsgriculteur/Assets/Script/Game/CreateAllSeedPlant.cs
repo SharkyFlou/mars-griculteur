@@ -11,7 +11,7 @@ namespace game{
 
         public static AllSeedPlant dicoPlant;
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             dicoPlant = JsonConvert.DeserializeObject<AllSeedPlant>(txtJSON.text);
 
