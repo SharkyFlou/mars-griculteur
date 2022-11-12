@@ -9,7 +9,7 @@ namespace game{
         public TextAsset txtJSON;
 
 
-        public AllSeedPlant dicoPlant;
+        public static AllSeedPlant dicoPlant;
         // Start is called before the first frame update
         void Start()
         {
@@ -22,12 +22,6 @@ namespace game{
                 Debug.Log(kvp.Key);
                 Debug.Log(kvp.Value.id);
             }*/
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
         }
     }
 }
