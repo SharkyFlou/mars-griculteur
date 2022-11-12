@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
 
 
 namespace game
@@ -10,12 +11,13 @@ namespace game
     {
         public Dictionary<EnumTypePlant, PlantInfo> allPlantDico = new Dictionary<EnumTypePlant, PlantInfo>();
 
-        public AllSeedPlant()
+        [JsonConstructor]
+        public AllSeedPlant(Dictionary<EnumTypePlant, PlantInfo> dico)
         {
-
+            allPlantDico = dico;
         }
 
-
+        
         public Plant createPlant(EnumTypePlant typePlant)
         {
             //EnumTypePlant typePlante;
@@ -95,9 +97,15 @@ namespace game
                 rtrn += "\t" + kvp.Value.namePlant + "\n";
                 rtrn += "\t" + kvp.Value.description + "\n";
                 rtrn += "\t" + kvp.Value.growthTime.ToString() + "\n";
-                rtrn += "\t" + kvp.Value.seedSpriteLink + "\n";
-                rtrn += "\t" + kvp.Value.plantSpriteLink + "\n";
-                rtrn += "\t" + kvp.Value.plantedPlantSpriteLink + "\n";
+                rtrn += "\t" + kvp.Value.seedSpriteLink.ToString() + "\n";
+                rtrn += "\t" + kvp.Value.plantSpriteLink.ToString() + "\n";
+                rtrn += "\tListe de sprites :\n\t{\n";
+                foreach(Sprite sprt in kvp.Value.plantedPlantSpriteLink)
+                {
+                    rtrn += "\t\t" + sprt.ToString() + "\n";
+                }
+                rtrn += "\t}\n";
+                //rtrn += "\t" + kvp.Value.plantedPlantSpriteLink.ToString() + "\n";
                 rtrn += "\t" + kvp.Value.seedWeight.ToString() + "\n";
                 rtrn += "\t" + kvp.Value.plantWeight.ToString() + "\n";
                 rtrn += "\t" + kvp.Value.basicSeedPrice.ToString() + "\n";
