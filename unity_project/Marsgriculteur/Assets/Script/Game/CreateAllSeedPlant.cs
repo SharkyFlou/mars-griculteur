@@ -9,11 +9,11 @@ namespace game{
         public TextAsset txtJSON;
 
 
-        public AllSeedPlant dicoPlant = new AllSeedPlant();
+        public AllSeedPlant dicoPlant;
         // Start is called before the first frame update
         void Start()
         {
-            dicoPlant = JsonConvert.DeserializeAnonymousType(txtJSON.text, dicoPlant);
+            dicoPlant = JsonConvert.DeserializeObject<AllSeedPlant>(txtJSON.text);
 
             Debug.Log(dicoPlant.ToString());
             /*
