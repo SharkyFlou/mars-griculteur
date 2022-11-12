@@ -35,13 +35,11 @@ public class PlotEvents : MonoBehaviour
             {
                 seedImage = child;
                 seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite;
-                Debug.Log("Creation du transform seed");
             }
             else
             {
                 plotImage = child;
                 plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite;
-                Debug.Log("Creation du transform plot");
             }
         }
     }
@@ -82,7 +80,7 @@ public class PlotEvents : MonoBehaviour
         //donne les trucs au joueur
     }
 
-    public void plantePlant()
+    public void planteGraine()
     {
         //ouvre l'inventaire, pour planter une graine
     }
@@ -96,7 +94,7 @@ public class PlotEvents : MonoBehaviour
         }
         else if(!contientGraine)
         {
-            plantePlant();
+            planteGraine();
         }
 
     }
