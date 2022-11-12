@@ -10,11 +10,10 @@ public class PlotEvents : MonoBehaviour
     public Sprite plot_sprite_highlight;
     public Sprite plot_sprite;
 
-
     private Sprite seed_sprite;
     private Sprite seed_sprite_grown;
 
-
+    public AllSeedPlant dico = CreateAllSeedPlant.dicoPlant;
 
     private int growthTime;
     private int growthStatus;
@@ -27,6 +26,7 @@ public class PlotEvents : MonoBehaviour
 
     private void Start()
     {
+        PlantedPlant pplant = CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB);
 
         List<Transform> children = GetChildren(transform);
         foreach(Transform child in children)

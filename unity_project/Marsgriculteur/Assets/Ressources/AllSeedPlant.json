@@ -8,7 +8,7 @@
             "growthTime" : 1,
             "seedSpriteLink" : "bg_of_bg",
             "plantSpriteLink" : "bg_of_bg",
-            "plantedPlantSpriteLink" : "mars_palette",
+            "plantedPlantSpriteLink" : "plantedPlant_elb",
             "seedWeight" : 1,
             "plantWeight" : 5,
             "basicSeedPrice" : 10,
