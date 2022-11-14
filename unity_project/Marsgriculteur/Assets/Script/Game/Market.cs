@@ -146,6 +146,11 @@ namespace game
 
             return nbrSells;
         }
+
+        public Dictionary<EventInfo, int> getActiveEvents()
+        {
+            return activeEvents;
+        }
     }
 
 }
