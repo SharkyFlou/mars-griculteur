@@ -9,12 +9,12 @@ namespace game
     [System.Serializable]
     public class AllSeedPlant
     {
-        public Dictionary<EnumTypePlant, PlantInfo> allPlantDico = new Dictionary<EnumTypePlant, PlantInfo>();
+        private Dictionary<EnumTypePlant, PlantInfo> allPlantDico = new Dictionary<EnumTypePlant, PlantInfo>();
 
         [JsonConstructor]
-        public AllSeedPlant(Dictionary<EnumTypePlant, PlantInfo> dico)
+        public AllSeedPlant(Dictionary<EnumTypePlant, PlantInfo> allPlantDico)
         {
-            allPlantDico = dico;
+            this.allPlantDico = allPlantDico;
         }
 
         
@@ -24,12 +24,12 @@ namespace game
             if (allPlantDico.ContainsKey(typePlant))
             {
                 Plant pl = new Plant(typePlant,
-                    allPlantDico[typePlant].id+100,
+                    allPlantDico[typePlant].getId()+100,
                     typePlant.ToString(),
-                    allPlantDico[typePlant].description,
-                    allPlantDico[typePlant].plantSpriteLink,
-                    allPlantDico[typePlant].basicPlantPrice,
-                    allPlantDico[typePlant].plantWeight);
+                    allPlantDico[typePlant].getDesc(),
+                    allPlantDico[typePlant].getPlantSprite(),
+                    allPlantDico[typePlant].getPlantPrice(),
+                    allPlantDico[typePlant].getPlantWeight());
                 return pl;
             }
             else
@@ -43,13 +43,13 @@ namespace game
             if (allPlantDico.ContainsKey(typePlant))
             {
                 Seed pl = new Seed(typePlant,
-                    allPlantDico[typePlant].id,
+                    allPlantDico[typePlant].getId(),
                     typePlant.ToString(),
-                    allPlantDico[typePlant].description,
-                    allPlantDico[typePlant].seedSpriteLink,
-                    allPlantDico[typePlant].growthTime,
-                    allPlantDico[typePlant].seedWeight,
-                    allPlantDico[typePlant].basicSeedPrice);
+                    allPlantDico[typePlant].getDesc(),
+                    allPlantDico[typePlant].getSeedSprite(),
+                    allPlantDico[typePlant].getGrowth(),
+                    allPlantDico[typePlant].getSeedWeight(),
+                    allPlantDico[typePlant].getSeedPrice());
                 return pl;
             }
             else
@@ -62,12 +62,12 @@ namespace game
             if (allPlantDico.ContainsKey(typePlant))
             {
                 PlantedPlant pl = new PlantedPlant(typePlant, 
-                    allPlantDico[typePlant].id+200,
+                    allPlantDico[typePlant].getId()+200,
                     typePlant.ToString(),
-                    allPlantDico[typePlant].description,
-                    allPlantDico[typePlant].plantSpriteLink,
-                    allPlantDico[typePlant].plantedPlantSpriteLink,
-                    allPlantDico[typePlant].growthTime);
+                    allPlantDico[typePlant].getDesc(),
+                    allPlantDico[typePlant].getPlantSprite(),
+                    allPlantDico[typePlant].getPlantedPlantSprites(),
+                    allPlantDico[typePlant].getGrowth());
                 return pl;
             }
             else
@@ -93,23 +93,23 @@ namespace game
             foreach(KeyValuePair<EnumTypePlant, PlantInfo> kvp in allPlantDico)
             {
                 rtrn += kvp.Key + " : \n{";
-                rtrn += "\t" + kvp.Value.id.ToString() + "\n";
-                rtrn += "\t" + kvp.Value.namePlant + "\n";
-                rtrn += "\t" + kvp.Value.description + "\n";
-                rtrn += "\t" + kvp.Value.growthTime.ToString() + "\n";
-                rtrn += "\t" + kvp.Value.seedSpriteLink.ToString() + "\n";
-                rtrn += "\t" + kvp.Value.plantSpriteLink.ToString() + "\n";
+                rtrn += "\t" + kvp.Value.getId().ToString() + "\n";
+                rtrn += "\t" + kvp.Value.getEnum() + "\n";
+                rtrn += "\t" + kvp.Value.getDesc() + "\n";
+                rtrn += "\t" + kvp.Value.getGrowth().ToString() + "\n";
+                rtrn += "\t" + kvp.Value.getSeedSprite().ToString() + "\n";
+                rtrn += "\t" + kvp.Value.getPlantSprite().ToString() + "\n";
                 rtrn += "\tListe de sprites :\n\t{\n";
-                foreach(Sprite sprt in kvp.Value.plantedPlantSpriteLink)
+                foreach(Sprite sprt in kvp.Value.getPlantedPlantSprites())
                 {
                     rtrn += "\t\t" + sprt.ToString() + "\n";
                 }
                 rtrn += "\t}\n";
-                //rtrn += "\t" + kvp.Value.plantedPlantSpriteLink.ToString() + "\n";
-                rtrn += "\t" + kvp.Value.seedWeight.ToString() + "\n";
-                rtrn += "\t" + kvp.Value.plantWeight.ToString() + "\n";
-                rtrn += "\t" + kvp.Value.basicSeedPrice.ToString() + "\n";
-                rtrn += "\t" + kvp.Value.basicPlantPrice + "\n";
+                //rtrn += "\t" + kvp.Value.getPlantedPlantSprites().ToString() + "\n";
+                rtrn += "\t" + kvp.Value.getSeedWeight().ToString() + "\n";
+                rtrn += "\t" + kvp.Value.getPlantWeight().ToString() + "\n";
+                rtrn += "\t" + kvp.Value.getSeedPrice().ToString() + "\n";
+                rtrn += "\t" + kvp.Value.getPlantPrice() + "\n";
                 rtrn += "}";
             }
 
