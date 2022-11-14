@@ -6,13 +6,9 @@
             "namePlant" : "ELB",
             "description" : "Graine de blé",
             "growthTime" : 1,
-            "seedSpriteLink" : "simage.png",
-            "plantSpriteLink" : "pimage.png",
-            "plantedPlantSpriteLink" : [
-                "image1.png",
-                "image2.png",
-                "image3.png"
-            ],
+            "seedSpriteLink" : "bg_of_bg",
+            "plantSpriteLink" : "bg_of_bg",
+            "plantedPlantSpriteLink" : "plantedPlant_elb",
             "seedWeight" : 1,
             "plantWeight" : 5,
             "basicSeedPrice" : 10,
@@ -21,7 +17,7 @@
                 25,
                 12
             ]
-        },  
+        }/*,  
         "EGRO" :
         {
             "id" : 2,
@@ -87,6 +83,6 @@
                 25,
                 12
             ]
-        }
+        }*/
     }
 }
