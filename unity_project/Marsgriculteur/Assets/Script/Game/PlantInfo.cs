@@ -10,17 +10,17 @@ namespace game
     [System.Serializable]
     public class PlantInfo
     {
-        public int id;
-        public EnumTypePlant namePlant;
-        public string description;
-        public int growthTime;
-        public Sprite seedSpriteLink;
-        public Sprite plantSpriteLink;
-        public List<Sprite> plantedPlantSpriteLink;
-        public int seedWeight;
-        public int plantWeight;
-        public int basicSeedPrice;
-        public List<int> basicPlantPrice;
+        private int id;
+        private EnumTypePlant namePlant;
+        private string description;
+        private int growthTime;
+        private Sprite seedSpriteLink;
+        private Sprite plantSpriteLink;
+        private List<Sprite> plantedPlantSpriteLink;
+        private int seedWeight;
+        private int plantWeight;
+        private int basicSeedPrice;
+        private List<int> basicPlantPrice;
 
 
         [JsonConstructor]
@@ -37,6 +37,61 @@ namespace game
             this.plantWeight = plantWeight;
             this.basicSeedPrice = basicSeedPrice;
             this.basicPlantPrice = basicPlantPrice;
+        }
+
+        public int getId()
+        {
+            return this.id;
+        }
+
+        public EnumTypePlant getEnum()
+        {
+            return this.namePlant;
+        }
+
+        public string getDesc()
+        {
+            return this.description;
+        }
+
+        public int getGrowth()
+        {
+            return this.growthTime;
+        }
+
+        public Sprite getSeedSprite()
+        {
+            return this.seedSpriteLink;
+        }
+
+        public Sprite getPlantSprite()
+        {
+            return this.plantSpriteLink;
+        }
+
+        public List<Sprite> getPlantedPlantSprites()
+        {
+            return this.plantedPlantSpriteLink;
+        }
+
+        public int getSeedWeight()
+        {
+            return this.seedWeight;
+        }
+
+        public int getPlantWeight()
+        {
+            return this.plantWeight;
+        }
+
+        public int getSeedPrice()
+        {
+            return this.basicSeedPrice;
+        }
+
+        public List<int> getPlantPrice()
+        {
+            return this.basicPlantPrice;
         }
 
     }
