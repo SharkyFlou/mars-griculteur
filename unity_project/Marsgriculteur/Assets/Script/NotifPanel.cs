@@ -2,25 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Panel : MonoBehaviour
+namespace game
 {
-    public GameObject NotifPanel;
-
-    void Start()
+    public class Panel : MonoBehaviour
     {
-        NotifPanel.SetActive(false);
-    }
+        public GameObject NotifPanel;
+        public Dictionary<EventInfo, int> Events = new Dictionary<EventInfo, int>();
 
-    public void OpenPanel()
-    {
-        if (NotifPanel.activeSelf == false)
-        {
-            NotifPanel.SetActive(true);
-        }
-        else
+        void Start()
         {
             NotifPanel.SetActive(false);
         }
-        
+
+        public void OpenPanel()
+        {
+            if (NotifPanel.activeSelf == false)
+            {
+                NotifPanel.SetActive(true);
+            }
+            else
+            {
+                NotifPanel.SetActive(false);
+            }
+
+        }
     }
 }
