@@ -13,7 +13,7 @@ namespace game
         {
             this.typePlante = paraTypePlant;
             this.id = paraId;
-            this.name = paraName;
+            this.nam = paraName;
             this.description = paraDescription;
             this.imageLink = paraImagelink;
             this.basicPlantPrice = paraBasicPlantPrice;
@@ -24,7 +24,7 @@ namespace game
         {
             this.typePlante = EnumTypePlant.ELB;
             this.id = 666;
-            this.name = "Error";
+            this.nam = "Error";
             this.description = "Error, using an empty constructor";
             this.imageLink = Game.getDefaultSprite();
             this.basicPlantPrice = new List<int>();
