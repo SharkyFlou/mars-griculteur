@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace game
 {
-    abstract public class BasicItem : MonoBehaviour
+    abstract public class BasicItem
     {
         public int id;
         protected string nam;

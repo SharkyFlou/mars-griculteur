@@ -15,7 +15,7 @@ namespace game
         }
 
         public Tool(int paraPrice, string name, int id, string description, Sprite imageLink){
-            this.name = name;
+            this.nam = name;
             this.id = id;
             this.description = description;
             this.imageLink = imageLink;
