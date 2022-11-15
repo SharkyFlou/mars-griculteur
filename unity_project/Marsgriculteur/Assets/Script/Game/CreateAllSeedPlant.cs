@@ -15,7 +15,7 @@ namespace game{
         {
             dicoPlant = JsonConvert.DeserializeObject<AllSeedPlant>(txtJSON.text);
 
-            //Debug.Log(dicoPlant.ToString());
+            Debug.Log(dicoPlant.ToString());
             /*
             foreach (KeyValuePair<EnumTypePlant, PlantInfo> kvp in dicoPlant.allPlantDico)
             {

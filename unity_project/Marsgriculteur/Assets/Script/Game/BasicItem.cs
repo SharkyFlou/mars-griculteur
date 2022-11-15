@@ -7,7 +7,7 @@ namespace game
     abstract public class BasicItem
     {
         public int id;
-        protected string name;
+        protected string nam;
         protected string description;
         protected Sprite imageLink;
 
@@ -18,7 +18,7 @@ namespace game
 
         public BasicItem(int paraId, string paraName, string paraDescription, Sprite paraImageLink){
             this.id = paraId;
-            this.name = paraName;
+            this.nam = paraName;
             this.description = paraDescription;
             this.imageLink = paraImageLink;
         }
@@ -35,7 +35,7 @@ namespace game
 
         public string getName()
         {
-            return this.name;
+            return this.nam;
         }
     }
 

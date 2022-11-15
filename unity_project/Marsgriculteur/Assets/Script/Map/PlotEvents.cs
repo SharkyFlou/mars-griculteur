@@ -13,8 +13,6 @@ public class PlotEvents : MonoBehaviour
     private Sprite seed_sprite;
     private Sprite seed_sprite_grown;
 
-    public AllSeedPlant dico = CreateAllSeedPlant.dicoPlant;
-
     private int growthTime;
     private int growthStatus;
     private Transform plotImage;
