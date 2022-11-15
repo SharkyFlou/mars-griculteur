@@ -21,7 +21,7 @@ namespace game
         {
             this.typePlante = paraTypePlant;
             this.id = paraId;
-            this.name = paraName;
+            this.itemName = paraName;
             this.description = paraDescription;
             this.imageLink = paraImagelink;
             this.spriteLinks = paraSpriteLinks;
@@ -32,7 +32,7 @@ namespace game
         {
             this.typePlante = EnumTypePlant.ELB;
             this.id = 666;
-            this.name = "Error";
+            this.itemName = "Error";
             this.description = "Error, using an empty constructor";
             this.imageLink = Game.getDefaultSprite();
             this.spriteLinks  = new List<Sprite>();
