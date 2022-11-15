@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class NotifPanel : MonoBehaviour
 {
+
+    //NE PAS CHANGER LE NOM? SINON WE ARE IN TROUBLE
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     public GameObject PanelNotif;
   //  public GameObject NotifInventory;
 
