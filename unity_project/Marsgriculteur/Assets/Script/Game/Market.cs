@@ -34,6 +34,11 @@ namespace game
             }
         }
 
+        public Dictionary<EventInfo, int> getActiveEvents()
+        {
+            return activeEvents;
+        }
+
         private void nextImpossibleEvents()
         {
             foreach (EventInfo currentEvent in impossibleEvents.Keys)
