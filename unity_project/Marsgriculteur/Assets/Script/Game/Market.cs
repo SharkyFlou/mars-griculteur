@@ -34,6 +34,11 @@ namespace game
             }
         }
 
+        public Dictionary<EventInfo, int> getActiveEvents()
+        {
+            return activeEvents;
+        }
+
         private void nextImpossibleEvents()
         {
             foreach (EventInfo currentEvent in impossibleEvents.Keys)
@@ -145,11 +150,6 @@ namespace game
             int nbrSells = (int) Math.Floor(number * (100.0 - mutliplier)/100.0); //result
 
             return nbrSells;
-        }
-
-        public Dictionary<EventInfo, int> getActiveEvents()
-        {
-            return activeEvents;
         }
     }
 
