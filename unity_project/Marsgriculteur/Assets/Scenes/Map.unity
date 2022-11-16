@@ -2939,7 +2939,7 @@ GameObject:
   - component: {fileID: 319808362}
   - component: {fileID: 319808365}
   - component: {fileID: 319808364}
-  - component: {fileID: 319808363}
+  - component: {fileID: 319808366}
   m_Layer: 5
   m_Name: PanelInventory
   m_TagString: Untagged
@@ -2969,19 +2969,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 489.21, y: 300.74}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &319808363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 319808361}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85dbfcda1eab4d24096c0b426679ffd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PanelNotif: {fileID: 319808361}
 --- !u!114 &319808364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3020,6 +3007,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319808361}
   m_CullTransparentMesh: 1
+--- !u!114 &319808366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319808361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbe0986c961dffe47b2e4cc270198f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelInventory: {fileID: 319808361}
+  PanelNotif: {fileID: 335311817}
 --- !u!1 &320683140
 GameObject:
   m_ObjectHideFlags: 0
@@ -3618,6 +3619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85dbfcda1eab4d24096c0b426679ffd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelInventory: {fileID: 319808361}
   PanelNotif: {fileID: 335311817}
 --- !u!1 &337529053
 GameObject:
@@ -34715,10 +34717,10 @@ RectTransform:
   m_Father: {fileID: 2006331165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -806.1, y: -122.3}
-  m_SizeDelta: {x: 75, y: 75}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30.089996, y: -110}
+  m_SizeDelta: {x: 60.179993, y: 54.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653079563
 MonoBehaviour:
@@ -34764,8 +34766,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 319808363}
-        m_TargetAssemblyTypeName: NotifPanel, Assembly-CSharp
+      - m_Target: {fileID: 319808366}
+        m_TargetAssemblyTypeName: InventoryPanel, Assembly-CSharp
         m_MethodName: OpenPanel
         m_Mode: 1
         m_Arguments:
