@@ -4,29 +4,29 @@ using UnityEngine;
 
 namespace game
 {
-    public class NotifPanel : MonoBehaviour
+    public class InventoryPanel : MonoBehaviour
     {
         public GameObject PanelInventory;
         public GameObject PanelNotif;
 
         void Start()
         {
-            PanelNotif.SetActive(false);
+            PanelInventory.SetActive(false);
         }
 
         public void OpenPanel()
         {
-            if (PanelNotif.activeSelf == false)
+            if (PanelInventory.activeSelf == false)
             {
-                if (PanelInventory.activeSelf == true)
+                if (PanelNotif.activeSelf == true)
                 {
-                    PanelInventory.SetActive(false);
+                    PanelNotif.SetActive(false);
                 }
-                PanelNotif.SetActive(true);
+                PanelInventory.SetActive(true);
             }
             else
             {
-                PanelNotif.SetActive(false);
+                PanelInventory.SetActive(false);
             }
         }
     }
