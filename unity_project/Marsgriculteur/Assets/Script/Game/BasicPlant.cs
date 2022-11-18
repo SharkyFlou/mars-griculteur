@@ -11,7 +11,7 @@ namespace game
         public BasicPlant(){
             typePlante = EnumTypePlant.ELB;
         }
-
+        
         public BasicPlant(EnumTypePlant paraTypePlant){
             this.typePlante = paraTypePlant;
         }

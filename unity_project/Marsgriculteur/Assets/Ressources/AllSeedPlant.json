@@ -17,20 +17,16 @@
                 25,
                 12
             ]
-        }/*,  
+        },  
         "EGRO" :
         {
             "id" : 2,
             "namePlant" : "EGRO",
             "description" : "Graine de blé",
             "growthTime" : 1,
-            "seedSpriteLink" : "simage.png",
-            "plantSpriteLink" : "pimage.png",
-            "plantedPlantSpriteLink" : [
-                "image1.png",
-                "image2.png",
-                "image3.png"
-            ],
+            "seedSpriteLink" : "bg_of_bg",
+            "plantSpriteLink" : "bg_of_bg",
+            "plantedPlantSpriteLink" : "plantedPlant_egro",
             "seedWeight" : 1,
             "plantWeight" : 5,
             "basicSeedPrice" : 10,
@@ -46,13 +42,9 @@
             "namePlant" : "AJOS",
             "description" : "Graine de blé",
             "growthTime" : 1,
-            "seedSpriteLink" : "simage.png",
-            "plantSpriteLink" : "pimage.png",
-            "plantedPlantSpriteLink" : [
-                "image1.png",
-                "image2.png",
-                "image3.png"
-            ],
+            "seedSpriteLink" : "bg_of_bg",
+            "plantSpriteLink" : "bg_of_bg",
+            "plantedPlantSpriteLink" : "plantedPlant_ajos",
             "seedWeight" : 1,
             "plantWeight" : 5,
             "basicSeedPrice" : 10,
@@ -68,13 +60,9 @@
             "namePlant" : "AZLOC",
             "description" : "Graine de blé",
             "growthTime" : 1,
-            "seedSpriteLink" : "simage.png",
-            "plantSpriteLink" : "pimage.png",
-            "plantedPlantSpriteLink" : [
-                "image1.png",
-                "image2.png",
-                "image3.png"
-            ],
+            "seedSpriteLink" : "bg_of_bg",
+            "plantSpriteLink" : "bg_of_bg",
+            "plantedPlantSpriteLink" :"plantedPlant_azloc",
             "seedWeight" : 1,
             "plantWeight" : 5,
             "basicSeedPrice" : 10,
@@ -83,6 +71,6 @@
                 25,
                 12
             ]
-        }*/
+        }
     }
 }

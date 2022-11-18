@@ -90,7 +90,7 @@ public class PlotEvents : MonoBehaviour
     }
 
 
-    void OnMouseDown()
+    void OnMouseUp()
     {
         if (contientGraine && growthStatus == growthTime)
         {
@@ -101,6 +101,13 @@ public class PlotEvents : MonoBehaviour
             planteGraine();
         }
 
+        /*
+            Test de la structure
+        */ 
+        // Génère aléatoirement un EnumTypePlant et appelle la fonction createPlantedPlant pour afficher une nouvelle plante dans le Plot
+        System.Random random = new System.Random();
+        donnePlantedPlante(CreateAllSeedPlant.dicoPlant.createPlantedPlant((EnumTypePlant)Enum.GetValues(typeof(EnumTypePlant)).GetValue(random.Next(4))));
+        //CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB).getWeight();
     }
 
     void OnMouseOver()

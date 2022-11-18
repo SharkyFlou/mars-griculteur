@@ -8,9 +8,11 @@ namespace game
     public class Seed : BasicPlant
     {
         private int timeGrowth;
-        private int weight;
         private int price;
-
+        public Seed() 
+        {
+        
+        }
         public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
         {
             this.typePlante = paraTypePlant;
@@ -22,18 +24,11 @@ namespace game
             this.weight = paraWeight;
             this.price = paraPrice;
         }
-
-        public Seed()
+        /*
+        public Seed(EnumTypePlant seed)
         {
-            this.typePlante = EnumTypePlant.ELB;
-            this.id = 666;
-            this.itemName = "Error";
-            this.description = "Error, using an empty constructor";
-            this.imageLink = Game.getDefaultSprite();
-            this.timeGrowth = -1;
-            this.weight = -1;
-            this.price = -1;
-        }
+            CreateAllSeedPlant.dicoPlant.createSeed(seed);
+        }*/
 
         public int getPrice()
         {
@@ -45,10 +40,6 @@ namespace game
             return this.timeGrowth;
         }
 
-        public int getWeighth()
-        {
-            return this.weight;
-        }
     }
 
 }

@@ -7,7 +7,7 @@ namespace game
 {
     public class InventoryPlant : Inventory
     {
-        public Dictionary<EnumTypePlant, int> slots = new Dictionary<EnumTypePlant, int>();
+        public new Dictionary<EnumTypePlant, int> slots;
 
         public int getNbrSlots(EnumTypePlant item)
         {
