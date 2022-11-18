@@ -2,14 +2,14 @@ using game;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlotEvents : MonoBehaviour
 {
-    public Sprite plot_sprite_highlight;
     public Sprite plot_sprite;
-
+    public Sprite plot_sprite_highlite;
     private Sprite seed_sprite;
     private Sprite seed_sprite_grown;
 
@@ -110,16 +110,6 @@ public class PlotEvents : MonoBehaviour
         //CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB).getWeight();
     }
 
-    void OnMouseOver()
-    {
-        plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite_highlight;
-    }
-
-    void OnMouseExit()
-    {
-        plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite;
-    }
-
     List<Transform> GetChildren(Transform parent)
     {
         List<Transform> children = new List<Transform>();
@@ -128,5 +118,15 @@ public class PlotEvents : MonoBehaviour
             children.Add(child);
         }
         return children;
+    }
+
+    void OnMouseOver()
+    {
+        plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite_highlite;
+    }
+
+    void OnMouseExit()
+    {
+        plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite;
     }
 }
