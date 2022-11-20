@@ -49,7 +49,7 @@ namespace game
             dayText.SetText(nbrJour.ToString());
 
             market = new Market();
-            market.createMarket(new AllEvents(), CreateAllSeedPlant.dicoPlant);
+            market.createMarket();
         }
 
         void OnMouseDown()
@@ -73,12 +73,6 @@ namespace game
                 {
                     //suppr notif
                 }
-            }
-
-            if (nbrJour % 5 == 0)//si jour%5 == 0 fait vendre les trucs
-            {
-                newEvent = market.nextMonth(new AllEvents(), nbrJour / 5, true, CreateAllSeedPlant.dicoPlant);
-                activeEvents = market.getActiveEvents();
             }
         }
 
