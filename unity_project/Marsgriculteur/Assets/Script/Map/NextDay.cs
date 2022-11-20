@@ -86,7 +86,22 @@ namespace game
         {
             foreach (Transform transform in plotList)
             {
-                transform.gameObject.SendMessage("fairePousser");
+                if(transform.name.Length>4 || transform.name.Substring(0, 4) == "plot")
+                {
+                    try
+                    {
+                        transform.gameObject.SendMessage("fairePousser");
+                    }
+                    catch
+                    {
+                        Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transform.name + "\" n'a pas marché");
+                    }
+                    
+                }
+                else
+                {
+                    Debug.Log("Bug dans faire pousser, le transform \"" + transform.name + "\" est dans la liste des shops :/");
+                }
             }
         }
 
