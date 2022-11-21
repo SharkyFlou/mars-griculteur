@@ -18,7 +18,7 @@ namespace game
         private EventInfo newEvent;
         public Transform PanelNotif;
         public GameObject PrefabNotifButton;
-
+        public MarketBase marketBase;
 
         public TextMeshProUGUI NameText;
         public TextMeshProUGUI DescText;
@@ -57,6 +57,7 @@ namespace game
             faitPousser();
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
+            marketBase.market.nextDay(nbrJour, true);
 
             List<EventInfo> events = new List<EventInfo>();
 

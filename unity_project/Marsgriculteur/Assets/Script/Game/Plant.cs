@@ -33,7 +33,7 @@ namespace game
 
         public int getPrice(int month)
         {
-            return basicPlantPrice[month];
+            return basicPlantPrice[month % 12];
         }
     }
 

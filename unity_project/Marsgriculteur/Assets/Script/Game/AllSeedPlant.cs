@@ -79,9 +79,16 @@ namespace game
         public List<EnumTypePlant> getAllPlantType()
         {
             List< EnumTypePlant> listPl =  new List<EnumTypePlant>();
-            foreach(EnumTypePlant typePl in allPlantDico.Keys)
+            if (allPlantDico.Count == 0)
             {
-                listPl.Add(typePl);
+                Debug.Log("Erreur dico vide ??");
+            }
+            else
+            {
+                foreach (EnumTypePlant typePl in allPlantDico.Keys)
+                {
+                    listPl.Add(typePl);
+                }
             }
             
             return listPl;

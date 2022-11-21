@@ -5,7 +5,7 @@ using System;
 
 namespace game
 {
-    public class Market
+    public class Market : MonoBehaviour
     {
         private Dictionary<EnumTypePlant, List<int>> history = new Dictionary<EnumTypePlant, List<int>>();
         //active events
@@ -13,9 +13,40 @@ namespace game
         //event in cooldown
         private Dictionary<EventInfo, int> impossibleEvents = new Dictionary<EventInfo, int>();
 
+        public static Market Instance { get; private set; }
+        private Market() { } //singleton new doesnt exist
+
+        // Méthode d'accès statique (point d'accès global)
+
+        void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(this.gameObject);
+                return;
+            }
+            else
+            {
+                Instance = this;
+            }
+            DontDestroyOnLoad(this.gameObject);
+
+            if (Instance != null && Instance != this)
+                Destroy(gameObject);    // Suppression d'une instance précédente (sécurité...sécurité...)
+
+            Instance = this;
+        }
+
 
         public void createMarket()
         {
+            List<EnumTypePlant> listeType = CreateAllSeedPlant.dicoPlant.getAllPlantType();
+
+            foreach (EnumTypePlant plant in listeType)
+            {
+                history.Add(plant, new List<int>());
+            }
+
             for (int i = 0; i < 60; i++)
             {
                 nextDay(i, false);
@@ -52,6 +83,7 @@ namespace game
         private void generateNewHistoryDay(int days, bool eventActiveON)
         {
             int month = (days / 5) % 12; //the adequate month
+            //Debug.Log("Creation jour " + days + " mois " + month);
             foreach (EnumTypePlant plant in history.Keys)
             {
                 Plant pl = CreateAllSeedPlant.dicoPlant.createPlant(plant);
@@ -119,7 +151,7 @@ namespace game
             int month = (days / 5) % 12;
             nextActiveEvent();
             nextImpossibleEvents();
-            generateNewHistoryDay(month, eventON);
+            generateNewHistoryDay(days, eventON);
 
             System.Random rand = new System.Random();
 
@@ -144,7 +176,7 @@ namespace game
         //give the price of the plant last day
         public int getLastPricePlant(EnumTypePlant plant)
         {
-            if (history.ContainsKey(plant)) //si la plante est bien dans l'hsitorique des prix
+            if (history.ContainsKey(plant)) //si la plante est bien dans l'historique des prix
             {
                 if (history[plant].Count > 0) //si son historique a plus de 0 valeurs
                 {
@@ -183,6 +215,24 @@ namespace game
             EventInfo newEvent = allEvents.getRandomEvent(month, impossibleEvents);
             return newEvent;
         }
+
+        public List<int> last60Days(EnumTypePlant pl)
+        {
+            Debug.Log("arrive dans 60");
+            if (history.ContainsKey(pl)) //si la plante est bien dans l'hsitorique des prix
+            {
+                Debug.Log("Nombre dans pl : " + history[pl].Count);
+                if (history[pl].Count > 60) //si son historique a plus de 0 valeurs
+                {
+                    int nbrDeb = history[pl].Count - 60;
+                    return history[pl].GetRange(nbrDeb, 60);
+                }
+
+            }
+            return null;
+        }
+
+
     }
 
 }

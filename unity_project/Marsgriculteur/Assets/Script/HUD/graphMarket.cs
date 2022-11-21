@@ -1,3 +1,5 @@
+using game;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,7 @@ public class graphMarket : MonoBehaviour
     public TextMeshProUGUI labelTemplateX;
     public RectTransform dashTemplateY;
     public RectTransform dashTemplateX;
+    public MarketBase marketBase;
 
 
     private float yMaximum; //maximum de la hauteur, pour équilibrer l'affichage
@@ -22,21 +25,36 @@ public class graphMarket : MonoBehaviour
     private float graphHeight; //hauteur de container, calculé en amont pour permettre certaines modifications
     private float yMin;
     private int numberOfDays;
+    List<string> monthList;
 
-    private void Awake()
+    private void Start()
     {
         //instantie les list, c'est temporaire
-        List<int> graphList = new List<int>() { 0, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13, 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 , 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 , 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 , 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 };
-        List<string> monthList = new List<string>() { "Janv", "Fev", "Mars", "Avril", "Mai", "Juin", "Juil", "Aout", "Sept", "Oct", "Nov", "Dec" };
-        yMaximum = graphList.Max(); //Y maximum pour l'affichage
-        xSize = (float) (graphContainer.sizeDelta.x/  (graphList.Count*1.1)); //espace entre les points en X
+        //List<int> graphList = new List<int>() { 0, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13, 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 , 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 , 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 , 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 };
+        monthList = new List<string>() { "Janv", "Fev", "Mars", "Avril", "Mai", "Juin", "Juil", "Aout", "Sept", "Oct", "Nov", "Dec" };
         graphHeight = graphContainer.sizeDelta.y*0.9f; //hauteur du graph
         yMin = 10f; //pour rendre le graph plus beau
 
+        
+
+        //ShowGraph(graphList); //affiche le graph
+    }
+
+    public void affiche(){
+        List<int> graphList = marketBase.market.last60Days(EnumTypePlant.ELB);
+        yMaximum = graphList.Max(); //Y maximum pour l'affichage
+        xSize = (float)(graphContainer.sizeDelta.x / (graphList.Count * 1.1)); //espace entre les points en X
+
         numberOfDays = 36; //bullshit
 
-        ShowGraph(graphList, monthList); //affiche le graph
+        if (graphList == null){
+            Debug.Log("????");
+            return;
+        }
+
+        ShowGraph(graphList); //affiche le graph
     }
+
 
     private GameObject CreateCircle(Vector2 anchoredPosition) //créer un cercle et le renvoie
     {
@@ -53,7 +71,7 @@ public class graphMarket : MonoBehaviour
         return gameobject;
     }
 
-    private void ShowGraph(List<int> valueList, List<string> xValues) //affiche la liste donné sous forme de graph,  avec en valeur de X xValues
+    private void ShowGraph(List<int> valueList) //affiche la liste donné sous forme de graph,  avec en valeur de X les month
     {
         //créer les lignes horizontales
         int nbrSeperator = 8;
@@ -91,7 +109,7 @@ public class graphMarket : MonoBehaviour
                 labelX.gameObject.SetActive(true);
                 labelX.rectTransform.anchoredPosition = new Vector2(xPosition, -20f);
                 int monthToDisplay = ((numberOfDays + i) / 5) % 12; //calcul complique, mais donne le mois 
-                labelX.GetComponent<TextMeshProUGUI>().text = xValues[monthToDisplay];
+                labelX.GetComponent<TextMeshProUGUI>().text = monthList[monthToDisplay];
 
 
                 //trait
