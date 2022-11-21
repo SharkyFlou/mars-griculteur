@@ -16,7 +16,9 @@ namespace game
 
         public void OpenPanel()
         {
-            if (PanelInventory.activeSelf == false)
+            if(!PanelNotif.activeSelf)
+                PanelInventory.SetActive(!PanelInventory.activeSelf);
+            /*if (PanelInventory.activeSelf == false)
             {
                 if (PanelNotif.activeSelf == true)
                 {
@@ -27,7 +29,7 @@ namespace game
             else
             {
                 PanelInventory.SetActive(false);
-            }
+            }*/
         }
     }
 }

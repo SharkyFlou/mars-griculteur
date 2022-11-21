@@ -1,0 +1,11 @@
+{
+    "tools" : {
+        "CHEBE" : {
+            "paraPrice" : 500,
+            "name" : "CHEBE",
+            "id" : 301,
+            "description" : "Une super Chebe pour cherber vos parcelles.",
+            "spriteLink" : "bg_of_bg"
+        }
+    }
+}

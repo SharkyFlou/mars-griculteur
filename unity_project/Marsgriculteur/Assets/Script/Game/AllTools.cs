@@ -3,14 +3,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Newtonsoft.Json;
 
 namespace game
 {
+    [System.Serializable]
     public class AllTools
     {
-        Dictionary<String, Tool> dicoTools = new Dictionary<String, Tool>();
+        Dictionary<string, Tool> dicoTools = new Dictionary<string, Tool>();
 
         //instantiate all the diferents tools
+        [JsonConstructor]
+        public AllTools(Dictionary<string, Tool> tools)
+        {
+            this.dicoTools = tools;
+        }
         public AllTools()
         {
             dicoTools.Add("CHEBE", new Tool(500,
@@ -57,16 +64,34 @@ namespace game
         }
 
         //return all the tools names
-        public List<String> getAllTools()
+        public List<string> getAllTools()
         {
-            List<String> names = new List<String>();
-            foreach(String str in dicoTools.Keys)
+            List<string> names = new List<string>();
+            foreach(string str in dicoTools.Keys)
             {
                 names.Add(str);
             }
             return names;
 
         }
+
+        override public string ToString()
+        {
+            string rtrn = string.Empty;
+            foreach (KeyValuePair<string, Tool> kvp in dicoTools)
+            {
+                rtrn += kvp.Key + " : \n{";
+                rtrn += "\t" + kvp.Value.getName() + "\n";
+                rtrn += "\t" + kvp.Value.getId() + "\n";
+                rtrn += "\t" + kvp.Value.getDesc() + "\n";
+                rtrn += "\t" + kvp.Value.getSprite().ToString() + "\n";
+                rtrn += "\t" + kvp.Value.getPrice().ToString() + "\n}\n";
+            }
+
+
+            return rtrn;
+        }
+
     }
 
 }

@@ -20,6 +20,9 @@ namespace game
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELUOP), 999);
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.NIPAL), 999);*/
         }
+
+
+
         /*
         public void getAllPrice()
         {

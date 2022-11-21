@@ -38,6 +38,11 @@ namespace game
             return this.slots[key];
         }
 
+        public void addItem(BasicItem key, int number)
+        {
+            this.slots[key] += number;
+        }
+
         public int getMaxWeight()
         {
             return MAX_WEIGHT;

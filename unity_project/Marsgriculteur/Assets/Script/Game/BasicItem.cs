@@ -29,12 +29,12 @@ namespace game
             return this.weight;
         }
 
-        public Sprite getImageLink()
+        public Sprite getSprite()
         {
             return this.imageLink;
         }   
 
-        public string getDescription()
+        public string getDesc()
         {
             return this.description;
         }
@@ -42,6 +42,11 @@ namespace game
         public string getName()
         {
             return this.itemName;
+        }
+
+        public int getId()
+        {
+            return id;
         }
     }
 
