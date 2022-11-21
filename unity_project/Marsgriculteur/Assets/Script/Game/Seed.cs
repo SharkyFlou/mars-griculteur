@@ -11,20 +11,22 @@ namespace game
         private int price;
         public Seed() 
         {
-        
+
         }
         public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
         {
-            this.typePlante = paraTypePlant;
-            this.id = paraId;
-            this.itemName = paraName;
-            this.description = paraDescription;
-            this.imageLink = paraImagelink;
-            this.timeGrowth = paraTimeGroth;
-            this.weight = paraWeight;
-            this.price = paraPrice;
+            typePlante = paraTypePlant;
+            id = paraId;
+            itemName = paraName;
+            description = paraDescription;
+            imageLink = paraImagelink;
+            timeGrowth = paraTimeGroth;
+            weight = paraWeight;
+            price = paraPrice;
         }
         /*
+        // Possible constructeur pour simplifier la syntaxe à la création d'une graine
+        // MARCHE SEULEMENT APRES INSTANCIATION DU ALLSEEDPLANT DICO
         public Seed(EnumTypePlant seed)
         {
             CreateAllSeedPlant.dicoPlant.createSeed(seed);
@@ -32,12 +34,12 @@ namespace game
 
         public int getPrice()
         {
-            return this.price;
+            return price;
         }
 
         public int getTimeGrowth()
         {
-            return this.timeGrowth;
+            return timeGrowth;
         }
 
     }

@@ -8,6 +8,8 @@ namespace game
 {
     public class Shop : Inventory
     {
+        // Magasin de vente de graines
+        // C'est un inventaire à haute quantité qui ne peut pas être réduit
         
         public Shop()
         {

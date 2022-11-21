@@ -10,14 +10,19 @@ namespace game
     [System.Serializable]
     public class AllTools
     {
+        // Objet de référence instancier au lancement qui permet d'avoir toutes les infos en rapport avec les outils
+        // permet aussi d'instancier/créer celle-ci
+
         Dictionary<string, Tool> dicoTools = new Dictionary<string, Tool>();
 
         //instantiate all the diferents tools
+        // Le contructeur utiliser pour instancier avec un Json
         [JsonConstructor]
         public AllTools(Dictionary<string, Tool> tools)
         {
-            this.dicoTools = tools;
+            dicoTools = tools;
         }
+        // Ancienne façon d'instancier
         public AllTools()
         {
             dicoTools.Add("CHEBE", new Tool(500,
@@ -75,7 +80,7 @@ namespace game
 
         }
 
-        override public string ToString()
+        public override string ToString()
         {
             string rtrn = string.Empty;
             foreach (KeyValuePair<string, Tool> kvp in dicoTools)
