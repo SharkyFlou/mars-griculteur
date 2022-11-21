@@ -10,17 +10,19 @@ namespace game
         protected string itemName;
         protected string description;
         protected Sprite imageLink;
+        protected int weight;
 
         public BasicItem()
         {
 
         }
 
-        public BasicItem(int paraId, string paraName, string paraDescription, Sprite paraImageLink){
+        public BasicItem(int paraId, string paraName, string paraDescription, Sprite paraImageLink, int paraWeight){
             this.id = paraId;
             this.itemName = paraName;
             this.description = paraDescription;
             this.imageLink = paraImageLink;
+            this.weight = paraWeight;
         }
 
         public Sprite getImageLink()
@@ -37,6 +39,11 @@ namespace game
         {
             return this.itemName;
         }
+
+        public int getWeight(){
+            return this.weight;
+        }
+
     }
 
 }

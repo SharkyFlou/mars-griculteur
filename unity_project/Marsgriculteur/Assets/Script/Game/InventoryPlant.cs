@@ -7,12 +7,12 @@ namespace game
 {
     public class InventoryPlant : Inventory
     {
-        public Dictionary<EnumTypePlant, int> slots = new Dictionary<EnumTypePlant, int>();
+        public Dictionary<EnumTypePlant, int> PlantSlots = new Dictionary<EnumTypePlant, int>();
 
         public int getNbrSlots(EnumTypePlant item)
         {
             int number = -1;
-            foreach (KeyValuePair<EnumTypePlant, int> slot in slots)
+            foreach (KeyValuePair<EnumTypePlant, int> slot in PlantSlots)
             {
 
                 if (item == slot.Key)
@@ -25,7 +25,7 @@ namespace game
 
         public void setNbrSlots(EnumTypePlant item, int number)
         {
-            slots[item] -= number;
+            PlantSlots[item] -= number;
         }
     }
 }
