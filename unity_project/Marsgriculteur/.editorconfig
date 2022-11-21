@@ -1,0 +1,10 @@
+﻿[*.cs]
+
+# Default severity for analyzer diagnostics with category 'Style'
+dotnet_analyzer_diagnostic.category-Style.severity = warning
+
+# IDE1006: Styles d'affectation de noms
+dotnet_diagnostic.IDE1006.severity = none
+
+# IDE0058: La valeur d'expression n'est jamais utilisée
+dotnet_diagnostic.IDE0058.severity = none
