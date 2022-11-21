@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,7 +28,6 @@ public class graphMarket : MonoBehaviour
         //instantie les list, c'est temporaire
         List<int> graphList = new List<int>() { 0, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13, 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 , 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 , 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 , 12, 11, 9, 8, 2, 3, 7, 8, 15, 19, 17, 13 };
         List<string> monthList = new List<string>() { "Janv", "Fev", "Mars", "Avril", "Mai", "Juin", "Juil", "Aout", "Sept", "Oct", "Nov", "Dec" };
-        Debug.Log("Taille de la liste"+ graphList.Count);
         yMaximum = graphList.Max(); //Y maximum pour l'affichage
         xSize = (float) (graphContainer.sizeDelta.x/  (graphList.Count*1.1)); //espace entre les points en X
         graphHeight = graphContainer.sizeDelta.y*0.9f; //hauteur du graph
