@@ -8,7 +8,7 @@ namespace game
     public class Seed : BasicPlant
     {
         private int timeGrowth;
-        private int weight;
+        //private int weight;
         private int price;
 
         public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
@@ -45,10 +45,6 @@ namespace game
             return this.timeGrowth;
         }
 
-        public int getWeighth()
-        {
-            return this.weight;
-        }
     }
 
 }

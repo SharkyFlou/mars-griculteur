@@ -6,7 +6,7 @@
             "namePlant" : "ELB",
             "description" : "Graine de blé",
             "growthTime" : 1,
-            "seedSpriteLink" : "bg_of_bg",
+            "seedSpriteLink" : "targetPlant",
             "plantSpriteLink" : "bg_of_bg",
             "plantedPlantSpriteLink" : "plantedPlant_elb",
             "seedWeight" : 1,
