@@ -24,8 +24,9 @@ namespace game
             listAnim.Add(EnumTypePlant.NIPAL);
             allEventDico.Add("qualiMeat", new EventInfo("qualiMeat",
                 "Une radiation donne un goût plus salé et très appréciés aux animaux ",
-                2,
-                1.3,
+                10,
+                1.2,
+                1.5,
                 true,
                 false,
                 false,
@@ -34,7 +35,7 @@ namespace game
                 6,
                 0,
                 Game.getDefaultSprite(),
-                7));
+                40));
 
 
 
@@ -50,8 +51,9 @@ namespace game
 
             allEventDico.Add("solarStorm", new EventInfo("solarStorm",
                 "Une tempête solaire font griller vos plantes, les gens en rafolent",
-                2,
-                1.3,
+                10,
+                1.2,
+                1.5,
                 true,
                 false,
                 false,
@@ -60,7 +62,22 @@ namespace game
                 6,
                 0,
                 Game.getDefaultSprite(),
-                7));
+                40));
+
+            allEventDico.Add("sucreRef", new EventInfo("sucreRef",
+                "Le marché du sucre s'écroule mystérieusement, les gens se retourne vers votre EGRO au gout sucré",
+                5,
+                1.1,
+                2,
+                true,
+                false,
+                false,
+                listAnim,
+                new List<string>(),
+                6,
+                2,
+                Game.getDefaultSprite(),
+                50));
 
 
 
@@ -75,8 +92,9 @@ namespace game
 
             allEventDico.Add("wartElbEgr", new EventInfo("wartElbEgr",
                 "Des verrus martiennes touchent les recoltes d'EBL et d'EGRO, ça n'a pas bon goût",
-                3,
-                0.4,
+                15,
+                0.8,
+                0.8,
                 true,
                 false,
                 false,
@@ -85,13 +103,14 @@ namespace game
                 12,
                 0,
                 Game.getDefaultSprite(),
-                4));
+                30));
 
 
             allEventDico.Add("vegeTrend", new EventInfo("vegeTrend",
                 "Une trend végétarienne se développe",
-                4,
-                0.6,
+                25,
+                0.8,
+                0.7,
                 true,
                 false,
                 false,
@@ -100,7 +119,8 @@ namespace game
                 6,
                 2,
                 Game.getDefaultSprite(),
-                0));
+                50));
+
 
         }
 

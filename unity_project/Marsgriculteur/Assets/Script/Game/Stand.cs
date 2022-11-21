@@ -48,7 +48,7 @@ namespace game
             int number;
             foreach (Item item in listeItem)
             {
-                number = market.nbrSell(item.item_sale, item.item_number, item.item_price);
+                number = item.item_number;
                 int nbrSlots = inventory.getNbrSlots(item.item_sale);
                 if (nbrSlots >= number){
                     inventory.setNbrSlots(item.item_sale, item.item_number);

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-
 namespace game
 {
     public class Market
@@ -15,11 +14,11 @@ namespace game
         private Dictionary<EventInfo, int> impossibleEvents = new Dictionary<EventInfo, int>();
 
 
-        public void createMarket(AllEvents allEvents, AllSeedPlant dicoPlant)
+        public void createMarket()
         {
-            for(int i =0; i<12; i++)
+            for (int i = 0; i < 60; i++)
             {
-                nextMonth(allEvents,i,false, dicoPlant);
+                nextDay(i, false);
             }
         }
 
@@ -34,6 +33,11 @@ namespace game
             }
         }
 
+        public Dictionary<EventInfo, int> getActiveEvents()
+        {
+            return activeEvents;
+        }
+
         private void nextImpossibleEvents()
         {
             foreach (EventInfo currentEvent in impossibleEvents.Keys)
@@ -45,26 +49,30 @@ namespace game
             }
         }
 
-        private void generateNewHistoryMonth(int month, bool eventActiveON, AllSeedPlant dicoPlant) 
+        private void generateNewHistoryDay(int days, bool eventActiveON)
         {
-            foreach(EnumTypePlant plant in history.Keys)
+            int month = (days / 5) % 12; //the adequate month
+            foreach (EnumTypePlant plant in history.Keys)
             {
-                Plant pl = dicoPlant.createPlant(plant);
-                int thisPlantPrice = pl.getPrice(month);
+                Plant pl = CreateAllSeedPlant.dicoPlant.createPlant(plant);
+                int thisPlantPrice;
                 System.Random rnd = new System.Random();
-                thisPlantPrice = Convert.ToInt32((thisPlantPrice * rnd.NextDouble() * (1.1- 0.9)) + 0.9) ; //multiply by a number between 0.9 and 0.1
 
+                thisPlantPrice = ezRound(plantBasic(pl, month, days) * ((rnd.NextDouble() * (1.1 - 0.9)) + 0.9)); //multiply by a number between 0.9 and 1.1
 
-                foreach (var evTemp in activeEvents) //go around each active events
+                if (eventActiveON) //si les events sont activés
                 {
-                    if (evTemp.Key.targetPlant) //if it target plant
+                    foreach (var evTemp in activeEvents) //go around each active events
                     {
-                        foreach (EnumTypePlant plantTypeTested in evTemp.Key.targetsPlant)
+                        if (evTemp.Key.targetPlant) //if it target plant
                         {
-                            if (plantTypeTested == plant) //if this type of plant is targeted
+                            foreach (EnumTypePlant plantTypeTested in evTemp.Key.targetsPlant)
                             {
-                                thisPlantPrice = Convert.ToInt32(thisPlantPrice * evTemp.Key.mutliplier);
-                                break; //to be a bit more powerfull : if the plant is targeted, no need to check for the other plant Type
+                                if (plantTypeTested == plant) //if this type of plant is targeted
+                                {
+                                    thisPlantPrice = plantByEvent(evTemp.Key, evTemp.Value, thisPlantPrice);
+                                    break; //to be a bit more powerfull : if the plant is targeted, no need to check for the other plant Type
+                                }
                             }
                         }
                     }
@@ -75,15 +83,57 @@ namespace game
             return;
         }
 
-        public EventInfo nextMonth(AllEvents allEvents, int month, bool eventON, AllSeedPlant dicoPlant)
+
+        private int plantByEvent(EventInfo eventTemp, int dureeMom, int value)
         {
+            double mid = (eventTemp.length + 1.0) / 2;
+            double multBase = eventTemp.mutliplierBase;
+            double multProg = eventTemp.mutliplierProg;
+            int newValue = (int)ezRound((value + (value * ((multProg - 1) * (mid - normalise(dureeMom - mid)) / mid))) * multBase);
+
+            return newValue;
+        }
+
+        private int plantBasic(Plant plant, int month, int days)
+        {
+            int monthPrice = plant.getPrice(month); //the last month
+            int nextMonthPrice = plant.getPrice((month + 1) % 12); //the next month
+            int daysAfterActualMonth = days - month * 5; //the number of days after the last month
+            int newValue = ezRound(monthPrice + (daysAfterActualMonth / 5.0) * (nextMonthPrice - monthPrice)); //the basic price of the plant
+            return newValue;
+        }
+
+        private int ezRound(double value)
+        {
+            return (int)Math.Round(value);
+        }
+
+        public double normalise(double val)
+        {
+            return Math.Sqrt(val * val);
+        }
+
+
+        public EventInfo nextDay(int days, bool eventON)
+        {
+            int month = (days / 5) % 12;
             nextActiveEvent();
             nextImpossibleEvents();
-            generateNewHistoryMonth(month, eventON, dicoPlant);
+            generateNewHistoryDay(month, eventON);
 
-            EventInfo newEvent = createNewEvent(allEvents, month);
+            System.Random rand = new System.Random();
 
-            return newEvent;
+            if (rand.Next(0, 2) == 0 || !eventON)
+            {
+                return null;
+            }
+            else
+            {
+                EventInfo newEvent = createNewEvent(month);
+                activeEvents.Add(newEvent, newEvent.length);
+                impossibleEvents.Add(newEvent, newEvent.cooldown);
+                return newEvent;
+            }
         }
 
         public Dictionary<EnumTypePlant, List<int>> getHistory()
@@ -91,14 +141,14 @@ namespace game
             return history;
         }
 
-        //give the price of the plant last month
+        //give the price of the plant last day
         public int getLastPricePlant(EnumTypePlant plant)
         {
-            if (history.ContainsKey(plant))
+            if (history.ContainsKey(plant)) //si la plante est bien dans l'hsitorique des prix
             {
-                if(history[plant].Count > 0)
+                if (history[plant].Count > 0) //si son historique a plus de 0 valeurs
                 {
-                    return history[plant][history[plant].Count - 1];
+                    return history[plant][history[plant].Count - 1]; //retourne le prix du dernier jours de la plante
                 }
 
             }
@@ -108,48 +158,30 @@ namespace game
         //calculate the actual seed price
         public int getLastPriceSeed(EnumTypePlant plant)
         {
-            //LEO need to get the price of a seed
-            int seedPrice = 14; //bullshit
-            foreach(var evTemp in activeEvents) //go around each active events
+            Seed seed = CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB);
+            int seedPrice = seed.getPrice();
+            foreach (var evTemp in activeEvents) //go around each active events
             {
                 if (evTemp.Key.targetSeed) //if it target seeds
                 {
-                    foreach(EnumTypePlant plantTypeTested in evTemp.Key.targetsPlant) 
+                    foreach (EnumTypePlant plantTypeTested in evTemp.Key.targetsPlant)
                     {
-                        if(plantTypeTested == plant) //if this type of seed is targeted
+                        if (plantTypeTested == plant) //if this type of seed is targeted
                         {
-                            seedPrice = Convert.ToInt32( seedPrice * evTemp.Key.mutliplier);
+                            seedPrice = Convert.ToInt32(seedPrice * evTemp.Key.mutliplierBase);
                             break; //to be a bit more powerfull : if the seed is targeted, no need to check for the other plant Type
                         }
                     }
-                } 
+                }
             }
             return 0;
         }
 
-        private EventInfo createNewEvent(AllEvents allEvents, int month)
+        private EventInfo createNewEvent(int month)
         {
+            AllEvents allEvents = new AllEvents();
             EventInfo newEvent = allEvents.getRandomEvent(month, impossibleEvents);
             return newEvent;
-        }
-
-       
-
-        //give the thearical nbr of sell for a certain number of a certain plant plant at a given price
-        //calculated from the price of the month before, so change to next month before making the sell
-        public int nbrSell(EnumTypePlant plant, int number, int price)
-        {
-            int currentPriceMarket = getLastPricePlant(plant);
-            double ratio = ((currentPriceMarket * 100.0) / price ) - 100; //if its 9, then the pllayer price is 9% more than the market
-            double mutliplier = ratio * 2.5; //so if its 40% higher, then no sells; 20% then half sells
-            int nbrSells = (int) Math.Floor(number * (100.0 - mutliplier)/100.0); //result
-
-            return nbrSells;
-        }
-
-        public Dictionary<EventInfo, int> getActiveEvents()
-        {
-            return activeEvents;
         }
     }
 

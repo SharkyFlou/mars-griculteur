@@ -9,7 +9,8 @@ namespace game
         public string namee;
         public string description;
         public int length;
-        public double mutliplier;
+        public double mutliplierBase;
+        public double mutliplierProg;
         public bool targetPlant;
         public bool targetSeed;
         public bool targetTool;
@@ -18,13 +19,14 @@ namespace game
         public int probability;
         public int unlockableAfter;
         public Sprite imageLink;
-        public int timeBetween;
+        public int cooldown;
 
 
         public EventInfo(string namee,
             string description,
             int lenght,
             double mutliplier,
+            double mutliplierProg,
             bool targetPlant,
             bool targetSeed,
             bool targetTool,
@@ -33,12 +35,13 @@ namespace game
             int probability,
             int unlockableAfter,
             Sprite imageLink,
-            int timeBetween)
+            int cooldown)
         {
             this.namee = namee;
             this.description = description;
             this.length = lenght;
-            this.mutliplier = mutliplier;
+            this.mutliplierBase = mutliplier;
+            this.mutliplierProg = mutliplierProg;
             this.targetPlant = targetPlant;
             this.targetSeed = targetSeed;
             this.targetTool = targetTool;
@@ -47,7 +50,7 @@ namespace game
             this.probability = probability;
             this.unlockableAfter = unlockableAfter;
             this.imageLink = imageLink;
-            this.timeBetween = timeBetween;
+            this.cooldown = cooldown;
         }
 
         public EventInfo()
@@ -55,7 +58,8 @@ namespace game
             this.namee = "Error";
             this.description = "Error, using an empty constructor";
             this.length = -1;
-            this.mutliplier = -1;
+            this.mutliplierBase = -1;
+            this.mutliplierProg = 0;
             this.targetPlant = false;
             this.targetSeed = false;
             this.targetTool = false;
@@ -64,7 +68,7 @@ namespace game
             this.probability = -1;
             this.unlockableAfter = -1;
             this.imageLink = Game.getDefaultSprite();
-            this.timeBetween = -1;
+            this.cooldown = -1;
         }
     }
 
