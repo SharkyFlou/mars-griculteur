@@ -12,31 +12,29 @@ namespace game
         private Dictionary<EventInfo, int> activeEvents = new Dictionary<EventInfo, int>();
         //event in cooldown
         private Dictionary<EventInfo, int> impossibleEvents = new Dictionary<EventInfo, int>();
+        private int actualDays;
 
-        public static Market Instance { get; private set; }
-        private Market() { } //singleton new doesnt exist
+        public static Market instance;
 
         // Méthode d'accès statique (point d'accès global)
 
         void Awake()
         {
-            if (Instance != null && Instance != this)
+            if (instance != null)
             {
-                Destroy(this.gameObject);
+                Debug.LogError("Plus d'une instance de Market");
                 return;
             }
-            else
-            {
-                Instance = this;
-            }
-            DontDestroyOnLoad(this.gameObject);
+            instance = this;
 
-            if (Instance != null && Instance != this)
-                Destroy(gameObject);    // Suppression d'une instance précédente (sécurité...sécurité...)
-
-            Instance = this;
+           
         }
 
+        void Start()
+        {
+            createMarket();
+            actualDays = 0;
+        }
 
         public void createMarket()
         {
@@ -55,12 +53,18 @@ namespace game
 
         private void nextActiveEvent()
         {
-            foreach (EventInfo currentEvent in activeEvents.Keys)
+            List<EventInfo> eventASuppr = new List<EventInfo>();
+
+            foreach (var currentEvent in activeEvents)
             {
-                if ((activeEvents[currentEvent] -= 1) <= 0) //length of the event decrease by one
+                if ((activeEvents[currentEvent.Key] -= 1) <= 0) //length of the event decrease by one
                 {                                           //if it hits 0, the event is finished
-                    activeEvents.Remove(currentEvent);
+                    eventASuppr.Add(currentEvent.Key);
                 }
+            }
+            foreach(EventInfo currentEvent in eventASuppr) //because we cannont suppr a elmt in the foreach
+            {
+                activeEvents.Remove(currentEvent);
             }
         }
 
@@ -71,12 +75,18 @@ namespace game
 
         private void nextImpossibleEvents()
         {
-            foreach (EventInfo currentEvent in impossibleEvents.Keys)
+            List<EventInfo> eventASuppr = new List<EventInfo>();
+
+            foreach (var currentEvent in impossibleEvents)
             {
-                if ((impossibleEvents[currentEvent] -= 1) <= 0) //length of the event decrease by one
+                if ((impossibleEvents[currentEvent.Key] -= 1) <= 0) //length of the event decrease by one
                 {                                           //if it hits 0, the event is finished
-                    impossibleEvents.Remove(currentEvent);
+                    impossibleEvents.Remove(currentEvent.Key);
                 }
+            }
+            foreach (EventInfo currentEvent in eventASuppr) //because we cannont suppr a elmt in the foreach
+            {
+                activeEvents.Remove(currentEvent);
             }
         }
 
@@ -148,6 +158,7 @@ namespace game
 
         public EventInfo nextDay(int days, bool eventON)
         {
+            days = days;
             int month = (days / 5) % 12;
             nextActiveEvent();
             nextImpossibleEvents();
@@ -222,7 +233,7 @@ namespace game
             if (history.ContainsKey(pl)) //si la plante est bien dans l'hsitorique des prix
             {
                 Debug.Log("Nombre dans pl : " + history[pl].Count);
-                if (history[pl].Count > 60) //si son historique a plus de 0 valeurs
+                if (history[pl].Count >= 60) //si son historique a plus de 0 valeurs
                 {
                     int nbrDeb = history[pl].Count - 60;
                     return history[pl].GetRange(nbrDeb, 60);
@@ -232,6 +243,10 @@ namespace game
             return null;
         }
 
+        public int getDays()
+        {
+            return actualDays;
+        }
 
     }
 

@@ -13,12 +13,11 @@ namespace game
         public Transform plots;
         List<Transform> plotList; //contient tous les plots pour les faire pousser
         private int nbrJour;
-        private Market market;
+        [SerializeField] public Market market;
         private Dictionary<EventInfo, int> activeEvents = new Dictionary<EventInfo, int>();
         private EventInfo newEvent;
         public Transform PanelNotif;
         public GameObject PrefabNotifButton;
-        public MarketBase marketBase;
 
         public TextMeshProUGUI NameText;
         public TextMeshProUGUI DescText;
@@ -47,9 +46,6 @@ namespace game
             GetPlots(plots);
             nbrJour = 0;
             dayText.SetText(nbrJour.ToString());
-
-            market = new Market();
-            market.createMarket();
         }
 
         void OnMouseDown()
@@ -57,7 +53,7 @@ namespace game
             faitPousser();
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
-            marketBase.market.nextDay(nbrJour, true);
+            Market.instance.nextDay(nbrJour, true);
 
             List<EventInfo> events = new List<EventInfo>();
 
@@ -81,7 +77,7 @@ namespace game
         {
             foreach (Transform transform in plotList)
             {
-                if(transform.name.Length>4 || transform.name.Substring(0, 4) == "plot")
+                if(transform.name.Length>4 && transform.name.Substring(0, 4) == "plot")
                 {
                     try
                     {

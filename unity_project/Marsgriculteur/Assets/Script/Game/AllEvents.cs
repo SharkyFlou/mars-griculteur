@@ -121,6 +121,36 @@ namespace game
                 Game.getDefaultSprite(),
                 50));
 
+            allEventDico.Add("bsTemp", new EventInfo("bsTemp",
+                "bsTemp",
+                1,
+                0.8,
+                0.7,
+                false,
+                false,
+                false,
+                listAnim,
+                new List<string>(),
+                6,
+                2,
+                Game.getDefaultSprite(),
+                0));
+
+            allEventDico.Add("bsTemp2", new EventInfo("bsTemp2",
+                "bsTemp2",
+                1,
+                0.8,
+                0.7,
+                false,
+                false,
+                false,
+                listAnim,
+                new List<string>(),
+                6,
+                2,
+                Game.getDefaultSprite(),
+                0));
+
 
         }
 

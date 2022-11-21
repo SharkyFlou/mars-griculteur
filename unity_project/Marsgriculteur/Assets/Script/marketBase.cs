@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using game;
 
-public class MarketBase : MonoBehaviour
+public class marketBase : MonoBehaviour
 {
+    Market market;
     // Start is called before the first frame update
-    public Market market = new Market();
     void Start()
     {
-        market = new Market();
-        market.createMarket();
+        market = Market.instance;
     }
 }

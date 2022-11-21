@@ -17,7 +17,7 @@ public class graphMarket : MonoBehaviour
     public TextMeshProUGUI labelTemplateX;
     public RectTransform dashTemplateY;
     public RectTransform dashTemplateX;
-    public MarketBase marketBase;
+    [SerializeField] public Market market;
 
 
     private float yMaximum; //maximum de la hauteur, pour équilibrer l'affichage
@@ -25,7 +25,7 @@ public class graphMarket : MonoBehaviour
     private float graphHeight; //hauteur de container, calculé en amont pour permettre certaines modifications
     private float yMin;
     private int numberOfDays;
-    List<string> monthList;
+    private List<string> monthList;
 
     private void Start()
     {
@@ -35,17 +35,17 @@ public class graphMarket : MonoBehaviour
         graphHeight = graphContainer.sizeDelta.y*0.9f; //hauteur du graph
         yMin = 10f; //pour rendre le graph plus beau
 
-        
 
         //ShowGraph(graphList); //affiche le graph
     }
 
     public void affiche(){
-        List<int> graphList = marketBase.market.last60Days(EnumTypePlant.ELB);
+        List<int> graphList = market.last60Days(EnumTypePlant.ELB);
+
         yMaximum = graphList.Max(); //Y maximum pour l'affichage
         xSize = (float)(graphContainer.sizeDelta.x / (graphList.Count * 1.1)); //espace entre les points en X
 
-        numberOfDays = 36; //bullshit
+        numberOfDays = market.getDays();
 
         if (graphList == null){
             Debug.Log("????");
