@@ -8,7 +8,7 @@ namespace game
 {
     public class AllTools
     {
-        Dictionary<String, Tool> dicoTools = new Dictionary<String, Tool>();
+        Dictionary<String, Tool> dicoTools = new Dictionary<String,Tool>();
 
         //instantiate all the diferents tools
         public AllTools()
