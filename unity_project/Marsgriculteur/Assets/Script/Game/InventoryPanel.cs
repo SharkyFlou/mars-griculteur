@@ -13,7 +13,10 @@ namespace game
         {
             PanelInventory.SetActive(false);
         }
-
+        private void OnMouseDown()
+        {
+            
+        }
         public void OpenPanel()
         {
             if(!PanelNotif.activeSelf)

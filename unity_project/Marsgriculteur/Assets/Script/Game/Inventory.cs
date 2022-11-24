@@ -14,6 +14,8 @@ namespace game
         //permet de prendre le Dictionary inventory du player
         public PlayerInventory playerInventory;
 
+        public Shop shop;
+
         //correspond au slot a initialiser
         public GameObject SlotImage;
         //correspond au panel parent
@@ -32,10 +34,10 @@ namespace game
             slots=dico;
 
             if(slots.Count==0){
-                Debug.Log("nbSlots est de : "+slots.Count);
+                //Debug.Log("nbSlots est de : "+slots.Count);
                 Debug.Log("ERROR, DICO VIDE");
             }
-
+            /*
             else{
                 Debug.Log("nbSlots est de : "+slots.Count);
 
@@ -43,7 +45,7 @@ namespace game
                 foreach(KeyValuePair<BasicItem,int> kvp in this.slots){
                 Debug.Log("item : "+kvp.Key.getName()+", qtt : "+kvp.Value);
                 }
-            }            
+            }*/
             
             afficheInventory();
 
@@ -51,8 +53,8 @@ namespace game
             //afficher le weightInventory/maxWeight
             //comme ça on fait des tests pour voir s'il peut charger encore plus de poids
             //de ce qu'il porte maintenant
-            Debug.Log(currentWeight);
-            Debug.Log(this.weightMax);
+            /*Debug.Log(currentWeight);
+            Debug.Log(this.weightMax);*/
         }
 
         //retourne le maxWeight de l'inventory
@@ -69,9 +71,9 @@ namespace game
         // ---le (ou les) dicos inventory.cs et playerInventory.cs
         void afficheInventory(){
             for(int i=0;i<slots.Count;i++){
-                Debug.Log("on entre dans la boucle");
+                //Debug.Log("on entre dans la boucle");
                 //on cree l'objet prefab slot
-                GameObject slot = (GameObject) Instantiate(SlotImage); //, new Vector3(1,1,0)
+                GameObject slot = (GameObject) Instantiate(SlotImage);//, new Vector3(1,1,0)
 
                 //MOMENT DE REMPLIR LE SLOT
                 //on prend la key/value du dico a la pos i ##########################
@@ -87,7 +89,7 @@ namespace game
                 Image[] imgDuSlot = slot.GetComponentsInChildren<Image>();
                 foreach(Image imgS in imgDuSlot){
                     if(imgS.gameObject.transform.parent != null){
-                        imgS.sprite = itemOfSlot.getImageLink();
+                        imgS.sprite = itemOfSlot.getSprite();
                         imgS.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
                     }
                 }
@@ -126,10 +128,28 @@ namespace game
             //si value == 0 alors on efface element
         }
 
+        public override string ToString()
+        {
+            string rtrn = string.Empty;
+            foreach (KeyValuePair<BasicItem, int> kvp in slots)
+            {
+                rtrn += kvp.Key + " : \n{";
+                rtrn += "\t" + kvp.Key.getName() + "\n";
+                rtrn += "\t" + kvp.Key.getId() + "\n";
+                rtrn += "\t" + kvp.Key.getDesc() + "\n";
+                rtrn += "\t" + kvp.Key.getSprite().ToString() + "\n";
+                //rtrn += "\t" + kvp.Key.getPrice().ToString() + "\n";
+                rtrn += "\tQuantité" + kvp.Value.ToString() + "\n";
+                rtrn += "}";
+            }
 
-        
+
+            return rtrn;
+        }
 
 
-        
+
+
+
     }
 }

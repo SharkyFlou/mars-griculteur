@@ -23,10 +23,10 @@ namespace game{
             shopInventory = new Shop();
 
             dicoTool = JsonConvert.DeserializeObject<AllTools>(JSONTool.text);
-
+            /*
             Debug.Log(dicoPlant.ToString());
             Debug.Log(dicoTool.ToString());
-            Debug.Log(shopInventory.toString());
+            Debug.Log(shopInventory.ToString());*/
             /*
             foreach (KeyValuePair<EnumTypePlant, PlantInfo> kvp in dicoPlant.allPlantDico)
             {

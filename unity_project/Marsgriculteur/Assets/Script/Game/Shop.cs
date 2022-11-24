@@ -6,13 +6,17 @@ using UnityEngine;
 
 namespace game
 {
-    public class Shop : Inventory
+    public class Shop : MonoBehaviour
     {
+
+        public Inventory inventory;
         // Magasin de vente de graines
         // C'est un inventaire à haute quantité qui ne peut pas être réduit
-        
+        public Dictionary<BasicItem, int> slots = new Dictionary<BasicItem, int>();
+
         public Shop()
         {
+            /*
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB), 999);
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.EGRO), 999);
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.AJOS), 999);
@@ -23,7 +27,15 @@ namespace game
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.NIPAL), 999);*/
         }
 
-
+        void Start()
+        {
+            //Debug.Log("Shop présent au clique");
+            this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB), 999);
+            this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.EGRO), 999);
+            this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.AJOS), 999);
+            this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.AZLOC), 999);
+            inventory.WakeUp(slots);
+        }
 
         /*
         public void getAllPrice()
@@ -33,6 +45,9 @@ namespace game
                 Console.WriteLine("BasicItem: {0}, prix: {1}", st.Key, st.Value);
             }
         }*/
+
+
+
     }
 
 }
