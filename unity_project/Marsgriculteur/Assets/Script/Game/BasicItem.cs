@@ -44,6 +44,10 @@ namespace game
             return this.weight;
         }
 
+        public int getId(){
+            return this.id;
+        }
+
     }
 
 }

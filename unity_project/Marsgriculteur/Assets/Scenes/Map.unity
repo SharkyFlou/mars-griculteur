@@ -416,6 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &34267770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &36305309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,8 +760,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 50431370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6147437, y: 1.428464, z: 89.7081}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.59, y: -3.97, z: 89.7081}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -778,6 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 1278678725}
+  listIDS: 
 --- !u!1 &61286907
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &61286911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,6 +1353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &153820478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5629,6 +5634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &252940061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5729,8 +5735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.45, y: 2}
-  m_SizeDelta: {x: 983.43, y: 415.82}
+  m_AnchoredPosition: {x: 0.000000029802, y: -0.00000047684}
+  m_SizeDelta: {x: 662.9, y: 346.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &319808364
 MonoBehaviour:
@@ -6525,6 +6531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &509806352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7180,6 +7187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &616187668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7356,6 +7364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &628713830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7667,6 +7676,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &704429128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9273,6 +9283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &914448418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10338,6 +10349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &1034524884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11049,6 +11061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &1190905601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11193,6 +11206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &1215632822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11630,6 +11644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &1274650068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11728,8 +11743,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.24752808, y: -26.040009}
-  m_SizeDelta: {x: -31.615, y: -201.65}
+  m_AnchoredPosition: {x: 0.75, y: -21.05}
+  m_SizeDelta: {x: -33.61, y: -153.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1278678722
 MonoBehaviour:
@@ -12541,6 +12556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &1391337761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35794,9 +35810,9 @@ RectTransform:
   m_Father: {fileID: 2006331165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -806.1, y: -122.30002}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 37.5, y: 0}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653079563
@@ -36391,6 +36407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &1796933399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36546,6 +36563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &1817600315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37092,6 +37110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &1860296381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37458,6 +37477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &1938911750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37656,7 +37676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -37882,6 +37902,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &2011361837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38615,6 +38636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  playerInventory: {fileID: 50431372}
 --- !u!114 &2126580418
 MonoBehaviour:
   m_ObjectHideFlags: 0
