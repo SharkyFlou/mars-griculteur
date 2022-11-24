@@ -22,6 +22,14 @@ public class PlotEvents : MonoBehaviour
     private Boolean contientGraine = false;
 
 
+    //on appelle le dico du inventory Player, puis on le modifie selon
+    //recup plante
+    //ou plantation
+    
+    public PlayerInventory playerInventory;
+
+
+
     private void Start()
     {
         
@@ -81,7 +89,10 @@ public class PlotEvents : MonoBehaviour
 
     public void recupPlante()
     {
-        //donne les trucs au joueur
+        //playerInventory.addToInventory((CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB)),15);
+        //playerInventory.SubstractFromInventory((CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB)),15);
+        playerInventory.removeFromInventory(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB));
+
     }
 
     public void planteGraine()
@@ -92,14 +103,16 @@ public class PlotEvents : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (contientGraine && growthStatus == growthTime)
+        /* if (contientGraine && growthStatus == growthTime)
         {
             recupPlante();
         }
         else if(!contientGraine)
         {
             planteGraine();
-        }
+        } */
+
+        recupPlante();
 
     }
 
