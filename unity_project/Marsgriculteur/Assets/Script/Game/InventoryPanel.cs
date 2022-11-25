@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace game
 {
@@ -8,10 +9,20 @@ namespace game
     {
         public GameObject PanelInventory;
         public GameObject PanelNotif;
+        
+        public TextMeshProUGUI textWeight;
+
+
 
         void Start()
         {
+            //getWeightStatus();
+
             PanelInventory.SetActive(false);
+        }
+
+        public void getWeightStatus(){
+            //textWeight = Inventory.getCurrentWeight().ToString() + "/" + Inventory.getWeightMax().ToString();
         }
 
         public void OpenPanel()
