@@ -17,23 +17,8 @@ namespace game
         private Dictionary<EventInfo, int> activeEvents = new Dictionary<EventInfo, int>();
         private EventInfo newEvent;
         public Transform PanelNotif;
-        public GameObject PrefabNotifButton;
 
-        public TextMeshProUGUI NameText;
-        public TextMeshProUGUI DescText;
-        public TextMeshProUGUI PlantText;
-        public TextMeshProUGUI SeedText;
-        public TextMeshProUGUI ToolText;
 
-        void Awake()
-        {
-            NameText.SetText("nom");
-            DescText.SetText("description");
-            PlantText.SetText("listePlant");
-            SeedText.SetText("listeSeed");
-            ToolText.SetText("listeTool");
-            Instantiate(PrefabNotifButton, PanelNotif);
-        }
 
         void Start()
         {
@@ -53,7 +38,18 @@ namespace game
             faitPousser();
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
-            Market.instance.nextDay(nbrJour, true);
+
+            Market.instance.afficheEtatDebug();
+
+            EventInfo evt = Market.instance.nextDay(nbrJour, true);
+            if (evt == null)
+            {
+                Debug.Log("Pas d'event");
+            }
+            else
+            {
+                Debug.Log("Nouveau evt : " + evt.namee);
+            }
 
             List<EventInfo> events = new List<EventInfo>();
 
@@ -87,7 +83,6 @@ namespace game
                     {
                         Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transform.name + "\" n'a pas marché");
                     }
-                    
                 }
                 else
                 {
@@ -105,16 +100,6 @@ namespace game
                 plotList.Add(child);
             }
             return;
-        }
-
-        public void AddNotif(string nom, string description, string listePlant, string listeSeed, string listeTool)
-        {
-            NameText.SetText(nom);
-            DescText.SetText(description);
-            PlantText.SetText(listePlant);
-            SeedText.SetText(listeSeed);
-            ToolText.SetText(listeTool);
-            Instantiate(PrefabNotifButton, PanelNotif);
         }
     }
 }

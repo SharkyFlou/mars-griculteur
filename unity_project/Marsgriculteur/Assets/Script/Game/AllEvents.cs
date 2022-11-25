@@ -86,9 +86,7 @@ namespace game
             //********************************************************************
 
             allEventDico.Clear();
-            List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>();
-            listElbEgr.Add(EnumTypePlant.ELB);
-            listElbEgr.Add(EnumTypePlant.EGRO);
+            List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>() { EnumTypePlant.ELB , EnumTypePlant.EGRO };
 
             allEventDico.Add("wartElbEgr", new EventInfo("wartElbEgr",
                 "Des verrus martiennes touchent les recoltes d'EBL et d'EGRO, ça n'a pas bon goût",
@@ -190,7 +188,6 @@ namespace game
                         break;
                     }
                 }
-                    
             }
 
             return newEvent;

@@ -7,6 +7,9 @@ using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.UI;
+using static Unity.VisualScripting.Metadata;
+
+
 
 
 public class graphMarket : MonoBehaviour
@@ -18,14 +21,18 @@ public class graphMarket : MonoBehaviour
     public RectTransform dashTemplateY;
     public RectTransform dashTemplateX;
     [SerializeField] public Market market;
+    public TextMeshProUGUI titre;
 
 
     private float yMaximum; //maximum de la hauteur, pour équilibrer l'affichage
     private float xSize; //maximum de la longueur, pour équilibrer l'affichage
+    private float xMaximum; 
     private float graphHeight; //hauteur de container, calculé en amont pour permettre certaines modifications
     private float yMin;
     private int numberOfDays;
     private List<string> monthList;
+
+    private List<GameObject> allChildsToSuppr = new List<GameObject>();
 
     private void Start()
     {
@@ -41,6 +48,7 @@ public class graphMarket : MonoBehaviour
 
     public void affiche(){
         List<int> graphList = market.last60Days(EnumTypePlant.ELB);
+        titre.text = "Cours du " + EnumTypePlant.ELB;
 
         yMaximum = graphList.Max(); //Y maximum pour l'affichage
         xSize = (float)(graphContainer.sizeDelta.x / (graphList.Count * 1.1)); //espace entre les points en X
@@ -68,11 +76,13 @@ public class graphMarket : MonoBehaviour
         rectTransform.sizeDelta = new Vector2(11, 11);
         rectTransform.anchorMin = new Vector2(0, 0);
         rectTransform.anchorMax = new Vector2(0, 0);
+        allChildsToSuppr.Add(gameobject);
         return gameobject;
     }
 
     private void ShowGraph(List<int> valueList) //affiche la liste donné sous forme de graph,  avec en valeur de X les month
     {
+        clearGraph();
         //créer les lignes horizontales
         int nbrSeperator = 8;
         for (int i = 0; i <= nbrSeperator; i++) //créer les valeurs Y, les lignes
@@ -83,13 +93,16 @@ public class graphMarket : MonoBehaviour
             TextMeshProUGUI labelY = Instantiate(labelTemplateY, graphContainer, false);
             labelY.gameObject.SetActive(true);
             labelY.rectTransform.anchoredPosition = new Vector2(0f,yMin + heightInScale * graphHeight);
+            allChildsToSuppr.Add(labelY.gameObject);
             labelY.GetComponent<TextMeshProUGUI>().text = ((int)math.round(heightInScale * yMaximum)).ToString();
 
 
             //creer la ligne
             RectTransform dashY = Instantiate(dashTemplateY, graphContainer, false);
             dashY.gameObject.SetActive(true);
-            dashY.anchoredPosition = new Vector2((dashTemplateY.sizeDelta.x / 2), yMin+ heightInScale * graphHeight);
+            dashY.sizeDelta = new Vector2(graphContainer.sizeDelta.x, dashY.sizeDelta.y); //change la taille selon la taille du graph container
+            dashY.anchoredPosition = new Vector2(dashY.sizeDelta.x / 2, yMin + (heightInScale * graphHeight));
+            allChildsToSuppr.Add(dashY.gameObject);
         }
 
 
@@ -110,12 +123,15 @@ public class graphMarket : MonoBehaviour
                 labelX.rectTransform.anchoredPosition = new Vector2(xPosition, -20f);
                 int monthToDisplay = ((numberOfDays + i) / 5) % 12; //calcul complique, mais donne le mois 
                 labelX.GetComponent<TextMeshProUGUI>().text = monthList[monthToDisplay];
+                allChildsToSuppr.Add(labelX.gameObject);
 
 
                 //trait
                 RectTransform dashX = Instantiate(dashTemplateX, graphContainer, false);
                 dashX.gameObject.SetActive(true);
-                dashX.anchoredPosition = new Vector2(xPosition, (dashTemplateX.sizeDelta.x / 2));
+                dashX.sizeDelta = new Vector2(graphContainer.sizeDelta.y, dashX.sizeDelta.y); //change la taille selon la taille du graph container
+                dashX.anchoredPosition = new Vector2(xPosition, (dashX.sizeDelta.x / 2));
+                allChildsToSuppr.Add(dashX.gameObject);
             }
 
             GameObject circleGameObject = CreateCircle(new Vector2(xPosition, yPosition));
@@ -134,6 +150,7 @@ public class graphMarket : MonoBehaviour
         GameObject gameObject = new GameObject("dotConnection", typeof(Image));
         gameObject.transform.SetParent(graphContainer, false);
         gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 0.5f);
+        allChildsToSuppr.Add(gameObject);
 
         RectTransform rectTransform = gameObject.GetComponent<RectTransform>(); 
         Vector2 dir = (dotPositionA - dotPositionB).normalized;
@@ -152,6 +169,16 @@ public class graphMarket : MonoBehaviour
         Vector2 diference = vec2 - vec1;
         float sign = (vec2.y < vec1.y) ? -1.0f : 1.0f;
         return Vector2.Angle(Vector2.right, diference) * sign;
+    }
+
+    private void clearGraph()
+    {
+        for (int i = 0; i < allChildsToSuppr.Count; i++)
+        {
+            Destroy(allChildsToSuppr[i]);
+        }
+        allChildsToSuppr.Clear();
+
     }
 
 }
