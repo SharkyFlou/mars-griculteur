@@ -32,7 +32,7 @@ public class DropDownMarket : MonoBehaviour
 
         foreach(Plant pl in plList)
         {
-            TMP_Dropdown.OptionData plantItem = new TMP_Dropdown.OptionData(pl.getName(), pl.getImageLink());
+            TMP_Dropdown.OptionData plantItem = new TMP_Dropdown.OptionData(pl.getName(), pl.getSprite());
             plantItems.Add(plantItem);
         }
 

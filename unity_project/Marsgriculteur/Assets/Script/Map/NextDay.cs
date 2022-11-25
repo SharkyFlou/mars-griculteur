@@ -13,15 +13,10 @@ namespace game
         public Transform plots;
         List<Transform> plotList; //contient tous les plots pour les faire pousser
         private int nbrJour;
-        private Market market;
         //private AllEvents allEvents;
         [SerializeField] public Market market;
-        private Dictionary<EventInfo, int> activeEvents = new Dictionary<EventInfo, int>();
-        private EventInfo newEvent;
-        public Transform PanelNotif;
 
         public static Dictionary<EventInfo, int> dicoPossessions = new Dictionary<EventInfo, int>();
-
 
         void Start()
         {
@@ -34,9 +29,6 @@ namespace game
             GetPlots(plots);
             nbrJour = 0;
             dayText.SetText(nbrJour.ToString());
-        }
-
-            AllEvents all = new AllEvents();
 
             //Market.instance.afficheEtatDebug();
 
@@ -50,10 +42,11 @@ namespace game
                 Debug.Log("Nouveau evt : " + evt.namee);
             }
 
-            List<EventInfo> events = new List<EventInfo>();
-            dicoPossessions.Add(all.allEventDico["vegeTrend"], all.allEventDico["vegeTrend"].length);
+            AllEvents all = new AllEvents();
+
+            /*dicoPossessions.Add(all.allEventDico["vegeTrend"], all.allEventDico["vegeTrend"].length);
             dicoPossessions.Add(all.allEventDico["qualiMeat"], all.allEventDico["qualiMeat"].length);
-            dicoPossessions.Add(all.allEventDico["solarStorm"], all.allEventDico["solarStorm"].length);
+            dicoPossessions.Add(all.allEventDico["solarStorm"], all.allEventDico["solarStorm"].length);*/
 
             Debug.Log("dic" + dicoPossessions.Count);
 
@@ -75,20 +68,20 @@ namespace game
         {
             foreach (Transform transforme in plotList)
             {
-                if(transform.name.Length>4 && transform.name.Substring(0, 4) == "plot")
+                if(transforme.name.Length>4 && transforme.name.Substring(0, 4) == "plot")
                 {
                     try
                     {
                         transforme.gameObject.SendMessage("fairePousser");
                     }
-                    catch
+                    catch //THIS NEVER RUNS
                     {
                         Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transforme.name + "\" n'a pas marché");
                     }
                 }
                 else
                 {
-                    Debug.Log("Bug dans faire pousser, le transform \"" + transforme.name + "\" est dans la liste des shops :/");
+                    Debug.Log("Bug dans faire pousser, le transform \"" + transforme.name + "\" est dans la liste des plots :/'");
                 }
             }
         }
