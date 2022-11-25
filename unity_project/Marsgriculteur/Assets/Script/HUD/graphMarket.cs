@@ -38,10 +38,9 @@ public class graphMarket : MonoBehaviour
 
     private List<GameObject> allChildsToSuppr = new List<GameObject>();
 
-    private void Start()
+    private void Awake()
     {
         monthList = new List<string>() { "Janv", "Fev", "Mars", "Avril", "Mai", "Juin", "Juil", "Aout", "Sept", "Oct", "Nov", "Dec" };
-        graphHeight = graphContainer.rect.height * 0.9f; //hauteur du graph
         yMin = 10f; //pour rendre le graph plus beau
     }
 
@@ -51,8 +50,9 @@ public class graphMarket : MonoBehaviour
         titre.text = "Cours du " + plantAct;
 
         yMaximum = graphList.Max(); //Y maximum pour l'affichage
-        xMaximum = graphContainer.rect.width;
-        xSize = (float)(xMaximum / (graphList.Count * 1.1)); //espace entre les points en X
+        xMaximum = graphContainer.rect.width; //largeur du graph
+        graphHeight = graphContainer.rect.height * 0.9f; //hauteur du graph
+        xSize = (float)(xMaximum / (graphList.Count * 1.05)); //espace entre les points en X
 
         numberOfDays = market.getDays();
 
@@ -141,7 +141,7 @@ public class graphMarket : MonoBehaviour
                 //trait
                 RectTransform dashX = Instantiate(dashTemplateX, graphContainer, false);
                 dashX.gameObject.SetActive(true);
-                dashX.sizeDelta = new Vector2(graphHeight, dashX.sizeDelta.y*mutlInvGraph); //change la taille selon la taille du graph container
+                dashX.sizeDelta = new Vector2(graphHeight*1.1f, dashX.sizeDelta.y*mutlInvGraph); //change la taille selon la taille du graph container
                 dashX.anchoredPosition = new Vector2(xPosition, (dashX.sizeDelta.x / 2));
                 allChildsToSuppr.Add(dashX.gameObject);
             }

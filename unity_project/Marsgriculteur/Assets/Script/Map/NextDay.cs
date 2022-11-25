@@ -39,7 +39,7 @@ namespace game
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
 
-            Market.instance.afficheEtatDebug();
+            //Market.instance.afficheEtatDebug();
 
             EventInfo evt = Market.instance.nextDay(nbrJour, true);
             if (evt == null)
