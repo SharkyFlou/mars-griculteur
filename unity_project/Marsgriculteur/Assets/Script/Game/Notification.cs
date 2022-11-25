@@ -22,32 +22,20 @@ namespace game
         //si on ajoute un item on doit ajouter à ce dico pour l'afficher
         public Dictionary<EventInfo, int> slots = new Dictionary<EventInfo, int>();
 
-        //dès qu'on ouvre l'inventory on l'affiche , appele depuis player inventory
-        public void WakeUp(Dictionary<EventInfo, int> dico)
+
+        public void clearInventoryDisplay()
         {
-            slots = dico;
+            foreach (Transform child in slotPanel)
+                /* slotPanel.DetachChildren(child);*/
+                Destroy(child.gameObject);
 
-            if (slots.Count == 0)
-            {
-                Debug.Log("nbSlots est de : " + slots.Count);
-                Debug.Log("ERROR, DICO VIDE");
-            }
-
-            else
-            {
-                Debug.Log("nbSlots est de : " + slots.Count);
-
-                Debug.Log("LE DICTIONNAIRE EST: \n");
-                foreach (KeyValuePair<EventInfo, int> kvp in this.slots)
-                {
-                    Debug.Log("item : " + kvp.Key.getName() + ", reste : " + kvp.Value);
-                }
-            }
-            afficheInventory();
+            //slotPanel.DetachChildren();
+            //Destroy();
         }
 
-        void afficheInventory()
+        public void afficheInventory()
         {
+            clearInventoryDisplay();
             for (int i = 0; i < slots.Count; i++)
             {
                 //on cree l'objet prefab slot

@@ -54,9 +54,9 @@ namespace game
 
             for(int i=0;i<slots.Count;i++){            
 
-                Debug.Log("LE DICTIONNAIRE EST: \n");
+                //Debug.Log("LE DICTIONNAIRE EST: \n");
                 foreach(KeyValuePair<BasicItem,int> kvp in slots){
-                    Debug.Log("item : "+kvp.Key.getName()+", qtt : "+kvp.Value);
+                    //Debug.Log("item : "+kvp.Key.getName()+", qtt : "+kvp.Value);
                 }  
 
 

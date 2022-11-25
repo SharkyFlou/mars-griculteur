@@ -1,4 +1,5 @@
 using game;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,13 +33,13 @@ namespace game
 
             market = new Market();
             market.createMarket();
-            //dicoPossessions = market.getActiveEvents();
+            dicoPossessions = market.getActiveEvents();
 
             AllEvents all = new AllEvents();
 
-            dicoPossessions.Add(all.allEventDico["vegeTrend"], all.allEventDico["vegeTrend"].length);
+            /*dicoPossessions.Add(all.allEventDico["vegeTrend"], all.allEventDico["vegeTrend"].length);
             dicoPossessions.Add(all.allEventDico["qualiMeat"], all.allEventDico["qualiMeat"].length);
-            dicoPossessions.Add(all.allEventDico["solarStorm"], all.allEventDico["solarStorm"].length);
+            dicoPossessions.Add(all.allEventDico["solarStorm"], all.allEventDico["solarStorm"].length);*/
 
             Debug.Log("dic" + dicoPossessions.Count);
 
@@ -68,13 +69,13 @@ namespace game
                     }
                     catch
                     {
-                        Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transforme.name + "\" n'a pas marché");
+                        //Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transforme.name + "\" n'a pas marché");
                     }
                     
                 }
                 else
                 {
-                    Debug.Log("Bug dans faire pousser, le transform \"" + transforme.name + "\" est dans la liste des shops :/");
+                    //Debug.Log("Bug dans faire pousser, le transform \"" + transforme.name + "\" est dans la liste des shops :/");
                 }
             }
         }
@@ -88,6 +89,52 @@ namespace game
                 plotList.Add(child);
             }
             return;
+        }
+
+
+        //permet d'ajouter un slot au dictionnaire
+        public void addToInventory(EventInfo item, int duree)
+        {
+            bool trouve = false;
+
+            if (duree < 1)
+                return;
+            else
+            {
+                //on parcourt chaque key pour acceder a son getId()
+                foreach (EventInfo kvp in dicoPossessions.Keys.namee.ToList())
+                {
+                    if (kvp.getId() == item.getId())
+                    {
+                        dicoPossessions[kvp] += duree;
+                        trouve = true;
+                        break;
+                    }
+                }
+                //si on le trouve pas on l'ajoute a notre 
+                if (!trouve)
+                {
+                    dicoPossessions.Add(item, duree);
+                }
+            }
+
+            notif.afficheInventory(dicoPossessions);
+
+        }
+
+        //removes an item instantly
+        public void removeFromInventory(EventInfo item)
+        {
+            foreach (EventInfo kvp in dicoPossessions.Keys.ToList())
+            {
+                if (kvp.getId() == item.getId())
+                {
+                    dicoPossessions.Remove(kvp);
+                    break;
+                }
+            }
+
+            notif.afficheInventory(dicoPossessions);
         }
     }
 }
