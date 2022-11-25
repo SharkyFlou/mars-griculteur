@@ -32,7 +32,7 @@ public class PlotEvents : MonoBehaviour
 
     private void Start()
     {
-        
+
         List<Transform> children = GetChildren(transform);
         foreach(Transform child in children)
         {
@@ -89,9 +89,11 @@ public class PlotEvents : MonoBehaviour
 
     public void recupPlante()
     {
+        /* PAS ENCORE FONCTIONNEL */
+
         //playerInventory.addToInventory((CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB)),15);
         //playerInventory.SubstractFromInventory((CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB)),15);
-        playerInventory.removeFromInventory(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB));
+        //playerInventory.removeFromInventory(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB));
 
     }
 
@@ -101,7 +103,7 @@ public class PlotEvents : MonoBehaviour
     }
 
 
-    void OnMouseDown()
+    void OnMouseUp()
     {
         /* if (contientGraine && growthStatus == growthTime)
         {
@@ -114,6 +116,14 @@ public class PlotEvents : MonoBehaviour
 
         recupPlante();
 
+        /*
+            Test de la structure
+        
+        // Génère aléatoirement un EnumTypePlant et appelle la fonction createPlantedPlant pour afficher une nouvelle plante dans le Plot
+        System.Random random = new System.Random();
+        donnePlantedPlante(CreateAllSeedPlant.dicoPlant.createPlantedPlant((EnumTypePlant)Enum.GetValues(typeof(EnumTypePlant)).GetValue(random.Next(4))));
+        //CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB).getWeight();
+        */
     }
 
     List<Transform> GetChildren(Transform parent)

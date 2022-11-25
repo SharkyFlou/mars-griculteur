@@ -6,8 +6,8 @@
             "namePlant" : "ELB",
             "description" : "Graine d'ebl",
             "growthTime" : 1,
-            "seedSpriteLink" : "targetPlant",
-            "plantSpriteLink" : "bg_of_bg",
+            "seedSpriteLink" : "targetSeed",
+            "plantSpriteLink" : "targetPlant",
             "plantedPlantSpriteLink" : "plantedPlant_elb",
             "seedWeight" : 1,
             "plantWeight" : 5,
@@ -15,29 +15,43 @@
             "basicPlantPrice" : [
                 20,
                 25,
-                12
+                12,
+                8,
+                22,
+                13,
+                14,
+                17,
+                24,
+                20,
+                9,
+                14
             ]
-        }/*,  
+        },  
         "EGRO" :
         {
             "id" : 2,
             "namePlant" : "EGRO",
             "description" : "Graine d'egro",
             "growthTime" : 1,
-            "seedSpriteLink" : "simage.png",
-            "plantSpriteLink" : "pimage.png",
-            "plantedPlantSpriteLink" : [
-                "image1.png",
-                "image2.png",
-                "image3.png"
-            ],
+            "seedSpriteLink" : "targetSeed",
+            "plantSpriteLink" : "targetPlant",
+            "plantedPlantSpriteLink" : "plantedPlant_egro",
             "seedWeight" : 1,
             "plantWeight" : 5,
             "basicSeedPrice" : 10,
             "basicPlantPrice" : [
                 20,
                 25,
-                12
+                12,
+                8,
+                22,
+                13,
+                14,
+                17,
+                24,
+                20,
+                9,
+                14
             ]
         },
         "AJOS" :
@@ -46,20 +60,25 @@
             "namePlant" : "AJOS",
             "description" : "Graine de d'ajos",
             "growthTime" : 1,
-            "seedSpriteLink" : "simage.png",
-            "plantSpriteLink" : "pimage.png",
-            "plantedPlantSpriteLink" : [
-                "image1.png",
-                "image2.png",
-                "image3.png"
-            ],
+            "seedSpriteLink" : "bg_of_bg",
+            "plantSpriteLink" : "bg_of_bg",
+            "plantedPlantSpriteLink" : "plantedPlant_ajos",
             "seedWeight" : 1,
             "plantWeight" : 5,
             "basicSeedPrice" : 10,
             "basicPlantPrice" : [
                 20,
                 25,
-                12
+                12,
+                8,
+                22,
+                13,
+                14,
+                17,
+                24,
+                20,
+                9,
+                14
             ]
         },
         "AZLOC" :
@@ -68,21 +87,26 @@
             "namePlant" : "AZLOC",
             "description" : "Graine d'azloc",
             "growthTime" : 1,
-            "seedSpriteLink" : "simage.png",
-            "plantSpriteLink" : "pimage.png",
-            "plantedPlantSpriteLink" : [
-                "image1.png",
-                "image2.png",
-                "image3.png"
-            ],
+            "seedSpriteLink" : "bg_of_bg",
+            "plantSpriteLink" : "bg_of_bg",
+            "plantedPlantSpriteLink" :"plantedPlant_azloc",
             "seedWeight" : 1,
             "plantWeight" : 5,
             "basicSeedPrice" : 10,
             "basicPlantPrice" : [
                 20,
                 25,
-                12
+                12,
+                8,
+                22,
+                13,
+                14,
+                17,
+                24,
+                20,
+                9,
+                14
             ]
-        }*/
+        }
     }
 }
