@@ -34,7 +34,7 @@ namespace game
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.EGRO), 999);
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.AJOS), 999);
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.AZLOC), 999);
-            inventory.WakeUp(slots);
+            //inventory.afficheInventory(slots);
         }
 
         /*

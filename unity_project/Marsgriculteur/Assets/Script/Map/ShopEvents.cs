@@ -9,7 +9,7 @@ namespace game
         public InventoryPanel shop;
         void OnMouseUp()
         {
-            shop.OpenPanel();
+            //shop.OpenPanel();
         }
 
 

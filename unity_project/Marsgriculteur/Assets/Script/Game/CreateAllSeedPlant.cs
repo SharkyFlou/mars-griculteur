@@ -10,9 +10,9 @@ namespace game{
 
         public TextAsset JSONTool;
 
-        public static AllSeedPlant dicoPlant;
+        public static Inventory mainInventory;
 
-        public static Shop shopInventory;
+        public static AllSeedPlant dicoPlant;
 
         public static AllTools dicoTool;
         // Start is called before the first frame update
@@ -20,9 +20,10 @@ namespace game{
         {
             dicoPlant = JsonConvert.DeserializeObject<AllSeedPlant>(JSONSeedPlant.text);
 
-            shopInventory = new Shop();
-
             dicoTool = JsonConvert.DeserializeObject<AllTools>(JSONTool.text);
+
+            mainInventory = new Inventory();
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.ELB), 10);
             /*
             Debug.Log(dicoPlant.ToString());
             Debug.Log(dicoTool.ToString());

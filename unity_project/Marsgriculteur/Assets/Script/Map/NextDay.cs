@@ -18,24 +18,6 @@ namespace game
         private EventInfo newEvent;
         public Transform PanelNotif;
         public GameObject PrefabNotifButton;
-
-
-        public TextMeshProUGUI NameText;
-        public TextMeshProUGUI DescText;
-        public TextMeshProUGUI PlantText;
-        public TextMeshProUGUI SeedText;
-        public TextMeshProUGUI ToolText;
-
-        void Awake()
-        {
-            NameText.SetText("nom");
-            DescText.SetText("description");
-            PlantText.SetText("listePlant");
-            SeedText.SetText("listeSeed");
-            ToolText.SetText("listeTool");
-            Instantiate(PrefabNotifButton, PanelNotif);
-        }
-
         void Start()
         {
             if (plots == null) //pour éviter de planter (ahah "plant")
@@ -110,14 +92,5 @@ namespace game
             return;
         }
 
-        public void AddNotif(string nom, string description, string listePlant, string listeSeed, string listeTool)
-        {
-            NameText.SetText(nom);
-            DescText.SetText(description);
-            PlantText.SetText(listePlant);
-            SeedText.SetText(listeSeed);
-            ToolText.SetText(listeTool);
-            Instantiate(PrefabNotifButton, PanelNotif);
-        }
     }
 }
