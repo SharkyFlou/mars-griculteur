@@ -13,11 +13,14 @@ namespace game
         public Transform plots;
         List<Transform> plotList; //contient tous les plots pour les faire pousser
         private int nbrJour;
+        private Market market;
+        //private AllEvents allEvents;
         [SerializeField] public Market market;
         private Dictionary<EventInfo, int> activeEvents = new Dictionary<EventInfo, int>();
         private EventInfo newEvent;
         public Transform PanelNotif;
 
+        public static Dictionary<EventInfo, int> dicoPossessions = new Dictionary<EventInfo, int>();
 
 
         void Start()
@@ -33,11 +36,7 @@ namespace game
             dayText.SetText(nbrJour.ToString());
         }
 
-        void OnMouseDown()
-        {
-            faitPousser();
-            nbrJour++;
-            dayText.SetText(nbrJour.ToString());
+            AllEvents all = new AllEvents();
 
             //Market.instance.afficheEtatDebug();
 
@@ -52,41 +51,44 @@ namespace game
             }
 
             List<EventInfo> events = new List<EventInfo>();
+            dicoPossessions.Add(all.allEventDico["vegeTrend"], all.allEventDico["vegeTrend"].length);
+            dicoPossessions.Add(all.allEventDico["qualiMeat"], all.allEventDico["qualiMeat"].length);
+            dicoPossessions.Add(all.allEventDico["solarStorm"], all.allEventDico["solarStorm"].length);
 
-            foreach (KeyValuePair<EventInfo, int> ev in activeEvents)
-            {
-                events.Add(ev.Key);
-            }
+            Debug.Log("dic" + dicoPossessions.Count);
 
-            foreach (EventInfo ev in events)
-            {
-                activeEvents[ev] -= 1;
+        }
 
-                if (activeEvents[ev] == 0)
-                {
-                    //suppr notif
-                }
-            }
+        public static Dictionary<EventInfo, int> getInventoryNotif()
+        {
+            return dicoPossessions;
+        }
+
+        void OnMouseDown()
+        {
+            faitPousser();
+            nbrJour++;
+            dayText.SetText(nbrJour.ToString());
         }
 
         public void faitPousser() //parcours chaque plot, puis appelle leur fonction fairePousser
         {
-            foreach (Transform transform in plotList)
+            foreach (Transform transforme in plotList)
             {
                 if(transform.name.Length>4 && transform.name.Substring(0, 4) == "plot")
                 {
                     try
                     {
-                        transform.gameObject.SendMessage("fairePousser");
+                        transforme.gameObject.SendMessage("fairePousser");
                     }
                     catch
                     {
-                        Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transform.name + "\" n'a pas marché");
+                        Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transforme.name + "\" n'a pas marché");
                     }
                 }
                 else
                 {
-                    Debug.Log("Bug dans faire pousser, le transform \"" + transform.name + "\" est dans la liste des shops :/");
+                    Debug.Log("Bug dans faire pousser, le transform \"" + transforme.name + "\" est dans la liste des shops :/");
                 }
             }
         }

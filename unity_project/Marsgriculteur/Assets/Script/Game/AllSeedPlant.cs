@@ -9,22 +9,26 @@ namespace game
     [System.Serializable]
     public class AllSeedPlant
     {
+        // Objet de référence instancier au lancement qui permet d'avoir toutes les infos en rapport avec les plantes
+        // permet aussi d'instancier/créer celle-ci
+
         private Dictionary<EnumTypePlant, PlantInfo> allPlantDico = new Dictionary<EnumTypePlant, PlantInfo>();
 
+        // Le contructeur utiliser pour instancier avec un Json
         [JsonConstructor]
         public AllSeedPlant(Dictionary<EnumTypePlant, PlantInfo> allPlantDico)
         {
             this.allPlantDico = allPlantDico;
         }
 
-        
+
         public Plant createPlant(EnumTypePlant typePlant)
         {
             //EnumTypePlant typePlante;
             if (allPlantDico.ContainsKey(typePlant))
             {
                 Plant pl = new Plant(typePlant,
-                    allPlantDico[typePlant].getId()+100,
+                    allPlantDico[typePlant].getId() + 100,
                     typePlant.ToString(),
                     allPlantDico[typePlant].getDesc(),
                     allPlantDico[typePlant].getPlantSprite(),
@@ -61,8 +65,8 @@ namespace game
         {
             if (allPlantDico.ContainsKey(typePlant))
             {
-                PlantedPlant pl = new PlantedPlant(typePlant, 
-                    allPlantDico[typePlant].getId()+200,
+                PlantedPlant pl = new PlantedPlant(typePlant,
+                    allPlantDico[typePlant].getId() + 200,
                     typePlant.ToString(),
                     allPlantDico[typePlant].getDesc(),
                     allPlantDico[typePlant].getPlantSprite(),
@@ -78,23 +82,16 @@ namespace game
 
         public List<EnumTypePlant> getAllPlantType()
         {
-            List< EnumTypePlant> listPl =  new List<EnumTypePlant>();
-            if (allPlantDico.Count == 0)
+            List< EnumTypePlant> listPl = new();
+            foreach(EnumTypePlant typePl in allPlantDico.Keys)
             {
-                Debug.Log("Erreur dico vide ??");
+                listPl.Add(typePl);
             }
-            else
-            {
-                foreach (EnumTypePlant typePl in allPlantDico.Keys)
-                {
-                    listPl.Add(typePl);
-                }
-            }
-            
+
             return listPl;
         }
 
-        override public string ToString()
+        public override string ToString()
         {
             string rtrn = string.Empty;
             foreach(KeyValuePair<EnumTypePlant, PlantInfo> kvp in allPlantDico)

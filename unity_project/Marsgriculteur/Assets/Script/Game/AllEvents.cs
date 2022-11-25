@@ -9,7 +9,7 @@ namespace game
     {
 
         //name in first, and YES it already exist in the info of eventInfo, but i dont car 
-        private Dictionary<string, EventInfo> allEventDico = new Dictionary<string, EventInfo>();
+        public Dictionary<string, EventInfo> allEventDico = new Dictionary<string, EventInfo>();
 
         public AllEvents()
         {
@@ -85,8 +85,9 @@ namespace game
             //************************ EVENTS NOT COOL ***************************
             //********************************************************************
 
-            allEventDico.Clear();
-            List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>() { EnumTypePlant.ELB , EnumTypePlant.EGRO };
+            List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>();
+            listElbEgr.Add(EnumTypePlant.ELB);
+            listElbEgr.Add(EnumTypePlant.EGRO);
 
             allEventDico.Add("wartElbEgr", new EventInfo("wartElbEgr",
                 "Des verrus martiennes touchent les recoltes d'EBL et d'EGRO, ça n'a pas bon goût",
