@@ -32,7 +32,6 @@ public class CameraMovement : MonoBehaviour
 
         mapMinY = tilemapRenderer.transform.position.y - tilemapRenderer.bounds.size.y/2f;
         mapMaxY = tilemapRenderer.transform.position.y + tilemapRenderer.bounds.size.y/2f;
-
     }
 
 

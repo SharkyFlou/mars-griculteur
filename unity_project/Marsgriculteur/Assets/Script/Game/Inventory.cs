@@ -10,7 +10,7 @@ namespace game
 {
     public class Inventory : MonoBehaviour
     {
-        private int weightMax=1000;
+        private int weightMax = 1000;
         //permet de prendre le Dictionary inventory du player
         public PlayerInventory playerInventory;
 
@@ -28,40 +28,46 @@ namespace game
 
 
         //retourne le maxWeight de l'inventory
-        public int getWeightMax(){
+        public int getWeightMax()
+        {
             return this.weightMax;
         }
 
-        public int getCurrentWeight(){
+        public int getCurrentWeight()
+        {
             return this.currentWeight;
         }
 
-        public void clearInventoryDisplay(){
-            foreach(Transform child in slotPanel)
+        public void clearInventoryDisplay()
+        {
+            foreach (Transform child in slotPanel)
                 /* slotPanel.DetachChildren(child);*/
-                Destroy(child.gameObject); 
+                Destroy(child.gameObject);
 
             //slotPanel.DetachChildren();
             //Destroy();
         }
 
         //pour tout element on instancie son slot (qui aura une image etc etc) et on l'ajoute
-        
-        public void afficheInventory(Dictionary<BasicItem,int> dico){
+
+        public void afficheInventory(Dictionary<BasicItem, int> dico)
+        {
             clearInventoryDisplay();
             currentWeight = 0;
-            slots=dico;
+            slots = dico;
 
-            for(int i=0;i<slots.Count;i++){            
+            for (int i = 0; i < slots.Count; i++)
+            {
 
                 Debug.Log("LE DICTIONNAIRE EST: \n");
-                foreach(KeyValuePair<BasicItem,int> kvp in slots){
-                    Debug.Log("item : "+kvp.Key.getName()+", qtt : "+kvp.Value);
-                }  
+                foreach (KeyValuePair<BasicItem, int> kvp in slots)
+                {
+                    Debug.Log("item : " + kvp.Key.getName() + ", qtt : " + kvp.Value);
+                }
 
 
                 //on cree l'objet prefab slot
-                GameObject slot = (GameObject) Instantiate(SlotImage); 
+                GameObject slot = (GameObject)Instantiate(SlotImage);
 
                 //MOMENT DE REMPLIR LE SLOT
                 //on prend la key/value du dico a la pos i ##########################
@@ -70,21 +76,25 @@ namespace game
 
 
                 //ceci affiche tous les weights de inventory
-                currentWeight+=itemOfSlot.getWeight()*qttDuSlot;
+                currentWeight += itemOfSlot.getWeight() * qttDuSlot;
 
                 //pour remplir les infos a l'interieur du slot
                 //IL FAUT FAIRE GET COMPONENTS ET PARCOURIR TAB, PARENT[0] FAIRE GAFFE
                 Image[] imgDuSlot = slot.GetComponentsInChildren<Image>();
-                foreach(Image imgS in imgDuSlot){
-                    if(imgS.gameObject.transform.parent != null){
+                foreach (Image imgS in imgDuSlot)
+                {
+                    if (imgS.gameObject.transform.parent != null)
+                    {
                         imgS.sprite = itemOfSlot.getImageLink();
-                        imgS.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
+                        imgS.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                     }
                 }
 
                 TextMeshProUGUI[] qtt = slot.GetComponentsInChildren<TextMeshProUGUI>();
-                foreach(TextMeshProUGUI text in qtt){
-                    if(text.gameObject.transform.parent != null){
+                foreach (TextMeshProUGUI text in qtt)
+                {
+                    if (text.gameObject.transform.parent != null)
+                    {
                         text.SetText(qttDuSlot.ToString());
                     }
                 }
@@ -94,7 +104,8 @@ namespace game
 
 
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                slot.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
+                slot.transform.localScale = new Vector3(1 / slotPanel.localScale.x, 1 / slotPanel.localScale.y, 0);
+
             }
         }
     }
