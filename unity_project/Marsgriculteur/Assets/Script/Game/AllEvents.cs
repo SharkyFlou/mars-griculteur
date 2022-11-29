@@ -9,7 +9,7 @@ namespace game
     {
 
         //name in first, and YES it already exist in the info of eventInfo, but i dont car 
-        private Dictionary<string, EventInfo> allEventDico = new Dictionary<string, EventInfo>();
+        public Dictionary<string, EventInfo> allEventDico = new Dictionary<string, EventInfo>();
 
         public AllEvents()
         {
@@ -85,7 +85,6 @@ namespace game
             //************************ EVENTS NOT COOL ***************************
             //********************************************************************
 
-            allEventDico.Clear();
             List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>();
             listElbEgr.Add(EnumTypePlant.ELB);
             listElbEgr.Add(EnumTypePlant.EGRO);
@@ -120,6 +119,36 @@ namespace game
                 2,
                 Game.getDefaultSprite(),
                 50));
+
+            allEventDico.Add("bsTemp", new EventInfo("bsTemp",
+                "bsTemp",
+                1,
+                0.8,
+                0.7,
+                false,
+                false,
+                false,
+                listAnim,
+                new List<string>(),
+                6,
+                2,
+                Game.getDefaultSprite(),
+                0));
+
+            allEventDico.Add("bsTemp2", new EventInfo("bsTemp2",
+                "bsTemp2",
+                1,
+                0.8,
+                0.7,
+                false,
+                false,
+                false,
+                listAnim,
+                new List<string>(),
+                6,
+                2,
+                Game.getDefaultSprite(),
+                0));
 
 
         }
@@ -160,7 +189,6 @@ namespace game
                         break;
                     }
                 }
-                    
             }
 
             return newEvent;

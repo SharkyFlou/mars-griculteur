@@ -8,41 +8,38 @@ namespace game
     public class Seed : BasicPlant
     {
         private int timeGrowth;
-        //private int weight;
         private int price;
+        public Seed() 
+        {
 
+        }
         public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
         {
-            this.typePlante = paraTypePlant;
-            this.id = paraId;
-            this.nam = paraName;
-            this.description = paraDescription;
-            this.imageLink = paraImagelink;
-            this.timeGrowth = paraTimeGroth;
-            this.weight = paraWeight;
-            this.price = paraPrice;
+            typePlante = paraTypePlant;
+            id = paraId;
+            itemName = paraName;
+            description = paraDescription;
+            imageLink = paraImagelink;
+            timeGrowth = paraTimeGroth;
+            weight = paraWeight;
+            price = paraPrice;
         }
-
-        public Seed()
+        /*
+        // Possible constructeur pour simplifier la syntaxe à la création d'une graine
+        // MARCHE SEULEMENT APRES INSTANCIATION DU ALLSEEDPLANT DICO
+        public Seed(EnumTypePlant seed)
         {
-            this.typePlante = EnumTypePlant.ELB;
-            this.id = 666;
-            this.nam = "Error";
-            this.description = "Error, using an empty constructor";
-            this.imageLink = Game.getDefaultSprite();
-            this.timeGrowth = -1;
-            this.weight = -1;
-            this.price = -1;
-        }
+            CreateAllSeedPlant.dicoPlant.createSeed(seed);
+        }*/
 
         public int getPrice()
         {
-            return this.price;
+            return price;
         }
 
         public int getTimeGrowth()
         {
-            return this.timeGrowth;
+            return timeGrowth;
         }
 
     }

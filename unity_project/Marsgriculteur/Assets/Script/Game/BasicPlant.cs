@@ -4,8 +4,10 @@ using UnityEngine;
 
 namespace game
 {
-    abstract public class BasicPlant : BasicItem
+    public abstract class BasicPlant : BasicItem
     {
+        // Classe mère des Seed et Plant car ils ont des 
+
         protected EnumTypePlant typePlante;
 
         public BasicPlant(){

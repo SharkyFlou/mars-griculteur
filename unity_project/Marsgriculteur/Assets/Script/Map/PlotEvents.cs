@@ -14,7 +14,7 @@ public class PlotEvents : MonoBehaviour
     private Sprite seed_sprite_grown;
 
 
-    public Canvas InterfacePlant;
+    public GameObject InterfacePlantPanel;
 
 
 
@@ -93,9 +93,12 @@ public class PlotEvents : MonoBehaviour
 
     public void recupPlante()
     {
+        /* PAS ENCORE FONCTIONNEL */
+
         //playerInventory.addToInventory((CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB)),15);
         //playerInventory.SubstractFromInventory((CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB)),15);
-        playerInventory.removeFromInventory(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB));
+        //playerInventory.removeFromInventory(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB));
+
     }
 
     public void planteGraine()
@@ -108,7 +111,7 @@ public class PlotEvents : MonoBehaviour
     {
         //recupPlante();
         //InventoryPanel.SetActive(true);
-        InterfacePlant.gameObject.SetActive(true);
+        InterfacePlantPanel.SetActive(true);
         //RectTransform InventoryRECT = InventoryPanel.GetComponent<RectTransform>();
 
         //float camHeight = cam.orthographicSize;

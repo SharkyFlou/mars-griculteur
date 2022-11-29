@@ -6,16 +6,28 @@ using UnityEngine;
 namespace game{
     public class CreateAllSeedPlant : MonoBehaviour
     {
-        public TextAsset txtJSON;
+        public TextAsset JSONSeedPlant;
 
+        public TextAsset JSONTool;
+
+        public static Inventory mainInventory;
 
         public static AllSeedPlant dicoPlant;
+
+        public static AllTools dicoTool;
         // Start is called before the first frame update
         void Awake()
         {
-            dicoPlant = JsonConvert.DeserializeObject<AllSeedPlant>(txtJSON.text);
+            dicoPlant = JsonConvert.DeserializeObject<AllSeedPlant>(JSONSeedPlant.text);
 
-            //Debug.Log(dicoPlant.ToString());
+            dicoTool = JsonConvert.DeserializeObject<AllTools>(JSONTool.text);
+
+            mainInventory = new Inventory();
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.ELB), 10);
+            /*
+            Debug.Log(dicoPlant.ToString());
+            Debug.Log(dicoTool.ToString());
+            Debug.Log(shopInventory.ToString());*/
             /*
             foreach (KeyValuePair<EnumTypePlant, PlantInfo> kvp in dicoPlant.allPlantDico)
             {
