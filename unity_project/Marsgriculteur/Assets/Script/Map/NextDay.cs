@@ -35,11 +35,11 @@ namespace game
             EventInfo evt = Market.instance.nextDay(nbrJour, true);
             if (evt == null)
             {
-                Debug.Log("Pas d'event");
+                Debug.Log("Jour "+nbrJour+ " : Pas d'event");
             }
             else
             {
-                Debug.Log("Nouveau evt : " + evt.namee);
+                Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
             }
 
             AllEvents all = new AllEvents();
