@@ -4,10 +4,12 @@ using UnityEngine;
 
 namespace game
 {
-    abstract public class BasicItem
+    public abstract class BasicItem
     {
+        // Classe de tous les objets/item qui sont stockable dans un inventaire
+        
         public int id;
-        protected string nam;
+        protected string itemName;
         protected string description;
         protected Sprite imageLink;
         protected int weight;
@@ -17,37 +19,37 @@ namespace game
 
         }
 
-        public BasicItem(int paraId, string paraName, string paraDescription, Sprite paraImageLink, int paraWeight){
-            this.id = paraId;
-            this.nam = paraName;
-            this.description = paraDescription;
-            this.imageLink = paraImageLink;
-            this.weight = paraWeight;
+        public BasicItem(int paraId, string paraName, string paraDescription, Sprite paraImageLink){
+            id = paraId;
+            itemName = paraName;
+            description = paraDescription;
+            imageLink = paraImageLink;
         }
 
-        public Sprite getImageLink()
+        public int getWeight()
         {
-            return this.imageLink;
-        }   
+            return weight;
+        }
 
-        public string getDescription()
+        public Sprite getSprite()
         {
-            return this.description;
+            return imageLink;
+        }
+
+        public string getDesc()
+        {
+            return description;
         }
 
         public string getName()
         {
-            return this.nam;
+            return itemName;
         }
 
-        public int getWeight(){
-            return this.weight;
+        public int getId()
+        {
+            return id;
         }
-
-        public int getId(){
-            return this.id;
-        }
-
     }
 
 }

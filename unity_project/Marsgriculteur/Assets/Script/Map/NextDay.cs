@@ -14,8 +14,8 @@ namespace game
         public Transform plots;
         List<Transform> plotList; //contient tous les plots pour les faire pousser
         private int nbrJour;
-        private Market market;
         //private AllEvents allEvents;
+        [SerializeField] public Market market;
 
         public static Dictionary<EventInfo, int> dicoPossessions = new Dictionary<EventInfo, int>();
 
@@ -31,9 +31,17 @@ namespace game
             nbrJour = 0;
             dayText.SetText(nbrJour.ToString());
 
-            market = new Market();
-            market.createMarket();
-            dicoPossessions = market.getActiveEvents();
+            //Market.instance.afficheEtatDebug();
+
+            EventInfo evt = Market.instance.nextDay(nbrJour, true);
+            if (evt == null)
+            {
+                Debug.Log("Jour "+nbrJour+ " : Pas d'event");
+            }
+            else
+            {
+                Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
+            }
 
             AllEvents all = new AllEvents();
 
@@ -61,21 +69,20 @@ namespace game
         {
             foreach (Transform transforme in plotList)
             {
-                if(transforme.name.Length>4 || transforme.name.Substring(0, 4) == "plot")
+                if(transforme.name.Length>4 && transforme.name.Substring(0, 4) == "plot")
                 {
                     try
                     {
                         transforme.gameObject.SendMessage("fairePousser");
                     }
-                    catch
+                    catch //THIS NEVER RUNS
                     {
                         //Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transforme.name + "\" n'a pas marché");
                     }
-                    
                 }
                 else
                 {
-                    //Debug.Log("Bug dans faire pousser, le transform \"" + transforme.name + "\" est dans la liste des shops :/");
+                    Debug.Log("Bug dans faire pousser, le transform \"" + transforme.name + "\" est dans la liste des plots :/'");
                 }
             }
         }

@@ -8,24 +8,106 @@ using TMPro;
 
 namespace game
 {
-    public class Inventory : MonoBehaviour
+    public class Inventory
     {
+
+        public InventoryInterface panel;
+
         private int weightMax=1000;
         //permet de prendre le Dictionary inventory du player
-        public PlayerInventory playerInventory;
+        
+        //public PlayerInventory playerInventory;
 
         //correspond au slot a initialiser
-        public GameObject SlotImage;
+        
         //correspond au panel parent
-        public Transform slotPanel;
+        
 
         //dictionnaire des items pour remplir le inventory
         //si on ajoute un item on doit ajouter à ce dico pour le afficher
-        public Dictionary<BasicItem, int> slots = new Dictionary<BasicItem, int>();
+        private Dictionary<BasicItem, int> slots = new Dictionary<BasicItem, int>();
 
-        public int currentWeight;
+        private int currentWeight = 0;
 
 
+
+        //permet d'ajouter un slot au dictionnaire
+        public void addToInventory(BasicItem item, int qtt)
+        {
+            bool trouve = false;
+            
+            if (qtt < 1)
+                return;
+            else
+            {
+                //on parcourt chaque key pour acceder a son getId()
+                foreach (BasicItem kvp in slots.Keys.ToList())
+                {
+                    if (kvp.getId() == item.getId())
+                    {
+                        slots[kvp] += qtt;
+                        trouve = true;
+                        break;
+                    }
+                }
+                //si on le trouve pas on l'ajoute a notre 
+                if (!trouve)
+                {
+                    slots.Add(item, qtt);
+                }
+                currentWeight += item.getWeight() * qtt;
+            }
+            
+            //displayInventory();
+
+        }
+
+        //removes an item instantly
+        public void removeFromInventory(BasicItem item)
+        {
+            foreach (BasicItem kvp in slots.Keys.ToList())
+            {
+                if (kvp.getId() == item.getId())
+                {
+                    slots.Remove(kvp);
+                    break;
+                }
+            }
+
+            //displayInventory();
+        }
+
+        //permet de soustraire une qtt a un item qui se trouve deja dans notre inventory 
+        //ou l'elilminer completement
+        public void SubstractFromInventory(BasicItem item, int qttToRemove)
+        {
+            if (qttToRemove < 1)
+                return;
+            else
+            {
+                foreach (BasicItem kvp in slots.Keys.ToList())
+                {
+                    if (kvp.getId() == item.getId())
+                    {
+                        if (slots[kvp] > qttToRemove)
+                            slots[kvp] -= qttToRemove;
+                        else
+                            slots.Remove(kvp);
+
+                        break;
+                    }
+                }
+            }
+
+            //displayInventory();
+
+        }
+
+        public Dictionary<BasicItem, int> getInventory()
+        {
+
+            return this.slots;
+        }
 
         //retourne le maxWeight de l'inventory
         public int getWeightMax(){
@@ -36,66 +118,22 @@ namespace game
             return this.currentWeight;
         }
 
-        public void clearInventoryDisplay(){
-            foreach(Transform child in slotPanel)
-                /* slotPanel.DetachChildren(child);*/
-                Destroy(child.gameObject); 
-
-            //slotPanel.DetachChildren();
-            //Destroy();
-        }
-
         //pour tout element on instancie son slot (qui aura une image etc etc) et on l'ajoute
         
-        public void afficheInventory(Dictionary<BasicItem,int> dico){
-            clearInventoryDisplay();
-            currentWeight = 0;
-            slots=dico;
-
-            for(int i=0;i<slots.Count;i++){            
-
-                //Debug.Log("LE DICTIONNAIRE EST: \n");
-                foreach(KeyValuePair<BasicItem,int> kvp in slots){
-                    //Debug.Log("item : "+kvp.Key.getName()+", qtt : "+kvp.Value);
-                }  
-
-
-                //on cree l'objet prefab slot
-                GameObject slot = (GameObject) Instantiate(SlotImage); 
-
-                //MOMENT DE REMPLIR LE SLOT
-                //on prend la key/value du dico a la pos i ##########################
-                BasicItem itemOfSlot = slots.ElementAt(i).Key;
-                int qttDuSlot = slots.ElementAt(i).Value;
-
-
-                //ceci affiche tous les weights de inventory
-                currentWeight+=itemOfSlot.getWeight()*qttDuSlot;
-
-                //pour remplir les infos a l'interieur du slot
-                //IL FAUT FAIRE GET COMPONENTS ET PARCOURIR TAB, PARENT[0] FAIRE GAFFE
-                Image[] imgDuSlot = slot.GetComponentsInChildren<Image>();
-                foreach(Image imgS in imgDuSlot){
-                    if(imgS.gameObject.transform.parent != null){
-                        imgS.sprite = itemOfSlot.getImageLink();
-                        imgS.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
-                    }
-                }
-
-                TextMeshProUGUI[] qtt = slot.GetComponentsInChildren<TextMeshProUGUI>();
-                foreach(TextMeshProUGUI text in qtt){
-                    if(text.gameObject.transform.parent != null){
-                        text.SetText(qttDuSlot.ToString());
-                    }
-                }
-
-                //on dit que son parent est le Grid Layout Group PANEL INVENTORY
-                slot.transform.SetParent(slotPanel);
-
-
-                //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                slot.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
-            }
+        public void displayInventory()
+        {
+            panel.afficheInventory(slots);
         }
+        override public string ToString()
+        {
+            string rtr = string.Empty;
+            foreach(KeyValuePair<BasicItem, int> kvp in slots)
+            {
+                rtr += kvp.Key.getName() + "\t : " + kvp.Value.ToString() + "\n";
+            }
+            return rtr;
+        }
+
+
     }
 }

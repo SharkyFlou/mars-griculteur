@@ -22,7 +22,7 @@ namespace game
         private int basicSeedPrice;
         private List<int> basicPlantPrice;
 
-
+        // Le contructeur utiliser pour instancier avec un Json
         [JsonConstructor]
         public PlantInfo(int id, EnumTypePlant namePlant, string description, int growthTime, string SeedSpriteLink, string PlantSpriteLink, string PlantedPlantSpriteLink, int seedWeight, int plantWeight, int basicSeedPrice, List<int> basicPlantPrice)
         {
