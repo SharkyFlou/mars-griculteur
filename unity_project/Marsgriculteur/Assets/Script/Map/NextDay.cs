@@ -11,6 +11,7 @@ namespace game
     public class NextDay : MonoBehaviour
     {
         public TextMeshProUGUI dayText;
+        public Notification notif;
         public Transform plots;
         List<Transform> plotList; //contient tous les plots pour les faire pousser
         private int nbrJour;
@@ -108,10 +109,10 @@ namespace game
                 return;
             else
             {
-                //on parcourt chaque key pour acceder a son getId()
-                foreach (EventInfo kvp in dicoPossessions.Keys.namee.ToList())
+                //on parcourt chaque key pour acceder a son getName()
+                foreach (EventInfo kvp in dicoPossessions.Keys)
                 {
-                    if (kvp.getId() == item.getId())
+                    if (kvp.getName() == item.getName())
                     {
                         dicoPossessions[kvp] += duree;
                         trouve = true;
@@ -125,23 +126,23 @@ namespace game
                 }
             }
 
-            notif.afficheInventory(dicoPossessions);
+            notif.afficheInventory();
 
         }
 
         //removes an item instantly
         public void removeFromInventory(EventInfo item)
         {
-            foreach (EventInfo kvp in dicoPossessions.Keys.ToList())
+            foreach (EventInfo kvp in dicoPossessions.Keys)
             {
-                if (kvp.getId() == item.getId())
+                if (kvp.getName() == item.getName())
                 {
                     dicoPossessions.Remove(kvp);
                     break;
                 }
             }
 
-            notif.afficheInventory(dicoPossessions);
+            notif.afficheInventory();
         }
     }
 }

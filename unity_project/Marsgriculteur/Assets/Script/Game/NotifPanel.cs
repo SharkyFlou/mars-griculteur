@@ -19,7 +19,7 @@ namespace game
             PanelNotif.SetActive(false);
 
             dico = NextDay.getInventoryNotif();
-            notif.afficheInventory(dico);
+            notif.afficheInventory();
         }
 
         public void OpenPanel()
