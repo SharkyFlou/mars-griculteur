@@ -35,6 +35,8 @@ public class graphMarket : MonoBehaviour
     private List<string> monthList;
     const float mutlInvGraph = 2f;
     private EnumTypePlant plantAct = EnumTypePlant.ELB;
+    public CameraMovement cam;
+    public Zoom camZoom;
 
     private List<GameObject> allChildsToSuppr = new List<GameObject>();
 
@@ -64,6 +66,15 @@ public class graphMarket : MonoBehaviour
 
 
         ShowGraph(graphList); //affiche le graph
+    }
+
+    public void Update() //prevent the pllayer to not moove, temporary
+    {
+        if (graphContainer.GameObject().activeInHierarchy)
+        {
+            cam.playerCanMoove(false);
+            camZoom.playerCanZoom(false);
+        }
     }
 
     public void changePlant(EnumTypePlant pl)

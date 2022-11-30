@@ -15,6 +15,8 @@ public class Zoom : MonoBehaviour
 
     private float mapMinX, mapMaxX, mapMinY, mapMaxY;
 
+    private bool canZoom = true; // to lock the cam
+
     //get all positions pour limiter la camera, doit soustraire .bounds.size vu que la taille est mesuree depuis le centre du sprite
     //on divise par 2f pour trouver la position a la limite centrale du map
 
@@ -32,6 +34,11 @@ public class Zoom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canZoom)
+        {
+            return;
+        }
+
         if (cam.orthographic)
         {
             cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * zoom;
@@ -43,6 +50,11 @@ public class Zoom : MonoBehaviour
         if (cam.orthographicSize < minCamSize) { cam.orthographicSize = minCamSize; } //max of zoom
         if (cam.orthographicSize > maxCamSize) { cam.orthographicSize = maxCamSize; } //max of dezoom
         cam.transform.position = ClampCamera(cam.transform.position);
+    }
+
+    public void playerCanZoom(bool state)
+    {
+        canZoom = state;
     }
 
     private Vector3 ClampCamera(Vector3 targetPosition)
