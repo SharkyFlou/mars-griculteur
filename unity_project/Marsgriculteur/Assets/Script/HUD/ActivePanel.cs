@@ -22,7 +22,6 @@ namespace game
             panel = new InventoryPanel(gridBag.transform);
             panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory());
 
-
             //definit les parents de l'inventory cree
             //#########################################@//#########################################@//#########################################@
             //c'est ici qu'on change les tailles de chaque inventory
@@ -31,6 +30,10 @@ namespace game
             //panel inventory normal, quand on clique sur le backpack
             if (this.name == "PanelInventory")
             {
+
+
+
+
                 //Debug.Log("on entre dans la boucle normale");
                 gridBag.transform.SetParent(PanelInventory.transform);
                 gridBag.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
@@ -42,29 +45,36 @@ namespace game
                 //Debug.Log("on entre dans la boucle");
                 Transform PanelPourPlanterEtInv = this.transform.Find("PanelInv");
                 gridBag.transform.SetParent(PanelPourPlanterEtInv);
+                gridBag.transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
+
+
+                gridBag.GetComponent<RectTransform>().sizeDelta =
+                    new Vector2(PanelPourPlanterEtInv.GetComponent<RectTransform>().rect.width,
+                    PanelPourPlanterEtInv.GetComponent<RectTransform>().rect.height);
+
 
                 //Debug.Log("##### nom panel : " + PanelPourPlanterEtInv.name);
 
 
                 //on prend le 80% du parent
-                RectTransform gridRectT = gridBag.GetComponent<RectTransform>();                    //fils
-                RectTransform parentRectT = (PanelPourPlanterEtInv as RectTransform);               //parent
+                //RectTransform gridRectT = gridBag.GetComponent<RectTransform>();                    //fils
+                //RectTransform parentRectT = (PanelPourPlanterEtInv as RectTransform);               //parent
 
-                gridRectT.sizeDelta = new Vector2(parentRectT.rect.width * 0.8f, parentRectT.rect.height * 0.8f);
-                gridBag.transform.localScale = new Vector3(1f, 1f, 1f);
+                //gridRectT.sizeDelta = new Vector2(parentRectT.rect.width * 0.8f, parentRectT.rect.height * 0.8f);
+
+                //gridBag.transform.localScale = new Vector3(1f, 1f, 1f);
+
+
+                /*
 
                 gridRectT.localPosition = new Vector2(parentRectT.anchoredPosition.x - gridRectT.sizeDelta.x / 2, parentRectT.anchoredPosition.y);
-                /* gridRectT.sizeDelta.x = parentRectT.sizeDelta.x * 0.8;
-                gridRectT.sizeDelta.y = parentRectT.sizeDelta.y * 0.8; */
-                //gridRectT.sizeDelta = new Vector2(parentRectT.sizeDelta.x * 0.8, parentRectT.sizeDelta.y * 0.8);
+                */
 
 
-                //gridBag.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);/* Vector3.Scale(PanelPourPlanterEtInv.localScale, new Vector3(0.8f, 0.8f, 0)); */
+
+                //getWeightStatus();
+                PanelInventory.SetActive(false);
             }
-
-
-            //getWeightStatus();
-            PanelInventory.SetActive(false);
         }
 
         public void OpenPanel()

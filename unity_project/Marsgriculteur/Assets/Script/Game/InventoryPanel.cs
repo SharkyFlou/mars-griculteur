@@ -34,6 +34,8 @@ namespace game
                 //on cree l'objet prefab slot
                 GameObject slot = InventorySlot.createSlot();
 
+                slot = ajouteBoxCollider(slot);
+
                 //MOMENT DE REMPLIR LE SLOT
                 //on prend la key/value du dico a la pos i ##########################
                 BasicItem itemOfSlot = dico.ElementAt(i).Key;
@@ -71,6 +73,15 @@ namespace game
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             }
+        }
+
+        public GameObject ajouteBoxCollider(GameObject slot)
+        {
+            slot.AddComponent<BoxCollider2D>();
+
+
+
+            return slot;
         }
 
         public void clearInventoryDisplay()
