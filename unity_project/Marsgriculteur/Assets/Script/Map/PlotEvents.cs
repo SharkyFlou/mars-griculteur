@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class PlotEvents : MonoBehaviour
@@ -138,6 +139,11 @@ public class PlotEvents : MonoBehaviour
 
     void OnMouseOver()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite;
+            return;
+        }
         plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite_highlite;
     }
 

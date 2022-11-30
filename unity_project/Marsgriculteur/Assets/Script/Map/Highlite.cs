@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Highlite : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class Highlite : MonoBehaviour
 
     void OnMouseOver()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
+            return;
+        }
         this.gameObject.GetComponent<SpriteRenderer>().sprite = sprite_highlight;
     }
 
