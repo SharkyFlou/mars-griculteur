@@ -1002,8 +1002,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayText: {fileID: 43341360}
+  notif: {fileID: 2122939686}
   plots: {fileID: 480899209}
-  market: {fileID: 0}
+  market: {fileID: 1331125616}
 --- !u!1 &125168328
 GameObject:
   m_ObjectHideFlags: 0
@@ -37742,6 +37743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayText: {fileID: 43341360}
+  notif: {fileID: 2122939686}
   plots: {fileID: 480899209}
   market: {fileID: 1331125616}
 --- !u!1 &1674900315
@@ -40282,7 +40284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01450dd1f00d9e24fa5b95cd2bccb0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextDay: {fileID: 0}
+  nextDay: {fileID: 1655789386}
   SlotNotif: {fileID: 6021430434831316145, guid: fa0e36dabf3d9a442a0d77d6576b1292, type: 3}
   slotPanel: {fileID: 2122939681}
 --- !u!224 &2126580415

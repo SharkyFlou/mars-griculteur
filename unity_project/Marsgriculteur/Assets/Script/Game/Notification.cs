@@ -22,7 +22,6 @@ namespace game
         //si on ajoute un item on doit ajouter à ce dico pour l'afficher
         public Dictionary<EventInfo, int> slots = new Dictionary<EventInfo, int>();
 
-
         public void clearInventoryDisplay()
         {
             foreach (Transform child in slotPanel)
@@ -35,7 +34,10 @@ namespace game
 
         public void afficheInventory()
         {
+            slots = NextDay.getInventoryNotif();
+            Debug.Log("slots.Count" + slots.Count.ToString());
             clearInventoryDisplay();
+
             for (int i = 0; i < slots.Count; i++)
             {
                 //on cree l'objet prefab slot
@@ -45,25 +47,14 @@ namespace game
                 //on prend la key/value du dico a la pos i ##########################
                 EventInfo itemOfSlot = slots.ElementAt(i).Key;
                 int duree = slots.ElementAt(i).Value;
-
-                List<string> target = new List<string>();
-                string listeTarget;
-                target = itemOfSlot.getTarget();
-                listeTarget = target[0] + ", ";
-                for (int j = 1; j < (target.Count - 1); j++)
-                {
-                    listeTarget += target[j];
-                    listeTarget += ", ";
-                }
-                listeTarget += target[target.Count - 1];
-
+                
                 //pour remplir les infos a l'interieur du slot
                 //IL FAUT FAIRE GET COMPONENTS ET PARCOURIR TAB, PARENT[0] FAIRE GAFFE
 
                 TextMeshProUGUI[] notif = slot.GetComponentsInChildren<TextMeshProUGUI>();
                 notif[0].SetText(itemOfSlot.namee);
                 notif[1].SetText(itemOfSlot.description);
-                notif[2].SetText(listeTarget);
+                //notif[2].SetText(itemOfSlot.getListeTarget());
 
                 //on dit que son parent est le Grid Layout Group PANEL NOTIF
                 slot.transform.SetParent(slotPanel);
@@ -71,9 +62,8 @@ namespace game
 
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-
+            
             }
-
         }
     }
 }

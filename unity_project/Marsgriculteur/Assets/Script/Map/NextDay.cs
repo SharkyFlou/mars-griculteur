@@ -37,7 +37,7 @@ namespace game
             EventInfo evt = Market.instance.nextDay(nbrJour, true);
             if (evt == null)
             {
-                Debug.Log("Jour "+nbrJour+ " : Pas d'event");
+                Debug.Log("Jour " + nbrJour + " : Pas d'event");
             }
             else
             {
@@ -45,12 +45,35 @@ namespace game
             }
 
             AllEvents all = new AllEvents();
+            //Debug.Log("Aaah : " + evt.getName());
+            if (evt != null)
+            {
+                //dicoPossessions.Add(evt, evt.getLength());
+                addToInventory(evt, evt.getLength());
+            }
+
+            List<EventInfo> item = new List<EventInfo>();
+
+            foreach (EventInfo et in dicoPossessions.Keys)
+            {
+                if (et.getLength() == 0)
+                {
+                    item.Add(et);
+                }
+            }
+
+            foreach (EventInfo et in item)
+            {
+                removeFromInventory(et);
+            }
 
             /*dicoPossessions.Add(all.allEventDico["vegeTrend"], all.allEventDico["vegeTrend"].length);
             dicoPossessions.Add(all.allEventDico["qualiMeat"], all.allEventDico["qualiMeat"].length);
             dicoPossessions.Add(all.allEventDico["solarStorm"], all.allEventDico["solarStorm"].length);*/
 
             Debug.Log("dic" + dicoPossessions.Count);
+
+            //notif.afficheInventory();
 
         }
 
@@ -62,6 +85,38 @@ namespace game
         void OnMouseDown()
         {
             faitPousser();
+            EventInfo evt = Market.instance.nextDay(nbrJour, true);
+            if (evt == null)
+            {
+                Debug.Log("Jour "+nbrJour+ " : Pas d'event");
+            }
+            else
+            {
+                Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
+            }
+
+            AllEvents all = new AllEvents();
+            //Debug.Log("Aaah : " + evt.getName());
+            if(evt != null)
+            {
+                //dicoPossessions.Add(evt, evt.getLength());
+                addToInventory(evt, evt.getLength());
+            }
+
+            List<EventInfo> item = new List<EventInfo>();
+
+            foreach( EventInfo et in dicoPossessions.Keys)
+            {
+                if(et.getLength() == 0)
+                {
+                    item.Add(et);
+                }
+            }
+
+            foreach(EventInfo et in item)
+            {
+                removeFromInventory(et);
+            }
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
         }

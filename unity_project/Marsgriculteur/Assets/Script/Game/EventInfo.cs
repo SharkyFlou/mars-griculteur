@@ -77,6 +77,11 @@ namespace game
             return this.namee;
         }
 
+        public int getLength()
+        {
+            return this.length;
+        }
+
         public string getDescription()
         {
             return this.description;
@@ -102,5 +107,26 @@ namespace game
                 return this.targetsTool;
             }
         }
+
+        /*public string getListeTarget()
+        {
+            string listeTarget;
+            if(this.getTarget().Count != 0)
+            {
+                listeTarget = this.getTarget()[0] + ", ";
+                for (int j = 1; j < (this.getTarget().Count - 1); j++)
+                {
+                    listeTarget += this.getTarget()[j];
+                    listeTarget += ", ";
+                }
+                listeTarget += this.getTarget()[this.getTarget().Count - 1];
+            }
+            else
+            {
+                listeTarget = "Rien n'est atteint";
+            }
+
+            return listeTarget;
+        }*/
     }
 }

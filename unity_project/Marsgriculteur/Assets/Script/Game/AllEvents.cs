@@ -120,30 +120,36 @@ namespace game
                 Game.getDefaultSprite(),
                 50));
 
+            List<EnumTypePlant> listBsTemp = new List<EnumTypePlant>();
+            listBsTemp.Add(EnumTypePlant.ELB);
+            listBsTemp.Add(EnumTypePlant.EGRO);
             allEventDico.Add("bsTemp", new EventInfo("bsTemp",
                 "bsTemp",
                 1,
                 0.8,
                 0.7,
+                true,
                 false,
                 false,
-                false,
-                listAnim,
+                listBsTemp,
                 new List<string>(),
                 6,
                 2,
                 Game.getDefaultSprite(),
                 0));
 
+            List<EnumTypePlant> listBsTemp2 = new List<EnumTypePlant>();
+            listBsTemp2.Add(EnumTypePlant.ELB);
+            listBsTemp2.Add(EnumTypePlant.EGRO);
             allEventDico.Add("bsTemp2", new EventInfo("bsTemp2",
                 "bsTemp2",
                 1,
                 0.8,
                 0.7,
+                true,
                 false,
                 false,
-                false,
-                listAnim,
+                listBsTemp2,
                 new List<string>(),
                 6,
                 2,
