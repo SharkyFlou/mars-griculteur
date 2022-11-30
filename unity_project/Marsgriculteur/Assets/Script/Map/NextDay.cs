@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 namespace game
 {
@@ -84,6 +85,11 @@ namespace game
 
         void OnMouseDown()
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+
             faitPousser();
             EventInfo evt = Market.instance.nextDay(nbrJour, true);
             if (evt == null)
