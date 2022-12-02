@@ -22,32 +22,17 @@ namespace game
         //si on ajoute un item on doit ajouter à ce dico pour l'afficher
         public Dictionary<EventInfo, int> slots = new Dictionary<EventInfo, int>();
 
-        //dès qu'on ouvre l'inventory on l'affiche , appele depuis player inventory
-        public void WakeUp(Dictionary<EventInfo, int> dico)
+        public void clearInventoryDisplay()
         {
-            slots = dico;
-
-            if (slots.Count == 0)
-            {
-                Debug.Log("nbSlots est de : " + slots.Count);
-                Debug.Log("ERROR, DICO VIDE");
-            }
-
-            else
-            {
-                Debug.Log("nbSlots est de : " + slots.Count);
-
-                Debug.Log("LE DICTIONNAIRE EST: \n");
-                foreach (KeyValuePair<EventInfo, int> kvp in this.slots)
-                {
-                    Debug.Log("item : " + kvp.Key.getName() + ", reste : " + kvp.Value);
-                }
-            }
-            afficheInventory();
+            foreach (Transform child in slotPanel)
+                Destroy(child.gameObject);
         }
 
-        void afficheInventory()
+        public void afficheInventory()
         {
+            clearInventoryDisplay();
+            slots = NextDay.getInventoryNotif();
+
             for (int i = 0; i < slots.Count; i++)
             {
                 //on cree l'objet prefab slot
@@ -58,24 +43,16 @@ namespace game
                 EventInfo itemOfSlot = slots.ElementAt(i).Key;
                 int duree = slots.ElementAt(i).Value;
 
-                List<string> target = new List<string>();
-                string listeTarget;
-                target = itemOfSlot.getTarget();
-                listeTarget = target[0] + ", ";
-                for (int j = 1; j < (target.Count - 1); j++)
-                {
-                    listeTarget += target[j];
-                    listeTarget += ", ";
-                }
-                listeTarget += target[target.Count - 1];
-
                 //pour remplir les infos a l'interieur du slot
                 //IL FAUT FAIRE GET COMPONENTS ET PARCOURIR TAB, PARENT[0] FAIRE GAFFE
+
+                string target = itemOfSlot.getTarget();
+
 
                 TextMeshProUGUI[] notif = slot.GetComponentsInChildren<TextMeshProUGUI>();
                 notif[0].SetText(itemOfSlot.namee);
                 notif[1].SetText(itemOfSlot.description);
-                notif[2].SetText(listeTarget);
+                notif[2].text = target;
 
                 //on dit que son parent est le Grid Layout Group PANEL NOTIF
                 slot.transform.SetParent(slotPanel);
@@ -83,9 +60,8 @@ namespace game
 
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-
+            
             }
-
         }
     }
 }

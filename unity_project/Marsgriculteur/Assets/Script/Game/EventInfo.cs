@@ -16,7 +16,6 @@ namespace game
         public bool targetTool;
         public List<EnumTypePlant> targetsPlant = new List<EnumTypePlant>();
         public List<string> targetsTool = new List<string>();
-        public List<string> targetsPlantString = new List<string>();
         public int probability;
         public int unlockableAfter;
         public Sprite imageLink;
@@ -77,30 +76,25 @@ namespace game
             return this.namee;
         }
 
+        public int getLength()
+        {
+            return this.length;
+        }
+
         public string getDescription()
         {
             return this.description;
         }
 
-        public List<string> getListeEnumTypePlant_to_String()
+        public string getTarget()
         {
-            for(int i=0; i<targetsPlant.Count; i++)
+            string rtr = string.Empty;
+            for (int i = 0; i < targetsPlant.Count; i++)
             {
-                targetsPlantString.Add(targetsPlant[i].ToString());
+                rtr += targetsPlant[i] + ", ";
             }
-            return targetsPlantString;
-        }
-
-        public List<string> getTarget()
-        {
-            if(this.targetSeed == true || this.targetPlant == true)
-            {
-                return getListeEnumTypePlant_to_String();
-            }
-            else
-            {
-                return this.targetsTool;
-            }
+            rtr = rtr.Substring(0, rtr.Length - 2);
+            return rtr;
         }
     }
 }
