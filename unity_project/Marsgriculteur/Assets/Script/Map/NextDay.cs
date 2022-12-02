@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 namespace game
 {
@@ -35,11 +36,11 @@ namespace game
             EventInfo evt = Market.instance.nextDay(nbrJour, true);
             if (evt == null)
             {
-                Debug.Log("Pas d'event");
+                Debug.Log("Jour "+nbrJour+ " : Pas d'event");
             }
             else
             {
-                Debug.Log("Nouveau evt : " + evt.namee);
+                Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
             }
 
             AllEvents all = new AllEvents();
@@ -59,6 +60,11 @@ namespace game
 
         void OnMouseDown()
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
+
             faitPousser();
             nbrJour++;
             dayText.SetText(nbrJour.ToString());

@@ -25,6 +25,9 @@ public class CameraMovement : MonoBehaviour
     //get all positions pour limiter la camera, doit soustraire .bounds.size vu que la taille est mesuree depuis le centre du sprite
     //on divise par 2f pour trouver la position a la limite centrale du map
 
+
+    private bool canMoove = true; // to lock the cam
+
     //fonction AWAKE IMPORTANT --- NE PAS NOMMER UN AUTRE TRUC sinon le truc ne s'autoupdate pas tout seul
     private void Awake(){
         mapMinX = tilemapRenderer.transform.position.x - tilemapRenderer.bounds.size.x/2f;
@@ -34,6 +37,11 @@ public class CameraMovement : MonoBehaviour
         mapMaxY = tilemapRenderer.transform.position.y + tilemapRenderer.bounds.size.y/2f;
     }
 
+    public void playerCanMoove(bool state)
+    {
+        canMoove = state;
+    }
+
 
     private void Update(){
         PanCamera();
@@ -41,6 +49,10 @@ public class CameraMovement : MonoBehaviour
 
     private void PanCamera(){
         //garde la position intiale du mouse
+        if (!canMoove)
+        {
+            return;
+        }
 
         if(Input.GetMouseButtonDown(0))
             dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition);
