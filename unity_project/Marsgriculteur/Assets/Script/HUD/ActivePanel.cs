@@ -30,27 +30,23 @@ namespace game
             //panel inventory normal, quand on clique sur le backpack
             if (this.name == "PanelInventory")
             {
-
-
-
-
                 //Debug.Log("on entre dans la boucle normale");
                 gridBag.transform.SetParent(PanelInventory.transform);
                 gridBag.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
                 gridBag.transform.localPosition = gridBag.transform.localPosition + new Vector3Int(0, -20);
             }
             //panel lorsqu'on essaye de planter un truc
-            else if (this.name == "PanelPlotInv")
+            else if (this.name == "PanelInv")
             {
                 //Debug.Log("on entre dans la boucle");
-                Transform PanelPourPlanterEtInv = this.transform.Find("PanelInv");
-                gridBag.transform.SetParent(PanelPourPlanterEtInv);
+                //Transform PanelPourPlanterEtInv = this.transform.Find("PanelInv");
+                gridBag.transform.SetParent(PanelInventory.transform);
                 gridBag.transform.localScale = new Vector3(0.9f, 0.9f, 0.9f);
 
-
-                gridBag.GetComponent<RectTransform>().sizeDelta =
-                    new Vector2(PanelPourPlanterEtInv.GetComponent<RectTransform>().rect.width,
-                    PanelPourPlanterEtInv.GetComponent<RectTransform>().rect.height);
+                float y;
+                y = gridBag.GetComponent<RectTransform>().sizeDelta.y;
+                gridBag.GetComponent<RectTransform>().sizeDelta = new Vector2(500, y);
+                gridBag.transform.localPosition = new Vector2(0, 0);
 
 
                 //Debug.Log("##### nom panel : " + PanelPourPlanterEtInv.name);
@@ -73,7 +69,7 @@ namespace game
 
 
                 //getWeightStatus();
-                PanelInventory.SetActive(false);
+                //PanelInventory.SetActive(false);
             }
         }
 
