@@ -644,6 +644,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &36305311
 Canvas:
   m_ObjectHideFlags: 0
@@ -799,6 +800,97 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43341358}
+  m_CullTransparentMesh: 1
+--- !u!1 &44107686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 44107687}
+  - component: {fileID: 44107690}
+  - component: {fileID: 44107689}
+  - component: {fileID: 44107688}
+  m_Layer: 5
+  m_Name: PanelInv
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &44107687
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44107686}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3649.3464}
+  m_LocalScale: {x: 1.2261142, y: 1.5326426, z: 1.2261142}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 297146751}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 245, y: 0.00064086914}
+  m_SizeDelta: {x: 399.63, y: 326.23}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &44107688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44107686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1928ec5e970f647a6f534661e18931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelInventory: {fileID: 44107686}
+  PanelNotif: {fileID: 335311817}
+--- !u!114 &44107689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44107686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 14eaaad4db20fca40a5570e650400a8c, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &44107690
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44107686}
   m_CullTransparentMesh: 1
 --- !u!1 &48061239
 GameObject:
@@ -1017,6 +1109,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &61286913
 Canvas:
   m_ObjectHideFlags: 0
@@ -1444,6 +1537,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &153820480
 Canvas:
   m_ObjectHideFlags: 0
@@ -5314,6 +5408,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &252940063
 Canvas:
   m_ObjectHideFlags: 0
@@ -5896,8 +5991,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1420803190}
-  - {fileID: 1131966299}
   - {fileID: 1563744066}
+  - {fileID: 44107687}
   m_Father: {fileID: 1466314735}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6691,6 +6786,60 @@ Transform:
   m_Father: {fileID: 784803515}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &446942740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 446942741}
+  - component: {fileID: 446942742}
+  m_Layer: 5
+  m_Name: openCloseInv
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &446942741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446942740}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2553.8523}
+  m_LocalScale: {x: 1.3101485, y: 1.3101486, z: 1.3101485}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1466314735}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &446942742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446942740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dfcfbce7c207254eabb6a7316545597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thingsToHide:
+  - {fileID: 2022912906}
+  - {fileID: 1005403763}
+  - {fileID: 2017346438}
+  - {fileID: 48061243}
+  thingsToShow:
+  - {fileID: 297146751}
+  - {fileID: 1665531273}
+  cam: {fileID: 125168332}
+  camZoom: {fileID: 125168333}
 --- !u!1 &449184014
 GameObject:
   m_ObjectHideFlags: 0
@@ -7288,6 +7437,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &509806354
 Canvas:
   m_ObjectHideFlags: 0
@@ -7897,6 +8047,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &616187670
 Canvas:
   m_ObjectHideFlags: 0
@@ -8032,6 +8183,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &628713832
 Canvas:
   m_ObjectHideFlags: 0
@@ -8135,6 +8287,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &694982631
 Canvas:
   m_ObjectHideFlags: 0
@@ -8238,6 +8391,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &704429130
 Canvas:
   m_ObjectHideFlags: 0
@@ -9547,6 +9701,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &802571216
 Canvas:
   m_ObjectHideFlags: 0
@@ -10303,6 +10458,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &861567377
 Canvas:
   m_ObjectHideFlags: 0
@@ -10544,6 +10700,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &914448420
 Canvas:
   m_ObjectHideFlags: 0
@@ -12043,6 +12200,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &1034524886
 Canvas:
   m_ObjectHideFlags: 0
@@ -12547,97 +12705,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124125480}
   m_CullTransparentMesh: 1
---- !u!1 &1131966298
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1131966299}
-  - component: {fileID: 1131966301}
-  - component: {fileID: 1131966300}
-  - component: {fileID: 1131966302}
-  m_Layer: 5
-  m_Name: PanelInv
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1131966299
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1131966298}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 297146751}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 490, y: 0}
-  m_SizeDelta: {x: 980, y: 500}
-  m_Pivot: {x: 1, y: 0.5}
---- !u!114 &1131966300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1131966298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14eaaad4db20fca40a5570e650400a8c, type: 3}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1131966301
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1131966298}
-  m_CullTransparentMesh: 1
---- !u!114 &1131966302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1131966298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef1928ec5e970f647a6f534661e18931, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PanelInventory: {fileID: 1131966298}
-  PanelNotif: {fileID: 335311817}
 --- !u!1 &1144247805
 GameObject:
   m_ObjectHideFlags: 0
@@ -13107,6 +13174,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &1190905603
 Canvas:
   m_ObjectHideFlags: 0
@@ -14197,6 +14265,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &1328478784
 Canvas:
   m_ObjectHideFlags: 0
@@ -37117,7 +37186,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1466314732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37192,6 +37261,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 297146751}
+  - {fileID: 1665531273}
+  - {fileID: 446942741}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -37748,11 +37819,11 @@ RectTransform:
   m_Children:
   - {fileID: 303286586}
   m_Father: {fileID: 297146751}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -488, y: 15}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1563744067
@@ -38750,6 +38821,82 @@ MonoBehaviour:
   dayText: {fileID: 43341360}
   plots: {fileID: 480899209}
   market: {fileID: 1331125616}
+--- !u!1 &1665531272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1665531273}
+  - component: {fileID: 1665531275}
+  - component: {fileID: 1665531274}
+  m_Layer: 5
+  m_Name: preventPlayerFromClick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1665531273
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665531272}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2073.7092}
+  m_LocalScale: {x: 1.3027772, y: 1.3027772, z: 1.3027772}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1466314735}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -215, y: -145.7898}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1665531274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665531272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.2}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1665531275
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665531272}
+  m_CullTransparentMesh: 1
 --- !u!1 &1671674874
 GameObject:
   m_ObjectHideFlags: 0
@@ -39363,6 +39510,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &1796933401
 Canvas:
   m_ObjectHideFlags: 0
@@ -39466,6 +39614,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &1817600317
 Canvas:
   m_ObjectHideFlags: 0
@@ -39958,6 +40107,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &1860296383
 Canvas:
   m_ObjectHideFlags: 0
@@ -40061,6 +40211,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &1863397348
 Canvas:
   m_ObjectHideFlags: 0
@@ -40424,7 +40575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2006331162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40591,6 +40742,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &2011361839
 Canvas:
   m_ObjectHideFlags: 0
@@ -41635,6 +41787,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
+  hidesPanel: {fileID: 446942742}
 --- !u!223 &2126580420
 Canvas:
   m_ObjectHideFlags: 0

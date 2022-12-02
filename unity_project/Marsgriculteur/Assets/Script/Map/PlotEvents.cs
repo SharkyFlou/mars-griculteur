@@ -26,6 +26,10 @@ public class PlotEvents : MonoBehaviour
     private PlantedPlant plantedPlant;
     private Boolean contientGraine = false;
 
+    //param qui cache tout autour
+    public openCanvas hidesPanel;
+    
+
 
     //on appelle le dico du inventory Player, puis on le modifie selon
     //recup plante
@@ -113,6 +117,8 @@ public class PlotEvents : MonoBehaviour
         //recupPlante();
         //InventoryPanel.SetActive(true);
         InterfacePlantPanel.SetActive(true);
+        hidesPanel.inverseAffichage();
+
         //RectTransform InventoryRECT = InventoryPanel.GetComponent<RectTransform>();
 
         //float camHeight = cam.orthographicSize;

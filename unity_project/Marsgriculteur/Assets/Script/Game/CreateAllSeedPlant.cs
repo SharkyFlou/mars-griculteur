@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
 
-namespace game{
+namespace game
+{
     public class CreateAllSeedPlant : MonoBehaviour
     {
         public TextAsset JSONSeedPlant;
@@ -24,6 +25,10 @@ namespace game{
 
             mainInventory = new Inventory();
             mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.ELB), 10);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.ELB), 100);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.AJOS), 100);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AJOS), 100);
+
             /*
             Debug.Log(dicoPlant.ToString());
             Debug.Log(dicoTool.ToString());

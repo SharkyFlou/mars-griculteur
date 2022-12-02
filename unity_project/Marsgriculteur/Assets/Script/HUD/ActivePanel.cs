@@ -38,6 +38,7 @@ namespace game
             //panel lorsqu'on essaye de planter un truc
             else if (this.name == "PanelInv")
             {
+
                 //Debug.Log("on entre dans la boucle");
                 //Transform PanelPourPlanterEtInv = this.transform.Find("PanelInv");
                 gridBag.transform.SetParent(PanelInventory.transform);
