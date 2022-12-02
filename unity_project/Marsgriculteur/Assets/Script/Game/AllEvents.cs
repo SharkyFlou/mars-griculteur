@@ -125,7 +125,7 @@ namespace game
             listBsTemp.Add(EnumTypePlant.EGRO);
             allEventDico.Add("bsTemp", new EventInfo("bsTemp",
                 "bsTemp",
-                1,
+                2,
                 0.8,
                 0.7,
                 true,
@@ -143,7 +143,7 @@ namespace game
             listBsTemp2.Add(EnumTypePlant.EGRO);
             allEventDico.Add("bsTemp2", new EventInfo("bsTemp2",
                 "bsTemp2",
-                1,
+                2,
                 0.8,
                 0.7,
                 true,

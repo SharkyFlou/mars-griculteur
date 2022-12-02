@@ -2,6 +2,7 @@ using game;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -16,9 +17,9 @@ namespace game
         public Transform plots;
         List<Transform> plotList; //contient tous les plots pour les faire pousser
         private int nbrJour;
-        //private AllEvents allEvents;
         [SerializeField] public Market market;
 
+        //contient la liste des notifications avec leur durée d'apparition
         public static Dictionary<EventInfo, int> dicoPossessions = new Dictionary<EventInfo, int>();
 
         void Start()
@@ -30,59 +31,23 @@ namespace game
 
 
             GetPlots(plots);
+
+            //pour l'affichage des jours
             nbrJour = 0;
             dayText.SetText(nbrJour.ToString());
 
-            //Market.instance.afficheEtatDebug();
-
-            EventInfo evt = Market.instance.nextDay(nbrJour, true);
-            if (evt == null)
-            {
-                Debug.Log("Jour " + nbrJour + " : Pas d'event");
-            }
-            else
-            {
-                Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
-            }
-
-            AllEvents all = new AllEvents();
-            //Debug.Log("Aaah : " + evt.getName());
-            if (evt != null)
-            {
-                //dicoPossessions.Add(evt, evt.getLength());
-                addToInventory(evt, evt.getLength());
-            }
-
-            List<EventInfo> item = new List<EventInfo>();
-
-            foreach (EventInfo et in dicoPossessions.Keys)
-            {
-                if (et.getLength() == 0)
-                {
-                    item.Add(et);
-                }
-            }
-
-            foreach (EventInfo et in item)
-            {
-                removeFromInventory(et);
-            }
-
-            /*dicoPossessions.Add(all.allEventDico["vegeTrend"], all.allEventDico["vegeTrend"].length);
-            dicoPossessions.Add(all.allEventDico["qualiMeat"], all.allEventDico["qualiMeat"].length);
-            dicoPossessions.Add(all.allEventDico["solarStorm"], all.allEventDico["solarStorm"].length);*/
-
-            Debug.Log("dic" + dicoPossessions.Count);
-
-            //notif.afficheInventory();
-
+            EventDay(nbrJour);
+            
         }
 
+
+        //avoir le dico des notifs
         public static Dictionary<EventInfo, int> getInventoryNotif()
         {
             return dicoPossessions;
         }
 
+        //lorsqu'on clique pour passer au jour suivant
         void OnMouseDown()
         {
             if (EventSystem.current.IsPointerOverGameObject())
@@ -90,39 +55,11 @@ namespace game
                 return;
             }
 
+            //on fait pousser les plantes
             faitPousser();
-            EventInfo evt = Market.instance.nextDay(nbrJour, true);
-            if (evt == null)
-            {
-                Debug.Log("Jour "+nbrJour+ " : Pas d'event");
-            }
-            else
-            {
-                Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
-            }
 
-            AllEvents all = new AllEvents();
-            //Debug.Log("Aaah : " + evt.getName());
-            if(evt != null)
-            {
-                //dicoPossessions.Add(evt, evt.getLength());
-                addToInventory(evt, evt.getLength());
-            }
+            EventDay(nbrJour);
 
-            List<EventInfo> item = new List<EventInfo>();
-
-            foreach( EventInfo et in dicoPossessions.Keys)
-            {
-                if(et.getLength() == 0)
-                {
-                    item.Add(et);
-                }
-            }
-
-            foreach(EventInfo et in item)
-            {
-                removeFromInventory(et);
-            }
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
         }
@@ -204,6 +141,55 @@ namespace game
             }
 
             notif.afficheInventory();
+        }
+
+        public void EventDay(int nbrJour)
+        {
+            //debug pour voir les events du premier jour (jour 0)
+            EventInfo evt = Market.instance.nextDay(nbrJour, true);
+            if (evt == null)
+            {
+                Debug.Log("Jour " + nbrJour + " : Pas d'event");
+            }
+            else
+            {
+                Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
+            }
+
+
+            AllEvents all = new AllEvents();
+
+            //ajoute l'event à la liste
+            if (evt != null)
+            {
+                addToInventory(evt, evt.getLength());
+            }
+
+            //Une liste pour retenir tous les events qui arrivent à la fin
+            List<EventInfo> item = new List<EventInfo>();
+
+            //parcours du dico des notifs pour voir si les events arrivent à la fin
+            for (int i = 0; i < dicoPossessions.Count; i++)
+            {
+                EventInfo itemOfSlot = dicoPossessions.ElementAt(i).Key;
+                int duree = dicoPossessions.ElementAt(i).Value;
+
+                Debug.Log("Name = " + itemOfSlot.getName() + "Value = " + duree);
+                dicoPossessions[dicoPossessions.ElementAt(i).Key] --;
+
+                duree = dicoPossessions.ElementAt(i).Value;
+
+                if (duree == -1)
+                {
+                    item.Add(itemOfSlot);
+                }
+            }
+
+            //supprime les events du dico et donc de l'affichage
+            foreach (EventInfo et in item)
+            {
+                removeFromInventory(et);
+            }
         }
     }
 }

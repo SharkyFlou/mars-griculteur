@@ -25,18 +25,13 @@ namespace game
         public void clearInventoryDisplay()
         {
             foreach (Transform child in slotPanel)
-                /* slotPanel.DetachChildren(child);*/
                 Destroy(child.gameObject);
-
-            //slotPanel.DetachChildren();
-            //Destroy();
         }
 
         public void afficheInventory()
         {
-            slots = NextDay.getInventoryNotif();
-            Debug.Log("slots.Count" + slots.Count.ToString());
             clearInventoryDisplay();
+            slots = NextDay.getInventoryNotif();
 
             for (int i = 0; i < slots.Count; i++)
             {
@@ -47,14 +42,17 @@ namespace game
                 //on prend la key/value du dico a la pos i ##########################
                 EventInfo itemOfSlot = slots.ElementAt(i).Key;
                 int duree = slots.ElementAt(i).Value;
-                
+
                 //pour remplir les infos a l'interieur du slot
                 //IL FAUT FAIRE GET COMPONENTS ET PARCOURIR TAB, PARENT[0] FAIRE GAFFE
+
+                string target = itemOfSlot.getTarget();
+
 
                 TextMeshProUGUI[] notif = slot.GetComponentsInChildren<TextMeshProUGUI>();
                 notif[0].SetText(itemOfSlot.namee);
                 notif[1].SetText(itemOfSlot.description);
-                //notif[2].SetText(itemOfSlot.getListeTarget());
+                notif[2].text = target;
 
                 //on dit que son parent est le Grid Layout Group PANEL NOTIF
                 slot.transform.SetParent(slotPanel);
