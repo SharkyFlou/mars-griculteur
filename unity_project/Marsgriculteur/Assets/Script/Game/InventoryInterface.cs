@@ -6,7 +6,6 @@ namespace game
 {
     public interface InventoryInterface
     {
-
         public void afficheInventory(Dictionary<BasicItem, int> dico);
     }
 }
