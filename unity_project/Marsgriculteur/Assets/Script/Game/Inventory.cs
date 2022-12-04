@@ -110,11 +110,13 @@ namespace game
         }
 
         //retourne le maxWeight de l'inventory
-        public int getWeightMax(){
+        public int getWeightMax()
+        {
             return this.weightMax;
         }
 
-        public int getCurrentWeight(){
+        public int getCurrentWeight()
+        {
             return this.currentWeight;
         }
 
