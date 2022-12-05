@@ -8,20 +8,12 @@ using TMPro;
 
 namespace game
 {
-    public class Inventory
+    public class Inventory : MonoBehaviour
     {
 
         public InventoryInterface panel;
 
         private int weightMax=1000;
-        //permet de prendre le Dictionary inventory du player
-        
-        //public PlayerInventory playerInventory;
-
-        //correspond au slot a initialiser
-        
-        //correspond au panel parent
-        
 
         //dictionnaire des items pour remplir le inventory
         //si on ajoute un item on doit ajouter à ce dico pour le afficher
@@ -73,12 +65,14 @@ namespace game
                     break;
                 }
             }
-
             //displayInventory();
         }
-
         //permet de soustraire une qtt a un item qui se trouve deja dans notre inventory 
         //ou l'elilminer completement
+        //@@@@@@@@@/@@@@@@@@@/@@@@@@@@@/@@@@@@@@@/@@@@@@@@@/@@@@@@@@@/@@@@@@@@@/@@@@@@@@@
+        //deux fonctions diff, une ou on envoie le dico comme parametre, une ou on utilise le dico global value
+
+        //normalement, faire de meme avec add et delete
         public void SubstractFromInventory(BasicItem item, int qttToRemove)
         {
             if (qttToRemove < 1)
@@ -100,30 +94,66 @@ namespace game
             }
 
             //displayInventory();
+        }
 
+        public void SubstractFromInventory(BasicItem item, int qttToRemove, Dictionary<BasicItem, int> dicoASoustraire)
+        {
+            if (qttToRemove < 1)
+                return;
+            else
+            {
+                foreach (BasicItem kvp in dicoASoustraire.Keys.ToList())
+                {
+                    if (kvp.getId() == item.getId())
+                    {
+                        if (dicoASoustraire[kvp] > qttToRemove)
+                            dicoASoustraire[kvp] -= qttToRemove;
+                        else
+                            dicoASoustraire.Remove(kvp);
+
+                        break;
+                    }
+                }
+            }
+
+            //displayInventory();
         }
 
         public Dictionary<BasicItem, int> getInventory()
         {
-
             return this.slots;
         }
 
         //retourne le maxWeight de l'inventory
-        public int getWeightMax(){
+        public int getWeightMax()
+        {
             return this.weightMax;
         }
 
-        public int getCurrentWeight(){
+        public int getCurrentWeight()
+        {
             return this.currentWeight;
         }
 
+        public bool isDicoVide()
+        {
+            //Debug.Log("nb slots : " + slots.Count);
+            //Debug.Log("nb slots THIS : " + this.slots.Count);
+
+            if (slots.Count > 0)
+            {
+                return false;
+            }
+            
+            return true;
+        }
         //pour tout element on instancie son slot (qui aura une image etc etc) et on l'ajoute
-        
         public void displayInventory()
         {
             panel.afficheInventory(slots);
         }
+
+
         override public string ToString()
         {
             string rtr = string.Empty;
