@@ -16,7 +16,7 @@ public class PlotEvents : MonoBehaviour
 
 
     public GameObject InterfacePlantPanel;
-
+    public openCanvas gerePlantDisplay;
 
 
     private int growthTime;
@@ -28,7 +28,7 @@ public class PlotEvents : MonoBehaviour
     private bool contientGraine = false;
 
     //param qui cache tout autour
-    public openCanvas hidesPanel;
+    //public openCanvas hidesPanel;
     
 
 
@@ -136,7 +136,9 @@ public class PlotEvents : MonoBehaviour
         //float camHeight = cam.orthographicSize;
         //float camWidth = cam.orthographicSize * cam.aspect;
 
-        //InventoryRECT.sizeDelta.Set(camWidth/2, camHeight*0.9);
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        //ici on devra remettre le bool a true/false, comme ça on aura deux interfaces qui se lanceront selon ce qu'on a planté ou non
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     }
 
     List<Transform> GetChildren(Transform parent)
