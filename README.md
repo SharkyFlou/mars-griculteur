@@ -23,10 +23,26 @@
     <li><a href="#liste-des-principales-fonctionnalites">Liste des principales fonctionnalités</a></li>
     <li><a href="#licence">Licence</a></li>
     <li><a href="#lien-de-telechargement">Lien de téléchargement</a></li>
-    <li><a href="#capture-decran">Capture d'écran</a></li>
+    <li><a href="#capture-decran">Capture d'écran</a>
+      <ul>
+          <li><a href="#uml">UML</a></li>
+          <li><a href="#map">MAP</a></li>
+          <li><a href="#differentes-fenetres">Différentes fenêtres</a></li>
+            <ul>
+              <li><a href="#magasin">Magasin</a></li>
+              <li><a href="#marche">Marché</a></li>
+              <li><a href="#inventaire">Inventaire</a></li>
+              <li><a href="#notification">Notifications</a></li>
+            </ul>
+      </ul>
+    </li>
     <li><a href="#procedures-dinstallation-et-dexecution">Procédures d'installation et d'exécution</a>
         <ul>
             <li><a href="#procedures-dinstallation">Procédure d'installation</a></li>
+                <ul>
+                    <li><a href="#windows">Sous Windows</a></li>
+                    <li><a href="#linux">Sous Linux</a></li>
+                </ul>            
             <li><a href="#procedures-dexecution">Procédure d'execution</a></li>
         </ul>
     </li>
@@ -61,7 +77,7 @@ Lien des consigne : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T234
 ## Objectif pédagogique
 Le joueur doit apprendre la dynamique entre l’offre et la demande, qui détermine les prix d’un produit : l’augmentation ou diminution de celles-ci cherche un équilibre, jusqu’à retrouver une concurrence pure et parfaite (CPP).
 
-Cependant, cet équilibre n’est pas exempt des possibles pénuries et aléas qui peuvent découler de l’extérieur du marché : ces chocs bouleversent le marché, et créent des phénomènes auxquels les joueurs devront s’adapter.
+Cependant, cet équilibre n’est pas exempté des possibles pénuries et aléas qui peuvent découler de l’extérieur du marché : ces chocs bouleversent le marché, et créent des phénomènes auxquels les joueurs devront s’adapter.
 
 
 
@@ -90,8 +106,7 @@ Il devra donc comprendre et prévoir l'évolution de prix du marché afin de pou
 <a name="liste-des-principales-fonctionnalites"></a>
 
 ## Liste des principales fonctionnalités
-- [ ] Avoir une vu des ses agricultures, et pouvoir choisir quoi planter, ou quoi élever
-- [ ] Pouvoir acheter de nouveaux emplacements pour planter, mais cela ajoute au cout/mois
+- [X] Avoir une vu des ses agricultures, et pouvoir choisir quoi planter
 - [ ] Pouvoir voir son stand et les produits en vente, en pouvoir modifier leurs prix
 - [ ] Arrivé de nouveaux évenements, qui modifie la demande/les prix du marché, ou les récoltes
 - [ ] ...
@@ -170,9 +185,9 @@ Suite à l’étude du site du GNU (https://www.gnu.org/licenses/license-list.fr
 ### Procédures d'installation
 <a name="procedures-dinstallation"></a>
 #### Sous Windows
-<a name="sous-windows"></a>
+<a name="windows"></a>
 #### Sous Linux
-<a name="sous-Linux"></a>
+<a name="Linux"></a>
 
 * unity
   ```sh
