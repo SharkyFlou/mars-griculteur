@@ -16,7 +16,7 @@ public class PlotEvents : MonoBehaviour
 
 
     public GameObject InterfacePlantPanel;
-    //public GerePlant gerePlantDisplay;
+    public openCanvas gerePlantDisplay;
 
 
     private int growthTime;
@@ -116,7 +116,8 @@ public class PlotEvents : MonoBehaviour
     {
         //recupPlante();
         //InventoryPanel.SetActive(true);
-        InterfacePlantPanel.SetActive(true);
+        //InterfacePlantPanel.SetActive(true);
+        gerePlantDisplay.inverseAffichage();
 
         //ici : clear panel quand on revioent sur la meme interface
 
