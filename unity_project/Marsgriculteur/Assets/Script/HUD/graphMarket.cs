@@ -24,6 +24,7 @@ public class graphMarket : MonoBehaviour
     public RectTransform dashTemplateX;
     [SerializeField] public Market market;
     public TextMeshProUGUI titre;
+    public TextMeshProUGUI lastValueText;
 
 
     private float yMaximum; //maximum de la hauteur, pour équilibrer l'affichage
@@ -164,6 +165,13 @@ public class graphMarket : MonoBehaviour
                 CreateDotConnection(circleGameObject.GetComponent<RectTransform>().anchoredPosition, lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition);
             }
             lastCircleGameObject = circleGameObject; //enregistre le point, pour permettre la connexion entre les points 
+
+            if (i == valueList.Count - 1)
+            {
+                lastValueText.rectTransform.anchoredPosition = new Vector2(xPosition, yPosition);
+                lastValueText.text = valueList[i].ToString() + "$";
+                lastValueText.gameObject.SetActive(true);
+            }
         }
     }
 
