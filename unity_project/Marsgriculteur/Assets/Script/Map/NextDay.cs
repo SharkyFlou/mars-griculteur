@@ -157,7 +157,7 @@ namespace game
             }
 
 
-            AllEvents all = new AllEvents();
+            AllEvents all;
 
             //ajoute l'event à la liste
             if (evt != null)
