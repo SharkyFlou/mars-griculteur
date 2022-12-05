@@ -2,7 +2,7 @@
 
 <!-- LOGO DU PROJET -->
 <div align="center">
-    <img src="MARSgriculture_logo.png" alt="Logo" width="170" height="150">
+    <img src="images/MARSgriculture_logo.png" alt="Logo" width="170" height="150">
 <h3 align="center">MARS'GRICULTURE</h3>
 </div>
 
@@ -157,7 +157,7 @@ Suite à l’étude du site du GNU (https://www.gnu.org/licenses/license-list.fr
 <a name="uml"></a>
 
 <div align="center">
-    <img src="Mars_classe.svg" alt="Diagramme de classe">
+    <img src="images/Mars_classe.svg" alt="Diagramme de classe">
 <h6 align="center">Diagramme de classe</h6>
 </div>
 
