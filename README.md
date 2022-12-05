@@ -28,12 +28,6 @@
           <li><a href="#uml">UML</a></li>
           <li><a href="#map">MAP</a></li>
           <li><a href="#differentes-fenetres">Différentes fenêtres</a></li>
-            <ul>
-              <li><a href="#magasin">Magasin</a></li>
-              <li><a href="#marche">Marché</a></li>
-              <li><a href="#inventaire">Inventaire</a></li>
-              <li><a href="#notification">Notifications</a></li>
-            </ul>
       </ul>
     </li>
     <li><a href="#procedures-dinstallation-et-dexecution">Procédures d'installation et d'exécution</a>
@@ -106,13 +100,13 @@ Il devra donc comprendre et prévoir l'évolution de prix du marché afin de pou
 <a name="liste-des-principales-fonctionnalites"></a>
 
 ## Liste des principales fonctionnalités
-- [X] Avoir une vu des ses agricultures, et pouvoir choisir quoi planter
-- [ ] Pouvoir voir son stand et les produits en vente, en pouvoir modifier leurs prix
-- [ ] Arrivé de nouveaux évenements, qui modifie la demande/les prix du marché, ou les récoltes
-- [ ] ...
-- [ ] ...
-- [ ] ...
-- [ ] ...
+- [X] Avoir une vu des ses plantations, et pouvoir choisir quelle plante planter
+- [X] Pouvoir voir son stand et mettre des produits à vendre, pouvoir modifier leurs prix en fonction du marché et des événements
+- [X] Arrivée de nouveaux évenements, qui modifie la demande/les prix du marché, ou les récoltes
+- [X] Passer au jour suivant
+- [X] Voir l'inventaire des graines, avec un poids maximum pour l'inventaire
+- [X] Voir l'inventaire des outils
+- [X] Voir l'inventaire des plantes, avec un poids maximum pour l'inventaire
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -149,6 +143,7 @@ Suite à l’étude du site du GNU (https://www.gnu.org/licenses/license-list.fr
 
 ## Lien de téléchargement
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -160,18 +155,94 @@ Suite à l’étude du site du GNU (https://www.gnu.org/licenses/license-list.fr
 ## Capture d'écran
 ### UML
 <a name="uml"></a>
+
+<div align="center">
+    <img src="Mars_classe.svg" alt="Diagramme de classe">
+<h6 align="center">Diagramme de classe</h6>
+</div>
+
+Au début du projet, nous avons décidé de faire un UML pour voir comment allait être agencé le code, et comment étaient relié les classes.
+Ce diagramme de classe nous a permis de nous répartir le code des classes.
+
 ### MAP
 <a name="map"></a>
+
+<div align="center">
+    <img src="#" alt="Vision du début de game">
+<h6 align="center">Début de game</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="Les champs">
+<h6 align="center">Les champs</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="Le magasin">
+<h6 align="center">Le magasin</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="Le marché">
+<h6 align="center">Le marché</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="L'inventaire des graines">
+<h6 align="center">L'inventaire des graines</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="L'inventaire des plantes">
+<h6 align="center">L'inventaire des plantes</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="Les notifications">
+<h6 align="center">Les notifications</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="Les jours et l'argent du joueur">
+<h6 align="center">Les jours et l'argent du joueur</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="Le menu">
+<h6 align="center">Le menu</h6>
+</div>
+
 ### Différentes fenêtres
 <a name="differentes-fenetres"></a>
-#### Magasin
-<a name="magasin"></a>
-#### Marché
-<a name="marche"></a>
-#### Inventaire
-<a name="inventaire"></a>
-#### Notifications
-<a name="notifications"></a>
+<div align="center">
+    <img src="#" alt="Le magasin">
+<h6 align="center">Le magasin</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="Le marché">
+<h6 align="center">Le marché</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="L'inventaire des graines">
+<h6 align="center">L'inventaire des graines</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="L'inventaire des plantes">
+<h6 align="center">L'inventaire des plantes</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="Les notifications">
+<h6 align="center">Les notifications</h6>
+</div>
+
+<div align="center">
+    <img src="#" alt="Demande au joueur s'il est sûr de quitter">
+<h6 align="center">Demande au joueur s'il est sûr de quitter</h6>
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -189,16 +260,18 @@ Suite à l’étude du site du GNU (https://www.gnu.org/licenses/license-list.fr
 #### Sous Linux
 <a name="Linux"></a>
 
+<!-- Si besoin
 * unity
   ```sh
   apt install jesaispas
   ```
 
-1. blabla [https://example.com](https://example.com)
+1. blabla [https://example.com](https://example.com) -->
 
   
 ### Procédures d'exécution
 <a name="procedures-dexecution"></a>
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
