@@ -14,6 +14,11 @@ public class PlotEvents : MonoBehaviour
     private Sprite seed_sprite;
     private Sprite seed_sprite_grown;
 
+
+    public GameObject InterfacePlantPanel;
+
+
+
     private int growthTime;
     private int growthStatus;
     private Transform plotImage;
@@ -22,11 +27,15 @@ public class PlotEvents : MonoBehaviour
 
     private bool contientGraine = false;
 
+    //param qui cache tout autour
+    public openCanvas hidesPanel;
+    
+
 
     //on appelle le dico du inventory Player, puis on le modifie selon
     //recup plante
     //ou plantation
-    
+
     public PlayerInventory playerInventory;
 
 
@@ -35,9 +44,9 @@ public class PlotEvents : MonoBehaviour
     {
 
         List<Transform> children = GetChildren(transform);
-        foreach(Transform child in children)
+        foreach (Transform child in children)
         {
-            if(child.gameObject.name == "seedImage")
+            if (child.gameObject.name == "seedImage")
             {
                 seedImage = child;
                 seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite;
@@ -82,7 +91,7 @@ public class PlotEvents : MonoBehaviour
             growthStatus++;
         }
 
-        if(growthStatus == growthTime)
+        if (growthStatus == growthTime)
         {
             seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite_grown;
         }
@@ -103,8 +112,14 @@ public class PlotEvents : MonoBehaviour
     }
 
 
-    void OnMouseUp()
+    void OnMouseDown()
     {
+        //recupPlante();
+        //InventoryPanel.SetActive(true);
+        InterfacePlantPanel.SetActive(true);
+        hidesPanel.inverseAffichage();
+
+        //RectTransform InventoryRECT = InventoryPanel.GetComponent<RectTransform>();
         /* if (contientGraine && growthStatus == growthTime)
         {
             recupPlante();
@@ -118,20 +133,16 @@ public class PlotEvents : MonoBehaviour
         else if (!contientGraine)
             donnePlantedPlante(CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.AJOS));
 
-        /*
-            Test de la structure
-        
-        // Génère aléatoirement un EnumTypePlant et appelle la fonction createPlantedPlant pour afficher une nouvelle plante dans le Plot
-        System.Random random = new System.Random();
-        donnePlantedPlante(CreateAllSeedPlant.dicoPlant.createPlantedPlant((EnumTypePlant)Enum.GetValues(typeof(EnumTypePlant)).GetValue(random.Next(4))));
-        //CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB).getWeight();
-        */
+        //float camHeight = cam.orthographicSize;
+        //float camWidth = cam.orthographicSize * cam.aspect;
+
+        //InventoryRECT.sizeDelta.Set(camWidth/2, camHeight*0.9);
     }
 
     List<Transform> GetChildren(Transform parent)
     {
         List<Transform> children = new List<Transform>();
-        foreach(Transform child in parent)
+        foreach (Transform child in parent)
         {
             children.Add(child);
         }
