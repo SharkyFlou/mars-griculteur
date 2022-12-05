@@ -20,7 +20,7 @@ public class PlotEvents : MonoBehaviour
     private Transform seedImage;
     private PlantedPlant plantedPlant;
 
-    private Boolean contientGraine = false;
+    private bool contientGraine = false;
 
 
     //on appelle le dico du inventory Player, puis on le modifie selon
@@ -90,12 +90,11 @@ public class PlotEvents : MonoBehaviour
 
     public void recupPlante()
     {
-        /* PAS ENCORE FONCTIONNEL */
-
-        //playerInventory.addToInventory((CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB)),15);
-        //playerInventory.SubstractFromInventory((CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB)),15);
-        //playerInventory.removeFromInventory(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB));
-
+        contientGraine = false;
+        growthStatus = 0;
+        seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = null;
+        CreateAllSeedPlant.mainInventory.addToInventory(CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante()), 10);
+        plantedPlant = null;
     }
 
     public void planteGraine()
@@ -114,8 +113,10 @@ public class PlotEvents : MonoBehaviour
         {
             planteGraine();
         } */
-
-        recupPlante();
+        if (growthStatus == growthTime)
+            recupPlante();  
+        else if (!contientGraine)
+            donnePlantedPlante(CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.AJOS));
 
         /*
             Test de la structure

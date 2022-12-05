@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace game
@@ -16,14 +17,20 @@ namespace game
         {
             // Récupère le préfab pour le GridBagLayout de l'inventaire
             GameObject gridBag = Instantiate(Resources.Load<GameObject>("Prefabs/InventoryGridLayout"));
+            
 
             // Ajoute les slots avec les item de l'inventaire
             panel = new InventoryPanel(gridBag.transform);
-            panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory());
+            //panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory());
 
             // Attache le gridbag au PanelInventaire
             gridBag.transform.SetParent(PanelInventory.transform);
             gridBag.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+            float x, y;
+            x = gridBag.GetComponent<RectTransform>().sizeDelta.x;
+            y = gridBag.GetComponent<RectTransform>().sizeDelta.y;
+            gridBag.GetComponent<RectTransform>().sizeDelta = new Vector2(500, y);
+            
             gridBag.transform.localPosition = gridBag.transform.localPosition + new Vector3Int(0, -20);
             //getWeightStatus();
             PanelInventory.SetActive(false);
