@@ -8,7 +8,6 @@ namespace game
     [System.Serializable]
     public class Tool : BasicItem
     {
-        private int price;
 
 
         public Tool(){
@@ -32,11 +31,6 @@ namespace game
         }
 
         
-
-        public int getPrice()
-        {
-            return price;
-        }
     }
 
 }

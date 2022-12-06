@@ -20,7 +20,7 @@ namespace game
 
         void Start()
         {
-            money = 10;
+            money = 5000;
             moneyText.SetText(money.ToString());
         }
 

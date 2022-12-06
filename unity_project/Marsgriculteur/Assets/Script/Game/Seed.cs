@@ -8,7 +8,7 @@ namespace game
     public class Seed : BasicPlant
     {
         private int timeGrowth;
-        private int price;
+        
         public Seed() 
         {
 
@@ -32,10 +32,7 @@ namespace game
             CreateAllSeedPlant.dicoPlant.createSeed(seed);
         }*/
 
-        public int getPrice()
-        {
-            return price;
-        }
+        
 
         public int getTimeGrowth()
         {

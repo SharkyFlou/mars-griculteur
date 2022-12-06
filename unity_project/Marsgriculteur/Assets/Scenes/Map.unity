@@ -32788,7 +32788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanelInventory: {fileID: 600634452}
   PanelNotif: {fileID: 335311817}
-  panelAvecInfos: {fileID: 0}
+  panelAvecInfos: {fileID: 1005403763}
 --- !u!1 &601989213
 GameObject:
   m_ObjectHideFlags: 0
@@ -46179,8 +46179,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thingsToHide:
-  - {fileID: 88968114}
+  - {fileID: 2022912906}
   - {fileID: 48061243}
+  - {fileID: 2017346438}
+  - {fileID: 1653079562}
   thingsToShow:
   - {fileID: 284338965}
   cam: {fileID: 125168332}
