@@ -25,6 +25,8 @@ public class PlotEvents : MonoBehaviour
     private Transform seedImage;
     private PlantedPlant plantedPlant;
     private Boolean contientGraine = false;
+    private BasicItem itemDansPlot;
+    private int qtt;
 
     //param qui cache tout autour
     //public openCanvas hidesPanel;
@@ -117,6 +119,10 @@ public class PlotEvents : MonoBehaviour
         //recupPlante();
         //InventoryPanel.SetActive(true);
         //InterfacePlantPanel.SetActive(true);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
         gerePlantDisplay.inverseAffichage();
 
         //ici : clear panel quand on revioent sur la meme interface

@@ -8239,7 +8239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &297146751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9243,7 +9243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Que voulez-vous planter?
+  m_text: Cycle de croissance
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
   m_sharedMaterial: {fileID: -1030402903651679000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
@@ -34023,7 +34023,7 @@ GameObject:
   - component: {fileID: 769296987}
   - component: {fileID: 769296986}
   m_Layer: 5
-  m_Name: ButtonOKPlant
+  m_Name: ButtonRecupPlant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40536,7 +40536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1420803190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42069,7 +42069,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1617607446
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44197,7 +44197,7 @@ GameObject:
   - component: {fileID: 1944574201}
   - component: {fileID: 1944574200}
   m_Layer: 5
-  m_Name: preventPlayerFromClick
+  m_Name: preventPlayerFromClickPlantSeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45213,7 +45213,7 @@ GameObject:
   - component: {fileID: 2061020023}
   - component: {fileID: 2061020022}
   m_Layer: 5
-  m_Name: TextItemSelected
+  m_Name: TextGrowthPercentage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45259,7 +45259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Vous avez choisi:'
+  m_text: '% ... : '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
   m_sharedMaterial: {fileID: -1030402903651679000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
