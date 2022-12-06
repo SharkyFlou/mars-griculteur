@@ -24,8 +24,9 @@ public class PlotEvents : MonoBehaviour
     private Transform plotImage;
     private Transform seedImage;
     private PlantedPlant plantedPlant;
-
     private bool contientGraine = false;
+    private BasicItem itemDansPlot;
+    private int qtt;
 
     //param qui cache tout autour
     //public openCanvas hidesPanel;
@@ -116,20 +117,14 @@ public class PlotEvents : MonoBehaviour
     {
         //recupPlante();
         //InventoryPanel.SetActive(true);
-        
-        
-
-        //RectTransform InventoryRECT = InventoryPanel.GetComponent<RectTransform>();
-        /* if (contientGraine && growthStatus == growthTime)
+        //InterfacePlantPanel.SetActive(true);
+        if (EventSystem.current.IsPointerOverGameObject())
         {
-            recupPlante();
+            return;
         }
-        else if(!contientGraine)
-        {
-            planteGraine();
-        } */
+        gerePlantDisplay.inverseAffichage();
         if (growthStatus == growthTime)
-            recupPlante();  
+            recupPlante();
         else if (!contientGraine)
             hidesPanel.inverseAffichage();
 
