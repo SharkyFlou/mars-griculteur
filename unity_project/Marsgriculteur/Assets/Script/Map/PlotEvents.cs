@@ -16,7 +16,7 @@ public class PlotEvents : MonoBehaviour
 
 
     public GameObject InterfacePlantPanel;
-    public openCanvas gerePlantDisplay;
+    public openCanvas hidesPanel;
 
 
     private int growthTime;
@@ -24,7 +24,7 @@ public class PlotEvents : MonoBehaviour
     private Transform plotImage;
     private Transform seedImage;
     private PlantedPlant plantedPlant;
-    private Boolean contientGraine = false;
+    private bool contientGraine = false;
     private BasicItem itemDansPlot;
     private int qtt;
 
@@ -100,12 +100,11 @@ public class PlotEvents : MonoBehaviour
 
     public void recupPlante()
     {
-        /* PAS ENCORE FONCTIONNEL */
-
-        //playerInventory.addToInventory((CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB)),15);
-        //playerInventory.SubstractFromInventory((CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB)),15);
-        //playerInventory.removeFromInventory(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB));
-
+        contientGraine = false;
+        growthStatus = 0;
+        seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = null;
+        CreateAllSeedPlant.mainInventory.addToInventory(CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante()), 10);
+        plantedPlant = null;
     }
 
     public void planteGraine()
@@ -123,9 +122,13 @@ public class PlotEvents : MonoBehaviour
         {
             return;
         }
-        gerePlantDisplay.inverseAffichage();
+        if (growthStatus == growthTime)
+            recupPlante();
+        else if (!contientGraine)
+            hidesPanel.inverseAffichage();
 
-        //ici : clear panel quand on revioent sur la meme interface
+        //float camHeight = cam.orthographicSize;
+        //float camWidth = cam.orthographicSize * cam.aspect;
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         //ici on devra remettre le bool a true/false, comme ça on aura deux interfaces qui se lanceront selon ce qu'on a planté ou non
