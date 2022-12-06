@@ -61,9 +61,6 @@ Participants :
 Lien des consigne : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T234/T3)
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- OBJECTIF PEDAGOGIQUE -->
 <a name="objectif-pedagogique"></a>
