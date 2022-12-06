@@ -122,7 +122,6 @@ public class PlotEvents : MonoBehaviour
         {
             return;
         }
-        gerePlantDisplay.inverseAffichage();
         if (growthStatus == growthTime)
             recupPlante();
         else if (!contientGraine)
