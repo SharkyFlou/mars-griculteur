@@ -16,7 +16,7 @@ public class PlotEvents : MonoBehaviour
 
 
     public GameObject InterfacePlantPanel;
-    public openCanvas gerePlantDisplay;
+    public openCanvas hidesPanel;
 
 
     private int growthTime;
@@ -116,8 +116,8 @@ public class PlotEvents : MonoBehaviour
     {
         //recupPlante();
         //InventoryPanel.SetActive(true);
-        InterfacePlantPanel.SetActive(true);
-        hidesPanel.inverseAffichage();
+        
+        
 
         //RectTransform InventoryRECT = InventoryPanel.GetComponent<RectTransform>();
         /* if (contientGraine && growthStatus == growthTime)
@@ -131,7 +131,7 @@ public class PlotEvents : MonoBehaviour
         if (growthStatus == growthTime)
             recupPlante();  
         else if (!contientGraine)
-            donnePlantedPlante(CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.AJOS));
+            hidesPanel.inverseAffichage();
 
         //float camHeight = cam.orthographicSize;
         //float camWidth = cam.orthographicSize * cam.aspect;

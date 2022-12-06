@@ -49,7 +49,7 @@ namespace game
 
                 float y;
                 y = gridBag.GetComponent<RectTransform>().sizeDelta.y;
-                gridBag.GetComponent<RectTransform>().sizeDelta = new Vector2(500, y);
+                gridBag.GetComponent<RectTransform>().sizeDelta = new Vector2(300, y);
                 gridBag.transform.localPosition = new Vector2(0, 0);
 
 

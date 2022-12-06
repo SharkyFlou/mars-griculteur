@@ -644,7 +644,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &36305311
 Canvas:
@@ -1124,7 +1124,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &61286913
 Canvas:
@@ -1554,7 +1554,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &153820480
 Canvas:
@@ -7547,7 +7547,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &252940063
 Canvas:
@@ -31932,7 +31932,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &509806354
 Canvas:
@@ -32543,7 +32543,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &616187670
 Canvas:
@@ -32680,7 +32680,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &628713832
 Canvas:
@@ -32785,7 +32785,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &694982631
 Canvas:
@@ -32890,7 +32890,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &704429130
 Canvas:
@@ -34323,7 +34323,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &802571216
 Canvas:
@@ -35081,7 +35081,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &861567377
 Canvas:
@@ -35294,7 +35294,7 @@ MonoBehaviour:
   - {fileID: 1653079562}
   thingsToShow:
   - {fileID: 297146751}
-  - {fileID: 1671674875}
+  - {fileID: 1944574199}
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
 --- !u!1 &914448414
@@ -35379,7 +35379,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &914448420
 Canvas:
@@ -37016,7 +37016,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &1034524886
 Canvas:
@@ -38113,7 +38113,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &1190905603
 Canvas:
@@ -39281,7 +39281,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &1328478784
 Canvas:
@@ -42723,7 +42723,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &1796933401
 Canvas:
@@ -42828,7 +42828,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &1817600317
 Canvas:
@@ -43457,7 +43457,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &1860296383
 Canvas:
@@ -43562,7 +43562,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &1863397348
 Canvas:
@@ -44170,7 +44170,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &2011361839
 Canvas:
@@ -45216,7 +45216,7 @@ MonoBehaviour:
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   InterfacePlantPanel: {fileID: 297146750}
-  gerePlantDisplay: {fileID: 898446174}
+  hidesPanel: {fileID: 898446174}
   playerInventory: {fileID: 0}
 --- !u!223 &2126580420
 Canvas:
