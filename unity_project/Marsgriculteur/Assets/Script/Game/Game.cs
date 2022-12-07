@@ -24,26 +24,6 @@ namespace game
             moneyText.SetText(money.ToString());
         }
 
-        public void endGame()
-        {
-
-        }
-
-        private void sellItems()
-        {
-
-        }
-
-        private void eachMonth()
-        {
-
-        }
-
-        private void displayNotification()
-        {
-
-        }
-
         public static Sprite getDefaultSprite()
         {
             Sprite newSprite = Resources.Load<Sprite>("Sprites/bg_of_bg");
