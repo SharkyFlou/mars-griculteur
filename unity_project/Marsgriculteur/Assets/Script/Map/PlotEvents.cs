@@ -136,7 +136,7 @@ public class PlotEvents : MonoBehaviour
         {
             return;
         }
-        if (growthStatus == growthTime)
+        if (growthStatus == growthTime && growthStatus > 0)
             recupPlante();
         else if (!contientGraine)
         {
