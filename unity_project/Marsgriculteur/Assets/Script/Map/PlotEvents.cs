@@ -15,7 +15,6 @@ public class PlotEvents : MonoBehaviour
     private Sprite seed_sprite_grown;
 
     //references a d'autres objets
-    public GameObject PlotSupervisor;
     public GameObject InterfacePlantPanel;
     public openCanvas hidesPanel;
 
