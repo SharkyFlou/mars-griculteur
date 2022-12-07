@@ -9,8 +9,8 @@ namespace game
     [System.Serializable]
     public class AllSeedPlant
     {
-        // Objet de référence instancier au lancement qui permet d'avoir toutes les infos en rapport avec les plantes
-        // permet aussi d'instancier/créer celle-ci
+        // Objet de rï¿½fï¿½rence instancier au lancement qui permet d'avoir toutes les infos en rapport avec les plantes
+        // permet aussi d'instancier/crï¿½er celle-ci
 
         private Dictionary<EnumTypePlant, PlantInfo> allPlantDico = new Dictionary<EnumTypePlant, PlantInfo>();
 
@@ -116,8 +116,6 @@ namespace game
                 rtrn += "\t" + kvp.Value.getPlantPrice() + "\n";
                 rtrn += "}";
             }
-
-
             return rtrn;
         }
 

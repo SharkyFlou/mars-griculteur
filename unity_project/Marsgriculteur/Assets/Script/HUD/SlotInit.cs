@@ -31,7 +31,11 @@ namespace game
                 //Debug.Log("Tu es bien dans le shop connard !");
             }
             else if (item.getId() > 0 && item.getId() < 101)
+            {
                 panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
+
+
+            }
             else
                 Debug.Log("pas une seed");
         }
