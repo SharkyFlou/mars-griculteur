@@ -10,8 +10,16 @@ public class GerePlant : MonoBehaviour
     public Inventory inventoryFunctions;
     public ActivePanel reafficheInv;
 
+    /*     [SerializeField]
+     */
+    public PlotEvents StockedPlot;
+
+
     private BasicItem stockedItem;
     private int stockedQtt;
+
+    //sealed == FINAL en java
+    private int MAX_STOCKED_QTT = 20;
 
     //appelee par le click sur le slot qu'on veut planter (seulement de type seed)
     public void sendInfoClick(BasicItem item, int qtt)
@@ -30,7 +38,7 @@ public class GerePlant : MonoBehaviour
                 go.GetComponent<TextMeshProUGUI>().text = "Vous avez choisi : " + item.getName().ToString();
 
             }
-            if(go.name=="ImageSeed")
+            if (go.name == "ImageSeed")
             {
                 //Debug.Log("ok, image attribue");
                 //go.gameObject.SetActive(true);
@@ -42,9 +50,11 @@ public class GerePlant : MonoBehaviour
                 //go.GetComponent<Button>().onClick.AddListener(delegate { Soustrait(stockedItem, stockedQtt); });
 
                 //cela ajoute un evenement soustraits au click du button ButtonOKPlant
-                go.GetComponent<Button>().onClick.AddListener(Soustraits);
+                go.GetComponent<Button>().onClick.AddListener(Soustraits); //elimine le nb choisi de graines a planter 
+                go.GetComponent<Button>().onClick.AddListener(StockedPlot.planteGraine); //doit appeler la fonction plategraine de PlotEvents
+                //@@@@@@@@@@@@@@@@@@@@@@@ ici on peut ajouter directement le enumTypePlant pour planteGraine @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                //NE PAS AJOUTER () A LA FONCTION, SINON ON ENVOIE LE RESULTAT
             }
-           
         }
     }
 
@@ -79,5 +89,5 @@ public class GerePlant : MonoBehaviour
         return this.stockedQtt;
     }
 
-   
+
 }

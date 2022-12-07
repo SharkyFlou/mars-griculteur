@@ -14,9 +14,11 @@ public class PlotEvents : MonoBehaviour
     private Sprite seed_sprite;
     private Sprite seed_sprite_grown;
 
-
+    //references a d'autres objets
+    public GameObject PlotSupervisor;
     public GameObject InterfacePlantPanel;
     public openCanvas hidesPanel;
+
 
 
     private int growthTime;
@@ -27,17 +29,6 @@ public class PlotEvents : MonoBehaviour
     private bool contientGraine = false;
     private BasicItem itemDansPlot;
     private int qtt;
-
-    //param qui cache tout autour
-    //public openCanvas hidesPanel;
-    
-
-
-    //on appelle le dico du inventory Player, puis on le modifie selon
-    //recup plante
-    //ou plantation
-
-    public PlayerInventory playerInventory;
 
 
 
@@ -64,7 +55,7 @@ public class PlotEvents : MonoBehaviour
 
 
 
-        donnePlantedPlante(pplant);
+        //donnePlantedPlante(pplant);
     }
 
     public void donnePlantedPlante(PlantedPlant pl)
@@ -102,14 +93,37 @@ public class PlotEvents : MonoBehaviour
     {
         contientGraine = false;
         growthStatus = 0;
+        //EnumTypePlant plantARetourner = new EnumTypePlant();
+        //avant etait CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante()
         seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = null;
-        CreateAllSeedPlant.mainInventory.addToInventory(CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante()), 10);
-        plantedPlant = null;
+
+        //faut changer ca pour arriver a faire new Plant(plante de la seed qu'on a plantee)
+        if (itemDansPlot.getId() > 0 && itemDansPlot.getId() < 200)
+        {
+            //EnumTypePlant plantARetourner = (BasicPlant)itemDansPlot.GetTypePlant();
+        }
+        //CreateAllSeedPlant.mainInventory.addToInventory(AllSeedPlant.createPlant(plantARetourner), 10);
+        //plantedPlant = null;
+        itemDansPlot = null;
     }
 
     public void planteGraine()
     {
-        //ouvre l'inventaire, pour planter une graine
+        contientGraine = true;
+        growthStatus = 0;
+
+        Transform[] elements = InterfacePlantPanel.GetComponentsInChildren<Transform>();
+        Debug.Log("get component in children : " + elements);//cree la planted plant
+        foreach (Transform element in elements)
+        {
+            if (element.name == "PanelPlot")
+            {
+                itemDansPlot = element.GetComponent<GerePlant>().getStockedItem();
+                //seedImage.game
+                Debug.Log("seed plantee : graine de " + itemDansPlot.getName());
+            }
+        }
+        //pas vraiment besoin d'implementer un plantedplant... @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ a revoir
     }
 
 
@@ -125,10 +139,12 @@ public class PlotEvents : MonoBehaviour
         if (growthStatus == growthTime)
             recupPlante();
         else if (!contientGraine)
+        {
             hidesPanel.inverseAffichage();
-
-        //float camHeight = cam.orthographicSize;
-        //float camWidth = cam.orthographicSize * cam.aspect;
+            //on doit faire a partir de hidepanel, au lieu de passer par plotSupervisor
+            //change
+            PlotSupervisor.GetComponent<GerePlant>().StockedPlot = this.gameObject.GetComponent<PlotEvents>();
+        }
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         //ici on devra remettre le bool a true/false, comme ça on aura deux interfaces qui se lanceront selon ce qu'on a planté ou non
