@@ -106,11 +106,14 @@ namespace game
                 //MOMENT DE REMPLIR LE SLOT
                 //on prend la key/value du dico a la pos i ##########################
                 BasicItem itemOfSlot = dico.ElementAt(i).Key;
-                int qttDuSlot = dico.ElementAt(i).Value;
+                int slotText;
+                if (panelAInitialiser.name == "Money")
+                    slotText = dico.ElementAt(i).Key.getPrice();
+                else
+                    slotText = dico.ElementAt(i).Value;
 
 
                 //ceci affiche tous les weights de inventory
-                currentWeight += itemOfSlot.getWeight() * qttDuSlot;
 
                 //pour remplir les infos a l'interieur du slot
                 //IL FAUT FAIRE GET COMPONENTS ET PARCOURIR TAB, PARENT[0] FAIRE GAFFE
@@ -129,7 +132,7 @@ namespace game
                 {
                     if (text.gameObject.transform.parent != null)
                     {
-                        text.SetText(qttDuSlot.ToString());
+                        text.SetText(slotText.ToString());
                     }
                 }
 
@@ -137,7 +140,7 @@ namespace game
                 //ajoute en attribut au script SlotInit le bon item
                 slot.GetComponent<SlotInit>().item = itemOfSlot;
                 slot.GetComponent<SlotInit>().panelInfosVente = panelAInitialiser;
-                slot.GetComponent<SlotInit>().qttSlot = qttDuSlot;
+                slot.GetComponent<SlotInit>().qttSlot = slotText;
                 //on dit que son parent est le Grid Layout Group PANEL INVENTORY
                 slot.transform.SetParent(slotPanel);
 

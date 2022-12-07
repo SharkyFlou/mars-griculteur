@@ -19,7 +19,7 @@ namespace game
 
             //check if item=seed, sinon pas possible de le planter
             //seed = 1 a 100
-            if (this.transform.parent.parent.name == "PanelShop")
+            if (this.transform.parent.parent.name == "Shop")
             {
                 if (item.getId() > 0 && item.getId() < 101)
                     if (panelInfosVente.GetComponent<Game>().money >= item.getPrice())
