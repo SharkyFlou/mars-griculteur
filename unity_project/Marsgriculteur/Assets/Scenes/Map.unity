@@ -38865,7 +38865,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -7.9000244, y: -6.299988}
-  m_SizeDelta: {x: 48.26, y: 22.2}
+  m_SizeDelta: {x: 68.65, y: 35.93}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1173838436
 MonoBehaviour:
@@ -42553,7 +42553,7 @@ MonoBehaviour:
   dashTemplateX: {fileID: 29554705}
   market: {fileID: 1331125616}
   titre: {fileID: 3254609}
-  lastValueText: {fileID: 0}
+  lastValueText: {fileID: 1976701649}
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
 --- !u!114 &1610291187
