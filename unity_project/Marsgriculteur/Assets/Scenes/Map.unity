@@ -42553,7 +42553,7 @@ MonoBehaviour:
   dashTemplateX: {fileID: 29554705}
   market: {fileID: 1331125616}
   titre: {fileID: 3254609}
-  lastValueText: {fileID: 0}
+  lastValueText: {fileID: 1976701649}
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
 --- !u!114 &1610291187
