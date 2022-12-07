@@ -30,8 +30,20 @@ namespace game
                     }
                 //Debug.Log("Tu es bien dans le shop connard !");
             }
+            else if (this.transform.parent.parent.name == "PanelRight")
+            {
+                if (item.getId() > 100 && item.getId() <= 200)
+                {
+                    panelInfosVente.GetComponent<sellScript>().changeMaxValue(qttSlot);
+                    BasicPlant itemplante = (BasicPlant) item;
+                    panelInfosVente.GetComponent<sellScript>().changePlant(itemplante.getTypePlante());
+                    panelInfosVente.GetComponent<sellScript>().slider.interactable = true;
+                }
+            }
             else if (item.getId() > 0 && item.getId() < 101)
+            {
                 panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
+            }
             else
                 Debug.Log("pas une seed");
         }
