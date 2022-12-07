@@ -30,7 +30,7 @@ namespace game
                     }
                 //Debug.Log("Tu es bien dans le shop connard !");
             }
-            else if (this.transform.parent.parent.name == "PanelRight")
+            else if (this.transform.parent.parent.name == "MarketInv")
             {
                 if (item.getId() > 100 && item.getId() <= 200)
                 {
