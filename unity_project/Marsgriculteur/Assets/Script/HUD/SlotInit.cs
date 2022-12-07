@@ -35,7 +35,7 @@ namespace game
                 if (item.getId() > 100 && item.getId() <= 200)
                 {
                     panelInfosVente.GetComponent<sellScript>().changeMaxValue(qttSlot);
-                    BasicPlant itemplante = (BasicPlant) item;
+                    BasicPlant itemplante = (BasicPlant)item;
                     panelInfosVente.GetComponent<sellScript>().changePlant(itemplante.getTypePlante());
                     panelInfosVente.GetComponent<sellScript>().slider.interactable = true;
                 }
@@ -48,7 +48,7 @@ namespace game
                 Debug.Log("pas une seed");
         }
 
-       
+
 
 
     }

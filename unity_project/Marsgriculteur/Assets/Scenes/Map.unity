@@ -643,9 +643,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &36305311
 Canvas:
   m_ObjectHideFlags: 0
@@ -1123,9 +1123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &61286913
 Canvas:
   m_ObjectHideFlags: 0
@@ -1553,9 +1553,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &153820480
 Canvas:
   m_ObjectHideFlags: 0
@@ -7692,9 +7692,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &252940063
 Canvas:
   m_ObjectHideFlags: 0
@@ -8388,7 +8388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -250}
+  m_AnchoredPosition: {x: -48, y: -215}
   m_SizeDelta: {x: 980, y: 500}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &297146752
@@ -32327,9 +32327,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &509806354
 Canvas:
   m_ObjectHideFlags: 0
@@ -33192,9 +33192,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &616187670
 Canvas:
   m_ObjectHideFlags: 0
@@ -33329,9 +33329,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &628713832
 Canvas:
   m_ObjectHideFlags: 0
@@ -33569,9 +33569,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &694982631
 Canvas:
   m_ObjectHideFlags: 0
@@ -33674,9 +33674,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &704429130
 Canvas:
   m_ObjectHideFlags: 0
@@ -35107,9 +35107,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &802571216
 Canvas:
   m_ObjectHideFlags: 0
@@ -35918,9 +35918,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &861567377
 Canvas:
   m_ObjectHideFlags: 0
@@ -36216,9 +36216,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &914448420
 Canvas:
   m_ObjectHideFlags: 0
@@ -37988,9 +37988,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &1034524886
 Canvas:
   m_ObjectHideFlags: 0
@@ -39105,9 +39105,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &1190905603
 Canvas:
   m_ObjectHideFlags: 0
@@ -40275,9 +40275,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &1328478784
 Canvas:
   m_ObjectHideFlags: 0
@@ -41086,6 +41086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryFunctions: {fileID: 50431372}
   reafficheInv: {fileID: 44107688}
+  StockedPlot: {fileID: 0}
 --- !u!1 &1458743731
 GameObject:
   m_ObjectHideFlags: 0
@@ -42714,6 +42715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryFunctions: {fileID: 50431372}
   reafficheInv: {fileID: 44107688}
+  StockedPlot: {fileID: 0}
 --- !u!114 &1617607448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43852,9 +43854,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &1796933401
 Canvas:
   m_ObjectHideFlags: 0
@@ -43957,9 +43959,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &1817600317
 Canvas:
   m_ObjectHideFlags: 0
@@ -44678,9 +44680,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &1860296383
 Canvas:
   m_ObjectHideFlags: 0
@@ -44783,9 +44785,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &1863397348
 Canvas:
   m_ObjectHideFlags: 0
@@ -45526,9 +45528,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &2011361839
 Canvas:
   m_ObjectHideFlags: 0
@@ -46625,9 +46627,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
+  PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  playerInventory: {fileID: 0}
 --- !u!223 &2126580420
 Canvas:
   m_ObjectHideFlags: 0
