@@ -132,7 +132,10 @@ namespace game
                 {
                     if (text.gameObject.transform.parent != null)
                     {
-                        text.SetText(slotText.ToString());
+                        if (panelAInitialiser.name == "Money")
+                            text.SetText(slotText.ToString() + "$");
+                        else
+                            text.SetText(slotText.ToString());
                     }
                 }
 

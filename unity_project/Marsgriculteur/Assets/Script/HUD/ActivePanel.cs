@@ -116,6 +116,7 @@ namespace game
         public void Affiche()
         {
             Debug.Log("J'affiche !!!!");
+            
             panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory());
 
         }
@@ -124,7 +125,10 @@ namespace game
 
         public void Affiche(Transform panelAvecInfos)
         {
-            panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
+            if (PanelInventory.name == "Shop")
+                panel.afficheInventory(CreateAllSeedPlant.shopInv.getInventory(), panelAvecInfos);
+            else
+                panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
         }
     }
 }
