@@ -64,27 +64,32 @@ namespace game
 
                 //gridBag.transform.localScale = new Vector3(1f, 1f, 1f);
                 /*
-
+                
                 gridRectT.localPosition = new Vector2(parentRectT.anchoredPosition.x - gridRectT.sizeDelta.x / 2, parentRectT.anchoredPosition.y);
                 */
                 //getWeightStatus();
                 //PanelInventory.SetActive(false);
             }
-            else if(this.name == "PanelShop")
+            else
             {
+                // Devient enfant du PanelInventory
                 gridBag.transform.SetParent(PanelInventory.transform);
-                gridBag.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
-                gridBag.transform.localPosition = gridBag.transform.localPosition + new Vector3Int(0, -20);
-            }
-            else if(this.name == "PanelRight")
-            {
-                gridBag.transform.SetParent(PanelInventory.transform);
-                gridBag.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
-                gridBag.transform.localPosition = gridBag.transform.localPosition + new Vector3Int(2200, -10);
-                /*gridBag.transform.GetComponent<RectTransform>().anchorMin = new Vector2(1, 0);
-                gridBag.transform.GetComponent<RectTransform>().anchorMax = new Vector2(0, 2);
-                gridBag.transform.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);*/
-            }
+
+                // Points d'accroches en haut à gauche et en haut à droite pour remplir la totalité de la taille du parent
+                gridBag.transform.GetComponent<RectTransform>().anchorMin = new Vector2(0, 0);
+                gridBag.transform.GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
+                gridBag.transform.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);
+
+                // Place le point d'accroche au mileu.
+                gridBag.transform.GetComponent<RectTransform>().anchoredPosition = gridBag.transform.parent.GetComponent<RectTransform>().position;
+
+                // Met la scale a celle de base pour que les slots ont la bonne taille
+                gridBag.transform.localScale = new Vector3(1, 1, 1);
+
+                // Encadre bien dans le parent et le met pas trop loin de la caméra (évitr qu'il disparaisse au dézoom)
+                gridBag.transform.GetComponent<RectTransform>().sizeDelta = new Vector3(0, 0, 0);
+
+            }   
         }
 
         public void OpenPanel()

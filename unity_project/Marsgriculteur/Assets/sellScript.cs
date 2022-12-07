@@ -14,7 +14,7 @@ public class sellScript : MonoBehaviour
     public Slider slider;
     private EnumTypePlant plantChoosed;
     public Market market;
-    public Transform panelInfosVente;
+    public Transform transformRef;
 
     void Start()
     {
@@ -50,7 +50,7 @@ public class sellScript : MonoBehaviour
     {
         BasicPlant plante = CreateAllSeedPlant.dicoPlant.createPlant(plantChoosed);
         CreateAllSeedPlant.mainInventory.SubstractFromInventory(plante, (int)Math.Round(slider.value));
-        panelInfosVente.GetComponent<Game>().AddMoney(totalPrice());
+        transformRef.GetComponent<Game>().AddMoney(totalPrice());
         changeMaxValue(0);
     }
 
