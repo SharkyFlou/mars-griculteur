@@ -76,6 +76,15 @@ namespace game
                 gridBag.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
                 gridBag.transform.localPosition = gridBag.transform.localPosition + new Vector3Int(0, -20);
             }
+            else if(this.name == "PanelRight")
+            {
+                gridBag.transform.SetParent(PanelInventory.transform);
+                gridBag.transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
+                gridBag.transform.localPosition = gridBag.transform.localPosition + new Vector3Int(2200, -10);
+                /*gridBag.transform.GetComponent<RectTransform>().anchorMin = new Vector2(1, 0);
+                gridBag.transform.GetComponent<RectTransform>().anchorMax = new Vector2(0, 2);
+                gridBag.transform.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);*/
+            }
         }
 
         public void OpenPanel()
