@@ -14,6 +14,7 @@ public class sellScript : MonoBehaviour
     public Slider slider;
     private EnumTypePlant plantChoosed;
     public Market market;
+    public Transform transformRef;
 
     void Start()
     {
@@ -34,9 +35,23 @@ public class sellScript : MonoBehaviour
 
     public void valueChanged()
     {
-        double currentValue = Math.Round(slider.value);
+        
+        resValue.text = Math.Round(slider.value) + " : " + (totalPrice());
+    }
+
+    public int totalPrice()
+    {
+        int currentValue = (int)Math.Round(slider.value);
         int price = market.getLastPricePlant(plantChoosed);
-        resValue.text = currentValue + " : " + (price * currentValue);
+        return price * currentValue;
+    }
+    
+    public void sell()
+    {
+        BasicPlant plante = CreateAllSeedPlant.dicoPlant.createPlant(plantChoosed);
+        CreateAllSeedPlant.mainInventory.SubstractFromInventory(plante, (int)Math.Round(slider.value));
+        transformRef.GetComponent<Game>().AddMoney(totalPrice());
+        changeMaxValue(0);
     }
 
 }

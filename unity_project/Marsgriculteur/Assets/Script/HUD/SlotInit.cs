@@ -19,7 +19,7 @@ namespace game
 
             //check if item=seed, sinon pas possible de le planter
             //seed = 1 a 100
-            if (this.transform.parent.parent.name == "PanelShop")
+            if (this.transform.parent.parent.name == "Shop")
             {
                 if (item.getId() > 0 && item.getId() < 101)
                     if (panelInfosVente.GetComponent<Game>().money >= item.getPrice())
@@ -30,8 +30,20 @@ namespace game
                     }
                 //Debug.Log("Tu es bien dans le shop connard !");
             }
+            else if (this.transform.parent.parent.name == "MarketInv")
+            {
+                if (item.getId() > 100 && item.getId() <= 200)
+                {
+                    panelInfosVente.GetComponent<sellScript>().changeMaxValue(qttSlot);
+                    BasicPlant itemplante = (BasicPlant) item;
+                    panelInfosVente.GetComponent<sellScript>().changePlant(itemplante.getTypePlante());
+                    panelInfosVente.GetComponent<sellScript>().slider.interactable = true;
+                }
+            }
             else if (item.getId() > 0 && item.getId() < 101)
+            {
                 panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
+            }
             else
                 Debug.Log("pas une seed");
         }
