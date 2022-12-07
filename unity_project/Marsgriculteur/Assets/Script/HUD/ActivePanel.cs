@@ -49,7 +49,7 @@ namespace game
 
                 float y;
                 y = gridBag.GetComponent<RectTransform>().sizeDelta.y;
-                gridBag.GetComponent<RectTransform>().sizeDelta = new Vector2(500, y);
+                gridBag.GetComponent<RectTransform>().sizeDelta = new Vector2(300, y);
                 gridBag.transform.localPosition = new Vector2(0, 0);
 
 
@@ -69,6 +69,12 @@ namespace game
                 */
                 //getWeightStatus();
                 //PanelInventory.SetActive(false);
+            }
+            else if(this.name == "PanelShop")
+            {
+                gridBag.transform.SetParent(PanelInventory.transform);
+                gridBag.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
+                gridBag.transform.localPosition = gridBag.transform.localPosition + new Vector3Int(0, -20);
             }
         }
 
@@ -95,6 +101,7 @@ namespace game
         //deux fonctions qui permettent d'afficher de deux façons differentes le meme inventory
         public void Affiche()
         {
+            Debug.Log("J'affiche !!!!");
             panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory());
 
         }

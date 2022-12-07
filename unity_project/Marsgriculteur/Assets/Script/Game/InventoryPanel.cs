@@ -30,7 +30,7 @@ namespace game
             clearInventoryDisplay();
             int currentWeight = 0;
             //slots = dico;
-
+            Debug.Log("Taille inventaire : " + dico.Count().ToString());
             for (int i = 0; i < dico.Count; i++)
             {
 

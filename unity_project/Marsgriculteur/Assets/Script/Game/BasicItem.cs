@@ -13,6 +13,7 @@ namespace game
         protected string description;
         protected Sprite imageLink;
         protected int weight;
+        protected int price;
 
         public BasicItem()
         {
@@ -49,6 +50,10 @@ namespace game
         public int getId()
         {
             return id;
+        }
+        public int getPrice()
+        {
+            return price;
         }
     }
 
