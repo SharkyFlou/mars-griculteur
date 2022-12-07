@@ -270,7 +270,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: STAND
+  m_text: WILL NEVER BE SEEN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
   m_sharedMaterial: {fileID: -1030402903651679000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
@@ -1306,7 +1306,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.22352943, g: 0.22352943, b: 0.22352943, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1346,7 +1346,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125168328}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -34607,7 +34607,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: MARKET
+  m_text: STAND
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
   m_sharedMaterial: {fileID: -1030402903651679000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
@@ -41381,7 +41381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Weight : '
+  m_text: 'Poids :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
   m_sharedMaterial: {fileID: -1030402903651679000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
@@ -42618,8 +42618,17 @@ MonoBehaviour:
   market: {fileID: 1331125616}
   titre: {fileID: 3254609}
   lastValueText: {fileID: 1976701649}
+  yMaximum: 0
+  xSize: 0
+  xMaximum: 0
+  graphHeight: 0
+  yMin: 0
+  numberOfDays: 0
+  monthList: []
+  plantAct: 0
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
+  allChildsToSuppr: []
 --- !u!114 &1610291187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44133,7 +44142,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: INVENTORY
+  m_text: INVENTAIRE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
   m_sharedMaterial: {fileID: -1030402903651679000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
