@@ -26,18 +26,6 @@ namespace game
         {
             if(!PanelInventory.activeSelf)
                 PanelNotif.SetActive(!PanelNotif.activeSelf);
-            /*if (PanelNotif.activeSelf == false)
-            {
-                if (PanelInventory.activeSelf == true)
-                {
-                    PanelInventory.SetActive(false);
-                }
-                PanelNotif.SetActive(true);
-            }
-            else
-            {
-                PanelNotif.SetActive(false);
-            }*/
         }
     }
 }
