@@ -152,7 +152,7 @@ namespace game
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
             }
         }
-
+        // Détruie tous les slots pour éviter des clones lors d'un update de l'affichage
         public void clearInventoryDisplay()
         {
             foreach (Transform child in slotPanel)
