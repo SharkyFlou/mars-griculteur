@@ -104,7 +104,7 @@ namespace game
                 {
                     PanelNotif.SetActive(false);
                 }
-               
+
                 Affiche();
                 PanelInventory.SetActive(true);
             }

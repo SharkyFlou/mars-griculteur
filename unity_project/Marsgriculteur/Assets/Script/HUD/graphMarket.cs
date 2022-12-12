@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 
 
-public class graphMarket : MonoBehaviour
+public class GraphMarket : MonoBehaviour
 {
     [SerializeField] private Sprite circleSprite;
     public RectTransform graphContainer;
