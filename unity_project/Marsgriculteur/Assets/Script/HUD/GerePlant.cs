@@ -91,12 +91,6 @@ public class GerePlant : MonoBehaviour
 
     }
 
-    //public void Soustrait(BasicItem item, int qtt)
-    //{
-    //    inventoryFunctions.SubstractFromInventory(item, qtt/2);
-    //    inventoryFunctions.displayInventory();
-    //}
-
     public void Soustraits()
     {
         //IMPERATIF d'utiliser CreateAllSeedPlant.mainInventory.getInventory(), sinon on travaille avec un inventory qui est VIDE COMPLETEMENT

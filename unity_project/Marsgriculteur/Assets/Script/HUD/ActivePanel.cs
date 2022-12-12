@@ -20,6 +20,9 @@ namespace game
 
         public void OuvrePanel()
         {
+            clearInventoryDisplay();
+
+
             // R�cup�re le pr�fab pour le GridBagLayout de l'inventaire
             GameObject gridBag = Instantiate(Resources.Load<GameObject>("Prefabs/InventoryGridLayout"));
 
@@ -124,12 +127,27 @@ namespace game
             }
             else
             {
+                if (PanelInventory.name == "Shop")
+                {
+                    panel.afficheInventory(CreateAllSeedPlant.shopInv.getInventory(), panelAvecInfos);
+                    return;
+                }
+                    
+
                 Debug.Log("la boucle est vraie");
                 panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
 
             }
         }
 
+        public void clearInventoryDisplay()
+        {
+            foreach (Transform child in PanelInventory.GetComponentsInChildren<Transform>())
+            {
+                if(child.name=="InventoryGridLayout(Clone)")
+                    GameObject.Destroy(child.gameObject);
+            }
+        }
 
 
         //public void Affiche(Transform panelAvecInfos)

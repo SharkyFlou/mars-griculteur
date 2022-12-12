@@ -24,7 +24,7 @@ namespace game
                 if (item.getId() > 0 && item.getId() < 101)
                     if (panelInfosVente.GetComponent<Game>().money >= item.getPrice())
                     {
-                        CreateAllSeedPlant.mainInventory.addToInventory(item, 10);
+                        CreateAllSeedPlant.mainInventory.addToInventory(item, 10, CreateAllSeedPlant.mainInventory.getInventory());
                         panelInfosVente.GetComponent<Game>().SubsMoney(item.getPrice());
                         this.transform.parent.parent.GetComponent<ActivePanel>().Affiche();
                     }

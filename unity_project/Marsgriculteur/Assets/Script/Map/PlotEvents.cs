@@ -57,11 +57,6 @@ public class PlotEvents : MonoBehaviour
         //donnePlantedPlante(pplant);
     }
 
-    //public void donnePlantedPlante(PlantedPlant pl)
-    //{
-       
-    //}
-
     public void fairePousser()
     {
         if (!contientGraine)
