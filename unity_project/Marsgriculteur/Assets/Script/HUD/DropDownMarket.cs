@@ -11,7 +11,7 @@ public class DropDownMarket : MonoBehaviour
 
     public Market market;
 
-    public graphMarket ggraphMarket;
+    public GraphMarket ggraphMarket;
 
     private List<EnumTypePlant> plTypeList;
     // Start is called before the first frame update
