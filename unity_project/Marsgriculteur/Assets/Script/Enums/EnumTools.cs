@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace game
 {
+    /// <summary>
+    /// Enumération de tous les outils
+    /// </summary>
     public enum EnumTools
     {
         CHEBE,

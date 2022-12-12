@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96ba2e5e-82b2-41dd-8461-05316c7fd5d7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mars_classe.puml" beforeDir="false" afterPath="$PROJECT_DIR$/Mars_classe.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Enums/EnumTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Enums/EnumTools.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Enums/EnumTypePlant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Enums/EnumTypePlant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Enums/EnumTypePlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Enums/EnumTypePlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllEvents.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllPlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllPlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/InventorySeed.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/InventorySeed.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/InventorySlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/InventorySlot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/NotifPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/NotifPanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

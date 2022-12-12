@@ -6,115 +6,118 @@ using game;
 using TMPro;
 using static UnityEditor.Progress;
 
-public class GerePlant : MonoBehaviour
+namespace game
 {
-    public Inventory inventoryFunctions;
-    public ActivePanel reafficheInv;
-
-    public PlotEvents StockedPlot;
-
-
-    private BasicItem stockedItem;
-    private int stockedQtt;
-
-    //sealed == FINAL en java
-    private int MAX_STOCKED_QTT = 20;
-
-
-    public void cleanAffichage()
+    public class GerePlant : MonoBehaviour
     {
-        stockedItem = null;
-        stockedQtt = 0;
-        Transform[] gos = this.GetComponentsInChildren<Transform>();
+        public Inventory inventoryFunctions;
+        public ActivePanel reafficheInv;
 
-        //traite tous les enfants de panelPlot, permet de planter
-        foreach (Transform go in gos)
+        public PlotEvents StockedPlot;
+
+
+        private BasicItem stockedItem;
+        private int stockedQtt;
+
+        //sealed == FINAL en java
+        private int MAX_STOCKED_QTT = 20;
+
+
+        public void cleanAffichage()
         {
-            //Debug.Log(go.name);
-            if (go.name == "TextItemSelected")
+            stockedItem = null;
+            stockedQtt = 0;
+            Transform[] gos = this.GetComponentsInChildren<Transform>();
+
+            //traite tous les enfants de panelPlot, permet de planter
+            foreach (Transform go in gos)
             {
-                go.GetComponent<TextMeshProUGUI>().text = "Choisissez un item";
+                //Debug.Log(go.name);
+                if (go.name == "TextItemSelected")
+                {
+                    go.GetComponent<TextMeshProUGUI>().text = "Choisissez un item";
 
-            }
-            if (go.name == "ImageSeed")
-            {
-                //Debug.Log("ok, image attribue");
-                //go.gameObject.SetActive(true);
-                go.GetComponent<Image>().sprite = Resources.Load<Sprite>("Panel");
-            }
-            if (go.name == "ButtonOKPlant")
-            {
-                //cela ajoute un evenement soustraits au click du button ButtonOKPlant
-                go.GetComponent<Button>().onClick.RemoveAllListeners(); //elimine le nb choisi de graines a planter 
-                
-            }
-        }
-    }
+                }
+                if (go.name == "ImageSeed")
+                {
+                    //Debug.Log("ok, image attribue");
+                    //go.gameObject.SetActive(true);
+                    go.GetComponent<Image>().sprite = Resources.Load<Sprite>("Panel");
+                }
+                if (go.name == "ButtonOKPlant")
+                {
+                    //cela ajoute un evenement soustraits au click du button ButtonOKPlant
+                    go.GetComponent<Button>().onClick.RemoveAllListeners(); //elimine le nb choisi de graines a planter 
 
-
-    //appelee par le click sur le slot qu'on veut planter (seulement de type seed)
-    public void sendInfoClick(BasicItem item, int qtt)
-    {
-
-        stockedItem = item;
-        stockedQtt = 1;
-        
-        Transform[] gos = this.GetComponentsInChildren<Transform>();
-
-        //traite tous les enfants de panelPlot, permet de planter
-        foreach (Transform go in gos)
-        {
-            //Debug.Log(go.name);
-            if (go.name == "TextItemSelected")
-            {
-                go.GetComponent<TextMeshProUGUI>().text = "Vous avez choisi : " + item.getName().ToString();
-
-            }
-            if (go.name == "ImageSeed")
-            {
-                //Debug.Log("ok, image attribue");
-                //go.gameObject.SetActive(true);
-                go.GetComponent<Image>().sprite = item.getSprite();
-            }
-            if (go.name == "ButtonOKPlant")
-            {
-                //Debug.Log("ok, button attribue");
-                //go.GetComponent<Button>().onClick.AddListener(delegate { Soustrait(stockedItem, stockedQtt); });
-
-                //cela ajoute un evenement soustraits au click du button ButtonOKPlant
-                go.GetComponent<Button>().onClick.AddListener(StockedPlot.planteGraine); //doit appeler la fonction plategraine de PlotEvents
-                //go.GetComponent<Button>().onClick.AddListener(Soustraits); //elimine le nb choisi de graines a planter 
-                //@@@@@@@@@@@@@@@@@@@@@@@ ici on peut ajouter directement le enumTypePlant pour planteGraine @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                //NE PAS AJOUTER () A LA FONCTION, SINON ON ENVOIE LE RESULTAT
+                }
             }
         }
 
-    }
 
-    public void Soustraits()
-    {
-        //IMPERATIF d'utiliser CreateAllSeedPlant.mainInventory.getInventory(), sinon on travaille avec un inventory qui est VIDE COMPLETEMENT
-        //Debug.Log(CreateAllSeedPlant.mainInventory.isDicoVide());
-
-        //si le dico n'est pas vide
-        if (!CreateAllSeedPlant.mainInventory.isDicoVide())
+        //appelee par le click sur le slot qu'on veut planter (seulement de type seed)
+        public void sendInfoClick(BasicItem item, int qtt)
         {
-            //on soustrait au item du dico la qtt voulue
-            inventoryFunctions.SubstractFromInventory(getStockedItem(), getStockedQtt(), CreateAllSeedPlant.mainInventory.getInventory());
-            //on reaffiche les elements
-            reafficheInv.Affiche();
+
+            stockedItem = item;
+            stockedQtt = 1;
+
+            Transform[] gos = this.GetComponentsInChildren<Transform>();
+
+            //traite tous les enfants de panelPlot, permet de planter
+            foreach (Transform go in gos)
+            {
+                //Debug.Log(go.name);
+                if (go.name == "TextItemSelected")
+                {
+                    go.GetComponent<TextMeshProUGUI>().text = "Vous avez choisi : " + item.getName().ToString();
+
+                }
+                if (go.name == "ImageSeed")
+                {
+                    //Debug.Log("ok, image attribue");
+                    //go.gameObject.SetActive(true);
+                    go.GetComponent<Image>().sprite = item.getSprite();
+                }
+                if (go.name == "ButtonOKPlant")
+                {
+                    //Debug.Log("ok, button attribue");
+                    //go.GetComponent<Button>().onClick.AddListener(delegate { Soustrait(stockedItem, stockedQtt); });
+
+                    //cela ajoute un evenement soustraits au click du button ButtonOKPlant
+                    go.GetComponent<Button>().onClick.AddListener(StockedPlot.planteGraine); //doit appeler la fonction plategraine de PlotEvents
+                                                                                             //go.GetComponent<Button>().onClick.AddListener(Soustraits); //elimine le nb choisi de graines a planter 
+                                                                                             //@@@@@@@@@@@@@@@@@@@@@@@ ici on peut ajouter directement le enumTypePlant pour planteGraine @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                                                                                             //NE PAS AJOUTER () A LA FONCTION, SINON ON ENVOIE LE RESULTAT
+                }
+            }
+
         }
+
+        public void Soustraits()
+        {
+            //IMPERATIF d'utiliser CreateAllSeedPlant.mainInventory.getInventory(), sinon on travaille avec un inventory qui est VIDE COMPLETEMENT
+            //Debug.Log(CreateAllSeedPlant.mainInventory.isDicoVide());
+
+            //si le dico n'est pas vide
+            if (!CreateAllSeedPlant.mainInventory.isDicoVide())
+            {
+                //on soustrait au item du dico la qtt voulue
+                inventoryFunctions.SubstractFromInventory(getStockedItem(), getStockedQtt(), CreateAllSeedPlant.mainInventory.getInventory());
+                //on reaffiche les elements
+                reafficheInv.Affiche();
+            }
+        }
+
+        public BasicItem getStockedItem()
+        {
+            return this.stockedItem;
+        }
+
+        public int getStockedQtt()
+        {
+            return this.stockedQtt;
+        }
+
+
     }
-
-    public BasicItem getStockedItem()
-    {
-        return this.stockedItem;
-    }
-
-    public int getStockedQtt()
-    {
-        return this.stockedQtt;
-    }
-
-
 }
