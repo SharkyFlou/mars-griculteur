@@ -13,14 +13,14 @@ namespace game
         {
 
         }
-        public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, int paraTimeGroth, int paraWeight, int paraPrice)
+        public Seed(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, int paraTimeGrowth, int paraWeight, int paraPrice)
         {
             typePlante = paraTypePlant;
             id = paraId;
             itemName = paraName;
             description = paraDescription;
             imageLink = paraImagelink;
-            timeGrowth = paraTimeGroth;
+            timeGrowth = paraTimeGrowth;
             weight = paraWeight;
             price = paraPrice;
         }

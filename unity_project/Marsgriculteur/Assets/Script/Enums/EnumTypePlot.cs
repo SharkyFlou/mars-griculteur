@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace game
 {
+    /// <summary>
+    /// Enumération des types de champs
+    /// </summary>
     public enum EnumTypePlot
     {
         DRY,

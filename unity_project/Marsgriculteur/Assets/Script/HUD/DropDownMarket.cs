@@ -5,42 +5,45 @@ using UnityEngine.UI;
 using game;
 using TMPro;
 
-public class DropDownMarket : MonoBehaviour
+namespace game
 {
-    public TMP_Dropdown dropdown;
-
-    public Market market;
-
-    public GraphMarket ggraphMarket;
-
-    private List<EnumTypePlant> plTypeList;
-    // Start is called before the first frame update
-    void Start()
+    public class DropDownMarket : MonoBehaviour
     {
-        plTypeList = CreateAllSeedPlant.dicoPlant.getAllPlantType();
-        List<Plant> plList = new List<Plant> ();
-        foreach(EnumTypePlant plType in plTypeList)
+        public TMP_Dropdown dropdown;
+
+        public Market market;
+
+        public GraphMarket ggraphMarket;
+
+        private List<EnumTypePlant> plTypeList;
+        // Start is called before the first frame update
+        void Start()
         {
-            plList.Add(CreateAllSeedPlant.dicoPlant.createPlant(plType));
+            plTypeList = CreateAllSeedPlant.dicoPlant.getAllPlantType();
+            List<Plant> plList = new List<Plant>();
+            foreach (EnumTypePlant plType in plTypeList)
+            {
+                plList.Add(CreateAllSeedPlant.dicoPlant.createPlant(plType));
+            }
+
+
+            dropdown.ClearOptions();
+
+
+            List<TMP_Dropdown.OptionData> plantItems = new List<TMP_Dropdown.OptionData>();
+
+            foreach (Plant pl in plList)
+            {
+                TMP_Dropdown.OptionData plantItem = new TMP_Dropdown.OptionData(pl.getName(), pl.getSprite());
+                plantItems.Add(plantItem);
+            }
+
+            dropdown.AddOptions(plantItems);
         }
 
-
-        dropdown.ClearOptions();
-        
-
-        List<TMP_Dropdown.OptionData> plantItems = new List<TMP_Dropdown.OptionData>();
-
-        foreach(Plant pl in plList)
+        public void updateGraph(int newIndex)
         {
-            TMP_Dropdown.OptionData plantItem = new TMP_Dropdown.OptionData(pl.getName(), pl.getSprite());
-            plantItems.Add(plantItem);
+            ggraphMarket.changePlant(plTypeList[newIndex]);
         }
-
-        dropdown.AddOptions(plantItems);
-    }
-
-    public void updateGraph(int newIndex)
-    {
-        ggraphMarket.changePlant(plTypeList[newIndex]);
     }
 }

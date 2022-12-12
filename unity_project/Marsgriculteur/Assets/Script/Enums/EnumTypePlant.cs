@@ -6,6 +6,9 @@ using System;
 
 namespace game
 {
+    /// <summary>
+    /// Enumération de toutes les plantes
+    /// </summary>
     public enum EnumTypePlant
     {
         ELB,
