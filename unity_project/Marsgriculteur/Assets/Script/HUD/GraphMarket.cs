@@ -35,6 +35,8 @@ namespace game
         private EnumTypePlant plantAct = EnumTypePlant.ELB;
         public CameraMovement cam;
         public Zoom camZoom;
+        //truc
+        //truc
 
         private List<GameObject> allChildsToSuppr = new List<GameObject>();
 
