@@ -4,270 +4,600 @@ skinparam classAttributeIconSize 0
 skinparam classFontStyle Bold
 hide enum methods
 
-class MainMenu{
-    + playGame()
-}
-
-class CameraMovement{
-    - cam : Camera
-    - dragOrigin : Vector3
-    - zoom : float
-    - minCamSize : float
-    - maxCamSize : float
-    - tilemapRenderer : SpriteRender
-    - mapMinX : float
-    - mapMaxX : float
-    - mapMinY : float
-    - mapMaxY : float
-    - Awake()
-    - Update()
-    - PanCamera()
-    - ZoomIn()
-    - ZoomOut()
-    - ClampCamera(targetPosition : Vector3) : Vector3
-}
-
+'namespace game
 package game{
 
-    class Game{
-        - market : Market
-        - shop : Shop
-        - inventoryPlant : InventoryPlant
-        - inventorySeed : InventorySeed
-        - notification : List<Notification>
-        + startGame()
-        + endGame()
-        - sellItems()
-        - eachMonth()
-        - displayNotification()
-        + {static} getDefaultImage() : String
+    'folder Enums
+    package Enums{
+        enum EnumTools{
+            CHEBE
+            LLEPE
+            CHEPIO
+            CHEFOUR
+            TEAURA
+            CHEHA
+            CHETTEHA
+            TEURTRAC
+            SONNEUSEMOIS
+            RISATEURPULVE
+            DEUREPAN
+            RUECHAR
+            SEHER
+        }
+
+        enum EnumTypePlant{
+            ELB
+            EGRO
+            AJOS
+            AZLOC
+            SIAM
+            ZIR
+            NICIR
+            AONIUQ
+            OUCH
+            EVARETTEB
+            EUTIAL
+            TOCIRAH
+            LOSENRUOT
+            SIOP
+            NIPUL
+            ECHAV
+            ONTOUM
+            ELUOP
+            NIPAL
+        }
+
+        enum EnumTypePlot{
+            DRY
+            RADIOACTIVE
+            RED
+            GREEN
+            BLUE
+            MAGENTA
+            CYAN
+            LUCKY
+            POISONOUS
+        }
+    }
+
+    'folder Game
+    package Game{
+        class AllEvents {
+            + allEventDico : Dictionary<String,EventInfo>
+
+            + AllEvents()
+            + getRandomEvent(month : Integer, impossibleEvents : Dictionary<EventInfo, Integer>): EventInfo
+            - substractDico(dicoOrigin : Dictionary<String, EventInfo>, dicoSubstract : Dictionary<EventInfo, Integer>) : Dictionary<String, EventInfo>
+        }
+
+        class AllPlot{
+            + createPlot(typePlot : EnumTypePlot, currentPlant : EnumTypePlant) : Plot
+            + getAllPlot() : EnumTypePlot[*]
+        }
+
+        class AllSeedPlant{
+            - allPlantDico : Dictionary<EnumTypePlant,PlantInfo>
+
+            + AllSeedPlant(allPlantDico : Dictionary<EnumTypePlant, PlantInfo>)
+            + createPlant(typePlant : EnumTypePlant) : Plant
+            + createSeed(typePlant : EnumTypePlant) : Seed
+            + createPlantedPlant(typePlant : EnumTypePlant) : PlantedPlant
+            + getAllPlantTypes() : EnumTypePlant[*]
+            'pas sûre de ça : override de ToString()
+            + {methode} ToString() : String
+        }
+
+        class AllTools{
+            ~ dicoTools : Dictionary<String, Tool>
+
+            + AllTools(tools : Dictionary<String, Tool>)
+            + AllTools()
+            + getAllTools() : String[*]
+            'pas sûre de ça : override de ToString()
+            + {methode} ToString() : String
+        }
+
+        abstract class BasicItem{
+            + id : Integer
+            # itemName : String
+            # description : String
+            # imageLink : Sprite
+            # weight : Integer
+            # price : Integer
+
+            + BasicItem()
+            + BasicItem(paraId : Integer, paraName : String, paraDescription : String, paraImageLink : String)
+            + getWeight() : Integer
+            + getSprite() : Sprite
+            + getDesc() : String
+            + getName() : String
+            + getId() : Integer
+            + getPrice() : Integer
+        }
+
+        abstract class BasicPlant extends BasicItem{
+            # typePlante : EnumTypePlant
+
+            + BasicPlant()
+            + BasicPlant(paraTypePlant : EnumTypePlant)
+            + getTypePlante() : EnumTypePlant
+        }
+
+        class CreateAllSeedPlant(){
+            + {static} mainInventory : Inventory
+            + {static} dicoPlant : AllSeedPlant
+            + {static} dicoTool : AllTools
+            + {static} shopInv : Inventory
+
+            ~ Awake()
+        }
+
+        class EventInfo{
+            + namee : String
+            + description : String
+            + length : Integer
+            + mutliplierBase : double
+            + multiplierProg : double
+            + targetPlant : Boolean
+            + targetSeed : Boolean
+            + targetTool : Boolean
+            + targetsPlant : EnumTypePlant[*]
+            + targetsTool : String[*]
+            + probability : Integer
+            'Permet de dire qu'un event est dispo que a partir du mois 0, du 1, du 2....
+            + unlockableAfter : Integer
+            + imageLink : Sprite
+            + cooldown : Integer
+
+            + EventInfo( namee : String, description : String, length : Integer, mutliplier : double, mutliplierProg : double, targetPlant : Boolean, targetSeed : Boolean, targetTool : Boolean, targetsPlant : EnumTypePlant[*], targetsTool : String[*], probability : Integer, unlockableAfter : Integer, imageLink : Sprite, cooldown : Integer)
+            + EventInfo()
+            + getName() : String
+            + getLenght : Integer
+            + getDescription : String
+            + getTarget() : String
+        }
+
+        class Game{
+            - market : Market
+            - shop : Shop
+            - inventoryPlant : InventoryPlant
+            - inventorySeed : InventorySeed
+            + money : Integer
+
+            + Start()
+            + {static} getDefaultSprite() : Sprite
+            + AddMoney(price : Integer)
+            + SubsMoney(price : Integer)
+        }
+
+        class Inventory{
+            + panel : InventoryInterface
+            - weightMax : Integer
+            - currentWeight : Integer
+
+            + addToInventory(item : BasicItem, qtt : Integer)
+            + removeFromInventory(item : BasicItem)
+            + SubstractFromInventory(item : BasicItem, qttToRemove : Integer)
+            + SubstractFromInventory((item : BasicItem, qttToRemove : Integer, dicoASoustraire : Dictionary<BasicItem, Integer>)
+            + getInventory() : Dictionary<BasicItem, Integer>
+            + getWeightMax() : Integer
+            + getCurrentWeight() : Integer
+            + isDicoVide() : Boolean
+            + displayInventory()
+            'pas sûre de ça : override de ToString()
+            + {methode} ToString() : String
+        }
+
+        interface InventoryInterface{
+            + afficheInventory(dico : Dictionary<BasicItem, Integer>)
+        }
+
+        class InventoryPanel extends InventoryInterface{
+            'je suis pas sûre du Transform
+            + slotPanel : Transform
+
+            + InventoryPanel(slotPanel : Transform)
+            + InventoryPanel(slotPanel : Transform, panelAvecInfos : Transform)
+            + afficheInventory(dico : Dictionary<BasicItem, Integer>)
+            + afficheInventory(dico : Dictionary<BasicItem, Integer>, panelAInitialiser : Transform)
+            + clearInventoryDisplay()
+        }
+
+        class InventoryPlant extends Inventory{
+            + PlantSlots : Dictionary<EnumTypePlant, Integer>
+
+            + getNbrSlots(item : EnumTypePlant) : Integer
+            + setNbrSlots(item : EnumTypePlant, number : Integer)
+        }
+
+        class InventorySlot{
+            + {static} createSlot() : GameObject
+        }
+
+        class Market{
+            - history : Dictionary<EnumTypePlant,Integer[*]>
+            - activeEvents : Dictionary<EventInfo,Integer>
+            - impossibleEvents : Dictionary<EventInfo,Integer>
+            - actualDays : Integer
+            + {static} instance : Market
+
+            ~ Awake()
+            ~ Start()
+            + createMarket()
+            - nextActiveEvent()
+            + getActiveEvents() : Dictionary<EventInfo, Integer>
+            - nextImpossibleEvents()
+            - generateNewHistoryDay(days : Integer, eventActiveON : Boolean)
+            - plantByEvent(eventTemp : EventInfo, dureeMom : Integer, value : Integer) : Integer
+            - plantBasic(plant : Plant, month : Integer, days : Integer) : Integer
+            - ezRound(value : double) : Integer
+            + normalise(val : double) : double
+            + nextDay(days : Integer, eventON : Boolean) : EventInfo
+            + getHistory() : Dictionary<EnumTypePlant, Integer[*]>
+            + getLastPricePlant(plant : EnumTypePlant) : Integer
+            + getLastPriceSeed(plant : EnumTypePlant) : Integer
+            - createNewEvent(month : Integer) : EventInfo
+            + last60Days(pl : EnumTypePlant) : Integer[*]
+            + getDays() : Integer
+            + afficheEtatDebug()
+        }
+
+        class Notification{
+            + nextDay : NextDay
+            + SlotNotif : GameObject
+            + slotPanel : Transform
+            + slots : Dictionary<EventInfo, Integer>
+
+            + clearInventoryDisplay()
+            + afficheInventory()
+        }
+
+        class NotifPanel{
+            + PanelInventory : GameObject
+            + PanelNotif : GameObject
+            + notif : Notification
+            + dico : Dictionary<EventInfo, Integer>
+
+            ~ Start()
+            + OpenPanel()
+        }
+
+        class Plant extends BasicPlant{
+            + basicPlantPrice : Integer[*]
+
+            + Plant(paraTypePlant : EnumTypePlant, paraId : Integer, paraName : String, paraDescription : String, paraImageLink : Sprite, paraBasicPlantPrice : Integer[*], paraPlantWeight : Integer)
+            + Plant()
+            + getPrice(month : Integer) : Integer
+        }
+
+        class PlantedPlant extends BasicPlant{
+            - spriteLinks : Sprite[*]
+            - growthTime : Integer
+            - typePlante : EnumTypePlant
+
+            + PlantedPlant(paraTypePlant : EnumTypePlant, paraGrowthTime : Integer)
+            + PlantedPlant(paraTypePlant : EnumTypePlant, paraId : Integer, paraName : String, paraDescription : String, paraImageLink : Sprite, paraSpriteLinks : Sprite[*], paraGrowthTime : Integer)
+            + PlantedPlant()
+            + getSpriteLinks() : Sprite[*]
+            + getGrowthTime() : Integer
+        }
+
+        'bizarre d'avoir une classe juste pour ça + pas dans le namespace
+        class PlanteGraine{
+            + InventoryPanel : Transform
+            + PlotPanel : Transform
+        }
+
+        class PlantInfo{
+            - id : Integer
+            - namePlant : EnumTypePlant
+            - description : String
+            - growthTime : Integer
+            - seedSpriteLink : Sprite
+            - plantSpriteLink : Sprite
+            - plantedPlantSpriteLink : Sprite[*]
+            - seedWeight : Integer
+            - plantWeight : Integer
+            - basicSeedPrice : Integer
+            'the list is 12 long
+            - basicPlantPrice : Integer[*]
+
+            + PlantInfo(id : Integer, namePlant : EnumTypePlant, description : String, growthTime : Integer, SeedSpriteLink : String, PlantSpriteLink : String, PlantedPlantSpriteLink : String, seedWeight : Integer, plantWeight : Integer, basicSeedPrice : Integer, basicPlantPrice ; Integer[*])
+            + getId() : Integer
+            + getEnum() : EnumTypePlant
+            + getDesc() : String
+            + getGrowth() : Integer
+            + getSeedSprite() : Sprite
+            + getPlantSprite() : Sprite
+            + getPlantedPlantSprites() : Sprite[*]
+            + getSeedWeight() : Integer
+            + getPlantWeight() : Integer
+            + getSeedPrice() : Integer
+            + getPlantPrice() : Integer[*]
+        }
+
+        'rien dedans!!!!
+        class PlayerInventory{
+
+        }
+
+        class Plot extends BasicItem{
+            - typePlot : EnumTypePlot
+            - isPlanted : Boolean
+            - currentPlant : EnumTypePlant
+            - timeGrown : Integer
+            - capacity : Integer
+            - number : Integer
+
+            + Plot(paraTypePlot : EnumTypePlot, paraCurrentPlant : EnumTypePlant, paraTimeGrown : Integer, paraCapacity : Integer, paraNumber : Integer)
+            + setIsPlanted(paraIsPlanted : Boolean) : Boolean
+            + getTimeGrown() : Integer
+            + getTypePlant() : EnumTypePlant
+            + getCapacity() : Integer
+            + getQuantitySeed() : Integer
+            + growSeed()
+            - changePlantSprite()
+        }
+
+        class Seed extends BasicPlant{
+            - timeGrowth : Integer
+
+            + Seed()
+            + Seed(paraTypePlant : EnumTypePlant, paraId : Integer, paraName : String, paraDescription : String, paraImagelink : Sprite, paraTimeGrowth : Integer, paraWeight : Integer, paraPrice : Integer)
+            + getTimeGrowth() : Integer
+        }
+
+        class Shop{
+            + inventory : Inventory
+            + slots : Dictionary<BasicItem,Integer>
+
+            + Shop()
+            ~ Start()
+        }
+
+        class Stand{
+            ~ market : Market
+            ~ inventory : Inventory
+            ~ game : Game
+
+            + Stand(Xmarket : Market, Xinventory : InventoryPlant, Xgame : Game)
+            'je sais pas comment on fait la structure Item!!! -> pas objet!!!!
+            - listeItem : Item[*]
+            + stock_sale(Xitem_sale : EnumTypePlant, Xitem_number : Integer, Xitem_price : Integer)
+            + sell_stock() : Integer
+            + add_price(price : Integer)
+        }
+
+        abstract Tool extends BasicItem{
+            + Tool()
+            + Tool(paraPrice : Integer, name : String, id : Integer, description : String, imageLink : Sprite)
+            + Tool(paraPrice : Integer, name : String, id : Integer, description : String, spriteLink : String)
+        }
+
+        'y a rien
+        class TypePlante{
+
+        }
 
     }
 
-    class Shop{
-        - stock : Dictionary<BasicItem,Integer>
-        + getAllPrice()
+    package HUD{
+        class ActivePanel{
+            + PanelInventory : GameObject
+            + PanelNotif : GameObject
+            - panel : InventoryPanel
+            + panelAvecInfos : Transform
+
+            ~ Start()
+            + OpenPanel()
+            + Affiche()
+            + Affiche(panelAvecInfos : Transform)
+        }
+
+        'pas dans le namespace game
+        class DropDownMarket{
+            + dropdown : TMP_Dropdown
+            + market : Market
+            + ggraphMarket : GraphMarket
+            - plTypeList : EnumTypePlant[*]
+
+            ~ Start()
+            + updateGraph(newIndex : Integer)
+        }
+
+        'pas dans le namespace game
+        class GerePlant{
+            + inventoryFunctions : Inventory
+            + reafficheInv : ActivePanel
+            + StockedPlot : PlotEvents
+            - stockedItem : BasicItem
+            - stockedQtt : Integer
+            - MAX_STOCKED_QTT : Integer
+
+            + sendInfoClick(item : BasicItem, qtt : Integer)
+            + Soustraits()
+            + getStockedItem() : BasicItem
+            + getStockedQtt() : Integer
+        }
+
+        class GraphMarket{
+            - circleSprite : Sprite
+            + graphContainer : RectTransform
+            'je sais pas si on doit mettre les textmeshpro
+            + labelTemplateY : TextMeshProUGUI
+            + labelTemplateX : TextMeshProUGUI
+            + dashTemplateY : RectTransform
+            + dashTemplateX : RectTransform
+            + market : Market
+            + titre : TextMeshProUGUI
+            + lastValueText : TextMeshProUGUI
+            - yMaximum : float
+            - xSize : float
+            - xMaximum : float
+            - graphHeight : float
+            - yMin : float
+            - numberOfDays : Integer
+            - monthList : String[*]
+            'je sais pas comment représenter la const
+            ~ mutlInvGraph = 2f
+            - plantAct : EnumTypePlant
+            + cam : CameraMovement
+            + camZoom : Zoom
+            - allChildsToSuppr : GameObject[*]
+
+            - Awake()
+            + affiche()
+            + Update()
+            + changePlant(pl : EnumTypePlant)
+            - CreateCircle(anchoredPosition : Vector2) : GameObject
+            - ShowGraph(valueList : Integer[*])
+            - CreateDotConnection(dotPositionA : Vector2, dotPositionB : Vector2)
+            - AngleBetweenVector2(vec1 : Vector2, vec2 : Vector2) : float
+            - clearGraph()
+        }
+
+        class SloInit{
+            + item : BasicItem
+            + qttSlot : Integer
+            + panelInfosVente : Transform
+
+            - OnMouseDown()
+        }
+    }
+}
+
+package MainMenu{
+    class MainMenu{
+        + PlayGame()
+        + QuitGame()
+    }
+}
+
+package Map{
+    class CameraMovement{
+        - cam : Camera
+        - dragOrigin : Vector3
+        - zoom : float
+        - minCamSize : float
+        - maxCamSize : float
+        - tilemapRenderer : SpriteRender
+        - mapMinX : float
+        - mapMaxX : float
+        - mapMinY : float
+        - mapMaxY : float
+        - canMoove : Boolean
+
+        - Awake()
+        + playerCanMoove(state : Boolean)
+        - Update()
+        - PanCamera()
+        + ZoomIn()
+        + ZoomOut()
+        - ClampCamera(targetPosition : Vector3) : Vector3
     }
 
-    class ShopEvents{
-        + shop_sprite_highlight : Sprite
-        + shop_sprite : Sprite
-        + OnMouseDown()
-        + OnMouseOver()
-        + OnMouseExit()
+    class GoBackTest{
+        + {static} goMainMenu()
     }
 
-    class Plot extends BasicItem{
-        - typePlot : EnumTypePlot
-        - isPlanted : Boolean
-        - currentPlant : EnumTypePlant
-        - timeGrown : Integer
-        - capacity : Integer
-        - number : Integer
-        + Plot(paraTypePlot : EnumTypePlot, paraCurrentPlant : EnumTypePlant, paraTimeGrown : Integer, paraCapacity : Integer, paraNumber : Integer)
-        + setIsPlanted(paraIsPlanted : Boolean) : Boolean
-        + getTypePlant() : EnumTypePlant
-        + getTimeGrown() : Integer
-        + getCapacity() : Integer
-        + getQuantitySeed() : Integer
-        + growSeed()
-        - changePlantSprite()
+    class Highlite{
+        + sprite_highlight : Sprite
+        + sprite : Sprite
+
+        ~ OnMouseOver()
+        ~ OnMouseExit()
     }
 
-    enum EnumTypePlot{
-        DRY
-        RADIOACTIVE
-        RED
-        LUCKY
-        POISONOUS
-    }
+    'on peut pas mettre game pour le namespace, donc je sais pas comment faire
+    package gamee{
+        class NextDay{
+            + dayText : TextMeshProUGUI
+            + notif : Notification
+            + plots : Transform
+            ~ plotList : Transform[*]
+            - nbrJour : Integer
+            + market : Market
+            + {static} dicoPossessions : Dictionary<EventInfo, Integer>
 
-    abstract Inventory{
-        - weightMax : Integer
-        - slots : Dictionary<BasicItem,Integer>
-        + getInfoSlot() : String
-    }
-
-    class InventorySeed extends Inventory{
-
-    }
-
-    class InventoryPlant extends Inventory{
-
-    }
-
-    abstract BasicItem{
-        + id : Integer
-        ~ name : String
-        ~ description : String
-        ~ imageLink : String
-        + BasicItem()
-        + BasicItem(paraId : Integer, paraName : String, paraDescription : String, paraImageLink : String)
-        + getImageLink() : String
-        + getDescription() : String
-        + getName() : String
+            ~ Start()
+            + {static} getInventoryNotif() : Dictionary<EventInfo, Integer>
+            ~ OnMouseDown()
+            + faitPousser()
+            - GetPlots(parent : Transform)
+            + addToInventory(item : EventInfo, duree : Integer)
+            + removeFromInventory(item : EventInfo)
+            + EventDay(nbrJour : Integer)
+        }
     }
 
 
-    abstract BasicPlant extends BasicItem{
-         - typePlante : EnumTypePlant
-         + BasicPlant()
-         + BasicPlant(paraTypePlant : EnumTypePlant)
-         + getTypePlante() : EnumTypePlant
+    class OpenMarket{
+        + canvas : Canvas
+        + graphContainer : Transform
+        + openCanvasMarket : openCanvas
+
+        - OnMouseDown()
     }
 
-    class Seed extends BasicPlant{
-        - timeGrowth : Integer
-        - weight : Integer
-        - price : Integer
-        + Seed()
-        + Seed(paraTypePlant : EnumTypePlant, paraId : Integer, paraName : String, paraDescription : String, paraTimeGrowth : Integer, paraWeight : Integer, paraPrice : Integer)
-        + getPrice() : Integer
-        + getTimeGrowth() : Integer
-        + getWeight() : Integer
+    class OpenShop{
+        + canvas : Canvas
+        + openCanvasShop : openCanvas
+
+        - OnMouseDown()
     }
 
-    class Plant extends BasicPlant{
-        + basicPlantPrice : List<Integer>
-        + plantWeight : Integer
-        + Plant(paraTypePlant : EnumTypePlant, paraId : Integer, paraName : String, paraDescription : String, paraImageLink : String, paraBasicPlantPrice : List<Integer>, paraPlantWeight : Integer)
-        + Plant()
-    }
-
-    class PlantedPlant extends BasicPlant{
-        - typePlante : EnumTypePlant
+    class PlotEvents{
+        + plot_sprite : Sprite
+        + plot_sprite_highlite : Sprite
+        - seed_sprite : Sprite
+        - seed_sprite_grown : Sprite
+        + PlotSupervisor : GameObject
+        + InterfacePlantPanel : GameObject
+        + hidesPanel : openCanvas
         - growthTime : Integer
-        - spriteLinks : List<String>
-        + PlantedPlant(paraTypePlant : EnumTypePlant, paraGrowthTime : Integer)
-        + PlantedPlant()
-        + PlantedPlant(paraTypePlant : EnumTypePlant, paraId : Integer, paraName : String, paraDescription : String, paraImageLink : String, paraSpriteLinks : List<String>, paraGrowthTime : Integer)
-        + getSpriteLinks() : List<String>
-        + getGrowthTime() : Integer
+        - growthStatus : Integer
+        - plotImage : Transform
+        - seedImage : Transform
+        - plantedPlant : PlantedPlant
+        - contientGraine : Boolean
+        - itemDansPlot : BasicItem
+        - qtt : Integer
+
+        - Start()
+        + donnePlantedPlant(pl : PlantedPlant)
+        + fairePousser()
+        + recupPlante()
+        + planteGraine()
+        ~ OnMouseDown()
+        ~ GetChildren(parent : Transform) : Transform[*]
+        ~ OnMouseOver()
+        ~ OnMouseExit()
     }
 
-    enum EnumTypePlant{
-        ELB
-        EGRO
-        AJOS
-        AZLOC
-        SIAM
-        ZIR
-        NICIR
-        AONIUQ
-        OUCH
-        EVARETTEB
-        EUTIAL
-        TOCIRAH
-        LOSENRUOT
-        SIOP
-        NIPUL
-        ECHAV
-        ONTOUM
-        ELUOP
-        NIPAL
+    class Zoom{
+        ~ cam : Camera
+        - tilemapRenderer : SpriteRenderer
+        - zoom : float
+        - minCamSize : float
+        - maxCamSize : float
+        - mapMinX : float
+        - mapMaxX : float
+        - mapMinY : float
+        - mapMaxY : float
+        - canZoom : Boolean
+
+        - Awake()
+        ~ Update()
+        + playerCanZoom(state : Boolean)
+        - ClampCamera((targetPosition : Vector3) : Vector3
     }
-
-    class AllSeedPlant{
-        - allPlantDico : Dictionary<EnumTypePlant,PlantInfo>
-        + createPlant(typePlant : EnumTypePlant) : Plant
-        + createSeed(typePlant : EnumTypePlant) : Seed
-        + createPlantedPlant(typePlant : EnumTypePlant) : PlantedPlant
-        + getAllPlantTypes() : List<EnumTypePlant>
-    }
-
-    class AllPlot{
-        + createPlot(typePlot : EnumTypePlot, currentPlant : EnumTypePlant) : Plot
-        + getAllPlot() : List<EnumTypePlot>
-    }
-
-    class PlantInfo{
-         + id : Integer
-         + namePlant : EnumTypePlant
-         + descriptions : String
-         + growthTime : Integer
-         + seedSpriteLink : String
-         + plantSpriteLink : String
-         + plantedPlantSpriteLink : List<String>
-         + seedWeight : Integer
-         + plantWeight : Integer
-         + basicSeedPrice : Integer
-         'the list is 12 long
-         + basicPlantPrice : List<Integer>
-    }
+}
 
 
-    abstract Tool extends BasicItem{
-        - price : Integer
-        + Tool()
-        + Tool(paraPrice : Integer)
-        + getPrice() : Integer
-    }
-
-    enum EnumTools{
-        CHEBE
-        LLEPE
-        CHEPIO
-        CHEFOUR
-        TEAURA
-        CHEHA
-        CHETTEHA
-        TEURTRAC
-        SONNEUSEMOIS
-        RISATEURPULVE
-        DEUREPAN
-        RUECHAR
-        SEHER
-    }
-
-    class Notification extends BasicItem{
-        + month : Integer
-        + year : Integer
-    }
-
-    class Market{
-        - history : Dictonary<EnumTypePlant,List<Integer>>
-        - activeEvents : Dictionary<EventInfo,Integer>
-        - impossibleEvents : Dictionary<EventInfo,Integer>
-
-        'Est executé au lancement de l'appli, recup l'historique des prix et des events
-        + initMarket()
-        + createMarket(allEvents : AllEvents)
-        - nextActiveEvent()
-        - nextImpossibleEvents()
-        - generateNewHistoryMonth(month : Integer, eventActiveON : Boolean)
-        + nextMonth(allEvents : AllEvents, month : Integer, eventON : Boolean) : EventInfo
-        + getHistory() : Dictonary<EnumTypePlant,List<Integer>>
-        + getLastPricePlant(plant : EnumTypePlant) : Integer
-        + getLastPriceSeed(plant : EnumTypePlant) : Integer
-        - createNewEvent(allEvents : AllEvents, month : Integer) : EventInfo
-        + nbrSell(plant : EnumTypePlant, number : Integer,price : Integer) : Integer
-    }
-
-
-    class AllEvents {
-        - allEventDico : Dictionary<String,EventInfo>
-        + getRandomEvent(month : Integer, impossibleEvents : Dictionary<EventInfo, Integer>): EventInfo
-        - substractDico(dicoOrigin : Dictionary<String, EventInfo>, dicoSubstract : Dictionary<EventInfo, Integer>) : Dictionary<String, EventInfo>
-        + loadAllEvents()
-    }
-
-
-    class EventInfo{
-        + name : String
-        + description : String
-        + length : Integer
-        + mutliplier : double
-        + targetSeed : Boolean
-        + targetPlant : Boolean
-        + targetTool : Boolean
-        + targetsPlant : List<EnumTypePlant>
-        + targetsTool : List<Tool>
-        + probability : Integer
-        'Permet de dire qu'un event est dispo que a partir du mois 0, du 1, du 2....
-        + unlockableAfter : Integer
-        + imageLink : String
-        + timeBetween : Integer
-    }
+'pas de majuscule dans le code !!!!
+class MarketBase{
+    ~ market : Market
+    ~ Start()
 }
 
 MainMenu *-d-> Game
