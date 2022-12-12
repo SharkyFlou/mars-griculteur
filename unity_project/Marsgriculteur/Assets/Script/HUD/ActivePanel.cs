@@ -10,20 +10,24 @@ namespace game
         public GameObject PanelNotif;
 
         private InventoryPanel panel;
-        // Start is called before the first frame update
+
         public Transform panelAvecInfos;
 
         void Start()
+        {
+            OuvrePanel();
+        }
+
+        public void OuvrePanel()
         {
             // R�cup�re le pr�fab pour le GridBagLayout de l'inventaire
             GameObject gridBag = Instantiate(Resources.Load<GameObject>("Prefabs/InventoryGridLayout"));
 
             // Ajoute les slots avec les item de l'inventaire
             panel = new InventoryPanel(gridBag.transform);
-            if (panelAvecInfos != null)
-                Affiche(panelAvecInfos);
-            else
-                Affiche();
+
+            Debug.Log("Transform panelAvecInfos = " + panelAvecInfos.name);
+            Affiche();
 
             //definit les parents de l'inventory cree
             //#########################################@//#########################################@//#########################################@
@@ -89,7 +93,7 @@ namespace game
                 // Encadre bien dans le parent et le met pas trop loin de la caméra (évitr qu'il disparaisse au dézoom)
                 gridBag.transform.GetComponent<RectTransform>().sizeDelta = new Vector3(0, 0, 0);
 
-            }   
+            }
         }
 
         public void OpenPanel()
@@ -100,9 +104,7 @@ namespace game
                 {
                     PanelNotif.SetActive(false);
                 }
-                // Test maj de l'inventaire
-                /*CreateAllSeedPlant.mainInventory.addToInventory(CreateAllSeedPlant.dicoPlant.createPlant(EnumTypePlant.ELB), 10);
-                Debug.Log(CreateAllSeedPlant.mainInventory.ToString());*/
+               
                 Affiche();
                 PanelInventory.SetActive(true);
             }
@@ -115,16 +117,24 @@ namespace game
         //deux fonctions qui permettent d'afficher de deux façons differentes le meme inventory
         public void Affiche()
         {
-            Debug.Log("J'affiche !!!!");
-            panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory());
+            if (panelAvecInfos == null)
+            {
+                Debug.Log("la boucle est nulle");
+                panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory());
+            }
+            else
+            {
+                Debug.Log("la boucle est vraie");
+                panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
 
+            }
         }
 
 
 
-        public void Affiche(Transform panelAvecInfos)
-        {
-            panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
-        }
+        //public void Affiche(Transform panelAvecInfos)
+        //{
+        //    panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
+        //}
     }
 }

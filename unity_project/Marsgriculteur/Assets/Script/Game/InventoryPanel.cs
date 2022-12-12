@@ -139,7 +139,8 @@ namespace game
                 //Ceci remplit chaque slot avec un item, on pourra l'utiliser pour vente/plantation...
                 //ajoute en attribut au script SlotInit le bon item
                 slot.GetComponent<SlotInit>().item = itemOfSlot;
-                slot.GetComponent<SlotInit>().panelInfosVente = panelAInitialiser;
+                if(panelAInitialiser!=null)
+                    slot.GetComponent<SlotInit>().panelInfosVente = panelAInitialiser;
                 slot.GetComponent<SlotInit>().qttSlot = slotText;
                 //on dit que son parent est le Grid Layout Group PANEL INVENTORY
                 slot.transform.SetParent(slotPanel);

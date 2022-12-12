@@ -26,7 +26,7 @@ namespace game
                     {
                         CreateAllSeedPlant.mainInventory.addToInventory(item, 10);
                         panelInfosVente.GetComponent<Game>().SubsMoney(item.getPrice());
-                        this.transform.parent.parent.GetComponent<ActivePanel>().Affiche(panelInfosVente);
+                        this.transform.parent.parent.GetComponent<ActivePanel>().Affiche();
                     }
                 //Debug.Log("Tu es bien dans le shop connard !");
             }

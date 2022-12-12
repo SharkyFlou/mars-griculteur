@@ -382,6 +382,7 @@ MonoBehaviour:
   - {fileID: 1024525487}
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
+  PanelPlotPlant: {fileID: 1420803189}
 --- !u!4 &21351768
 Transform:
   m_ObjectHideFlags: 0
@@ -646,6 +647,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &36305311
 Canvas:
   m_ObjectHideFlags: 0
@@ -1126,6 +1128,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &61286913
 Canvas:
   m_ObjectHideFlags: 0
@@ -1556,6 +1559,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &153820480
 Canvas:
   m_ObjectHideFlags: 0
@@ -7695,6 +7699,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &252940063
 Canvas:
   m_ObjectHideFlags: 0
@@ -8657,7 +8662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanelInventory: {fileID: 319808361}
   PanelNotif: {fileID: 335311817}
-  panelAvecInfos: {fileID: 0}
+  panelAvecInfos: {fileID: 319808362}
 --- !u!1 &323632545
 GameObject:
   m_ObjectHideFlags: 0
@@ -32330,6 +32335,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &509806354
 Canvas:
   m_ObjectHideFlags: 0
@@ -33195,6 +33201,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &616187670
 Canvas:
   m_ObjectHideFlags: 0
@@ -33332,6 +33339,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &628713832
 Canvas:
   m_ObjectHideFlags: 0
@@ -33572,6 +33580,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &694982631
 Canvas:
   m_ObjectHideFlags: 0
@@ -33677,6 +33686,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &704429130
 Canvas:
   m_ObjectHideFlags: 0
@@ -33957,6 +33967,7 @@ MonoBehaviour:
   - {fileID: 1392767070}
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
+  PanelPlotPlant: {fileID: 1420803189}
 --- !u!4 &722724847
 Transform:
   m_ObjectHideFlags: 0
@@ -34186,6 +34197,7 @@ MonoBehaviour:
   - {fileID: 1674900320}
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
+  PanelPlotPlant: {fileID: 0}
 --- !u!1 &742627547
 GameObject:
   m_ObjectHideFlags: 0
@@ -35110,6 +35122,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &802571216
 Canvas:
   m_ObjectHideFlags: 0
@@ -35422,6 +35435,7 @@ MonoBehaviour:
   - {fileID: 1671674875}
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
+  PanelPlotPlant: {fileID: 1420803189}
 --- !u!4 &827232424
 Transform:
   m_ObjectHideFlags: 0
@@ -35921,6 +35935,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &861567377
 Canvas:
   m_ObjectHideFlags: 0
@@ -36135,6 +36150,7 @@ MonoBehaviour:
   - {fileID: 1944574199}
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
+  PanelPlotPlant: {fileID: 1420803189}
 --- !u!1 &914448414
 GameObject:
   m_ObjectHideFlags: 0
@@ -36219,6 +36235,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &914448420
 Canvas:
   m_ObjectHideFlags: 0
@@ -37991,6 +38008,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &1034524886
 Canvas:
   m_ObjectHideFlags: 0
@@ -39108,6 +39126,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &1190905603
 Canvas:
   m_ObjectHideFlags: 0
@@ -40278,6 +40297,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &1328478784
 Canvas:
   m_ObjectHideFlags: 0
@@ -42618,17 +42638,8 @@ MonoBehaviour:
   market: {fileID: 1331125616}
   titre: {fileID: 3254609}
   lastValueText: {fileID: 1976701649}
-  yMaximum: 0
-  xSize: 0
-  xMaximum: 0
-  graphHeight: 0
-  yMin: 0
-  numberOfDays: 0
-  monthList: []
-  plantAct: 0
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
-  allChildsToSuppr: []
 --- !u!114 &1610291187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43061,6 +43072,18 @@ MonoBehaviour:
       - m_Target: {fileID: 827232423}
         m_TargetAssemblyTypeName: openCanvas, Assembly-CSharp
         m_MethodName: inverseAffichage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 319808366}
+        m_TargetAssemblyTypeName: game.ActivePanel, Assembly-CSharp
+        m_MethodName: OuvrePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -43866,6 +43889,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &1796933401
 Canvas:
   m_ObjectHideFlags: 0
@@ -43971,6 +43995,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &1817600317
 Canvas:
   m_ObjectHideFlags: 0
@@ -44692,6 +44717,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &1860296383
 Canvas:
   m_ObjectHideFlags: 0
@@ -44797,6 +44823,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &1863397348
 Canvas:
   m_ObjectHideFlags: 0
@@ -45540,6 +45567,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &2011361839
 Canvas:
   m_ObjectHideFlags: 0
@@ -46353,6 +46381,7 @@ MonoBehaviour:
   - {fileID: 284338965}
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
+  PanelPlotPlant: {fileID: 1420803189}
 --- !u!4 &2098679168
 Transform:
   m_ObjectHideFlags: 0
@@ -46639,6 +46668,7 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
+  inventory: {fileID: 50431372}
 --- !u!223 &2126580420
 Canvas:
   m_ObjectHideFlags: 0
