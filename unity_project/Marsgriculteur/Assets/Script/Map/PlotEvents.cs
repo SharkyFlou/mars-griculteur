@@ -20,19 +20,19 @@ public class PlotEvents : MonoBehaviour
     public openCanvas hidesPanel;
 
     //pour ne pas verifier growthTime == growthStatus
-    private int growthTime=-10;
-    private int growthStatus=-1;
+    private int growthTime = -10;
+    private int growthStatus = -1;
 
     private Transform plotImage;
     private Transform seedImage;
-    private PlantedPlant plantedPlant=null;
+    private PlantedPlant plantedPlant = null;
     private bool contientGraine = false;
-    private BasicItem itemDansPlot=null;
-    private int qtt=0;
+    private BasicItem itemDansPlot = null;
+    private int qtt = 0;
 
     public Inventory inventory;
 
-
+    public ActivePanel reafficheInvOnClick;
 
     private void Start()
     {
@@ -93,7 +93,7 @@ public class PlotEvents : MonoBehaviour
                     10, CreateAllSeedPlant.mainInventory.getInventory());
         }
 
-        
+
         //CreateAllSeedPlant.mainInventory.addToInventory(AllSeedPlant.createPlant(plantARetourner), 10);
         itemDansPlot = null;
         plantedPlant = null;
@@ -143,7 +143,7 @@ public class PlotEvents : MonoBehaviour
             //Debug.Log("on rentre dans le OnMouseDoxwn(devrait etre premiere fonction");
             PlotSupervisor.GetComponent<GerePlant>().StockedPlot = this.gameObject.GetComponent<PlotEvents>();
             hidesPanel.inverseAffichage();
-            //on doit faire a partir de hidepanel, au lieu de passer par plotSupervisor, peut etre changer depend du temps
+            reafficheInvOnClick.Affiche();
         }
     }
 

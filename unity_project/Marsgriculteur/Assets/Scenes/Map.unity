@@ -648,6 +648,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &36305311
 Canvas:
   m_ObjectHideFlags: 0
@@ -1129,6 +1130,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &61286913
 Canvas:
   m_ObjectHideFlags: 0
@@ -1560,6 +1562,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &153820480
 Canvas:
   m_ObjectHideFlags: 0
@@ -7700,6 +7703,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &252940063
 Canvas:
   m_ObjectHideFlags: 0
@@ -32336,6 +32340,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &509806354
 Canvas:
   m_ObjectHideFlags: 0
@@ -33202,6 +33207,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &616187670
 Canvas:
   m_ObjectHideFlags: 0
@@ -33340,6 +33346,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &628713832
 Canvas:
   m_ObjectHideFlags: 0
@@ -33581,6 +33588,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &694982631
 Canvas:
   m_ObjectHideFlags: 0
@@ -33687,6 +33695,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &704429130
 Canvas:
   m_ObjectHideFlags: 0
@@ -35123,6 +35132,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &802571216
 Canvas:
   m_ObjectHideFlags: 0
@@ -35936,6 +35946,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &861567377
 Canvas:
   m_ObjectHideFlags: 0
@@ -36236,6 +36247,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &914448420
 Canvas:
   m_ObjectHideFlags: 0
@@ -38009,6 +38021,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &1034524886
 Canvas:
   m_ObjectHideFlags: 0
@@ -39127,6 +39140,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &1190905603
 Canvas:
   m_ObjectHideFlags: 0
@@ -40298,6 +40312,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &1328478784
 Canvas:
   m_ObjectHideFlags: 0
@@ -42617,29 +42632,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1610291186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1610291184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca632f8cafe43534297eeaaa697d7389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circleSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  graphContainer: {fileID: 1610291185}
-  labelTemplateY: {fileID: 1008435099}
-  labelTemplateX: {fileID: 1047084743}
-  dashTemplateY: {fileID: 1701117871}
-  dashTemplateX: {fileID: 29554705}
-  market: {fileID: 1331125616}
-  titre: {fileID: 3254609}
-  lastValueText: {fileID: 1976701649}
-  cam: {fileID: 125168332}
-  camZoom: {fileID: 125168333}
 --- !u!114 &1610291187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43913,6 +43905,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &1796933401
 Canvas:
   m_ObjectHideFlags: 0
@@ -44019,6 +44012,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &1817600317
 Canvas:
   m_ObjectHideFlags: 0
@@ -44741,6 +44735,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &1860296383
 Canvas:
   m_ObjectHideFlags: 0
@@ -44847,6 +44842,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &1863397348
 Canvas:
   m_ObjectHideFlags: 0
@@ -45591,6 +45587,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &2011361839
 Canvas:
   m_ObjectHideFlags: 0
@@ -46692,6 +46689,7 @@ MonoBehaviour:
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
   inventory: {fileID: 50431372}
+  reafficheInvOnClick: {fileID: 44107688}
 --- !u!223 &2126580420
 Canvas:
   m_ObjectHideFlags: 0

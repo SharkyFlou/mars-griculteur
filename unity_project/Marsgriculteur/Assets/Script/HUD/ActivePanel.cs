@@ -129,10 +129,20 @@ namespace game
             {
                 if (PanelInventory.name == "Shop")
                 {
+                    Debug.Log("on rentre dans l'inventory shop, no problem");
                     panel.afficheInventory(CreateAllSeedPlant.shopInv.getInventory(), panelAvecInfos);
                     return;
                 }
-                    
+                else if (panelAvecInfos.name == "PanelPlot")
+                {
+                    Debug.Log("on rentre dans LA BOUCLE PANEL PLOT");
+                    Debug.Log("inventory : #######" + CreateAllSeedPlant.mainInventory.getInventory().Count);
+                    Debug.Log("panel name : " + panelAvecInfos.name);
+
+                    panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos, false);
+                    return;
+                }
+
 
                 Debug.Log("la boucle est vraie");
                 panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
@@ -144,7 +154,7 @@ namespace game
         {
             foreach (Transform child in PanelInventory.GetComponentsInChildren<Transform>())
             {
-                if(child.name=="InventoryGridLayout(Clone)")
+                if (child.name == "InventoryGridLayout(Clone)")
                     GameObject.Destroy(child.gameObject);
             }
         }

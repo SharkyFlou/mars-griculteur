@@ -19,33 +19,36 @@ namespace game
 
             //check if item=seed, sinon pas possible de le planter
             //seed = 1 a 100
-            if (this.transform.parent.parent.name == "Shop")
+            if (panelInfosVente != null)
             {
-                if (item.getId() > 0 && item.getId() < 101)
-                    if (panelInfosVente.GetComponent<Game>().money >= item.getPrice())
-                    {
-                        CreateAllSeedPlant.mainInventory.addToInventory(item, 10, CreateAllSeedPlant.mainInventory.getInventory());
-                        panelInfosVente.GetComponent<Game>().SubsMoney(item.getPrice());
-                        this.transform.parent.parent.GetComponent<ActivePanel>().Affiche();
-                    }
-                //Debug.Log("Tu es bien dans le shop connard !");
-            }
-            else if (this.transform.parent.parent.name == "MarketInv")
-            {
-                if (item.getId() > 100 && item.getId() <= 200)
+                if (this.transform.parent.parent.name == "Shop")
                 {
-                    panelInfosVente.GetComponent<sellScript>().changeMaxValue(qttSlot);
-                    BasicPlant itemplante = (BasicPlant)item;
-                    panelInfosVente.GetComponent<sellScript>().changePlant(itemplante.getTypePlante());
-                    panelInfosVente.GetComponent<sellScript>().slider.interactable = true;
+                    if (item.getId() > 0 && item.getId() < 101)
+                        if (panelInfosVente.GetComponent<Game>().money >= item.getPrice())
+                        {
+                            CreateAllSeedPlant.mainInventory.addToInventory(item, 10, CreateAllSeedPlant.mainInventory.getInventory());
+                            panelInfosVente.GetComponent<Game>().SubsMoney(item.getPrice());
+                            this.transform.parent.parent.GetComponent<ActivePanel>().Affiche();
+                        }
                 }
+                else if (this.transform.parent.parent.name == "MarketInv")
+                {
+                    if (item.getId() > 100 && item.getId() <= 200)
+                    {
+                        panelInfosVente.GetComponent<sellScript>().changeMaxValue(qttSlot);
+                        BasicPlant itemplante = (BasicPlant)item;
+                        panelInfosVente.GetComponent<sellScript>().changePlant(itemplante.getTypePlante());
+                        panelInfosVente.GetComponent<sellScript>().slider.interactable = true;
+                    }
+                }
+                else if (panelInfosVente.name == "PanelPlot" && (item.getId() > 0 && item.getId() < 101))
+                {
+                    panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
+                }
+
             }
-            else if (item.getId() > 0 && item.getId() < 101)
-            {
-                panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
-            }
-            else
-                Debug.Log("pas une seed");
+
+
         }
 
 

@@ -20,7 +20,7 @@ namespace game
         private int stockedQtt;
 
         //sealed == FINAL en java
-        private int MAX_STOCKED_QTT = 20;
+        //private int MAX_STOCKED_QTT = 20;
 
 
         public void cleanAffichage()
