@@ -54,6 +54,37 @@ namespace game
 
         }
 
+        //permet d'ajouter un slot au dictionnaire
+        //surcharge la methode addToInventory avec un seul argument
+        public void addToInventory(BasicItem item, int qtt, Dictionary<BasicItem,int> dico)
+        {
+            bool trouve = false;
+
+            if (qtt < 1)
+                return;
+            else
+            {
+                //on parcourt chaque key pour acceder a son getId()
+                foreach (BasicItem kvp in dico.Keys.ToList())
+                {
+                    if (kvp.getId() == item.getId())
+                    {
+                        dico[kvp] += qtt;
+                        trouve = true;
+                        break;
+                    }
+                }
+                //si on le trouve pas on l'ajoute a notre 
+                if (!trouve)
+                {
+                    dico.Add(item, qtt);
+                }
+                //currentWeight += item.getWeight() * qtt;
+            }
+
+            
+
+        }
         //removes an item instantly
         public void removeFromInventory(BasicItem item)
         {
@@ -121,6 +152,7 @@ namespace game
 
         public Dictionary<BasicItem, int> getInventory()
         {
+            Debug.Log("dans inventory, get inventory, slots.count = " + slots.Count);
             return this.slots;
         }
 

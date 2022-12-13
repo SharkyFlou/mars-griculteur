@@ -19,18 +19,20 @@ public class PlotEvents : MonoBehaviour
     public GameObject InterfacePlantPanel;
     public openCanvas hidesPanel;
 
+    //pour ne pas verifier growthTime == growthStatus
+    private int growthTime = -10;
+    private int growthStatus = -1;
 
-
-    private int growthTime;
-    private int growthStatus;
     private Transform plotImage;
     private Transform seedImage;
-    private PlantedPlant plantedPlant;
+    private PlantedPlant plantedPlant = null;
     private bool contientGraine = false;
-    private BasicItem itemDansPlot;
-    private int qtt;
+    private BasicItem itemDansPlot = null;
+    private int qtt = 0;
 
+    public Inventory inventory;
 
+    public ActivePanel reafficheInvOnClick;
 
     private void Start()
     {
@@ -50,25 +52,9 @@ public class PlotEvents : MonoBehaviour
             }
         }
 
-
-        PlantedPlant pplant = CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB);
-
-
+        //PlantedPlant pplant = CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB);
 
         //donnePlantedPlante(pplant);
-    }
-
-    public void donnePlantedPlante(PlantedPlant pl)
-    {
-        plantedPlant = pl;
-        List<Sprite> listeSprites = pl.getSpriteLinks();
-        seed_sprite = listeSprites[0];
-        seed_sprite_grown = listeSprites[1];
-        growthTime = pl.getGrowthTime();
-        growthStatus = 0;
-
-        seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite;
-        contientGraine = true;
     }
 
     public void fairePousser()
@@ -92,46 +78,60 @@ public class PlotEvents : MonoBehaviour
     public void recupPlante()
     {
         contientGraine = false;
-        growthStatus = 0;
+        growthStatus = -1;
         //EnumTypePlant plantARetourner = new EnumTypePlant();
         //avant etait CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante()
         seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = null;
 
-        //faut changer ca pour arriver a faire new Plant(plante de la seed qu'on a plantee)
-        if (itemDansPlot.getId() > 0 && itemDansPlot.getId() < 200)
+        if (plantedPlant != null)
         {
-            //EnumTypePlant plantARetourner = (BasicPlant)itemDansPlot.GetTypePlant();
+            //Debug.Log("planted plant . get type plant = " + plantedPlant.getTypePlante());
+            //la plante avec croissance finie revient à l'inventory
+            //Debug.Log("#### inventory : " + CreateAllSeedPlant.mainInventory.getInventory().Count);
+            CreateAllSeedPlant.mainInventory.addToInventory(
+                CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante()),
+                    10, CreateAllSeedPlant.mainInventory.getInventory());
         }
+
+
         //CreateAllSeedPlant.mainInventory.addToInventory(AllSeedPlant.createPlant(plantARetourner), 10);
-        //plantedPlant = null;
         itemDansPlot = null;
+        plantedPlant = null;
     }
 
     public void planteGraine()
     {
-        contientGraine = true;
-        growthStatus = 0;
-
-        Transform[] elements = InterfacePlantPanel.GetComponentsInChildren<Transform>();
-        Debug.Log("get component in children : " + elements);//cree la planted plant
-        foreach (Transform element in elements)
+        if (!contientGraine)
         {
-            if (element.name == "PanelPlot")
-            {
-                itemDansPlot = element.GetComponent<GerePlant>().getStockedItem();
-                //seedImage.game
-                Debug.Log("seed plantee : graine de " + itemDansPlot.getName());
-            }
+            contientGraine = true;
+            growthStatus = 0;
+
+            //on stocke l'item de la graine plantee
+            itemDansPlot = PlotSupervisor.GetComponent<GerePlant>().getStockedItem();
+            //on garde sa version planted plant (graine--->planted plant--->plant)
+            BasicPlant bp = (BasicPlant)itemDansPlot;
+            EnumTypePlant typePlant = bp.getTypePlante();
+            PlantedPlant pl = CreateAllSeedPlant.dicoPlant.createPlantedPlant(typePlant);
+
+            //on associe tous les elements propres au planted plant au plot
+            //fusion de la fonction donnePlantedPlant
+            plantedPlant = pl;
+            List<Sprite> listeSprites = pl.getSpriteLinks();
+            seed_sprite = listeSprites[0];
+            seed_sprite_grown = listeSprites[1];
+            growthTime = pl.getGrowthTime();
+
+            seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite;
+
+            PlotSupervisor.GetComponent<GerePlant>().Soustraits();
         }
-        //pas vraiment besoin d'implementer un plantedplant... @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ a revoir
+        else
+            Debug.Log("une graine est déja plantee, on ne peut pas planter une par dessus!!");
     }
 
 
     void OnMouseDown()
     {
-        //recupPlante();
-        //InventoryPanel.SetActive(true);
-        //InterfacePlantPanel.SetActive(true);
         if (EventSystem.current.IsPointerOverGameObject())
         {
             return;
@@ -140,15 +140,11 @@ public class PlotEvents : MonoBehaviour
             recupPlante();
         else if (!contientGraine)
         {
-            hidesPanel.inverseAffichage();
-            //on doit faire a partir de hidepanel, au lieu de passer par plotSupervisor
-            //change
+            //Debug.Log("on rentre dans le OnMouseDoxwn(devrait etre premiere fonction");
             PlotSupervisor.GetComponent<GerePlant>().StockedPlot = this.gameObject.GetComponent<PlotEvents>();
+            hidesPanel.inverseAffichage();
+            reafficheInvOnClick.Affiche();
         }
-
-        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-        //ici on devra remettre le bool a true/false, comme ça on aura deux interfaces qui se lanceront selon ce qu'on a planté ou non
-        //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     }
 
     List<Transform> GetChildren(Transform parent)
