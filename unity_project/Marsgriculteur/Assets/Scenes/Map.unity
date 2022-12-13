@@ -34573,7 +34573,7 @@ MonoBehaviour:
   - {fileID: 1674900320}
   cam: {fileID: 125168332}
   camZoom: {fileID: 125168333}
-  PanelPlotPlant: {fileID: 480899208}
+  PanelPlotPlant: {fileID: 1420803189}
 --- !u!1 &742627547
 GameObject:
   m_ObjectHideFlags: 0
