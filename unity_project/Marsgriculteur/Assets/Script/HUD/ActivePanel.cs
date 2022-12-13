@@ -139,10 +139,16 @@ namespace game
                     Debug.Log("inventory : #######" + CreateAllSeedPlant.mainInventory.getInventory().Count);
                     Debug.Log("panel name : " + panelAvecInfos.name);
 
+                    //false == ajout que des graines
                     panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos, false);
                     return;
                 }
-
+                else if (panelAvecInfos.name == "SliderContainter")
+                {
+                    //true == ajout que des plantes pour la vente
+                    panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos, true);
+                    return;
+                }
 
                 Debug.Log("la boucle est vraie");
                 panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
