@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using game;
 using TMPro;
+using static UnityEditor.Progress;
 
 namespace game
 {
@@ -12,8 +13,6 @@ namespace game
         public Inventory inventoryFunctions;
         public ActivePanel reafficheInv;
 
-        /*     [SerializeField]
-         */
         public PlotEvents StockedPlot;
 
 
@@ -21,18 +20,51 @@ namespace game
         private int stockedQtt;
 
         //sealed == FINAL en java
-        private int MAX_STOCKED_QTT = 20;
+        //private int MAX_STOCKED_QTT = 20;
+
+
+        public void cleanAffichage()
+        {
+            stockedItem = null;
+            stockedQtt = 0;
+            Transform[] gos = this.GetComponentsInChildren<Transform>();
+
+            //traite tous les enfants de panelPlot, permet de planter
+            foreach (Transform go in gos)
+            {
+                //Debug.Log(go.name);
+                if (go.name == "TextItemSelected")
+                {
+                    go.GetComponent<TextMeshProUGUI>().text = "Choisissez un item";
+
+                }
+                if (go.name == "ImageSeed")
+                {
+                    //Debug.Log("ok, image attribue");
+                    //go.gameObject.SetActive(true);
+                    go.GetComponent<Image>().sprite = Resources.Load<Sprite>("Panel");
+                }
+                if (go.name == "ButtonOKPlant")
+                {
+                    //cela ajoute un evenement soustraits au click du button ButtonOKPlant
+                    go.GetComponent<Button>().onClick.RemoveAllListeners(); //elimine le nb choisi de graines a planter 
+
+                }
+            }
+        }
+
 
         //appelee par le click sur le slot qu'on veut planter (seulement de type seed)
         public void sendInfoClick(BasicItem item, int qtt)
         {
-            stockedItem = item;
-            stockedQtt = qtt;
 
-            Transform[] goInactive = this.GetComponentsInChildren<Transform>();
+            stockedItem = item;
+            stockedQtt = 1;
+
+            Transform[] gos = this.GetComponentsInChildren<Transform>();
 
             //traite tous les enfants de panelPlot, permet de planter
-            foreach (Transform go in goInactive)
+            foreach (Transform go in gos)
             {
                 //Debug.Log(go.name);
                 if (go.name == "TextItemSelected")
@@ -52,19 +84,14 @@ namespace game
                     //go.GetComponent<Button>().onClick.AddListener(delegate { Soustrait(stockedItem, stockedQtt); });
 
                     //cela ajoute un evenement soustraits au click du button ButtonOKPlant
-                    go.GetComponent<Button>().onClick.AddListener(Soustraits); //elimine le nb choisi de graines a planter 
                     go.GetComponent<Button>().onClick.AddListener(StockedPlot.planteGraine); //doit appeler la fonction plategraine de PlotEvents
+                                                                                             //go.GetComponent<Button>().onClick.AddListener(Soustraits); //elimine le nb choisi de graines a planter 
                                                                                              //@@@@@@@@@@@@@@@@@@@@@@@ ici on peut ajouter directement le enumTypePlant pour planteGraine @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
                                                                                              //NE PAS AJOUTER () A LA FONCTION, SINON ON ENVOIE LE RESULTAT
                 }
             }
-        }
 
-        //public void Soustrait(BasicItem item, int qtt)
-        //{
-        //    inventoryFunctions.SubstractFromInventory(item, qtt/2);
-        //    inventoryFunctions.displayInventory();
-        //}
+        }
 
         public void Soustraits()
         {

@@ -10,20 +10,27 @@ namespace game
         public GameObject PanelNotif;
 
         private InventoryPanel panel;
-        // Start is called before the first frame update
+
         public Transform panelAvecInfos;
 
         void Start()
         {
+            OuvrePanel();
+        }
+
+        public void OuvrePanel()
+        {
+            clearInventoryDisplay();
+
+
             // R�cup�re le pr�fab pour le GridBagLayout de l'inventaire
             GameObject gridBag = Instantiate(Resources.Load<GameObject>("Prefabs/InventoryGridLayout"));
 
             // Ajoute les slots avec les item de l'inventaire
             panel = new InventoryPanel(gridBag.transform);
-            if (panelAvecInfos != null)
-                Affiche(panelAvecInfos);
-            else
-                Affiche();
+
+            //Debug.Log("Transform panelAvecInfos = " + panelAvecInfos.name);
+            Affiche();
 
             //definit les parents de l'inventory cree
             //#########################################@//#########################################@//#########################################@
@@ -83,7 +90,6 @@ namespace game
 
                 //Debug.Log("##### nom panel : " + PanelPourPlanterEtInv.name);
 
-
                 //on prend le 80% du parent
                 //RectTransform gridRectT = gridBag.GetComponent<RectTransform>();                    //fils
                 //RectTransform parentRectT = (PanelPourPlanterEtInv as RectTransform);               //parent
@@ -131,9 +137,7 @@ namespace game
                 {
                     PanelNotif.SetActive(false);
                 }
-                // Test maj de l'inventaire
-                /*CreateAllSeedPlant.mainInventory.addToInventory(CreateAllSeedPlant.dicoPlant.createPlant(EnumTypePlant.ELB), 10);
-                Debug.Log(CreateAllSeedPlant.mainInventory.ToString());*/
+
                 Affiche();
                 PanelInventory.SetActive(true);
             }
@@ -146,20 +150,70 @@ namespace game
         // Update affichage d'un inventaire
         public void Affiche()
         {
-            Debug.Log("J'affiche !!!!");
-            
-            panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory());
+            if (panelAvecInfos == null)
+            {
+                Debug.Log("la boucle est nulle");
+                panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory());
+            }
+            else if (panel != null)
+            {
+                //OUBLIER PAS LES RETURNS
+                if (PanelInventory.name == "Shop")
+                {
+                    //Debug.Log("on rentre dans l'inventory shop, no problem");
+                    panel.afficheInventory(CreateAllSeedPlant.shopInv.getInventory(), panelAvecInfos);
+                    return;
+                }
 
-        }
+                else if (panelAvecInfos.name == "PanelStorage")
+                {
+                    Debug.Log("On rentre dans le storage inventory");
+                    panel.afficheInventory(CreateAllSeedPlant.storageInventory.getInventory(), panelAvecInfos);
+                    return;
+                }
+                else if (panelAvecInfos.name == "PanelInvToStore" || panelAvecInfos.name == "PanelInventory")
+                {
+                    Debug.Log("On rentre dans l'inventory du joueur, pour stocker");
+                    panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
+                    return;
+                }
+                else if (panelAvecInfos.name == "PanelPlot")
+                {
+                    //false == ajout que des graines
+                    panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos, false);
+                    return;
+                }
+                else if (panelAvecInfos.name == "SliderContainter")
+                {
+                    //true == ajout que des plantes pour la vente
+                    Debug.Log("main inventory #### = " + CreateAllSeedPlant.mainInventory.getInventory().Count);
+                    Debug.Log("panelAvecInfos #### = " + panelAvecInfos.name);
+                    //Debug.Log(panel.name);
+                    panel.affiche();
 
+                    panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos, true);
+                    return;
+                }
 
-        // Update affichage d'un inventaire avec champ référence GameObject/Transform rempli
-        public void Affiche(Transform panelAvecInfos)
-        {
-            if (PanelInventory.name == "Shop")
-                panel.afficheInventory(CreateAllSeedPlant.shopInv.getInventory(), panelAvecInfos);
-            else
+                Debug.Log("la boucle est vraie");
                 panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
+
+            }
         }
+
+        public void clearInventoryDisplay()
+        {
+            foreach (Transform child in PanelInventory.GetComponentsInChildren<Transform>())
+            {
+                if (child.name == "InventoryGridLayout(Clone)")
+                    GameObject.Destroy(child.gameObject);
+            }
+        }
+
+
+        //public void Affiche(Transform panelAvecInfos)
+        //{
+        //    panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
+        //}
     }
 }
