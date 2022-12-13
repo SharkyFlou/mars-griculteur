@@ -63,9 +63,8 @@ namespace game
 
         }
 
-        //removes an item instantly
         /// <summary>
-        /// La méthode <c>removeFromInventory</c> permet de 
+        /// La méthode <c>removeFromInventory</c> permet d'enlever instantanément un item.
         /// </summary>
         /// <param name="item"></param>
         public void removeFromInventory(BasicItem item)
