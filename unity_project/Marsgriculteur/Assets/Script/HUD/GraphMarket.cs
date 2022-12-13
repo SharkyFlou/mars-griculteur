@@ -203,6 +203,7 @@ namespace game
             return Vector2.Angle(Vector2.right, diference) * sign;
         }
 
+        //supprime le graph pour en reafficher un nouveau
         private void clearGraph()
         {
             for (int i = 0; i < allChildsToSuppr.Count; i++)
