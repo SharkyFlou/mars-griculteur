@@ -7,6 +7,10 @@ using Newtonsoft.Json;
 
 namespace game
 {
+    /// <summary>
+    /// La classe <c>AllTools</c> s'occuper des outils (les créer, les lister et afficher leur détail en une chaîne de caractère.
+    /// Elle possède un dictionnaire qui regroupe tous les outils.
+    /// </summary>
     [System.Serializable]
     public class AllTools
     {
@@ -15,14 +19,19 @@ namespace game
 
         Dictionary<string, Tool> dicoTools = new Dictionary<string, Tool>();
 
-        //instantiate all the diferents tools
-        // Le contructeur utiliser pour instancier avec un Json
+        /// <summary>
+        /// Le constructeur <c>AllTools</c> est utilisé pour instancier les différents outils avec un Json
+        /// </summary>
+        /// <param name="tools"></param>
         [JsonConstructor]
         public AllTools(Dictionary<string, Tool> tools)
         {
             dicoTools = tools;
         }
-        // Ancienne façon d'instancier
+        
+        /// <summary>
+        /// Ce constructeur est l'ancienne façon d'instancier les outils.
+        /// </summary>
         public AllTools()
         {
             dicoTools.Add("CHEBE", new Tool(500,
@@ -68,7 +77,10 @@ namespace game
                Game.getDefaultSprite()));
         }
 
-        //return all the tools names
+        /// <summary>
+        /// La méthode <c>getAllTools</c> donne tous les noms des outils.
+        /// </summary>
+        /// <returns>Elle retourne une liste des noms des outils.</returns>
         public List<string> getAllTools()
         {
             List<string> names = new List<string>();
@@ -80,6 +92,11 @@ namespace game
 
         }
 
+
+        /// <summary>
+        ///  La méthode <c>ToString</c> permet d'écrire les informations des outils.
+        /// </summary>
+        /// <returns>Elle retourne une chaîne de caractères des informations suivantes pour chaque outil : nom, ID, description, image et prix</returns>
         public override string ToString()
         {
             string rtrn = string.Empty;

@@ -8,6 +8,12 @@ using TMPro;
 
 namespace game
 {
+    /// <summary>
+    /// La classe <c>Inventory</c> s'occupe des inventaires.
+    /// Elle possède les attributs suivant: panel (qui correspond au panel sur lequel l'inventaire va être présenté),
+    /// weightMax (tous les inventaires ont une capacité maximum), slots (qui correspond aux items qui vont remplir l'inventaire)
+    /// et currentWeight qui correspond à la capacité actuelle de l'inventaire
+    /// </summary>
     public class Inventory : MonoBehaviour
     {
 
@@ -22,8 +28,11 @@ namespace game
         private int currentWeight = 0;
 
 
-
-        //permet d'ajouter un slot au dictionnaire
+        /// <summary>
+        /// La méthode <c>addToInventory</c> permet d'ajouter un slot au dictionnaire
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="qtt"></param>
         public void addToInventory(BasicItem item, int qtt)
         {
             bool trouve = false;
@@ -55,6 +64,10 @@ namespace game
         }
 
         //removes an item instantly
+        /// <summary>
+        /// La méthode <c>removeFromInventory</c> permet de 
+        /// </summary>
+        /// <param name="item"></param>
         public void removeFromInventory(BasicItem item)
         {
             foreach (BasicItem kvp in slots.Keys.ToList())

@@ -4,6 +4,19 @@ using UnityEngine;
 
 namespace game
 {
+    /// <summary>
+    /// La classe <c>EventInfo</c> permet de créer un événements avec toutes ses informations nécessaires.
+    /// Les événments sont composés d'un code unique (leur nom), d'une description, d'une durée (combien de temps ils vont durer après leur apparition), de 2 multiplieurs (le premier pour rajouter
+    /// un simple multiplier au prix, par exemple *0.9 ou 1.1, multiplier fixe qui reste actif tant que l'évent l'est
+    /// et le deuxième est un multiplier qui atteint son pic de multiplication au milieu de sa durée, ex : il vaut 2, et l'évent dure 5, alors il oscilera un peu près comme ça : 1.33, 1.66, 2, 1.66, 1.33),
+    /// ensuite il y a 3 booléens (le premier pour savoir si l'événement atteint les plantes, le deuxième si il atteint les graines et le troisième si il atteint les outils.
+    /// Ensuite il y a la liste des plantes (ou des graines, ça dépend ce que ça atteint) et la liste des outils, pour les outils atteint.
+    /// Les derniers paramètres sont : la probabilité d'apparition de l'événement, un événements ne peut qu'arriver à partir du xième jour,
+    /// l'image de l'événement et le dernier paramètres correspond au temps à partir duquel l'événement peut réapparaître après que celui-ci est commencé (ex : un event à une durée de 5, un cooldown de 10,
+    /// et un unlockAfter de 0, il peut arriver dès le 1er jour, et 10 jour après qu'il soit arrivé il peut re arriver).
+    /// Elle contient 2 constructeurs, un pour créer les événements et un en cas d'erreur.
+    /// De plus, elle contient 4 méthodes, pour obtenir son nom, sa durée, sa description et ce que l'événment affecte.
+    /// </summary>
     public class EventInfo
     {
         public string namee;
@@ -21,7 +34,23 @@ namespace game
         public Sprite imageLink;
         public int cooldown;
 
-
+        /// <summary>
+        /// Ce premier constructeur permet de créer un évenment.
+        /// </summary>
+        /// <param name="namee"></param>
+        /// <param name="description"></param>
+        /// <param name="lenght"></param>
+        /// <param name="mutliplier"></param>
+        /// <param name="mutliplierProg"></param>
+        /// <param name="targetPlant"></param>
+        /// <param name="targetSeed"></param>
+        /// <param name="targetTool"></param>
+        /// <param name="targetsPlant"></param>
+        /// <param name="targetsTool"></param>
+        /// <param name="probability"></param>
+        /// <param name="unlockableAfter"></param>
+        /// <param name="imageLink"></param>
+        /// <param name="cooldown"></param>
         public EventInfo(string namee,
             string description,
             int lenght,
@@ -53,6 +82,9 @@ namespace game
             this.cooldown = cooldown;
         }
 
+        /// <summary>
+        /// Ce deuxième constructeur permet de créer un événement error en cas d'erreur.
+        /// </summary>
         public EventInfo()
         {
             this.namee = "Error";
@@ -71,21 +103,37 @@ namespace game
             this.cooldown = -1;
         }
 
+        /// <summary>
+        /// La méthode <c>getName</c> permet d'obtenir le nom de l'événement.
+        /// </summary>
+        /// <returns>Elle retourne son nom</returns>
         public string getName()
         {
             return this.namee;
         }
 
+        /// <summary>
+        /// La méthode <c>getLength</c> permet d'obtenir le durée de l'événement.
+        /// </summary>
+        /// <returns>Elle retourne sa durée</returns>
         public int getLength()
         {
             return this.length;
         }
 
+        /// <summary>
+        /// La méthode <c>getDescription</c> permet d'obtenir la description de l'événement.
+        /// </summary>
+        /// <returns>Elle retourne sa description</returns>
         public string getDescription()
         {
             return this.description;
         }
 
+        /// <summary>
+        /// La méthode <c>getTarget</c> permet d'obtenir la liste des plantes ou des graines que l'événement affecte.
+        /// </summary>
+        /// <returns>Elle retourne la chaîne de caractères des plantes ou des graines, séparées par des virgules</returns>
         public string getTarget()
         {
             string rtr = string.Empty;

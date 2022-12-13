@@ -8,7 +8,7 @@ namespace game
     /// <summary>
     /// La classe AllEvents permet de lister tous les événements qui peuvent arriver pendant une partie.
     /// Elle utilise son constructeur pour créer tous les événements, et elle contient 2 méthodes : <c>getRandomEvent</c> et <c>substractDico</c>.
-    /// 
+    /// Elle contient un dictionnaire qui contient les événements.
     /// </summary>
     public class AllEvents
     {
