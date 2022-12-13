@@ -20,7 +20,6 @@ namespace game
         public InventoryPanel(Transform slotPanel, Transform panelAvecInfos)
         {
             this.slotPanel = slotPanel;
-
         }
 
 
@@ -278,6 +277,11 @@ namespace game
             {
                 GameObject.Destroy(child.gameObject);
             }
+        }
+
+        public void affiche()
+        {
+            Debug.Log(slotPanel.name);
         }
 
     }

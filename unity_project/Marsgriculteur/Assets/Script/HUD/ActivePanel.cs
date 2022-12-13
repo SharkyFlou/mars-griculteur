@@ -124,7 +124,7 @@ namespace game
                 Debug.Log("la boucle est nulle");
                 panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory());
             }
-            else
+            else if (panel != null)
             {
                 //OUBLIER PAS LES RETURNS
                 if (PanelInventory.name == "Shop")
@@ -155,6 +155,11 @@ namespace game
                 else if (panelAvecInfos.name == "SliderContainter")
                 {
                     //true == ajout que des plantes pour la vente
+                    Debug.Log("main inventory #### = " + CreateAllSeedPlant.mainInventory.getInventory().Count);
+                    Debug.Log("panelAvecInfos #### = " + panelAvecInfos.name);
+                    //Debug.Log(panel.name);
+                    panel.affiche();
+
                     panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos, true);
                     return;
                 }

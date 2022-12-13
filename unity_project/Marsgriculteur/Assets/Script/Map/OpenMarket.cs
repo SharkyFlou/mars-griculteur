@@ -19,7 +19,6 @@ public class OpenMarket : MonoBehaviour
         }
 
         openCanvasMarket.inverseAffichage();
-        reafficheInvOnClickMarket.Affiche();
         try
         {
             graphContainer.SendMessage("affiche");
@@ -28,5 +27,7 @@ public class OpenMarket : MonoBehaviour
         { //THIS NEVER RUNS :/
             Debug.LogError("mmmh" + e.Message);
         }
+
+        reafficheInvOnClickMarket.Affiche();
     }
 }
