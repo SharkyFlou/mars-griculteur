@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using game;
-public class OpenMarket : MonoBehaviour
+public class OpenStorage : MonoBehaviour
 {
     public Canvas canvas;
-    public Transform graphContainer;
-    public openCanvas openCanvasMarket;
+    public openCanvas openCanvasStorage;
     public ActivePanel reafficheInvOnClickMarket;
 
     private void OnMouseDown()
@@ -17,16 +16,8 @@ public class OpenMarket : MonoBehaviour
         {
             return;
         }
-
-        openCanvasMarket.inverseAffichage();
+        openCanvasStorage.inverseAffichage();
         reafficheInvOnClickMarket.Affiche();
-        try
-        {
-            graphContainer.SendMessage("affiche");
-        }
-        catch (Exception e)
-        { //THIS NEVER RUNS :/
-            Debug.LogError("mmmh" + e.Message);
-        }
+
     }
 }

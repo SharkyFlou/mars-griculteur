@@ -18,6 +18,8 @@ namespace game
         public static AllTools dicoTool;
 
         public static Inventory shopInv;
+
+        public static Inventory storageInventory;
         // Start is called before the first frame update
         void Awake()
         {
@@ -31,22 +33,16 @@ namespace game
             mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.AJOS), 5);
             //mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AJOS), 100);
 
+            //ceci pose un probleme... pas de partie infinie possible?
             shopInv = new Inventory();
             shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.ELB), 999);
             shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.EGRO), 999);
             shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.AJOS), 999);
             shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.AZLOC), 999);
 
-            /*
-            Debug.Log(dicoPlant.ToString());
-            Debug.Log(dicoTool.ToString());
-            Debug.Log(shopInventory.ToString());*/
-            /*
-            foreach (KeyValuePair<EnumTypePlant, PlantInfo> kvp in dicoPlant.allPlantDico)
-            {
-                Debug.Log(kvp.Key);
-                Debug.Log(kvp.Value.id);
-            }*/
+
+            storageInventory = new Inventory();
+
         }
     }
 }

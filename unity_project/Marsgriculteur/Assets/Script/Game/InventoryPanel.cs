@@ -33,12 +33,6 @@ namespace game
             Debug.Log("Taille inventaire : " + dico.Count().ToString());
             for (int i = 0; i < dico.Count; i++)
             {
-
-                /*Debug.Log("LE DICTIONNAIRE EST: \n");
-                foreach(KeyValuePair<BasicItem,int> kvp in slots){
-                    Debug.Log("item : "+kvp.Key.getName()+", qtt : "+kvp.Value);
-                }  
-                */
                 //on cree l'objet prefab slot
                 GameObject slot = InventorySlot.createSlot();
 
@@ -171,6 +165,7 @@ namespace game
                 int slotText;
                 if (!showAll)
                 {
+                    //Si SEED
                     if (itemOfSlot.getId() > 0 && itemOfSlot.getId() < 101)
                     {
                         //on cree l'objet prefab slot
@@ -223,6 +218,7 @@ namespace game
                 }
                 else
                 {
+                    //SI PLANTE
                     if (itemOfSlot.getId() > 100 && itemOfSlot.getId() < 201)
                     {
                         //on cree l'objet prefab slot
@@ -273,11 +269,6 @@ namespace game
                         slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                     }
                 }
-
-
-
-
-
             }
         }
 

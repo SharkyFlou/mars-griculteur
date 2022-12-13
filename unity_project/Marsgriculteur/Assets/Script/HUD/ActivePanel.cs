@@ -29,7 +29,7 @@ namespace game
             // Ajoute les slots avec les item de l'inventaire
             panel = new InventoryPanel(gridBag.transform);
 
-            Debug.Log("Transform panelAvecInfos = " + panelAvecInfos.name);
+            //Debug.Log("Transform panelAvecInfos = " + panelAvecInfos.name);
             Affiche();
 
             //definit les parents de l'inventory cree
@@ -61,7 +61,6 @@ namespace game
 
 
                 //Debug.Log("##### nom panel : " + PanelPourPlanterEtInv.name);
-
 
                 //on prend le 80% du parent
                 //RectTransform gridRectT = gridBag.GetComponent<RectTransform>();                    //fils
@@ -127,18 +126,28 @@ namespace game
             }
             else
             {
+                //OUBLIER PAS LES RETURNS
                 if (PanelInventory.name == "Shop")
                 {
-                    Debug.Log("on rentre dans l'inventory shop, no problem");
+                    //Debug.Log("on rentre dans l'inventory shop, no problem");
                     panel.afficheInventory(CreateAllSeedPlant.shopInv.getInventory(), panelAvecInfos);
+                    return;
+                }
+
+                else if (panelAvecInfos.name == "PanelStorage")
+                {
+                    Debug.Log("On rentre dans le storage inventory");
+                    panel.afficheInventory(CreateAllSeedPlant.storageInventory.getInventory(), panelAvecInfos);
+                    return;
+                }
+                else if (panelAvecInfos.name == "PanelInvToStore" || panelAvecInfos.name == "PanelInventory")
+                {
+                    Debug.Log("On rentre dans l'inventory du joueur, pour stocker");
+                    panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos);
                     return;
                 }
                 else if (panelAvecInfos.name == "PanelPlot")
                 {
-                    Debug.Log("on rentre dans LA BOUCLE PANEL PLOT");
-                    Debug.Log("inventory : #######" + CreateAllSeedPlant.mainInventory.getInventory().Count);
-                    Debug.Log("panel name : " + panelAvecInfos.name);
-
                     //false == ajout que des graines
                     panel.afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), panelAvecInfos, false);
                     return;

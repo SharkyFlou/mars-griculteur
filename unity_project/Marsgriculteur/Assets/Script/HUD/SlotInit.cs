@@ -11,6 +11,8 @@ namespace game
 
         public Transform panelInfosVente;
 
+        private ActivePanel reafficheInv;
+
         private void OnMouseDown()
         {
             //CreateAllSeedPlant.mainInventory.SubstractFromInventory(item, 1);
@@ -26,7 +28,7 @@ namespace game
                     if (item.getId() > 0 && item.getId() < 101)
                         if (panelInfosVente.GetComponent<Game>().money >= item.getPrice())
                         {
-                            CreateAllSeedPlant.mainInventory.addToInventory(item, 10, CreateAllSeedPlant.mainInventory.getInventory());
+                            CreateAllSeedPlant.mainInventory.addToInventory(item, 1, CreateAllSeedPlant.mainInventory.getInventory());
                             panelInfosVente.GetComponent<Game>().SubsMoney(item.getPrice());
                             this.transform.parent.parent.GetComponent<ActivePanel>().Affiche();
                         }
@@ -45,10 +47,51 @@ namespace game
                 {
                     panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
                 }
+                //slider serait bien
+                //horrible methode mais marche bien
+                else if (panelInfosVente.name == "PanelInvToStore")
+                {
+                    CreateAllSeedPlant.storageInventory.addToInventory(item, qttSlot);
+                    CreateAllSeedPlant.mainInventory.removeFromInventory(item);
+                    ActivePanel[] afficheDansStorage = panelInfosVente.parent.parent.GetComponentsInChildren<ActivePanel>();
+                    af(afficheDansStorage, true);
+
+                }
+                else if (panelInfosVente.name == "PanelStorage")
+                {
+                    CreateAllSeedPlant.mainInventory.addToInventory(item, qttSlot);
+                    CreateAllSeedPlant.storageInventory.removeFromInventory(item);
+                    ActivePanel[] afficheDansStorage = panelInfosVente.parent.parent.GetComponentsInChildren<ActivePanel>();
+                    af(afficheDansStorage, false);
+                }
 
             }
 
 
+        }
+
+        public void af(ActivePanel[] deuxInvs, bool isStorage)
+        {
+            foreach (ActivePanel ap in deuxInvs)
+            {
+                /* if (isStorage)
+                {
+                    if (ap.panelAvecInfos.name == "PanelStorage")
+                    {
+                        ap.Affiche();
+                    }
+                }
+                else
+                {
+                    if ((ap.panelAvecInfos.name == "PanelInvToStore"))
+                    {
+                        ap.Affiche();
+                    }
+                } */
+                ap.Affiche();
+
+
+            }
         }
 
 
