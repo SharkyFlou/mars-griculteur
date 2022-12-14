@@ -10,6 +10,10 @@ using UnityEngine.EventSystems;
 
 namespace game
 {
+    /// <summary>
+    /// La classe <c>NextDay</c> s'occupe de tout ce qui a à changer avant de passer au jour suivant.
+    /// Elle possède les attributs suivant : dayText, notif, plots, plotList, nbrJour, market, dicoPossessions.
+    /// </summary>
     public class NextDay : MonoBehaviour
     {
         public TextMeshProUGUI dayText;
@@ -22,6 +26,11 @@ namespace game
         //contient la liste des notifications avec leur durée d'apparition
         public static Dictionary<EventInfo, int> dicoPossessions = new Dictionary<EventInfo, int>();
 
+        /// <summary>
+        /// La méthode <c>Start</c> est utilisée pour le démarrage. Etant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
+        /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
+        /// Pour notre cas elle permet de récupérer les champs pour pouvoir les faire pousser après et initialise le nombre de jour.
+        /// </summary>
         void Start()
         {
             if (plots == null) //pour éviter de planter (ahah "plant")
@@ -37,14 +46,18 @@ namespace game
             dayText.SetText(nbrJour.ToString());
         }
 
-
-        //avoir le dico des notifs
+        /// <summary>
+        /// La méthode <c>getInventoryNotif</c> permet d'obtenir toutes les notifications.
+        /// </summary>
+        /// <returns>Elle retourne un dictionnaire de notifications avec la durée pour laquelle elles restent</returns>
         public static Dictionary<EventInfo, int> getInventoryNotif()
         {
             return dicoPossessions;
         }
 
-        //lorsqu'on clique pour passer au jour suivant
+        /// <summary>
+        /// La méthode <c>OnMouseDown</c> permet lorsqu'on clique de passer au jour suivant
+        /// </summary>
         void OnMouseDown()
         {
             if (EventSystem.current.IsPointerOverGameObject())
@@ -61,7 +74,10 @@ namespace game
             dayText.SetText(nbrJour.ToString());
         }
 
-        public void faitPousser() //parcours chaque plot, puis appelle leur fonction fairePousser
+        /// <summary>
+        /// La méthode <c>faitPousser</c> parcourt chaque champs, puis appelle leur fonction fairePousser
+        /// </summary>
+        public void faitPousser()
         {
             foreach (Transform transforme in plotList)
             {
@@ -83,8 +99,11 @@ namespace game
             }
         }
 
-
-        private void GetPlots(Transform parent) //recupere les plots
+        /// <summary>
+        /// La méthode <c>GetPlots</c> permet de récupérer les champs.
+        /// </summary>
+        /// <param name="parent">là où se trouve les champs</param>
+        private void GetPlots(Transform parent)
         {
             plotList = new List<Transform>();
             foreach (Transform child in parent)
@@ -94,7 +113,11 @@ namespace game
             return;
         }
 
-        //permet d'ajouter un slot au dictionnaire
+        /// <summary>
+        /// La méthode <c>addToInventory</c> permet d'ajouter un événement au dictionnaire
+        /// </summary>
+        /// <param name="item">l'événement</param>
+        /// <param name="duree">la durée de l'événement</param>
         public void addToInventory(EventInfo item, int duree)
         {
             bool trouve = false;
@@ -124,7 +147,10 @@ namespace game
 
         }
 
-        //removes an item instantly
+        /// <summary>
+        /// La méthode <c>removeFromInventory</c> permet de supprimer un item instantanément
+        /// </summary>
+        /// <param name="item">l'item à supprimer</param>
         public void removeFromInventory(EventInfo item)
         {
             foreach (EventInfo kvp in dicoPossessions.Keys)
@@ -139,6 +165,10 @@ namespace game
             notif.afficheInventory();
         }
 
+        /// <summary>
+        /// La méthode <c>EventDay</c> permet d'afficher les événements actuels, de décrémenter leur durée et de les suppimer s'ils arrivent à la fin.
+        /// </summary>
+        /// <param name="nbrJour"></param>
         public void EventDay(int nbrJour)
         {
             //debug pour voir les events du premier jour (jour 0)

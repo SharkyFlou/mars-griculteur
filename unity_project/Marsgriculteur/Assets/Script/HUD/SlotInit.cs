@@ -5,7 +5,8 @@ using UnityEngine;
 namespace game
 {
     /// <summary>
-    /// 
+    /// La classe <c>SlotInit</c> permet d'initialiser les slots à afficher dans les inventaires.
+    /// Elle possède les attributs suivant : item, qttSlot, panelInfosVente, reafficheInv.
     /// </summary>
     public class SlotInit : MonoBehaviour
     {
@@ -16,6 +17,9 @@ namespace game
 
         private ActivePanel reafficheInv;
 
+        /// <summary>
+        /// La méthode <c>OnMouseDown</c> permet d'initialiser les slots suivant l'inventaire.
+        /// </summary>
         private void OnMouseDown()
         {
             //CreateAllSeedPlant.mainInventory.SubstractFromInventory(item, 1);
@@ -62,6 +66,11 @@ namespace game
 
         }
 
+        /// <summary>
+        /// La méthode <c>af</c> permet d'afficher les slots, en vrérifiant s'ils sont bien présent dans l'inventaire du joueur.
+        /// </summary>
+        /// <param name="deuxInvs">les inventaires</param>
+        /// <param name="isStorage"></param>
         public void af(ActivePanel[] deuxInvs, bool isStorage)
         {
             foreach (ActivePanel ap in deuxInvs)

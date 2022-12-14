@@ -39,7 +39,6 @@ public class Zoom : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     /// <summary>
     /// La méthode <c>Update</c> est appelée une fois par fenêtre (frame). Elle gère la caméra
     /// </summary>
