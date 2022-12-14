@@ -141,6 +141,10 @@ namespace game
             {
                 rtr += targetsPlant[i] + ", ";
             }
+            if(rtr.Length <= 0)
+            {
+                return rtr;
+            }
             rtr = rtr.Substring(0, rtr.Length - 2);
             return rtr;
         }

@@ -229,7 +229,7 @@ namespace game
             afficheEtatDebug();
 
             //un event en moyenne un jour sur 3
-            if (rand.Next(0, 3) == 0 || !eventON)
+            if (rand.Next(0, 3) > 0 || !eventON)
             {
                 /*
                 Debug.Log("Market nbr event : " + activeEvents.Count);

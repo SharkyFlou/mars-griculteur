@@ -302,7 +302,7 @@ namespace game
               false,
               listAnim,
               new List<string>(),
-              6,
+              10000000,
               0,
               Game.getDefaultSprite(),
               30));
@@ -326,12 +326,6 @@ namespace game
                 Debug.Log("Jour : " + day + " event possible " + evt.Value.namee);
             }
 
-            Debug.Log("Tout les events : " + allEventDico.Count);
-            foreach (var evt in allEventDico)
-            {
-                Debug.Log(" event existant " + evt.Value);
-            }
-
 
 
             if (possibleEvents.Count == 0) //if true, then something is messed up
@@ -344,19 +338,19 @@ namespace game
             int totalProbablity = 0;
             foreach(EventInfo currentEvent in possibleEvents.Values) //calculate the sum of all event probabilites
             {
-                if(currentEvent.unlockableAfter > day) //verify if the event is possible
+                if(currentEvent.unlockableAfter < day) //verify if the event is possible
                 {
                     totalProbablity += currentEvent.probability; //add the probabilty of the event
                 }
             }
 
             System.Random rnd = new System.Random();
-            int randProba = rnd.Next(1, totalProbablity+1); //get a random number between 0 and the sum of all possible events
+            int randProba = rnd.Next(1, totalProbablity + 1); //get a random number between 0 and the sum of all possible events
             EventInfo newEvent = new EventInfo();
 
             foreach (EventInfo currentEvent in possibleEvents.Values)
             {
-                if (currentEvent.unlockableAfter > day) //verify if the event is possible
+                if (currentEvent.unlockableAfter < day) //verify if the event is possible
                 {
                     if ((randProba -= currentEvent.probability) <= 0) //decrease until it hits 0
                     {
@@ -377,17 +371,37 @@ namespace game
         /// <returns>Elle retourne un dictionnaire(clé : String, valeur : EventInfo) d'événements possibles</returns>
         private Dictionary<string, EventInfo> substractDico(Dictionary<string, EventInfo> dicoOrigin, Dictionary<EventInfo, int> dicoSubstract)
         {
+
+            Debug.Log("Event pas possible :"+ dicoSubstract.Count);
+            foreach (var evt in dicoSubstract)
+            {
+                Debug.Log("Comparaison de '"+evt.Key.namee+"'");
+            }
             Dictionary<string, EventInfo> newDico = new Dictionary<string, EventInfo>();
             EventInfo currentEvent;
             foreach (string name in dicoOrigin.Keys)
             {
+                Debug.Log("Event en test '" + name + "'");
                 currentEvent = dicoOrigin[name];
-                if (!dicoSubstract.ContainsKey(currentEvent))
+                if (!stringInDicoKeys(name, dicoSubstract))
                 {
+                    Debug.Log("Passe");
                     newDico.Add(name, currentEvent);
                 }
             }
             return newDico;
+        }
+
+        private bool stringInDicoKeys (string toCheck, Dictionary<EventInfo, int> dicoSubstract)
+        {
+            foreach(EventInfo evt in dicoSubstract.Keys)
+            {
+                if (evt.namee == toCheck)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
