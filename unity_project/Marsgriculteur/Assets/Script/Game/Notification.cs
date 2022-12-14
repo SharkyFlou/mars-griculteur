@@ -9,6 +9,10 @@ using static UnityEditor.Progress;
 
 namespace game
 {
+    /// <summary>
+    /// La classe <c>Notification</c> s'occupe d'afficher et supprimer les notifications.
+    /// Elle possède 4 attributs : nextDay, SlotNotif, slotPanel et slots (un dictionnaire qui contient les événements)
+    /// </summary>
     public class Notification : MonoBehaviour
     {
         //permet de prendre le dico notif
@@ -23,12 +27,18 @@ namespace game
         //si on ajoute un item on doit ajouter à ce dico pour l'afficher
         public Dictionary<EventInfo, int> slots = new Dictionary<EventInfo, int>();
 
+        /// <summary>
+        /// La méthode <c>clearInventoryDisplay</c> permet de supprimer les notifications
+        /// </summary>
         public void clearInventoryDisplay()
         {
             foreach (Transform child in slotPanel)
                 Destroy(child.gameObject);
         }
 
+        /// <summary>
+        /// La méthode <c>afficheInventory</c> permet d'afficher les notifications dans le panel
+        /// </summary>
         public void afficheInventory()
         {
             clearInventoryDisplay();
