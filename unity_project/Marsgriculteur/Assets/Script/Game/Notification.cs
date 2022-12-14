@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Linq;
+using static UnityEditor.Progress;
 
 namespace game
 {
@@ -35,6 +36,7 @@ namespace game
 
             for (int i = 0; i < slots.Count; i++)
             {
+                //Debug.Log("Name = " + slots.ElementAt(i).Key.getName() + "Value = " + slots.ElementAt(i).Value);
                 //on cree l'objet prefab slot
                 GameObject slot = (GameObject)Instantiate(SlotNotif); //, new Vector3(1,1,0)
 
@@ -60,7 +62,6 @@ namespace game
 
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-            
             }
         }
     }

@@ -36,7 +36,7 @@ namespace game
             actualDays = 0;
         }
 
-        //initialisation du maché
+        //initialisation du marché
         public void createMarket()
         {
             //récupération de tout les type de plante existant
@@ -62,7 +62,6 @@ namespace game
                 activeEvents[currentEvent] -= 1;//longueur de l'event diminué de 1
                 if (activeEvents[currentEvent] <= 0) //si tombe à 0, est supprimé
                 {
-                    
                     activeEvents.Remove(currentEvent);
                 }
             }
@@ -113,6 +112,11 @@ namespace game
                             }
                         }
                     }
+                }
+
+                if (thisPlantPrice < 0)
+                {
+                    thisPlantPrice = 0;
                 }
 
                 history[plant].Add(thisPlantPrice); //ajoute le nv prix de la plante à l'historique
@@ -168,9 +172,15 @@ namespace game
 
             System.Random rand = new System.Random();
 
+            afficheEtatDebug();
+
             //un event en moyenne un jour sur 3
             if (rand.Next(0, 3) == 0 || !eventON)
             {
+                /*
+                Debug.Log("Market nbr event : " + activeEvents.Count);
+                Debug.Log("Market nbr event impossible : " + impossibleEvents.Count);
+                */
                 return null;
             }
             else
@@ -178,6 +188,10 @@ namespace game
                 EventInfo newEvent = createNewEvent(days);
                 activeEvents.Add(newEvent, newEvent.length);
                 impossibleEvents.Add(newEvent, newEvent.cooldown);
+                /*
+                Debug.Log("Market nbr event : " + activeEvents.Count);
+                Debug.Log("Market nbr event impossible : " + impossibleEvents.Count);
+                */
                 return newEvent;
             }
         }
@@ -242,7 +256,6 @@ namespace game
                     int nbrDeb = history[pl].Count - 60;
                     return history[pl].GetRange(nbrDeb, 60);
                 }
-
             }
             return null;
         }
