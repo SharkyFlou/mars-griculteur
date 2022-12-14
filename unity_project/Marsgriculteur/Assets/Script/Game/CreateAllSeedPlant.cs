@@ -19,7 +19,6 @@ namespace game
 
         public static Inventory shopInv;
 
-        public static Inventory storageInventory;
         // Start is called before the first frame update
         void Awake()
         {
@@ -41,7 +40,7 @@ namespace game
             shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.AZLOC), 999);
 
 
-            storageInventory = new Inventory();
+
 
         }
     }

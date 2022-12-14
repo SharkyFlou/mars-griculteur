@@ -61,7 +61,7 @@ namespace game
 
 
 
-                
+
                 // Met la scale a celle de base pour que les slots ont la bonne taille
                 gridBag.transform.localScale = new Vector3(1.6f, 0.8f, 1);
 
@@ -126,7 +126,7 @@ namespace game
                 // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
                 gridBag.transform.localPosition = new Vector3(0, 0, 0);
 
-            }   
+            }
         }
 
         public void OpenPanel()
@@ -165,12 +165,7 @@ namespace game
                     return;
                 }
 
-                else if (panelAvecInfos.name == "PanelStorage")
-                {
-                    Debug.Log("On rentre dans le storage inventory");
-                    panel.afficheInventory(CreateAllSeedPlant.storageInventory.getInventory(), panelAvecInfos);
-                    return;
-                }
+
                 else if (panelAvecInfos.name == "PanelInvToStore" || panelAvecInfos.name == "PanelInventory")
                 {
                     Debug.Log("On rentre dans l'inventory du joueur, pour stocker");
