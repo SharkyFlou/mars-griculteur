@@ -4,12 +4,12 @@
       "id": 1,
       "namePlant": "ELB",
       "description": "Graine d'ebl",
-      "growthTime": 1,
+      "growthTime": 4,
       "seedSpriteLink": "seed_ELB",
       "plantSpriteLink": "plant_ELB",
       "plantedPlantSpriteLink": "planted_plant_elb",
-      "seedWeight": 1,
-      "plantWeight": 5,
+      "seedWeight": 10,
+      "plantWeight": 11,
       "basicSeedPrice": 500,
       "basicPlantPrice": [
         50,
@@ -25,18 +25,18 @@
         49,
         50
       ],
-      "nbPlantCollect" : 10
+      "nbPlantCollect": 12
     },
     "EGRO": {
       "id": 2,
       "namePlant": "EGRO",
       "description": "Graine d'egro",
-      "growthTime": 1,
+      "growthTime": 5,
       "seedSpriteLink": "seed_EGRO",
       "plantSpriteLink": "plant_EGRO",
       "plantedPlantSpriteLink": "planted_plant_egro",
-      "seedWeight": 1,
-      "plantWeight": 5,
+      "seedWeight": 10,
+      "plantWeight": 12,
       "basicSeedPrice": 470,
       "basicPlantPrice": [
         40,
@@ -52,18 +52,18 @@
         45,
         43
       ],
-      "nbPlantCollect" : 10
+      "nbPlantCollect": 11
     },
     "AJOS": {
       "id": 3,
       "namePlant": "AJOS",
       "description": "Graine de d'ajos",
-      "growthTime": 1,
+      "growthTime": 5,
       "seedSpriteLink": "seed_AJOS",
       "plantSpriteLink": "plant_AJOS",
       "plantedPlantSpriteLink": "planted_plant_ajos",
-      "seedWeight": 1,
-      "plantWeight": 5,
+      "seedWeight": 10,
+      "plantWeight": 14,
       "basicSeedPrice": 600,
       "basicPlantPrice": [
         40,
@@ -79,18 +79,18 @@
         47,
         40
       ],
-      "nbPlantCollect" : 10
+      "nbPlantCollect": 7
     },
     "AZLOC": {
       "id": 4,
       "namePlant": "AZLOC",
       "description": "Graine d'azloc",
-      "growthTime": 1,
+      "growthTime": 6,
       "seedSpriteLink": "seed_AZLOC",
       "plantSpriteLink": "plant_AZLOC",
       "plantedPlantSpriteLink": "planted_plant_azloc",
-      "seedWeight": 1,
-      "plantWeight": 5,
+      "seedWeight": 10,
+      "plantWeight": 15,
       "basicSeedPrice": 550,
       "basicPlantPrice": [
         40,
@@ -106,7 +106,115 @@
         44,
         42
       ],
-      "nbPlantCollect" : 10
+      "nbPlantCollect": 8
+    },
+    "EHCAV": {
+      "id": 5,
+      "namePlant": "EHCAV",
+      "description": "Graine d'ehcav",
+      "growthTime": 12,
+      "seedSpriteLink": "seed_EHCAV",
+      "plantSpriteLink": "plant_EHCAV",
+      "plantedPlantSpriteLink": "planted_plant_azloc",
+      "seedWeight": 20,
+      "plantWeight": 50,
+      "basicSeedPrice": 2500,
+      "basicPlantPrice": [
+        1350,
+        1200,
+        1130,
+        1090,
+        1050,
+        1020,
+        1000,
+        1050,
+        1150,
+        1100,
+        1350,
+        1400
+      ],
+      "nbPlantCollect": 2 //que 2, visuelement il y en a 2
+    },
+    "ELUOP": {
+      "id": 6,
+      "namePlant": "ELUOP",
+      "description": "Graine d'eluop",
+      "growthTime": 13,
+      "seedSpriteLink": "seed_ELUOP",
+      "plantSpriteLink": "plant_ELUOP",
+      "plantedPlantSpriteLink": "planted_plant_azloc",
+      "seedWeight": 16,
+      "plantWeight": 40,
+      "basicSeedPrice": 1500,
+      "basicPlantPrice": [
+        800,
+        720,
+        700,
+        670,
+        640,
+        610,
+        600,
+        620,
+        670,
+        720,
+        800,
+        850
+      ],
+      "nbPlantCollect": 2 //que 2, visuelement il y en a 2
+    },
+    "OUNTOUM": {
+      "id": 7,
+      "namePlant": "OUNTOUM",
+      "description": "Graine d'ountoum", //mouton -> notuom
+      "growthTime": 11,
+      "seedSpriteLink": "seed_OUNTOUM",
+      "plantSpriteLink": "plant_OUNTOUM",
+      "plantedPlantSpriteLink": "planted_plant_azloc",
+      "seedWeight": 20,
+      "plantWeight": 70,
+      "basicSeedPrice": 2000,
+      "basicPlantPrice": [
+        1830,
+        1800,
+        1780,
+        1780,
+        1790,
+        1800,
+        2200,
+        2300,
+        2000,
+        1890,
+        1860,
+        1860
+      ],
+      "nbPlantCollect": 1 //que 1, visuelement il y en a 1
+    },
+    "NIPAL": {
+      "id": 8,
+      "namePlant": "NIPAL",
+      "description": "Graine de nipal",
+      "growthTime": 11,
+      "seedSpriteLink": "seed_NIPAL",
+      "plantSpriteLink": "plant_NIPAL",
+      "plantedPlantSpriteLink": "planted_plant_azloc",
+      "seedWeight": 20,
+      "plantWeight": 35,
+      "basicSeedPrice": 1500,
+      "basicPlantPrice": [
+        1100,
+        1500,
+        1100,
+        1500,
+        1100,
+        1500,
+        300,
+        1500,
+        1100,
+        2500,
+        1100,
+        1500
+      ],
+      "nbPlantCollect": 1 //que 1, visuelement il y en a 2
     }
   }
 }
