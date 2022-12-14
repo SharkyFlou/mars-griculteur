@@ -8,7 +8,7 @@ namespace game
     public class OpenShop : MonoBehaviour
     {
         public Canvas canvas;
-        public openCanvas openCanvasShop;
+        public OpenCanvas openCanvasShop;
 
         public ActivePanel shop;
         private void OnMouseDown()
