@@ -11,7 +11,7 @@ namespace game
 {
     /// <summary>
     /// La classe <c>Notification</c> s'occupe d'afficher et supprimer les notifications.
-    /// Elle possède 4 attributs : nextDay, SlotNotif, slotPanel et slots (un dictionnaire qui contient les événements)
+    /// Elle possï¿½de 4 attributs : nextDay, SlotNotif, slotPanel et slots (un dictionnaire qui contient les ï¿½vï¿½nements)
     /// </summary>
     public class Notification : MonoBehaviour
     {
@@ -28,7 +28,7 @@ namespace game
         public Dictionary<EventInfo, int> slots = new Dictionary<EventInfo, int>();
 
         /// <summary>
-        /// La méthode <c>clearInventoryDisplay</c> permet de supprimer les notifications
+        /// La mï¿½thode <c>clearInventoryDisplay</c> permet de supprimer les notifications
         /// </summary>
         public void clearInventoryDisplay()
         {
@@ -37,7 +37,7 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>afficheInventory</c> permet d'afficher les notifications dans le panel
+        /// La mï¿½thode <c>afficheInventory</c> permet d'afficher les notifications dans le panel
         /// </summary>
         public void afficheInventory()
         {
@@ -66,7 +66,7 @@ namespace game
                     TextMeshProUGUI[] notif = slot.GetComponentsInChildren<TextMeshProUGUI>();
                     notif[0].SetText(itemOfSlot.namee);
                     notif[1].SetText(itemOfSlot.description);
-                    notif[2].text = target;
+                    notif[2].text = "TARGET : " + target;
 
                     //on dit que son parent est le Grid Layout Group PANEL NOTIF
                     //slot.transform.SetParent(slotPanel);
@@ -75,6 +75,15 @@ namespace game
                     //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                 }
+            }
+            else
+            {
+                GameObject slot = (GameObject)Instantiate(SlotNotif, slotPanel);
+
+                TextMeshProUGUI[] notif = slot.GetComponentsInChildren<TextMeshProUGUI>();
+                notif[0].SetText(" ");
+                notif[1].SetText("Pas d'Ã©vÃ©nement en cours");
+                notif[2].text = " ";
             }
         }
     }
