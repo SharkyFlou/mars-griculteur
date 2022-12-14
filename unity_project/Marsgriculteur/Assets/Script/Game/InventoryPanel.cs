@@ -79,6 +79,9 @@ namespace game
 
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+                // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                slot.transform.localPosition = new Vector3(0, 0, 0);
             }
         }
 
@@ -144,6 +147,9 @@ namespace game
 
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+                // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                slot.transform.localPosition = new Vector3(0, 0, 0);
             }
         }
 
@@ -213,6 +219,9 @@ namespace game
 
                         //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+                        // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                        slot.transform.localPosition = new Vector3(0, 0, 0);
                     }
                 }
                 else
@@ -266,6 +275,9 @@ namespace game
 
                         //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+                        // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                        slot.transform.localPosition = new Vector3(0, 0, 0);
                     }
                 }
             }
