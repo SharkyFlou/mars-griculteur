@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace game
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class SlotInit : MonoBehaviour
     {
         public BasicItem item;

@@ -47,7 +47,8 @@ namespace game
         private List<GameObject> allChildsToSuppr = new List<GameObject>();
 
         /// <summary>
-        /// 
+        /// La méthode <c>Awake</c> est appelée lorsque l'instance de script est en cours de chargement.
+        /// Elle crée la liste des mois.
         /// </summary>
         private void Awake()
         {
@@ -55,6 +56,9 @@ namespace game
             yMin = 10f; //pour rendre le graph plus beau
         }
 
+        /// <summary>
+        /// La méthode <c>affiche</c> permt d'afficher le graphique
+        /// </summary>
         public void affiche()
         {
             List<int> graphList = market.last60Days(plantAct);
@@ -77,7 +81,10 @@ namespace game
             ShowGraph(graphList); //affiche le graph
         }
 
-        public void Update() //prevent the pllayer to not moove, temporary
+        /// <summary>
+        /// La méthode <c>Update</c> est appelée une fois par fenêtre (frame). Elle ne laisse pas la possibilté au joueur de bouger la caméra.
+        /// </summary>
+        public void Update()
         {
             if (graphContainer.GameObject().activeInHierarchy)
             {
@@ -86,13 +93,21 @@ namespace game
             }
         }
 
+        /// <summary>
+        /// La méthode <c>changePlant</c> permet d'afficher le changement de plante
+        /// </summary>
+        /// <param name="pl">la nouvelle plante</param>
         public void changePlant(EnumTypePlant pl)
         {
             plantAct = pl;
             affiche();
         }
 
-
+        /// <summary>
+        /// La méthode <c>CreateCircle</c> permet de créer un cerle qui va représenter un point pour le graphique.
+        /// </summary>
+        /// <param name="anchoredPosition">la position du point</param>
+        /// <returns>Elle retourne le point créé</returns>
         private GameObject CreateCircle(Vector2 anchoredPosition) //créer un cercle et le renvoie
         {
             GameObject gameobject = new GameObject("circle", typeof(Image));  //créer une image, qui sera le point
@@ -110,7 +125,11 @@ namespace game
             return gameobject;
         }
 
-        private void ShowGraph(List<int> valueList) //affiche la liste donné sous forme de graph,  avec en valeur de X les month
+        /// <summary>
+        /// La méthode <c>ShowGraph</c> affiche la liste donné sous forme de graph,  avec en valeur de X les month
+        /// </summary>
+        /// <param name="valueList">la liste des points</param>
+        private void ShowGraph(List<int> valueList)
         {
             clearGraph();
             //créer les lignes horizontales
@@ -183,7 +202,12 @@ namespace game
             }
         }
 
-        private void CreateDotConnection(Vector2 dotPositionA, Vector2 dotPositionB) //créer une ligne entre les deux points donnés
+        /// <summary>
+        /// La méthode permet de créer une ligne entre les deux points donnés
+        /// </summary>
+        /// <param name="dotPositionA">le point de départ</param>
+        /// <param name="dotPositionB">le point d'arriver</param>
+        private void CreateDotConnection(Vector2 dotPositionA, Vector2 dotPositionB)
         {
             //creation d'une ligne
             GameObject gameObject = new GameObject("dotConnection", typeof(Image));
@@ -205,14 +229,22 @@ namespace game
 
         }
 
-        private float AngleBetweenVector2(Vector2 vec1, Vector2 vec2) //renvoie l'angle entre les deux points donnés
+        /// <summary>
+        /// La méthode <c>AngleBetweenVector2</c> renvoie l'angle entre les deux points donnés
+        /// </summary>
+        /// <param name="vec1"></param>
+        /// <param name="vec2"></param>
+        /// <returns></returns>
+        private float AngleBetweenVector2(Vector2 vec1, Vector2 vec2)
         {
             Vector2 diference = vec2 - vec1;
             float sign = (vec2.y < vec1.y) ? -1.0f : 1.0f;
             return Vector2.Angle(Vector2.right, diference) * sign;
         }
 
-        //supprime le graph pour en reafficher un nouveau
+        /// <summary>
+        /// La méthode <c>clearGraph</c> supprime le graph pour en reafficher un nouveau
+        /// </summary>
         private void clearGraph()
         {
             for (int i = 0; i < allChildsToSuppr.Count; i++)
