@@ -79,6 +79,9 @@ namespace game
 
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+                // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                slot.transform.localPosition = new Vector3(0, 0, 0);
             }
         }
 
@@ -98,10 +101,12 @@ namespace game
 
                 //MOMENT DE REMPLIR LE SLOT
                 //on prend la key/value du dico a la pos i ##########################
+                Seed salut = new Seed();
+                
                 BasicItem itemOfSlot = dico.ElementAt(i).Key;
                 int slotText;
                 if (panelAInitialiser.name == "Money")
-                    slotText = dico.ElementAt(i).Key.getPrice();
+                    slotText = GameObject.Find("marketBase").GetComponent<Market>().getLastPriceSeed(((Seed) dico.ElementAt(i).Key).getTypePlante());
                 else
                     slotText = dico.ElementAt(i).Value;
 
@@ -144,6 +149,9 @@ namespace game
 
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+                // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                slot.transform.localPosition = new Vector3(0, 0, 0);
             }
         }
 
@@ -213,6 +221,9 @@ namespace game
 
                         //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+                        // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                        slot.transform.localPosition = new Vector3(0, 0, 0);
                     }
                 }
                 else
@@ -266,6 +277,9 @@ namespace game
 
                         //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+
+                        // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                        slot.transform.localPosition = new Vector3(0, 0, 0);
                     }
                 }
             }

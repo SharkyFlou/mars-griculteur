@@ -30,7 +30,6 @@ namespace game
                         {
                             CreateAllSeedPlant.mainInventory.addToInventory(item, 1, CreateAllSeedPlant.mainInventory.getInventory());
                             panelInfosVente.GetComponent<Game>().SubsMoney(item.getPrice());
-                            this.transform.parent.parent.GetComponent<ActivePanel>().Affiche();
                         }
                 }
                 else if (this.transform.parent.parent.name == "MarketInv")
