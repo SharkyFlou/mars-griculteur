@@ -53,7 +53,7 @@ namespace game
         /// <summary>
         /// La méthode <c>updateGraph</c> permet de mettre à jour le graph
         /// </summary>
-        /// <param name="newIndex"></param>
+        /// <param name="newIndex">le nouveau point du graph</param>
         public void updateGraph(int newIndex)
         {
             ggraphMarket.changePlant(plTypeList[newIndex]);

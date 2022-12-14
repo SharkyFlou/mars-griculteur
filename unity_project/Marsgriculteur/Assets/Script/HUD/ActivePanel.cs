@@ -223,6 +223,10 @@ namespace game
         {
             text.GetComponent<TextMeshProUGUI>().SetText("Weight : " + CreateAllSeedPlant.mainInventory.getCurrentWeight().ToString());
         }
+
+        /// <summary>
+        /// La méthode <c>clearInventoryDisplay</c> permet de supprimer les items de l'inventaire.
+        /// </summary>
         public void clearInventoryDisplay()
         {
             foreach (Transform child in PanelInventory.GetComponentsInChildren<Transform>())

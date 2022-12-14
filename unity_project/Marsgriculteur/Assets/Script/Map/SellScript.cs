@@ -40,9 +40,9 @@ public class SellScript : MonoBehaviour
     }
 
     /// <summary>
-    /// La méthode <c>changeMaxValue</c>
+    /// La méthode <c>changeMaxValue</c> permet de changer la valeur maximum du curseur.
     /// </summary>
-    /// <param name="maxValue"></param>
+    /// <param name="maxValue">la nouvelle valeur</param>
     public void changeMaxValue(int maxValue)
     {
         endValue.text = maxValue.ToString();
@@ -50,12 +50,19 @@ public class SellScript : MonoBehaviour
         slider.maxValue = maxValue;
     }
 
+    /// <summary>
+    /// La méthode <c>valueChanged</c> permet de changer la valeur du curseur.
+    /// </summary>
     public void valueChanged()
     {
         
         resValue.text = Math.Round(slider.value) + " : " + (totalPrice());
     }
 
+    /// <summary>
+    /// La méthode <c>totalPrice</c> permet d'indiquer la valeur de la somme que va gagner le joueur.
+    /// </summary>
+    /// <returns>La somme gagné par le joueur s'il vend cette quantité.</returns>
     public int totalPrice()
     {
         int currentValue = (int)Math.Round(slider.value);
@@ -63,6 +70,9 @@ public class SellScript : MonoBehaviour
         return price * currentValue;
     }
     
+    /// <summary>
+    /// La méthode <c>sell</c> permet de vendre la quantité de plante souhaitée par le joueur.
+    /// </summary>
     public void sell()
     {
         BasicPlant plante = CreateAllSeedPlant.dicoPlant.createPlant(plantChoosed);
