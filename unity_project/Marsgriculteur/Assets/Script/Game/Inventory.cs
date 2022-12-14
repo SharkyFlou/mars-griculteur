@@ -143,7 +143,7 @@ namespace game
                         break;
                     }
                 }
-                currentWeight -= item.getWeight() + qttToRemove;
+                currentWeight -= item.getWeight() * qttToRemove;
             }
 
             //displayInventory();
@@ -173,7 +173,7 @@ namespace game
                         break;
                     }
                 }
-                currentWeight -= item.getWeight() + qttToRemove;
+                currentWeight -= item.getWeight() * qttToRemove;
             }
 
             //displayInventory();

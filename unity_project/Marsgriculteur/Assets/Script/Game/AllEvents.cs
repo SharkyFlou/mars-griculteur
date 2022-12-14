@@ -6,9 +6,9 @@ using System;
 namespace game
 {
     /// <summary>
-    /// La classe AllEvents permet de lister tous les événements qui peuvent arriver pendant une partie.
-    /// Elle utilise son constructeur pour créer tous les événements, et elle contient 2 méthodes : <c>getRandomEvent</c> et <c>substractDico</c>.
-    /// Elle contient un dictionnaire qui contient les événements.
+    /// La classe AllEvents permet de lister tous les ï¿½vï¿½nements qui peuvent arriver pendant une partie.
+    /// Elle utilise son constructeur pour crï¿½er tous les ï¿½vï¿½nements, et elle contient 2 mï¿½thodes : <c>getRandomEvent</c> et <c>substractDico</c>.
+    /// Elle contient un dictionnaire qui contient les ï¿½vï¿½nements.
     /// </summary>
     public class AllEvents
     {
@@ -17,15 +17,15 @@ namespace game
         public Dictionary<string, EventInfo> allEventDico = new Dictionary<string, EventInfo>();
 
         /// <summary>
-        /// Le constructeur <c>AllEvents</c> permet de créer les événements. Il y a 2 types d'événements : les événements dit cools et les événements dit pas cool.
-        /// Les événments sont composés d'un code unique (leur nom), d'une description, d'une durée (combien de temps ils vont durer après leur apparition), de 2 multiplieurs (le premier pour rajouter
-        /// un simple multiplier au prix, par exemple *0.9 ou 1.1, multiplier fixe qui reste actif tant que l'évent l'est
-        /// et le deuxième est un multiplier qui atteint son pic de multiplication au milieu de sa durée, ex : il vaut 2, et l'évent dure 5, alors il oscilera un peu près comme ça : 1.33, 1.66, 2, 1.66, 1.33),
-        /// ensuite il y a 3 booléens (le premier pour savoir si l'événement atteint les plantes, le deuxième si il atteint les graines et le troisième si il atteint les outils.
-        /// Ensuite il y a la liste des plantes (ou des graines, ça dépend ce que ça atteint) et la liste des outils, pour les outils atteint.
-        /// Les derniers paramètres sont : la probabilité d'apparition de l'événement, un événements ne peut qu'arriver à partir du xième jour,
-        /// l'image de l'événement et le dernier paramètres correspond au temps à partir duquel l'événement peut réapparaître après que celui-ci est commencé (ex : un event à une durée de 5, un cooldown de 10,
-        /// et un unlockAfter de 0, il peut arriver dès le 1er jour, et 10 jour après qu'il soit arrivé il peut re arriver).
+        /// Le constructeur <c>AllEvents</c> permet de crï¿½er les ï¿½vï¿½nements. Il y a 2 types d'ï¿½vï¿½nements : les ï¿½vï¿½nements dit cools et les ï¿½vï¿½nements dit pas cool.
+        /// Les ï¿½vï¿½nments sont composï¿½s d'un code unique (leur nom), d'une description, d'une durï¿½e (combien de temps ils vont durer aprï¿½s leur apparition), de 2 multiplieurs (le premier pour rajouter
+        /// un simple multiplier au prix, par exemple *0.9 ou 1.1, multiplier fixe qui reste actif tant que l'ï¿½vent l'est
+        /// et le deuxiï¿½me est un multiplier qui atteint son pic de multiplication au milieu de sa durï¿½e, ex : il vaut 2, et l'ï¿½vent dure 5, alors il oscilera un peu prï¿½s comme ï¿½a : 1.33, 1.66, 2, 1.66, 1.33),
+        /// ensuite il y a 3 boolï¿½ens (le premier pour savoir si l'ï¿½vï¿½nement atteint les plantes, le deuxiï¿½me si il atteint les graines et le troisiï¿½me si il atteint les outils.
+        /// Ensuite il y a la liste des plantes (ou des graines, ï¿½a dï¿½pend ce que ï¿½a atteint) et la liste des outils, pour les outils atteint.
+        /// Les derniers paramï¿½tres sont : la probabilitï¿½ d'apparition de l'ï¿½vï¿½nement, un ï¿½vï¿½nements ne peut qu'arriver ï¿½ partir du xiï¿½me jour,
+        /// l'image de l'ï¿½vï¿½nement et le dernier paramï¿½tres correspond au temps ï¿½ partir duquel l'ï¿½vï¿½nement peut rï¿½apparaï¿½tre aprï¿½s que celui-ci est commencï¿½ (ex : un event ï¿½ une durï¿½e de 5, un cooldown de 10,
+        /// et un unlockAfter de 0, il peut arriver dï¿½s le 1er jour, et 10 jour aprï¿½s qu'il soit arrivï¿½ il peut re arriver).
         /// </summary>
         public AllEvents()
         {
@@ -35,7 +35,7 @@ namespace game
 
             List<EnumTypePlant> listAnim = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ONTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL };
             allEventDico.Add("qualiMeat", new EventInfo("qualiMeat",
-                "Une radiation donne un goût plus salé et très appréciés aux animaux ",
+                "Une radiation donne un goï¿½t plus salï¿½ et trï¿½s apprï¿½ciï¿½s aux animaux ",
                 10,
                 1.2,
                 1.5,
@@ -53,10 +53,10 @@ namespace game
             //ELB, EGRO, AJOS, AZLOC
             //ECHAV, ONTOUM, ELUOP, NIPAL
 
-            List<EnumTypePlant> listPl = new List<EnumTypePlant>() { EnumTypePlant.ELB , EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
+            List<EnumTypePlant> listPl = new List<EnumTypePlant>() { EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
 
             allEventDico.Add("solarStorm", new EventInfo("solarStorm",
-                "Une tempête solaire font griller vos plantes, les gens en rafolent",
+                "Une tempï¿½te solaire font griller vos plantes, les gens en rafolent",
                 10,
                 1.2,
                 1.5,
@@ -72,7 +72,7 @@ namespace game
 
             List<EnumTypePlant> listEgro = new List<EnumTypePlant>() { EnumTypePlant.EGRO };
             allEventDico.Add("sucreEfondrement", new EventInfo("sucreEfondrement",
-                "Le marché du sucre s'écroule mystérieusement, les gens se retourne vers votre EGRO au gout sucré",
+                "Le marchï¿½ du sucre s'ï¿½croule mystï¿½rieusement, les gens se retourne vers votre EGRO au gout sucrï¿½",
                 5,
                 1.1,
                 2,
@@ -89,7 +89,7 @@ namespace game
 
             List<EnumTypePlant> listRand = new List<EnumTypePlant>() { EnumTypePlant.EGRO, EnumTypePlant.ELB, EnumTypePlant.AZLOC, EnumTypePlant.ECHAV };
             allEventDico.Add("covid", new EventInfo("covid",
-                "Le covid arrive, les gens achètent n'importe quoi...",
+                "Le covid arrive, les gens achï¿½tent n'importe quoi...",
                 10,
                 1.1,
                 1.2,
@@ -105,7 +105,7 @@ namespace game
 
 
             allEventDico.Add("feteOportune", new EventInfo("feteOportune",
-               "Le Maire s'est levé du bon pied, il déclare une fête national aujourd'hui ! Le plat favori lors des jours de fête : NIPAL farci aux AZLOC",
+               "Le Maire s'est levï¿½ du bon pied, il dï¿½clare une fï¿½te national aujourd'hui ! Le plat favori lors des jours de fï¿½te : NIPAL farci aux AZLOC",
                5,
                1.1,
                2,
@@ -127,7 +127,7 @@ namespace game
 
             List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>() { EnumTypePlant.ELB, EnumTypePlant.EGRO };
             allEventDico.Add("verrueELBEGRO", new EventInfo("verrueELBEGRO",
-                "Des verrus martiennes touchent les recoltes d'EBL et d'EGRO, ça n'a pas bon goût",
+                "Des verrus martiennes touchent les recoltes d'EBL et d'EGRO, ï¿½a n'a pas bon goï¿½t",
                 15,
                 0.8,
                 0.8,
@@ -143,7 +143,7 @@ namespace game
 
 
             allEventDico.Add("vegeTrend", new EventInfo("vegeTrend",
-                "Une trend végétarienne se développe",
+                "Une trend vï¿½gï¿½tarienne se dï¿½veloppe",
                 25,
                 0.8,
                 0.7,
@@ -175,7 +175,7 @@ namespace game
 
 
             allEventDico.Add("scandale", new EventInfo("scandale",
-               "Un scandale éclate, quelqu'un vous aurait vu irradier vos plantes pour les faire pousser plus vite, bonne chance...",
+               "Un scandale ï¿½clate, quelqu'un vous aurait vu irradier vos plantes pour les faire pousser plus vite, bonne chance...",
                40,
                0.7,
                0.8,
@@ -209,7 +209,7 @@ namespace game
               40));
 
             allEventDico.Add("fournisseurVictime", new EventInfo("fournisseurVictime",
-              "Vous avez menacé les familles de vos fournisseurs pour leur demander de vous baisser les prix pendant quelque jours, vos fournisseurs ont peur de vous... ça ne va pas durer",
+              "Vous avez menacï¿½ les familles de vos fournisseurs pour leur demander de vous baisser les prix pendant quelque jours, vos fournisseurs ont peur de vous... ï¿½a ne va pas durer",
               5,
               0.7,
               0.9,
@@ -230,7 +230,7 @@ namespace game
             //********************************************************************
 
             allEventDico.Add("fournisseurCourageu", new EventInfo("fournisseurCourageu",
-              "Vous avez menacé les familles de vos fournisseurs pour leur demander de vous baisser les prix pendant quelque jours, vos fournissers sont en train de se rebeller, faîtes vos reserves...",
+              "Vous avez menacï¿½ les familles de vos fournisseurs pour leur demander de vous baisser les prix pendant quelque jours, vos fournissers sont en train de se rebeller, faï¿½tes vos reserves...",
               20,
               1.1,
               3,
@@ -246,7 +246,7 @@ namespace game
 
 
             allEventDico.Add("hiverRude", new EventInfo("hiverRude",
-              "L'hiver a été rude, vos producteurs de graines l'ont sentit passer",
+              "L'hiver a ï¿½tï¿½ rude, vos producteurs de graines l'ont sentit passer",
               20,
               1.3,
               1.2,
@@ -261,9 +261,9 @@ namespace game
               40));
 
 
-            List<EnumTypePlant> listRand2 = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ELUOP, EnumTypePlant.ELB, EnumTypePlant.AJOS};
+            List<EnumTypePlant> listRand2 = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ELUOP, EnumTypePlant.ELB, EnumTypePlant.AJOS };
             allEventDico.Add("terreSteril", new EventInfo("terreSteril",
-              "Une comète radioactive a rendu stéril la terre de plusieurs de vos vendeurs de graines",
+              "Une comï¿½te radioactive a rendu stï¿½ril la terre de plusieurs de vos vendeurs de graines",
               30,
               1.5,
               1.8,
@@ -310,15 +310,14 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>getRandomEvent</c> permet de générer un nouvel événement en fonction du jour et de l'événement impossible.
+        /// La mï¿½thode <c>getRandomEvent</c> permet de gï¿½nï¿½rer un nouvel ï¿½vï¿½nement en fonction du jour et de l'ï¿½vï¿½nement impossible.
         /// </summary>
         /// <param name="day">le jour actuel</param>
-        /// <param name="impossibleEvents">le dictionnaire qui correspond aux événements impossibles</param>
-        /// <returns>Elle renvoie un événements.</returns>
+        /// <param name="impossibleEvents">le dictionnaire qui correspond aux ï¿½vï¿½nements impossibles</param>
+        /// <returns>Elle renvoie un ï¿½vï¿½nements.</returns>
         public EventInfo getRandomEvent(int day, Dictionary<EventInfo, int> impossibleEvents)
         {
             Dictionary<string, EventInfo> possibleEvents = substractDico(allEventDico, impossibleEvents);
-
 
 
             if (possibleEvents.Count == 0) //if true, then something is messed up
@@ -329,9 +328,9 @@ namespace game
 
 
             int totalProbablity = 0;
-            foreach(EventInfo currentEvent in possibleEvents.Values) //calculate the sum of all event probabilites
+            foreach (EventInfo currentEvent in possibleEvents.Values) //calculate the sum of all event probabilites
             {
-                if(currentEvent.unlockableAfter < day) //verify if the event is possible
+                if (currentEvent.unlockableAfter < day) //verify if the event is possible
                 {
                     totalProbablity += currentEvent.probability; //add the probabilty of the event
                 }
@@ -343,7 +342,7 @@ namespace game
             }
 
             System.Random rnd = new System.Random();
-            int randProba = rnd.Next(1, totalProbablity+1); //get a random number between 0 and the sum of all possible events
+            int randProba = rnd.Next(1, totalProbablity + 1); //get a random number between 0 and the sum of all possible events
             EventInfo newEvent = new EventInfo();
 
             foreach (EventInfo currentEvent in possibleEvents.Values)
@@ -362,11 +361,11 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>substractDico</c> est utilisée pour avoir les événements possibles en fonction de tous les événements et ceux qui sont impossibles.
+        /// La mï¿½thode <c>substractDico</c> est utilisï¿½e pour avoir les ï¿½vï¿½nements possibles en fonction de tous les ï¿½vï¿½nements et ceux qui sont impossibles.
         /// </summary>
-        /// <param name="dicoOrigin">dictionnaire qui contient tous les événements</param>
-        /// <param name="dicoSubstract">dictionnaire qui contient les événements impossibles</param>
-        /// <returns>Elle retourne un dictionnaire(clé : String, valeur : EventInfo) d'événements possibles</returns>
+        /// <param name="dicoOrigin">dictionnaire qui contient tous les ï¿½vï¿½nements</param>
+        /// <param name="dicoSubstract">dictionnaire qui contient les ï¿½vï¿½nements impossibles</param>
+        /// <returns>Elle retourne un dictionnaire(clï¿½ : String, valeur : EventInfo) d'ï¿½vï¿½nements possibles</returns>
         private Dictionary<string, EventInfo> substractDico(Dictionary<string, EventInfo> dicoOrigin, Dictionary<EventInfo, int> dicoSubstract)
         {
             Dictionary<string, EventInfo> newDico = new Dictionary<string, EventInfo>();
@@ -382,9 +381,9 @@ namespace game
             return newDico;
         }
 
-        private bool stringInDicoKeys (string toCheck, Dictionary<EventInfo, int> dicoSubstract)
+        private bool stringInDicoKeys(string toCheck, Dictionary<EventInfo, int> dicoSubstract)
         {
-            foreach(EventInfo evt in dicoSubstract.Keys)
+            foreach (EventInfo evt in dicoSubstract.Keys)
             {
                 if (evt.namee == toCheck)
                 {

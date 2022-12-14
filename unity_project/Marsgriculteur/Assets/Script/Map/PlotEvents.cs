@@ -17,7 +17,7 @@ public class PlotEvents : MonoBehaviour
     //references a d'autres objets
     public GameObject PlotSupervisor;
     public GameObject InterfacePlantPanel;
-    public openCanvas hidesPanel;
+    public OpenCanvas hidesPanel;
 
     //pour ne pas verifier growthTime == growthStatus
     private int growthTime = -10;
@@ -129,9 +129,9 @@ public class PlotEvents : MonoBehaviour
             growthTime = pl.getGrowthTime();
 
             seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite;
-
+            CreateAllSeedPlant.mainInventory.SubstractFromInventory(item, 1, CreateAllSeedPlant.mainInventory.getInventory());
             //on plante une graine de la seed choisie
-            PlotSupervisor.GetComponent<GerePlant>().Soustraits(item, 1);
+            //PlotSupervisor.GetComponent<GerePlant>().Soustraits(item, 1);
         }
         else
             Debug.Log("une graine est déja plantee, on ne peut pas planter une par dessus!!");
