@@ -1942,19 +1942,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: game.ActivePanel, Assembly-CSharp
-        m_MethodName: Affiche
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1094475978}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 819271280}
         m_TargetAssemblyTypeName: game.ActivePanel, Assembly-CSharp
         m_MethodName: Affiche
         m_Mode: 1
@@ -35509,7 +35497,7 @@ MonoBehaviour:
   canvas: {fileID: 1392767069}
   graphContainer: {fileID: 1610291185}
   openCanvasMarket: {fileID: 722724846}
-  reafficheInvOnClickMarket: {fileID: 0}
+  reafficheInvOnClickMarket: {fileID: 819271280}
 --- !u!114 &788824850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38828,7 +38816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -117.59004}
+  m_AnchoredPosition: {x: 0, y: -117.59006}
   m_SizeDelta: {x: 0, y: -82.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1094475979
@@ -39487,7 +39475,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -41550,7 +41538,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1392767067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44147,9 +44135,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1989577915}
         m_TargetAssemblyTypeName: game.ActivePanel, Assembly-CSharp
-        m_MethodName: OuvrePanel
+        m_MethodName: updateWeight
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1472285709}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1989577915}
+        m_TargetAssemblyTypeName: game.ActivePanel, Assembly-CSharp
+        m_MethodName: Affiche
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -46041,7 +46041,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 81.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -46440,7 +46440,7 @@ GameObject:
   - component: {fileID: 1989577914}
   - component: {fileID: 1989577915}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

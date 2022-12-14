@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace game
 {
@@ -233,6 +234,10 @@ namespace game
             }
         }
 
+        public void updateWeight(Transform text)
+        {
+            text.GetComponent<TextMeshProUGUI>().SetText("Weight : " + CreateAllSeedPlant.mainInventory.getCurrentWeight().ToString());
+        }
         public void clearInventoryDisplay()
         {
             foreach (Transform child in PanelInventory.GetComponentsInChildren<Transform>())

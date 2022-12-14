@@ -25,16 +25,20 @@ namespace game
             {
                 if (this.transform.parent.parent.name == "Shop")
                 {
-                    if (item.getId() > 0 && item.getId() < 101)
-                        if (panelInfosVente.GetComponent<Game>().money >= item.getPrice())
+                    if (item.getId() is > 0 and < 101)
+                    {
+                        // Prix de la graine dans le slot.
+                        int price = GameObject.Find("marketBase").GetComponent<Market>().getLastPriceSeed(((Seed)item).getTypePlante());
+                        if (panelInfosVente.GetComponent<Game>().money >= price)
                         {
                             CreateAllSeedPlant.mainInventory.addToInventory(item, 1, CreateAllSeedPlant.mainInventory.getInventory());
-                            panelInfosVente.GetComponent<Game>().SubsMoney(item.getPrice());
+                            panelInfosVente.GetComponent<Game>().SubsMoney(price);
                         }
+                    }
                 }
                 else if (this.transform.parent.parent.name == "MarketInv")
                 {
-                    if (item.getId() > 100 && item.getId() <= 200)
+                    if (item.getId() is > 100 and <= 200)
                     {
                         panelInfosVente.GetComponent<sellScript>().changeMaxValue(qttSlot);
                         BasicPlant itemplante = (BasicPlant)item;
@@ -42,7 +46,7 @@ namespace game
                         panelInfosVente.GetComponent<sellScript>().slider.interactable = true;
                     }
                 }
-                else if (panelInfosVente.name == "PanelPlot" && (item.getId() > 0 && item.getId() < 101))
+                else if (panelInfosVente.name == "PanelPlot" && (item.getId() is > 0 and < 101))
                 {
                     panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
                 }

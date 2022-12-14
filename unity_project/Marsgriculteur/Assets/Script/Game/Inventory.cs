@@ -79,7 +79,7 @@ namespace game
                 {
                     dico.Add(item, qtt);
                 }
-                //currentWeight += item.getWeight() * qtt;
+                currentWeight += item.getWeight() * qtt;
             }
 
             
@@ -122,6 +122,7 @@ namespace game
                         break;
                     }
                 }
+                currentWeight -= item.getWeight() + qttToRemove;
             }
 
             //displayInventory();
@@ -145,6 +146,7 @@ namespace game
                         break;
                     }
                 }
+                currentWeight -= item.getWeight() + qttToRemove;
             }
 
             //displayInventory();

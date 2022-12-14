@@ -72,7 +72,8 @@ namespace game
                     allPlantDico[typePlant].getDesc(),
                     allPlantDico[typePlant].getPlantSprite(),
                     allPlantDico[typePlant].getPlantedPlantSprites(),
-                    allPlantDico[typePlant].getGrowth());
+                    allPlantDico[typePlant].getGrowth(),
+                    allPlantDico[typePlant].getNbCollect());
                 return pl;
             }
             else
