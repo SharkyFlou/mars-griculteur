@@ -35,8 +35,6 @@ namespace game
             //pour l'affichage des jours
             nbrJour = 0;
             dayText.SetText(nbrJour.ToString());
-
-            EventDay(nbrJour);
         }
 
 
@@ -96,7 +94,6 @@ namespace game
             return;
         }
 
-
         //permet d'ajouter un slot au dictionnaire
         public void addToInventory(EventInfo item, int duree)
         {
@@ -155,25 +152,20 @@ namespace game
                 Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
             }
 
-
-            AllEvents all =  new AllEvents();
-
-            //ajoute l'event à la liste
-            if (evt != null)
-            {
-                addToInventory(evt, evt.getLength());
-            }
+            dicoPossessions = Market.instance.getActiveEvents();
+            notif.afficheInventory();
 
             //Une liste pour retenir tous les events qui arrivent à la fin
             List<EventInfo> item = new List<EventInfo>();
 
+            Debug.Log("Nombre d'event : "+ dicoPossessions.Count);
             //parcours du dico des notifs pour voir si les events arrivent à la fin
             for (int i = 0; i < dicoPossessions.Count; i++)
             {
                 EventInfo itemOfSlot = dicoPossessions.ElementAt(i).Key;
                 int duree = dicoPossessions.ElementAt(i).Value;
 
-                Debug.Log("Name = " + itemOfSlot.getName() + "Value = " + duree);
+                //Debug.Log("Name = " + itemOfSlot.getName() + "Value = " + duree);
                 dicoPossessions[dicoPossessions.ElementAt(i).Key] --;
 
                 duree = dicoPossessions.ElementAt(i).Value;
