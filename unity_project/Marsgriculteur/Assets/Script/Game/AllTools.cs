@@ -22,7 +22,7 @@ namespace game
         /// <summary>
         /// Le constructeur <c>AllTools</c> est utilisé pour instancier les différents outils avec un Json
         /// </summary>
-        /// <param name="tools"></param>
+        /// <param name="tools">dictionnaire instancié par le JSON</param>
         [JsonConstructor]
         public AllTools(Dictionary<string, Tool> tools)
         {

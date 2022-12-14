@@ -30,10 +30,10 @@ namespace game
         /// <summary>
         /// Le constructeur <c>BasicItem</c> permet de créer un objet grace à son ID, son nom, sa description et son image.
         /// </summary>
-        /// <param name="paraId"></param>
-        /// <param name="paraName"></param>
-        /// <param name="paraDescription"></param>
-        /// <param name="paraImageLink"></param>
+        /// <param name="paraId">l'id de l'item</param>
+        /// <param name="paraName">le nom de l'item</param>
+        /// <param name="paraDescription">la description de l'item</param>
+        /// <param name="paraImageLink">le lien de l'item</param>
         public BasicItem(int paraId, string paraName, string paraDescription, Sprite paraImageLink){
             id = paraId;
             itemName = paraName;

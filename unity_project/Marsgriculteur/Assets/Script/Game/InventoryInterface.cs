@@ -12,7 +12,7 @@ namespace game
         /// <summary>
         /// La méthode <c>afficheInventory</c> permet d'afficher l'inventaire
         /// </summary>
-        /// <param name="dico"></param>
+        /// <param name="dico">le dictionnaire qui contient les items</param>
         public void afficheInventory(Dictionary<BasicItem, int> dico);
     }
 }

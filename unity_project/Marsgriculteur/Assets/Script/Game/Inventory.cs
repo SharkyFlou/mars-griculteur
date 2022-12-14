@@ -31,8 +31,8 @@ namespace game
         /// <summary>
         /// La méthode <c>addToInventory</c> permet d'ajouter un slot au dictionnaire
         /// </summary>
-        /// <param name="item"></param>
-        /// <param name="qtt"></param>
+        /// <param name="item">l'item qui sera ajouté à l'inventaire</param>
+        /// <param name="qtt">la quantité de cet item</param>
         public void addToInventory(BasicItem item, int qtt)
         {
             bool trouve = false;
@@ -66,7 +66,7 @@ namespace game
         /// <summary>
         /// La méthode <c>removeFromInventory</c> permet d'enlever instantanément un item.
         /// </summary>
-        /// <param name="item"></param>
+        /// <param name="item">l'item qui sera supprimé de l'inventaire</param>
         public void removeFromInventory(BasicItem item)
         {
             foreach (BasicItem kvp in slots.Keys.ToList())
@@ -85,8 +85,8 @@ namespace game
         /// <summary>
         /// La méthode <c>SubstractFromInventory</c> permet de soustraire une quantité à un item qui se trouve déjà dans notre inventory ou de l'éliliminer complètement.
         /// </summary>
-        /// <param name="item"></param>
-        /// <param name="qttToRemove"></param>
+        /// <param name="item">l'item</param>
+        /// <param name="qttToRemove">la quantité qui va être soustraite</param>
         public void SubstractFromInventory(BasicItem item, int qttToRemove)
         {
             if (qttToRemove < 1)
@@ -113,9 +113,9 @@ namespace game
         /// <summary>
         /// La méthode <c>SubstractFromInventory</c> avec comme paramètre le dicoASoustraire permet de soustraire une quantité à un item qui se trouve déjà dans notre inventory ou de l'éliliminer complètement.
         /// </summary>
-        /// <param name="item"></param>
-        /// <param name="qttToRemove"></param>
-        /// <param name="dicoASoustraire"></param>
+        /// <param name="item">l'item</param>
+        /// <param name="qttToRemove">la quantité qui va être soustraite</param>
+        /// <param name="dicoASoustraire">le dictionnaire qui contient les items</param>
         public void SubstractFromInventory(BasicItem item, int qttToRemove, Dictionary<BasicItem, int> dicoASoustraire)
         {
             if (qttToRemove < 1)

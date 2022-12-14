@@ -37,20 +37,20 @@ namespace game
         /// <summary>
         /// Ce premier constructeur permet de créer un évenment.
         /// </summary>
-        /// <param name="namee"></param>
-        /// <param name="description"></param>
-        /// <param name="lenght"></param>
-        /// <param name="mutliplier"></param>
-        /// <param name="mutliplierProg"></param>
-        /// <param name="targetPlant"></param>
-        /// <param name="targetSeed"></param>
-        /// <param name="targetTool"></param>
-        /// <param name="targetsPlant"></param>
-        /// <param name="targetsTool"></param>
-        /// <param name="probability"></param>
-        /// <param name="unlockableAfter"></param>
-        /// <param name="imageLink"></param>
-        /// <param name="cooldown"></param>
+        /// <param name="namee">le nom de l'événement</param>
+        /// <param name="description">la description de l'événement</param>
+        /// <param name="lenght">la durée de l'événement</param>
+        /// <param name="mutliplier">simple multiplier au prix, multiplier fixe qui reste actif tant que l'évent l'est</param>
+        /// <param name="mutliplierProg">multiplier qui atteint son pic de multiplication au milieu de sa durée</param>
+        /// <param name="targetPlant">savoir si l'événement atteint les plantes</param>
+        /// <param name="targetSeed">savoir si l'événement atteint les graines</param>
+        /// <param name="targetTool">savoir si l'événement atteint les outils</param>
+        /// <param name="targetsPlant">liste des plantes (ou des graines) atteintes</param>
+        /// <param name="targetsTool">liste des outils atteints</param>
+        /// <param name="probability">probabilité d'apparition de l'événement</param>
+        /// <param name="unlockableAfter">un événements ne peut qu'arriver à partir du xième jour</param>
+        /// <param name="imageLink">le lien de l'image de l'événement</param>
+        /// <param name="cooldown">temps à partir duquel l'événement peut réapparaître après que celui-ci est commencé</param>
         public EventInfo(string namee,
             string description,
             int lenght,

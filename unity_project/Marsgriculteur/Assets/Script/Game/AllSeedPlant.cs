@@ -82,7 +82,7 @@ namespace game
         /// <summary>
         /// La méthode <c>createPlantedPlant</c> permet de créer les plantes qui sont mises dans un plot (champs), elles contienenet un temps de pousse, deux sprites, un quand elles ont pas poussé, un quand elles ont poussé.
         /// </summary>
-        /// <param name="typePlant"></param>
+        /// <param name="typePlant">le type de plante</param>
         /// <returns>Elle retourne la plante (PlantedPlant) créée</returns>
         public PlantedPlant createPlantedPlant(EnumTypePlant typePlant)
         {
