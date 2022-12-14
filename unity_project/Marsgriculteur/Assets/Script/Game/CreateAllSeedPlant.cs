@@ -6,8 +6,8 @@ using UnityEngine;
 namespace game
 {
     /// <summary>
-    /// La classe <c>CreateAllSeedPlant</c> permet de créer les plantes et les graines dans les inventaires : inventaire récapitulatif du joueur, et celui dans le shop
-    /// Elle possède les attributs suivant : JSONSeedPlant, JSONTool, mainInventory, dicoPlant, dicoTool, shopInv et storageInventory
+    /// La classe <c>CreateAllSeedPlant</c> permet de crï¿½er les plantes et les graines dans les inventaires : inventaire rï¿½capitulatif du joueur, et celui dans le shop
+    /// Elle possï¿½de les attributs suivant : JSONSeedPlant, JSONTool, mainInventory, dicoPlant, dicoTool, shopInv et storageInventory
     /// </summary>
     public class CreateAllSeedPlant : MonoBehaviour
     {
@@ -26,8 +26,8 @@ namespace game
         public static Inventory shopInv;
 
         /// <summary>
-        /// La méthode <c>Awake</c> est appelée lorsque l'instance de script est en cours de chargement.
-        /// Elle permet d'instancier les dictionnaire à partir des fichiers textes, des JSON et elle crée les inventaires.
+        /// La mï¿½thode <c>Awake</c> est appelï¿½e lorsque l'instance de script est en cours de chargement.
+        /// Elle permet d'instancier les dictionnaire ï¿½ partir des fichiers textes, des JSON et elle crï¿½e les inventaires.
         /// </summary>
         void Awake()
         {
@@ -36,9 +36,15 @@ namespace game
             dicoTool = JsonConvert.DeserializeObject<AllTools>(JSONTool.text);
 
             mainInventory = new Inventory();
-            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.ELB), 150);
-            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.ELB), 10);
-            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.AJOS), 5);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.ELB), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AJOS), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.EGRO), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AZLOC), 1);
+
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.ELB), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.AJOS), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.EGRO), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.AZLOC), 1);
             //mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AJOS), 100);
 
             //ceci pose un probleme... pas de partie infinie possible?
