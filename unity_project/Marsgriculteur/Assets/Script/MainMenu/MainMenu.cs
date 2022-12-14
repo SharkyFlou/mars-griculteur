@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// La classe <c>MainMenu</c> permet de démarrer le jeu et de l'arrêter.
+/// </summary>
 public class MainMenu : MonoBehaviour
 {
-
+    /// <summary>
+    /// La méthode <c>PlayGame</c> permet de démarrer le jeu.
+    /// </summary>
     public void PlayGame()
     {
         //permet de charger les scenes qui se trouvent dans buildSettings->Scenes
@@ -13,6 +18,9 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Map");
     }
 
+    /// <summary>
+    /// La méthode <c>QuitGame</c> permet de quitter le jeu
+    /// </summary>
     public void QuitGame()
     {
         Debug.Log("HAS QUIT !");

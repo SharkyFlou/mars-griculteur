@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using game;
+
+/// <summary>
+/// La classe <c>OpenMarket</c> permet d'afficher le market et mettre à jour le graphe
+/// </summary>
 public class OpenMarket : MonoBehaviour
 {
     public Canvas canvas;
