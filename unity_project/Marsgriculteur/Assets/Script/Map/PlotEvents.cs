@@ -17,7 +17,7 @@ public class PlotEvents : MonoBehaviour
     //references a d'autres objets
     public GameObject PlotSupervisor;
     public GameObject InterfacePlantPanel;
-    public openCanvas hidesPanel;
+    public OpenCanvas hidesPanel;
 
     //pour ne pas verifier growthTime == growthStatus
     private int growthTime = -10;
