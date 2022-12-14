@@ -7,7 +7,7 @@ namespace game
 {
     /// <summary>
     /// La classe <c>CreateAllSeedPlant</c> permet de créer les plantes et les graines dans les inventaires : inventaire récapitulatif du joueur, et celui dans le shop
-    /// Elle possède les attributs suivant : JSONSeedPlant, JSONTool, mainInventory, dicoPlant, dicoTool, shopInv.
+    /// Elle possède les attributs suivant : JSONSeedPlant, JSONTool, mainInventory, dicoPlant, dicoTool, shopInv et storageInventory
     /// </summary>
     public class CreateAllSeedPlant : MonoBehaviour
     {
@@ -25,13 +25,12 @@ namespace game
 
         public static Inventory shopInv;
 
+        public static Inventory storageInventory;
+
         /// <summary>
         /// La méthode <c>Awake</c> est appelée lorsque l'instance de script est en cours de chargement.
         /// Elle permet d'instancier les dictionnaire à partir des fichiers textes, des JSON et elle crée les inventaires.
         /// </summary>
-
-        public static Inventory storageInventory;
-        // Start is called before the first frame update
         void Awake()
         {
             dicoPlant = JsonConvert.DeserializeObject<AllSeedPlant>(JSONSeedPlant.text);

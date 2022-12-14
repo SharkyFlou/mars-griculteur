@@ -79,12 +79,14 @@ namespace game
             }
             //displayInventory();
         }
-        //permet de soustraire une qtt a un item qui se trouve deja dans notre inventory 
-        //ou l'elilminer completement
-        //@@@@@@@@@/@@@@@@@@@/@@@@@@@@@/@@@@@@@@@/@@@@@@@@@/@@@@@@@@@/@@@@@@@@@/@@@@@@@@@
-        //deux fonctions diff, une ou on envoie le dico comme parametre, une ou on utilise le dico global value
 
-        //normalement, faire de meme avec add et delete
+        // Il y a 2 fonctions surchargées, une où on envoie le dico comme paramètre, une où on utilise le dico global value.
+
+        /// <summary>
+        /// La méthode <c>SubstractFromInventory</c> permet de soustraire une quantité à un item qui se trouve déjà dans notre inventory ou de l'éliliminer complètement.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="qttToRemove"></param>
         public void SubstractFromInventory(BasicItem item, int qttToRemove)
         {
             if (qttToRemove < 1)
@@ -108,6 +110,12 @@ namespace game
             //displayInventory();
         }
 
+        /// <summary>
+        /// La méthode <c>SubstractFromInventory</c> avec comme paramètre le dicoASoustraire permet de soustraire une quantité à un item qui se trouve déjà dans notre inventory ou de l'éliliminer complètement.
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="qttToRemove"></param>
+        /// <param name="dicoASoustraire"></param>
         public void SubstractFromInventory(BasicItem item, int qttToRemove, Dictionary<BasicItem, int> dicoASoustraire)
         {
             if (qttToRemove < 1)
@@ -131,22 +139,37 @@ namespace game
             //displayInventory();
         }
 
+        /// <summary>
+        /// La méthode <c>getInventory</c> permet d'obtenir l'inventory
+        /// </summary>
+        /// <returns>Elle renvoie un dictionnaire (l'item avec sa quantité)</returns>
         public Dictionary<BasicItem, int> getInventory()
         {
             return this.slots;
         }
 
-        //retourne le maxWeight de l'inventory
+        /// <summary>
+        /// La méthode <c>getWeightMax</c> permet d'obtenir la capacité max de l'inventory
+        /// </summary>
+        /// <returns>Elle retourne sa capacité max</returns>
         public int getWeightMax()
         {
             return this.weightMax;
         }
 
+        /// <summary>
+        /// La méthode <c>getCurrentWeight</c> permet d'obtenir la capacité actuelle de l'inventory
+        /// </summary>
+        /// <returns>Elle retourne sa capacité actuelle</returns>
         public int getCurrentWeight()
         {
             return this.currentWeight;
         }
 
+        /// <summary>
+        /// La méthode <c>isDicoVide</c> permet de savoir si l'inventaire est vide
+        /// </summary>
+        /// <returns>Elle retourne un booléen : false s'il n'est pas vide et true si c'est le cas</returns>
         public bool isDicoVide()
         {
             //Debug.Log("nb slots : " + slots.Count);
@@ -159,13 +182,19 @@ namespace game
             
             return true;
         }
-        //pour tout element on instancie son slot (qui aura une image etc etc) et on l'ajoute
+
+        /// <summary>
+        /// La méthode <c>displayInventory</c> instancie le slot pour tout élément : il aura son image etc et on l'ajoute à l'inventory
+        /// </summary>
         public void displayInventory()
         {
             panel.afficheInventory(slots);
         }
 
-
+        /// <summary>
+        /// La méthode <c>ToString</c> permet d'afficher l'inventaire.
+        /// </summary>
+        /// <returns>Elle retourne une chaîne de caractère avec son nom et sa quantité</returns>
         override public string ToString()
         {
             string rtr = string.Empty;
