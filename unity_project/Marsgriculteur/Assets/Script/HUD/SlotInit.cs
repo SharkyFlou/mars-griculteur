@@ -48,25 +48,11 @@ namespace game
                 }
                 else if (panelInfosVente.name == "PanelPlot" && (item.getId() is > 0 and < 101))
                 {
-                    panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
+                    //panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
+                    panelInfosVente.GetComponent<GerePlant>().StockedPlot.planteGraine(item);
+                    this.transform.root.GetComponentInChildren<openCanvas>().inverseAffichage();
                 }
-                //slider serait bien
-                //horrible methode mais marche bien
-                else if (panelInfosVente.name == "PanelInvToStore")
-                {
-                    CreateAllSeedPlant.storageInventory.addToInventory(item, qttSlot);
-                    CreateAllSeedPlant.mainInventory.removeFromInventory(item);
-                    ActivePanel[] afficheDansStorage = panelInfosVente.parent.parent.GetComponentsInChildren<ActivePanel>();
-                    af(afficheDansStorage, true);
 
-                }
-                else if (panelInfosVente.name == "PanelStorage")
-                {
-                    CreateAllSeedPlant.mainInventory.addToInventory(item, qttSlot);
-                    CreateAllSeedPlant.storageInventory.removeFromInventory(item);
-                    ActivePanel[] afficheDansStorage = panelInfosVente.parent.parent.GetComponentsInChildren<ActivePanel>();
-                    af(afficheDansStorage, false);
-                }
 
             }
 
