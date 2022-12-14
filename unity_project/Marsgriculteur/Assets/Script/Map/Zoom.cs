@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+/// <summary>
+/// La classe <c>Zoom</c> permet, comme son nom l'indique, de gérer le zoom de la caméra.
+/// Elle possède 10 attributs : cam (pour la caméra), tilemapRenderer, zoom, minCamSize, maxCamsize, mapMinX, mapMaxX, mapMinY, mapMaxY, canZoom.
+/// </summary>
 public class Zoom : MonoBehaviour
 {
     [SerializeField] Camera cam;
@@ -21,6 +25,10 @@ public class Zoom : MonoBehaviour
     //on divise par 2f pour trouver la position a la limite centrale du map
 
     //fonction AWAKE IMPORTANT --- NE PAS NOMMER UN AUTRE TRUC sinon le truc ne s'autoupdate pas tout seul
+    /// <summary>
+    /// La méthode <c>Awake</c> est appelée lorsque l'instance de script est en cours de chargement.
+    /// Elle positionne la caméra avec le bon zoom.
+    /// </summary>
     private void Awake()
     {
         mapMinX = tilemapRenderer.transform.position.x - tilemapRenderer.bounds.size.x / 2f;
@@ -32,6 +40,9 @@ public class Zoom : MonoBehaviour
     }
 
     // Update is called once per frame
+    /// <summary>
+    /// La méthode <c>Update</c> est appelée une fois par fenêtre (frame). Elle permet de la mettre à jour.
+    /// </summary>
     void Update()
     {
         if (!canZoom)
@@ -52,11 +63,20 @@ public class Zoom : MonoBehaviour
         cam.transform.position = ClampCamera(cam.transform.position);
     }
 
+    /// <summary>
+    /// La méthode <c>playerCanZoom</c> autorise au joueur de zoomer ou non.
+    /// </summary>
+    /// <param name="state">booléen qui indique si le joueur peut zoomer ou non</param>
     public void playerCanZoom(bool state)
     {
         canZoom = state;
     }
 
+    /// <summary>
+    /// La méthode <c>ClampCamera</c> sert a bouger la camera a la nouvelle position desirée
+    /// </summary>
+    /// <param name="targetPosition">la position désirée</param>
+    /// <returns>Elle retourne la position de la caméra</returns>
     private Vector3 ClampCamera(Vector3 targetPosition)
     {
         //camOrtographicSize = hauteur de la camera depuis le centre de celle-ci

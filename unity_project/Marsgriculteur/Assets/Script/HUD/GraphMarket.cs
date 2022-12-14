@@ -11,6 +11,12 @@ using UnityEngine.UI;
 
 namespace game
 {
+    /// <summary>
+    /// La classe <c>GraphMarket</c> s'occupe du graphique du marché.
+    /// Elle possède les attributs suivant : circleSprite, graphContainer, labelTemplateY, dashTemplateY, dashTemplateX, market,
+    /// titre, lastValueText, yMaximum, xSize, xMaximum, graphHeight, yMin, numberOfDays, monthList, mutlInvGraph,
+    /// plantAct, cam, camZoom, allChildsToSuppr.
+    /// </summary>
     public class GraphMarket : MonoBehaviour
     {
         [SerializeField] private Sprite circleSprite;
@@ -40,6 +46,9 @@ namespace game
 
         private List<GameObject> allChildsToSuppr = new List<GameObject>();
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void Awake()
         {
             monthList = new List<string>() { "Janv", "Fev", "Mars", "Avril", "Mai", "Juin", "Juil", "Aout", "Sept", "Oct", "Nov", "Dec" };

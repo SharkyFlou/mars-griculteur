@@ -10,7 +10,7 @@ namespace game
     /// <summary>
     /// La classe <c>PlantInfo</c> permet de créer une plante (en général) avec toutes ses informations.
     /// Elle possède les attributs suivant : id, namePlant, description, growthTime, seedSpriteLink, plantSpriteLink, plantedPlantSprite,
-    /// seeWeight, plantWeight, basicSeedPrice, basicPlantPrice.
+    /// seeWeight, plantWeight, basicSeedPrice, basicPlantPrice, nbPlantCollect.
     /// </summary>
     [System.Serializable]
     public class PlantInfo
@@ -159,6 +159,10 @@ namespace game
             return this.basicPlantPrice;
         }
 
+        /// <summary>
+        /// La méthode <c>getNbCollect</c> permet de connaître la quantité de plante collectée après la pousse.
+        /// </summary>
+        /// <returns>Elle retourne la quantité de plante collectée</returns>
         public int getNbCollect()
         {
             return nbPlantCollect;
