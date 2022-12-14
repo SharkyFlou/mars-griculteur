@@ -80,7 +80,6 @@ namespace game
                 activeEvents[currentEvent] -= 1;//longueur de l'event diminué de 1
                 if (activeEvents[currentEvent] <= 0) //si tombe à 0, est supprimé
                 {
-                    
                     activeEvents.Remove(currentEvent);
                 }
             }
@@ -143,6 +142,11 @@ namespace game
                             }
                         }
                     }
+                }
+
+                if (thisPlantPrice < 0)
+                {
+                    thisPlantPrice = 0;
                 }
 
                 history[plant].Add(thisPlantPrice); //ajoute le nv prix de la plante à l'historique
@@ -222,9 +226,15 @@ namespace game
 
             System.Random rand = new System.Random();
 
+            afficheEtatDebug();
+
             //un event en moyenne un jour sur 3
             if (rand.Next(0, 3) == 0 || !eventON)
             {
+                /*
+                Debug.Log("Market nbr event : " + activeEvents.Count);
+                Debug.Log("Market nbr event impossible : " + impossibleEvents.Count);
+                */
                 return null;
             }
             else
@@ -232,6 +242,10 @@ namespace game
                 EventInfo newEvent = createNewEvent(days);
                 activeEvents.Add(newEvent, newEvent.length);
                 impossibleEvents.Add(newEvent, newEvent.cooldown);
+                /*
+                Debug.Log("Market nbr event : " + activeEvents.Count);
+                Debug.Log("Market nbr event impossible : " + impossibleEvents.Count);
+                */
                 return newEvent;
             }
         }
@@ -270,7 +284,7 @@ namespace game
         /// <returns>Elle retourne le prix</returns>
         public int getLastPriceSeed(EnumTypePlant plant)
         {
-            Seed seed = CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB);
+            Seed seed = CreateAllSeedPlant.dicoPlant.createSeed(plant);
             int seedPrice = seed.getPrice();
             foreach (var evTemp in activeEvents) //parcours chaque event
             {
@@ -286,7 +300,7 @@ namespace game
                     }
                 }
             }
-            return 0;
+            return seedPrice;
         }
 
         /// <summary>
@@ -315,7 +329,6 @@ namespace game
                     int nbrDeb = history[pl].Count - 60;
                     return history[pl].GetRange(nbrDeb, 60);
                 }
-
             }
             return null;
         }

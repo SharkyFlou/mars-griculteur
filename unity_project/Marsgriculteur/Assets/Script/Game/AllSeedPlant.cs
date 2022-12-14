@@ -35,7 +35,7 @@ namespace game
         /// <returns>Elle retourne la plante créée</returns>
         public Plant createPlant(EnumTypePlant typePlant)
         {
-            Debug.Log("on rentre dans le constructor Plant");
+            //Debug.Log("on rentre dans le constructor Plant");
             //EnumTypePlant typePlante;
             if (allPlantDico.ContainsKey(typePlant))
             {

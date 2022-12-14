@@ -25,8 +25,6 @@ namespace game
 
         public static Inventory shopInv;
 
-        public static Inventory storageInventory;
-
         /// <summary>
         /// La méthode <c>Awake</c> est appelée lorsque l'instance de script est en cours de chargement.
         /// Elle permet d'instancier les dictionnaire à partir des fichiers textes, des JSON et elle crée les inventaires.
@@ -49,9 +47,6 @@ namespace game
             shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.EGRO), 999);
             shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.AJOS), 999);
             shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.AZLOC), 999);
-
-
-            storageInventory = new Inventory();
 
         }
     }

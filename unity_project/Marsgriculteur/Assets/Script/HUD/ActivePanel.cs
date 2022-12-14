@@ -48,7 +48,35 @@ namespace game
             //panel lorsqu'on essaye de planter un truc
             else if (this.name == "PanelInv")
             {
+                // Devient enfant du PanelInventory
+                gridBag.transform.SetParent(PanelInventory.transform);
 
+                // Points d'accroches en haut à gauche et en haut à droite pour remplir la totalité de la taille du parent
+                gridBag.transform.GetComponent<RectTransform>().anchorMin = new Vector2(0, 0);
+                gridBag.transform.GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
+                gridBag.transform.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);
+
+                // Place le point d'accroche au mileu.
+                gridBag.transform.GetComponent<RectTransform>().anchoredPosition = gridBag.transform.parent.GetComponent<RectTransform>().position;
+
+
+
+
+                // Met la scale a celle de base pour que les slots ont la bonne taille
+                gridBag.transform.localScale = new Vector3(1.6f, 0.8f, 1);
+
+                // Encadre bien dans le parent et le met pas trop loin de la caméra (évitr qu'il disparaisse au dézoom)
+                gridBag.transform.GetComponent<RectTransform>().sizeDelta = new Vector3(0, 0, 0);
+
+
+                // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                gridBag.transform.localPosition = new Vector3(0, 0, 0);
+
+                // Magouille pour que l'inventaire soit pas n'importe où (change valeur left et right en fonction de la largeur du parent)
+                gridBag.transform.GetComponent<RectTransform>().offsetMin = new Vector2(gridBag.transform.parent.GetComponent<RectTransform>().rect.width / 4, gridBag.transform.GetComponent<RectTransform>().offsetMin.y);
+                gridBag.transform.GetComponent<RectTransform>().offsetMax = new Vector2(-gridBag.transform.parent.GetComponent<RectTransform>().rect.width / 4, gridBag.transform.GetComponent<RectTransform>().offsetMax.y);
+
+                /*
                 //Debug.Log("on entre dans la boucle");
                 //Transform PanelPourPlanterEtInv = this.transform.Find("PanelInv");
                 gridBag.transform.SetParent(PanelInventory.transform);
@@ -58,7 +86,7 @@ namespace game
                 y = gridBag.GetComponent<RectTransform>().sizeDelta.y;
                 gridBag.GetComponent<RectTransform>().sizeDelta = new Vector2(300, y);
                 gridBag.transform.localPosition = new Vector2(0, 0);
-
+                
 
                 //Debug.Log("##### nom panel : " + PanelPourPlanterEtInv.name);
 
@@ -95,6 +123,9 @@ namespace game
                 // Encadre bien dans le parent et le met pas trop loin de la caméra (évitr qu'il disparaisse au dézoom)
                 gridBag.transform.GetComponent<RectTransform>().sizeDelta = new Vector3(0, 0, 0);
 
+                // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                gridBag.transform.localPosition = new Vector3(0, 0, 0);
+
             }
         }
 
@@ -116,7 +147,7 @@ namespace game
             }
         }
 
-        //deux fonctions qui permettent d'afficher de deux façons differentes le meme inventory
+        // Update affichage d'un inventaire
         public void Affiche()
         {
             if (panelAvecInfos == null)
@@ -134,12 +165,7 @@ namespace game
                     return;
                 }
 
-                else if (panelAvecInfos.name == "PanelStorage")
-                {
-                    Debug.Log("On rentre dans le storage inventory");
-                    panel.afficheInventory(CreateAllSeedPlant.storageInventory.getInventory(), panelAvecInfos);
-                    return;
-                }
+
                 else if (panelAvecInfos.name == "PanelInvToStore" || panelAvecInfos.name == "PanelInventory")
                 {
                     Debug.Log("On rentre dans l'inventory du joueur, pour stocker");
