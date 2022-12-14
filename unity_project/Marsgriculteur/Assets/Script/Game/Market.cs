@@ -239,7 +239,7 @@ namespace game
             else
             {
                 EventInfo newEvent = createNewEvent(days);
-                if(newEvent == null)
+                if (newEvent == null)
                 {
                     return null;
                 }
