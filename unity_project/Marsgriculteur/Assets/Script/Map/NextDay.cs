@@ -29,7 +29,7 @@ namespace game
                 return;
             }
 
-
+            //parcours les plots pour les récupérer et les stocker afin de pouvoir les faire pousser
             GetPlots(plots);
 
             //pour l'affichage des jours
@@ -37,7 +37,6 @@ namespace game
             dayText.SetText(nbrJour.ToString());
 
             EventDay(nbrJour);
-            
         }
 
 
@@ -68,7 +67,7 @@ namespace game
         {
             foreach (Transform transforme in plotList)
             {
-                if(transforme.name.Length>4 && transforme.name.Substring(0, 4) == "plot")
+                if (transforme.name.Length > 4 && transforme.name.Substring(0, 4) == "plot")
                 {
                     try
                     {
