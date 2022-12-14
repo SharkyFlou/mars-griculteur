@@ -8649,7 +8649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &297146751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8858,6 +8858,7 @@ GameObject:
   - component: {fileID: 319808362}
   - component: {fileID: 319808365}
   - component: {fileID: 319808364}
+  - component: {fileID: 319808366}
   m_Layer: 5
   m_Name: PanelInventory
   m_TagString: Untagged
@@ -8879,7 +8880,6 @@ RectTransform:
   m_Children:
   - {fileID: 1829004735}
   - {fileID: 1472285709}
-  - {fileID: 1797732195}
   m_Father: {fileID: 2006331165}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
