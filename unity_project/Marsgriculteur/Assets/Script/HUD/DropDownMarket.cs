@@ -9,7 +9,7 @@ namespace game
 {
     /// <summary>
     /// La classe <c>DropDownMarket</c> permet d'afficher le graphe et les plantes.
-    /// Elle possède 4 attributs : dropdown, market, ggraphMarket, plTypeList.
+    /// Elle possède 4 attributs : dropdown, market, graphMarket, plTypeList.
     /// </summary>
     public class DropDownMarket : MonoBehaviour
     {
@@ -17,14 +17,14 @@ namespace game
 
         public Market market;
 
-        public GraphMarket ggraphMarket;
+        public GraphMarket graphMarket;
 
         private List<EnumTypePlant> plTypeList;
 
         /// <summary>
         /// La méthode <c>Start</c> est utilisée pour le démarrage. Étant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
         /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
-        /// Pour notre cas elle .............
+        /// Pour notre cas elle récupère tout les type de plante, afin de pouvoir les afficher dans un dropdown
         /// </summary>
         void Start()
         {
@@ -56,7 +56,7 @@ namespace game
         /// <param name="newIndex">le nouveau point du graph</param>
         public void updateGraph(int newIndex)
         {
-            ggraphMarket.changePlant(plTypeList[newIndex]);
+            graphMarket.changePlant(plTypeList[newIndex]);
         }
     }
 }
