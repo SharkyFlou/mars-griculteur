@@ -318,13 +318,27 @@ namespace game
         /// <returns>Elle renvoie un événements.</returns>
         public EventInfo getRandomEvent(int day, Dictionary<EventInfo, int> impossibleEvents)
         {
-
             Dictionary<string, EventInfo> possibleEvents = substractDico(allEventDico, impossibleEvents);
 
 
-            if(possibleEvents.Count == 0) //if true, then something is messed up
+            Debug.Log("Truc subtract : " + day + " Nombre d'event possible : " + possibleEvents.Count);
+            foreach (var evt in possibleEvents)
             {
-                return new EventInfo(); //Shit
+                Debug.Log("Jour : " + day + " event possible " + evt.Value.namee);
+            }
+
+            Debug.Log("Tout les events : " + allEventDico.Count);
+            foreach (var evt in allEventDico)
+            {
+                Debug.Log(" event existant " + evt.Value);
+            }
+
+
+
+            if (possibleEvents.Count == 0) //if true, then something is messed up
+            {
+                Debug.Log("Pas d'event possible :O");
+                return null; //Shit
             }
 
 
@@ -368,12 +382,12 @@ namespace game
         {
             Dictionary<string, EventInfo> newDico = new Dictionary<string, EventInfo>();
             EventInfo currentEvent;
-            foreach (string names in dicoOrigin.Keys)
+            foreach (string name in dicoOrigin.Keys)
             {
-                currentEvent=dicoOrigin[names];
+                currentEvent = dicoOrigin[name];
                 if (!dicoSubstract.ContainsKey(currentEvent))
                 {
-                    newDico.Add(names, currentEvent);
+                    newDico.Add(name, currentEvent);
                 }
             }
             return newDico;
