@@ -205,7 +205,7 @@ namespace game
         //calcul le prix réel de la graine
         public int getLastPriceSeed(EnumTypePlant plant)
         {
-            Seed seed = CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB);
+            Seed seed = CreateAllSeedPlant.dicoPlant.createSeed(plant);
             int seedPrice = seed.getPrice();
             foreach (var evTemp in activeEvents) //parcours chaque event
             {
@@ -221,7 +221,7 @@ namespace game
                     }
                 }
             }
-            return 0;
+            return seedPrice;
         }
 
         //créer un nouvel event

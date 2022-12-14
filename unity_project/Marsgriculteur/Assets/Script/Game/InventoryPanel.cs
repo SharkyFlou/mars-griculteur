@@ -101,10 +101,12 @@ namespace game
 
                 //MOMENT DE REMPLIR LE SLOT
                 //on prend la key/value du dico a la pos i ##########################
+                Seed salut = new Seed();
+                
                 BasicItem itemOfSlot = dico.ElementAt(i).Key;
                 int slotText;
                 if (panelAInitialiser.name == "Money")
-                    slotText = dico.ElementAt(i).Key.getPrice();
+                    slotText = GameObject.Find("marketBase").GetComponent<Market>().getLastPriceSeed(((Seed) dico.ElementAt(i).Key).getTypePlante());
                 else
                     slotText = dico.ElementAt(i).Value;
 
