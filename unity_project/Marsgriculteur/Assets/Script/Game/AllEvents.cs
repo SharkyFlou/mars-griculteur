@@ -30,14 +30,10 @@ namespace game
         public AllEvents()
         {
             //********************************************************************
-            //************************ EVENTS COOL *******************************
+            //************************* PLANT COOL *******************************
             //********************************************************************
 
-            List<EnumTypePlant> listAnim = new List<EnumTypePlant>();
-            listAnim.Add(EnumTypePlant.ECHAV);
-            listAnim.Add(EnumTypePlant.ONTOUM);
-            listAnim.Add(EnumTypePlant.ELUOP);
-            listAnim.Add(EnumTypePlant.NIPAL);
+            List<EnumTypePlant> listAnim = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ONTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL };
             allEventDico.Add("qualiMeat", new EventInfo("qualiMeat",
                 "Une radiation donne un goût plus salé et très appréciés aux animaux ",
                 10,
@@ -54,16 +50,10 @@ namespace game
                 40));
 
 
-
-
             //ELB, EGRO, AJOS, AZLOC
             //ECHAV, ONTOUM, ELUOP, NIPAL
 
-            List<EnumTypePlant> listPl = new List<EnumTypePlant>();
-            listPl.Add(EnumTypePlant.ELB);
-            listPl.Add(EnumTypePlant.EGRO);
-            listPl.Add(EnumTypePlant.AJOS);
-            listPl.Add(EnumTypePlant.AZLOC);
+            List<EnumTypePlant> listPl = new List<EnumTypePlant>() { EnumTypePlant.ELB , EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
 
             allEventDico.Add("solarStorm", new EventInfo("solarStorm",
                 "Une tempête solaire font griller vos plantes, les gens en rafolent",
@@ -80,7 +70,8 @@ namespace game
                 Game.getDefaultSprite(),
                 40));
 
-            allEventDico.Add("sucreRef", new EventInfo("sucreRef",
+            List<EnumTypePlant> listEgro = new List<EnumTypePlant>() { EnumTypePlant.EGRO };
+            allEventDico.Add("sucreEfondrement", new EventInfo("sucreEfondrement",
                 "Le marché du sucre s'écroule mystérieusement, les gens se retourne vers votre EGRO au gout sucré",
                 5,
                 1.1,
@@ -88,7 +79,7 @@ namespace game
                 true,
                 false,
                 false,
-                listAnim,
+                listEgro,
                 new List<string>(),
                 6,
                 2,
@@ -96,16 +87,46 @@ namespace game
                 50));
 
 
+            List<EnumTypePlant> listRand = new List<EnumTypePlant>() { EnumTypePlant.EGRO, EnumTypePlant.ELB, EnumTypePlant.AZLOC, EnumTypePlant.ECHAV };
+            allEventDico.Add("covid", new EventInfo("covid",
+                "Le covid arrive, les gens achètent n'importe quoi...",
+                10,
+                1.1,
+                1.2,
+                true,
+                false,
+                false,
+                listRand,
+                new List<string>(),
+                6,
+                0,
+                Game.getDefaultSprite(),
+                30));
+
+
+            allEventDico.Add("feteOportune", new EventInfo("feteOportune",
+               "Le Maire s'est levé du bon pied, il déclare une fête national aujourd'hui ! Le plat favori lors des jours de fête : NIPAL farci aux AZLOC",
+               5,
+               1.1,
+               2,
+               true,
+               false,
+               false,
+               listAnim,
+               new List<string>(),
+               4,
+               10,
+               Game.getDefaultSprite(),
+               30));
+
+
 
             //********************************************************************
-            //************************ EVENTS NOT COOL ***************************
+            //************************* PLANT NOT COOL ***************************
             //********************************************************************
 
-            List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>();
-            listElbEgr.Add(EnumTypePlant.ELB);
-            listElbEgr.Add(EnumTypePlant.EGRO);
-
-            allEventDico.Add("wartElbEgr", new EventInfo("wartElbEgr",
+            List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>() { EnumTypePlant.ELB, EnumTypePlant.EGRO };
+            allEventDico.Add("verrueELBEGRO", new EventInfo("verrueELBEGRO",
                 "Des verrus martiennes touchent les recoltes d'EBL et d'EGRO, ça n'a pas bon goût",
                 15,
                 0.8,
@@ -136,42 +157,155 @@ namespace game
                 Game.getDefaultSprite(),
                 50));
 
-            List<EnumTypePlant> listBsTemp = new List<EnumTypePlant>();
-            listBsTemp.Add(EnumTypePlant.ELB);
-            listBsTemp.Add(EnumTypePlant.EGRO);
-            allEventDico.Add("bsTemp", new EventInfo("bsTemp",
-                "bsTemp",
-                2,
-                0.8,
-                0.7,
+            List<EnumTypePlant> listAll = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ONTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL, EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
+            allEventDico.Add("guerre", new EventInfo("guerre",
+                "C'est la guerre, les gens n'ont plus trop les moyens...",
+                40,
+                0.9,
+                0.6,
                 true,
                 false,
                 false,
-                listBsTemp,
+                listAnim,
                 new List<string>(),
                 6,
-                2,
+                30,
                 Game.getDefaultSprite(),
-                0));
+                70));
 
-            List<EnumTypePlant> listBsTemp2 = new List<EnumTypePlant>();
-            listBsTemp2.Add(EnumTypePlant.ELB);
-            listBsTemp2.Add(EnumTypePlant.EGRO);
-            allEventDico.Add("bsTemp2", new EventInfo("bsTemp2",
-                "bsTemp2",
-                2,
-                0.8,
-                0.7,
-                true,
-                false,
-                false,
-                listBsTemp2,
-                new List<string>(),
-                6,
-                2,
-                Game.getDefaultSprite(),
-                0));
 
+            allEventDico.Add("scandale", new EventInfo("scandale",
+               "Un scandale éclate, quelqu'un vous aurait vu irradier vos plantes pour les faire pousser plus vite, bonne chance...",
+               40,
+               0.7,
+               0.8,
+               true,
+               false,
+               false,
+               listAnim,
+               new List<string>(),
+               10,
+               40,
+               Game.getDefaultSprite(),
+               70));
+
+            //********************************************************************
+            //*************************** GRAINES * ******************************
+            //********************************************************************
+
+            allEventDico.Add("nouveauFournisseur", new EventInfo("nouveauFournisseur",
+              "Un nouveau fournisseur de graines de plantes vient d'arriver, pour se faire connaitre il instaure temporairement des prix assez bas",
+              20,
+              0.8,
+              0.9,
+              false,
+              true,
+              false,
+              listPl,
+              new List<string>(),
+              6,
+              0,
+              Game.getDefaultSprite(),
+              40));
+
+            allEventDico.Add("fournisseurVictime", new EventInfo("fournisseurVictime",
+              "Vous avez menacé les familles de vos fournisseurs pour leur demander de vous baisser les prix pendant quelque jours, vos fournisseurs ont peur de vous... ça ne va pas durer",
+              5,
+              0.7,
+              0.9,
+              false,
+              true,
+              false,
+              listAll,
+              new List<string>(),
+              2,
+              0,
+              Game.getDefaultSprite(),
+              40));
+
+
+
+            //********************************************************************
+            //*************************** GRAINES PAS COOL************************
+            //********************************************************************
+
+            allEventDico.Add("fournisseurCourageu", new EventInfo("fournisseurCourageu",
+              "Vous avez menacé les familles de vos fournisseurs pour leur demander de vous baisser les prix pendant quelque jours, vos fournissers sont en train de se rebeller, faîtes vos reserves...",
+              20,
+              1.1,
+              3,
+              false,
+              true,
+              false,
+              listAll,
+              new List<string>(),
+              3,
+              0,
+              Game.getDefaultSprite(),
+              40));
+
+
+            allEventDico.Add("hiverRude", new EventInfo("hiverRude",
+              "L'hiver a été rude, vos producteurs de graines l'ont sentit passer",
+              20,
+              1.3,
+              1.2,
+              false,
+              true,
+              false,
+              listAll,
+              new List<string>(),
+              6,
+              10,
+              Game.getDefaultSprite(),
+              40));
+
+
+            List<EnumTypePlant> listRand2 = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ELUOP, EnumTypePlant.ELB, EnumTypePlant.AJOS};
+            allEventDico.Add("terreSteril", new EventInfo("terreSteril",
+              "Une comète radioactive a rendu stéril la terre de plusieurs de vos vendeurs de graines",
+              30,
+              1.5,
+              1.8,
+              false,
+              true,
+              false,
+              listRand2,
+              new List<string>(),
+              6,
+              10,
+              Game.getDefaultSprite(),
+              40));
+
+            allEventDico.Add("giletsJaunes", new EventInfo("giletsJaunes",
+              "Des gilets jaunes manifestent devant plusieurs de vos fournisseurs de graines, les graines vont se faire rare",
+              15,
+              3,
+              4,
+              false,
+              true,
+              false,
+              listRand,
+              new List<string>(),
+              6,
+              0,
+              Game.getDefaultSprite(),
+              30));
+
+            allEventDico.Add("protestantsVegans", new EventInfo("protestantsVegans",
+              "Des protestants vegan bloquent vous fournisseurs de graines de viande",
+              15,
+              3,
+              4,
+              false,
+              true,
+              false,
+              listAnim,
+              new List<string>(),
+              6,
+              0,
+              Game.getDefaultSprite(),
+              30));
 
         }
 
