@@ -77,29 +77,35 @@ public class PlotEvents : MonoBehaviour
 
     public void recupPlante()
     {
-        contientGraine = false;
-        growthStatus = -1;
-        //EnumTypePlant plantARetourner = new EnumTypePlant();
-        //avant etait CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante()
-        seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = null;
-
-        if (plantedPlant != null)
+        Plant testPlant = CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante());
+        if (CreateAllSeedPlant.mainInventory.getCurrentWeight() + (plantedPlant.getNbCollect() * testPlant.getWeight()) < CreateAllSeedPlant.mainInventory.getWeightMax())
         {
-            //Debug.Log("planted plant . get type plant = " + plantedPlant.getTypePlante());
-            //la plante avec croissance finie revient à l'inventory
-            //Debug.Log("#### inventory : " + CreateAllSeedPlant.mainInventory.getInventory().Count);
-            CreateAllSeedPlant.mainInventory.addToInventory(
-                CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante()),
-                    10, CreateAllSeedPlant.mainInventory.getInventory());
+            contientGraine = false;
+            growthStatus = -1;
+            //EnumTypePlant plantARetourner = new EnumTypePlant();
+            //avant etait CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante()
+            seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = null;
+
+            if (plantedPlant != null)
+            {
+                //Debug.Log("planted plant . get type plant = " + plantedPlant.getTypePlante());
+                //la plante avec croissance finie revient à l'inventory
+                //Debug.Log("#### inventory : " + CreateAllSeedPlant.mainInventory.getInventory().Count);
+                CreateAllSeedPlant.mainInventory.addToInventory(
+                    testPlant,
+                        10, CreateAllSeedPlant.mainInventory.getInventory());
+            }
+
+
+            //CreateAllSeedPlant.mainInventory.addToInventory(AllSeedPlant.createPlant(plantARetourner), 10);
+            itemDansPlot = null;
+            plantedPlant = null;
         }
-
-
-        //CreateAllSeedPlant.mainInventory.addToInventory(AllSeedPlant.createPlant(plantARetourner), 10);
-        itemDansPlot = null;
-        plantedPlant = null;
+        else
+            Debug.Log("Inventaire Plein");
     }
 
-    public void planteGraine()
+    public void planteGraine(BasicItem item)
     {
         if (!contientGraine)
         {
@@ -107,7 +113,8 @@ public class PlotEvents : MonoBehaviour
             growthStatus = 0;
 
             //on stocke l'item de la graine plantee
-            itemDansPlot = PlotSupervisor.GetComponent<GerePlant>().getStockedItem();
+            //itemDansPlot = PlotSupervisor.GetComponent<GerePlant>().getStockedItem();
+            itemDansPlot = item;
             //on garde sa version planted plant (graine--->planted plant--->plant)
             BasicPlant bp = (BasicPlant)itemDansPlot;
             EnumTypePlant typePlant = bp.getTypePlante();
@@ -123,7 +130,8 @@ public class PlotEvents : MonoBehaviour
 
             seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite;
 
-            PlotSupervisor.GetComponent<GerePlant>().Soustraits();
+            //on plante une graine de la seed choisie
+            PlotSupervisor.GetComponent<GerePlant>().Soustraits(item, 1);
         }
         else
             Debug.Log("une graine est déja plantee, on ne peut pas planter une par dessus!!");

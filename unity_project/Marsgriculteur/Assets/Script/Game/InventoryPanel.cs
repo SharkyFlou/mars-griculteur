@@ -8,8 +8,8 @@ using UnityEngine.UI;
 namespace game
 {
     /// <summary>
-    /// La classe <c>InventoryPanel</c> implémente l'interface InventoryInterface. Elle gère l'affichage des inventaires dans les panels.
-    /// Elle possède un attribut slotPanel qui correspond au panel sur lequel va être affiché l'inventaire.
+    /// La classe <c>InventoryPanel</c> implï¿½mente l'interface InventoryInterface. Elle gï¿½re l'affichage des inventaires dans les panels.
+    /// Elle possï¿½de un attribut slotPanel qui correspond au panel sur lequel va ï¿½tre affichï¿½ l'inventaire.
     /// </summary>
     public class InventoryPanel : InventoryInterface
     {
@@ -18,7 +18,7 @@ namespace game
         //public TextMeshProUGUI textWeight;
 
         /// <summary>
-        /// Le constructeur <c>InventoryPanel</c> prend en référence le parent pour pouvoir afficher l'inventaire. C'est utile pour supprimer les slots
+        /// Le constructeur <c>InventoryPanel</c> prend en rï¿½fï¿½rence le parent pour pouvoir afficher l'inventaire. C'est utile pour supprimer les slots
         /// </summary>
         /// <param name="slotPanel">le panel Transform parent</param>
         public InventoryPanel(Transform slotPanel)
@@ -32,7 +32,7 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>afficheInventory</c> permet de choisir où afficher l'inventaire et de l'afficher
+        /// La mï¿½thode <c>afficheInventory</c> permet de choisir oï¿½ afficher l'inventaire et de l'afficher
         /// </summary>
         /// <param name="dico">le dictionnaire qui contient les items</param>
         public void afficheInventory(Dictionary<BasicItem, int> dico)
@@ -97,8 +97,8 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode surchargée <c>afficheInventory</c> permet aussi de choisir où afficher l'inventaire et de l'afficher.
-        /// Mais il y a un paramètre <paramref name="panelAInitialiser"/> en plus pour pouvoir avoir des informations du panel, ex: lorsqu'on vend, on a besoin de connaître le prix et la quantité.
+        /// La mï¿½thode surchargï¿½e <c>afficheInventory</c> permet aussi de choisir oï¿½ afficher l'inventaire et de l'afficher.
+        /// Mais il y a un paramï¿½tre <paramref name="panelAInitialiser"/> en plus pour pouvoir avoir des informations du panel, ex: lorsqu'on vend, on a besoin de connaï¿½tre le prix et la quantitï¿½.
         /// </summary>
         /// <param name="dico">le dictionnaire qui contient les items</param>
         /// <param name="panelAInitialiser">le panel avec les informations utiles</param>
@@ -173,12 +173,12 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>afficheInventory</c> permet aussi de choisir où afficher l'inventaire et de l'afficher.
-        /// Mais il y a un paramètre <paramref name="showAll"/> en plus pour pouvoir savoir si on les affiche tous (si on affiche que les graines ou tous)
+        /// La mï¿½thode <c>afficheInventory</c> permet aussi de choisir oï¿½ afficher l'inventaire et de l'afficher.
+        /// Mais il y a un paramï¿½tre <paramref name="showAll"/> en plus pour pouvoir savoir si on les affiche tous (si on affiche que les graines ou tous)
         /// </summary>
         /// <param name="dico">le dictionnaire qui contient les items</param>
         /// <param name="panelAInitialiser">le panel avec les informations utiles</param>
-        /// <param name="showAll">booléen pour savoir si on affiche tout l'inventaire</param>
+        /// <param name="showAll">boolï¿½en pour savoir si on affiche tout l'inventaire</param>
         public void afficheInventory(Dictionary<BasicItem, int> dico, Transform panelAInitialiser, bool showAll)
         {
             clearInventoryDisplay();
@@ -310,7 +310,7 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>clearInventoryDisplay</c> permet de supprimer les slots de l'inventaire
+        /// La mï¿½thode <c>clearInventoryDisplay</c> permet de supprimer les slots de l'inventaire
         /// </summary>
         public void clearInventoryDisplay()
         {
@@ -321,7 +321,7 @@ namespace game
         }
 
         /// <summary>
-        /// Cette méthode est juste là pour debug
+        /// Cette mï¿½thode est juste lï¿½ pour debug
         /// </summary>
         public void affiche()
         {
