@@ -38,7 +38,7 @@ namespace game
         public void afficheInventory(Dictionary<BasicItem, int> dico)
         {
             clearInventoryDisplay();
-            int currentWeight = 0;
+            //int currentWeight = 0;
             //slots = dico;
             Debug.Log("Taille inventaire : " + dico.Count().ToString());
             for (int i = 0; i < dico.Count; i++)
@@ -55,7 +55,7 @@ namespace game
 
 
                 //ceci affiche tous les weights de inventory
-                currentWeight += itemOfSlot.getWeight() * qttDuSlot;
+                //currentWeight += itemOfSlot.getWeight() * qttDuSlot;
 
                 //pour remplir les infos a l'interieur du slot
                 //IL FAUT FAIRE GET COMPONENTS ET PARCOURIR TAB, PARENT[0] FAIRE GAFFE
@@ -91,7 +91,7 @@ namespace game
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-                // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                // Met la position z ï¿½ 0 pour pas qu'il sort du render de la camï¿½ra au dï¿½zoom
                 slot.transform.localPosition = new Vector3(0, 0, 0);
             }
         }
@@ -105,7 +105,7 @@ namespace game
         public void afficheInventory(Dictionary<BasicItem, int> dico, Transform panelAInitialiser)
         {
             clearInventoryDisplay();
-            int currentWeight = 0;
+            //int currentWeight = 0;
             //slots = dico;
 
             for (int i = 0; i < dico.Count; i++)
@@ -119,11 +119,11 @@ namespace game
                 //MOMENT DE REMPLIR LE SLOT
                 //on prend la key/value du dico a la pos i ##########################
                 Seed salut = new Seed();
-                
+
                 BasicItem itemOfSlot = dico.ElementAt(i).Key;
                 int slotText;
                 if (panelAInitialiser.name == "Money")
-                    slotText = GameObject.Find("marketBase").GetComponent<Market>().getLastPriceSeed(((Seed) dico.ElementAt(i).Key).getTypePlante());
+                    slotText = GameObject.Find("marketBase").GetComponent<Market>().getLastPriceSeed(((Seed)dico.ElementAt(i).Key).getTypePlante());
                 else
                     slotText = dico.ElementAt(i).Value;
 
@@ -167,7 +167,7 @@ namespace game
                 //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-                // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                // Met la position z ï¿½ 0 pour pas qu'il sort du render de la camï¿½ra au dï¿½zoom
                 slot.transform.localPosition = new Vector3(0, 0, 0);
             }
         }
@@ -182,7 +182,7 @@ namespace game
         public void afficheInventory(Dictionary<BasicItem, int> dico, Transform panelAInitialiser, bool showAll)
         {
             clearInventoryDisplay();
-            int currentWeight = 0;
+            //int currentWeight = 0;
             //slots = dico;
 
             for (int i = 0; i < dico.Count; i++)
@@ -246,7 +246,7 @@ namespace game
                         //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-                        // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                        // Met la position z ï¿½ 0 pour pas qu'il sort du render de la camï¿½ra au dï¿½zoom
                         slot.transform.localPosition = new Vector3(0, 0, 0);
                     }
                 }
@@ -302,7 +302,7 @@ namespace game
                         //CHANGER LA TAILLE APRES DAVOIR AJOUTE AU PARENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         slot.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
 
-                        // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
+                        // Met la position z ï¿½ 0 pour pas qu'il sort du render de la camï¿½ra au dï¿½zoom
                         slot.transform.localPosition = new Vector3(0, 0, 0);
                     }
                 }

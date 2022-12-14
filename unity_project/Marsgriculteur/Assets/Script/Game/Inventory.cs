@@ -19,7 +19,7 @@ namespace game
 
         public InventoryInterface panel;
 
-        private int weightMax=1000;
+        private int weightMax = 1000;
 
         //dictionnaire des items pour remplir le inventory
         //si on ajoute un item on doit ajouter à ce dico pour le afficher
@@ -36,7 +36,7 @@ namespace game
         public void addToInventory(BasicItem item, int qtt)
         {
             bool trouve = false;
-            
+
             if (qtt < 1)
                 return;
             else
@@ -58,7 +58,7 @@ namespace game
                 }
                 currentWeight += item.getWeight() * qtt;
             }
-            
+
             //displayInventory();
 
         }
@@ -67,6 +67,38 @@ namespace game
         /// La méthode <c>removeFromInventory</c> permet d'enlever instantanément un item.
         /// </summary>
         /// <param name="item">l'item qui sera supprimé de l'inventaire</param>
+        //permet d'ajouter un slot au dictionnaire
+        //surcharge la methode addToInventory avec un seul argument
+        public void addToInventory(BasicItem item, int qtt, Dictionary<BasicItem, int> dico)
+        {
+            bool trouve = false;
+
+            if (qtt < 1)
+                return;
+            else
+            {
+                //on parcourt chaque key pour acceder a son getId()
+                foreach (BasicItem kvp in dico.Keys.ToList())
+                {
+                    if (kvp.getId() == item.getId())
+                    {
+                        dico[kvp] += qtt;
+                        trouve = true;
+                        break;
+                    }
+                }
+                //si on le trouve pas on l'ajoute a notre 
+                if (!trouve)
+                {
+                    dico.Add(item, qtt);
+                }
+                //currentWeight += item.getWeight() * qtt;
+            }
+
+
+
+        }
+        //removes an item instantly
         public void removeFromInventory(BasicItem item)
         {
             foreach (BasicItem kvp in slots.Keys.ToList())
@@ -179,7 +211,7 @@ namespace game
             {
                 return false;
             }
-            
+
             return true;
         }
 
@@ -198,7 +230,7 @@ namespace game
         override public string ToString()
         {
             string rtr = string.Empty;
-            foreach(KeyValuePair<BasicItem, int> kvp in slots)
+            foreach (KeyValuePair<BasicItem, int> kvp in slots)
             {
                 rtr += kvp.Key.getName() + "\t : " + kvp.Value.ToString() + "\n";
             }

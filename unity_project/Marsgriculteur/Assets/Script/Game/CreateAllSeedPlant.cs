@@ -43,10 +43,13 @@ namespace game
 
             //ceci pose un probleme... pas de partie infinie possible?
             shopInv = new Inventory();
-            shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.ELB), 999);
-            shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.EGRO), 999);
-            shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.AJOS), 999);
-            shopInv.addToInventory(dicoPlant.createSeed(EnumTypePlant.AZLOC), 999);
+            foreach (EnumTypePlant plante in dicoPlant.getAllPlantType())
+            {
+                shopInv.addToInventory(dicoPlant.createSeed(plante), 9999);
+                shopInv.addToInventory(dicoPlant.createSeed(plante), 9999);
+                shopInv.addToInventory(dicoPlant.createSeed(plante), 9999);
+                shopInv.addToInventory(dicoPlant.createSeed(plante), 9999);
+            }
 
         }
     }

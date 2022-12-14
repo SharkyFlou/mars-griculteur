@@ -109,8 +109,8 @@ namespace game
         /// <returns>Elle retourne la liste des types de plantes</returns>
         public List<EnumTypePlant> getAllPlantType()
         {
-            List< EnumTypePlant> listPl = new();
-            foreach(EnumTypePlant typePl in allPlantDico.Keys)
+            List<EnumTypePlant> listPl = new();
+            foreach (EnumTypePlant typePl in allPlantDico.Keys)
             {
                 listPl.Add(typePl);
             }
@@ -125,7 +125,7 @@ namespace game
         public override string ToString()
         {
             string rtrn = string.Empty;
-            foreach(KeyValuePair<EnumTypePlant, PlantInfo> kvp in allPlantDico)
+            foreach (KeyValuePair<EnumTypePlant, PlantInfo> kvp in allPlantDico)
             {
                 rtrn += kvp.Key + " : \n{";
                 rtrn += "\t" + kvp.Value.getId().ToString() + "\n";
@@ -135,7 +135,7 @@ namespace game
                 rtrn += "\t" + kvp.Value.getSeedSprite().ToString() + "\n";
                 rtrn += "\t" + kvp.Value.getPlantSprite().ToString() + "\n";
                 rtrn += "\tListe de sprites :\n\t{\n";
-                foreach(Sprite sprt in kvp.Value.getPlantedPlantSprites())
+                foreach (Sprite sprt in kvp.Value.getPlantedPlantSprites())
                 {
                     rtrn += "\t\t" + sprt.ToString() + "\n";
                 }
