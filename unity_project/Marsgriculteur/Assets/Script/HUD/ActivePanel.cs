@@ -60,11 +60,10 @@ namespace game
                 gridBag.transform.GetComponent<RectTransform>().anchoredPosition = gridBag.transform.parent.GetComponent<RectTransform>().position;
 
                 // Met la scale a celle de base pour que les slots ont la bonne taille
-                gridBag.transform.localScale = new Vector3(1.6f, 0.8f, 1);
+                gridBag.transform.localScale = new Vector3(1.6f, 1.0f, 0f);
 
                 // Encadre bien dans le parent et le met pas trop loin de la caméra (évitr qu'il disparaisse au dézoom)
                 gridBag.transform.GetComponent<RectTransform>().sizeDelta = new Vector3(0, 0, 0);
-
 
                 // Met la position z à 0 pour pas qu'il sort du render de la caméra au dézoom
                 gridBag.transform.localPosition = new Vector3(0, 0, 0);

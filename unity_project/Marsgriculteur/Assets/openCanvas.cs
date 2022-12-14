@@ -17,7 +17,7 @@ public class openCanvas : MonoBehaviour
 
     public void inverseAffichage()
     {
-        PanelPlotPlant.GetComponent<GerePlant>().cleanAffichage();
+        //PanelPlotPlant.GetComponent<GerePlant>().cleanAffichage();
 
         displayCanvasON(thingsToShow, isShown);
         displayCanvasON(thingsToHide, !isShown);
@@ -32,7 +32,7 @@ public class openCanvas : MonoBehaviour
 
     private void displayCanvasON(Transform[] trans, bool state)
     {
-        foreach(Transform t in trans)
+        foreach (Transform t in trans)
         {
             t.GameObject().SetActive(state);
         }

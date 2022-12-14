@@ -99,7 +99,7 @@ public class PlotEvents : MonoBehaviour
         plantedPlant = null;
     }
 
-    public void planteGraine()
+    public void planteGraine(BasicItem item)
     {
         if (!contientGraine)
         {
@@ -107,7 +107,8 @@ public class PlotEvents : MonoBehaviour
             growthStatus = 0;
 
             //on stocke l'item de la graine plantee
-            itemDansPlot = PlotSupervisor.GetComponent<GerePlant>().getStockedItem();
+            //itemDansPlot = PlotSupervisor.GetComponent<GerePlant>().getStockedItem();
+            itemDansPlot = item;
             //on garde sa version planted plant (graine--->planted plant--->plant)
             BasicPlant bp = (BasicPlant)itemDansPlot;
             EnumTypePlant typePlant = bp.getTypePlante();
@@ -123,7 +124,8 @@ public class PlotEvents : MonoBehaviour
 
             seedImage.gameObject.GetComponent<SpriteRenderer>().sprite = seed_sprite;
 
-            PlotSupervisor.GetComponent<GerePlant>().Soustraits();
+            //on plante une graine de la seed choisie
+            PlotSupervisor.GetComponent<GerePlant>().Soustraits(item, 1);
         }
         else
             Debug.Log("une graine est déja plantee, on ne peut pas planter une par dessus!!");

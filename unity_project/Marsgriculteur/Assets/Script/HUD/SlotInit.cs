@@ -44,7 +44,9 @@ namespace game
                 }
                 else if (panelInfosVente.name == "PanelPlot" && (item.getId() > 0 && item.getId() < 101))
                 {
-                    panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
+                    //panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
+                    panelInfosVente.GetComponent<GerePlant>().StockedPlot.planteGraine(item);
+                    this.transform.root.GetComponentInChildren<openCanvas>().inverseAffichage();
                 }
 
 
