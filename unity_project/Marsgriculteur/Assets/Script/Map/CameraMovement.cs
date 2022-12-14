@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// La classe <c>CameraMovement</c> s'occupe de la caméra.
+/// Elle possède les attributs suivant : cam, dragOrigin, zoom, minCamSize, maxCamSize, tilemapRenderer, mapMinX, mapMaxX, mapMinY, mapMaxY, canMoove.
+/// </summary>
 public class CameraMovement : MonoBehaviour
 {
     //Serialization is the automatic process of transforming data structures or object states into a format that Unity can store and reconstruct later.
@@ -29,6 +33,10 @@ public class CameraMovement : MonoBehaviour
     private bool canMoove = true; // to lock the cam
 
     //fonction AWAKE IMPORTANT --- NE PAS NOMMER UN AUTRE TRUC sinon le truc ne s'autoupdate pas tout seul
+    /// <summary>
+    /// La méthode <c>Awake</c> est appelée lorsque l'instance de script est en cours de chargement.
+    /// Elle place la caméra.
+    /// </summary>
     private void Awake(){
         mapMinX = tilemapRenderer.transform.position.x - tilemapRenderer.bounds.size.x/2f;
         mapMaxX = tilemapRenderer.transform.position.x + tilemapRenderer.bounds.size.x/2f;
@@ -37,16 +45,25 @@ public class CameraMovement : MonoBehaviour
         mapMaxY = tilemapRenderer.transform.position.y + tilemapRenderer.bounds.size.y/2f;
     }
 
+    /// <summary>
+    /// La méthode <c>playerCanMoove</c> change le droit pour le joueur de bouger la caméra.
+    /// </summary>
+    /// <param name="state">booléen qui indique le droit de bouger la caméra</param>
     public void playerCanMoove(bool state)
     {
         canMoove = state;
     }
 
-
+    /// <summary>
+    /// La méthode <c>Update</c> est appelée une fois par fenêtre (frame). Elle gère la caméra.
+    /// </summary>
     private void Update(){
         PanCamera();
     }
 
+    /// <summary>
+    /// La méthode <c>PanCamera</c> permet de bouger la caméra en fonction du déplacement de la souris.
+    /// </summary>
     private void PanCamera(){
         //garde la position intiale du mouse
         if (!canMoove)
@@ -68,6 +85,9 @@ public class CameraMovement : MonoBehaviour
 
     } 
 
+    /// <summary>
+    /// La méthode <c>ZoomIn</c> permet de zoomer.
+    /// </summary>
     public void ZoomIn(){
         //camOrtographicSize = hauteur de la camera depuis le centre de celle-ci
         float newSize = cam.orthographicSize - zoom;
@@ -78,6 +98,9 @@ public class CameraMovement : MonoBehaviour
         cam.transform.position = ClampCamera(cam.transform.position);
     }
 
+    /// <summary>
+    /// La méthode <c>ZoomOut</c> permet de dézoomer
+    /// </summary>
     public void ZoomOut(){
         //camOrtographicSize = hauteur de la camera depuis le centre de celle-ci
         float newSize = cam.orthographicSize + zoom;
@@ -88,6 +111,11 @@ public class CameraMovement : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// La méthode <c>ClampCamera</c> sert a bouger la camera a la nouvelle position desirée
+    /// </summary>
+    /// <param name="targetPosition">la position désirée</param>
+    /// <returns>Elle retourne la position de la caméra</returns>
     private Vector3 ClampCamera(Vector3 targetPosition){
         //camOrtographicSize = hauteur de la camera depuis le centre de celle-ci
         //cam.aspect permet de trouver le width en multipliant par la hauteur
