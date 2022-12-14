@@ -158,7 +158,7 @@ namespace game
             //Une liste pour retenir tous les events qui arrivent à la fin
             List<EventInfo> item = new List<EventInfo>();
 
-            Debug.Log("Nombre d'event : "+ dicoPossessions.Count);
+            //Debug.Log("Nombre d'event : "+ dicoPossessions.Count);
             //parcours du dico des notifs pour voir si les events arrivent à la fin
             for (int i = 0; i < dicoPossessions.Count; i++)
             {
