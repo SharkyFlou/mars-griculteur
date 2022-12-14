@@ -302,7 +302,7 @@ namespace game
               false,
               listAnim,
               new List<string>(),
-              10000000,
+              6,
               0,
               Game.getDefaultSprite(),
               30));
@@ -318,13 +318,6 @@ namespace game
         public EventInfo getRandomEvent(int day, Dictionary<EventInfo, int> impossibleEvents)
         {
             Dictionary<string, EventInfo> possibleEvents = substractDico(allEventDico, impossibleEvents);
-
-
-            Debug.Log("Truc subtract : " + day + " Nombre d'event possible : " + possibleEvents.Count);
-            foreach (var evt in possibleEvents)
-            {
-                Debug.Log("Jour : " + day + " event possible " + evt.Value.namee);
-            }
 
 
 
@@ -344,8 +337,13 @@ namespace game
                 }
             }
 
+            if (totalProbablity <= 0)
+            {
+                return null;
+            }
+
             System.Random rnd = new System.Random();
-            int randProba = rnd.Next(1, totalProbablity + 1); //get a random number between 0 and the sum of all possible events
+            int randProba = rnd.Next(1, totalProbablity+1); //get a random number between 0 and the sum of all possible events
             EventInfo newEvent = new EventInfo();
 
             foreach (EventInfo currentEvent in possibleEvents.Values)
@@ -371,21 +369,13 @@ namespace game
         /// <returns>Elle retourne un dictionnaire(clé : String, valeur : EventInfo) d'événements possibles</returns>
         private Dictionary<string, EventInfo> substractDico(Dictionary<string, EventInfo> dicoOrigin, Dictionary<EventInfo, int> dicoSubstract)
         {
-
-            Debug.Log("Event pas possible :"+ dicoSubstract.Count);
-            foreach (var evt in dicoSubstract)
-            {
-                Debug.Log("Comparaison de '"+evt.Key.namee+"'");
-            }
             Dictionary<string, EventInfo> newDico = new Dictionary<string, EventInfo>();
             EventInfo currentEvent;
             foreach (string name in dicoOrigin.Keys)
             {
-                Debug.Log("Event en test '" + name + "'");
                 currentEvent = dicoOrigin[name];
                 if (!stringInDicoKeys(name, dicoSubstract))
                 {
-                    Debug.Log("Passe");
                     newDico.Add(name, currentEvent);
                 }
             }

@@ -226,7 +226,6 @@ namespace game
 
             System.Random rand = new System.Random();
 
-            afficheEtatDebug();
 
             //un event en moyenne un jour sur 3
             if (rand.Next(0, 3) > 0 || !eventON)
