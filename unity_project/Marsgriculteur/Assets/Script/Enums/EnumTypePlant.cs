@@ -15,13 +15,11 @@ namespace game
         EGRO,
         AJOS,
         AZLOC,
-        ECHAV,
-        ONTOUM,
+        EHCAV,
+        OUNTOUM,
         ELUOP,
         NIPAL
     }
-
-
 }
 
 

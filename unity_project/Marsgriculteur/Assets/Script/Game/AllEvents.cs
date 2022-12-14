@@ -33,7 +33,7 @@ namespace game
             //************************* PLANT COOL *******************************
             //********************************************************************
 
-            List<EnumTypePlant> listAnim = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ONTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL };
+            List<EnumTypePlant> listAnim = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.OUNTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL };
             allEventDico.Add("qualiMeat", new EventInfo("qualiMeat",
                 "Une radiation donne un go�t plus sal� et tr�s appr�ci�s aux animaux ",
                 10,
@@ -51,7 +51,7 @@ namespace game
 
 
             //ELB, EGRO, AJOS, AZLOC
-            //ECHAV, ONTOUM, ELUOP, NIPAL
+            //EHCAV, ONTOUM, ELUOP, NIPAL
 
             List<EnumTypePlant> listPl = new List<EnumTypePlant>() { EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
 
@@ -87,7 +87,7 @@ namespace game
                 50));
 
 
-            List<EnumTypePlant> listRand = new List<EnumTypePlant>() { EnumTypePlant.EGRO, EnumTypePlant.ELB, EnumTypePlant.AZLOC, EnumTypePlant.ECHAV };
+            List<EnumTypePlant> listRand = new List<EnumTypePlant>() { EnumTypePlant.EGRO, EnumTypePlant.ELB, EnumTypePlant.AZLOC, EnumTypePlant.EHCAV };
             allEventDico.Add("covid", new EventInfo("covid",
                 "Le covid arrive, les gens ach�tent n'importe quoi...",
                 10,
@@ -157,7 +157,7 @@ namespace game
                 Game.getDefaultSprite(),
                 50));
 
-            List<EnumTypePlant> listAll = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ONTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL, EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
+            List<EnumTypePlant> listAll = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.OUNTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL, EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
             allEventDico.Add("guerre", new EventInfo("guerre",
                 "C'est la guerre, les gens n'ont plus trop les moyens...",
                 40,
@@ -261,7 +261,7 @@ namespace game
               40));
 
 
-            List<EnumTypePlant> listRand2 = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ELUOP, EnumTypePlant.ELB, EnumTypePlant.AJOS };
+            List<EnumTypePlant> listRand2 = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.ELUOP, EnumTypePlant.ELB, EnumTypePlant.AJOS };
             allEventDico.Add("terreSteril", new EventInfo("terreSteril",
               "Une com�te radioactive a rendu st�ril la terre de plusieurs de vos vendeurs de graines",
               30,
