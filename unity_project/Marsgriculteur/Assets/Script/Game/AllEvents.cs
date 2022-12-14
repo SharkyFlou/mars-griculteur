@@ -8,7 +8,7 @@ namespace game
     /// <summary>
     /// La classe AllEvents permet de lister tous les événements qui peuvent arriver pendant une partie.
     /// Elle utilise son constructeur pour créer tous les événements, et elle contient 2 méthodes : <c>getRandomEvent</c> et <c>substractDico</c>.
-    /// 
+    /// Elle contient un dictionnaire qui contient les événements.
     /// </summary>
     public class AllEvents
     {
@@ -309,12 +309,11 @@ namespace game
 
         }
 
-        //get a new event depending on the month, and the impossible event
         /// <summary>
         /// La méthode <c>getRandomEvent</c> permet de générer un nouvel événement en fonction du jour et de l'événement impossible.
         /// </summary>
-        /// <param name="day"></param>
-        /// <param name="impossibleEvents"></param>
+        /// <param name="day">le jour actuel</param>
+        /// <param name="impossibleEvents">le dictionnaire qui correspond aux événements impossibles</param>
         /// <returns>Elle renvoie un événements.</returns>
         public EventInfo getRandomEvent(int day, Dictionary<EventInfo, int> impossibleEvents)
         {
@@ -356,13 +355,11 @@ namespace game
             return newEvent;
         }
 
-
-        //is utilize to get the possible Events, from all the events and the impossible ones
         /// <summary>
         /// La méthode <c>substractDico</c> est utilisée pour avoir les événements possibles en fonction de tous les événements et ceux qui sont impossibles.
         /// </summary>
-        /// <param name="dicoOrigin"></param>
-        /// <param name="dicoSubstract"></param>
+        /// <param name="dicoOrigin">dictionnaire qui contient tous les événements</param>
+        /// <param name="dicoSubstract">dictionnaire qui contient les événements impossibles</param>
         /// <returns>Elle retourne un dictionnaire(clé : String, valeur : EventInfo) d'événements possibles</returns>
         private Dictionary<string, EventInfo> substractDico(Dictionary<string, EventInfo> dicoOrigin, Dictionary<EventInfo, int> dicoSubstract)
         {

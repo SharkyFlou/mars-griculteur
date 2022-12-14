@@ -7,11 +7,20 @@ using UnityEngine.UI;
 
 namespace game
 {
+    /// <summary>
+    /// La classe <c>InventoryPanel</c> implémente l'interface InventoryInterface. Elle gère l'affichage des inventaires dans les panels.
+    /// Elle possède un attribut slotPanel qui correspond au panel sur lequel va être affiché l'inventaire.
+    /// </summary>
     public class InventoryPanel : InventoryInterface
     {
         public Transform slotPanel;
 
         //public TextMeshProUGUI textWeight;
+
+        /// <summary>
+        /// Le constructeur <c>InventoryPanel</c> prend en référence le parent pour pouvoir afficher l'inventaire. C'est utile pour supprimer les slots
+        /// </summary>
+        /// <param name="slotPanel">le panel Transform parent</param>
         public InventoryPanel(Transform slotPanel)
         {
             this.slotPanel = slotPanel;
@@ -22,8 +31,10 @@ namespace game
             this.slotPanel = slotPanel;
         }
 
-
-        //on a DEUX FONCTIONS AFFICHDEINVENTORY : une normale, une avec un panel en parametre, (pour choisir ou l'afficher)
+        /// <summary>
+        /// La méthode <c>afficheInventory</c> permet de choisir où afficher l'inventaire et de l'afficher
+        /// </summary>
+        /// <param name="dico">le dictionnaire qui contient les items</param>
         public void afficheInventory(Dictionary<BasicItem, int> dico)
         {
             clearInventoryDisplay();
@@ -85,6 +96,12 @@ namespace game
             }
         }
 
+        /// <summary>
+        /// La méthode surchargée <c>afficheInventory</c> permet aussi de choisir où afficher l'inventaire et de l'afficher.
+        /// Mais il y a un paramètre <paramref name="panelAInitialiser"/> en plus pour pouvoir avoir des informations du panel, ex: lorsqu'on vend, on a besoin de connaître le prix et la quantité.
+        /// </summary>
+        /// <param name="dico">le dictionnaire qui contient les items</param>
+        /// <param name="panelAInitialiser">le panel avec les informations utiles</param>
         public void afficheInventory(Dictionary<BasicItem, int> dico, Transform panelAInitialiser)
         {
             clearInventoryDisplay();
@@ -155,6 +172,13 @@ namespace game
             }
         }
 
+        /// <summary>
+        /// La méthode <c>afficheInventory</c> permet aussi de choisir où afficher l'inventaire et de l'afficher.
+        /// Mais il y a un paramètre <paramref name="showAll"/> en plus pour pouvoir savoir si on les affiche tous (si on affiche que les graines ou tous)
+        /// </summary>
+        /// <param name="dico">le dictionnaire qui contient les items</param>
+        /// <param name="panelAInitialiser">le panel avec les informations utiles</param>
+        /// <param name="showAll">booléen pour savoir si on affiche tout l'inventaire</param>
         public void afficheInventory(Dictionary<BasicItem, int> dico, Transform panelAInitialiser, bool showAll)
         {
             clearInventoryDisplay();
@@ -285,6 +309,9 @@ namespace game
             }
         }
 
+        /// <summary>
+        /// La méthode <c>clearInventoryDisplay</c> permet de supprimer les slots de l'inventaire
+        /// </summary>
         public void clearInventoryDisplay()
         {
             foreach (Transform child in slotPanel)
@@ -293,6 +320,9 @@ namespace game
             }
         }
 
+        /// <summary>
+        /// Cette méthode est juste là pour debug
+        /// </summary>
         public void affiche()
         {
             Debug.Log(slotPanel.name);
