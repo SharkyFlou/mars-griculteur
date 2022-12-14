@@ -8,7 +8,7 @@ public class OpenMarket : MonoBehaviour
 {
     public Canvas canvas;
     public Transform graphContainer;
-    public openCanvas openCanvasMarket;
+    public OpenCanvas openCanvasMarket;
     public ActivePanel reafficheInvOnClickMarket;
 
     private void OnMouseDown()

@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using game;
 
-public class openCanvas : MonoBehaviour
+public class OpenCanvas : MonoBehaviour
 {
     public Transform[] thingsToHide;
     public Transform[] thingsToShow;

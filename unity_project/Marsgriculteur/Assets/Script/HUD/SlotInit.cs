@@ -50,7 +50,7 @@ namespace game
                 {
                     //panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
                     panelInfosVente.GetComponent<GerePlant>().StockedPlot.planteGraine(item);
-                    this.transform.root.GetComponentInChildren<openCanvas>().inverseAffichage();
+                    this.transform.root.GetComponentInChildren<OpenCanvas>().inverseAffichage();
                 }
 
 
