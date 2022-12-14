@@ -1815,19 +1815,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 810013131}
-        m_TargetAssemblyTypeName: game.ActivePanel, Assembly-CSharp
-        m_MethodName: Affiche
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1094475978}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 810013131}
+      - m_Target: {fileID: 819271280}
         m_TargetAssemblyTypeName: game.ActivePanel, Assembly-CSharp
         m_MethodName: Affiche
         m_Mode: 1
@@ -34929,7 +34917,7 @@ MonoBehaviour:
   canvas: {fileID: 1392767069}
   graphContainer: {fileID: 1610291185}
   openCanvasMarket: {fileID: 722724846}
-  reafficheInvOnClickMarket: {fileID: 810013131}
+  reafficheInvOnClickMarket: {fileID: 819271280}
 --- !u!114 &788824850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35140,58 +35128,6 @@ Canvas:
   m_SortingLayerID: 1627818343
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &810013129
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 810013130}
-  - component: {fileID: 810013131}
-  m_Layer: 5
-  m_Name: MarketInv
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &810013130
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810013129}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 819271275}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -44.99994}
-  m_SizeDelta: {x: 1030, y: 532}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &810013131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810013129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef1928ec5e970f647a6f534661e18931, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PanelInventory: {fileID: 810013129}
-  PanelNotif: {fileID: 335311817}
-  panelAvecInfos: {fileID: 1094475978}
 --- !u!1 &814713845
 GameObject:
   m_ObjectHideFlags: 0
@@ -35294,8 +35230,9 @@ GameObject:
   - component: {fileID: 819271278}
   - component: {fileID: 819271277}
   - component: {fileID: 819271276}
+  - component: {fileID: 819271280}
   m_Layer: 5
-  m_Name: PanelRight
+  m_Name: MarketInv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35314,7 +35251,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 403678568}
-  - {fileID: 810013130}
   m_Father: {fileID: 1229624451}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -35392,6 +35328,21 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &819271280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819271274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef1928ec5e970f647a6f534661e18931, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelInventory: {fileID: 819271274}
+  PanelNotif: {fileID: 335311817}
+  panelAvecInfos: {fileID: 1094475978}
 --- !u!1 &827232421
 GameObject:
   m_ObjectHideFlags: 0
@@ -38207,7 +38158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -117.59003}
+  m_AnchoredPosition: {x: 0, y: -117.59006}
   m_SizeDelta: {x: 0, y: -82.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1094475979
@@ -42883,9 +42834,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1989577915}
         m_TargetAssemblyTypeName: game.ActivePanel, Assembly-CSharp
-        m_MethodName: OuvrePanel
+        m_MethodName: updateWeight
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1472285709}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1989577915}
+        m_TargetAssemblyTypeName: game.ActivePanel, Assembly-CSharp
+        m_MethodName: Affiche
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -44949,7 +44912,7 @@ GameObject:
   - component: {fileID: 1989577914}
   - component: {fileID: 1989577915}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
