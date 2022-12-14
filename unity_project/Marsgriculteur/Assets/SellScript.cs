@@ -7,7 +7,7 @@ using game;
 using Unity.VisualScripting;
 using System;
 
-public class sellScript : MonoBehaviour
+public class SellScript : MonoBehaviour
 {
     public TextMeshProUGUI endValue;
     public TextMeshProUGUI resValue;

@@ -40,10 +40,10 @@ namespace game
                 {
                     if (item.getId() is > 100 and <= 200)
                     {
-                        panelInfosVente.GetComponent<sellScript>().changeMaxValue(qttSlot);
+                        panelInfosVente.GetComponent<SellScript>().changeMaxValue(qttSlot);
                         BasicPlant itemplante = (BasicPlant)item;
-                        panelInfosVente.GetComponent<sellScript>().changePlant(itemplante.getTypePlante());
-                        panelInfosVente.GetComponent<sellScript>().slider.interactable = true;
+                        panelInfosVente.GetComponent<SellScript>().changePlant(itemplante.getTypePlante());
+                        panelInfosVente.GetComponent<SellScript>().slider.interactable = true;
                     }
                 }
                 else if (panelInfosVente.name == "PanelPlot" && (item.getId() is > 0 and < 101))

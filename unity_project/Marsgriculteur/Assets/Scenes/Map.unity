@@ -1804,7 +1804,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1094475982}
-        m_TargetAssemblyTypeName: sellScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: SellScript, Assembly-CSharp
         m_MethodName: sell
         m_Mode: 1
         m_Arguments:
@@ -8273,7 +8273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &284338962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9744,7 +9744,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1094475982}
-        m_TargetAssemblyTypeName: sellScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: SellScript, Assembly-CSharp
         m_MethodName: valueChanged
         m_Mode: 1
         m_Arguments:

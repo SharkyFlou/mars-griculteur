@@ -239,6 +239,10 @@ namespace game
             else
             {
                 EventInfo newEvent = createNewEvent(days);
+                if(newEvent == null)
+                {
+                    return null;
+                }
                 activeEvents.Add(newEvent, newEvent.length);
                 impossibleEvents.Add(newEvent, newEvent.cooldown);
                 /*
