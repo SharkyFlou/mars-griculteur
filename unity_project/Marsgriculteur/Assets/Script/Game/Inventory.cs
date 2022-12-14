@@ -13,7 +13,7 @@ namespace game
 
         public InventoryInterface panel;
 
-        private int weightMax=1000;
+        private int weightMax = 1000;
 
         //dictionnaire des items pour remplir le inventory
         //si on ajoute un item on doit ajouter à ce dico pour le afficher
@@ -27,7 +27,7 @@ namespace game
         public void addToInventory(BasicItem item, int qtt)
         {
             bool trouve = false;
-            
+
             if (qtt < 1)
                 return;
             else
@@ -49,14 +49,14 @@ namespace game
                 }
                 currentWeight += item.getWeight() * qtt;
             }
-            
+
             //displayInventory();
 
         }
 
         //permet d'ajouter un slot au dictionnaire
         //surcharge la methode addToInventory avec un seul argument
-        public void addToInventory(BasicItem item, int qtt, Dictionary<BasicItem,int> dico)
+        public void addToInventory(BasicItem item, int qtt, Dictionary<BasicItem, int> dico)
         {
             bool trouve = false;
 
@@ -82,7 +82,7 @@ namespace game
                 //currentWeight += item.getWeight() * qtt;
             }
 
-            
+
 
         }
         //removes an item instantly
@@ -176,7 +176,7 @@ namespace game
             {
                 return false;
             }
-            
+
             return true;
         }
         //pour tout element on instancie son slot (qui aura une image etc etc) et on l'ajoute
@@ -189,7 +189,7 @@ namespace game
         override public string ToString()
         {
             string rtr = string.Empty;
-            foreach(KeyValuePair<BasicItem, int> kvp in slots)
+            foreach (KeyValuePair<BasicItem, int> kvp in slots)
             {
                 rtr += kvp.Key.getName() + "\t : " + kvp.Value.ToString() + "\n";
             }
