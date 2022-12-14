@@ -63,12 +63,14 @@ namespace game
 
         }
 
-        /// <summary>
-        /// La méthode <c>removeFromInventory</c> permet d'enlever instantanément un item.
-        /// </summary>
-        /// <param name="item">l'item qui sera supprimé de l'inventaire</param>
         //permet d'ajouter un slot au dictionnaire
         //surcharge la methode addToInventory avec un seul argument
+        /// <summary>
+        /// La méthode <c>addToInventory</c> permet d'ajouter un slot au dictionnaire, avec une surcharge de la methode addToInventory.
+        /// </summary>
+        /// <param name="item">l'item qui sera ajouté à l'inventaire</param>
+        /// <param name="qtt">la quantité de cet item</param>
+        /// <param name="dico">le dictionnaire d'item</param>
         public void addToInventory(BasicItem item, int qtt, Dictionary<BasicItem, int> dico)
         {
             bool trouve = false;
@@ -98,7 +100,11 @@ namespace game
 
 
         }
-        //removes an item instantly
+
+        /// <summary>
+        /// La méthode <c>removeFromInventory</c> permet d'enlever instantanément un item.
+        /// </summary>
+        /// <param name="item">l'item qui sera supprimé de l'inventaire</param>
         public void removeFromInventory(BasicItem item)
         {
             foreach (BasicItem kvp in slots.Keys.ToList())
