@@ -22,8 +22,10 @@ namespace game
         //sealed == FINAL en java
         //private int MAX_STOCKED_QTT = 20;
 
+        //ces deux fonctions suivantes ne seront plus utilisees; vu que la graine sera plantee et le click ferme le shop auto
 
-        public void cleanAffichage()
+
+        /* public void cleanAffichage()
         {
             stockedItem = null;
             stockedQtt = 0;
@@ -69,7 +71,7 @@ namespace game
                 //Debug.Log(go.name);
                 if (go.name == "TextItemSelected")
                 {
-                    go.GetComponent<TextMeshProUGUI>().text = "Vous avez choisi : " + item.getName().ToString();
+                    //go.GetComponent<TextMeshProUGUI>().text = "Vous avez choisi 1 graine de " + item.getName().ToString() + ". \n Sa croissance dure " + item.get + "cycles.";
 
                 }
                 if (go.name == "ImageSeed")
@@ -84,16 +86,15 @@ namespace game
                     //go.GetComponent<Button>().onClick.AddListener(delegate { Soustrait(stockedItem, stockedQtt); });
 
                     //cela ajoute un evenement soustraits au click du button ButtonOKPlant
-                    go.GetComponent<Button>().onClick.AddListener(StockedPlot.planteGraine); //doit appeler la fonction plategraine de PlotEvents
-                                                                                             //go.GetComponent<Button>().onClick.AddListener(Soustraits); //elimine le nb choisi de graines a planter 
-                                                                                             //@@@@@@@@@@@@@@@@@@@@@@@ ici on peut ajouter directement le enumTypePlant pour planteGraine @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-                                                                                             //NE PAS AJOUTER () A LA FONCTION, SINON ON ENVOIE LE RESULTAT
+                    //go.GetComponent<Button>().onClick.AddListener(StockedPlot.planteGraine);
+                    //go.GetComponent<Button>().onClick.AddListener(go.parent.parent.parent.GetComponentInChildren<openCanvas>().inverseAffichage); //doit appeler la fonction plategraine de PlotEvents
+
                 }
             }
 
         }
-
-        public void Soustraits()
+ */
+        public void Soustraits(BasicItem item, int qtt)
         {
             //IMPERATIF d'utiliser CreateAllSeedPlant.mainInventory.getInventory(), sinon on travaille avec un inventory qui est VIDE COMPLETEMENT
             //Debug.Log(CreateAllSeedPlant.mainInventory.isDicoVide());
@@ -102,7 +103,7 @@ namespace game
             if (!CreateAllSeedPlant.mainInventory.isDicoVide())
             {
                 //on soustrait au item du dico la qtt voulue
-                inventoryFunctions.SubstractFromInventory(getStockedItem(), getStockedQtt(), CreateAllSeedPlant.mainInventory.getInventory());
+                inventoryFunctions.SubstractFromInventory(item, qtt, CreateAllSeedPlant.mainInventory.getInventory());
                 //on reaffiche les elements
                 reafficheInv.Affiche();
             }

@@ -317,23 +317,29 @@ namespace game
         /// <returns>Elle renvoie un événements.</returns>
         public EventInfo getRandomEvent(int day, Dictionary<EventInfo, int> impossibleEvents)
         {
-
             Dictionary<string, EventInfo> possibleEvents = substractDico(allEventDico, impossibleEvents);
 
 
-            if(possibleEvents.Count == 0) //if true, then something is messed up
+
+            if (possibleEvents.Count == 0) //if true, then something is messed up
             {
-                return new EventInfo(); //Shit
+                Debug.Log("Pas d'event possible :O");
+                return null; //Shit
             }
 
 
             int totalProbablity = 0;
             foreach(EventInfo currentEvent in possibleEvents.Values) //calculate the sum of all event probabilites
             {
-                if(currentEvent.unlockableAfter > day) //verify if the event is possible
+                if(currentEvent.unlockableAfter < day) //verify if the event is possible
                 {
                     totalProbablity += currentEvent.probability; //add the probabilty of the event
                 }
+            }
+
+            if (totalProbablity <= 0)
+            {
+                return null;
             }
 
             System.Random rnd = new System.Random();
@@ -342,7 +348,7 @@ namespace game
 
             foreach (EventInfo currentEvent in possibleEvents.Values)
             {
-                if (currentEvent.unlockableAfter > day) //verify if the event is possible
+                if (currentEvent.unlockableAfter < day) //verify if the event is possible
                 {
                     if ((randProba -= currentEvent.probability) <= 0) //decrease until it hits 0
                     {
@@ -365,15 +371,27 @@ namespace game
         {
             Dictionary<string, EventInfo> newDico = new Dictionary<string, EventInfo>();
             EventInfo currentEvent;
-            foreach (string names in dicoOrigin.Keys)
+            foreach (string name in dicoOrigin.Keys)
             {
-                currentEvent=dicoOrigin[names];
-                if (!dicoSubstract.ContainsKey(currentEvent))
+                currentEvent = dicoOrigin[name];
+                if (!stringInDicoKeys(name, dicoSubstract))
                 {
-                    newDico.Add(names, currentEvent);
+                    newDico.Add(name, currentEvent);
                 }
             }
             return newDico;
+        }
+
+        private bool stringInDicoKeys (string toCheck, Dictionary<EventInfo, int> dicoSubstract)
+        {
+            foreach(EventInfo evt in dicoSubstract.Keys)
+            {
+                if (evt.namee == toCheck)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

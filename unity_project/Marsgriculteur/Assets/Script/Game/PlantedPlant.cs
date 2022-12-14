@@ -14,6 +14,7 @@ namespace game
         private List<Sprite> spriteLinks;
         private int growthTime;
         private EnumTypePlant typePlant;
+        private int nbPlantCollect;
 
         /// <summary>
         /// Le constructeur <c>PlantedPlant</c> permet de créer une plante qui va être planté (juste avec son temps de pousse et à son type)
@@ -36,7 +37,8 @@ namespace game
         /// <param name="paraImagelink">le lien de l'image de la plante</param>
         /// <param name="paraSpriteLinks">le liste des images de la plante</param>
         /// <param name="paraGrowthTime">le temps de pousse de la plante</param>
-        public PlantedPlant(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, List<Sprite> paraSpriteLinks, int paraGrowthTime)
+        /// <param name="paraNbCollect">la quantité de plante collecté après la pousse</param>
+        public PlantedPlant(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, List<Sprite> paraSpriteLinks, int paraGrowthTime, int paraNbCollect)
         {
             this.typePlante = paraTypePlant;
             this.id = paraId;
@@ -45,6 +47,7 @@ namespace game
             this.imageLink = paraImagelink;
             this.spriteLinks = paraSpriteLinks;
             this.growthTime = paraGrowthTime;
+            this.nbPlantCollect = paraNbCollect;
         }
 
         /// <summary>
@@ -79,6 +82,12 @@ namespace game
         {
             return growthTime;
         }
+
+        public int getNbCollect()
+        {
+            return nbPlantCollect;
+        }
     }
+
 
 }

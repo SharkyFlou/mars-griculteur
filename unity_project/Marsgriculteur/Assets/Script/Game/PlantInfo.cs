@@ -26,6 +26,7 @@ namespace game
         private int plantWeight;
         private int basicSeedPrice;
         private List<int> basicPlantPrice;
+        private int nbPlantCollect;
 
         // Le contructeur utiliser pour instancier avec un Json
         /// <summary>
@@ -43,7 +44,7 @@ namespace game
         /// <param name="basicSeedPrice">le prix de la graine</param>
         /// <param name="basicPlantPrice">le prix de la plante</param>
         [JsonConstructor]
-        public PlantInfo(int id, EnumTypePlant namePlant, string description, int growthTime, string SeedSpriteLink, string PlantSpriteLink, string PlantedPlantSpriteLink, int seedWeight, int plantWeight, int basicSeedPrice, List<int> basicPlantPrice)
+        public PlantInfo(int id, EnumTypePlant namePlant, string description, int growthTime, string SeedSpriteLink, string PlantSpriteLink, string PlantedPlantSpriteLink, int seedWeight, int plantWeight, int basicSeedPrice, List<int> basicPlantPrice, int nbPlantCollect)
         {
             this.id = id;
             this.namePlant = namePlant;
@@ -56,6 +57,7 @@ namespace game
             this.plantWeight = plantWeight;
             this.basicSeedPrice = basicSeedPrice;
             this.basicPlantPrice = basicPlantPrice;
+            this.nbPlantCollect = nbPlantCollect;
         }
 
         /// <summary>
@@ -155,6 +157,11 @@ namespace game
         public List<int> getPlantPrice()
         {
             return this.basicPlantPrice;
+        }
+
+        public int getNbCollect()
+        {
+            return nbPlantCollect;
         }
 
     }

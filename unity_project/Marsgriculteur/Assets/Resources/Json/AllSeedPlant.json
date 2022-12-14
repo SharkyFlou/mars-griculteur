@@ -24,7 +24,8 @@
         47,
         49,
         50
-      ]
+      ],
+      "nbPlantCollect" : 10
     },
     "EGRO": {
       "id": 2,
@@ -50,7 +51,8 @@
         46,
         45,
         43
-      ]
+      ],
+      "nbPlantCollect" : 10
     },
     "AJOS": {
       "id": 3,
@@ -76,7 +78,8 @@
         55,
         47,
         40
-      ]
+      ],
+      "nbPlantCollect" : 10
     },
     "AZLOC": {
       "id": 4,
@@ -102,7 +105,8 @@
         48,
         44,
         42
-      ]
+      ],
+      "nbPlantCollect" : 10
     }
   }
 }
