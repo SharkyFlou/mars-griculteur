@@ -40,11 +40,21 @@ namespace game
             mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AJOS), 1);
             mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.EGRO), 1);
             mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AZLOC), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.OUNTOUM), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.EHCAV), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.NIPAL), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.ELUOP), 1);
 
             mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.ELB), 1);
             mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.AJOS), 1);
             mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.EGRO), 1);
             mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.AZLOC), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.OUNTOUM), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.EHCAV), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.NIPAL), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.ELUOP), 1);
+
+
             //mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AJOS), 100);
 
             //ceci pose un probleme... pas de partie infinie possible?
