@@ -6,6 +6,7 @@
 <h3 align="center">MARS'GRICULTURE</h3>
 </div>
 
+_Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux changements de contexte
 
 
 <!-- SOMMAIRE -->
@@ -51,7 +52,8 @@ Participants :
 * NIEDERBERGER Léo
 
 Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T234/T3)
-_Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux changements de contexte
+
+
 
 <!-- CAPTURE D'ECRAN -->
 <a name="capture-decran"></a>
@@ -201,21 +203,41 @@ Ce diagramme de classe nous a permis de nous répartir le code des classes.
 <a name="licence"></a>
 
 ## Licence
+### Unity
+Mars’griculteur est développé à partir de Unity.
+Nous utilisons la version « Unity Personal » qui nous donne tout les droits sur notre application (plus d’information ici), à partir du moment que notre application génère moins de 100 000$ / ans, ce qui est notre cas, car nous voulons que Mars’griculteur soit entièrement gratuit.
+Afin de garder la version « Unity Personal », nous ne devons pas non plus déployer notre logiciel sur des plateformes tels que : « Nintendo, PlayStation, ou Xbox » ce qui n’est pas non plus notre cas.
+Nous possédons donc les droits sur notre logiciel, et pouvons donc choisir la licence que nous souhaitons lui appliquer.
 
-Les licences de type BSD (Berkeley Software Distribution License) ne nous ont pas intéressées, car elles n’imposent pas la citation de l’auteur lors de la redistribution.
-
-Nous avons cherché si la licence devait être copyleft. “Le copyleft est un cadre permettant de faire d’un programme un logiciel libre et d’exiger que les versions modifiées ou étendues deviennent elles aussi des logiciels libres.” (source : gnu.org). Nous en avons convenu que la licence doit être copyleft.
-
-La licence Apache 2.0 ne sera pas sélectionnée car c’est pour les gros programmes et nous avons décidé que notre programme n’est pas très volumineux.
-
+### Licence SAAS
 La licence SAAS (Software as a Service)  est une licence pour commercialiser un logiciel en tant qu’application accessible à distance comme un service, par internet. Ce qui n’est pas notre cas.
 
-Nous ne prenons pas les licences GNU qui concernent les bibliothèques.
+### Licences libres
+Mars’griculeur sera diffusé sous licence libre. Donc nous acceptons que l’utilisateur possède les droits suivant sur notre logiciel :
+-	Pouvoir exécuter, copier et distribuer sans frais Mars’griculteur.
+-	Pouvoir accéder au code source de Mars’griculteur, modifier le logiciel -sans barrière technique ou légale- afin de participer au développement de nouvelles fonctionnalités
+     Extrait de FUN MOOC, licences libres.
+#### Licences de type BSD
+ Les licences de type BSD (Berkeley Software Distribution License) ne nous ont pas intéressé, car elles n’imposent que la citation de l’auteur lors de la redistribution, permettant alors à un utilisateur de diffuser un logiciel se basant sur le nôtre, et n’utilisant cette fois-ci pas de licence libre. 
+ 
+#### Licences GNU GPL
+ Les licences GNU GPL se caractérise notamment par le fait d’être copyleft soit : « Le copyleft est un cadre permettant de faire d’un programme un logiciel libre et d’exiger que les versions modifiées ou étendues deviennent elles aussi des logiciels libres. »
+ Extrait de gnu.org, Licences.
+ Nous avons convenu que la licence de Mars’griculteur sera copyleft.
+ 
+#### Différentes licences compatible avec GNU GPL
+ Il y a plusieurs licences de logiciel libre compatibles avec la GPL, nous allons en citer quelque unes, et expliquer pourquoi nous ne les avons pas retenu.
+-	La licence Apache 2.0 ne sera pas sélectionnée car c’est pour les gros programmes et nous avons décidé que notre programme n’est pas très volumineux.
+-	Licences de Python, ne nous concerne pas, nous n’utilisons pas de python.
+-	Le domaine public, ce n’est techniquement pas une licence, mais nous ne voulons pas céder notre logiciel au domaine public.
+-	Nous ne prenons pas les licences GNU qui concernent les bibliothèques.
+-	…
 
-La licence GNU GPL(General Public License) est une licence en application du “copyleft”, elle nous dit que toute personne qui contribue à l'œuvre ne peut se l’’accaparer. Mais elle a la liberté de copier, de diffuser et de modifier. Les codes sources du programme sont accessibles à tous. (source : Cours)
+#### Licence GNU GPLv3
 La licence GNU GPLv3 est la dernière version de la licence publique générale GNU. C’est une licence de logiciel libre et d’un copyleft (très fort). Elle n’est pas compatible avec la GPLv2. Elle est approuvée par l’OSI (Open Source Initiative). Elle est pérenne, elle est durable. Elle n’est absolument pas permissive. Et elle a une persistance des 4 libertés pour les additions de code. (source : Wikipédia)
 
-Suite à l’étude du site du GNU (https://www.gnu.org/licenses/license-list.fr.html ), nous avons décidé de choisir la licence GNU GPLv3.
+#### Conclusion
+Suite à l’étude du site du GNU portant sur le GNU GPLv3, nous avons décidé de choisir la licence GNU GPLv3.
 
 (Voir `LICENCE.txt` pour plus d'information)
 
