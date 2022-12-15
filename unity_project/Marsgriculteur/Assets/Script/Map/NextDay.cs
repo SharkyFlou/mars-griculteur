@@ -19,9 +19,9 @@ namespace game
         public TextMeshProUGUI dayText;
         public Notification notif;
         public Transform plots;
+        public Game game;
         List<Transform> plotList; //contient tous les plots pour les faire pousser
         private int nbrJour;
-        public static int gameLength;
         [SerializeField] public Market market;
 
         //contient la liste des notifications avec leur durée d'apparition
@@ -65,7 +65,7 @@ namespace game
             {
                 return;
             }
-
+            game.testObjective();
             //on fait pousser les plantes
             faitPousser();
 
@@ -73,6 +73,7 @@ namespace game
 
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
+            
         }
 
         /// <summary>
@@ -214,6 +215,10 @@ namespace game
             }
         }
 
-
+        public int getNbJour()
+        {
+            return nbrJour;
+        }
+        
     }
 }

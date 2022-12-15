@@ -37,8 +37,8 @@ namespace game
             //********************************************************************
 
             List<EnumTypePlant> listAnim = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.OUNTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL };
-            allEventDico.Add("qualiMeat", new EventInfo("qualiMeat",
-                "Une radiation donne un go�t plus sal� et tr�s appr�ci�s aux animaux ",
+            allEventDico.Add("QualiMeat", new EventInfo("QualiMeat",
+                "Une onde de radiation donne aux animaux un goût plus salé et très apprécié",
                 10,
                 1.2,
                 1.5,
@@ -58,8 +58,8 @@ namespace game
 
             List<EnumTypePlant> listPl = new List<EnumTypePlant>() { EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
 
-            allEventDico.Add("solarStorm", new EventInfo("solarStorm",
-                "Une temp�te solaire font griller vos plantes, les gens en rafolent",
+            allEventDico.Add("SolarStorm", new EventInfo("SolarStorm",
+                "Une tempête solaire fait griller vos plantes ! Tous deviennent fous, et achètent n'importe quoi...",
                 10,
                 1.2,
                 1.5,
@@ -74,8 +74,8 @@ namespace game
                 40));
 
             List<EnumTypePlant> listEgro = new List<EnumTypePlant>() { EnumTypePlant.EGRO };
-            allEventDico.Add("sucreEfondrement", new EventInfo("sucreEfondrement",
-                "Le march� du sucre s'�croule myst�rieusement, les gens se retourne vers votre EGRO au gout sucr�",
+            allEventDico.Add("EffondrementDuSucre", new EventInfo("EffondrementDuSucre",
+                "Le marché du sucre s'écroule mystérieusement, les gens se retournent vers votre EGRO au goût sucré",
                 5,
                 1.1,
                 2,
@@ -91,8 +91,8 @@ namespace game
 
 
             List<EnumTypePlant> listRand = new List<EnumTypePlant>() { EnumTypePlant.EGRO, EnumTypePlant.ELB, EnumTypePlant.AZLOC, EnumTypePlant.EHCAV };
-            allEventDico.Add("covid", new EventInfo("covid",
-                "Le covid arrive, les gens ach�tent n'importe quoi...",
+            allEventDico.Add("Covid", new EventInfo("Covid",
+                "Le Covid-23 arrive ! Les gens achètent n'importe quoi...",
                 10,
                 1.1,
                 1.2,
@@ -107,8 +107,8 @@ namespace game
                 30));
 
 
-            allEventDico.Add("feteOportune", new EventInfo("feteOportune",
-               "Le Maire s'est lev� du bon pied, il d�clare une f�te national aujourd'hui ! Le plat favori lors des jours de f�te : NIPAL farci aux AZLOC",
+            allEventDico.Add("FêteOportune", new EventInfo("FêteOportune",
+               "Le Maire s'est levé du bon pied : il déclare une fête nationale aujourd'hui ! Le plat favori lors des jours de fête : NIPAL farci au AZLOC",
                5,
                1.1,
                2,
@@ -129,8 +129,8 @@ namespace game
             //********************************************************************
 
             List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>() { EnumTypePlant.ELB, EnumTypePlant.EGRO };
-            allEventDico.Add("verrueELBEGRO", new EventInfo("verrueELBEGRO",
-                "Des verrus martiennes touchent les recoltes d'EBL et d'EGRO, �a n'a pas bon go�t",
+            allEventDico.Add("VerrueMartienne", new EventInfo("VerrueMartienne",
+                "Des verrues martiennes touchent les recoltes d'EBL et d'EGRO ! Leur goût n'est pas bon",
                 15,
                 0.8,
                 0.8,
@@ -145,8 +145,8 @@ namespace game
                 30));
 
 
-            allEventDico.Add("vegeTrend", new EventInfo("vegeTrend",
-                "Une trend v�g�tarienne se d�veloppe",
+            allEventDico.Add("VegeTrend", new EventInfo("VegeTrend",
+                "Une trend végétarienne se développe",
                 25,
                 0.8,
                 0.7,
@@ -161,8 +161,8 @@ namespace game
                 50));
 
             List<EnumTypePlant> listAll = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.OUNTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL, EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
-            allEventDico.Add("guerre", new EventInfo("guerre",
-                "C'est la guerre, les gens n'ont plus trop les moyens...",
+            allEventDico.Add("Guerre", new EventInfo("Guerre",
+                "C'est la guerre ! Les gens n'ont plus trop les moyens...",
                 40,
                 0.9,
                 0.6,
@@ -177,8 +177,8 @@ namespace game
                 70));
 
 
-            allEventDico.Add("scandale", new EventInfo("scandale",
-               "Un scandale �clate, quelqu'un vous aurait vu irradier vos plantes pour les faire pousser plus vite, bonne chance...",
+            allEventDico.Add("Scandale", new EventInfo("Scandale",
+               "Un scandale éclate : quelqu'un vous aurait vu irradier vos plantes pour les faire pousser plus vite... Votre réputation est salie!",
                40,
                0.7,
                0.8,
@@ -196,8 +196,8 @@ namespace game
             //*************************** GRAINES * ******************************
             //********************************************************************
 
-            allEventDico.Add("nouveauFournisseur", new EventInfo("nouveauFournisseur",
-              "Un nouveau fournisseur de graines de plantes vient d'arriver, pour se faire connaitre il instaure temporairement des prix assez bas",
+            allEventDico.Add("NouveauFournisseur", new EventInfo("NouveauFournisseur",
+              "Un nouveau fournisseur de graines de plantes vient d'arriver; pour se faire connaître, il instaure temporairement des prix assez bas",
               20,
               0.8,
               0.9,
@@ -211,8 +211,8 @@ namespace game
               Game.getDefaultSprite(),
               40));
 
-            allEventDico.Add("fournisseurVictime", new EventInfo("fournisseurVictime",
-              "Vous avez menac� les familles de vos fournisseurs pour leur demander de vous baisser les prix pendant quelque jours, vos fournisseurs ont peur de vous... �a ne va pas durer",
+            allEventDico.Add("FournisseurVictime", new EventInfo("FournisseurVictime",
+              "Vous avez menacé les familles de vos fournisseurs pour leur demander de vous baisser les prix pendant quelques jours. Vos fournisseurs ont peur de vous... mais ça ne va pas durer",
               5,
               0.7,
               0.9,
@@ -232,8 +232,8 @@ namespace game
             //*************************** GRAINES PAS COOL************************
             //********************************************************************
 
-            allEventDico.Add("fournisseurCourageu", new EventInfo("fournisseurCourageu",
-              "Vous avez menac� les familles de vos fournisseurs pour leur demander de vous baisser les prix pendant quelque jours, vos fournissers sont en train de se rebeller, fa�tes vos reserves...",
+            allEventDico.Add("FournisseurCourageux", new EventInfo("FournisseurCourageux",
+              "Vous avez menacé les familles de vos fournisseurs pour leur demander de vous baisser les prix pendant quelque jours. Cependant, vos fournissers sont en train de se rebeller, faites vos réserves!",
               20,
               1.1,
               3,
@@ -248,8 +248,8 @@ namespace game
               40));
 
 
-            allEventDico.Add("hiverRude", new EventInfo("hiverRude",
-              "L'hiver a �t� rude, vos producteurs de graines l'ont sentit passer",
+            allEventDico.Add("HiverRude", new EventInfo("HiverRude",
+              "L'hiver a été rude, vos producteurs sont en pénurie!",
               20,
               1.3,
               1.2,
@@ -265,8 +265,8 @@ namespace game
 
 
             List<EnumTypePlant> listRand2 = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.ELUOP, EnumTypePlant.ELB, EnumTypePlant.AJOS };
-            allEventDico.Add("terreSteril", new EventInfo("terreSteril",
-              "Une com�te radioactive a rendu st�ril la terre de plusieurs de vos vendeurs de graines",
+            allEventDico.Add("TerreStérile", new EventInfo("TerreStérile",
+              "Une comète radioactive a rendu stérile la terre de plusieurs de vos vendeurs de graines",
               30,
               1.5,
               1.8,
@@ -280,8 +280,8 @@ namespace game
               Game.getDefaultSprite(),
               40));
 
-            allEventDico.Add("giletsJaunes", new EventInfo("giletsJaunes",
-              "Des gilets jaunes manifestent devant plusieurs de vos fournisseurs de graines, les graines vont se faire rare",
+            allEventDico.Add("GiletsJaunes", new EventInfo("GiletsJaunes",
+              "Des gilets jaunes manifestent devant plusieurs de vos fournisseurs de graines.",
               15,
               3,
               4,
@@ -295,8 +295,8 @@ namespace game
               Game.getDefaultSprite(),
               30));
 
-            allEventDico.Add("protestantsVegans", new EventInfo("protestantsVegans",
-              "Des protestants vegan bloquent vous fournisseurs de graines de viande",
+            allEventDico.Add("ProtestantsVéganes", new EventInfo("ProtestantsVéganes",
+              "Des protestants véganes bloquent vous fournisseurs de graines de viande",
               15,
               3,
               4,

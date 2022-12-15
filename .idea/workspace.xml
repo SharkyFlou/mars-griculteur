@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96ba2e5e-82b2-41dd-8461-05316c7fd5d7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Description.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllEvents.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllEvents.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllPlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllPlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllSeedPlant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllSeedPlant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllTools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/AllTools.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/BasicItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/BasicItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/BasicPlant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/BasicPlant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/CreateAllSeedPlant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/CreateAllSeedPlant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Mars_classe.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

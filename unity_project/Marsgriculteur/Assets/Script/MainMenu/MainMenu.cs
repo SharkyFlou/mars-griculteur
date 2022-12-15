@@ -12,12 +12,14 @@ public class MainMenu : MonoBehaviour
     /// <summary>
     /// La méthode <c>PlayGame</c> permet de démarrer le jeu.
     /// </summary>
-    public void PlayGame(int gameLength)
+    public void PlayGame(int objec)
     {
         //permet de charger les scenes qui se trouvent dans buildSettings->Scenes
         //on les trie par nom ou par poisiton sur cette liste
-        NextDay.gameLength = gameLength;
+
+        Game.moneyObjective = objec;
         SceneManager.LoadScene("Map");
+        //GameObject.Find("Money").GetComponent<Game>().moneyObjective = objec;
     }
 
     /// <summary>

@@ -11,7 +11,7 @@ public class CameraMovement : MonoBehaviour
     //Serialization is the automatic process of transforming data structures or object states into a format that Unity can store and reconstruct later.
     [SerializeField]
     private Camera cam;
-    
+
     //permet de bouger la camera
     private Vector3 dragOrigin;
 
@@ -37,12 +37,13 @@ public class CameraMovement : MonoBehaviour
     /// La méthode <c>Awake</c> est appelée lorsque l'instance de script est en cours de chargement.
     /// Elle place la caméra.
     /// </summary>
-    private void Awake(){
-        mapMinX = tilemapRenderer.transform.position.x - tilemapRenderer.bounds.size.x/2f;
-        mapMaxX = tilemapRenderer.transform.position.x + tilemapRenderer.bounds.size.x/2f;
+    private void Awake()
+    {
+        mapMinX = tilemapRenderer.transform.position.x - tilemapRenderer.bounds.size.x / 2f;
+        mapMaxX = tilemapRenderer.transform.position.x + tilemapRenderer.bounds.size.x / 2f;
 
-        mapMinY = tilemapRenderer.transform.position.y - tilemapRenderer.bounds.size.y/2f;
-        mapMaxY = tilemapRenderer.transform.position.y + tilemapRenderer.bounds.size.y/2f;
+        mapMinY = tilemapRenderer.transform.position.y - tilemapRenderer.bounds.size.y / 2f;
+        mapMaxY = tilemapRenderer.transform.position.y + tilemapRenderer.bounds.size.y / 2f;
     }
 
     /// <summary>
@@ -57,42 +58,44 @@ public class CameraMovement : MonoBehaviour
     /// <summary>
     /// La méthode <c>Update</c> est appelée une fois par fenêtre (frame). Elle gère la caméra.
     /// </summary>
-    private void Update(){
+    private void Update()
+    {
         PanCamera();
     }
 
     /// <summary>
     /// La méthode <c>PanCamera</c> permet de bouger la caméra en fonction du déplacement de la souris.
     /// </summary>
-    private void PanCamera(){
+    private void PanCamera()
+    {
         //garde la position intiale du mouse
         if (!canMoove)
         {
             return;
         }
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
             dragOrigin = cam.ScreenToWorldPoint(Input.mousePosition);
 
         //garde la nouvelle position à laquelle le mouse se trouve 
-        if(Input.GetMouseButton(0)){
+        if (Input.GetMouseButton(0))
+        {
             Vector3 difference = dragOrigin - cam.ScreenToWorldPoint(Input.mousePosition);
-
             cam.transform.position = ClampCamera(cam.transform.position + difference);
-
         }
-        
 
-    } 
+
+    }
 
     /// <summary>
     /// La méthode <c>ZoomIn</c> permet de zoomer.
     /// </summary>
-    public void ZoomIn(){
+    public void ZoomIn()
+    {
         //camOrtographicSize = hauteur de la camera depuis le centre de celle-ci
         float newSize = cam.orthographicSize - zoom;
         //clamp = limite la valeur aux deux parametres donnes
-        cam.orthographicSize =Mathf.Clamp(newSize, minCamSize, maxCamSize);
+        cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
 
 
         cam.transform.position = ClampCamera(cam.transform.position);
@@ -101,11 +104,12 @@ public class CameraMovement : MonoBehaviour
     /// <summary>
     /// La méthode <c>ZoomOut</c> permet de dézoomer
     /// </summary>
-    public void ZoomOut(){
+    public void ZoomOut()
+    {
         //camOrtographicSize = hauteur de la camera depuis le centre de celle-ci
         float newSize = cam.orthographicSize + zoom;
         //clamp = limite la valeur aux deux parametres donnes
-        cam.orthographicSize =Mathf.Clamp(newSize, minCamSize, maxCamSize); 
+        cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
 
         cam.transform.position = ClampCamera(cam.transform.position);
 
@@ -116,11 +120,12 @@ public class CameraMovement : MonoBehaviour
     /// </summary>
     /// <param name="targetPosition">la position désirée</param>
     /// <returns>Elle retourne la position de la caméra</returns>
-    private Vector3 ClampCamera(Vector3 targetPosition){
+    private Vector3 ClampCamera(Vector3 targetPosition)
+    {
         //camOrtographicSize = hauteur de la camera depuis le centre de celle-ci
         //cam.aspect permet de trouver le width en multipliant par la hauteur
         float camHeight = cam.orthographicSize;
-        float camWidth = cam.orthographicSize*cam.aspect;
+        float camWidth = cam.orthographicSize * cam.aspect;
 
         float minCamX = mapMinX + camWidth;
         float maxCamX = mapMaxX - camWidth;
