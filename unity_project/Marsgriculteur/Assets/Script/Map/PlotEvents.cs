@@ -39,7 +39,7 @@ public class PlotEvents : MonoBehaviour
 
     public Inventory inventory;
 
-    public ActivePanel reafficheInvOnClick;
+    public InventoryPanel reafficheInvOnClick;
 
     public ChangeTextError error;
     public OpenCanvas errorDislp;
@@ -125,7 +125,7 @@ public class PlotEvents : MonoBehaviour
         }
         else
         {
-            error.changeText("Inventaire plein", "Vous ne pouvez pas récuperer cette plante, votre inventaire est plein");
+            error.changeText("Inventaire plein", "Vous ne pouvez pas recuperer cette plante, votre inventaire est plein");
             errorDislp.inverseAffichage();
         }
     }
@@ -187,7 +187,7 @@ public class PlotEvents : MonoBehaviour
             //Debug.Log("on rentre dans le OnMouseDoxwn(devrait etre premiere fonction");
             PlotSupervisor.GetComponent<GerePlant>().StockedPlot = this.gameObject.GetComponent<PlotEvents>();
             hidesPanel.inverseAffichage();
-            reafficheInvOnClick.Affiche();
+            reafficheInvOnClick.Start();
         }
     }
 

@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using game;
-using Unity.VisualScripting;
 using System;
 
 /// <summary>
@@ -55,7 +52,6 @@ public class SellScript : MonoBehaviour
     /// </summary>
     public void valueChanged()
     {
-        
         resValue.text = Math.Round(slider.value) + " : " + (totalPrice());
     }
 
@@ -69,7 +65,7 @@ public class SellScript : MonoBehaviour
         int price = market.getLastPricePlant(plantChoosed);
         return price * currentValue;
     }
-    
+
     /// <summary>
     /// La méthode <c>sell</c> permet de vendre la quantité de plante souhaitée par le joueur.
     /// </summary>

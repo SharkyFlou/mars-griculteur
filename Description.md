@@ -61,25 +61,19 @@ Il devra donc comprendre et prévoir l'évolution de prix du marché afin de pou
 <a name="liste-des-principales-fonctionnalites"></a>
 
 ## Liste des principales fonctionnalités
-- [X] Avoir une vu des ses plantations, et pouvoir choisir quelle plante planter
+- [X] Avoir une vue des ses plantations/parcelles, et pouvoir choisir quelle plante planter en cliquant sur celles-ci
 - [X] Pouvoir voir son stand et mettre des produits à vendre, pouvoir modifier leurs prix en fonction du marché et des événements
 - [X] Arrivée de nouveaux évenements, qui modifie la demande/les prix du marché, ou les récoltes
 - [X] Passer au jour suivant
 - [X] Voir l'inventaire des graines, avec un poids maximum pour l'inventaire
 - [X] Voir l'inventaire des outils
 - [X] Voir l'inventaire des plantes, avec un poids maximum pour l'inventaire
-- [ ] Avoir une vue des ses plantations/parcelles, et pouvoir choisir quoi planter ou élever en cliquant sur celles-ci
 - [ ] Pouvoir acheter (ou vendre) des parcelles pour planter ou élever, mais cela modifie le loyer
 - [ ] Pouvoir acheter des graines, des outils, des engrais… qui boostent notre production
 - [ ] Choix de récolte pour passer à l’étape de vente, et valider ses choix de vente pour passer à l’étape d'événement, puis enfin passer à l’étape de récolte
 - [ ] Pouvoir voir son stand et les produits en vente, en pouvoir modifier leurs prix
 - [ ] Arrivée de nouveaux événements, qui modifie la demande/les prix du marché, ou les récoltes
 - [ ] Pouvoir voir les prix actuels des produits sur le marché, et remarquer une fluctuation en fonction des évènement et des saisons (à travers un journal, téléphone et TV)
-
-- [ ] Optionnel : Notion de salarié, on peut embaucher un salarié plus ou moins compétent, qui nous permet d’augmenter notre capacité de récolte, mais le salarié à un coût/mois
-- [ ] Optionnel : Notion d’image de l’entreprise, peut être amélioré via du marketing, baisser via des évènements, si l’image est haute, les gens sont capables d’acheter nos produits pour plus cher, et vice-versa
-- [ ] Optionnel : les produits périment/ne périment pas
-- [ ] Optionnel : quand on clique sur l’argent on a accès a des infos comme : le loyer, et les revenus des mois passés
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -89,7 +83,8 @@ Il devra donc comprendre et prévoir l'évolution de prix du marché afin de pou
 <a name="Informations-que-le-jeu-renvoi-au-joueur"></a>
 
 ## Informations que le jeu renvoi au joueur
-- [ ] Afficher un message lorsque le joueur veut quitter la partie
-- [ ] 
+- [X] Afficher un message lorsque le joueur veut quitter la partie
+- [X] Afficher un message dès qu'on clique sur une plante qu'on vend
+- [X] Afficher un message quand on achète une graine
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
