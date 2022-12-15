@@ -187,7 +187,7 @@ namespace game
             {
                 Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
                 Debug.Log("AFFICHEEEEEEEEEEEEEE");
-                renderer.gameObject.SetActive(true);
+                GetComponent<Renderer>().gameObject.SetActive(true);
             }
 
             dicoPossessions = Market.instance.getActiveEvents();
