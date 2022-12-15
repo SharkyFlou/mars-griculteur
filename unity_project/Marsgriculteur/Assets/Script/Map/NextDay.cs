@@ -77,7 +77,7 @@ namespace game
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
 
-            StartCoroutine(classePopup.message("Vous �tes pass� au jour suivant!\nRegardez s'il y a un nouvel �v�nement!"));
+            StartCoroutine(classePopup.message("Vous êtes passé au jour suivant!\nRegardez s'il y a un nouvel événement!"));
         }
 
         /// <summary>
