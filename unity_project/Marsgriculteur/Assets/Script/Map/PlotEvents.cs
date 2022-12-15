@@ -122,7 +122,7 @@ public class PlotEvents : MonoBehaviour
         }
         else
         {
-            error.changeText("Inventaire plein", "Vous ne pouvez pas récuperer cette plante, votre inventaire est plein");
+            error.changeText("Inventaire plein", "Vous ne pouvez pas recuperer cette plante, votre inventaire est plein");
             errorDislp.inverseAffichage();
         }
     }
