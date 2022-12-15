@@ -24,6 +24,9 @@ namespace game
         private int nbrJour;
         [SerializeField] public Market market;
 
+        public PopUp classePopup;
+        public Transform renderer;
+
         //contient la liste des notifications avec leur durée d'apparition
         public static Dictionary<EventInfo, int> dicoPossessions = new Dictionary<EventInfo, int>();
 
@@ -73,7 +76,8 @@ namespace game
 
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
-            
+
+            StartCoroutine(classePopup.message("Vous êtes passé au jour suivant!\nRegardez s'il y a un nouvel événement!"));
         }
 
         /// <summary>
@@ -182,10 +186,12 @@ namespace game
             else
             {
                 Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
+                renderer.gameObject.SetActive(true);
             }
 
             dicoPossessions = Market.instance.getActiveEvents();
             notif.afficheInventory();
+
 
             //Une liste pour retenir tous les events qui arrivent à la fin
             List<EventInfo> item = new List<EventInfo>();

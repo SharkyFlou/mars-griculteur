@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96ba2e5e-82b2-41dd-8461-05316c7fd5d7" name="Changes" comment="" />
+    <list default="true" id="96ba2e5e-82b2-41dd-8461-05316c7fd5d7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Scenes/Map.unity" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Scenes/Map.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/Game.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/Notification.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Game/Notification.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Map/NextDay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Map/NextDay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Map/SellScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/unity_project/Marsgriculteur/Assets/Script/Map/SellScript.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
