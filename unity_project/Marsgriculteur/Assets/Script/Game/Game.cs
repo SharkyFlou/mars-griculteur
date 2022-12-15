@@ -20,6 +20,7 @@ namespace game
         private Shop shop;
         private InventoryPlant inventoryPlant;
         public int money;
+        public static int moneyObjective;
         public TextMeshProUGUI moneyText;
 
         /// <summary>
@@ -29,8 +30,9 @@ namespace game
         /// </summary>
         void Start()
         {
-            money = 5000;
+            money = 99900;
             moneyText.SetText(money.ToString());
+            Debug.Log("Objectif : " + moneyObjective.ToString());
         }
 
         /// <summary>
@@ -62,6 +64,18 @@ namespace game
             money -= price;
             moneyText.SetText(money.ToString());
         }
+
+        public void testObjective()
+        {
+            if (money >= moneyObjective)
+                endGame();
+        }
+
+        public void endGame()
+        {
+            Debug.Log("Fin de la partie en " + GameObject.Find("bed_sprite").GetComponent<NextDay>().getNbJour().ToString() + " jour(s) !");
+        }
+
     }
 
 }
