@@ -74,7 +74,7 @@ namespace game
                 gridBag.transform.GetComponent<RectTransform>().offsetMax = new Vector2(-gridBag.transform.parent.GetComponent<RectTransform>().rect.width / 4, gridBag.transform.GetComponent<RectTransform>().offsetMax.y);
 
             }
-            else if(this.name == "MarketInv")
+            else if (this.name == "MarketInv")
             {
                 // Devient enfant du PanelInventory
                 gridBag.transform.SetParent(PanelInventory.transform);
@@ -164,6 +164,14 @@ namespace game
                 {
                     //Debug.Log("on rentre dans l'inventory shop, no problem");
                     panel.afficheInventory(CreateAllSeedPlant.shopInv.getInventory(), panelAvecInfos);
+                    TextMeshProUGUI[] texts = this.transform.root.GetComponentsInChildren<TextMeshProUGUI>();
+                    foreach (TextMeshProUGUI text in texts)
+                    {
+                        if (text.name == "TextSeed")
+                        {
+                            text.text = " ";
+                        }
+                    }
                     return;
                 }
 
