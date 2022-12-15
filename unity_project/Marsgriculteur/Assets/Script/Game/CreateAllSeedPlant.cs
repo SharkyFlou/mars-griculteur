@@ -36,6 +36,7 @@ namespace game
             dicoTool = JsonConvert.DeserializeObject<AllTools>(JSONTool.text);
 
             mainInventory = new Inventory();
+
             /* mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.ELB), 1);
             mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AJOS), 1);
             mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.EGRO), 1);
