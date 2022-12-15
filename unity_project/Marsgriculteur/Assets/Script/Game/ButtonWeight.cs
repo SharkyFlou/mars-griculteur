@@ -8,18 +8,26 @@ using static UnityEditor.Progress;
 
 
 public class ButtonWeight : MonoBehaviour
+
+
 {
+    public Game moneyStack;
     public void Start()
     {
-        CreateAllSeedPlant.mainInventory.boughtMoreSpace();
-        TextMeshProUGUI[] texts = this.transform.root.GetComponentsInChildren<TextMeshProUGUI>();
-        foreach (TextMeshProUGUI text in texts)
+        if (moneyStack.money >= 3000)
         {
-            if (text.name == "TextWeight")
+            CreateAllSeedPlant.mainInventory.boughtMoreSpace();
+            TextMeshProUGUI[] texts = this.transform.root.GetComponentsInChildren<TextMeshProUGUI>();
+            foreach (TextMeshProUGUI text in texts)
             {
-                this.transform.root.GetComponentInChildren<InventoryPanel>().updateWeight(text.transform);
+                if (text.name == "TextWeight")
+                {
+                    this.transform.root.GetComponentInChildren<InventoryPanel>().updateWeight(text.transform);
+                }
             }
+            moneyStack.SubsMoney(3000);
         }
+
 
     }
 

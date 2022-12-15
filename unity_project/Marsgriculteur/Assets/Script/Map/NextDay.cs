@@ -11,8 +11,8 @@ using UnityEngine.EventSystems;
 namespace game
 {
     /// <summary>
-    /// La classe <c>NextDay</c> s'occupe de tout ce qui a à changer avant de passer au jour suivant.
-    /// Elle possède les attributs suivant : dayText, notif, plots, plotList, nbrJour, market, dicoPossessions.
+    /// La classe <c>NextDay</c> s'occupe de tout ce qui a ï¿½ changer avant de passer au jour suivant.
+    /// Elle possï¿½de les attributs suivant : dayText, notif, plots, plotList, nbrJour, market, dicoPossessions.
     /// </summary>
     public class NextDay : MonoBehaviour
     {
@@ -25,24 +25,24 @@ namespace game
         [SerializeField] public Market market;
 
         public PopUp classePopup;
-        public Transform renderer;
+        public Transform render;
 
-        //contient la liste des notifications avec leur durée d'apparition
+        //contient la liste des notifications avec leur durï¿½e d'apparition
         public static Dictionary<EventInfo, int> dicoPossessions = new Dictionary<EventInfo, int>();
 
         /// <summary>
-        /// La méthode <c>Start</c> est utilisée pour le démarrage. Etant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
-        /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
-        /// Pour notre cas elle permet de récupérer les champs pour pouvoir les faire pousser après et initialise le nombre de jour.
+        /// La mï¿½thode <c>Start</c> est utilisï¿½e pour le dï¿½marrage. Etant donnï¿½ que Start n'est appelï¿½e qu'une seule fois, elle permet d'initialiser les ï¿½lï¿½ments
+        /// qui doivent persister tout au long de la vie du script, mais ne doivent ï¿½tre configurï¿½s qu'immï¿½diatement avant utilisation.
+        /// Pour notre cas elle permet de rï¿½cupï¿½rer les champs pour pouvoir les faire pousser aprï¿½s et initialise le nombre de jour.
         /// </summary>
         void Start()
         {
-            if (plots == null) //pour éviter de planter (ahah "plant")
+            if (plots == null) //pour ï¿½viter de planter (ahah "plant")
             {
                 return;
             }
 
-            //parcours les plots pour les récupérer et les stocker afin de pouvoir les faire pousser
+            //parcours les plots pour les rï¿½cupï¿½rer et les stocker afin de pouvoir les faire pousser
             GetPlots(plots);
 
             //pour l'affichage des jours
@@ -51,16 +51,16 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>getInventoryNotif</c> permet d'obtenir toutes les notifications.
+        /// La mï¿½thode <c>getInventoryNotif</c> permet d'obtenir toutes les notifications.
         /// </summary>
-        /// <returns>Elle retourne un dictionnaire de notifications avec la durée pour laquelle elles restent</returns>
+        /// <returns>Elle retourne un dictionnaire de notifications avec la durï¿½e pour laquelle elles restent</returns>
         public static Dictionary<EventInfo, int> getInventoryNotif()
         {
             return dicoPossessions;
         }
 
         /// <summary>
-        /// La méthode <c>OnMouseDown</c> permet lorsqu'on clique de passer au jour suivant
+        /// La mï¿½thode <c>OnMouseDown</c> permet lorsqu'on clique de passer au jour suivant
         /// </summary>
         void OnMouseDown()
         {
@@ -77,11 +77,11 @@ namespace game
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
 
-            StartCoroutine(classePopup.message("Vous êtes passé au jour suivant!\nRegardez s'il y a un nouvel événement!"));
+            StartCoroutine(classePopup.message("Vous ï¿½tes passï¿½ au jour suivant!\nRegardez s'il y a un nouvel ï¿½vï¿½nement!"));
         }
 
         /// <summary>
-        /// La méthode <c>faitPousser</c> parcourt chaque champs, puis appelle leur fonction fairePousser
+        /// La mï¿½thode <c>faitPousser</c> parcourt chaque champs, puis appelle leur fonction fairePousser
         /// </summary>
         public void faitPousser()
         {
@@ -95,7 +95,7 @@ namespace game
                     }
                     catch //THIS NEVER RUNS
                     {
-                        //Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transforme.name + "\" n'a pas marché");
+                        //Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transforme.name + "\" n'a pas marchï¿½");
                     }
                 }
                 else
@@ -106,9 +106,9 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>GetPlots</c> permet de récupérer les champs.
+        /// La mï¿½thode <c>GetPlots</c> permet de rï¿½cupï¿½rer les champs.
         /// </summary>
-        /// <param name="parent">là où se trouve les champs</param>
+        /// <param name="parent">lï¿½ oï¿½ se trouve les champs</param>
         private void GetPlots(Transform parent)
         {
             plotList = new List<Transform>();
@@ -120,10 +120,10 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>addToInventory</c> permet d'ajouter un événement au dictionnaire
+        /// La mï¿½thode <c>addToInventory</c> permet d'ajouter un ï¿½vï¿½nement au dictionnaire
         /// </summary>
-        /// <param name="item">l'événement</param>
-        /// <param name="duree">la durée de l'événement</param>
+        /// <param name="item">l'ï¿½vï¿½nement</param>
+        /// <param name="duree">la durï¿½e de l'ï¿½vï¿½nement</param>
         public void addToInventory(EventInfo item, int duree)
         {
             bool trouve = false;
@@ -154,9 +154,9 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>removeFromInventory</c> permet de supprimer un item instantanément
+        /// La mï¿½thode <c>removeFromInventory</c> permet de supprimer un item instantanï¿½ment
         /// </summary>
-        /// <param name="item">l'item à supprimer</param>
+        /// <param name="item">l'item ï¿½ supprimer</param>
         public void removeFromInventory(EventInfo item)
         {
             foreach (EventInfo kvp in dicoPossessions.Keys)
@@ -172,7 +172,7 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>EventDay</c> permet d'afficher les événements actuels, de décrémenter leur durée et de les suppimer s'ils arrivent à la fin.
+        /// La mï¿½thode <c>EventDay</c> permet d'afficher les ï¿½vï¿½nements actuels, de dï¿½crï¿½menter leur durï¿½e et de les suppimer s'ils arrivent ï¿½ la fin.
         /// </summary>
         /// <param name="nbrJour"></param>
         public void EventDay(int nbrJour)
@@ -186,25 +186,25 @@ namespace game
             else
             {
                 Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
-                renderer.gameObject.SetActive(true);
+                render.gameObject.SetActive(true);
             }
 
             dicoPossessions = Market.instance.getActiveEvents();
             notif.afficheInventory();
 
 
-            //Une liste pour retenir tous les events qui arrivent à la fin
+            //Une liste pour retenir tous les events qui arrivent ï¿½ la fin
             List<EventInfo> item = new List<EventInfo>();
 
             //Debug.Log("Nombre d'event : "+ dicoPossessions.Count);
-            //parcours du dico des notifs pour voir si les events arrivent à la fin
+            //parcours du dico des notifs pour voir si les events arrivent ï¿½ la fin
             for (int i = 0; i < dicoPossessions.Count; i++)
             {
                 EventInfo itemOfSlot = dicoPossessions.ElementAt(i).Key;
                 int duree = dicoPossessions.ElementAt(i).Value;
 
                 //Debug.Log("Name = " + itemOfSlot.getName() + "Value = " + duree);
-                dicoPossessions[dicoPossessions.ElementAt(i).Key] --;
+                dicoPossessions[dicoPossessions.ElementAt(i).Key]--;
 
                 duree = dicoPossessions.ElementAt(i).Value;
 
@@ -225,6 +225,6 @@ namespace game
         {
             return nbrJour;
         }
-        
+
     }
 }
