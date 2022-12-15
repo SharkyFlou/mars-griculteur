@@ -1,11 +1,7 @@
-using game;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 using System.Linq;
-using static UnityEditor.Progress;
 
 namespace game
 {
