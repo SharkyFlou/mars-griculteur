@@ -342,7 +342,6 @@ GameObject:
   - component: {fileID: 3404251740798262440}
   - component: {fileID: 3404251740798262442}
   - component: {fileID: 3404251740798262441}
-  - component: {fileID: 3404251740798262443}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -390,7 +389,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 900, y: 250}
+  m_CellSize: {x: 250, y: 250}
   m_Spacing: {x: 15, y: 15}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -408,21 +407,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
   m_VerticalFit: 2
---- !u!114 &3404251740798262443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3404251740798262447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01450dd1f00d9e24fa5b95cd2bccb0d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextDay: {fileID: 0}
-  SlotNotif: {fileID: 6021430434831316145, guid: 9f155fb961734450098927bcb99d6c92, type: 3}
-  slotPanel: {fileID: 0}
 --- !u!1 &3404251740878183161
 GameObject:
   m_ObjectHideFlags: 0

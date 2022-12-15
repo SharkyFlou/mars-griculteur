@@ -37,7 +37,7 @@ public class PlotEvents : MonoBehaviour
 
     public Inventory inventory;
 
-    public ActivePanel reafficheInvOnClick;
+    public InventoryPanel reafficheInvOnClick;
 
     /// <summary>
     /// La méthode <c>Start</c> est utilisée pour le démarrage. Etant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
@@ -173,7 +173,7 @@ public class PlotEvents : MonoBehaviour
             //Debug.Log("on rentre dans le OnMouseDoxwn(devrait etre premiere fonction");
             PlotSupervisor.GetComponent<GerePlant>().StockedPlot = this.gameObject.GetComponent<PlotEvents>();
             hidesPanel.inverseAffichage();
-            reafficheInvOnClick.Affiche();
+            reafficheInvOnClick.Start();
         }
     }
 

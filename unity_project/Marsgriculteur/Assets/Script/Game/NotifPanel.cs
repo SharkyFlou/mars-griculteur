@@ -8,8 +8,8 @@ using TMPro;
 namespace game
 {
     /// <summary>
-    /// La classe <c>NotifPanel</c> s'occupe d'ouvrir la fenêtre qui contient les notifications (et de la préremplir)
-    /// Elle possède 4 attributs : PanelInventory, PanelNotif, notif et dico (un dictionnaire qui contient les événements)
+    /// La classe <c>NotifPanel</c> s'occupe d'ouvrir la fenï¿½tre qui contient les notifications (et de la prï¿½remplir)
+    /// Elle possï¿½de 4 attributs : PanelInventory, PanelNotif, notif et dico (un dictionnaire qui contient les ï¿½vï¿½nements)
     /// </summary>
     public class NotifPanel : MonoBehaviour
     {
@@ -19,8 +19,8 @@ namespace game
         public Dictionary<EventInfo, int> dico = new Dictionary<EventInfo, int>();
 
         /// <summary>
-        /// La méthode <c>Start</c> est utilisée pour le démarrage. Étant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
-        /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
+        /// La mï¿½thode <c>Start</c> est utilisï¿½e pour le dï¿½marrage. ï¿½tant donnï¿½ que Start n'est appelï¿½e qu'une seule fois, elle permet d'initialiser les ï¿½lï¿½ments
+        /// qui doivent persister tout au long de la vie du script, mais ne doivent ï¿½tre configurï¿½s qu'immï¿½diatement avant utilisation.
         /// Pour notre cas elle permet d'initialiser le panel des notifications (de le mettre invisible, etc).
         /// </summary>
         void Start()
@@ -32,11 +32,11 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>OpenPanel</c> permet d'ouvrir ou de fermer la fenêtre
+        /// La mï¿½thode <c>OpenPanel</c> permet d'ouvrir ou de fermer la fenï¿½tre
         /// </summary>
         public void OpenPanel()
         {
-            if(!PanelInventory.activeSelf)
+            if (!PanelInventory.activeSelf)
                 PanelNotif.SetActive(!PanelNotif.activeSelf);
         }
     }

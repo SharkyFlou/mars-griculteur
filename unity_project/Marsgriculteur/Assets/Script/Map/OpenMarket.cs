@@ -6,18 +6,18 @@ using UnityEngine.EventSystems;
 using game;
 
 /// <summary>
-/// La classe <c>OpenMarket</c> permet d'afficher le market et mettre à jour le graphe.
-/// Elle possède 4 attributs : canvas, graphContainer, openCanvasMarket, reafficheInvOnClickMarket.
+/// La classe <c>OpenMarket</c> permet d'afficher le market et mettre ï¿½ jour le graphe.
+/// Elle possï¿½de 4 attributs : canvas, graphContainer, openCanvasMarket, reafficheInvOnClickMarket.
 /// </summary>
 public class OpenMarket : MonoBehaviour
 {
     public Canvas canvas;
     public Transform graphContainer;
     public OpenCanvas openCanvasMarket;
-    public ActivePanel reafficheInvOnClickMarket;
+    public InventoryPanel reafficheInvOnClickMarket;
 
     /// <summary>
-    /// La méthode <c>OnMouseDown</c> permet, lors du click, d'afficher l'inventaire.
+    /// La mï¿½thode <c>OnMouseDown</c> permet, lors du click, d'afficher l'inventaire.
     /// </summary>
     private void OnMouseDown()
     {
@@ -36,6 +36,6 @@ public class OpenMarket : MonoBehaviour
             Debug.LogError("mmmh" + e.Message);
         }
 
-        reafficheInvOnClickMarket.Affiche();
+        reafficheInvOnClickMarket.Start();
     }
 }

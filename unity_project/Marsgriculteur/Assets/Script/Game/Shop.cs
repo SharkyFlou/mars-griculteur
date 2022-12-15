@@ -7,19 +7,19 @@ using UnityEngine;
 namespace game
 {
     /// <summary>
-    /// La classe <c>Shop</c> permet de créer un magasin avec toutes les graines qu'on peut acheter.
-    /// Elle possède un attribut inventory et un dictionnaire qui contient tous les item du magasin.
+    /// La classe <c>Shop</c> permet de crï¿½er un magasin avec toutes les graines qu'on peut acheter.
+    /// Elle possï¿½de un attribut inventory et un dictionnaire qui contient tous les item du magasin.
     /// </summary>
     public class Shop : MonoBehaviour
     {
 
         public Inventory inventory;
         // Magasin de vente de graines
-        // C'est un inventaire à haute quantité qui ne peut pas être réduit
+        // C'est un inventaire ï¿½ haute quantitï¿½ qui ne peut pas ï¿½tre rï¿½duit
         public Dictionary<BasicItem, int> slots = new Dictionary<BasicItem, int>();
 
         /// <summary>
-        /// Ce constructeur est là pour la compilation
+        /// Ce constructeur est lï¿½ pour la compilation
         /// </summary>
         public Shop()
         {
@@ -35,17 +35,17 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>Start</c> est utilisée pour le démarrage. Étant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
-        /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
+        /// La mï¿½thode <c>Start</c> est utilisï¿½e pour le dï¿½marrage. ï¿½tant donnï¿½ que Start n'est appelï¿½e qu'une seule fois, elle permet d'initialiser les ï¿½lï¿½ments
+        /// qui doivent persister tout au long de la vie du script, mais ne doivent ï¿½tre configurï¿½s qu'immï¿½diatement avant utilisation.
         /// Pour notre cas elle initialise le magasin.
         /// </summary>
         void Start()
         {
-            //Debug.Log("Shop présent au clique");
-            this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB), 999);
+            //Debug.Log("Shop prï¿½sent au clique");
+            /* this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.ELB), 999);
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.EGRO), 999);
             this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.AJOS), 999);
-            this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.AZLOC), 999);
+            this.slots.Add(CreateAllSeedPlant.dicoPlant.createSeed(EnumTypePlant.AZLOC), 999); */
             //inventory.afficheInventory(slots);
         }
 
