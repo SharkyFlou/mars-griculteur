@@ -31,41 +31,41 @@ namespace game
             //seed = 1 a 100
             if (panelInfosVente != null)
             {
-                if (this.transform.parent.parent.name == "Shop")
+                if (this.transform.root.name == "Canvas Shop")
                 {
                     if (item.getId() is > 0 and < 101)
                     {
                         // Prix de la graine dans le slot.
                         int price = GameObject.Find("marketBase").GetComponent<Market>().getLastPriceSeed(((Seed)item).getTypePlante());
-                        if (panelInfosVente.GetComponent<Game>().money >= price)
+                        if (this.transform.root.GetComponentInChildren<InventoryPanel>().moneyText.GetComponent<Game>().money >= price)
                         {
                             CreateAllSeedPlant.mainInventory.addToInventory(item, 1, CreateAllSeedPlant.mainInventory.getInventory());
-                            panelInfosVente.GetComponent<Game>().SubsMoney(price);
+                            this.transform.root.GetComponentInChildren<InventoryPanel>().moneyText.GetComponent<Game>().SubsMoney(price);
                         }
                         TextMeshProUGUI[] texts = this.transform.root.GetComponentsInChildren<TextMeshProUGUI>();
                         foreach (TextMeshProUGUI text in texts)
                         {
                             if (text.name == "TextSeed")
                             {
-                                text.text = "Vous avez acheté une graine de " + item.getName();
+                                text.text = "Vous avez obtenu une graine de " + item.getName();
                             }
                         }
                     }
                 }
-                else if (this.transform.parent.parent.name == "MarketInv")
+                else if (this.transform.root.name == "Canvas Market")
                 {
                     if (item.getId() is > 100 and <= 200)
                     {
-                        panelInfosVente.GetComponent<SellScript>().changeMaxValue(qttSlot);
+                        this.transform.root.GetComponentInChildren<SellScript>().changeMaxValue(qttSlot);
                         BasicPlant itemplante = (BasicPlant)item;
-                        panelInfosVente.GetComponent<SellScript>().changePlant(itemplante.getTypePlante());
-                        panelInfosVente.GetComponent<SellScript>().slider.interactable = true;
+                        this.transform.root.GetComponentInChildren<SellScript>().changePlant(itemplante.getTypePlante());
+                        this.transform.root.GetComponentInChildren<SellScript>().slider.interactable = true;
                     }
                 }
-                else if (panelInfosVente.name == "PanelPlot" && (item.getId() is > 0 and < 101))
+                else if (this.transform.root.name == "Canvas Plant Seed" && (item.getId() is > 0 and < 101))
                 {
                     //panelInfosVente.GetComponent<GerePlant>().sendInfoClick(item, qttSlot);
-                    panelInfosVente.GetComponent<GerePlant>().StockedPlot.planteGraine(item);
+                    this.transform.root.GetComponentInChildren<GerePlant>().StockedPlot.planteGraine(item);
                     this.transform.root.GetComponentInChildren<OpenCanvas>().inverseAffichage();
                 }
 

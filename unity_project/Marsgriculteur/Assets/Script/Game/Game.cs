@@ -21,6 +21,7 @@ namespace game
         private InventoryPlant inventoryPlant;
         public int money;
         public static int moneyObjective;
+        private int totalMoneyEarned;
         public TextMeshProUGUI moneyText;
 
         /// <summary>
@@ -52,6 +53,7 @@ namespace game
         public void AddMoney(int price)
         {
             money += price;
+            totalMoneyEarned += price;
             moneyText.SetText(money.ToString());
         }
 
@@ -73,7 +75,9 @@ namespace game
 
         public void endGame()
         {
-            Debug.Log("Fin de la partie en " + GameObject.Find("bed_sprite").GetComponent<NextDay>().getNbJour().ToString() + " jour(s) !");
+            GameStats.qttMoney = totalMoneyEarned.ToString();
+            GameStats.nbDay = GameObject.Find("bed_sprite").GetComponent<NextDay>().getNbJour().ToString();
+            SceneManager.LoadScene("ResultScreen");
         }
 
     }

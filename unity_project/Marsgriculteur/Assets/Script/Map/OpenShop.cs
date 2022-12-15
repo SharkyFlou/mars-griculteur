@@ -8,26 +8,26 @@ namespace game
 {
     /// <summary>
     /// La classe <c>OpenShop</c> permet d'ouvrir le panel shop, quand on clique sur la "maison" du shop.
-    /// Elle possède 3 attributs : canvas, openCanvasShop et shop.
+    /// Elle possï¿½de 3 attributs : canvas, openCanvasShop et shop.
     /// </summary>
     public class OpenShop : MonoBehaviour
     {
         public Canvas canvas;
         public OpenCanvas openCanvasShop;
-        public ActivePanel shop;
+        public InventoryPanel shop;
 
         /// <summary>
-        /// La méthode <c>OnMouseDown</c> permet l'affichage du shop, quand on clique.
+        /// La mï¿½thode <c>OnMouseDown</c> permet l'affichage du shop, quand on clique.
         /// </summary>
         private void OnMouseDown()
         {
-            if (EventSystem.current.IsPointerOverGameObject()) //si la souris est sur un élément UI
+            if (EventSystem.current.IsPointerOverGameObject()) //si la souris est sur un ï¿½lï¿½ment UI
             {
                 return;
             }
 
             openCanvasShop.inverseAffichage();
-            shop.Affiche();
+            shop.Start();
         }
     }
 }

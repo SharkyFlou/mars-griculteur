@@ -37,7 +37,7 @@ public class PlotEvents : MonoBehaviour
 
     public Inventory inventory;
 
-    public ActivePanel reafficheInvOnClick;
+    public InventoryPanel reafficheInvOnClick;
 
     public ChangeTextError error;
     public OpenCanvas errorDislp;
@@ -112,7 +112,7 @@ public class PlotEvents : MonoBehaviour
                 //Debug.Log("#### inventory : " + CreateAllSeedPlant.mainInventory.getInventory().Count);
                 CreateAllSeedPlant.mainInventory.addToInventory(
                     testPlant,
-                        10, CreateAllSeedPlant.mainInventory.getInventory());
+                    plantedPlant.getNbCollect(), CreateAllSeedPlant.mainInventory.getInventory());
             }
 
 
@@ -179,7 +179,7 @@ public class PlotEvents : MonoBehaviour
             //Debug.Log("on rentre dans le OnMouseDoxwn(devrait etre premiere fonction");
             PlotSupervisor.GetComponent<GerePlant>().StockedPlot = this.gameObject.GetComponent<PlotEvents>();
             hidesPanel.inverseAffichage();
-            reafficheInvOnClick.Affiche();
+            reafficheInvOnClick.Start();
         }
     }
 
