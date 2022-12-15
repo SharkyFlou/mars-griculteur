@@ -14,6 +14,8 @@ using UnityEngine.UI;
 /// </summary>
 public class PlotEvents : MonoBehaviour
 {
+    public bool isDesactive;
+    
     public Sprite plot_sprite;
     public Sprite plot_sprite_highlite;
     private Sprite seed_sprite;
@@ -42,6 +44,8 @@ public class PlotEvents : MonoBehaviour
     public ChangeTextError error;
     public OpenCanvas errorDislp;
 
+    public BuyPlot buy;
+
     /// <summary>
     /// La méthode <c>Start</c> est utilisée pour le démarrage. Etant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
     /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
@@ -49,7 +53,6 @@ public class PlotEvents : MonoBehaviour
     /// </summary>
     private void Start()
     {
-
         List<Transform> children = GetChildren(transform);
         foreach (Transform child in children)
         {
@@ -64,9 +67,9 @@ public class PlotEvents : MonoBehaviour
                 plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite;
             }
         }
-
         //PlantedPlant pplant = CreateAllSeedPlant.dicoPlant.createPlantedPlant(EnumTypePlant.ELB);
-
+        if (isDesactive)
+            plotImage.gameObject.GetComponent<SpriteRenderer>().color = new Color(164, 0, 0, 255);
         //donnePlantedPlante(pplant);
     }
 
@@ -122,7 +125,7 @@ public class PlotEvents : MonoBehaviour
         }
         else
         {
-            error.changeText("Inventaire plein", "Vous ne pouvez pas récuperer cette plante, votre inventaire est plein");
+            error.changeText("Inventaire plein", "Vous ne pouvez pas recuperer cette plante, votre inventaire est plein");
             errorDislp.inverseAffichage();
         }
     }
@@ -172,7 +175,12 @@ public class PlotEvents : MonoBehaviour
         {
             return;
         }
-        if (growthStatus == growthTime && growthStatus > 0)
+
+        if(isDesactive)
+        {
+            openBuyPlot();
+        }
+        else if (growthStatus == growthTime && growthStatus > 0)
             recupPlante();
         else if (!contientGraine)
         {
@@ -196,6 +204,17 @@ public class PlotEvents : MonoBehaviour
             children.Add(child);
         }
         return children;
+    }
+
+    public void openBuyPlot()
+    {
+        buy.open(this);
+    }
+
+    public void setPlotActive()
+    {
+        isDesactive = false;
+        plotImage.gameObject.GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
     }
 
     /// <summary>

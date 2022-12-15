@@ -43,7 +43,7 @@ namespace game
 
             foreach (Plant pl in plList)
             {
-                TMP_Dropdown.OptionData plantItem = new TMP_Dropdown.OptionData(pl.getName(), pl.getSprite());
+                TMP_Dropdown.OptionData plantItem = new TMP_Dropdown.OptionData("", pl.getSprite());
                 plantItems.Add(plantItem);
             }
             dropdown.AddOptions(plantItems);
