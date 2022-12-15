@@ -7,6 +7,7 @@ public class BuyPlot : MonoBehaviour
 
     private PlotEvents plot;
     public game.Game money;
+    public game.PopUp popUp;
     
  
     public void open(PlotEvents plo)
@@ -22,8 +23,16 @@ public class BuyPlot : MonoBehaviour
 
     public void buyPlot()
     {
-        money.SubsMoney(1500);
-        plot.setPlotActive();
+        if (money.money >= 1500)
+        {
+            money.SubsMoney(1500);
+            plot.setPlotActive();
+        }
+        else
+        {
+            popUp.message("Vous n'avez pas assez d'argent pour débloquer un Plot.");
+            //StartCoroutine(popUp.message("Vous n'avez pas assez d'argent pour débloquer un Plot."));
+        }
     }
 
     // Start is called before the first frame update
