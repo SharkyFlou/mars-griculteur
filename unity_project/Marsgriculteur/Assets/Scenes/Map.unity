@@ -36963,7 +36963,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thingsToHide:
   - {fileID: 2022912906}
-  - {fileID: 1005403763}
   - {fileID: 2017346438}
   - {fileID: 48061243}
   thingsToShow:
@@ -41940,7 +41939,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 557620604}
-  canvaPopUp: {fileID: 1573690026}
 --- !u!1 &1284436026
 GameObject:
   m_ObjectHideFlags: 0
