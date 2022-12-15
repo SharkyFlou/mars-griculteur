@@ -206,6 +206,12 @@ namespace game
             return this.currentWeight;
         }
 
+        public void boughtMoreSpace()
+        {
+            this.weightMax += 200;
+            //Debug.Log("current weight:" + weightMax);
+        }
+
         /// <summary>
         /// La méthode <c>isDicoVide</c> permet de savoir si l'inventaire est vide
         /// </summary>

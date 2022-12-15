@@ -148,5 +148,21 @@ namespace game
             rtr = rtr.Substring(0, rtr.Length - 2);
             return rtr;
         }
+
+        public string ifTarget()
+        {
+            if (this.targetSeed == true)
+            {
+                return "Les graines de : ";
+            }
+            else if (this.targetPlant == true)
+            {
+                return "Les plantes de : ";
+            }
+            else
+            {
+                return "Les outils : ";
+            }
+        }
     }
 }

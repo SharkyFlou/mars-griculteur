@@ -363,7 +363,8 @@ namespace game
         /// <param name="text">la zone de texte où sera affiché la capacité de l'inventaire</param>
         public void updateWeight(Transform text)
         {
-            text.GetComponent<TextMeshProUGUI>().SetText("Weight : " + CreateAllSeedPlant.mainInventory.getCurrentWeight().ToString());
+            text.GetComponent<TextMeshProUGUI>().SetText("Weight : " + CreateAllSeedPlant.mainInventory.getCurrentWeight().ToString() + " / " + CreateAllSeedPlant.mainInventory.getWeightMax().ToString() + " kg");
+            Debug.Log("update le texte");
         }
 
         /// <summary>
