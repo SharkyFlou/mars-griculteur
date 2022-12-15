@@ -21,6 +21,7 @@ namespace game
         public Transform plots;
         List<Transform> plotList; //contient tous les plots pour les faire pousser
         private int nbrJour;
+        public static int gameLength;
         [SerializeField] public Market market;
 
         //contient la liste des notifications avec leur durée d'apparition
@@ -212,5 +213,7 @@ namespace game
                 removeFromInventory(et);
             }
         }
+
+
     }
 }
