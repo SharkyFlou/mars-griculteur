@@ -109,7 +109,7 @@ public class PlotEvents : MonoBehaviour
                 //Debug.Log("#### inventory : " + CreateAllSeedPlant.mainInventory.getInventory().Count);
                 CreateAllSeedPlant.mainInventory.addToInventory(
                     testPlant,
-                        10, CreateAllSeedPlant.mainInventory.getInventory());
+                    plantedPlant.getNbCollect(), CreateAllSeedPlant.mainInventory.getInventory());
             }
 
 
