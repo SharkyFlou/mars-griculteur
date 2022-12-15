@@ -62,8 +62,10 @@ namespace game
                     TextMeshProUGUI[] notif = slot.GetComponentsInChildren<TextMeshProUGUI>();
                     notif[0].SetText(itemOfSlot.namee);
                     notif[1].SetText(itemOfSlot.description);
-                    //string t;
-                    notif[2].text = "TARGET : " + target;
+
+                    string t = itemOfSlot.ifTarget();
+
+                    notif[2].text = "TARGET : " + t + target;
 
                     //on dit que son parent est le Grid Layout Group PANEL NOTIF
                     //slot.transform.SetParent(slotPanel);
