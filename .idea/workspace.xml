@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96ba2e5e-82b2-41dd-8461-05316c7fd5d7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Choix_licence_Marsgriculteur_TP2_LE_groupe.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Description.md" beforeDir="false" afterPath="$PROJECT_DIR$/Description.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tuto.md" beforeDir="false" afterPath="$PROJECT_DIR$/tuto.md" afterDir="false" />
-    </list>
+    <list default="true" id="96ba2e5e-82b2-41dd-8461-05316c7fd5d7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
