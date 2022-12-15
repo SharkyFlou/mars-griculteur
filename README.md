@@ -51,7 +51,7 @@ Participants :
 * NIEDERBERGER Léo
 
 Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T234/T3)
-
+_Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux changements de contexte
 
 <!-- CAPTURE D'ECRAN -->
 <a name="capture-decran"></a>
