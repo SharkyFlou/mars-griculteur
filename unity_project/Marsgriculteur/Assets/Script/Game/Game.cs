@@ -10,7 +10,7 @@ namespace game
 {
     /// <summary>
     /// La classe <c>Game</c> s'occupe du jeu en lui-m�me. Il permet d'initialiser la partie, avec un montant fixe, le nombre de jour � 0, ...
-    /// Elle poss�de les attributs suivant :  market, shop, inventoryPlant, money et moneyText.
+    /// Elle poss�de les attributs suivant :  market, shop, inventoryPlant, money et moneyText, classePopup
     /// Elle contient 4 m�thodes : Start, getDefaultSprite, AddMoney, SubsMoney.
     /// </summary>
     public class Game : MonoBehaviour
@@ -24,6 +24,8 @@ namespace game
         private int totalMoneyEarned;
         public TextMeshProUGUI moneyText;
 
+        public PopUp classePopup;
+
         /// <summary>
         /// La m�thode <c>Start</c> est utilis�e pour le d�marrage. �tant donn� que Start n'est appel�e qu'une seule fois, elle permet d'initialiser les �l�ments
         /// qui doivent persister tout au long de la vie du script, mais ne doivent �tre configur�s qu'imm�diatement avant utilisation.
@@ -31,7 +33,7 @@ namespace game
         /// </summary>
         void Start()
         {
-            money = 100000000;
+            money = 2500;
             moneyText.SetText(money.ToString());
             Debug.Log("Objectif : " + moneyObjective.ToString());
         }
@@ -67,8 +69,13 @@ namespace game
             {
                 money -= price;
                 moneyText.SetText(money.ToString());
-                Debug.Log(money);
             }
+            if (money == 0)
+            {
+                StartCoroutine(classePopup.message("Vous n'avez plus d'argent!"));
+            }
+            Debug.Log(money);
+
 
         }
 
