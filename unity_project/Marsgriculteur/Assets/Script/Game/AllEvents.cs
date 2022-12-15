@@ -33,7 +33,7 @@ namespace game
             //************************* PLANT COOL *******************************
             //********************************************************************
 
-            List<EnumTypePlant> listAnim = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ONTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL };
+            List<EnumTypePlant> listAnim = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.OUNTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL };
             allEventDico.Add("QualiMeat", new EventInfo("QualiMeat",
                 "Une onde de radiation donne aux animaux un goût plus salé et très apprécié",
                 10,
@@ -56,7 +56,7 @@ namespace game
             List<EnumTypePlant> listPl = new List<EnumTypePlant>() { EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
 
             allEventDico.Add("SolarStorm", new EventInfo("SolarStorm",
-                "Une temp�te solaire fait griller vos plantes ! Tous deviennent fous, et achètent n'importe quoi...",
+                "Une tempête solaire fait griller vos plantes ! Tous deviennent fous, et achètent n'importe quoi...",
                 10,
                 1.2,
                 1.5,
@@ -87,9 +87,9 @@ namespace game
                 50));
 
 
-            List<EnumTypePlant> listRand = new List<EnumTypePlant>() { EnumTypePlant.EGRO, EnumTypePlant.ELB, EnumTypePlant.AZLOC, EnumTypePlant.ECHAV };
+            List<EnumTypePlant> listRand = new List<EnumTypePlant>() { EnumTypePlant.EGRO, EnumTypePlant.ELB, EnumTypePlant.AZLOC, EnumTypePlant.EHCAV };
             allEventDico.Add("Covid", new EventInfo("Covid",
-                "Le Covid-23 arrive ! Les gens ach�tent n'importe quoi...",
+                "Le Covid-23 arrive ! Les gens achètent n'importe quoi...",
                 10,
                 1.1,
                 1.2,
@@ -105,7 +105,7 @@ namespace game
 
 
             allEventDico.Add("FêteOportune", new EventInfo("FêteOportune",
-               "Le Maire s'est lev� du bon pied : il déclare une fête nationale aujourd'hui ! Le plat favori lors des jours de fête : NIPAL farci au AZLOC",
+               "Le Maire s'est levé du bon pied : il déclare une fête nationale aujourd'hui ! Le plat favori lors des jours de fête : NIPAL farci au AZLOC",
                5,
                1.1,
                2,
@@ -157,7 +157,7 @@ namespace game
                 Game.getDefaultSprite(),
                 50));
 
-            List<EnumTypePlant> listAll = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ONTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL, EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
+            List<EnumTypePlant> listAll = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.OUNTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL, EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
             allEventDico.Add("Guerre", new EventInfo("Guerre",
                 "C'est la guerre ! Les gens n'ont plus trop les moyens...",
                 40,
@@ -261,7 +261,7 @@ namespace game
               40));
 
 
-            List<EnumTypePlant> listRand2 = new List<EnumTypePlant>() { EnumTypePlant.ECHAV, EnumTypePlant.ELUOP, EnumTypePlant.ELB, EnumTypePlant.AJOS };
+            List<EnumTypePlant> listRand2 = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.ELUOP, EnumTypePlant.ELB, EnumTypePlant.AJOS };
             allEventDico.Add("TerreStérile", new EventInfo("TerreStérile",
               "Une comète radioactive a rendu stérile la terre de plusieurs de vos vendeurs de graines",
               30,
