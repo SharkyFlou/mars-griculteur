@@ -21,7 +21,7 @@ namespace game
 
         private bool isExecuting = false;
 
-        public IEnumerator message(string message)
+        private IEnumerator setMessage(string message)
         {
             
             text.SetText(message);
@@ -34,9 +34,11 @@ namespace game
             }
         }
 
-        public void startCoroutine(string msg)
+        public void message(string msg)
         {
-            coroutine = message(msg);
+            // Quand le gameObject qui a commence un coroutine (avec StartCouroutine) est désactivé (SetActive(fals)) tous les coroutine ne exécution s'arrête
+            // Ainsi cela permet à coupé un affichage actuelle et commencer le nouveau lors d'appels à intervalle < 3s
+            coroutine = setMessage(msg);
             if (isExecuting)
                 this.gameObject.SetActive(false);
             if (!this.gameObject.activeSelf)

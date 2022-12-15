@@ -75,7 +75,7 @@ namespace game
         /// </summary>
         public void sell()
         {
-            classePopup.startCoroutine("VENDU!");
+            classePopup.message("VENDU!");
             //StartCoroutine(classePopup.message("VENDU!"));
             
 

@@ -30,7 +30,7 @@ public class BuyPlot : MonoBehaviour
         }
         else
         {
-            popUp.startCoroutine("Vous n'avez pas assez d'argent pour débloquer un Plot.");
+            popUp.message("Vous n'avez pas assez d'argent pour débloquer un Plot.");
             //StartCoroutine(popUp.message("Vous n'avez pas assez d'argent pour débloquer un Plot."));
         }
     }
