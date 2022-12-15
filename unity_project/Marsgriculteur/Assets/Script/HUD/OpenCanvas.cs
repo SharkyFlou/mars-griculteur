@@ -4,6 +4,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using game;
 
+/// <summary>
+/// La classe <c>OpenCanvas</c> décide d'ouvrir le canvas ou non (utile pour le magasin par exemple)
+/// Elle possède les attributs suivant : thingsToHide, thingsToShow, cam, camZoom, isShown, PanelPlotPlant.
+/// </summary>
 public class OpenCanvas : MonoBehaviour
 {
     public Transform[] thingsToHide;
@@ -15,6 +19,9 @@ public class OpenCanvas : MonoBehaviour
     //connait le panel plot plant pour nettoyer a chaque lancement son affichage
     public GameObject PanelPlotPlant;
 
+    /// <summary>
+    /// La méthode <c>inverseAffichage</c> permet d'afficher le canvas et de fermer ceux qu'on ne veut pas. De plus la caméra est bloquée.
+    /// </summary>
     public void inverseAffichage()
     {
         //PanelPlotPlant.GetComponent<GerePlant>().cleanAffichage();
@@ -30,6 +37,11 @@ public class OpenCanvas : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// La méthode <c>displayCanvasON</c> 
+    /// </summary>
+    /// <param name="trans"></param>
+    /// <param name="state"></param>
     private void displayCanvasON(Transform[] trans, bool state)
     {
         foreach (Transform t in trans)
