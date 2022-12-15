@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using game;
-using Unity.VisualScripting;
 using System;
 
 namespace game
