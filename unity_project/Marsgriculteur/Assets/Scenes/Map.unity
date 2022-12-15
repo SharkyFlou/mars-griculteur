@@ -41350,37 +41350,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbccb4fe066ec0d42b3701135a27996d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   sprite_highlight: {fileID: 21300000, guid: 379a28051ddea614b98789718a9e260d, type: 3}
   sprite: {fileID: 21300000, guid: 894189134c731c84da1ce1abf3ca1c4e, type: 3}
-=======
-  sprite_highlight: {fileID: 21300000, guid: 098ef615d1be6d24f9d7152aae6438d8, type: 3}
-  sprite: {fileID: 21300000, guid: f8e622cd9d4172c418d57b69212644cf, type: 3}
---- !u!1 &1316786260 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3404251740798262447, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
-  m_PrefabInstance: {fileID: 275509087}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &1316786261 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3404251740798262440, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
-  m_PrefabInstance: {fileID: 275509087}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1316786262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316786260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbe0986c961dffe47b2e4cc270198f8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slotPanel: {fileID: 1316786261}
-  moneyText: {fileID: 0}
->>>>>>> 8c71a1852e7f8f5356419bd5acf38d21e0635939
 --- !u!1 &1328478778
 GameObject:
   m_ObjectHideFlags: 0
@@ -44469,7 +44440,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1316786262}
         m_TargetAssemblyTypeName: game.InventoryPanel, Assembly-CSharp
         m_MethodName: Start
         m_Mode: 1
@@ -44481,7 +44451,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1316786262}
         m_TargetAssemblyTypeName: game.InventoryPanel, Assembly-CSharp
         m_MethodName: updateWeight
         m_Mode: 2
