@@ -17,6 +17,8 @@ namespace game
         public GameObject PanelNotif;
         public Notification notif;
         public Dictionary<EventInfo, int> dico = new Dictionary<EventInfo, int>();
+        public PopUp classePopup;
+        public Transform render;
 
         /// <summary>
         /// La m�thode <c>Start</c> est utilis�e pour le d�marrage. �tant donn� que Start n'est appel�e qu'une seule fois, elle permet d'initialiser les �l�ments
@@ -29,6 +31,9 @@ namespace game
 
             dico = NextDay.getInventoryNotif();
             notif.afficheInventory();
+
+            render.gameObject.SetActive(false);
+
         }
 
         /// <summary>

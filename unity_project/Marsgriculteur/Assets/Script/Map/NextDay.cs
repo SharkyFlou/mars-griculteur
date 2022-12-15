@@ -77,7 +77,7 @@ namespace game
             nbrJour++;
             dayText.SetText(nbrJour.ToString());
 
-            StartCoroutine(classePopup.message("Vous �tes pass� au jour suivant!\nRegardez s'il y a un nouvel �v�nement!"));
+            StartCoroutine(classePopup.message("Vous êtes passé au jour suivant!\nRegardez s'il y a un nouvel événement!"));
         }
 
         /// <summary>
@@ -186,8 +186,7 @@ namespace game
             else
             {
                 Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
-                Debug.Log("AFFICHEEEEEEEEEEEEEE");
-                GetComponent<Renderer>().gameObject.SetActive(true);
+                render.gameObject.SetActive(true);
             }
 
             dicoPossessions = Market.instance.getActiveEvents();
