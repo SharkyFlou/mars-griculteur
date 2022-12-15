@@ -54,9 +54,9 @@ namespace game
                     slotPanel.transform.localPosition = new Vector3(0, 0, 0);
 
                     slotPanel.transform.GetComponent<RectTransform>().offsetMin = new Vector2(slotPanel.transform.parent.GetComponent<RectTransform>().rect.width / 3, slotPanel.transform.GetComponent<RectTransform>().offsetMin.y);
-                    slotPanel.transform.GetComponent<RectTransform>().offsetMax = new Vector2(slotPanel.transform.parent.GetComponent<RectTransform>().rect.width / 3, slotPanel.transform.GetComponent<RectTransform>().offsetMax.y);
+                    slotPanel.transform.GetComponent<RectTransform>().offsetMax = new Vector2(-slotPanel.transform.parent.GetComponent<RectTransform>().rect.width / 3, slotPanel.transform.GetComponent<RectTransform>().offsetMax.y);
 
-                    slotPanel.transform.localPosition = slotPanel.transform.localPosition + new Vector3Int(0, -20);
+                    //slotPanel.transform.localPosition = slotPanel.transform.localPosition + new Vector3Int(0, -20);
 
                     afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), slotPanel, true);
                     return;
