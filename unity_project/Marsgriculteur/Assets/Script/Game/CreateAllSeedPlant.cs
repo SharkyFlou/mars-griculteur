@@ -36,24 +36,31 @@ namespace game
             dicoTool = JsonConvert.DeserializeObject<AllTools>(JSONTool.text);
 
             mainInventory = new Inventory();
-            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.ELB), 1);
+            /* mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.ELB), 1);
             mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AJOS), 1);
             mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.EGRO), 1);
             mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AZLOC), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.OUNTOUM), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.EHCAV), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.NIPAL), 1);
+            mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.ELUOP), 1);
 
             mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.ELB), 1);
             mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.AJOS), 1);
             mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.EGRO), 1);
             mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.AZLOC), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.OUNTOUM), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.EHCAV), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.NIPAL), 1);
+            mainInventory.addToInventory(dicoPlant.createSeed(EnumTypePlant.ELUOP), 1); */
+
+
             //mainInventory.addToInventory(dicoPlant.createPlant(EnumTypePlant.AJOS), 100);
 
             //ceci pose un probleme... pas de partie infinie possible?
             shopInv = new Inventory();
             foreach (EnumTypePlant plante in dicoPlant.getAllPlantType())
             {
-                shopInv.addToInventory(dicoPlant.createSeed(plante), 9999);
-                shopInv.addToInventory(dicoPlant.createSeed(plante), 9999);
-                shopInv.addToInventory(dicoPlant.createSeed(plante), 9999);
                 shopInv.addToInventory(dicoPlant.createSeed(plante), 9999);
             }
 

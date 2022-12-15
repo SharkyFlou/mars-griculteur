@@ -11,7 +11,7 @@ namespace game
     public class GerePlant : MonoBehaviour
     {
         public Inventory inventoryFunctions;
-        public ActivePanel reafficheInv;
+        //public ActivePanel reafficheInv;
 
         public PlotEvents StockedPlot;
 
@@ -94,7 +94,7 @@ namespace game
 
         }
  */
-        public void Soustraits(BasicItem item, int qtt)
+        /* public void Soustraits(BasicItem item, int qtt)
         {
             //IMPERATIF d'utiliser CreateAllSeedPlant.mainInventory.getInventory(), sinon on travaille avec un inventory qui est VIDE COMPLETEMENT
             //Debug.Log(CreateAllSeedPlant.mainInventory.isDicoVide());
@@ -107,7 +107,7 @@ namespace game
                 //on reaffiche les elements
                 reafficheInv.Affiche();
             }
-        }
+        } */
 
         public BasicItem getStockedItem()
         {

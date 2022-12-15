@@ -11,9 +11,11 @@ namespace game
     /// La classe <c>InventoryPanel</c> impl�mente l'interface InventoryInterface. Elle g�re l'affichage des inventaires dans les panels.
     /// Elle poss�de un attribut slotPanel qui correspond au panel sur lequel va �tre affich� l'inventaire.
     /// </summary>
-    public class InventoryPanel : InventoryInterface
+    public class InventoryPanel : MonoBehaviour, InventoryInterface
     {
         public Transform slotPanel;
+
+        public Transform moneyText;
 
         //public TextMeshProUGUI textWeight;
 
@@ -31,6 +33,52 @@ namespace game
             this.slotPanel = slotPanel;
         }
 
+        public void Start()
+        {
+            if (this.transform.root != null)
+            {
+                if (this.transform.root.name == "Canvas Inventory")
+                {
+                    afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), slotPanel);
+                    return;
+                }
+                if (this.transform.root.name == "Canvas Plant Seed")
+                {
+                    afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), slotPanel, false);
+                    return;
+                }
+                if (this.transform.root.name == "Canvas Market")
+                {
+                    slotPanel.transform.localScale = new Vector3(8 / 3f, 0.8f, 1);
+
+                    slotPanel.transform.localPosition = new Vector3(0, 0, 0);
+
+                    slotPanel.transform.GetComponent<RectTransform>().offsetMin = new Vector2(slotPanel.transform.parent.GetComponent<RectTransform>().rect.width / 3, slotPanel.transform.GetComponent<RectTransform>().offsetMin.y);
+                    slotPanel.transform.GetComponent<RectTransform>().offsetMax = new Vector2(-slotPanel.transform.parent.GetComponent<RectTransform>().rect.width / 3, slotPanel.transform.GetComponent<RectTransform>().offsetMax.y);
+
+                    //slotPanel.transform.localPosition = slotPanel.transform.localPosition + new Vector3Int(0, -20);
+
+                    afficheInventory(CreateAllSeedPlant.mainInventory.getInventory(), slotPanel, true);
+                    return;
+                }
+                if (this.transform.root.name == "Canvas Shop")
+                {
+                    afficheInventory(CreateAllSeedPlant.shopInv.getInventory(), slotPanel);
+                    TextMeshProUGUI[] texts = slotPanel.transform.root.GetComponentsInChildren<TextMeshProUGUI>();
+                    foreach (TextMeshProUGUI text in texts)
+                    {
+                        if (text.name == "TextSeed")
+                        {
+                            text.text = " ";
+                        }
+                    }
+                    return;
+                }
+            }
+
+
+
+        }
         /// <summary>
         /// La m�thode <c>afficheInventory</c> permet de choisir o� afficher l'inventaire et de l'afficher
         /// </summary>
@@ -122,7 +170,7 @@ namespace game
 
                 BasicItem itemOfSlot = dico.ElementAt(i).Key;
                 int slotText;
-                if (panelAInitialiser.name == "Money")
+                if (this.transform.root.name == "Canvas Shop")
                     slotText = GameObject.Find("marketBase").GetComponent<Market>().getLastPriceSeed(((Seed)dico.ElementAt(i).Key).getTypePlante());
                 else
                     slotText = dico.ElementAt(i).Value;
@@ -147,7 +195,7 @@ namespace game
                 {
                     if (text.gameObject.transform.parent != null)
                     {
-                        if (panelAInitialiser.name == "Money")
+                        if (this.transform.root.name == "Canvas Shop")
                             text.SetText(slotText.ToString() + "$");
                         else
                             text.SetText(slotText.ToString());
@@ -201,7 +249,7 @@ namespace game
                     {
                         //on cree l'objet prefab slot
                         GameObject slot = InventorySlot.createSlot();
-                        if (panelAInitialiser.name == "Money")
+                        if (this.transform.root.name == "Canvas Shop")
                             slotText = dico.ElementAt(i).Key.getPrice();
                         else
                             slotText = dico.ElementAt(i).Value;
@@ -226,7 +274,7 @@ namespace game
                         {
                             if (text.gameObject.transform.parent != null)
                             {
-                                if (panelAInitialiser.name == "Money")
+                                if (this.transform.root.name == "Canvas Shop")
                                     text.SetText(slotText.ToString() + "$");
                                 else
                                     text.SetText(slotText.ToString());
@@ -257,7 +305,7 @@ namespace game
                     {
                         //on cree l'objet prefab slot
                         GameObject slot = InventorySlot.createSlot();
-                        if (panelAInitialiser.name == "Money")
+                        if (this.transform.root.name == "Canvas Shop")
                             slotText = dico.ElementAt(i).Key.getPrice();
                         else
                             slotText = dico.ElementAt(i).Value;
@@ -282,7 +330,7 @@ namespace game
                         {
                             if (text.gameObject.transform.parent != null)
                             {
-                                if (panelAInitialiser.name == "Money")
+                                if (this.transform.root.name == "Canvas Shop")
                                     text.SetText(slotText.ToString() + "$");
                                 else
                                     text.SetText(slotText.ToString());
@@ -307,6 +355,15 @@ namespace game
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// La méthode <c>updateWeight</c> permet de mettre à jour la capacité de l'inventaire.
+        /// </summary>
+        /// <param name="text">la zone de texte où sera affiché la capacité de l'inventaire</param>
+        public void updateWeight(Transform text)
+        {
+            text.GetComponent<TextMeshProUGUI>().SetText("Weight : " + CreateAllSeedPlant.mainInventory.getCurrentWeight().ToString());
         }
 
         /// <summary>

@@ -49,7 +49,6 @@ namespace game
             //#########################################@//#########################################@//#########################################@
             //c'est ici qu'on change les tailles de chaque inventory
 
-
             //panel inventory normal, quand on clique sur le backpack
             if (this.name == "PanelInventory")
             {
@@ -191,8 +190,6 @@ namespace game
                     }
                     return;
                 }
-
-
                 else if (panelAvecInfos.name == "PanelInvToStore" || panelAvecInfos.name == "PanelInventory")
                 {
                     Debug.Log("On rentre dans l'inventory du joueur, pour stocker");
@@ -223,14 +220,7 @@ namespace game
             }
         }
 
-        /// <summary>
-        /// La méthode <c>updateWeight</c> permet de mettre à jour la capacité de l'inventaire.
-        /// </summary>
-        /// <param name="text">la zone de texte où sera affiché la capacité de l'inventaire</param>
-        public void updateWeight(Transform text)
-        {
-            text.GetComponent<TextMeshProUGUI>().SetText("Weight : " + CreateAllSeedPlant.mainInventory.getCurrentWeight().ToString());
-        }
+
 
         /// <summary>
         /// La méthode <c>clearInventoryDisplay</c> permet de supprimer les items de l'inventaire.
