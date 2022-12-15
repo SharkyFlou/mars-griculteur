@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+/// <summary>
+/// The game namespace.
+/// </summary>
 namespace game
 {
     /// <summary>
