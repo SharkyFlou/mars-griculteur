@@ -39,6 +39,9 @@ public class PlotEvents : MonoBehaviour
 
     public ActivePanel reafficheInvOnClick;
 
+    public ChangeTextError error;
+    public OpenCanvas errorDislp;
+
     /// <summary>
     /// La méthode <c>Start</c> est utilisée pour le démarrage. Etant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
     /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
@@ -118,7 +121,10 @@ public class PlotEvents : MonoBehaviour
             plantedPlant = null;
         }
         else
-            Debug.Log("Inventaire Plein");
+        {
+            error.changeText("Inventaire plein", "Vous ne pouvez pas récuperer cette plante, votre inventaire est plein");
+            errorDislp.inverseAffichage();
+        }
     }
 
     /// <summary>
