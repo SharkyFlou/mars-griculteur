@@ -186,6 +186,7 @@ namespace game
             else
             {
                 Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
+                Debug.Log("AFFICHEEEEEEEEEEEEEE");
                 renderer.gameObject.SetActive(true);
             }
 
