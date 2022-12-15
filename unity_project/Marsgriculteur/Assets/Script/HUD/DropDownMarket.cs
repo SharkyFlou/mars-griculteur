@@ -46,7 +46,6 @@ namespace game
                 TMP_Dropdown.OptionData plantItem = new TMP_Dropdown.OptionData(pl.getName(), pl.getSprite());
                 plantItems.Add(plantItem);
             }
-
             dropdown.AddOptions(plantItems);
         }
 

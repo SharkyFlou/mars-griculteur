@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 namespace game
 {
@@ -40,6 +41,14 @@ namespace game
                         {
                             CreateAllSeedPlant.mainInventory.addToInventory(item, 1, CreateAllSeedPlant.mainInventory.getInventory());
                             panelInfosVente.GetComponent<Game>().SubsMoney(price);
+                        }
+                        TextMeshProUGUI[] texts = this.transform.root.GetComponentsInChildren<TextMeshProUGUI>();
+                        foreach (TextMeshProUGUI text in texts)
+                        {
+                            if (text.name == "TextSeed")
+                            {
+                                text.text = "Vous avez acheté une graine de " + item.getName();
+                            }
                         }
                     }
                 }
