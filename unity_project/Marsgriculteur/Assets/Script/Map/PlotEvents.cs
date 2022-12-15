@@ -7,6 +7,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// La classe <c>PlotEvents</c> permet de gérer la pousse, la récolte, etc, des plantes et des graines.
+/// Elle possède les attributs suivants : plot_sprite, plot_sprite_highlite, seed_sprite, seed_sprite_grown, PlotSupervisor, InterfacePlantPanel,
+/// hidesPanel, growthTime, growthStatus, plotImage, seedImage, plantedPlant, contientGraine, itemDansPlot, inventory, reafficheInvOnClick.
+/// </summary>
 public class PlotEvents : MonoBehaviour
 {
     public Sprite plot_sprite;
@@ -34,6 +39,11 @@ public class PlotEvents : MonoBehaviour
 
     public ActivePanel reafficheInvOnClick;
 
+    /// <summary>
+    /// La méthode <c>Start</c> est utilisée pour le démarrage. Etant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
+    /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
+    /// Pour notre cas elle permet d'initialiser les champs.
+    /// </summary>
     private void Start()
     {
 
@@ -57,6 +67,9 @@ public class PlotEvents : MonoBehaviour
         //donnePlantedPlante(pplant);
     }
 
+    /// <summary>
+    /// La méthode <c>fairePousser</c> permet de faire pousser une plante.
+    /// </summary>
     public void fairePousser()
     {
         if (!contientGraine)
@@ -75,6 +88,9 @@ public class PlotEvents : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// La méthode <c>recupPlante</c> permet de récupérer la plante.
+    /// </summary>
     public void recupPlante()
     {
         Plant testPlant = CreateAllSeedPlant.dicoPlant.createPlant(plantedPlant.getTypePlante());
@@ -105,6 +121,10 @@ public class PlotEvents : MonoBehaviour
             Debug.Log("Inventaire Plein");
     }
 
+    /// <summary>
+    /// La méthode <c>planteGraine</c> permet de planter une graine.
+    /// </summary>
+    /// <param name="item">l'item de la graine à planter</param>
     public void planteGraine(BasicItem item)
     {
         if (!contientGraine)
@@ -137,7 +157,9 @@ public class PlotEvents : MonoBehaviour
             Debug.Log("une graine est déja plantee, on ne peut pas planter une par dessus!!");
     }
 
-
+    /// <summary>
+    /// La méthode <c>OnMouseDown</c> permet, lors du clique sur le champs, de récupérer la plante.
+    /// </summary>
     void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
@@ -155,6 +177,11 @@ public class PlotEvents : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// La méthode <c>GetChildren</c> permet d'obtenir les champs à partir d'un parent (la map)
+    /// </summary>
+    /// <param name="parent">le parent, sur lequel les champs sont disposés</param>
+    /// <returns>la liste des champs</returns>
     List<Transform> GetChildren(Transform parent)
     {
         List<Transform> children = new List<Transform>();
@@ -165,6 +192,9 @@ public class PlotEvents : MonoBehaviour
         return children;
     }
 
+    /// <summary>
+    /// La méthode <c>OnMouseOver</c> permet de surligner le champs lors du survole avec la souris.
+    /// </summary>
     void OnMouseOver()
     {
         if (EventSystem.current.IsPointerOverGameObject())
@@ -175,6 +205,9 @@ public class PlotEvents : MonoBehaviour
         plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite_highlite;
     }
 
+    /// <summary>
+    /// La méthode <c>OnMouseExit</c> permet d'enlever le surlignement des champs après le survole de la souris.
+    /// </summary>
     void OnMouseExit()
     {
         plotImage.gameObject.GetComponent<SpriteRenderer>().sprite = plot_sprite;

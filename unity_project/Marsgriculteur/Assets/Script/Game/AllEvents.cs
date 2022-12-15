@@ -51,7 +51,7 @@ namespace game
 
 
             //ELB, EGRO, AJOS, AZLOC
-            //ECHAV, ONTOUM, ELUOP, NIPAL
+            //EHCAV, ONTOUM, ELUOP, NIPAL
 
             List<EnumTypePlant> listPl = new List<EnumTypePlant>() { EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
 

@@ -5,6 +5,10 @@ using TMPro;
 
 namespace game
 {
+    /// <summary>
+    /// La classe <c>ActivePanel</c> gère les panels, elle les ouvre, les ferme, affiche les inventaires et enlève les inventaires.
+    /// Elle possède 4 attributs : PanelInventory, PanelNotif, panel et panelAvecInfos.
+    /// </summary>
     public class ActivePanel : MonoBehaviour
     {
         public GameObject PanelInventory;
@@ -14,11 +18,19 @@ namespace game
 
         public Transform panelAvecInfos;
 
+        /// <summary>
+        /// La méthode <c>Start</c> est utilisée pour le démarrage. Étant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
+        /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
+        /// Pour notre cas elle crée tous les inventaires (mais ils ne sont que visibles lors de l'ouverture des panels respectifs).
+        /// </summary>
         void Start()
         {
             OuvrePanel();
         }
 
+        /// <summary>
+        /// La méthode <c>OuvrePanel</c> instancie les panels des inventaires
+        /// </summary>
         public void OuvrePanel()
         {
             clearInventoryDisplay();
@@ -131,6 +143,9 @@ namespace game
             }
         }
 
+        /// <summary>
+        /// La méthode <c>OpenPanel</c> permet d'activer ou désactiver les panels ce l'inventaire et des notifications
+        /// </summary>
         public void OpenPanel()
         {
             if (PanelInventory.activeSelf == false)
@@ -149,7 +164,9 @@ namespace game
             }
         }
 
-        // Update affichage d'un inventaire
+        /// <summary>
+        /// La méthode <c>Affiche</c> permet de mettre à jour l'affichage d'un inventaire.
+        /// </summary>
         public void Affiche()
         {
             if (panelAvecInfos == null)
@@ -206,10 +223,18 @@ namespace game
             }
         }
 
+        /// <summary>
+        /// La méthode <c>updateWeight</c> permet de mettre à jour la capacité de l'inventaire.
+        /// </summary>
+        /// <param name="text">la zone de texte où sera affiché la capacité de l'inventaire</param>
         public void updateWeight(Transform text)
         {
             text.GetComponent<TextMeshProUGUI>().SetText("Weight : " + CreateAllSeedPlant.mainInventory.getCurrentWeight().ToString());
         }
+
+        /// <summary>
+        /// La méthode <c>clearInventoryDisplay</c> permet de supprimer les items de l'inventaire.
+        /// </summary>
         public void clearInventoryDisplay()
         {
             foreach (Transform child in PanelInventory.GetComponentsInChildren<Transform>())

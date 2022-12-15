@@ -37,7 +37,7 @@ namespace game
         /// <param name="paraImagelink">le lien de l'image de la plante</param>
         /// <param name="paraSpriteLinks">le liste des images de la plante</param>
         /// <param name="paraGrowthTime">le temps de pousse de la plante</param>
-        /// <param name="paraNbCollect">la quantité de plante collecté après la pousse</param>
+        /// <param name="paraNbCollect">la quantité de plante collectée après la pousse</param>
         public PlantedPlant(EnumTypePlant paraTypePlant, int paraId, string paraName, string paraDescription, Sprite paraImagelink, List<Sprite> paraSpriteLinks, int paraGrowthTime, int paraNbCollect)
         {
             this.typePlante = paraTypePlant;
@@ -83,6 +83,10 @@ namespace game
             return growthTime;
         }
 
+        /// <summary>
+        /// La méthode <c>getNbCollect</c> permet de connaître la quantité de plante collectée après la pousse.
+        /// </summary>
+        /// <returns>Elle retourne la quantité de plante collectée</returns>
         public int getNbCollect()
         {
             return nbPlantCollect;
