@@ -33,7 +33,7 @@ namespace game
         /// </summary>
         void Start()
         {
-            money = 2500;
+            money = 100000;
             moneyText.SetText(money.ToString());
             Debug.Log("Objectif : " + moneyObjective.ToString());
         }

@@ -376,7 +376,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfcfbce7c207254eabb6a7316545597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thingsToHide: []
+  thingsToHide:
+  - {fileID: 88968114}
   thingsToShow:
   - {fileID: 335311818}
   - {fileID: 1024525487}
