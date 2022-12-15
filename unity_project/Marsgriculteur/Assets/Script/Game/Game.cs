@@ -20,6 +20,8 @@ namespace game
         private Shop shop;
         private InventoryPlant inventoryPlant;
         public int money;
+        public static int moneyObjective;
+        private int totalMoneyEarned;
         public TextMeshProUGUI moneyText;
 
         /// <summary>
@@ -29,8 +31,9 @@ namespace game
         /// </summary>
         void Start()
         {
-            money = 5000;
+            money = 99900;
             moneyText.SetText(money.ToString());
+            Debug.Log("Objectif : " + moneyObjective.ToString());
         }
 
         /// <summary>
@@ -50,6 +53,7 @@ namespace game
         public void AddMoney(int price)
         {
             money += price;
+            totalMoneyEarned += price;
             moneyText.SetText(money.ToString());
         }
 
@@ -62,6 +66,20 @@ namespace game
             money -= price;
             moneyText.SetText(money.ToString());
         }
+
+        public void testObjective()
+        {
+            if (money >= moneyObjective)
+                endGame();
+        }
+
+        public void endGame()
+        {
+            GameStats.qttMoney = totalMoneyEarned.ToString();
+            GameStats.nbDay = GameObject.Find("bed_sprite").GetComponent<NextDay>().getNbJour().ToString();
+            SceneManager.LoadScene("ResultScreen");
+        }
+
     }
 
 }
