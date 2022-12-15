@@ -1272,6 +1272,7 @@ MonoBehaviour:
   dayText: {fileID: 43341360}
   notif: {fileID: 190841503}
   plots: {fileID: 480899209}
+  game: {fileID: 0}
   market: {fileID: 1331125616}
 --- !u!1 &125168328
 GameObject:
@@ -43025,6 +43026,7 @@ MonoBehaviour:
   dayText: {fileID: 43341360}
   notif: {fileID: 190841503}
   plots: {fileID: 480899209}
+  game: {fileID: 1005403764}
   market: {fileID: 1331125616}
 --- !u!1 &1671674874
 GameObject:
@@ -44922,7 +44924,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
+  m_AnchoredPosition: {x: 0, y: -49.999985}
   m_SizeDelta: {x: -100, y: -200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989577915
