@@ -72,7 +72,8 @@ namespace game
             }
             if (money == 0)
             {
-                StartCoroutine(classePopup.message("Vous n'avez plus d'argent!"));
+                classePopup.startCoroutine("Vous n'avez plus d'argent!");
+                //StartCoroutine(classePopup.message("Vous n'avez plus d'argent!"));
             }
             Debug.Log(money);
 
