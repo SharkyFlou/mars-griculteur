@@ -37,19 +37,36 @@ namespace game
                     {
                         // Prix de la graine dans le slot.
                         int price = GameObject.Find("marketBase").GetComponent<Market>().getLastPriceSeed(((Seed)item).getTypePlante());
-                        if (this.transform.root.GetComponentInChildren<InventoryPanel>().moneyText.GetComponent<Game>().money >= price)
+                        TextMeshProUGUI[] texts = this.transform.root.GetComponentsInChildren<TextMeshProUGUI>();
+
+                        if (this.transform.root.GetComponentInChildren<InventoryPanel>().moneyText.GetComponent<Game>().money >= price
+                            && ((CreateAllSeedPlant.mainInventory.getCurrentWeight() + item.getWeight()) <= CreateAllSeedPlant.mainInventory.getWeightMax()))
                         {
                             CreateAllSeedPlant.mainInventory.addToInventory(item, 1, CreateAllSeedPlant.mainInventory.getInventory());
                             this.transform.root.GetComponentInChildren<InventoryPanel>().moneyText.GetComponent<Game>().SubsMoney(price);
-                        }
-                        TextMeshProUGUI[] texts = this.transform.root.GetComponentsInChildren<TextMeshProUGUI>();
-                        foreach (TextMeshProUGUI text in texts)
-                        {
-                            if (text.name == "TextSeed")
+
+                            //affiche le message "achat successful"
+                            foreach (TextMeshProUGUI text in texts)
                             {
-                                text.text = "Vous avez obtenu une graine de " + item.getName();
+                                if (text.name == "TextSeed")
+                                {
+                                    text.text = "Vous avez obtenu une graine de " + item.getName();
+                                }
                             }
                         }
+                        else
+                        {
+                            //affiche le message "achat successful"
+                            foreach (TextMeshProUGUI text in texts)
+                            {
+                                if (text.name == "TextSeed")
+                                {
+                                    text.text = "";
+                                }
+                            }
+                        }
+
+
                     }
                 }
                 else if (this.transform.root.name == "Canvas Market")
