@@ -1,0 +1,702 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="d3f2e5e8-6ae6-4250-9aa9-2d19f6c343bd" Title="game Namespace" Url="html/N-game.htm">
+    <HelpTOCNode Id="cf015bc1-aaae-4f7a-b6ac-11b4c542e695" Title="ActivePanel Class" Url="html/T-game.ActivePanel.htm">
+      <HelpTOCNode Title="ActivePanel Members" Url="html/AllMembers.T-game.ActivePanel.htm" />
+      <HelpTOCNode Id="70b48fad-11a5-4d5a-95d7-9d9661c18798" Title="ActivePanel Fields" Url="html/Fields.T-game.ActivePanel.htm">
+        <HelpTOCNode Title="panel Field" Url="html/F-game.ActivePanel.panel.htm" />
+        <HelpTOCNode Title="panelAvecInfos Field" Url="html/F-game.ActivePanel.panelAvecInfos.htm" />
+        <HelpTOCNode Title="PanelInventory Field" Url="html/F-game.ActivePanel.PanelInventory.htm" />
+        <HelpTOCNode Title="PanelNotif Field" Url="html/F-game.ActivePanel.PanelNotif.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="649164e3-62c6-40be-b0f9-039d4a375a62" Title="ActivePanel Methods" Url="html/Methods.T-game.ActivePanel.htm">
+        <HelpTOCNode Title="Affiche Method " Url="html/M-game.ActivePanel.Affiche.htm" />
+        <HelpTOCNode Title="clearInventoryDisplay Method " Url="html/M-game.ActivePanel.clearInventoryDisplay.htm" />
+        <HelpTOCNode Title="OpenPanel Method " Url="html/M-game.ActivePanel.OpenPanel.htm" />
+        <HelpTOCNode Title="OuvrePanel Method " Url="html/M-game.ActivePanel.OuvrePanel.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-game.ActivePanel.Start.htm" />
+        <HelpTOCNode Title="updateWeight Method " Url="html/M-game.ActivePanel.updateWeight.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8396299d-6b7a-464d-b29e-0e3edfdb8dcf" Title="AllEvents Class" Url="html/T-game.AllEvents.htm">
+      <HelpTOCNode Title="AllEvents Members" Url="html/AllMembers.T-game.AllEvents.htm" />
+      <HelpTOCNode Title="AllEvents Constructor " Url="html/M-game.AllEvents.-ctor.htm" />
+      <HelpTOCNode Id="7c375895-d3c8-4728-86c7-2951e3da3071" Title="AllEvents Fields" Url="html/Fields.T-game.AllEvents.htm">
+        <HelpTOCNode Title="allEventDico Field" Url="html/F-game.AllEvents.allEventDico.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fae4b845-6be7-4979-89df-3c3624cec270" Title="AllEvents Methods" Url="html/Methods.T-game.AllEvents.htm">
+        <HelpTOCNode Title="getRandomEvent Method " Url="html/M-game.AllEvents.getRandomEvent.htm" />
+        <HelpTOCNode Title="stringInDicoKeys Method " Url="html/M-game.AllEvents.stringInDicoKeys.htm" />
+        <HelpTOCNode Title="substractDico Method " Url="html/M-game.AllEvents.substractDico.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6ba8532c-6ab3-40a2-ae61-6174afcd998c" Title="AllPlot Class" Url="html/T-game.AllPlot.htm">
+      <HelpTOCNode Title="AllPlot Members" Url="html/AllMembers.T-game.AllPlot.htm" />
+      <HelpTOCNode Id="03334006-140e-4498-8a85-ba50ffb6379b" Title="AllPlot Methods" Url="html/Methods.T-game.AllPlot.htm">
+        <HelpTOCNode Title="createPlot Method " Url="html/M-game.AllPlot.createPlot.htm" />
+        <HelpTOCNode Title="getAllPlot Method " Url="html/M-game.AllPlot.getAllPlot.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="24fa6fa0-0968-4854-ba41-e8e4a33ac628" Title="AllSeedPlant Class" Url="html/T-game.AllSeedPlant.htm">
+      <HelpTOCNode Title="AllSeedPlant Members" Url="html/AllMembers.T-game.AllSeedPlant.htm" />
+      <HelpTOCNode Title="AllSeedPlant Constructor " Url="html/M-game.AllSeedPlant.-ctor.htm" />
+      <HelpTOCNode Id="2fedc3be-a024-455c-806e-4964c270c99d" Title="AllSeedPlant Fields" Url="html/Fields.T-game.AllSeedPlant.htm">
+        <HelpTOCNode Title="allPlantDico Field" Url="html/F-game.AllSeedPlant.allPlantDico.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a0ac6bfd-c2da-4659-90cc-674d57a6df32" Title="AllSeedPlant Methods" Url="html/Methods.T-game.AllSeedPlant.htm">
+        <HelpTOCNode Title="createPlant Method " Url="html/M-game.AllSeedPlant.createPlant.htm" />
+        <HelpTOCNode Title="createPlantedPlant Method " Url="html/M-game.AllSeedPlant.createPlantedPlant.htm" />
+        <HelpTOCNode Title="createSeed Method " Url="html/M-game.AllSeedPlant.createSeed.htm" />
+        <HelpTOCNode Title="getAllPlantType Method " Url="html/M-game.AllSeedPlant.getAllPlantType.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M-game.AllSeedPlant.ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0b0c3d58-1eaa-44f2-8920-3c3a44c9f381" Title="AllTools Class" Url="html/T-game.AllTools.htm">
+      <HelpTOCNode Title="AllTools Members" Url="html/AllMembers.T-game.AllTools.htm" />
+      <HelpTOCNode Id="95af4195-b75a-4c15-ad04-f680f2b605fb" Title="AllTools Constructor " Url="html/Overload-game.AllTools.-ctor.htm">
+        <HelpTOCNode Title="AllTools Constructor (Dictionary(String, Tool))" Url="html/M-game.AllTools.-ctor.htm" />
+        <HelpTOCNode Title="AllTools Constructor " Url="html/M-game.AllTools.-ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="d72dad14-952b-4f70-869b-5b51425a00e9" Title="AllTools Fields" Url="html/Fields.T-game.AllTools.htm">
+        <HelpTOCNode Title="dicoTools Field" Url="html/F-game.AllTools.dicoTools.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7356a9ed-15b7-43b4-bd76-0637bac602b8" Title="AllTools Methods" Url="html/Methods.T-game.AllTools.htm">
+        <HelpTOCNode Title="getAllTools Method " Url="html/M-game.AllTools.getAllTools.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M-game.AllTools.ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="62dd7337-739c-4e3d-8a87-72ee3fd75b84" Title="BasicItem Class" Url="html/T-game.BasicItem.htm">
+      <HelpTOCNode Title="BasicItem Members" Url="html/AllMembers.T-game.BasicItem.htm" />
+      <HelpTOCNode Id="8f5dfff3-a1dd-4200-a414-ed66377e9a2d" Title="BasicItem Constructor " Url="html/Overload-game.BasicItem.-ctor.htm">
+        <HelpTOCNode Title="BasicItem Constructor " Url="html/M-game.BasicItem.-ctor.htm" />
+        <HelpTOCNode Title="BasicItem Constructor (Int32, String, String, Sprite)" Url="html/M-game.BasicItem.-ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e352143d-c78f-4d31-a668-bb4f2a35985c" Title="BasicItem Fields" Url="html/Fields.T-game.BasicItem.htm">
+        <HelpTOCNode Title="description Field" Url="html/F-game.BasicItem.description.htm" />
+        <HelpTOCNode Title="id Field" Url="html/F-game.BasicItem.id.htm" />
+        <HelpTOCNode Title="imageLink Field" Url="html/F-game.BasicItem.imageLink.htm" />
+        <HelpTOCNode Title="itemName Field" Url="html/F-game.BasicItem.itemName.htm" />
+        <HelpTOCNode Title="price Field" Url="html/F-game.BasicItem.price.htm" />
+        <HelpTOCNode Title="weight Field" Url="html/F-game.BasicItem.weight.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e9d97cc7-de3a-4801-b04b-59da9601619e" Title="BasicItem Methods" Url="html/Methods.T-game.BasicItem.htm">
+        <HelpTOCNode Title="getDesc Method " Url="html/M-game.BasicItem.getDesc.htm" />
+        <HelpTOCNode Title="getId Method " Url="html/M-game.BasicItem.getId.htm" />
+        <HelpTOCNode Title="getName Method " Url="html/M-game.BasicItem.getName.htm" />
+        <HelpTOCNode Title="getPrice Method " Url="html/M-game.BasicItem.getPrice.htm" />
+        <HelpTOCNode Title="getSprite Method " Url="html/M-game.BasicItem.getSprite.htm" />
+        <HelpTOCNode Title="getWeight Method " Url="html/M-game.BasicItem.getWeight.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="debbc244-6e1f-4e75-b37f-b1b0e18b624f" Title="BasicPlant Class" Url="html/T-game.BasicPlant.htm">
+      <HelpTOCNode Title="BasicPlant Members" Url="html/AllMembers.T-game.BasicPlant.htm" />
+      <HelpTOCNode Id="e2cabe0f-73b0-42db-af81-cbb694f09a44" Title="BasicPlant Constructor " Url="html/Overload-game.BasicPlant.-ctor.htm">
+        <HelpTOCNode Title="BasicPlant Constructor " Url="html/M-game.BasicPlant.-ctor.htm" />
+        <HelpTOCNode Title="BasicPlant Constructor (EnumTypePlant)" Url="html/M-game.BasicPlant.-ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a1d4c26a-62e9-4890-875d-fa53edf5133d" Title="BasicPlant Fields" Url="html/Fields.T-game.BasicPlant.htm">
+        <HelpTOCNode Title="typePlante Field" Url="html/F-game.BasicPlant.typePlante.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="cac3f4a7-e965-4def-8857-989d75226a17" Title="BasicPlant Methods" Url="html/Methods.T-game.BasicPlant.htm">
+        <HelpTOCNode Title="getTypePlante Method " Url="html/M-game.BasicPlant.getTypePlante.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="53ffc081-3fc4-420e-852b-e3ea9365589d" Title="CreateAllSeedPlant Class" Url="html/T-game.CreateAllSeedPlant.htm">
+      <HelpTOCNode Title="CreateAllSeedPlant Members" Url="html/AllMembers.T-game.CreateAllSeedPlant.htm" />
+      <HelpTOCNode Id="ff64b1eb-c2f9-4df6-92bd-298934497493" Title="CreateAllSeedPlant Fields" Url="html/Fields.T-game.CreateAllSeedPlant.htm">
+        <HelpTOCNode Title="dicoPlant Field" Url="html/F-game.CreateAllSeedPlant.dicoPlant.htm" />
+        <HelpTOCNode Title="dicoTool Field" Url="html/F-game.CreateAllSeedPlant.dicoTool.htm" />
+        <HelpTOCNode Title="JSONSeedPlant Field" Url="html/F-game.CreateAllSeedPlant.JSONSeedPlant.htm" />
+        <HelpTOCNode Title="JSONTool Field" Url="html/F-game.CreateAllSeedPlant.JSONTool.htm" />
+        <HelpTOCNode Title="mainInventory Field" Url="html/F-game.CreateAllSeedPlant.mainInventory.htm" />
+        <HelpTOCNode Title="shopInv Field" Url="html/F-game.CreateAllSeedPlant.shopInv.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ca3ad821-1ac9-47eb-a5cc-06bf7e03a242" Title="CreateAllSeedPlant Methods" Url="html/Methods.T-game.CreateAllSeedPlant.htm">
+        <HelpTOCNode Title="Awake Method " Url="html/M-game.CreateAllSeedPlant.Awake.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9e307cc7-5a8a-41f0-aa7b-93669f54299f" Title="DropDownMarket Class" Url="html/T-game.DropDownMarket.htm">
+      <HelpTOCNode Title="DropDownMarket Members" Url="html/AllMembers.T-game.DropDownMarket.htm" />
+      <HelpTOCNode Id="4e2b2098-2034-4a6f-819c-fefe9741dc48" Title="DropDownMarket Fields" Url="html/Fields.T-game.DropDownMarket.htm">
+        <HelpTOCNode Title="dropdown Field" Url="html/F-game.DropDownMarket.dropdown.htm" />
+        <HelpTOCNode Title="graphMarket Field" Url="html/F-game.DropDownMarket.graphMarket.htm" />
+        <HelpTOCNode Title="market Field" Url="html/F-game.DropDownMarket.market.htm" />
+        <HelpTOCNode Title="plTypeList Field" Url="html/F-game.DropDownMarket.plTypeList.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0b37080c-975f-46f7-bacb-04f62ef41e9e" Title="DropDownMarket Methods" Url="html/Methods.T-game.DropDownMarket.htm">
+        <HelpTOCNode Title="Start Method " Url="html/M-game.DropDownMarket.Start.htm" />
+        <HelpTOCNode Title="updateGraph Method " Url="html/M-game.DropDownMarket.updateGraph.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="EnumTools Enumeration" Url="html/T-game.EnumTools.htm" />
+    <HelpTOCNode Title="EnumTypePlant Enumeration" Url="html/T-game.EnumTypePlant.htm" />
+    <HelpTOCNode Title="EnumTypePlot Enumeration" Url="html/T-game.EnumTypePlot.htm" />
+    <HelpTOCNode Id="fad6c4e8-637a-42c9-99b0-b1b3ef729d9e" Title="EventInfo Class" Url="html/T-game.EventInfo.htm">
+      <HelpTOCNode Title="EventInfo Members" Url="html/AllMembers.T-game.EventInfo.htm" />
+      <HelpTOCNode Id="43ba7c8e-cacf-4212-b3c2-442f64224616" Title="EventInfo Constructor " Url="html/Overload-game.EventInfo.-ctor.htm">
+        <HelpTOCNode Title="EventInfo Constructor (String, String, Int32, Double, Double, Boolean, Boolean, Boolean, List(EnumTypePlant), List(String), Int32, Int32, Sprite, Int32)" Url="html/M-game.EventInfo.-ctor.htm" />
+        <HelpTOCNode Title="EventInfo Constructor " Url="html/M-game.EventInfo.-ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e0dffba1-c725-4dbc-bb0f-b2aba52c8ef9" Title="EventInfo Fields" Url="html/Fields.T-game.EventInfo.htm">
+        <HelpTOCNode Title="cooldown Field" Url="html/F-game.EventInfo.cooldown.htm" />
+        <HelpTOCNode Title="description Field" Url="html/F-game.EventInfo.description.htm" />
+        <HelpTOCNode Title="imageLink Field" Url="html/F-game.EventInfo.imageLink.htm" />
+        <HelpTOCNode Title="length Field" Url="html/F-game.EventInfo.length.htm" />
+        <HelpTOCNode Title="mutliplierBase Field" Url="html/F-game.EventInfo.mutliplierBase.htm" />
+        <HelpTOCNode Title="mutliplierProg Field" Url="html/F-game.EventInfo.mutliplierProg.htm" />
+        <HelpTOCNode Title="namee Field" Url="html/F-game.EventInfo.namee.htm" />
+        <HelpTOCNode Title="probability Field" Url="html/F-game.EventInfo.probability.htm" />
+        <HelpTOCNode Title="targetPlant Field" Url="html/F-game.EventInfo.targetPlant.htm" />
+        <HelpTOCNode Title="targetSeed Field" Url="html/F-game.EventInfo.targetSeed.htm" />
+        <HelpTOCNode Title="targetsPlant Field" Url="html/F-game.EventInfo.targetsPlant.htm" />
+        <HelpTOCNode Title="targetsTool Field" Url="html/F-game.EventInfo.targetsTool.htm" />
+        <HelpTOCNode Title="targetTool Field" Url="html/F-game.EventInfo.targetTool.htm" />
+        <HelpTOCNode Title="unlockableAfter Field" Url="html/F-game.EventInfo.unlockableAfter.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="9bc95431-f70e-4b93-a3e9-549341b21654" Title="EventInfo Methods" Url="html/Methods.T-game.EventInfo.htm">
+        <HelpTOCNode Title="getDescription Method " Url="html/M-game.EventInfo.getDescription.htm" />
+        <HelpTOCNode Title="getLength Method " Url="html/M-game.EventInfo.getLength.htm" />
+        <HelpTOCNode Title="getName Method " Url="html/M-game.EventInfo.getName.htm" />
+        <HelpTOCNode Title="getTarget Method " Url="html/M-game.EventInfo.getTarget.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="001f365f-e626-406a-a604-032c3b49eb26" Title="Game Class" Url="html/T-game.Game.htm">
+      <HelpTOCNode Title="Game Members" Url="html/AllMembers.T-game.Game.htm" />
+      <HelpTOCNode Id="318d78d6-1793-4b3c-9a8a-2596f6038674" Title="Game Fields" Url="html/Fields.T-game.Game.htm">
+        <HelpTOCNode Title="inventoryPlant Field" Url="html/F-game.Game.inventoryPlant.htm" />
+        <HelpTOCNode Title="market Field" Url="html/F-game.Game.market.htm" />
+        <HelpTOCNode Title="money Field" Url="html/F-game.Game.money.htm" />
+        <HelpTOCNode Title="moneyText Field" Url="html/F-game.Game.moneyText.htm" />
+        <HelpTOCNode Title="shop Field" Url="html/F-game.Game.shop.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b5241658-f846-4315-946c-4eafdc6ac096" Title="Game Methods" Url="html/Methods.T-game.Game.htm">
+        <HelpTOCNode Title="AddMoney Method " Url="html/M-game.Game.AddMoney.htm" />
+        <HelpTOCNode Title="getDefaultSprite Method " Url="html/M-game.Game.getDefaultSprite.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-game.Game.Start.htm" />
+        <HelpTOCNode Title="SubsMoney Method " Url="html/M-game.Game.SubsMoney.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c943a56b-bf5b-4629-b5c6-4d12250ef754" Title="GerePlant Class" Url="html/T-game.GerePlant.htm">
+      <HelpTOCNode Title="GerePlant Members" Url="html/AllMembers.T-game.GerePlant.htm" />
+      <HelpTOCNode Id="5dbdb2f7-d07e-48f8-a13b-3c7ba721fc3c" Title="GerePlant Fields" Url="html/Fields.T-game.GerePlant.htm">
+        <HelpTOCNode Title="inventoryFunctions Field" Url="html/F-game.GerePlant.inventoryFunctions.htm" />
+        <HelpTOCNode Title="reafficheInv Field" Url="html/F-game.GerePlant.reafficheInv.htm" />
+        <HelpTOCNode Title="stockedItem Field" Url="html/F-game.GerePlant.stockedItem.htm" />
+        <HelpTOCNode Title="StockedPlot Field" Url="html/F-game.GerePlant.StockedPlot.htm" />
+        <HelpTOCNode Title="stockedQtt Field" Url="html/F-game.GerePlant.stockedQtt.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c38f315f-e8be-49e1-8020-b4cce703c5db" Title="GerePlant Methods" Url="html/Methods.T-game.GerePlant.htm">
+        <HelpTOCNode Title="getStockedItem Method " Url="html/M-game.GerePlant.getStockedItem.htm" />
+        <HelpTOCNode Title="getStockedQtt Method " Url="html/M-game.GerePlant.getStockedQtt.htm" />
+        <HelpTOCNode Title="Soustraits Method " Url="html/M-game.GerePlant.Soustraits.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8b2d696d-e476-47f7-98a3-a52765948569" Title="GraphMarket Class" Url="html/T-game.GraphMarket.htm">
+      <HelpTOCNode Title="GraphMarket Members" Url="html/AllMembers.T-game.GraphMarket.htm" />
+      <HelpTOCNode Id="71d10ffb-b2a3-439f-a41f-39ec6a340624" Title="GraphMarket Fields" Url="html/Fields.T-game.GraphMarket.htm">
+        <HelpTOCNode Title="allChildsToSuppr Field" Url="html/F-game.GraphMarket.allChildsToSuppr.htm" />
+        <HelpTOCNode Title="cam Field" Url="html/F-game.GraphMarket.cam.htm" />
+        <HelpTOCNode Title="camZoom Field" Url="html/F-game.GraphMarket.camZoom.htm" />
+        <HelpTOCNode Title="circleSprite Field" Url="html/F-game.GraphMarket.circleSprite.htm" />
+        <HelpTOCNode Title="dashTemplateX Field" Url="html/F-game.GraphMarket.dashTemplateX.htm" />
+        <HelpTOCNode Title="dashTemplateY Field" Url="html/F-game.GraphMarket.dashTemplateY.htm" />
+        <HelpTOCNode Title="graphContainer Field" Url="html/F-game.GraphMarket.graphContainer.htm" />
+        <HelpTOCNode Title="graphHeight Field" Url="html/F-game.GraphMarket.graphHeight.htm" />
+        <HelpTOCNode Title="labelTemplateX Field" Url="html/F-game.GraphMarket.labelTemplateX.htm" />
+        <HelpTOCNode Title="labelTemplateY Field" Url="html/F-game.GraphMarket.labelTemplateY.htm" />
+        <HelpTOCNode Title="lastValueText Field" Url="html/F-game.GraphMarket.lastValueText.htm" />
+        <HelpTOCNode Title="market Field" Url="html/F-game.GraphMarket.market.htm" />
+        <HelpTOCNode Title="monthList Field" Url="html/F-game.GraphMarket.monthList.htm" />
+        <HelpTOCNode Title="mutlInvGraph Field" Url="html/F-game.GraphMarket.mutlInvGraph.htm" />
+        <HelpTOCNode Title="numberOfDays Field" Url="html/F-game.GraphMarket.numberOfDays.htm" />
+        <HelpTOCNode Title="plantAct Field" Url="html/F-game.GraphMarket.plantAct.htm" />
+        <HelpTOCNode Title="titre Field" Url="html/F-game.GraphMarket.titre.htm" />
+        <HelpTOCNode Title="xMaximum Field" Url="html/F-game.GraphMarket.xMaximum.htm" />
+        <HelpTOCNode Title="xSize Field" Url="html/F-game.GraphMarket.xSize.htm" />
+        <HelpTOCNode Title="yMaximum Field" Url="html/F-game.GraphMarket.yMaximum.htm" />
+        <HelpTOCNode Title="yMin Field" Url="html/F-game.GraphMarket.yMin.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="2f95c2ed-d043-4575-a7b5-da161381968f" Title="GraphMarket Methods" Url="html/Methods.T-game.GraphMarket.htm">
+        <HelpTOCNode Title="affiche Method " Url="html/M-game.GraphMarket.affiche.htm" />
+        <HelpTOCNode Title="AngleBetweenVector2 Method " Url="html/M-game.GraphMarket.AngleBetweenVector2.htm" />
+        <HelpTOCNode Title="Awake Method " Url="html/M-game.GraphMarket.Awake.htm" />
+        <HelpTOCNode Title="changePlant Method " Url="html/M-game.GraphMarket.changePlant.htm" />
+        <HelpTOCNode Title="clearGraph Method " Url="html/M-game.GraphMarket.clearGraph.htm" />
+        <HelpTOCNode Title="CreateCircle Method " Url="html/M-game.GraphMarket.CreateCircle.htm" />
+        <HelpTOCNode Title="CreateDotConnection Method " Url="html/M-game.GraphMarket.CreateDotConnection.htm" />
+        <HelpTOCNode Title="ShowGraph Method " Url="html/M-game.GraphMarket.ShowGraph.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-game.GraphMarket.Update.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b4962181-50c7-4e4c-8cd4-3527f5a99dd8" Title="Inventory Class" Url="html/T-game.Inventory.htm">
+      <HelpTOCNode Title="Inventory Members" Url="html/AllMembers.T-game.Inventory.htm" />
+      <HelpTOCNode Id="5fd5d69d-6f53-45e1-989f-d05a6ec317b8" Title="Inventory Fields" Url="html/Fields.T-game.Inventory.htm">
+        <HelpTOCNode Title="currentWeight Field" Url="html/F-game.Inventory.currentWeight.htm" />
+        <HelpTOCNode Title="panel Field" Url="html/F-game.Inventory.panel.htm" />
+        <HelpTOCNode Title="slots Field" Url="html/F-game.Inventory.slots.htm" />
+        <HelpTOCNode Title="weightMax Field" Url="html/F-game.Inventory.weightMax.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fde62c70-0320-4c33-86fe-053cad41fa2c" Title="Inventory Methods" Url="html/Methods.T-game.Inventory.htm">
+        <HelpTOCNode Id="0aed50fd-f4ea-4317-aa3e-8e6c36a20c16" Title="addToInventory Method " Url="html/Overload-game.Inventory.addToInventory.htm">
+          <HelpTOCNode Title="addToInventory Method (BasicItem, Int32)" Url="html/M-game.Inventory.addToInventory.htm" />
+          <HelpTOCNode Title="addToInventory Method (BasicItem, Int32, Dictionary(BasicItem, Int32))" Url="html/M-game.Inventory.addToInventory_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="displayInventory Method " Url="html/M-game.Inventory.displayInventory.htm" />
+        <HelpTOCNode Title="getCurrentWeight Method " Url="html/M-game.Inventory.getCurrentWeight.htm" />
+        <HelpTOCNode Title="getInventory Method " Url="html/M-game.Inventory.getInventory.htm" />
+        <HelpTOCNode Title="getWeightMax Method " Url="html/M-game.Inventory.getWeightMax.htm" />
+        <HelpTOCNode Title="isDicoVide Method " Url="html/M-game.Inventory.isDicoVide.htm" />
+        <HelpTOCNode Title="removeFromInventory Method " Url="html/M-game.Inventory.removeFromInventory.htm" />
+        <HelpTOCNode Id="23bf8717-c0e4-4cc7-bf2f-9c01640b15f3" Title="SubstractFromInventory Method " Url="html/Overload-game.Inventory.SubstractFromInventory.htm">
+          <HelpTOCNode Title="SubstractFromInventory Method (BasicItem, Int32)" Url="html/M-game.Inventory.SubstractFromInventory.htm" />
+          <HelpTOCNode Title="SubstractFromInventory Method (BasicItem, Int32, Dictionary(BasicItem, Int32))" Url="html/M-game.Inventory.SubstractFromInventory_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ToString Method " Url="html/M-game.Inventory.ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c1e2111a-7d39-4d6b-bde6-4b2021290f91" Title="InventoryInterface Interface" Url="html/T-game.InventoryInterface.htm">
+      <HelpTOCNode Title="InventoryInterface Members" Url="html/AllMembers.T-game.InventoryInterface.htm" />
+      <HelpTOCNode Id="2f9dbae4-f992-45ea-b681-8fa40ba1548e" Title="InventoryInterface Methods" Url="html/Methods.T-game.InventoryInterface.htm">
+        <HelpTOCNode Title="afficheInventory Method " Url="html/M-game.InventoryInterface.afficheInventory.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="1550cdb9-a77b-4c57-b2b0-f82fcb559c18" Title="InventoryPanel Class" Url="html/T-game.InventoryPanel.htm">
+      <HelpTOCNode Title="InventoryPanel Members" Url="html/AllMembers.T-game.InventoryPanel.htm" />
+      <HelpTOCNode Id="869df151-45da-42ce-83f5-609ace2ee4ca" Title="InventoryPanel Constructor " Url="html/Overload-game.InventoryPanel.-ctor.htm">
+        <HelpTOCNode Title="InventoryPanel Constructor (Transform)" Url="html/M-game.InventoryPanel.-ctor.htm" />
+        <HelpTOCNode Title="InventoryPanel Constructor (Transform, Transform)" Url="html/M-game.InventoryPanel.-ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="afec223a-b1a2-483a-a311-9e981c30a522" Title="InventoryPanel Fields" Url="html/Fields.T-game.InventoryPanel.htm">
+        <HelpTOCNode Title="slotPanel Field" Url="html/F-game.InventoryPanel.slotPanel.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4facfe00-e51b-4549-984f-d8b9fe80678c" Title="InventoryPanel Methods" Url="html/Methods.T-game.InventoryPanel.htm">
+        <HelpTOCNode Title="affiche Method " Url="html/M-game.InventoryPanel.affiche.htm" />
+        <HelpTOCNode Id="b6cba2b7-f7cc-44ed-b84d-9d5385c09ed1" Title="afficheInventory Method " Url="html/Overload-game.InventoryPanel.afficheInventory.htm">
+          <HelpTOCNode Title="afficheInventory Method (Dictionary(BasicItem, Int32))" Url="html/M-game.InventoryPanel.afficheInventory.htm" />
+          <HelpTOCNode Title="afficheInventory Method (Dictionary(BasicItem, Int32), Transform)" Url="html/M-game.InventoryPanel.afficheInventory_1.htm" />
+          <HelpTOCNode Title="afficheInventory Method (Dictionary(BasicItem, Int32), Transform, Boolean)" Url="html/M-game.InventoryPanel.afficheInventory_2.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="clearInventoryDisplay Method " Url="html/M-game.InventoryPanel.clearInventoryDisplay.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fdfdf330-c4ff-4ba3-a3a4-58891003cf58" Title="InventoryPlant Class" Url="html/T-game.InventoryPlant.htm">
+      <HelpTOCNode Title="InventoryPlant Members" Url="html/AllMembers.T-game.InventoryPlant.htm" />
+      <HelpTOCNode Id="d762a5a7-a851-46b9-b1c0-e5754955e73a" Title="InventoryPlant Fields" Url="html/Fields.T-game.InventoryPlant.htm">
+        <HelpTOCNode Title="PlantSlots Field" Url="html/F-game.InventoryPlant.PlantSlots.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5be76695-9a0f-4866-8440-63867347c879" Title="InventoryPlant Methods" Url="html/Methods.T-game.InventoryPlant.htm">
+        <HelpTOCNode Title="getNbrSlots Method " Url="html/M-game.InventoryPlant.getNbrSlots.htm" />
+        <HelpTOCNode Title="setNbrSlots Method " Url="html/M-game.InventoryPlant.setNbrSlots.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="c451f0c9-4f56-4b41-b76a-f2093f510d66" Title="InventorySlot Class" Url="html/T-game.InventorySlot.htm">
+      <HelpTOCNode Title="InventorySlot Members" Url="html/AllMembers.T-game.InventorySlot.htm" />
+      <HelpTOCNode Id="fe9bec78-90a4-434c-a785-3b5e07f56956" Title="InventorySlot Methods" Url="html/Methods.T-game.InventorySlot.htm">
+        <HelpTOCNode Title="createSlot Method " Url="html/M-game.InventorySlot.createSlot.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="924d1fe1-5693-4e44-ad70-b33a3b8be667" Title="Market Class" Url="html/T-game.Market.htm">
+      <HelpTOCNode Title="Market Members" Url="html/AllMembers.T-game.Market.htm" />
+      <HelpTOCNode Id="9f3a656d-c726-4a53-bfea-a9430b5cad61" Title="Market Fields" Url="html/Fields.T-game.Market.htm">
+        <HelpTOCNode Title="activeEvents Field" Url="html/F-game.Market.activeEvents.htm" />
+        <HelpTOCNode Title="actualDays Field" Url="html/F-game.Market.actualDays.htm" />
+        <HelpTOCNode Title="history Field" Url="html/F-game.Market.history.htm" />
+        <HelpTOCNode Title="impossibleEvents Field" Url="html/F-game.Market.impossibleEvents.htm" />
+        <HelpTOCNode Title="instance Field" Url="html/F-game.Market.instance.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1ac0a11a-fa15-4ed2-8a67-904467f16bd0" Title="Market Methods" Url="html/Methods.T-game.Market.htm">
+        <HelpTOCNode Title="afficheEtatDebug Method " Url="html/M-game.Market.afficheEtatDebug.htm" />
+        <HelpTOCNode Title="Awake Method " Url="html/M-game.Market.Awake.htm" />
+        <HelpTOCNode Title="createMarket Method " Url="html/M-game.Market.createMarket.htm" />
+        <HelpTOCNode Title="createNewEvent Method " Url="html/M-game.Market.createNewEvent.htm" />
+        <HelpTOCNode Title="ezRound Method " Url="html/M-game.Market.ezRound.htm" />
+        <HelpTOCNode Title="generateNewHistoryDay Method " Url="html/M-game.Market.generateNewHistoryDay.htm" />
+        <HelpTOCNode Title="getActiveEvents Method " Url="html/M-game.Market.getActiveEvents.htm" />
+        <HelpTOCNode Title="getDays Method " Url="html/M-game.Market.getDays.htm" />
+        <HelpTOCNode Title="getHistory Method " Url="html/M-game.Market.getHistory.htm" />
+        <HelpTOCNode Title="getLastPricePlant Method " Url="html/M-game.Market.getLastPricePlant.htm" />
+        <HelpTOCNode Title="getLastPriceSeed Method " Url="html/M-game.Market.getLastPriceSeed.htm" />
+        <HelpTOCNode Title="last60Days Method " Url="html/M-game.Market.last60Days.htm" />
+        <HelpTOCNode Title="nextActiveEvent Method " Url="html/M-game.Market.nextActiveEvent.htm" />
+        <HelpTOCNode Title="nextDay Method " Url="html/M-game.Market.nextDay.htm" />
+        <HelpTOCNode Title="nextImpossibleEvents Method " Url="html/M-game.Market.nextImpossibleEvents.htm" />
+        <HelpTOCNode Title="normalise Method " Url="html/M-game.Market.normalise.htm" />
+        <HelpTOCNode Title="plantBasic Method " Url="html/M-game.Market.plantBasic.htm" />
+        <HelpTOCNode Title="plantByEvent Method " Url="html/M-game.Market.plantByEvent.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-game.Market.Start.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e1c52260-34a1-46cd-bec2-6c781db1d9eb" Title="NextDay Class" Url="html/T-game.NextDay.htm">
+      <HelpTOCNode Title="NextDay Members" Url="html/AllMembers.T-game.NextDay.htm" />
+      <HelpTOCNode Id="a3b7edc0-b63f-48ef-afcb-4d066c67ffa3" Title="NextDay Fields" Url="html/Fields.T-game.NextDay.htm">
+        <HelpTOCNode Title="dayText Field" Url="html/F-game.NextDay.dayText.htm" />
+        <HelpTOCNode Title="dicoPossessions Field" Url="html/F-game.NextDay.dicoPossessions.htm" />
+        <HelpTOCNode Title="gameLength Field" Url="html/F-game.NextDay.gameLength.htm" />
+        <HelpTOCNode Title="market Field" Url="html/F-game.NextDay.market.htm" />
+        <HelpTOCNode Title="nbrJour Field" Url="html/F-game.NextDay.nbrJour.htm" />
+        <HelpTOCNode Title="notif Field" Url="html/F-game.NextDay.notif.htm" />
+        <HelpTOCNode Title="plotList Field" Url="html/F-game.NextDay.plotList.htm" />
+        <HelpTOCNode Title="plots Field" Url="html/F-game.NextDay.plots.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4b6955df-8e06-4b40-b6c7-607c901e9211" Title="NextDay Methods" Url="html/Methods.T-game.NextDay.htm">
+        <HelpTOCNode Title="addToInventory Method " Url="html/M-game.NextDay.addToInventory.htm" />
+        <HelpTOCNode Title="EventDay Method " Url="html/M-game.NextDay.EventDay.htm" />
+        <HelpTOCNode Title="faitPousser Method " Url="html/M-game.NextDay.faitPousser.htm" />
+        <HelpTOCNode Title="getInventoryNotif Method " Url="html/M-game.NextDay.getInventoryNotif.htm" />
+        <HelpTOCNode Title="GetPlots Method " Url="html/M-game.NextDay.GetPlots.htm" />
+        <HelpTOCNode Title="OnMouseDown Method " Url="html/M-game.NextDay.OnMouseDown.htm" />
+        <HelpTOCNode Title="removeFromInventory Method " Url="html/M-game.NextDay.removeFromInventory.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-game.NextDay.Start.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="59c5ae40-02fe-4030-9b7c-1417b3479337" Title="Notification Class" Url="html/T-game.Notification.htm">
+      <HelpTOCNode Title="Notification Members" Url="html/AllMembers.T-game.Notification.htm" />
+      <HelpTOCNode Id="34bf3c71-0d8d-4e54-a92e-9c4af1015b94" Title="Notification Fields" Url="html/Fields.T-game.Notification.htm">
+        <HelpTOCNode Title="nextDay Field" Url="html/F-game.Notification.nextDay.htm" />
+        <HelpTOCNode Title="SlotNotif Field" Url="html/F-game.Notification.SlotNotif.htm" />
+        <HelpTOCNode Title="slotPanel Field" Url="html/F-game.Notification.slotPanel.htm" />
+        <HelpTOCNode Title="slots Field" Url="html/F-game.Notification.slots.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="39a25425-fb0a-4f60-b813-151dd8775126" Title="Notification Methods" Url="html/Methods.T-game.Notification.htm">
+        <HelpTOCNode Title="afficheInventory Method " Url="html/M-game.Notification.afficheInventory.htm" />
+        <HelpTOCNode Title="clearInventoryDisplay Method " Url="html/M-game.Notification.clearInventoryDisplay.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="23f1f33b-0769-4d47-aeea-f2108e32b475" Title="NotifPanel Class" Url="html/T-game.NotifPanel.htm">
+      <HelpTOCNode Title="NotifPanel Members" Url="html/AllMembers.T-game.NotifPanel.htm" />
+      <HelpTOCNode Id="d48ff443-7bc2-4f78-8d62-d762e9937aeb" Title="NotifPanel Fields" Url="html/Fields.T-game.NotifPanel.htm">
+        <HelpTOCNode Title="dico Field" Url="html/F-game.NotifPanel.dico.htm" />
+        <HelpTOCNode Title="notif Field" Url="html/F-game.NotifPanel.notif.htm" />
+        <HelpTOCNode Title="PanelInventory Field" Url="html/F-game.NotifPanel.PanelInventory.htm" />
+        <HelpTOCNode Title="PanelNotif Field" Url="html/F-game.NotifPanel.PanelNotif.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="c8ec25a0-9949-42b5-b303-14064fb89132" Title="NotifPanel Methods" Url="html/Methods.T-game.NotifPanel.htm">
+        <HelpTOCNode Title="OpenPanel Method " Url="html/M-game.NotifPanel.OpenPanel.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-game.NotifPanel.Start.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5a7a57b0-b09e-45b0-b2a8-ba8f5ac3ff05" Title="OpenShop Class" Url="html/T-game.OpenShop.htm">
+      <HelpTOCNode Title="OpenShop Members" Url="html/AllMembers.T-game.OpenShop.htm" />
+      <HelpTOCNode Id="65f0acae-60da-47c1-8f02-aef8236426e3" Title="OpenShop Fields" Url="html/Fields.T-game.OpenShop.htm">
+        <HelpTOCNode Title="canvas Field" Url="html/F-game.OpenShop.canvas.htm" />
+        <HelpTOCNode Title="openCanvasShop Field" Url="html/F-game.OpenShop.openCanvasShop.htm" />
+        <HelpTOCNode Title="shop Field" Url="html/F-game.OpenShop.shop.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="081fa824-c719-46d8-a0b1-1728b06009a8" Title="OpenShop Methods" Url="html/Methods.T-game.OpenShop.htm">
+        <HelpTOCNode Title="OnMouseDown Method " Url="html/M-game.OpenShop.OnMouseDown.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="31104b18-599f-49f3-aba0-9ce95277276d" Title="Plant Class" Url="html/T-game.Plant.htm">
+      <HelpTOCNode Title="Plant Members" Url="html/AllMembers.T-game.Plant.htm" />
+      <HelpTOCNode Id="d8fb8857-a737-4d05-89eb-7db950bfd7ba" Title="Plant Constructor " Url="html/Overload-game.Plant.-ctor.htm">
+        <HelpTOCNode Title="Plant Constructor (EnumTypePlant, Int32, String, String, Sprite, List(Int32), Int32)" Url="html/M-game.Plant.-ctor.htm" />
+        <HelpTOCNode Title="Plant Constructor " Url="html/M-game.Plant.-ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="81ed3569-9360-4c1c-bff3-db7432274c65" Title="Plant Fields" Url="html/Fields.T-game.Plant.htm">
+        <HelpTOCNode Title="basicPlantPrice Field" Url="html/F-game.Plant.basicPlantPrice.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="e539f8f6-cb75-4cbb-9d8d-e935993784e2" Title="Plant Methods" Url="html/Methods.T-game.Plant.htm">
+        <HelpTOCNode Title="getPrice Method " Url="html/M-game.Plant.getPrice.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="5a96743d-5ac1-4272-a767-e2fbf5a6aaec" Title="PlantedPlant Class" Url="html/T-game.PlantedPlant.htm">
+      <HelpTOCNode Title="PlantedPlant Members" Url="html/AllMembers.T-game.PlantedPlant.htm" />
+      <HelpTOCNode Id="577e0be6-096e-4baf-ae93-23ddfd94e056" Title="PlantedPlant Constructor " Url="html/Overload-game.PlantedPlant.-ctor.htm">
+        <HelpTOCNode Title="PlantedPlant Constructor (EnumTypePlant, Int32)" Url="html/M-game.PlantedPlant.-ctor.htm" />
+        <HelpTOCNode Title="PlantedPlant Constructor (EnumTypePlant, Int32, String, String, Sprite, List(Sprite), Int32, Int32)" Url="html/M-game.PlantedPlant.-ctor_1.htm" />
+        <HelpTOCNode Title="PlantedPlant Constructor " Url="html/M-game.PlantedPlant.-ctor_2.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="f053b7ad-3d5b-4022-98c8-a60cf7697329" Title="PlantedPlant Fields" Url="html/Fields.T-game.PlantedPlant.htm">
+        <HelpTOCNode Title="growthTime Field" Url="html/F-game.PlantedPlant.growthTime.htm" />
+        <HelpTOCNode Title="nbPlantCollect Field" Url="html/F-game.PlantedPlant.nbPlantCollect.htm" />
+        <HelpTOCNode Title="spriteLinks Field" Url="html/F-game.PlantedPlant.spriteLinks.htm" />
+        <HelpTOCNode Title="typePlant Field" Url="html/F-game.PlantedPlant.typePlant.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="aaab9e9a-6665-4f97-884f-61cb1ccdd923" Title="PlantedPlant Methods" Url="html/Methods.T-game.PlantedPlant.htm">
+        <HelpTOCNode Title="getGrowthTime Method " Url="html/M-game.PlantedPlant.getGrowthTime.htm" />
+        <HelpTOCNode Title="getNbCollect Method " Url="html/M-game.PlantedPlant.getNbCollect.htm" />
+        <HelpTOCNode Title="getSpriteLinks Method " Url="html/M-game.PlantedPlant.getSpriteLinks.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0922bc3d-1d58-4920-bbff-bcca092f592f" Title="PlantInfo Class" Url="html/T-game.PlantInfo.htm">
+      <HelpTOCNode Title="PlantInfo Members" Url="html/AllMembers.T-game.PlantInfo.htm" />
+      <HelpTOCNode Title="PlantInfo Constructor " Url="html/M-game.PlantInfo.-ctor.htm" />
+      <HelpTOCNode Id="ae320c6a-0865-4064-a674-255953578836" Title="PlantInfo Fields" Url="html/Fields.T-game.PlantInfo.htm">
+        <HelpTOCNode Title="basicPlantPrice Field" Url="html/F-game.PlantInfo.basicPlantPrice.htm" />
+        <HelpTOCNode Title="basicSeedPrice Field" Url="html/F-game.PlantInfo.basicSeedPrice.htm" />
+        <HelpTOCNode Title="description Field" Url="html/F-game.PlantInfo.description.htm" />
+        <HelpTOCNode Title="growthTime Field" Url="html/F-game.PlantInfo.growthTime.htm" />
+        <HelpTOCNode Title="id Field" Url="html/F-game.PlantInfo.id.htm" />
+        <HelpTOCNode Title="namePlant Field" Url="html/F-game.PlantInfo.namePlant.htm" />
+        <HelpTOCNode Title="nbPlantCollect Field" Url="html/F-game.PlantInfo.nbPlantCollect.htm" />
+        <HelpTOCNode Title="plantedPlantSpriteLink Field" Url="html/F-game.PlantInfo.plantedPlantSpriteLink.htm" />
+        <HelpTOCNode Title="plantSpriteLink Field" Url="html/F-game.PlantInfo.plantSpriteLink.htm" />
+        <HelpTOCNode Title="plantWeight Field" Url="html/F-game.PlantInfo.plantWeight.htm" />
+        <HelpTOCNode Title="seedSpriteLink Field" Url="html/F-game.PlantInfo.seedSpriteLink.htm" />
+        <HelpTOCNode Title="seedWeight Field" Url="html/F-game.PlantInfo.seedWeight.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a3ad089e-67de-4d22-8ba5-67ce53657b8f" Title="PlantInfo Methods" Url="html/Methods.T-game.PlantInfo.htm">
+        <HelpTOCNode Title="getDesc Method " Url="html/M-game.PlantInfo.getDesc.htm" />
+        <HelpTOCNode Title="getEnum Method " Url="html/M-game.PlantInfo.getEnum.htm" />
+        <HelpTOCNode Title="getGrowth Method " Url="html/M-game.PlantInfo.getGrowth.htm" />
+        <HelpTOCNode Title="getId Method " Url="html/M-game.PlantInfo.getId.htm" />
+        <HelpTOCNode Title="getNbCollect Method " Url="html/M-game.PlantInfo.getNbCollect.htm" />
+        <HelpTOCNode Title="getPlantedPlantSprites Method " Url="html/M-game.PlantInfo.getPlantedPlantSprites.htm" />
+        <HelpTOCNode Title="getPlantPrice Method " Url="html/M-game.PlantInfo.getPlantPrice.htm" />
+        <HelpTOCNode Title="getPlantSprite Method " Url="html/M-game.PlantInfo.getPlantSprite.htm" />
+        <HelpTOCNode Title="getPlantWeight Method " Url="html/M-game.PlantInfo.getPlantWeight.htm" />
+        <HelpTOCNode Title="getSeedPrice Method " Url="html/M-game.PlantInfo.getSeedPrice.htm" />
+        <HelpTOCNode Title="getSeedSprite Method " Url="html/M-game.PlantInfo.getSeedSprite.htm" />
+        <HelpTOCNode Title="getSeedWeight Method " Url="html/M-game.PlantInfo.getSeedWeight.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b9129cab-1d62-409f-bcfe-f296825e3985" Title="Plot Class" Url="html/T-game.Plot.htm">
+      <HelpTOCNode Title="Plot Members" Url="html/AllMembers.T-game.Plot.htm" />
+      <HelpTOCNode Title="Plot Constructor " Url="html/M-game.Plot.-ctor.htm" />
+      <HelpTOCNode Id="92df839f-b75f-429b-9c73-589761d8787f" Title="Plot Fields" Url="html/Fields.T-game.Plot.htm">
+        <HelpTOCNode Title="capacity Field" Url="html/F-game.Plot.capacity.htm" />
+        <HelpTOCNode Title="currentPlant Field" Url="html/F-game.Plot.currentPlant.htm" />
+        <HelpTOCNode Title="isPlanted Field" Url="html/F-game.Plot.isPlanted.htm" />
+        <HelpTOCNode Title="number Field" Url="html/F-game.Plot.number.htm" />
+        <HelpTOCNode Title="timeGrown Field" Url="html/F-game.Plot.timeGrown.htm" />
+        <HelpTOCNode Title="typePlot Field" Url="html/F-game.Plot.typePlot.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0a19359c-41f5-47c9-a04a-161e819b6bcd" Title="Plot Methods" Url="html/Methods.T-game.Plot.htm">
+        <HelpTOCNode Title="changePlantSprite Method " Url="html/M-game.Plot.changePlantSprite.htm" />
+        <HelpTOCNode Title="getCapacity Method " Url="html/M-game.Plot.getCapacity.htm" />
+        <HelpTOCNode Title="getQuantitySeed Method " Url="html/M-game.Plot.getQuantitySeed.htm" />
+        <HelpTOCNode Title="getTimeGrown Method " Url="html/M-game.Plot.getTimeGrown.htm" />
+        <HelpTOCNode Title="getTypePlant Method " Url="html/M-game.Plot.getTypePlant.htm" />
+        <HelpTOCNode Title="growSeed Method " Url="html/M-game.Plot.growSeed.htm" />
+        <HelpTOCNode Title="setIsPlanted Method " Url="html/M-game.Plot.setIsPlanted.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="db68393a-ee1f-4759-a3cf-bd84cb432851" Title="Seed Class" Url="html/T-game.Seed.htm">
+      <HelpTOCNode Title="Seed Members" Url="html/AllMembers.T-game.Seed.htm" />
+      <HelpTOCNode Id="6814ddd5-4103-400a-a285-a7b08028e2c3" Title="Seed Constructor " Url="html/Overload-game.Seed.-ctor.htm">
+        <HelpTOCNode Title="Seed Constructor " Url="html/M-game.Seed.-ctor.htm" />
+        <HelpTOCNode Title="Seed Constructor (EnumTypePlant, Int32, String, String, Sprite, Int32, Int32, Int32)" Url="html/M-game.Seed.-ctor_1.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="6798fb8d-3b8e-49e4-95d9-026f5897b83c" Title="Seed Fields" Url="html/Fields.T-game.Seed.htm">
+        <HelpTOCNode Title="timeGrowth Field" Url="html/F-game.Seed.timeGrowth.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="2dff42f4-1cd9-4886-8456-e9ce2f783b7c" Title="Seed Methods" Url="html/Methods.T-game.Seed.htm">
+        <HelpTOCNode Title="getTimeGrowth Method " Url="html/M-game.Seed.getTimeGrowth.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b609f89a-fff3-496b-a3af-9e8322d2aa32" Title="Shop Class" Url="html/T-game.Shop.htm">
+      <HelpTOCNode Title="Shop Members" Url="html/AllMembers.T-game.Shop.htm" />
+      <HelpTOCNode Title="Shop Constructor " Url="html/M-game.Shop.-ctor.htm" />
+      <HelpTOCNode Id="bab64613-fa2e-4e0a-aae1-a84a3f274bc9" Title="Shop Fields" Url="html/Fields.T-game.Shop.htm">
+        <HelpTOCNode Title="inventory Field" Url="html/F-game.Shop.inventory.htm" />
+        <HelpTOCNode Title="slots Field" Url="html/F-game.Shop.slots.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0b3e208d-e484-4746-8a0b-1b6c5172b2b7" Title="Shop Methods" Url="html/Methods.T-game.Shop.htm">
+        <HelpTOCNode Title="Start Method " Url="html/M-game.Shop.Start.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="4d7eea43-3102-4f10-800d-158c60460a2b" Title="SlotInit Class" Url="html/T-game.SlotInit.htm">
+      <HelpTOCNode Title="SlotInit Members" Url="html/AllMembers.T-game.SlotInit.htm" />
+      <HelpTOCNode Id="4f524455-39e9-49ea-80c6-b4f855afced7" Title="SlotInit Fields" Url="html/Fields.T-game.SlotInit.htm">
+        <HelpTOCNode Title="item Field" Url="html/F-game.SlotInit.item.htm" />
+        <HelpTOCNode Title="panelInfosVente Field" Url="html/F-game.SlotInit.panelInfosVente.htm" />
+        <HelpTOCNode Title="qttSlot Field" Url="html/F-game.SlotInit.qttSlot.htm" />
+        <HelpTOCNode Title="reafficheInv Field" Url="html/F-game.SlotInit.reafficheInv.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="4eb9d1fc-1793-443a-a6a6-dfa15ee2febc" Title="SlotInit Methods" Url="html/Methods.T-game.SlotInit.htm">
+        <HelpTOCNode Title="af Method " Url="html/M-game.SlotInit.af.htm" />
+        <HelpTOCNode Title="OnMouseDown Method " Url="html/M-game.SlotInit.OnMouseDown.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3ecb1190-09bb-411c-a287-139baaee7e63" Title="Stand Class" Url="html/T-game.Stand.htm">
+      <HelpTOCNode Title="Stand Members" Url="html/AllMembers.T-game.Stand.htm" />
+      <HelpTOCNode Title="Stand Constructor " Url="html/M-game.Stand.-ctor.htm" />
+      <HelpTOCNode Id="651b26dd-2ca5-419c-b9af-4fa8e95ffb87" Title="Stand Fields" Url="html/Fields.T-game.Stand.htm">
+        <HelpTOCNode Title="game Field" Url="html/F-game.Stand.game.htm" />
+        <HelpTOCNode Title="inventory Field" Url="html/F-game.Stand.inventory.htm" />
+        <HelpTOCNode Title="listeItem Field" Url="html/F-game.Stand.listeItem.htm" />
+        <HelpTOCNode Title="market Field" Url="html/F-game.Stand.market.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a3cfb4d5-947e-4853-b3ef-35e5bdec4254" Title="Stand Methods" Url="html/Methods.T-game.Stand.htm">
+        <HelpTOCNode Title="add_price Method " Url="html/M-game.Stand.add_price.htm" />
+        <HelpTOCNode Title="sell_stock Method " Url="html/M-game.Stand.sell_stock.htm" />
+        <HelpTOCNode Title="stock_sale Method " Url="html/M-game.Stand.stock_sale.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="836cdd6c-f8da-4977-b65f-3908c643fc28" Title="Stand.Item Structure" Url="html/T-game.Stand.Item.htm">
+      <HelpTOCNode Title="Stand.Item Members" Url="html/AllMembers.T-game.Stand.Item.htm" />
+      <HelpTOCNode Id="64f71fef-b8f9-44d7-b54e-9d3274c518c8" Title="Stand.Item Properties" Url="html/Properties.T-game.Stand.Item.htm">
+        <HelpTOCNode Title="item_number Property " Url="html/P-game.Stand.Item.item_number.htm" />
+        <HelpTOCNode Title="item_price Property " Url="html/P-game.Stand.Item.item_price.htm" />
+        <HelpTOCNode Title="item_sale Property " Url="html/P-game.Stand.Item.item_sale.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6ab3f4b2-7904-44d7-aea2-69c5184f80cc" Title="Tool Class" Url="html/T-game.Tool.htm">
+      <HelpTOCNode Title="Tool Members" Url="html/AllMembers.T-game.Tool.htm" />
+      <HelpTOCNode Id="ebc4de92-81ae-40de-9500-06a984e161c5" Title="Tool Constructor " Url="html/Overload-game.Tool.-ctor.htm">
+        <HelpTOCNode Title="Tool Constructor " Url="html/M-game.Tool.-ctor.htm" />
+        <HelpTOCNode Title="Tool Constructor (Int32, String, Int32, String, Sprite)" Url="html/M-game.Tool.-ctor_1.htm" />
+        <HelpTOCNode Title="Tool Constructor (Int32, String, Int32, String, String)" Url="html/M-game.Tool.-ctor_2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="d2f9dfba-b5ff-475d-9bb7-8f11ec981273" Title="global Namespace" Url="html/N-global.htm">
+    <HelpTOCNode Id="2343adfb-19fa-4d74-be0f-1010c98efa10" Title="CameraMovement Class" Url="html/T-global.CameraMovement.htm">
+      <HelpTOCNode Title="CameraMovement Members" Url="html/AllMembers.T-global.CameraMovement.htm" />
+      <HelpTOCNode Id="ec92be95-1f6a-4d42-bab0-614a0b8f1f2a" Title="CameraMovement Fields" Url="html/Fields.T-global.CameraMovement.htm">
+        <HelpTOCNode Title="cam Field" Url="html/F-global.CameraMovement.cam.htm" />
+        <HelpTOCNode Title="canMoove Field" Url="html/F-global.CameraMovement.canMoove.htm" />
+        <HelpTOCNode Title="dragOrigin Field" Url="html/F-global.CameraMovement.dragOrigin.htm" />
+        <HelpTOCNode Title="mapMaxX Field" Url="html/F-global.CameraMovement.mapMaxX.htm" />
+        <HelpTOCNode Title="mapMaxY Field" Url="html/F-global.CameraMovement.mapMaxY.htm" />
+        <HelpTOCNode Title="mapMinX Field" Url="html/F-global.CameraMovement.mapMinX.htm" />
+        <HelpTOCNode Title="mapMinY Field" Url="html/F-global.CameraMovement.mapMinY.htm" />
+        <HelpTOCNode Title="maxCamSize Field" Url="html/F-global.CameraMovement.maxCamSize.htm" />
+        <HelpTOCNode Title="minCamSize Field" Url="html/F-global.CameraMovement.minCamSize.htm" />
+        <HelpTOCNode Title="tilemapRenderer Field" Url="html/F-global.CameraMovement.tilemapRenderer.htm" />
+        <HelpTOCNode Title="zoom Field" Url="html/F-global.CameraMovement.zoom.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0dc8624e-ea23-46ea-9be9-5256a0231df5" Title="CameraMovement Methods" Url="html/Methods.T-global.CameraMovement.htm">
+        <HelpTOCNode Title="Awake Method " Url="html/M-global.CameraMovement.Awake.htm" />
+        <HelpTOCNode Title="ClampCamera Method " Url="html/M-global.CameraMovement.ClampCamera.htm" />
+        <HelpTOCNode Title="PanCamera Method " Url="html/M-global.CameraMovement.PanCamera.htm" />
+        <HelpTOCNode Title="playerCanMoove Method " Url="html/M-global.CameraMovement.playerCanMoove.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-global.CameraMovement.Update.htm" />
+        <HelpTOCNode Title="ZoomIn Method " Url="html/M-global.CameraMovement.ZoomIn.htm" />
+        <HelpTOCNode Title="ZoomOut Method " Url="html/M-global.CameraMovement.ZoomOut.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3bf5df93-8c06-4788-826f-338d0c6e4398" Title="GoBackTest Class" Url="html/T-global.GoBackTest.htm">
+      <HelpTOCNode Title="GoBackTest Members" Url="html/AllMembers.T-global.GoBackTest.htm" />
+      <HelpTOCNode Id="6d03d83c-8086-43ee-a0fe-60b3ead48aca" Title="GoBackTest Methods" Url="html/Methods.T-global.GoBackTest.htm">
+        <HelpTOCNode Title="goMainMenu Method " Url="html/M-global.GoBackTest.goMainMenu.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0c209d90-888a-449a-84e4-a4edd54c1024" Title="Highlite Class" Url="html/T-global.Highlite.htm">
+      <HelpTOCNode Title="Highlite Members" Url="html/AllMembers.T-global.Highlite.htm" />
+      <HelpTOCNode Id="ddc4dd76-9a36-44ff-9067-8f1a40f04c94" Title="Highlite Fields" Url="html/Fields.T-global.Highlite.htm">
+        <HelpTOCNode Title="sprite Field" Url="html/F-global.Highlite.sprite.htm" />
+        <HelpTOCNode Title="sprite_highlight Field" Url="html/F-global.Highlite.sprite_highlight.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="2cc07ae2-908b-42c2-9696-8a01ab95cd8c" Title="Highlite Methods" Url="html/Methods.T-global.Highlite.htm">
+        <HelpTOCNode Title="OnMouseExit Method " Url="html/M-global.Highlite.OnMouseExit.htm" />
+        <HelpTOCNode Title="OnMouseOver Method " Url="html/M-global.Highlite.OnMouseOver.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="65937a07-7880-4532-9eec-6987f18c61c6" Title="MainMenu Class" Url="html/T-global.MainMenu.htm">
+      <HelpTOCNode Title="MainMenu Members" Url="html/AllMembers.T-global.MainMenu.htm" />
+      <HelpTOCNode Id="2afb112b-af89-488c-8d3d-27827b8a4f70" Title="MainMenu Methods" Url="html/Methods.T-global.MainMenu.htm">
+        <HelpTOCNode Title="PlayGame Method " Url="html/M-global.MainMenu.PlayGame.htm" />
+        <HelpTOCNode Title="QuitGame Method " Url="html/M-global.MainMenu.QuitGame.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="22a5837e-59dd-43db-b21e-cda54e292cdc" Title="marketBase Class" Url="html/T-global.marketBase.htm">
+      <HelpTOCNode Title="marketBase Members" Url="html/AllMembers.T-global.marketBase.htm" />
+      <HelpTOCNode Id="9342ebbe-a56e-4086-b5cb-e706b61d4cf1" Title="marketBase Fields" Url="html/Fields.T-global.marketBase.htm">
+        <HelpTOCNode Title="market Field" Url="html/F-global.marketBase.market.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a3276bc3-4ffd-4429-89bd-9083939a5446" Title="marketBase Methods" Url="html/Methods.T-global.marketBase.htm">
+        <HelpTOCNode Title="Start Method " Url="html/M-global.marketBase.Start.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fcb52d77-70ac-4ed9-bb95-b8e2a8ce6162" Title="OpenCanvas Class" Url="html/T-global.OpenCanvas.htm">
+      <HelpTOCNode Title="OpenCanvas Members" Url="html/AllMembers.T-global.OpenCanvas.htm" />
+      <HelpTOCNode Id="6e773285-ccb5-4405-a9af-0c4b8eab9de0" Title="OpenCanvas Fields" Url="html/Fields.T-global.OpenCanvas.htm">
+        <HelpTOCNode Title="cam Field" Url="html/F-global.OpenCanvas.cam.htm" />
+        <HelpTOCNode Title="camZoom Field" Url="html/F-global.OpenCanvas.camZoom.htm" />
+        <HelpTOCNode Title="isShown Field" Url="html/F-global.OpenCanvas.isShown.htm" />
+        <HelpTOCNode Title="PanelPlotPlant Field" Url="html/F-global.OpenCanvas.PanelPlotPlant.htm" />
+        <HelpTOCNode Title="thingsToHide Field" Url="html/F-global.OpenCanvas.thingsToHide.htm" />
+        <HelpTOCNode Title="thingsToShow Field" Url="html/F-global.OpenCanvas.thingsToShow.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="88c9773d-7c08-4c16-8fe7-b096f2983c23" Title="OpenCanvas Methods" Url="html/Methods.T-global.OpenCanvas.htm">
+        <HelpTOCNode Title="displayCanvasON Method " Url="html/M-global.OpenCanvas.displayCanvasON.htm" />
+        <HelpTOCNode Title="inverseAffichage Method " Url="html/M-global.OpenCanvas.inverseAffichage.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0d060c25-7b50-4811-9831-133caafa182f" Title="OpenMarket Class" Url="html/T-global.OpenMarket.htm">
+      <HelpTOCNode Title="OpenMarket Members" Url="html/AllMembers.T-global.OpenMarket.htm" />
+      <HelpTOCNode Id="ed233395-eaf5-4e5c-8d2f-60fb9565e7e4" Title="OpenMarket Fields" Url="html/Fields.T-global.OpenMarket.htm">
+        <HelpTOCNode Title="canvas Field" Url="html/F-global.OpenMarket.canvas.htm" />
+        <HelpTOCNode Title="graphContainer Field" Url="html/F-global.OpenMarket.graphContainer.htm" />
+        <HelpTOCNode Title="openCanvasMarket Field" Url="html/F-global.OpenMarket.openCanvasMarket.htm" />
+        <HelpTOCNode Title="reafficheInvOnClickMarket Field" Url="html/F-global.OpenMarket.reafficheInvOnClickMarket.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="797bc44b-ad3a-474d-945d-8df0b2370141" Title="OpenMarket Methods" Url="html/Methods.T-global.OpenMarket.htm">
+        <HelpTOCNode Title="OnMouseDown Method " Url="html/M-global.OpenMarket.OnMouseDown.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="51fff323-af77-47ec-a7e1-22b956ccf388" Title="PlotEvents Class" Url="html/T-global.PlotEvents.htm">
+      <HelpTOCNode Title="PlotEvents Members" Url="html/AllMembers.T-global.PlotEvents.htm" />
+      <HelpTOCNode Id="b6b3a736-012b-48a7-b05d-7997b5a58383" Title="PlotEvents Fields" Url="html/Fields.T-global.PlotEvents.htm">
+        <HelpTOCNode Title="contientGraine Field" Url="html/F-global.PlotEvents.contientGraine.htm" />
+        <HelpTOCNode Title="growthStatus Field" Url="html/F-global.PlotEvents.growthStatus.htm" />
+        <HelpTOCNode Title="growthTime Field" Url="html/F-global.PlotEvents.growthTime.htm" />
+        <HelpTOCNode Title="hidesPanel Field" Url="html/F-global.PlotEvents.hidesPanel.htm" />
+        <HelpTOCNode Title="InterfacePlantPanel Field" Url="html/F-global.PlotEvents.InterfacePlantPanel.htm" />
+        <HelpTOCNode Title="inventory Field" Url="html/F-global.PlotEvents.inventory.htm" />
+        <HelpTOCNode Title="itemDansPlot Field" Url="html/F-global.PlotEvents.itemDansPlot.htm" />
+        <HelpTOCNode Title="plantedPlant Field" Url="html/F-global.PlotEvents.plantedPlant.htm" />
+        <HelpTOCNode Title="plot_sprite Field" Url="html/F-global.PlotEvents.plot_sprite.htm" />
+        <HelpTOCNode Title="plot_sprite_highlite Field" Url="html/F-global.PlotEvents.plot_sprite_highlite.htm" />
+        <HelpTOCNode Title="plotImage Field" Url="html/F-global.PlotEvents.plotImage.htm" />
+        <HelpTOCNode Title="PlotSupervisor Field" Url="html/F-global.PlotEvents.PlotSupervisor.htm" />
+        <HelpTOCNode Title="reafficheInvOnClick Field" Url="html/F-global.PlotEvents.reafficheInvOnClick.htm" />
+        <HelpTOCNode Title="seed_sprite Field" Url="html/F-global.PlotEvents.seed_sprite.htm" />
+        <HelpTOCNode Title="seed_sprite_grown Field" Url="html/F-global.PlotEvents.seed_sprite_grown.htm" />
+        <HelpTOCNode Title="seedImage Field" Url="html/F-global.PlotEvents.seedImage.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0ad3ffcd-ddc9-45f2-bbef-841a5aa5cfdb" Title="PlotEvents Methods" Url="html/Methods.T-global.PlotEvents.htm">
+        <HelpTOCNode Title="fairePousser Method " Url="html/M-global.PlotEvents.fairePousser.htm" />
+        <HelpTOCNode Title="GetChildren Method " Url="html/M-global.PlotEvents.GetChildren.htm" />
+        <HelpTOCNode Title="OnMouseDown Method " Url="html/M-global.PlotEvents.OnMouseDown.htm" />
+        <HelpTOCNode Title="OnMouseExit Method " Url="html/M-global.PlotEvents.OnMouseExit.htm" />
+        <HelpTOCNode Title="OnMouseOver Method " Url="html/M-global.PlotEvents.OnMouseOver.htm" />
+        <HelpTOCNode Title="planteGraine Method " Url="html/M-global.PlotEvents.planteGraine.htm" />
+        <HelpTOCNode Title="recupPlante Method " Url="html/M-global.PlotEvents.recupPlante.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-global.PlotEvents.Start.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3232e13d-3a3b-465b-9797-8feef04cd993" Title="SellScript Class" Url="html/T-global.SellScript.htm">
+      <HelpTOCNode Title="SellScript Members" Url="html/AllMembers.T-global.SellScript.htm" />
+      <HelpTOCNode Id="7a09210d-385a-46f3-86e5-65836837b60d" Title="SellScript Fields" Url="html/Fields.T-global.SellScript.htm">
+        <HelpTOCNode Title="endValue Field" Url="html/F-global.SellScript.endValue.htm" />
+        <HelpTOCNode Title="market Field" Url="html/F-global.SellScript.market.htm" />
+        <HelpTOCNode Title="plantChoosed Field" Url="html/F-global.SellScript.plantChoosed.htm" />
+        <HelpTOCNode Title="resValue Field" Url="html/F-global.SellScript.resValue.htm" />
+        <HelpTOCNode Title="slider Field" Url="html/F-global.SellScript.slider.htm" />
+        <HelpTOCNode Title="transformRef Field" Url="html/F-global.SellScript.transformRef.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="392f89fb-776d-49d8-8630-f54f414e0d90" Title="SellScript Methods" Url="html/Methods.T-global.SellScript.htm">
+        <HelpTOCNode Title="changeMaxValue Method " Url="html/M-global.SellScript.changeMaxValue.htm" />
+        <HelpTOCNode Title="changePlant Method " Url="html/M-global.SellScript.changePlant.htm" />
+        <HelpTOCNode Title="sell Method " Url="html/M-global.SellScript.sell.htm" />
+        <HelpTOCNode Title="Start Method " Url="html/M-global.SellScript.Start.htm" />
+        <HelpTOCNode Title="totalPrice Method " Url="html/M-global.SellScript.totalPrice.htm" />
+        <HelpTOCNode Title="valueChanged Method " Url="html/M-global.SellScript.valueChanged.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="18ac5d41-2dfd-4c54-babc-46a8f3f976e0" Title="Zoom Class" Url="html/T-global.Zoom.htm">
+      <HelpTOCNode Title="Zoom Members" Url="html/AllMembers.T-global.Zoom.htm" />
+      <HelpTOCNode Id="4dda5c9f-2a1b-4dbf-8c66-96ea78e16151" Title="Zoom Fields" Url="html/Fields.T-global.Zoom.htm">
+        <HelpTOCNode Title="cam Field" Url="html/F-global.Zoom.cam.htm" />
+        <HelpTOCNode Title="canZoom Field" Url="html/F-global.Zoom.canZoom.htm" />
+        <HelpTOCNode Title="mapMaxX Field" Url="html/F-global.Zoom.mapMaxX.htm" />
+        <HelpTOCNode Title="mapMaxY Field" Url="html/F-global.Zoom.mapMaxY.htm" />
+        <HelpTOCNode Title="mapMinX Field" Url="html/F-global.Zoom.mapMinX.htm" />
+        <HelpTOCNode Title="mapMinY Field" Url="html/F-global.Zoom.mapMinY.htm" />
+        <HelpTOCNode Title="maxCamSize Field" Url="html/F-global.Zoom.maxCamSize.htm" />
+        <HelpTOCNode Title="minCamSize Field" Url="html/F-global.Zoom.minCamSize.htm" />
+        <HelpTOCNode Title="tilemapRenderer Field" Url="html/F-global.Zoom.tilemapRenderer.htm" />
+        <HelpTOCNode Title="zoom Field" Url="html/F-global.Zoom.zoom.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="daa4e5e8-a558-4acf-b114-2985aacb5d9a" Title="Zoom Methods" Url="html/Methods.T-global.Zoom.htm">
+        <HelpTOCNode Title="Awake Method " Url="html/M-global.Zoom.Awake.htm" />
+        <HelpTOCNode Title="ClampCamera Method " Url="html/M-global.Zoom.ClampCamera.htm" />
+        <HelpTOCNode Title="playerCanZoom Method " Url="html/M-global.Zoom.playerCanZoom.htm" />
+        <HelpTOCNode Title="Update Method " Url="html/M-global.Zoom.Update.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
