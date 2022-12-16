@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 
 namespace game
@@ -13,14 +11,20 @@ namespace game
         InventoryPlant inventory;
         Game game;
 
+        /// <summary>
+        /// La méthode <c>Stand</c> instancie un nouveau Stand
+        /// </summary>
+        /// <param name="Xmarket">The market.</param>
+        /// <param name="Xinventory">The inventory.</param>
+        /// <param name="Xgame">The game.</param>
         public Stand(Market Xmarket, InventoryPlant Xinventory, Game Xgame)
         {
             market = Xmarket;
             inventory = Xinventory;
             game = Xgame;
         }
-        
-        //item_sell
+
+        //item_sell        
         struct Item
         {
             public EnumTypePlant item_sale { get; set; }
@@ -30,7 +34,13 @@ namespace game
 
         private List<Item> listeItem = new List<Item>();
 
-        //store items for sale
+        //store items for sale        
+        /// <summary>
+        /// La méthode <c>stock_sale</c> ajoute un item dans la listeItem.
+        /// </summary>
+        /// <param name="Xitem_sale">The xitem sale.</param>
+        /// <param name="Xitem_number">The xitem number.</param>
+        /// <param name="Xitem_price">The xitem price.</param>
         public void stock_sale(EnumTypePlant Xitem_sale, int Xitem_number, int Xitem_price)
         {
             Item item = new Item();
@@ -41,7 +51,11 @@ namespace game
             listeItem.Add(item);
         }
 
-        //function that when you call it goes around all the stuff on sale and sells it
+        //function that when you call it goes around all the stuff on sale and sells it        
+        /// <summary>
+        /// La méthode <c>sell_stock</c> vend l'item choisit.
+        /// </summary>
+        /// <returns>System.Int32.</returns>
         public int sell_stock()
         {
             int price = 0;
@@ -61,7 +75,11 @@ namespace game
             return price;
         }
 
-        //add price
+        //add price        
+        /// <summary>
+        /// La méthode <c>add_price</c> ajoute l'argent au joueur.
+        /// </summary>
+        /// <param name="price">The price.</param>
         public void add_price(int price)
         {
             game.money += price;
