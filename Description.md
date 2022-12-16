@@ -20,7 +20,7 @@
     </li>
     <li><a href="#liste-des-principales-fonctionnalites">Liste des principales fonctionnalités</a></li>
     <li><a href="#renvoie">Informations que le jeu renvoie au joueur</a></li>
-    <li><a href="#tuto>Tutoriel</a></li>
+    <li><a href="#tuto">Tutoriel</a></li>
   </ol>
 </details>
 
