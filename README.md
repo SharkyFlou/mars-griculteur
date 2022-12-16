@@ -15,8 +15,10 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
     <li><a href="#projet-T3">Projet T3</a></li>
     <li><a href="#capture-decran">Captures d'écrans</a>
       <ul>
+          <li><a href="#menus">MENUS</a></li>
           <li><a href="#map">MAP</a></li>
           <li><a href="#differentes-fenetres">Différentes fenêtres</a></li>
+          <li><a href="#ecran-de-fin">Ecran de fin</a></li>
       </ul>
     </li>
     <li><a href="#lien-de-telechargement">Lien de téléchargement</a></li>
@@ -57,6 +59,18 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
 <a name="capture-decran"></a>
 
 ## Captures d'écrans
+
+### Menus
+
+<div align="center">
+<img src="images/Menu.png" alt="Menu principal" width="600" height="300"/>
+<h6 align="center">Menu principal</h6>
+</div>
+
+<div align="center">
+<img src="images/Menu_choix.png" alt="Menu durée" width="600" height="300"/>
+<h6 align="center">Choix de la durée de la partie</h6>
+</div>
 
 ### MAP
 
@@ -140,6 +154,14 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
     <img src="images/Quit.jpeg" alt="Demande au joueur s'il est sûr de quitter">
 <h6 align="center">Demande au joueur s'il est sûr de quitter</h6>
 </div>
+
+### Ecran de fin
+
+<div align="center">
+<img src="images/Score_fin.png" alt="Ecran de fin" width="600" height="300"/>
+<h6 align="center">Ecran de fin avec le score</h6>
+</div>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
