@@ -8220,7 +8220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   PlotSupervisor: {fileID: 1420803189}
@@ -33197,7 +33197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   PlotSupervisor: {fileID: 1420803189}
@@ -34769,7 +34769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: e6ceafa4f6300a44292142072e67f05f, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: dc61545bf0dae7341889f1851a74ec27, type: 3}
   PlotSupervisor: {fileID: 1420803189}
@@ -36700,7 +36700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   PlotSupervisor: {fileID: 1420803189}
@@ -37465,7 +37465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   PlotSupervisor: {fileID: 1420803189}
@@ -37987,7 +37987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   PlotSupervisor: {fileID: 1420803189}
@@ -40036,7 +40036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: 96a84a9499de43349a5d3ac27fb79bea, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: cb7f684f077b2554bb1684a73d3f7363, type: 3}
   PlotSupervisor: {fileID: 1420803189}
@@ -46934,7 +46934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   PlotSupervisor: {fileID: 1420803189}
@@ -47193,7 +47193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   PlotSupervisor: {fileID: 1420803189}
@@ -48016,7 +48016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   PlotSupervisor: {fileID: 1420803189}
@@ -48802,7 +48802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c104376faf55a2d47859a911157fe31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDesactive: 0
+  isDesactive: 1
   plot_sprite: {fileID: 21300000, guid: 9bf08be941c42fb4780c4ffb521fffc5, type: 3}
   plot_sprite_highlite: {fileID: 21300000, guid: 8aab261f5c0a2e542b544e37ac6f5715, type: 3}
   PlotSupervisor: {fileID: 1420803189}
