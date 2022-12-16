@@ -21,13 +21,7 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
           <li><a href="#ecran-de-fin">Écran de fin</a></li>
       </ul>
     </li>
-    <li><li><a href="#developpement">Développement</a></li>
-
-        <ul>
-        <li><a href="#lien-de-telechargement">Lien de téléchargement</a></li>
-        <li><a href="#instructions">Instructions pour le développement</a></li>
-        </ul>
-    </li>
+    <li><a href="#lien-de-telechargement">Lien de téléchargement</a></li>
     <li><a href="#procedures-dinstallation-et-dexecution">Procédures d'installation et d'exécution</a>
         <ul>
             <li><a href="#procedures-dinstallation">Procédure d'installation</a></li>
@@ -72,12 +66,12 @@ Lien de la doc : [Site internet](/Help/index.html)
 ### Menus
 
 <div align="center">
-<img src="images/Menu.png" alt="Menu principal" width="600" height="300"/>
+<img src="images/Menu.PNG" alt="Menu principal" width="600" height="300"/>
 <h6 align="center">Menu principal</h6>
 </div>
 
 <div align="center">
-<img src="images/Menu_choix.png" alt="Menu durée" width="600" height="300"/>
+<img src="images/Menu_choix.PNG" alt="Menu durée" width="600" height="300"/>
 <h6 align="center">Choix de la durée de la partie</h6>
 </div>
 
@@ -140,7 +134,7 @@ Lien de la doc : [Site internet](/Help/index.html)
 </div>
 
 <div align="center">
-    <img src="#" alt="Le marché">
+    <img src="images/Stand_Interface.PNG" alt="Le marché">
 <h6 align="center">Le marché</h6>
 </div>
 
@@ -167,32 +161,20 @@ Lien de la doc : [Site internet](/Help/index.html)
 ### Ecran de fin
 
 <div align="center">
-<img src="images/Score_fin.png" alt="Ecran de fin" width="600" height="300"/>
+<img src="images/Score_fin.PNG" alt="Ecran de fin" width="600" height="300"/>
 <h6 align="center">Ecran de fin avec le score</h6>
 </div>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- DEVELOPPEMENT -->
+<!-- LIEN DE TELECHARGEMENT -->
 
 <a name="lien-de-telechargement"></a>
 
-## Développement
-
-### Lien de téléchargement
+## Lien de téléchargement
 
 Pour télécharger le jeu, allez sur le site ___ et téléchargez le .zip qui contient le jeu.
-
-### Instructions pour le développement
-
-Si vous êtes développeur et vous cherchez à implémenter des fonctionnalités pour Mars'griculteur, vous devez suivre les étapes suivantes : 
-
-- Installer Unity Hub depuis https://unity.com/download
-- Ouvrir le fichier /.../unity_project/Marsgriculteur
-- Codez !
-
-Les fonctionnalités/code se trouvent divisées selon les scènes utilisées. <br> Vous devez aller sur Assets/Scripts/ pour retrouver tous les scripts utilisés.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -228,19 +210,24 @@ sudo apt-get install wine
 ```
 - Lancez l'éxecutable avec 
 ```
-wine SetupMars\'griculteur.exe
+wine SetupMars'griculteur.exe
 ```
 
 #### Sous Mac
 
 <a name="Mac"></a>
 
-Premièrement, vous devez installer un logiciel qui permette de lancer des .exe <br>
-Veuillez installer Wine Bottler pour MacOS <br>
-https://winebottler.kronenberg.org/download.php?f=WineBottlerCombo_1.8.6.dmg&m=d2luZWJvdHRsZXIua3JvbmVuYmVyZy5vcmcvY29tYm8vYnVpbGRz <br>
+Premièrement, veuillez installer Brew : installez-le avec 
 
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-Maintenant, allez à votre fichier .exe et lancez-le avec Wine Bottler<br>
+Par la suite, veuillez installer la commande "unzip" 
+
+```
+brew install unzip
+```
 
 Après téléchargement, accédez a votre terminal, tapez unzip /lien/Margscriculteur.zip <br> Après avoir dézippé le fichier, cliquez sur Marsgriculteur.exe
 
@@ -326,6 +313,6 @@ Suite à l’étude du site du GNU portant sur le GNU GPLv3, nous avons décidé
 - [x] Choisir la Licence (Novembre)
 - [x] Faire les captures d'écrans + finir l'UML
 - [x] Finaliser le git et produire la documentation
-- [ ] Présenter son jeu et le faire évaluer (Décembre)
+- [x] Présenter son jeu et le faire évaluer (Décembre)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
