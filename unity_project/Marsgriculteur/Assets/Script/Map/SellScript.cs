@@ -24,6 +24,7 @@ namespace game
         /// La méthode <c>Start</c> est utilisée pour le démarrage. Étant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
         /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
         /// Pour notre cas elle choisie d'avoir la plante ELB déjà sélectionnée.
+        /// </summary>
         void Start()
         {
             plantChoosed = EnumTypePlant.ELB;

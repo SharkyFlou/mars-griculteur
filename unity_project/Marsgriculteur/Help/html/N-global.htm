@@ -225,7 +225,17 @@
 </div>
 </div>
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.PopUp.htm" target="_self">PopUp Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.Seed.htm" target="_self">Seed Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -260,7 +270,27 @@
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="N-global.htm" target="_self">global Namespace</a>
 <div class="Hidden">
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ButtonWeight.htm" target="_self">ButtonWeight Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.BuyPlot.htm" target="_self">BuyPlot Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.CameraMovement.htm" target="_self">CameraMovement Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ChangeTextError.htm" target="_self">ChangeTextError Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.GameStats.htm" target="_self">GameStats Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -296,11 +326,6 @@
 </div>
 <div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.PlotEvents.htm" target="_self">PlotEvents Class</a>
-<div class="Hidden">
-</div>
-</div>
-<div class="TreeNode">
-<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -363,14 +388,60 @@
                         <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
                       </td>
                       <td>
+                        <a href="T-global.ButtonWeight.htm">ButtonWeight</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   La classe <span class="code">ButtonWeight</span> permet de donner plus de place à l'inventaire du joueur.
+   Elle possède un attribut moneyStack.
+   </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+                      </td>
+                      <td>
+                        <a href="T-global.BuyPlot.htm">BuyPlot</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   La classe <span class="code">BuyPlot</span> permet d'acheter des champs.
+   Elle possède 3 attributs : plot, money, popUp.
+   </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+                      </td>
+                      <td>
                         <a href="T-global.CameraMovement.htm">CameraMovement</a>
                       </td>
                       <td>
                         <div class="summary">
    La classe <span class="code">CameraMovement</span> s'occupe de la caméra.
-   Elle possède les attributs suivant : cam, dragOrigin, zoom, minCamSize, maxCamSize, tilemapRenderer, mapMinX, mapMaxX, mapMinY, mapMaxY, canMoove.
+   Elle possède les attributs suivants : cam, dragOrigin, zoom, minCamSize, maxCamSize, tilemapRenderer, mapMinX, mapMaxX, mapMinY, mapMaxY, canMoove.
    </div>
                       </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+                      </td>
+                      <td>
+                        <a href="T-global.ChangeTextError.htm">ChangeTextError</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+                      </td>
+                      <td>
+                        <a href="T-global.GameStats.htm">GameStats</a>
+                      </td>
+                      <td />
                     </tr>
                     <tr>
                       <td>
@@ -381,7 +452,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La classe <span class="code">GoBackTest</span> permet de load le menu.
+   La classe <span class="code">GoBackTest</span> permet de revenur au menu.
    </div>
                       </td>
                     </tr>
@@ -394,7 +465,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La classe <span class="code">Highlite</span> permet de surligner les items quand la souris les survole.
+   La classe <span class="code">Highlite</span> change de sprite lors du survol de la souris.
    </div>
                       </td>
                     </tr>
@@ -464,21 +535,6 @@
    La classe <span class="code">PlotEvents</span> permet de gérer la pousse, la récolte, etc, des plantes et des graines.
    Elle possède les attributs suivants : plot_sprite, plot_sprite_highlite, seed_sprite, seed_sprite_grown, PlotSupervisor, InterfacePlantPanel,
    hidesPanel, growthTime, growthStatus, plotImage, seedImage, plantedPlant, contientGraine, itemDansPlot, inventory, reafficheInvOnClick.
-   </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
-                      </td>
-                      <td>
-                        <a href="T-global.SellScript.htm">SellScript</a>
-                      </td>
-                      <td>
-                        <div class="summary">
-   La classe <span class="code">SellScript</span> s'occupe de la vente d'une plante. Elle gère le curseur (<span class="code">slider</span>) qui a une valeur de début et une valeur de fin (<span class="code">endValue</span>).
-   La valeur du curseur correspond à l'attribut <span class="code">resValue</span>. Losqu'on vend, on peut choisir une plante (<span class="code">plantChoosed</span>).
-   Les deux derniers attributs sont : market et transformRef.
    </div>
                       </td>
                     </tr>

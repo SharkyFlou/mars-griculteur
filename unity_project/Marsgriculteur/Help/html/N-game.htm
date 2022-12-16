@@ -24,7 +24,7 @@
       <MSHelp:Attr Name="Locale" Value="en-us" />
       <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
       <MSHelp:Attr Name="TopicType" Value="apiref" />
-      <MSHelp:Attr Name="Abstract" Value="The game namespace." />
+      <MSHelp:Attr Name="Abstract" Value="Le namespace game" />
     </xml>
   <link rel="stylesheet" href="../TOC.css"><script type="text/javascript" src="../TOC.js"></script></head>
   <body onload="javascript: Initialize();" onresize="javascript: ResizeTree();">
@@ -226,7 +226,17 @@
 </div>
 </div>
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.PopUp.htm" target="_self">PopUp Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.Seed.htm" target="_self">Seed Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -261,7 +271,27 @@
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="N-global.htm" target="_self">global Namespace</a>
 <div class="Hidden">
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ButtonWeight.htm" target="_self">ButtonWeight Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.BuyPlot.htm" target="_self">BuyPlot Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.CameraMovement.htm" target="_self">CameraMovement Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ChangeTextError.htm" target="_self">ChangeTextError Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.GameStats.htm" target="_self">GameStats Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -297,11 +327,6 @@
 </div>
 <div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.PlotEvents.htm" target="_self">PlotEvents Class</a>
-<div class="Hidden">
-</div>
-</div>
-<div class="TreeNode">
-<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -342,7 +367,7 @@
             <div id="mainSection">
               <div id="mainBody">
                 <div class="summary">
-   The game namespace.
+   Le namespace game
    </div>
                 <div class="LW_CollapsibleArea_Container">
                   <div class="LW_CollapsibleArea_TitleDiv">
@@ -385,9 +410,9 @@
                       </td>
                       <td>
                         <div class="summary">
-   La classe AllEvents permet de lister tous les �v�nements qui peuvent arriver pendant une partie.
-   Elle utilise son constructeur pour cr�er tous les �v�nements, et elle contient 2 m�thodes : <span class="code">getRandomEvent</span> et <span class="code">substractDico</span>.
-   Elle contient un dictionnaire qui contient les �v�nements.
+   La classe AllEvents permet de lister tous les événements qui peuvent arriver pendant une partie.
+   Elle utilise son constructeur pour créer tous les événements, et elle contient les méthodes suivantes: <span class="code">getRandomEvent</span>, <span class="code">substractDico</span>, <span class="code">stringInDicoKeys</span>.
+   Elle contient un dictionnaire qui contient les événements.
    </div>
                       </td>
                     </tr>
@@ -427,7 +452,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La classe <span class="code">AllTools</span> s'occuper des outils (les créer, les lister et afficher leur détail en une chaîne de caractère.
+   La classe <span class="code">AllTools</span> s'occupe des outils (les créer, les lister et afficher leur détail en une chaîne de caractère.
    Elle possède un dictionnaire qui regroupe tous les outils.
    </div>
                       </td>
@@ -441,7 +466,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   BasicItem est la classe parent de tout les objets du jeu les plantes, les graines, les outils (pas implémenté), les champs, ...
+   BasicItem est la classe parent de tous les objets du jeu, les plantes, les graines, les outils (pas implémenté), les champs, ...
    Elle possède les attributs suivant : id, itemName (nom de l'item), description, imageLink (lien de l'image), weight (le poids), price (le prix).
    </div>
                       </td>
@@ -469,8 +494,8 @@
                       </td>
                       <td>
                         <div class="summary">
-   La classe <span class="code">CreateAllSeedPlant</span> permet de cr�er les plantes et les graines dans les inventaires : inventaire r�capitulatif du joueur, et celui dans le shop
-   Elle poss�de les attributs suivant : JSONSeedPlant, JSONTool, mainInventory, dicoPlant, dicoTool, shopInv et storageInventory
+   La classe <span class="code">CreateAllSeedPlant</span> permet de créer les plantes et les graines dans les inventaires : inventaire récapitulatif du joueur, et celui dans le shop
+   Elle possède les attributs suivant : JSONSeedPlant, JSONTool, mainInventory, dicoPlant, dicoTool, shopInv et storageInventory
    </div>
                       </td>
                     </tr>
@@ -497,17 +522,17 @@
                       </td>
                       <td>
                         <div class="summary">
-   La classe <span class="code">EventInfo</span> permet de créer un événements avec toutes ses informations nécessaires.
+   La classe <span class="code">EventInfo</span> permet de créer un événement avec toutes ses informations nécessaires.
    Les événments sont composés d'un code unique (leur nom), d'une description, d'une durée (combien de temps ils vont durer après leur apparition), de 2 multiplieurs (le premier pour rajouter
-   un simple multiplier au prix, par exemple *0.9 ou 1.1, multiplier fixe qui reste actif tant que l'évent l'est
-   et le deuxième est un multiplier qui atteint son pic de multiplication au milieu de sa durée, ex : il vaut 2, et l'évent dure 5, alors il oscilera un peu près comme ça : 1.33, 1.66, 2, 1.66, 1.33),
+   un simple multiplieur au prix, par exemple *0.9 ou 1.1, multiplieur fixe qui reste actif tant que l'évent l'est
+   et le deuxième est un multiplieur qui atteint son pic de multiplication au milieu de sa durée, ex : il vaut 2, et l'événement dure 5, alors il oscilera un peu près comme ça : 1.33, 1.66, 2, 1.66, 1.33),
    ensuite il y a 3 booléens (le premier pour savoir si l'événement atteint les plantes, le deuxième si il atteint les graines et le troisième si il atteint les outils.
    Ensuite il y a la liste des plantes (ou des graines, ça dépend ce que ça atteint) et la liste des outils, pour les outils atteint.
-   Les derniers paramètres sont : la probabilité d'apparition de l'événement, un événements ne peut qu'arriver à partir du xième jour,
-   l'image de l'événement et le dernier paramètres correspond au temps à partir duquel l'événement peut réapparaître après que celui-ci est commencé (ex : un event à une durée de 5, un cooldown de 10,
-   et un unlockAfter de 0, il peut arriver dès le 1er jour, et 10 jour après qu'il soit arrivé il peut re arriver).
+   Les derniers paramètres sont : la probabilité d'apparition de l'événement, un événement ne peut qu'arriver à partir du xième jour,
+   l'image de l'événement et le dernier paramètre correspond au temps à partir duquel l'événement peut réapparaître après que celui-ci est commencé (ex : un event à une durée de 5, un cooldown de 10,
+   et un unlockAfter de 0, il peut arriver dès le 1er jour, et 10 jours après qu'il soit arrivé, il peut réapparaître).
    Elle contient 2 constructeurs, un pour créer les événements et un en cas d'erreur.
-   De plus, elle contient 4 méthodes, pour obtenir son nom, sa durée, sa description et ce que l'événment affecte.
+   De plus, elle contient 5 méthodes, pour obtenir son nom, sa durée, sa description et ce que l'événement affecte.
    </div>
                       </td>
                     </tr>
@@ -521,8 +546,8 @@
                       <td>
                         <div class="summary">
    La classe <span class="code">Game</span> s'occupe du jeu en lui-même. Il permet d'initialiser la partie, avec un montant fixe, le nombre de jour à 0, ...
-   Elle possède les attributs suivant :  market, shop, inventoryPlant, money et moneyText.
-   Elle contient 4 méthodes : Start, getDefaultSprite, AddMoney, SubsMoney.
+   Elle possède les attributs suivant :  market, shop, inventoryPlant, money, moneyText, classePopup.
+   Elle contient 6 méthodes : Start, getDefaultSprite, AddMoney, SubsMoney, testObjective, endGame.
    </div>
                       </td>
                     </tr>
@@ -576,8 +601,8 @@
                       </td>
                       <td>
                         <div class="summary">
-   La classe <span class="code">InventoryPanel</span> impl�mente l'interface InventoryInterface. Elle g�re l'affichage des inventaires dans les panels.
-   Elle poss�de un attribut slotPanel qui correspond au panel sur lequel va �tre affich� l'inventaire.
+   La classe <span class="code">InventoryPanel</span> implémente l'interface <span class="code">InventoryInterface</span>. Elle gère l'affichage des inventaires dans les panels.
+   Elle possède un attribut slotPanel qui correspond au panel sur lequel va être affiché l'inventaire.
    </div>
                       </td>
                     </tr>
@@ -617,10 +642,10 @@
                       </td>
                       <td>
                         <div class="summary">
-   La classe <span class="code">Market</span> repr�sente le march� du joueur, il va pouvoir �tudier les graphiques et choisir un prix pour lequel il va vendre une quantit� souhait�e.
-   Il poss�de 3 dictionnaires : un pour garder l'historique des prix, un pour les �v�nements actifs et un pour les �v�nements impossibles.
+   La classe <span class="code">Market</span> représente le marché du joueur, il va pouvoir étudier les graphiques et choisir un prix pour lequel il va vendre une quantité souhaitée.
+   Il possède 3 dictionnaires : un pour garder l'historique des prix, un pour les événements actifs et un pour les événements impossibles.
    Ensuite il a 2 attributs : actualDays et instance (l'instance de la classe market (design pattern du singleton)
-   La classe poss�de 19 m�thodes : Awake, Start, createMarket, nextActiveEvent, getActiveEvents, nextImpossibleEvents, generateNewHistoryDay,
+   La classe possède 19 méthodes : Awake, Start, createMarket, nextActiveEvent, getActiveEvents, nextImpossibleEvents, generateNewHistoryDay,
    plantByEvent, plantBasic, ezRound, normalise, nextDay, getHistory, getLastPricePlant, getLastPriceSeed, createNewEvent, last60Days, getDays, afficheEtatDebug
    </div>
                       </td>
@@ -634,7 +659,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La classe <span class="code">NextDay</span> s'occupe de tout ce qui a à changer avant de passer au jour suivant.
+   La classe <span class="code">NextDay</span> s'occupe de tout ce qui doit changer avant de passer au jour suivant.
    Elle possède les attributs suivant : dayText, notif, plots, plotList, nbrJour, market, dicoPossessions.
    </div>
                       </td>
@@ -649,7 +674,7 @@
                       <td>
                         <div class="summary">
    La classe <span class="code">Notification</span> s'occupe d'afficher et supprimer les notifications.
-   Elle poss�de 4 attributs : nextDay, SlotNotif, slotPanel et slots (un dictionnaire qui contient les �v�nements)
+   Elle possède 4 attributs : nextDay, SlotNotif, slotPanel et slots (un dictionnaire qui contient les événements)
    </div>
                       </td>
                     </tr>
@@ -743,6 +768,20 @@
                         <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
                       </td>
                       <td>
+                        <a href="T-game.PopUp.htm">PopUp</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   La classe <span class="code">PopUp</span> permet d'afficher une petite notification quand le joueur n'a pas exemple plus d'argent.
+   Elle possède 3 attributs : text, coroutine, isExecuting.
+   </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+                      </td>
+                      <td>
                         <a href="T-game.Seed.htm">Seed</a>
                       </td>
                       <td>
@@ -757,11 +796,26 @@
                         <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
                       </td>
                       <td>
+                        <a href="T-game.SellScript.htm">SellScript</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   La classe <span class="code">SellScript</span> s'occupe de la vente d'une plante. Elle gère le curseur (<span class="code">slider</span>) qui a une valeur de début et une valeur de fin (<span class="code">endValue</span>).
+   La valeur du curseur correspond à l'attribut <span class="code">resValue</span>. Losqu'on vend, on peut choisir une plante (<span class="code">plantChoosed</span>).
+   Les deux derniers attributs sont : market et transformRef.
+   </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="../icons/pubclass.gif" alt="Public class" title="Public class" />
+                      </td>
+                      <td>
                         <a href="T-game.Shop.htm">Shop</a>
                       </td>
                       <td>
                         <div class="summary">
-   La classe <span class="code">Shop</span> permet de créer un magasin avec toutes les graines qu'on peut acheter.
+   La classe <span class="code">Shop</span> permet de cr�er un magasin avec toutes les graines qu'on peut acheter.
    Elle possède un attribut inventory et un dictionnaire qui contient tous les item du magasin.
    </div>
                       </td>
@@ -860,7 +914,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   L'interface <span class="code">InventoryInterface</span> permet de déclarer une fonction afficheInventory, qui va être implémenté dans les classes qui l'implémentent
+   L'interface <span class="code">InventoryInterface</span> permet de déclarer une fonction <span class="code">afficheInventory</span>, qui va être implémenté dans les classes qui l'implémentent.
    </div>
                       </td>
                     </tr>

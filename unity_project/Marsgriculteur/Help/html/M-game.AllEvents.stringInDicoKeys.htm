@@ -27,6 +27,7 @@
       <MSHelp:Attr Name="Locale" Value="en-us" />
       <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
       <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="Abstract" Value="La méthode stringInDicoKeys permet de vérifier si un événement est dans l'inventaire." />
       <MSHelp:Attr Name="AssemblyVersion" Value="" />
     </xml>
   <link rel="stylesheet" href="../TOC.css"><script type="text/javascript" src="../TOC.js"></script></head>
@@ -254,7 +255,17 @@
 </div>
 </div>
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.PopUp.htm" target="_self">PopUp Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.Seed.htm" target="_self">Seed Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -289,7 +300,27 @@
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="N-global.htm" target="_self">global Namespace</a>
 <div class="Hidden">
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ButtonWeight.htm" target="_self">ButtonWeight Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.BuyPlot.htm" target="_self">BuyPlot Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.CameraMovement.htm" target="_self">CameraMovement Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ChangeTextError.htm" target="_self">ChangeTextError Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.GameStats.htm" target="_self">GameStats Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -329,11 +360,6 @@
 </div>
 </div>
 <div class="TreeNode">
-<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.SellScript.htm" target="_self">SellScript Class</a>
-<div class="Hidden">
-</div>
-</div>
-<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.Zoom.htm" target="_self">Zoom Class</a>
 <div class="Hidden">
 </div>
@@ -369,6 +395,9 @@
             <h1 class="title">AllEvents<span class="languageSpecificText"><span class="cs">.</span><span class="vb">.</span><span class="cpp">::</span><span class="nu">.</span><span class="fs">.</span></span>stringInDicoKeys Method </h1>
             <div id="mainSection">
               <div id="mainBody">
+                <div class="summary">
+   La méthode <span class="code">stringInDicoKeys</span> permet de vérifier si un événement est dans l'inventaire.
+   </div>
                 <p />
     <b>Namespace:</b> 
    <a href="N-game.htm">game</a><br />
@@ -376,7 +405,7 @@
    <span sdata="assembly">Assembly-CSharp</span> (in Assembly-CSharp.dll)<div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">Syntax</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="syntaxSection"><!----></a><div class="CodeSnippetContainer"><div class="CodeSnippetContainerTabs"><div class="CodeSnippetContainerTabLeft"><!----></div><div class="CodeSnippetContainerTabFirst CSharpTab" id="CSharpTabId" style="background:white;border-bottom-color:white"><a href="javascript:setActiveTab('CodeSnippetContainerCode','CSharpCode','CSharpTabId');" title="C#">C#</a></div><div class="CodeSnippetContainerTabRight"><!----></div></div><div class="CodeSnippetContainerCodeCollection"><div class="CodeSnippetToolBar"><div class="CodeSnippetToolBarText" /></div><div class="CodeSnippetContainerCode CSharpCode"><pre xml:space="preserve" class="libCScode"><span class="keyword">private</span> <a href="https://docs.microsoft.com/en-us/dotnet/api/system.boolean" target="_blank">bool</a> <span class="identifier">stringInDicoKeys</span>(
 	<a href="https://docs.microsoft.com/en-us/dotnet/api/system.string" target="_blank">string</a> <span class="parameter">toCheck</span>,
 	<a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2" target="_blank">Dictionary</a>&lt;<a href="T-game.EventInfo.htm">EventInfo</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32" target="_blank">int</a>&gt; <span class="parameter">dicoSubstract</span>
-)</pre></div></div></div><div id="parameters"><h4 class="subHeading">Parameters</h4><dl paramName="toCheck"><dt><span class="parameterItalic">toCheck</span></dt><dd>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string" target="_blank">String</a><br /></dd></dl><dl paramName="dicoSubstract"><dt><span class="parameterItalic">dicoSubstract</span></dt><dd>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2" target="_blank">Dictionary</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="T-game.EventInfo.htm">EventInfo</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32" target="_blank">Int32</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br /></dd></dl></div></div><div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">See Also</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="seeAlsoSection"><!----></a><div class="seeAlsoStyle"><a href="T-game.AllEvents.htm">AllEvents Class</a></div><div class="seeAlsoStyle"><a href="N-game.htm">game Namespace</a></div></div></div>
+)</pre></div></div></div><div id="parameters"><h4 class="subHeading">Parameters</h4><dl paramName="toCheck"><dt><span class="parameterItalic">toCheck</span></dt><dd>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.string" target="_blank">String</a><br />l'événement à trouver dans l'inventaire</dd></dl><dl paramName="dicoSubstract"><dt><span class="parameterItalic">dicoSubstract</span></dt><dd>Type: <a href="https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2" target="_blank">Dictionary</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><a href="T-game.EventInfo.htm">EventInfo</a>, <a href="https://docs.microsoft.com/en-us/dotnet/api/system.int32" target="_blank">Int32</a><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span><br />L'inventaire</dd></dl></div><h4 class="subHeading">Return Value</h4><span class="code">true</span> si l'événement est dans l'inventaire, <span class="code">false</span> sinon</div><div class="LW_CollapsibleArea_Container"><div class="LW_CollapsibleArea_TitleDiv"><h2 class="LW_CollapsibleArea_Title">See Also</h2><div class="LW_CollapsibleArea_HrDiv"><hr class="LW_CollapsibleArea_Hr" /></div></div><a id="seeAlsoSection"><!----></a><div class="seeAlsoStyle"><a href="T-game.AllEvents.htm">AllEvents Class</a></div><div class="seeAlsoStyle"><a href="N-game.htm">game Namespace</a></div></div></div>
             </div>
           </div>
         </div>

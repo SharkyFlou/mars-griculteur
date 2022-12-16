@@ -4,7 +4,9 @@ using System.Collections.Generic;
 
 namespace game
 {
-
+    /// <summary>
+    /// La classe <c>Stand</c> permet de vendre les plantes, possède un lien vers le Market, vers l'inventory et vers le game (pour l'argent)
+    /// </summary>
     public class Stand
     {
         Market market;
@@ -25,6 +27,9 @@ namespace game
         }
 
         //item_sell        
+        /// <summary>
+        /// Permet d'avoir le prix de l'item, son id, et donc de pouvoir le vendre
+        /// </summary>
         struct Item
         {
             public EnumTypePlant item_sale { get; set; }
