@@ -14,7 +14,7 @@ namespace game
     /// weightMax (tous les inventaires ont une capacité maximum), slots (qui correspond aux items qui vont remplir l'inventaire)
     /// et currentWeight qui correspond à la capacité actuelle de l'inventaire
     /// </summary>
-    public class Inventory : MonoBehaviour
+    public class Inventory
     {
 
         public InventoryInterface panel;

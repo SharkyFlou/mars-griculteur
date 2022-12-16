@@ -16,7 +16,7 @@ namespace game
 
         public Transform panelInfosVente;
 
-        private ActivePanel reafficheInv;
+//        private ActivePanel reafficheInv;
 
         /// <summary>
         /// La méthode <c>OnMouseDown</c> permet d'initialiser les slots suivant l'inventaire.

@@ -49,12 +49,9 @@ namespace game
                 }
                 if (this.transform.root.name == "Canvas Market")
                 {
-                    slotPanel.transform.localScale = new Vector3(8 / 3f, 0.8f, 1);
+                    slotPanel.transform.localScale = new Vector3(0.8f, 0.8f, 1);
 
-                    slotPanel.transform.localPosition = new Vector3(0, 0, 0);
-
-                    slotPanel.transform.GetComponent<RectTransform>().offsetMin = new Vector2(slotPanel.transform.parent.GetComponent<RectTransform>().rect.width / 3, slotPanel.transform.GetComponent<RectTransform>().offsetMin.y);
-                    slotPanel.transform.GetComponent<RectTransform>().offsetMax = new Vector2(-slotPanel.transform.parent.GetComponent<RectTransform>().rect.width / 3, slotPanel.transform.GetComponent<RectTransform>().offsetMax.y);
+                    slotPanel.transform.GetComponent<RectTransform>().offsetMax = new Vector2(slotPanel.transform.parent.GetComponent<RectTransform>().rect.width / 3, slotPanel.transform.GetComponent<RectTransform>().offsetMin.y);
 
                     //slotPanel.transform.localPosition = slotPanel.transform.localPosition + new Vector3Int(0, -20);
 
