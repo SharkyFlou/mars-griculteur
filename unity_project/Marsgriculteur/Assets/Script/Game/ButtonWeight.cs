@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using game;
 using TMPro;
-using static UnityEditor.Progress;
 
 
 public class ButtonWeight : MonoBehaviour
