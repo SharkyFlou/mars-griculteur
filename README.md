@@ -55,6 +55,8 @@ Participants :
 
 Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T234/T3)
 
+Lien de la doc : [Site internet](https://t3doc.vercel.app)
+
 <!-- CAPTURE D'ECRAN -->
 
 <a name="capture-decran"></a>
@@ -64,12 +66,12 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
 ### Menus
 
 <div align="center">
-<img src="images/Menu.png" alt="Menu principal" width="600" height="300"/>
+<img src="images/Menu.PNG" alt="Menu principal" width="600" height="300"/>
 <h6 align="center">Menu principal</h6>
 </div>
 
 <div align="center">
-<img src="images/Menu_choix.png" alt="Menu durée" width="600" height="300"/>
+<img src="images/Menu_choix.PNG" alt="Menu durée" width="600" height="300"/>
 <h6 align="center">Choix de la durée de la partie</h6>
 </div>
 
@@ -132,7 +134,7 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
 </div>
 
 <div align="center">
-    <img src="#" alt="Le marché">
+    <img src="images/Stand_Interface.PNG" alt="Le marché">
 <h6 align="center">Le marché</h6>
 </div>
 
@@ -159,7 +161,7 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
 ### Ecran de fin
 
 <div align="center">
-<img src="images/Score_fin.png" alt="Ecran de fin" width="600" height="300"/>
+<img src="images/Score_fin.PNG" alt="Ecran de fin" width="600" height="300"/>
 <h6 align="center">Ecran de fin avec le score</h6>
 </div>
 
@@ -192,19 +194,24 @@ Pour télécharger le jeu, allez sur le site ___ et téléchargez le .zip qui co
 
 <a name="Windows"></a>
 
-Après téléchargement, veuillez dézipper le jeu (en faisant un right-click). Vous pourrez l'ouvrir en cliquant sur Marsgriculteur.exe <br>
-Si vous ne comptez pas avec un outil de dézippage, veuillez télécharger Winrar : https://www.win-rar.com/start.html?&L=10
+Ouvrez SetupMars'griculteur.exe puis suivez les étapes d'installation. <br> Après, ouvrez l'application créée sur votre Bureau.
 
 #### Sous Linux
 
 <a name="Linux"></a>
 
-Premièrement, veuillez installer la commande "unzip" avec 
+Si vous pouvez exécuter des fichiers .exe sur Linux, alors vous n'avez qu'à ouvrir SetupMars'griculteur.exe <br>
+
+Sinon, vous devrez faire quelques manipulations:
+- Allez sur votre 
+- Installez la commande "wine" avec
 ```
-sudo apt-get install unzip
+sudo apt-get install wine
 ```
-<br>
-Après téléchargement, accédez a votre terminal, tapez unzip /lien/Margscriculteur.zip <br> Après avoir dézippé le fichier, cliquez sur Marsgriculteur.exe
+- Lancez l'éxecutable avec 
+```
+wine SetupMars'griculteur.exe
+```
 
 #### Sous Mac
 
@@ -306,6 +313,6 @@ Suite à l’étude du site du GNU portant sur le GNU GPLv3, nous avons décidé
 - [x] Choisir la Licence (Novembre)
 - [x] Faire les captures d'écrans + finir l'UML
 - [x] Finaliser le git et produire la documentation
-- [ ] Présenter son jeu et le faire évaluer (Décembre)
+- [x] Présenter son jeu et le faire évaluer (Décembre)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using game;
 using TMPro;
-using static UnityEditor.Progress;
 
 /// <summary>
 /// La classe <c>ButtonWeight</c> permet de donner plus de place à l'inventaire du joueur.
