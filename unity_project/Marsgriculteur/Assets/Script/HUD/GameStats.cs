@@ -18,9 +18,9 @@ public class GameStats : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        objective.SetText("Votre objectif etait de rassembler 300000$");
-        moneyGained.SetText("Vous avez gagner au total 1108231$ durant votre partie.");
-        nbDays.SetText("Vous avez remplie l'objectif en 67 jours.");
+        objective.SetText("Votre objectif etait de rassembler " + game.Game.moneyObjective.ToString() + "$");
+        moneyGained.SetText("Vous avez gagner au total " + qttMoney + "$ durant votre partie.");
+        nbDays.SetText("Vous avez remplie l'objectif en " + nbDay + " jours.");
     }
 
     // Update is called once per frame
