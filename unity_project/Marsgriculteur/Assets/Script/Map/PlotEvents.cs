@@ -1,11 +1,7 @@
 using game;
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 /// <summary>
 /// La classe <c>PlotEvents</c> permet de gérer la pousse, la récolte, etc, des plantes et des graines.
@@ -192,7 +188,7 @@ public class PlotEvents : MonoBehaviour
     }
 
     /// <summary>
-    /// La méthode <c>GetChildren</c> permet d'obtenir les champs à partir d'un parent (la map)
+    /// La méthode <c>GetChildren</c> permet d'obtenir les champs à partir d'un parent (l'empty 'Plots')
     /// </summary>
     /// <param name="parent">le parent, sur lequel les champs sont disposés</param>
     /// <returns>la liste des champs</returns>
@@ -205,12 +201,17 @@ public class PlotEvents : MonoBehaviour
         }
         return children;
     }
-
+    /// <summary>
+    /// La méthode <c>openBuyPlot</c> ouvre le menu d'achat du plot.
+    /// </summary>
     public void openBuyPlot()
     {
         buy.open(this);
     }
 
+    /// <summary>
+    /// La méthode <c>setPlotActive</c> active le plot (le debloque), et change sa couleur.
+    /// </summary>
     public void setPlotActive()
     {
         isDesactive = false;

@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 /// <summary>
 /// La classe <c>Zoom</c> permet, comme son nom l'indique, de gérer le zoom de la caméra.
@@ -40,7 +36,7 @@ public class Zoom : MonoBehaviour
     }
 
     /// <summary>
-    /// La méthode <c>Update</c> est appelée une fois par fenêtre (frame). Elle gère la caméra
+    /// La méthode <c>Update</c> est appelée une fois par fenêtre (frame). Elle gère la caméra.
     /// </summary>
     void Update()
     {
@@ -72,7 +68,7 @@ public class Zoom : MonoBehaviour
     }
 
     /// <summary>
-    /// La méthode <c>ClampCamera</c> sert a bouger la camera a la nouvelle position desirée
+    /// La méthode <c>ClampCamera</c> sert a bouger la camera a la nouvelle position desirée.
     /// </summary>
     /// <param name="targetPosition">la position désirée</param>
     /// <returns>Elle retourne la position de la caméra</returns>
