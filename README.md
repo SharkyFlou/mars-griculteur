@@ -35,6 +35,7 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
     </li>
         <li><a href="#licence">Licence</a></li>
     <li><a href="#meta-todo">Méta-Todo</a></li>
+    
   </ol>
 </details>
 
@@ -57,6 +58,8 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
 
 Lien de la doc : [Site internet](https://t3doc.vercel.app)
 
+Avez-vous besoin d'aide? Contactez-nous : cflu@etu.unistra.fr
+
 <!-- CAPTURE D'ECRAN -->
 
 <a name="capture-decran"></a>
@@ -78,11 +81,6 @@ Lien de la doc : [Site internet](https://t3doc.vercel.app)
 ### MAP
 
 <a name="map"></a>
-
-<div align="center">
-    <img src="#" alt="Vision du début de game">
-<h6 align="center">Début de game</h6>
-</div>
 
 <div align="center">
     <img src="images/Plots.jpeg" alt="Les champs" width="300" height="300"/>
@@ -117,11 +115,6 @@ Lien de la doc : [Site internet](https://t3doc.vercel.app)
 <div align="center">
     <img src="images/Day_Money.jpeg" alt="Les jours et l'argent du joueur">
 <h6 align="center">Les jours et l'argent du joueur</h6>
-</div>
-
-<div align="center">
-    <img src="#" alt="Le menu">
-<h6 align="center">Le menu</h6>
 </div>
 
 ### Différentes fenêtres
@@ -174,7 +167,8 @@ Lien de la doc : [Site internet](https://t3doc.vercel.app)
 
 ## Lien de téléchargement
 
-Pour télécharger le jeu, allez sur le site ___ et téléchargez le .zip qui contient le jeu.
+Pour télécharger le jeu, allez sur notre [Git](https://git.unistra.fr/le-groupe1/t3_2022) et téléchargez "setupMars'griculteur.exe" <br>
+Vous devez maintenant le lancer en suivant les consignes d'installation précisées ci-dessus. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
