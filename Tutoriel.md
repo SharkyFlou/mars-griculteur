@@ -3,7 +3,7 @@
 <!-- LOGO DU PROJET -->
 <div align="center">
     <img src="images/MARSgriculture_logo.png" alt="Logo" width="170" height="150">
-<h3 align="center">MARS'GRICULTURE</h3>
+<h3 align="center">MARS'GRICULTEUR</h3>
 </div>
 
 <!-- SOMMAIRE -->
@@ -36,6 +36,8 @@ Le joueur accède à sa ferme, où il procède de la prochaine façon:
 
 <br><br> La partie se termine quand le joueur arrive à son but.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- ELEMENTS FACILITANT L'AVANCEE DU JOUEUR -->
 
 <a name="avancee"></a>
@@ -64,6 +66,8 @@ Pour que chaque joueur ait la meilleure expérience, on a implémenté ces élé
 - Inventaires dynamiques
 - Interfaces intéractives
 - Zoom + Drag and Drop movement
+- Explications claires
+- Éléments visuels accompagnés de son nom, description
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,6 +147,6 @@ Lorsque vous avez fini toutes vos actions pour la journée, vous n'avez qu'à cl
 <h6 align="center">La caravane du joueur</h6>
 </div>
 
-### C'est à vous de jouer, bonne Mars'griculture !!
+## C'est à vous de jouer, bonne Mars'griculture !!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -59,7 +59,7 @@ namespace game
 
             allEventDico.Add("SolarStorm", new EventInfo("SolarStorm",
                 "Une tempête solaire fait griller vos plantes ! Tous deviennent fous, et achètent n'importe quoi...",
-                10,
+                14,
                 1.2,
                 1.5,
                 true,
@@ -75,7 +75,7 @@ namespace game
             List<EnumTypePlant> listEgro = new List<EnumTypePlant>() { EnumTypePlant.EGRO };
             allEventDico.Add("EffondrementDuSucre", new EventInfo("EffondrementDuSucre",
                 "Le marché du sucre s'écroule mystérieusement, les gens se retournent vers votre EGRO au goût sucré",
-                5,
+                8,
                 1.1,
                 2,
                 true,
@@ -92,7 +92,7 @@ namespace game
             List<EnumTypePlant> listRand = new List<EnumTypePlant>() { EnumTypePlant.EGRO, EnumTypePlant.ELB, EnumTypePlant.AZLOC, EnumTypePlant.EHCAV };
             allEventDico.Add("Covid", new EventInfo("Covid",
                 "Le Covid-23 arrive ! Les gens achètent n'importe quoi...",
-                10,
+                15,
                 1.1,
                 1.2,
                 true,
@@ -106,6 +106,7 @@ namespace game
                 30));
 
 
+            List<EnumTypePlant> listAzloNipal = new List<EnumTypePlant>() { EnumTypePlant.AZLOC, EnumTypePlant.NIPAL };
             allEventDico.Add("FêteOportune", new EventInfo("FêteOportune",
                "Le Maire s'est levé du bon pied : il déclare une fête nationale aujourd'hui ! Le plat favori lors des jours de fête : NIPAL farci au AZLOC",
                5,
@@ -114,13 +115,76 @@ namespace game
                true,
                false,
                false,
-               listAnim,
+               listAzloNipal,
                new List<string>(),
                4,
                10,
                Game.getDefaultSprite(),
                30));
 
+            List<EnumTypePlant> listAll = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.OUNTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL, EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
+            allEventDico.Add("Elon Ma", new EventInfo("Elon Ma",
+              "Elon Ma vient de mettre le pied sur Mars ! Il ramène plein de touristes avide de ramener des souvenirs",
+              8,
+              1.2,
+              2,
+              true,
+              false,
+              false,
+              listAll,
+              new List<string>(),
+              10,
+              30,
+              Game.getDefaultSprite(),
+              20));
+
+            List<EnumTypePlant> listEluop = new List<EnumTypePlant>() { EnumTypePlant.ELUOP };
+            allEventDico.Add("Combat d'eluop", new EventInfo("Combat d'eluop",
+              "Des combats d'eluop clandestins se mutliplient dans la capitale",
+              15,
+              1.2,
+              1.5,
+              true,
+              false,
+              false,
+              listEluop,
+              new List<string>(),
+              10,
+              25,
+              Game.getDefaultSprite(),
+              35));
+
+
+            allEventDico.Add("Un cirque arrive", new EventInfo("Un cirque arrive",
+              "Un cirque arrive, ils ont perdu leurs animaux, ils vont devoir en racheter",
+              5,
+              1.3,
+              1.1,
+              true,
+              false,
+              false,
+              listAnim,
+              new List<string>(),
+              10,
+              25,
+              Game.getDefaultSprite(),
+              35));
+
+            List<EnumTypePlant> listAzlocElb = new List<EnumTypePlant>() { EnumTypePlant.AZLOC, EnumTypePlant.ELB };
+            allEventDico.Add("Roi venusien", new EventInfo("Roi venusien",
+              "Un roi venusion arrive dans votre ville, les venusions rafolle d'azlol et d'elb",
+              20,
+              1.2,
+              1.3,
+              true,
+              false,
+              false,
+              listAzlocElb,
+              new List<string>(),
+              10,
+              30,
+              Game.getDefaultSprite(),
+              40));
 
 
             //********************************************************************
@@ -130,7 +194,7 @@ namespace game
             List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>() { EnumTypePlant.ELB, EnumTypePlant.EGRO };
             allEventDico.Add("VerrueMartienne", new EventInfo("VerrueMartienne",
                 "Des verrues martiennes touchent les recoltes d'EBL et d'EGRO ! Leur goût n'est pas bon",
-                15,
+                10,
                 0.8,
                 0.8,
                 true,
@@ -159,10 +223,10 @@ namespace game
                 Game.getDefaultSprite(),
                 50));
 
-            List<EnumTypePlant> listAll = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.OUNTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL, EnumTypePlant.ELB, EnumTypePlant.EGRO, EnumTypePlant.AJOS, EnumTypePlant.AZLOC };
+            
             allEventDico.Add("Guerre", new EventInfo("Guerre",
                 "C'est la guerre ! Les gens n'ont plus trop les moyens...",
-                40,
+                20,
                 0.9,
                 0.6,
                 true,
@@ -178,7 +242,7 @@ namespace game
 
             allEventDico.Add("Scandale", new EventInfo("Scandale",
                "Un scandale éclate : quelqu'un vous aurait vu irradier vos plantes pour les faire pousser plus vite... Votre réputation est salie!",
-               40,
+               20,
                0.7,
                0.8,
                true,
@@ -266,7 +330,7 @@ namespace game
             List<EnumTypePlant> listRand2 = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.ELUOP, EnumTypePlant.ELB, EnumTypePlant.AJOS };
             allEventDico.Add("TerreStérile", new EventInfo("TerreStérile",
               "Une comète radioactive a rendu stérile la terre de plusieurs de vos vendeurs de graines",
-              30,
+              20,
               1.5,
               1.8,
               false,

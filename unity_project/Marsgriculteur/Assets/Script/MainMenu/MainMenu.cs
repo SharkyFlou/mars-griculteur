@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,10 +28,11 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    /// <summary>
+    /// La méthode <c>mainMenu</c> lance le menu principale (Main Menu).
+    /// </summary>
     public void mainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
-
-   
 }

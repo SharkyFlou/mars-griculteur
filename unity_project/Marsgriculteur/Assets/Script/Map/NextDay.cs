@@ -11,8 +11,8 @@ using UnityEngine.EventSystems;
 namespace game
 {
     /// <summary>
-    /// La classe <c>NextDay</c> s'occupe de tout ce qui a � changer avant de passer au jour suivant.
-    /// Elle poss�de les attributs suivant : dayText, notif, plots, plotList, nbrJour, market, dicoPossessions.
+    /// La classe <c>NextDay</c> s'occupe de tout ce qui doit changer avant de passer au jour suivant.
+    /// Elle possède les attributs suivant : dayText, notif, plots, plotList, nbrJour, market, dicoPossessions.
     /// </summary>
     public class NextDay : MonoBehaviour
     {
@@ -31,18 +31,18 @@ namespace game
         public static Dictionary<EventInfo, int> dicoPossessions = new Dictionary<EventInfo, int>();
 
         /// <summary>
-        /// La m�thode <c>Start</c> est utilis�e pour le d�marrage. Etant donn� que Start n'est appel�e qu'une seule fois, elle permet d'initialiser les �l�ments
-        /// qui doivent persister tout au long de la vie du script, mais ne doivent �tre configur�s qu'imm�diatement avant utilisation.
-        /// Pour notre cas elle permet de r�cup�rer les champs pour pouvoir les faire pousser apr�s et initialise le nombre de jour.
+        /// La méthode <c>Start</c> Est utilisée pour le démarrage. Etant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
+        /// qui doivent persister tout au long de la vie du script, mais ne doivent étre configurés qu'immédiatement avant utilisation.
+        /// Pour notre cas elle permet de récupérer les champs pour pouvoir les faire pousser après et initialise le nombre de jour.
         /// </summary>
         void Start()
         {
-            if (plots == null) //pour �viter de planter (ahah "plant")
+            if (plots == null) //pour éviter de planter (ahah "plant")
             {
                 return;
             }
 
-            //parcours les plots pour les r�cup�rer et les stocker afin de pouvoir les faire pousser
+            //parcours les plots pour les récupérer et les stocker afin de pouvoir les faire pousser
             GetPlots(plots);
 
             //pour l'affichage des jours
@@ -51,16 +51,16 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>getInventoryNotif</c> permet d'obtenir toutes les notifications.
+        /// La méthode <c>getInventoryNotif</c> permet d'obtenir toutes les notifications.
         /// </summary>
-        /// <returns>Elle retourne un dictionnaire de notifications avec la dur�e pour laquelle elles restent</returns>
+        /// <returns>Elle retourne un dictionnaire de notifications avec la durée pour laquelle elles restent</returns>
         public static Dictionary<EventInfo, int> getInventoryNotif()
         {
             return dicoPossessions;
         }
 
         /// <summary>
-        /// La m�thode <c>OnMouseDown</c> permet lorsqu'on clique de passer au jour suivant
+        /// La méthode <c>OnMouseDown</c> permet lorsqu'on clique de passer au jour suivant.
         /// </summary>
         void OnMouseDown()
         {
@@ -82,7 +82,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>faitPousser</c> parcourt chaque champs, puis appelle leur fonction fairePousser
+        /// La méthode <c>faitPousser</c> parcourt chaque champs, puis appelle leur fonction fairePousser.
         /// </summary>
         public void faitPousser()
         {
@@ -107,7 +107,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>GetPlots</c> permet de r�cup�rer les champs.
+        /// La méthode <c>GetPlots</c> permet de r�cup�rer les champs.
         /// </summary>
         /// <param name="parent">l� o� se trouve les champs</param>
         private void GetPlots(Transform parent)
@@ -121,7 +121,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>addToInventory</c> permet d'ajouter un �v�nement au dictionnaire
+        /// La méthode <c>addToInventory</c> permet d'ajouter un �v�nement au dictionnaire
         /// </summary>
         /// <param name="item">l'�v�nement</param>
         /// <param name="duree">la dur�e de l'�v�nement</param>
@@ -155,7 +155,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>removeFromInventory</c> permet de supprimer un item instantan�ment
+        /// La méthode <c>removeFromInventory</c> permet de supprimer un item instantan�ment
         /// </summary>
         /// <param name="item">l'item � supprimer</param>
         public void removeFromInventory(EventInfo item)
@@ -173,7 +173,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>EventDay</c> permet d'afficher les �v�nements actuels, de d�cr�menter leur dur�e et de les suppimer s'ils arrivent � la fin.
+        /// La méthode <c>EventDay</c> permet d'afficher les �v�nements actuels, de d�cr�menter leur dur�e et de les suppimer s'ils arrivent � la fin.
         /// </summary>
         /// <param name="nbrJour"></param>
         public void EventDay(int nbrJour)

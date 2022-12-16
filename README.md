@@ -15,8 +15,10 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
     <li><a href="#projet-T3">Projet T3</a></li>
     <li><a href="#capture-decran">Captures d'écrans</a>
       <ul>
-          <li><a href="#map">MAP</a></li>
+          <li><a href="#menus">Menus</a></li>
+          <li><a href="#map">Éléments de la Map</a></li>
           <li><a href="#differentes-fenetres">Différentes fenêtres</a></li>
+          <li><a href="#ecran-de-fin">Écran de fin</a></li>
       </ul>
     </li>
     <li><a href="#lien-de-telechargement">Lien de téléchargement</a></li>
@@ -26,6 +28,7 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
                 <ul>
                     <li><a href="#windows">Sous Windows</a></li>
                     <li><a href="#linux">Sous Linux</a></li>
+                    <li><a href="#mac">Sous Mac</a></li>
                 </ul>            
             <li><a href="#procedures-dexecution">Procédure d'execution</a></li>
         </ul>
@@ -57,6 +60,18 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
 <a name="capture-decran"></a>
 
 ## Captures d'écrans
+
+### Menus
+
+<div align="center">
+<img src="images/Menu.png" alt="Menu principal" width="600" height="300"/>
+<h6 align="center">Menu principal</h6>
+</div>
+
+<div align="center">
+<img src="images/Menu_choix.png" alt="Menu durée" width="600" height="300"/>
+<h6 align="center">Choix de la durée de la partie</h6>
+</div>
 
 ### MAP
 
@@ -141,6 +156,14 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
 <h6 align="center">Demande au joueur s'il est sûr de quitter</h6>
 </div>
 
+### Ecran de fin
+
+<div align="center">
+<img src="images/Score_fin.png" alt="Ecran de fin" width="600" height="300"/>
+<h6 align="center">Ecran de fin avec le score</h6>
+</div>
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIEN DE TELECHARGEMENT -->
@@ -148,6 +171,8 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
 <a name="lien-de-telechargement"></a>
 
 ## Lien de téléchargement
+
+Pour télécharger le jeu, allez sur le site ___ et téléchargez le .zip qui contient le jeu.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,23 +190,45 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
 
 #### Sous Windows
 
-<a name="windows"></a>
+<a name="Windows"></a>
+
+Après téléchargement, veuillez dézipper le jeu (en faisant un right-click). Vous pourrez l'ouvrir en cliquant sur Marsgriculteur.exe <br>
+Si vous ne comptez pas avec un outil de dézippage, veuillez télécharger Winrar : https://www.win-rar.com/start.html?&L=10
 
 #### Sous Linux
 
 <a name="Linux"></a>
 
-<!-- Si besoin
-* unity
-  ```sh
-  apt install jesaispas
-  ```
+Premièrement, veuillez installer la commande "unzip" avec 
+```
+sudo apt-get install unzip
+```
+<br>
+Après téléchargement, accédez a votre terminal, tapez unzip /lien/Margscriculteur.zip <br> Après avoir dézippé le fichier, cliquez sur Marsgriculteur.exe
 
-1. blabla [https://example.com](https://example.com) -->
+#### Sous Mac
+
+<a name="Mac"></a>
+
+Premièrement, veuillez installer Brew : installez-le avec 
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Par la suite, veuillez installer la commande "unzip" 
+
+```
+brew install unzip
+```
+
+Après téléchargement, accédez a votre terminal, tapez unzip /lien/Margscriculteur.zip <br> Après avoir dézippé le fichier, cliquez sur Marsgriculteur.exe
 
 ### Procédures d'exécution
 
 <a name="procedures-dexecution"></a>
+
+Lancez Marsgriculteur.exe que vous venez de dézipper.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

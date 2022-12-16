@@ -57,7 +57,7 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>affiche</c> permt d'afficher le graphique
+        /// La méthode <c>affiche</c> permet d'afficher le graphique.
         /// </summary>
         public void affiche()
         {

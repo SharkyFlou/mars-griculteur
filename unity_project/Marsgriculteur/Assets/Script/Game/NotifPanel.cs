@@ -42,7 +42,9 @@ namespace game
         public void OpenPanel()
         {
             if (!PanelInventory.activeSelf)
+            {
                 PanelNotif.SetActive(!PanelNotif.activeSelf);
+            }
         }
     }
 }

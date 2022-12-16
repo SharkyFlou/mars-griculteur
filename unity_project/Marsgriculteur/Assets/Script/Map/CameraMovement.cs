@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
 /// La classe <c>CameraMovement</c> s'occupe de la caméra.
-/// Elle possède les attributs suivant : cam, dragOrigin, zoom, minCamSize, maxCamSize, tilemapRenderer, mapMinX, mapMaxX, mapMinY, mapMaxY, canMoove.
+/// Elle possède les attributs suivants : cam, dragOrigin, zoom, minCamSize, maxCamSize, tilemapRenderer, mapMinX, mapMaxX, mapMinY, mapMaxY, canMoove.
 /// </summary>
 public class CameraMovement : MonoBehaviour
 {
@@ -102,7 +100,7 @@ public class CameraMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// La méthode <c>ZoomOut</c> permet de dézoomer
+    /// La méthode <c>ZoomOut</c> permet de dézoomer.
     /// </summary>
     public void ZoomOut()
     {
@@ -116,7 +114,7 @@ public class CameraMovement : MonoBehaviour
     }
 
     /// <summary>
-    /// La méthode <c>ClampCamera</c> sert a bouger la camera a la nouvelle position desirée
+    /// La méthode <c>ClampCamera</c> sert a bouger la camera a la nouvelle position desirée.
     /// </summary>
     /// <param name="targetPosition">la position désirée</param>
     /// <returns>Elle retourne la position de la caméra</returns>

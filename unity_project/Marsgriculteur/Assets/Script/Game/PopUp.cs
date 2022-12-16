@@ -14,7 +14,7 @@ namespace game
 {
     /// <summary>
     /// La classe <c>PopUp</c> permet d'afficher une petite notification quand le joueur n'a pas exemple plus d'argent.
-    /// Elle possède 3 attributs : text, coroutine, isExecuting
+    /// Elle possède 3 attributs : text, coroutine, isExecuting.
     /// </summary>
     public class PopUp : MonoBehaviour
     {
@@ -25,6 +25,11 @@ namespace game
 
         private bool isExecuting = false;
 
+        /// <summary>
+        /// La méthode <c>setMessage</c> permet de créer la notif avec le texte et la faire attendre 3 secondes
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <returns>IEnumerator.</returns>
         private IEnumerator setMessage(string message)
         {
             
@@ -38,10 +43,13 @@ namespace game
             }
         }
 
+        /// <summary>
+        /// Quand le gameObject qui a commence un coroutine (avec StartCouroutine) est désactivé (SetActive(fals)) tous les coroutine ne exécution s'arrête
+        /// Ainsi cela permet à coupé un affichage actuelle et commencer le nouveau lors d'appels à intervalle < 3s
+        /// </summary>
+        /// <param name="msg">le message</param>
         public void message(string msg)
         {
-            // Quand le gameObject qui a commence un coroutine (avec StartCouroutine) est désactivé (SetActive(fals)) tous les coroutine ne exécution s'arrête
-            // Ainsi cela permet à coupé un affichage actuelle et commencer le nouveau lors d'appels à intervalle < 3s
             coroutine = setMessage(msg);
             if (isExecuting)
                 this.gameObject.SetActive(false);
@@ -49,11 +57,6 @@ namespace game
                 this.gameObject.SetActive(true);
             isExecuting = true;
             StartCoroutine(coroutine);
-        }
-
-        void Start()
-        {
-
         }
     }
 }
