@@ -19,15 +19,14 @@
   <HelpKINode Title="ActivePanel.PanelInventory field" Url="html/F-game.ActivePanel.PanelInventory.htm" />
   <HelpKINode Title="ActivePanel.PanelNotif field" Url="html/F-game.ActivePanel.PanelNotif.htm" />
   <HelpKINode Title="ActivePanel.Start method" Url="html/M-game.ActivePanel.Start.htm" />
-  <HelpKINode Title="ActivePanel.updateWeight method" Url="html/M-game.ActivePanel.updateWeight.htm" />
   <HelpKINode Title="actualDays field" Url="html/F-game.Market.actualDays.htm" />
   <HelpKINode Title="AddMoney method" Url="html/M-game.Game.AddMoney.htm" />
   <HelpKINode Title="addToInventory method" Url="html/M-game.NextDay.addToInventory.htm" />
   <HelpKINode Title="addToInventory method" Url="html/Overload-game.Inventory.addToInventory.htm" />
   <HelpKINode Title="add_price method" Url="html/M-game.Stand.add_price.htm" />
   <HelpKINode Title="af method" Url="html/M-game.SlotInit.af.htm" />
-  <HelpKINode Title="Affiche method" Url="html/M-game.ActivePanel.Affiche.htm" />
   <HelpKINode Title="affiche method" Url="html/M-game.GraphMarket.affiche.htm" />
+  <HelpKINode Title="Affiche method" Url="html/M-game.ActivePanel.Affiche.htm" />
   <HelpKINode Title="affiche method" Url="html/M-game.InventoryPanel.affiche.htm" />
   <HelpKINode Title="afficheEtatDebug method" Url="html/M-game.Market.afficheEtatDebug.htm" />
   <HelpKINode Title="afficheInventory method" Url="html/M-game.InventoryInterface.afficheInventory.htm" />
@@ -137,6 +136,33 @@
   <HelpKINode Title="basicSeedPrice field" Url="html/F-game.PlantInfo.basicSeedPrice.htm" />
   <HelpKINode Title="BLUE enumeration member" Url="html/T-game.EnumTypePlot.htm" />
   <HelpKINode Title="BLUE field" Url="html/F-game.EnumTypePlot.BLUE.htm" />
+  <HelpKINode Title="boughtMoreSpace method" Url="html/M-game.Inventory.boughtMoreSpace.htm" />
+  <HelpKINode Title="ButtonWeight class" Url="html/AllMembers.T-global.ButtonWeight.htm" />
+  <HelpKINode Title="ButtonWeight class" Url="html/T-global.ButtonWeight.htm" />
+  <HelpKINode Title="ButtonWeight class">
+    <HelpKINode Title="about ButtonWeight class" Url="html/T-global.ButtonWeight.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.ButtonWeight.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.ButtonWeight.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.ButtonWeight.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ButtonWeight.moneyStack field" Url="html/F-global.ButtonWeight.moneyStack.htm" />
+  <HelpKINode Title="ButtonWeight.Start method" Url="html/M-global.ButtonWeight.Start.htm" />
+  <HelpKINode Title="buy field" Url="html/F-global.PlotEvents.buy.htm" />
+  <HelpKINode Title="BuyPlot class" Url="html/AllMembers.T-global.BuyPlot.htm" />
+  <HelpKINode Title="BuyPlot class" Url="html/T-global.BuyPlot.htm" />
+  <HelpKINode Title="BuyPlot class">
+    <HelpKINode Title="about BuyPlot class" Url="html/T-global.BuyPlot.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.BuyPlot.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.BuyPlot.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.BuyPlot.htm" />
+  </HelpKINode>
+  <HelpKINode Title="buyPlot method" Url="html/M-global.BuyPlot.buyPlot.htm" />
+  <HelpKINode Title="BuyPlot.buyPlot method" Url="html/M-global.BuyPlot.buyPlot.htm" />
+  <HelpKINode Title="BuyPlot.money field" Url="html/F-global.BuyPlot.money.htm" />
+  <HelpKINode Title="BuyPlot.open method" Url="html/M-global.BuyPlot.open.htm" />
+  <HelpKINode Title="BuyPlot.plot field" Url="html/F-global.BuyPlot.plot.htm" />
+  <HelpKINode Title="BuyPlot.popUp field" Url="html/F-global.BuyPlot.popUp.htm" />
+  <HelpKINode Title="BuyPlot.setPlot method" Url="html/M-global.BuyPlot.setPlot.htm" />
   <HelpKINode Title="cam field" Url="html/F-game.GraphMarket.cam.htm" />
   <HelpKINode Title="cam field" Url="html/F-global.CameraMovement.cam.htm" />
   <HelpKINode Title="cam field" Url="html/F-global.OpenCanvas.cam.htm" />
@@ -174,10 +200,22 @@
   <HelpKINode Title="canvas field" Url="html/F-global.OpenMarket.canvas.htm" />
   <HelpKINode Title="canZoom field" Url="html/F-global.Zoom.canZoom.htm" />
   <HelpKINode Title="capacity field" Url="html/F-game.Plot.capacity.htm" />
-  <HelpKINode Title="changeMaxValue method" Url="html/M-global.SellScript.changeMaxValue.htm" />
+  <HelpKINode Title="changeMaxValue method" Url="html/M-game.SellScript.changeMaxValue.htm" />
   <HelpKINode Title="changePlant method" Url="html/M-game.GraphMarket.changePlant.htm" />
-  <HelpKINode Title="changePlant method" Url="html/M-global.SellScript.changePlant.htm" />
+  <HelpKINode Title="changePlant method" Url="html/M-game.SellScript.changePlant.htm" />
   <HelpKINode Title="changePlantSprite method" Url="html/M-game.Plot.changePlantSprite.htm" />
+  <HelpKINode Title="changeText method" Url="html/M-global.ChangeTextError.changeText.htm" />
+  <HelpKINode Title="ChangeTextError class" Url="html/AllMembers.T-global.ChangeTextError.htm" />
+  <HelpKINode Title="ChangeTextError class" Url="html/T-global.ChangeTextError.htm" />
+  <HelpKINode Title="ChangeTextError class">
+    <HelpKINode Title="about ChangeTextError class" Url="html/T-global.ChangeTextError.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.ChangeTextError.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.ChangeTextError.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.ChangeTextError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ChangeTextError.changeText method" Url="html/M-global.ChangeTextError.changeText.htm" />
+  <HelpKINode Title="ChangeTextError.textDesc field" Url="html/F-global.ChangeTextError.textDesc.htm" />
+  <HelpKINode Title="ChangeTextError.textTitle field" Url="html/F-global.ChangeTextError.textTitle.htm" />
   <HelpKINode Title="CHEBE enumeration member" Url="html/T-game.EnumTools.htm" />
   <HelpKINode Title="CHEBE field" Url="html/F-game.EnumTools.CHEBE.htm" />
   <HelpKINode Title="CHEFOUR enumeration member" Url="html/T-game.EnumTools.htm" />
@@ -191,12 +229,17 @@
   <HelpKINode Title="circleSprite field" Url="html/F-game.GraphMarket.circleSprite.htm" />
   <HelpKINode Title="ClampCamera method" Url="html/M-global.CameraMovement.ClampCamera.htm" />
   <HelpKINode Title="ClampCamera method" Url="html/M-global.Zoom.ClampCamera.htm" />
+  <HelpKINode Title="classePopup field" Url="html/F-game.Game.classePopup.htm" />
+  <HelpKINode Title="classePopup field" Url="html/F-game.NextDay.classePopup.htm" />
+  <HelpKINode Title="classePopup field" Url="html/F-game.NotifPanel.classePopup.htm" />
+  <HelpKINode Title="classePopup field" Url="html/F-game.SellScript.classePopup.htm" />
   <HelpKINode Title="clearGraph method" Url="html/M-game.GraphMarket.clearGraph.htm" />
   <HelpKINode Title="clearInventoryDisplay method" Url="html/M-game.ActivePanel.clearInventoryDisplay.htm" />
   <HelpKINode Title="clearInventoryDisplay method" Url="html/M-game.InventoryPanel.clearInventoryDisplay.htm" />
   <HelpKINode Title="clearInventoryDisplay method" Url="html/M-game.Notification.clearInventoryDisplay.htm" />
   <HelpKINode Title="contientGraine field" Url="html/F-global.PlotEvents.contientGraine.htm" />
   <HelpKINode Title="cooldown field" Url="html/F-game.EventInfo.cooldown.htm" />
+  <HelpKINode Title="coroutine field" Url="html/F-game.PopUp.coroutine.htm" />
   <HelpKINode Title="CreateAllSeedPlant class" Url="html/AllMembers.T-game.CreateAllSeedPlant.htm" />
   <HelpKINode Title="CreateAllSeedPlant class" Url="html/T-game.CreateAllSeedPlant.htm" />
   <HelpKINode Title="CreateAllSeedPlant class">
@@ -264,7 +307,8 @@
   <HelpKINode Title="ELB field" Url="html/F-game.EnumTypePlant.ELB.htm" />
   <HelpKINode Title="ELUOP enumeration member" Url="html/T-game.EnumTypePlant.htm" />
   <HelpKINode Title="ELUOP field" Url="html/F-game.EnumTypePlant.ELUOP.htm" />
-  <HelpKINode Title="endValue field" Url="html/F-global.SellScript.endValue.htm" />
+  <HelpKINode Title="endGame method" Url="html/M-game.Game.endGame.htm" />
+  <HelpKINode Title="endValue field" Url="html/F-game.SellScript.endValue.htm" />
   <HelpKINode Title="EnumTools enumeration" Url="html/T-game.EnumTools.htm" />
   <HelpKINode Title="EnumTools.CHEBE field" Url="html/F-game.EnumTools.CHEBE.htm" />
   <HelpKINode Title="EnumTools.CHEFOUR field" Url="html/F-game.EnumTools.CHEFOUR.htm" />
@@ -298,6 +342,8 @@
   <HelpKINode Title="EnumTypePlot.POISONOUS field" Url="html/F-game.EnumTypePlot.POISONOUS.htm" />
   <HelpKINode Title="EnumTypePlot.RADIOACTIVE field" Url="html/F-game.EnumTypePlot.RADIOACTIVE.htm" />
   <HelpKINode Title="EnumTypePlot.RED field" Url="html/F-game.EnumTypePlot.RED.htm" />
+  <HelpKINode Title="error field" Url="html/F-global.PlotEvents.error.htm" />
+  <HelpKINode Title="errorDislp field" Url="html/F-global.PlotEvents.errorDislp.htm" />
   <HelpKINode Title="EventDay method" Url="html/M-game.NextDay.EventDay.htm" />
   <HelpKINode Title="EventInfo class" Url="html/AllMembers.T-game.EventInfo.htm" />
   <HelpKINode Title="EventInfo class" Url="html/T-game.EventInfo.htm" />
@@ -315,6 +361,7 @@
   <HelpKINode Title="EventInfo.getLength method" Url="html/M-game.EventInfo.getLength.htm" />
   <HelpKINode Title="EventInfo.getName method" Url="html/M-game.EventInfo.getName.htm" />
   <HelpKINode Title="EventInfo.getTarget method" Url="html/M-game.EventInfo.getTarget.htm" />
+  <HelpKINode Title="EventInfo.ifTarget method" Url="html/M-game.EventInfo.ifTarget.htm" />
   <HelpKINode Title="EventInfo.imageLink field" Url="html/F-game.EventInfo.imageLink.htm" />
   <HelpKINode Title="EventInfo.length field" Url="html/F-game.EventInfo.length.htm" />
   <HelpKINode Title="EventInfo.mutliplierBase field" Url="html/F-game.EventInfo.mutliplierBase.htm" />
@@ -338,6 +385,7 @@
     <HelpKINode Title="fields" Url="html/Fields.T-game.Game.htm" />
     <HelpKINode Title="methods" Url="html/Methods.T-game.Game.htm" />
   </HelpKINode>
+  <HelpKINode Title="game field" Url="html/F-game.NextDay.game.htm" />
   <HelpKINode Title="game field" Url="html/F-game.Stand.game.htm" />
   <HelpKINode Title="game namespace" Url="html/N-game.htm" />
   <HelpKINode Title="game.ActivePanel class" Url="html/AllMembers.T-game.ActivePanel.htm" />
@@ -355,10 +403,12 @@
   <HelpKINode Title="game.BasicItem class" Url="html/T-game.BasicItem.htm" />
   <HelpKINode Title="game.BasicPlant class" Url="html/AllMembers.T-game.BasicPlant.htm" />
   <HelpKINode Title="game.BasicPlant class" Url="html/T-game.BasicPlant.htm" />
+  <HelpKINode Title="Game.classePopup field" Url="html/F-game.Game.classePopup.htm" />
   <HelpKINode Title="game.CreateAllSeedPlant class" Url="html/AllMembers.T-game.CreateAllSeedPlant.htm" />
   <HelpKINode Title="game.CreateAllSeedPlant class" Url="html/T-game.CreateAllSeedPlant.htm" />
   <HelpKINode Title="game.DropDownMarket class" Url="html/AllMembers.T-game.DropDownMarket.htm" />
   <HelpKINode Title="game.DropDownMarket class" Url="html/T-game.DropDownMarket.htm" />
+  <HelpKINode Title="Game.endGame method" Url="html/M-game.Game.endGame.htm" />
   <HelpKINode Title="game.EnumTools enumeration" Url="html/T-game.EnumTools.htm" />
   <HelpKINode Title="game.EnumTypePlant enumeration" Url="html/T-game.EnumTypePlant.htm" />
   <HelpKINode Title="game.EnumTypePlot enumeration" Url="html/T-game.EnumTypePlot.htm" />
@@ -386,6 +436,7 @@
   <HelpKINode Title="game.Market class" Url="html/T-game.Market.htm" />
   <HelpKINode Title="Game.market field" Url="html/F-game.Game.market.htm" />
   <HelpKINode Title="Game.money field" Url="html/F-game.Game.money.htm" />
+  <HelpKINode Title="Game.moneyObjective field" Url="html/F-game.Game.moneyObjective.htm" />
   <HelpKINode Title="Game.moneyText field" Url="html/F-game.Game.moneyText.htm" />
   <HelpKINode Title="game.NextDay class" Url="html/AllMembers.T-game.NextDay.htm" />
   <HelpKINode Title="game.NextDay class" Url="html/T-game.NextDay.htm" />
@@ -403,8 +454,12 @@
   <HelpKINode Title="game.PlantInfo class" Url="html/T-game.PlantInfo.htm" />
   <HelpKINode Title="game.Plot class" Url="html/AllMembers.T-game.Plot.htm" />
   <HelpKINode Title="game.Plot class" Url="html/T-game.Plot.htm" />
+  <HelpKINode Title="game.PopUp class" Url="html/AllMembers.T-game.PopUp.htm" />
+  <HelpKINode Title="game.PopUp class" Url="html/T-game.PopUp.htm" />
   <HelpKINode Title="game.Seed class" Url="html/AllMembers.T-game.Seed.htm" />
   <HelpKINode Title="game.Seed class" Url="html/T-game.Seed.htm" />
+  <HelpKINode Title="game.SellScript class" Url="html/AllMembers.T-game.SellScript.htm" />
+  <HelpKINode Title="game.SellScript class" Url="html/T-game.SellScript.htm" />
   <HelpKINode Title="game.Shop class" Url="html/AllMembers.T-game.Shop.htm" />
   <HelpKINode Title="game.Shop class" Url="html/T-game.Shop.htm" />
   <HelpKINode Title="Game.shop field" Url="html/F-game.Game.shop.htm" />
@@ -416,9 +471,24 @@
   <HelpKINode Title="game.Stand.Item structure" Url="html/T-game.Stand.Item.htm" />
   <HelpKINode Title="Game.Start method" Url="html/M-game.Game.Start.htm" />
   <HelpKINode Title="Game.SubsMoney method" Url="html/M-game.Game.SubsMoney.htm" />
+  <HelpKINode Title="Game.testObjective method" Url="html/M-game.Game.testObjective.htm" />
   <HelpKINode Title="game.Tool class" Url="html/AllMembers.T-game.Tool.htm" />
   <HelpKINode Title="game.Tool class" Url="html/T-game.Tool.htm" />
-  <HelpKINode Title="gameLength field" Url="html/F-game.NextDay.gameLength.htm" />
+  <HelpKINode Title="Game.totalMoneyEarned field" Url="html/F-game.Game.totalMoneyEarned.htm" />
+  <HelpKINode Title="GameStats class" Url="html/AllMembers.T-global.GameStats.htm" />
+  <HelpKINode Title="GameStats class" Url="html/T-global.GameStats.htm" />
+  <HelpKINode Title="GameStats class">
+    <HelpKINode Title="about GameStats class" Url="html/T-global.GameStats.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-global.GameStats.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-global.GameStats.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-global.GameStats.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GameStats.moneyGained field" Url="html/F-global.GameStats.moneyGained.htm" />
+  <HelpKINode Title="GameStats.nbDay field" Url="html/F-global.GameStats.nbDay.htm" />
+  <HelpKINode Title="GameStats.nbDays field" Url="html/F-global.GameStats.nbDays.htm" />
+  <HelpKINode Title="GameStats.objective field" Url="html/F-global.GameStats.objective.htm" />
+  <HelpKINode Title="GameStats.qttMoney field" Url="html/F-global.GameStats.qttMoney.htm" />
+  <HelpKINode Title="GameStats.Start method" Url="html/M-global.GameStats.Start.htm" />
   <HelpKINode Title="generateNewHistoryDay method" Url="html/M-game.Market.generateNewHistoryDay.htm" />
   <HelpKINode Title="GerePlant class" Url="html/AllMembers.T-game.GerePlant.htm" />
   <HelpKINode Title="GerePlant class" Url="html/T-game.GerePlant.htm" />
@@ -431,8 +501,6 @@
   <HelpKINode Title="GerePlant.getStockedItem method" Url="html/M-game.GerePlant.getStockedItem.htm" />
   <HelpKINode Title="GerePlant.getStockedQtt method" Url="html/M-game.GerePlant.getStockedQtt.htm" />
   <HelpKINode Title="GerePlant.inventoryFunctions field" Url="html/F-game.GerePlant.inventoryFunctions.htm" />
-  <HelpKINode Title="GerePlant.reafficheInv field" Url="html/F-game.GerePlant.reafficheInv.htm" />
-  <HelpKINode Title="GerePlant.Soustraits method" Url="html/M-game.GerePlant.Soustraits.htm" />
   <HelpKINode Title="GerePlant.stockedItem field" Url="html/F-game.GerePlant.stockedItem.htm" />
   <HelpKINode Title="GerePlant.StockedPlot field" Url="html/F-game.GerePlant.StockedPlot.htm" />
   <HelpKINode Title="GerePlant.stockedQtt field" Url="html/F-game.GerePlant.stockedQtt.htm" />
@@ -463,6 +531,7 @@
   <HelpKINode Title="getName method" Url="html/M-game.EventInfo.getName.htm" />
   <HelpKINode Title="getNbCollect method" Url="html/M-game.PlantedPlant.getNbCollect.htm" />
   <HelpKINode Title="getNbCollect method" Url="html/M-game.PlantInfo.getNbCollect.htm" />
+  <HelpKINode Title="getNbJour method" Url="html/M-game.NextDay.getNbJour.htm" />
   <HelpKINode Title="getNbrSlots method" Url="html/M-game.InventoryPlant.getNbrSlots.htm" />
   <HelpKINode Title="getPlantedPlantSprites method" Url="html/M-game.PlantInfo.getPlantedPlantSprites.htm" />
   <HelpKINode Title="getPlantPrice method" Url="html/M-game.PlantInfo.getPlantPrice.htm" />
@@ -488,8 +557,16 @@
   <HelpKINode Title="getWeight method" Url="html/M-game.BasicItem.getWeight.htm" />
   <HelpKINode Title="getWeightMax method" Url="html/M-game.Inventory.getWeightMax.htm" />
   <HelpKINode Title="global namespace" Url="html/N-global.htm" />
+  <HelpKINode Title="global.ButtonWeight class" Url="html/AllMembers.T-global.ButtonWeight.htm" />
+  <HelpKINode Title="global.ButtonWeight class" Url="html/T-global.ButtonWeight.htm" />
+  <HelpKINode Title="global.BuyPlot class" Url="html/AllMembers.T-global.BuyPlot.htm" />
+  <HelpKINode Title="global.BuyPlot class" Url="html/T-global.BuyPlot.htm" />
   <HelpKINode Title="global.CameraMovement class" Url="html/AllMembers.T-global.CameraMovement.htm" />
   <HelpKINode Title="global.CameraMovement class" Url="html/T-global.CameraMovement.htm" />
+  <HelpKINode Title="global.ChangeTextError class" Url="html/AllMembers.T-global.ChangeTextError.htm" />
+  <HelpKINode Title="global.ChangeTextError class" Url="html/T-global.ChangeTextError.htm" />
+  <HelpKINode Title="global.GameStats class" Url="html/AllMembers.T-global.GameStats.htm" />
+  <HelpKINode Title="global.GameStats class" Url="html/T-global.GameStats.htm" />
   <HelpKINode Title="global.GoBackTest class" Url="html/AllMembers.T-global.GoBackTest.htm" />
   <HelpKINode Title="global.GoBackTest class" Url="html/T-global.GoBackTest.htm" />
   <HelpKINode Title="global.Highlite class" Url="html/AllMembers.T-global.Highlite.htm" />
@@ -504,8 +581,6 @@
   <HelpKINode Title="global.OpenMarket class" Url="html/T-global.OpenMarket.htm" />
   <HelpKINode Title="global.PlotEvents class" Url="html/AllMembers.T-global.PlotEvents.htm" />
   <HelpKINode Title="global.PlotEvents class" Url="html/T-global.PlotEvents.htm" />
-  <HelpKINode Title="global.SellScript class" Url="html/AllMembers.T-global.SellScript.htm" />
-  <HelpKINode Title="global.SellScript class" Url="html/T-global.SellScript.htm" />
   <HelpKINode Title="global.Zoom class" Url="html/AllMembers.T-global.Zoom.htm" />
   <HelpKINode Title="global.Zoom class" Url="html/T-global.Zoom.htm" />
   <HelpKINode Title="GoBackTest class" Url="html/AllMembers.T-global.GoBackTest.htm" />
@@ -582,6 +657,7 @@
   <HelpKINode Title="history field" Url="html/F-game.Market.history.htm" />
   <HelpKINode Title="id field" Url="html/F-game.BasicItem.id.htm" />
   <HelpKINode Title="id field" Url="html/F-game.PlantInfo.id.htm" />
+  <HelpKINode Title="ifTarget method" Url="html/M-game.EventInfo.ifTarget.htm" />
   <HelpKINode Title="imageLink field" Url="html/F-game.BasicItem.imageLink.htm" />
   <HelpKINode Title="imageLink field" Url="html/F-game.EventInfo.imageLink.htm" />
   <HelpKINode Title="impossibleEvents field" Url="html/F-game.Market.impossibleEvents.htm" />
@@ -599,6 +675,7 @@
   <HelpKINode Title="inventory field" Url="html/F-game.Stand.inventory.htm" />
   <HelpKINode Title="inventory field" Url="html/F-global.PlotEvents.inventory.htm" />
   <HelpKINode Title="Inventory.addToInventory method" Url="html/Overload-game.Inventory.addToInventory.htm" />
+  <HelpKINode Title="Inventory.boughtMoreSpace method" Url="html/M-game.Inventory.boughtMoreSpace.htm" />
   <HelpKINode Title="Inventory.currentWeight field" Url="html/F-game.Inventory.currentWeight.htm" />
   <HelpKINode Title="Inventory.displayInventory method" Url="html/M-game.Inventory.displayInventory.htm" />
   <HelpKINode Title="Inventory.getCurrentWeight method" Url="html/M-game.Inventory.getCurrentWeight.htm" />
@@ -633,7 +710,10 @@
   <HelpKINode Title="InventoryPanel.afficheInventory method" Url="html/Overload-game.InventoryPanel.afficheInventory.htm" />
   <HelpKINode Title="InventoryPanel.clearInventoryDisplay method" Url="html/M-game.InventoryPanel.clearInventoryDisplay.htm" />
   <HelpKINode Title="InventoryPanel.InventoryPanel constructor" Url="html/Overload-game.InventoryPanel.-ctor.htm" />
+  <HelpKINode Title="InventoryPanel.moneyText field" Url="html/F-game.InventoryPanel.moneyText.htm" />
   <HelpKINode Title="InventoryPanel.slotPanel field" Url="html/F-game.InventoryPanel.slotPanel.htm" />
+  <HelpKINode Title="InventoryPanel.Start method" Url="html/M-game.InventoryPanel.Start.htm" />
+  <HelpKINode Title="InventoryPanel.updateWeight method" Url="html/M-game.InventoryPanel.updateWeight.htm" />
   <HelpKINode Title="InventoryPlant class" Url="html/AllMembers.T-game.InventoryPlant.htm" />
   <HelpKINode Title="InventoryPlant class" Url="html/T-game.InventoryPlant.htm" />
   <HelpKINode Title="InventoryPlant class">
@@ -655,7 +735,9 @@
   </HelpKINode>
   <HelpKINode Title="InventorySlot.createSlot method" Url="html/M-game.InventorySlot.createSlot.htm" />
   <HelpKINode Title="inverseAffichage method" Url="html/M-global.OpenCanvas.inverseAffichage.htm" />
+  <HelpKINode Title="isDesactive field" Url="html/F-global.PlotEvents.isDesactive.htm" />
   <HelpKINode Title="isDicoVide method" Url="html/M-game.Inventory.isDicoVide.htm" />
+  <HelpKINode Title="isExecuting field" Url="html/F-game.PopUp.isExecuting.htm" />
   <HelpKINode Title="isPlanted field" Url="html/F-game.Plot.isPlanted.htm" />
   <HelpKINode Title="isShown field" Url="html/F-global.OpenCanvas.isShown.htm" />
   <HelpKINode Title="item field" Url="html/F-game.SlotInit.item.htm" />
@@ -689,6 +771,8 @@
     <HelpKINode Title="all members" Url="html/AllMembers.T-global.MainMenu.htm" />
     <HelpKINode Title="methods" Url="html/Methods.T-global.MainMenu.htm" />
   </HelpKINode>
+  <HelpKINode Title="mainMenu method" Url="html/M-global.MainMenu.mainMenu.htm" />
+  <HelpKINode Title="MainMenu.mainMenu method" Url="html/M-global.MainMenu.mainMenu.htm" />
   <HelpKINode Title="MainMenu.PlayGame method" Url="html/M-global.MainMenu.PlayGame.htm" />
   <HelpKINode Title="MainMenu.QuitGame method" Url="html/M-global.MainMenu.QuitGame.htm" />
   <HelpKINode Title="mapMaxX field" Url="html/F-global.CameraMovement.mapMaxX.htm" />
@@ -711,9 +795,9 @@
   <HelpKINode Title="market field" Url="html/F-game.Game.market.htm" />
   <HelpKINode Title="market field" Url="html/F-game.GraphMarket.market.htm" />
   <HelpKINode Title="market field" Url="html/F-game.NextDay.market.htm" />
+  <HelpKINode Title="market field" Url="html/F-game.SellScript.market.htm" />
   <HelpKINode Title="market field" Url="html/F-game.Stand.market.htm" />
   <HelpKINode Title="market field" Url="html/F-global.marketBase.market.htm" />
-  <HelpKINode Title="market field" Url="html/F-global.SellScript.market.htm" />
   <HelpKINode Title="Market.activeEvents field" Url="html/F-game.Market.activeEvents.htm" />
   <HelpKINode Title="Market.actualDays field" Url="html/F-game.Market.actualDays.htm" />
   <HelpKINode Title="Market.afficheEtatDebug method" Url="html/M-game.Market.afficheEtatDebug.htm" />
@@ -750,16 +834,24 @@
   <HelpKINode Title="marketBase.Start method" Url="html/M-global.marketBase.Start.htm" />
   <HelpKINode Title="maxCamSize field" Url="html/F-global.CameraMovement.maxCamSize.htm" />
   <HelpKINode Title="maxCamSize field" Url="html/F-global.Zoom.maxCamSize.htm" />
+  <HelpKINode Title="message method" Url="html/M-game.PopUp.message.htm" />
   <HelpKINode Title="minCamSize field" Url="html/F-global.CameraMovement.minCamSize.htm" />
   <HelpKINode Title="minCamSize field" Url="html/F-global.Zoom.minCamSize.htm" />
   <HelpKINode Title="money field" Url="html/F-game.Game.money.htm" />
+  <HelpKINode Title="money field" Url="html/F-global.BuyPlot.money.htm" />
+  <HelpKINode Title="moneyGained field" Url="html/F-global.GameStats.moneyGained.htm" />
+  <HelpKINode Title="moneyObjective field" Url="html/F-game.Game.moneyObjective.htm" />
+  <HelpKINode Title="moneyStack field" Url="html/F-global.ButtonWeight.moneyStack.htm" />
   <HelpKINode Title="moneyText field" Url="html/F-game.Game.moneyText.htm" />
+  <HelpKINode Title="moneyText field" Url="html/F-game.InventoryPanel.moneyText.htm" />
   <HelpKINode Title="monthList field" Url="html/F-game.GraphMarket.monthList.htm" />
   <HelpKINode Title="mutlInvGraph field" Url="html/F-game.GraphMarket.mutlInvGraph.htm" />
   <HelpKINode Title="mutliplierBase field" Url="html/F-game.EventInfo.mutliplierBase.htm" />
   <HelpKINode Title="mutliplierProg field" Url="html/F-game.EventInfo.mutliplierProg.htm" />
   <HelpKINode Title="namee field" Url="html/F-game.EventInfo.namee.htm" />
   <HelpKINode Title="namePlant field" Url="html/F-game.PlantInfo.namePlant.htm" />
+  <HelpKINode Title="nbDay field" Url="html/F-global.GameStats.nbDay.htm" />
+  <HelpKINode Title="nbDays field" Url="html/F-global.GameStats.nbDays.htm" />
   <HelpKINode Title="nbPlantCollect field" Url="html/F-game.PlantedPlant.nbPlantCollect.htm" />
   <HelpKINode Title="nbPlantCollect field" Url="html/F-game.PlantInfo.nbPlantCollect.htm" />
   <HelpKINode Title="nbrJour field" Url="html/F-game.NextDay.nbrJour.htm" />
@@ -775,12 +867,14 @@
   <HelpKINode Title="nextDay field" Url="html/F-game.Notification.nextDay.htm" />
   <HelpKINode Title="nextDay method" Url="html/M-game.Market.nextDay.htm" />
   <HelpKINode Title="NextDay.addToInventory method" Url="html/M-game.NextDay.addToInventory.htm" />
+  <HelpKINode Title="NextDay.classePopup field" Url="html/F-game.NextDay.classePopup.htm" />
   <HelpKINode Title="NextDay.dayText field" Url="html/F-game.NextDay.dayText.htm" />
   <HelpKINode Title="NextDay.dicoPossessions field" Url="html/F-game.NextDay.dicoPossessions.htm" />
   <HelpKINode Title="NextDay.EventDay method" Url="html/M-game.NextDay.EventDay.htm" />
   <HelpKINode Title="NextDay.faitPousser method" Url="html/M-game.NextDay.faitPousser.htm" />
-  <HelpKINode Title="NextDay.gameLength field" Url="html/F-game.NextDay.gameLength.htm" />
+  <HelpKINode Title="NextDay.game field" Url="html/F-game.NextDay.game.htm" />
   <HelpKINode Title="NextDay.getInventoryNotif method" Url="html/M-game.NextDay.getInventoryNotif.htm" />
+  <HelpKINode Title="NextDay.getNbJour method" Url="html/M-game.NextDay.getNbJour.htm" />
   <HelpKINode Title="NextDay.GetPlots method" Url="html/M-game.NextDay.GetPlots.htm" />
   <HelpKINode Title="NextDay.market field" Url="html/F-game.NextDay.market.htm" />
   <HelpKINode Title="NextDay.nbrJour field" Url="html/F-game.NextDay.nbrJour.htm" />
@@ -789,6 +883,7 @@
   <HelpKINode Title="NextDay.plotList field" Url="html/F-game.NextDay.plotList.htm" />
   <HelpKINode Title="NextDay.plots field" Url="html/F-game.NextDay.plots.htm" />
   <HelpKINode Title="NextDay.removeFromInventory method" Url="html/M-game.NextDay.removeFromInventory.htm" />
+  <HelpKINode Title="NextDay.render field" Url="html/F-game.NextDay.render.htm" />
   <HelpKINode Title="NextDay.Start method" Url="html/M-game.NextDay.Start.htm" />
   <HelpKINode Title="nextImpossibleEvents method" Url="html/M-game.Market.nextImpossibleEvents.htm" />
   <HelpKINode Title="NIPAL enumeration member" Url="html/T-game.EnumTypePlant.htm" />
@@ -818,14 +913,17 @@
     <HelpKINode Title="fields" Url="html/Fields.T-game.NotifPanel.htm" />
     <HelpKINode Title="methods" Url="html/Methods.T-game.NotifPanel.htm" />
   </HelpKINode>
+  <HelpKINode Title="NotifPanel.classePopup field" Url="html/F-game.NotifPanel.classePopup.htm" />
   <HelpKINode Title="NotifPanel.dico field" Url="html/F-game.NotifPanel.dico.htm" />
   <HelpKINode Title="NotifPanel.notif field" Url="html/F-game.NotifPanel.notif.htm" />
   <HelpKINode Title="NotifPanel.OpenPanel method" Url="html/M-game.NotifPanel.OpenPanel.htm" />
   <HelpKINode Title="NotifPanel.PanelInventory field" Url="html/F-game.NotifPanel.PanelInventory.htm" />
   <HelpKINode Title="NotifPanel.PanelNotif field" Url="html/F-game.NotifPanel.PanelNotif.htm" />
+  <HelpKINode Title="NotifPanel.render field" Url="html/F-game.NotifPanel.render.htm" />
   <HelpKINode Title="NotifPanel.Start method" Url="html/M-game.NotifPanel.Start.htm" />
   <HelpKINode Title="number field" Url="html/F-game.Plot.number.htm" />
   <HelpKINode Title="numberOfDays field" Url="html/F-game.GraphMarket.numberOfDays.htm" />
+  <HelpKINode Title="objective field" Url="html/F-global.GameStats.objective.htm" />
   <HelpKINode Title="OnMouseDown method" Url="html/M-game.NextDay.OnMouseDown.htm" />
   <HelpKINode Title="OnMouseDown method" Url="html/M-game.OpenShop.OnMouseDown.htm" />
   <HelpKINode Title="OnMouseDown method" Url="html/M-game.SlotInit.OnMouseDown.htm" />
@@ -835,6 +933,8 @@
   <HelpKINode Title="OnMouseExit method" Url="html/M-global.PlotEvents.OnMouseExit.htm" />
   <HelpKINode Title="OnMouseOver method" Url="html/M-global.Highlite.OnMouseOver.htm" />
   <HelpKINode Title="OnMouseOver method" Url="html/M-global.PlotEvents.OnMouseOver.htm" />
+  <HelpKINode Title="open method" Url="html/M-global.BuyPlot.open.htm" />
+  <HelpKINode Title="openBuyPlot method" Url="html/M-global.PlotEvents.openBuyPlot.htm" />
   <HelpKINode Title="OpenCanvas class" Url="html/AllMembers.T-global.OpenCanvas.htm" />
   <HelpKINode Title="OpenCanvas class" Url="html/T-global.OpenCanvas.htm" />
   <HelpKINode Title="OpenCanvas class">
@@ -910,7 +1010,7 @@
   <HelpKINode Title="plantAct field" Url="html/F-game.GraphMarket.plantAct.htm" />
   <HelpKINode Title="plantBasic method" Url="html/M-game.Market.plantBasic.htm" />
   <HelpKINode Title="plantByEvent method" Url="html/M-game.Market.plantByEvent.htm" />
-  <HelpKINode Title="plantChoosed field" Url="html/F-global.SellScript.plantChoosed.htm" />
+  <HelpKINode Title="plantChoosed field" Url="html/F-game.SellScript.plantChoosed.htm" />
   <HelpKINode Title="PlantedPlant class" Url="html/AllMembers.T-game.PlantedPlant.htm" />
   <HelpKINode Title="PlantedPlant class" Url="html/T-game.PlantedPlant.htm" />
   <HelpKINode Title="PlantedPlant class">
@@ -980,6 +1080,7 @@
     <HelpKINode Title="fields" Url="html/Fields.T-game.Plot.htm" />
     <HelpKINode Title="methods" Url="html/Methods.T-game.Plot.htm" />
   </HelpKINode>
+  <HelpKINode Title="plot field" Url="html/F-global.BuyPlot.plot.htm" />
   <HelpKINode Title="Plot.capacity field" Url="html/F-game.Plot.capacity.htm" />
   <HelpKINode Title="Plot.changePlantSprite method" Url="html/M-game.Plot.changePlantSprite.htm" />
   <HelpKINode Title="Plot.currentPlant field" Url="html/F-game.Plot.currentPlant.htm" />
@@ -1002,7 +1103,10 @@
     <HelpKINode Title="fields" Url="html/Fields.T-global.PlotEvents.htm" />
     <HelpKINode Title="methods" Url="html/Methods.T-global.PlotEvents.htm" />
   </HelpKINode>
+  <HelpKINode Title="PlotEvents.buy field" Url="html/F-global.PlotEvents.buy.htm" />
   <HelpKINode Title="PlotEvents.contientGraine field" Url="html/F-global.PlotEvents.contientGraine.htm" />
+  <HelpKINode Title="PlotEvents.error field" Url="html/F-global.PlotEvents.error.htm" />
+  <HelpKINode Title="PlotEvents.errorDislp field" Url="html/F-global.PlotEvents.errorDislp.htm" />
   <HelpKINode Title="PlotEvents.fairePousser method" Url="html/M-global.PlotEvents.fairePousser.htm" />
   <HelpKINode Title="PlotEvents.GetChildren method" Url="html/M-global.PlotEvents.GetChildren.htm" />
   <HelpKINode Title="PlotEvents.growthStatus field" Url="html/F-global.PlotEvents.growthStatus.htm" />
@@ -1010,10 +1114,12 @@
   <HelpKINode Title="PlotEvents.hidesPanel field" Url="html/F-global.PlotEvents.hidesPanel.htm" />
   <HelpKINode Title="PlotEvents.InterfacePlantPanel field" Url="html/F-global.PlotEvents.InterfacePlantPanel.htm" />
   <HelpKINode Title="PlotEvents.inventory field" Url="html/F-global.PlotEvents.inventory.htm" />
+  <HelpKINode Title="PlotEvents.isDesactive field" Url="html/F-global.PlotEvents.isDesactive.htm" />
   <HelpKINode Title="PlotEvents.itemDansPlot field" Url="html/F-global.PlotEvents.itemDansPlot.htm" />
   <HelpKINode Title="PlotEvents.OnMouseDown method" Url="html/M-global.PlotEvents.OnMouseDown.htm" />
   <HelpKINode Title="PlotEvents.OnMouseExit method" Url="html/M-global.PlotEvents.OnMouseExit.htm" />
   <HelpKINode Title="PlotEvents.OnMouseOver method" Url="html/M-global.PlotEvents.OnMouseOver.htm" />
+  <HelpKINode Title="PlotEvents.openBuyPlot method" Url="html/M-global.PlotEvents.openBuyPlot.htm" />
   <HelpKINode Title="PlotEvents.plantedPlant field" Url="html/F-global.PlotEvents.plantedPlant.htm" />
   <HelpKINode Title="PlotEvents.planteGraine method" Url="html/M-global.PlotEvents.planteGraine.htm" />
   <HelpKINode Title="PlotEvents.plotImage field" Url="html/F-global.PlotEvents.plotImage.htm" />
@@ -1025,6 +1131,7 @@
   <HelpKINode Title="PlotEvents.seedImage field" Url="html/F-global.PlotEvents.seedImage.htm" />
   <HelpKINode Title="PlotEvents.seed_sprite field" Url="html/F-global.PlotEvents.seed_sprite.htm" />
   <HelpKINode Title="PlotEvents.seed_sprite_grown field" Url="html/F-global.PlotEvents.seed_sprite_grown.htm" />
+  <HelpKINode Title="PlotEvents.setPlotActive method" Url="html/M-global.PlotEvents.setPlotActive.htm" />
   <HelpKINode Title="PlotEvents.Start method" Url="html/M-global.PlotEvents.Start.htm" />
   <HelpKINode Title="plotImage field" Url="html/F-global.PlotEvents.plotImage.htm" />
   <HelpKINode Title="plotList field" Url="html/F-game.NextDay.plotList.htm" />
@@ -1035,14 +1142,27 @@
   <HelpKINode Title="plTypeList field" Url="html/F-game.DropDownMarket.plTypeList.htm" />
   <HelpKINode Title="POISONOUS enumeration member" Url="html/T-game.EnumTypePlot.htm" />
   <HelpKINode Title="POISONOUS field" Url="html/F-game.EnumTypePlot.POISONOUS.htm" />
+  <HelpKINode Title="PopUp class" Url="html/AllMembers.T-game.PopUp.htm" />
+  <HelpKINode Title="PopUp class" Url="html/T-game.PopUp.htm" />
+  <HelpKINode Title="PopUp class">
+    <HelpKINode Title="about PopUp class" Url="html/T-game.PopUp.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-game.PopUp.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-game.PopUp.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-game.PopUp.htm" />
+  </HelpKINode>
+  <HelpKINode Title="popUp field" Url="html/F-global.BuyPlot.popUp.htm" />
+  <HelpKINode Title="PopUp.coroutine field" Url="html/F-game.PopUp.coroutine.htm" />
+  <HelpKINode Title="PopUp.isExecuting field" Url="html/F-game.PopUp.isExecuting.htm" />
+  <HelpKINode Title="PopUp.message method" Url="html/M-game.PopUp.message.htm" />
+  <HelpKINode Title="PopUp.setMessage method" Url="html/M-game.PopUp.setMessage.htm" />
+  <HelpKINode Title="PopUp.text field" Url="html/F-game.PopUp.text.htm" />
   <HelpKINode Title="price field" Url="html/F-game.BasicItem.price.htm" />
   <HelpKINode Title="probability field" Url="html/F-game.EventInfo.probability.htm" />
+  <HelpKINode Title="qttMoney field" Url="html/F-global.GameStats.qttMoney.htm" />
   <HelpKINode Title="qttSlot field" Url="html/F-game.SlotInit.qttSlot.htm" />
   <HelpKINode Title="QuitGame method" Url="html/M-global.MainMenu.QuitGame.htm" />
   <HelpKINode Title="RADIOACTIVE enumeration member" Url="html/T-game.EnumTypePlot.htm" />
   <HelpKINode Title="RADIOACTIVE field" Url="html/F-game.EnumTypePlot.RADIOACTIVE.htm" />
-  <HelpKINode Title="reafficheInv field" Url="html/F-game.GerePlant.reafficheInv.htm" />
-  <HelpKINode Title="reafficheInv field" Url="html/F-game.SlotInit.reafficheInv.htm" />
   <HelpKINode Title="reafficheInvOnClick field" Url="html/F-global.PlotEvents.reafficheInvOnClick.htm" />
   <HelpKINode Title="reafficheInvOnClickMarket field" Url="html/F-global.OpenMarket.reafficheInvOnClickMarket.htm" />
   <HelpKINode Title="recupPlante method" Url="html/M-global.PlotEvents.recupPlante.htm" />
@@ -1050,7 +1170,9 @@
   <HelpKINode Title="RED field" Url="html/F-game.EnumTypePlot.RED.htm" />
   <HelpKINode Title="removeFromInventory method" Url="html/M-game.Inventory.removeFromInventory.htm" />
   <HelpKINode Title="removeFromInventory method" Url="html/M-game.NextDay.removeFromInventory.htm" />
-  <HelpKINode Title="resValue field" Url="html/F-global.SellScript.resValue.htm" />
+  <HelpKINode Title="render field" Url="html/F-game.NextDay.render.htm" />
+  <HelpKINode Title="render field" Url="html/F-game.NotifPanel.render.htm" />
+  <HelpKINode Title="resValue field" Url="html/F-game.SellScript.resValue.htm" />
   <HelpKINode Title="RISATEURPULVE enumeration member" Url="html/T-game.EnumTools.htm" />
   <HelpKINode Title="RISATEURPULVE field" Url="html/F-game.EnumTools.RISATEURPULVE.htm" />
   <HelpKINode Title="RUECHAR enumeration member" Url="html/T-game.EnumTools.htm" />
@@ -1074,30 +1196,34 @@
   <HelpKINode Title="seed_sprite_grown field" Url="html/F-global.PlotEvents.seed_sprite_grown.htm" />
   <HelpKINode Title="SEHER enumeration member" Url="html/T-game.EnumTools.htm" />
   <HelpKINode Title="SEHER field" Url="html/F-game.EnumTools.SEHER.htm" />
-  <HelpKINode Title="sell method" Url="html/M-global.SellScript.sell.htm" />
-  <HelpKINode Title="SellScript class" Url="html/AllMembers.T-global.SellScript.htm" />
-  <HelpKINode Title="SellScript class" Url="html/T-global.SellScript.htm" />
+  <HelpKINode Title="sell method" Url="html/M-game.SellScript.sell.htm" />
+  <HelpKINode Title="SellScript class" Url="html/AllMembers.T-game.SellScript.htm" />
+  <HelpKINode Title="SellScript class" Url="html/T-game.SellScript.htm" />
   <HelpKINode Title="SellScript class">
-    <HelpKINode Title="about SellScript class" Url="html/T-global.SellScript.htm" />
-    <HelpKINode Title="all members" Url="html/AllMembers.T-global.SellScript.htm" />
-    <HelpKINode Title="fields" Url="html/Fields.T-global.SellScript.htm" />
-    <HelpKINode Title="methods" Url="html/Methods.T-global.SellScript.htm" />
+    <HelpKINode Title="about SellScript class" Url="html/T-game.SellScript.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers.T-game.SellScript.htm" />
+    <HelpKINode Title="fields" Url="html/Fields.T-game.SellScript.htm" />
+    <HelpKINode Title="methods" Url="html/Methods.T-game.SellScript.htm" />
   </HelpKINode>
-  <HelpKINode Title="SellScript.changeMaxValue method" Url="html/M-global.SellScript.changeMaxValue.htm" />
-  <HelpKINode Title="SellScript.changePlant method" Url="html/M-global.SellScript.changePlant.htm" />
-  <HelpKINode Title="SellScript.endValue field" Url="html/F-global.SellScript.endValue.htm" />
-  <HelpKINode Title="SellScript.market field" Url="html/F-global.SellScript.market.htm" />
-  <HelpKINode Title="SellScript.plantChoosed field" Url="html/F-global.SellScript.plantChoosed.htm" />
-  <HelpKINode Title="SellScript.resValue field" Url="html/F-global.SellScript.resValue.htm" />
-  <HelpKINode Title="SellScript.sell method" Url="html/M-global.SellScript.sell.htm" />
-  <HelpKINode Title="SellScript.slider field" Url="html/F-global.SellScript.slider.htm" />
-  <HelpKINode Title="SellScript.Start method" Url="html/M-global.SellScript.Start.htm" />
-  <HelpKINode Title="SellScript.totalPrice method" Url="html/M-global.SellScript.totalPrice.htm" />
-  <HelpKINode Title="SellScript.transformRef field" Url="html/F-global.SellScript.transformRef.htm" />
-  <HelpKINode Title="SellScript.valueChanged method" Url="html/M-global.SellScript.valueChanged.htm" />
+  <HelpKINode Title="SellScript.changeMaxValue method" Url="html/M-game.SellScript.changeMaxValue.htm" />
+  <HelpKINode Title="SellScript.changePlant method" Url="html/M-game.SellScript.changePlant.htm" />
+  <HelpKINode Title="SellScript.classePopup field" Url="html/F-game.SellScript.classePopup.htm" />
+  <HelpKINode Title="SellScript.endValue field" Url="html/F-game.SellScript.endValue.htm" />
+  <HelpKINode Title="SellScript.market field" Url="html/F-game.SellScript.market.htm" />
+  <HelpKINode Title="SellScript.plantChoosed field" Url="html/F-game.SellScript.plantChoosed.htm" />
+  <HelpKINode Title="SellScript.resValue field" Url="html/F-game.SellScript.resValue.htm" />
+  <HelpKINode Title="SellScript.sell method" Url="html/M-game.SellScript.sell.htm" />
+  <HelpKINode Title="SellScript.slider field" Url="html/F-game.SellScript.slider.htm" />
+  <HelpKINode Title="SellScript.Start method" Url="html/M-game.SellScript.Start.htm" />
+  <HelpKINode Title="SellScript.totalPrice method" Url="html/M-game.SellScript.totalPrice.htm" />
+  <HelpKINode Title="SellScript.transformRef field" Url="html/F-game.SellScript.transformRef.htm" />
+  <HelpKINode Title="SellScript.valueChanged method" Url="html/M-game.SellScript.valueChanged.htm" />
   <HelpKINode Title="sell_stock method" Url="html/M-game.Stand.sell_stock.htm" />
   <HelpKINode Title="setIsPlanted method" Url="html/M-game.Plot.setIsPlanted.htm" />
+  <HelpKINode Title="setMessage method" Url="html/M-game.PopUp.setMessage.htm" />
   <HelpKINode Title="setNbrSlots method" Url="html/M-game.InventoryPlant.setNbrSlots.htm" />
+  <HelpKINode Title="setPlot method" Url="html/M-global.BuyPlot.setPlot.htm" />
+  <HelpKINode Title="setPlotActive method" Url="html/M-global.PlotEvents.setPlotActive.htm" />
   <HelpKINode Title="Shop class" Url="html/AllMembers.T-game.Shop.htm" />
   <HelpKINode Title="Shop class" Url="html/T-game.Shop.htm" />
   <HelpKINode Title="Shop class">
@@ -1105,17 +1231,15 @@
     <HelpKINode Title="all members" Url="html/AllMembers.T-game.Shop.htm" />
     <HelpKINode Title="constructor" Url="html/M-game.Shop.-ctor.htm" />
     <HelpKINode Title="fields" Url="html/Fields.T-game.Shop.htm" />
-    <HelpKINode Title="methods" Url="html/Methods.T-game.Shop.htm" />
   </HelpKINode>
   <HelpKINode Title="shop field" Url="html/F-game.Game.shop.htm" />
   <HelpKINode Title="shop field" Url="html/F-game.OpenShop.shop.htm" />
   <HelpKINode Title="Shop.inventory field" Url="html/F-game.Shop.inventory.htm" />
   <HelpKINode Title="Shop.Shop constructor" Url="html/M-game.Shop.-ctor.htm" />
   <HelpKINode Title="Shop.slots field" Url="html/F-game.Shop.slots.htm" />
-  <HelpKINode Title="Shop.Start method" Url="html/M-game.Shop.Start.htm" />
   <HelpKINode Title="shopInv field" Url="html/F-game.CreateAllSeedPlant.shopInv.htm" />
   <HelpKINode Title="ShowGraph method" Url="html/M-game.GraphMarket.ShowGraph.htm" />
-  <HelpKINode Title="slider field" Url="html/F-global.SellScript.slider.htm" />
+  <HelpKINode Title="slider field" Url="html/F-game.SellScript.slider.htm" />
   <HelpKINode Title="SlotInit class" Url="html/AllMembers.T-game.SlotInit.htm" />
   <HelpKINode Title="SlotInit class" Url="html/T-game.SlotInit.htm" />
   <HelpKINode Title="SlotInit class">
@@ -1129,7 +1253,6 @@
   <HelpKINode Title="SlotInit.OnMouseDown method" Url="html/M-game.SlotInit.OnMouseDown.htm" />
   <HelpKINode Title="SlotInit.panelInfosVente field" Url="html/F-game.SlotInit.panelInfosVente.htm" />
   <HelpKINode Title="SlotInit.qttSlot field" Url="html/F-game.SlotInit.qttSlot.htm" />
-  <HelpKINode Title="SlotInit.reafficheInv field" Url="html/F-game.SlotInit.reafficheInv.htm" />
   <HelpKINode Title="SlotNotif field" Url="html/F-game.Notification.SlotNotif.htm" />
   <HelpKINode Title="slotPanel field" Url="html/F-game.InventoryPanel.slotPanel.htm" />
   <HelpKINode Title="slotPanel field" Url="html/F-game.Notification.slotPanel.htm" />
@@ -1138,7 +1261,6 @@
   <HelpKINode Title="slots field" Url="html/F-game.Shop.slots.htm" />
   <HelpKINode Title="SONNEUSEMOIS enumeration member" Url="html/T-game.EnumTools.htm" />
   <HelpKINode Title="SONNEUSEMOIS field" Url="html/F-game.EnumTools.SONNEUSEMOIS.htm" />
-  <HelpKINode Title="Soustraits method" Url="html/M-game.GerePlant.Soustraits.htm" />
   <HelpKINode Title="sprite field" Url="html/F-global.Highlite.sprite.htm" />
   <HelpKINode Title="spriteLinks field" Url="html/F-game.PlantedPlant.spriteLinks.htm" />
   <HelpKINode Title="sprite_highlight field" Url="html/F-global.Highlite.sprite_highlight.htm" />
@@ -1169,13 +1291,15 @@
   <HelpKINode Title="Start method" Url="html/M-game.ActivePanel.Start.htm" />
   <HelpKINode Title="Start method" Url="html/M-game.DropDownMarket.Start.htm" />
   <HelpKINode Title="Start method" Url="html/M-game.Game.Start.htm" />
+  <HelpKINode Title="Start method" Url="html/M-game.InventoryPanel.Start.htm" />
   <HelpKINode Title="Start method" Url="html/M-game.Market.Start.htm" />
   <HelpKINode Title="Start method" Url="html/M-game.NextDay.Start.htm" />
   <HelpKINode Title="Start method" Url="html/M-game.NotifPanel.Start.htm" />
-  <HelpKINode Title="Start method" Url="html/M-game.Shop.Start.htm" />
+  <HelpKINode Title="Start method" Url="html/M-game.SellScript.Start.htm" />
+  <HelpKINode Title="Start method" Url="html/M-global.ButtonWeight.Start.htm" />
+  <HelpKINode Title="Start method" Url="html/M-global.GameStats.Start.htm" />
   <HelpKINode Title="Start method" Url="html/M-global.marketBase.Start.htm" />
   <HelpKINode Title="Start method" Url="html/M-global.PlotEvents.Start.htm" />
-  <HelpKINode Title="Start method" Url="html/M-global.SellScript.Start.htm" />
   <HelpKINode Title="stockedItem field" Url="html/F-game.GerePlant.stockedItem.htm" />
   <HelpKINode Title="StockedPlot field" Url="html/F-game.GerePlant.StockedPlot.htm" />
   <HelpKINode Title="stockedQtt field" Url="html/F-game.GerePlant.stockedQtt.htm" />
@@ -1191,8 +1315,12 @@
   <HelpKINode Title="targetTool field" Url="html/F-game.EventInfo.targetTool.htm" />
   <HelpKINode Title="TEAURA enumeration member" Url="html/T-game.EnumTools.htm" />
   <HelpKINode Title="TEAURA field" Url="html/F-game.EnumTools.TEAURA.htm" />
+  <HelpKINode Title="testObjective method" Url="html/M-game.Game.testObjective.htm" />
   <HelpKINode Title="TEURTRAC enumeration member" Url="html/T-game.EnumTools.htm" />
   <HelpKINode Title="TEURTRAC field" Url="html/F-game.EnumTools.TEURTRAC.htm" />
+  <HelpKINode Title="text field" Url="html/F-game.PopUp.text.htm" />
+  <HelpKINode Title="textDesc field" Url="html/F-global.ChangeTextError.textDesc.htm" />
+  <HelpKINode Title="textTitle field" Url="html/F-global.ChangeTextError.textTitle.htm" />
   <HelpKINode Title="thingsToHide field" Url="html/F-global.OpenCanvas.thingsToHide.htm" />
   <HelpKINode Title="thingsToShow field" Url="html/F-global.OpenCanvas.thingsToShow.htm" />
   <HelpKINode Title="tilemapRenderer field" Url="html/F-global.CameraMovement.tilemapRenderer.htm" />
@@ -1211,8 +1339,9 @@
   <HelpKINode Title="ToString method" Url="html/M-game.AllSeedPlant.ToString.htm" />
   <HelpKINode Title="ToString method" Url="html/M-game.AllTools.ToString.htm" />
   <HelpKINode Title="ToString method" Url="html/M-game.Inventory.ToString.htm" />
-  <HelpKINode Title="totalPrice method" Url="html/M-global.SellScript.totalPrice.htm" />
-  <HelpKINode Title="transformRef field" Url="html/F-global.SellScript.transformRef.htm" />
+  <HelpKINode Title="totalMoneyEarned field" Url="html/F-game.Game.totalMoneyEarned.htm" />
+  <HelpKINode Title="totalPrice method" Url="html/M-game.SellScript.totalPrice.htm" />
+  <HelpKINode Title="transformRef field" Url="html/F-game.SellScript.transformRef.htm" />
   <HelpKINode Title="typePlant field" Url="html/F-game.PlantedPlant.typePlant.htm" />
   <HelpKINode Title="typePlante field" Url="html/F-game.BasicPlant.typePlante.htm" />
   <HelpKINode Title="typePlot field" Url="html/F-game.Plot.typePlot.htm" />
@@ -1221,8 +1350,8 @@
   <HelpKINode Title="Update method" Url="html/M-global.CameraMovement.Update.htm" />
   <HelpKINode Title="Update method" Url="html/M-global.Zoom.Update.htm" />
   <HelpKINode Title="updateGraph method" Url="html/M-game.DropDownMarket.updateGraph.htm" />
-  <HelpKINode Title="updateWeight method" Url="html/M-game.ActivePanel.updateWeight.htm" />
-  <HelpKINode Title="valueChanged method" Url="html/M-global.SellScript.valueChanged.htm" />
+  <HelpKINode Title="updateWeight method" Url="html/M-game.InventoryPanel.updateWeight.htm" />
+  <HelpKINode Title="valueChanged method" Url="html/M-game.SellScript.valueChanged.htm" />
   <HelpKINode Title="weight field" Url="html/F-game.BasicItem.weight.htm" />
   <HelpKINode Title="weightMax field" Url="html/F-game.Inventory.weightMax.htm" />
   <HelpKINode Title="xMaximum field" Url="html/F-game.GraphMarket.xMaximum.htm" />

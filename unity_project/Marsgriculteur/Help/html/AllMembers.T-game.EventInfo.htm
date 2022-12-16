@@ -245,7 +245,17 @@
 </div>
 </div>
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.PopUp.htm" target="_self">PopUp Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.Seed.htm" target="_self">Seed Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -280,7 +290,27 @@
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="N-global.htm" target="_self">global Namespace</a>
 <div class="Hidden">
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ButtonWeight.htm" target="_self">ButtonWeight Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.BuyPlot.htm" target="_self">BuyPlot Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.CameraMovement.htm" target="_self">CameraMovement Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ChangeTextError.htm" target="_self">ChangeTextError Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.GameStats.htm" target="_self">GameStats Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -316,11 +346,6 @@
 </div>
 <div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.PlotEvents.htm" target="_self">PlotEvents Class</a>
-<div class="Hidden">
-</div>
-</div>
-<div class="TreeNode">
-<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -389,7 +414,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   Ce premier constructeur permet de créer un évenment.
+   Ce premier constructeur permet de créer un événement.
    </div>
                       </td>
                     </tr>
@@ -402,7 +427,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   Ce deuxième constructeur permet de créer un événement error en cas d'erreur.
+   Ce deuxième constructeur permet de créer un événement "Error" en cas d'erreur.
    </div>
                       </td>
                     </tr>
@@ -448,7 +473,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La méthode <span class="code">getLength</span> permet d'obtenir le durée de l'événement.
+   La méthode <span class="code">getLength</span> permet d'obtenir la durée de l'événement.
    </div>
                       </td>
                     </tr>
@@ -475,6 +500,19 @@
                       <td>
                         <div class="summary">
    La méthode <span class="code">getTarget</span> permet d'obtenir la liste des plantes ou des graines que l'événement affecte.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-game.EventInfo.ifTarget.htm">ifTarget</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   La méthode <span class="code">ifTarget</span> permet de savoir ce que l'événement atteint.
    </div>
                       </td>
                     </tr>

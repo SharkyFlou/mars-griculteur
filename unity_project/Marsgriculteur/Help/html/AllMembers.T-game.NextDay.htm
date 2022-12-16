@@ -240,7 +240,17 @@
 </div>
 </div>
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.PopUp.htm" target="_self">PopUp Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.Seed.htm" target="_self">Seed Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -275,7 +285,27 @@
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="N-global.htm" target="_self">global Namespace</a>
 <div class="Hidden">
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ButtonWeight.htm" target="_self">ButtonWeight Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.BuyPlot.htm" target="_self">BuyPlot Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.CameraMovement.htm" target="_self">CameraMovement Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ChangeTextError.htm" target="_self">ChangeTextError Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.GameStats.htm" target="_self">GameStats Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -311,11 +341,6 @@
 </div>
 <div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.PlotEvents.htm" target="_self">PlotEvents Class</a>
-<div class="Hidden">
-</div>
-</div>
-<div class="TreeNode">
-<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -384,7 +409,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La méthode <span class="code">addToInventory</span> permet d'ajouter un événement au dictionnaire
+   La méthode <span class="code">addToInventory</span> permet d'ajouter un �v�nement au dictionnaire
    </div>
                       </td>
                     </tr>
@@ -397,7 +422,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La méthode <span class="code">EventDay</span> permet d'afficher les événements actuels, de décrémenter leur durée et de les suppimer s'ils arrivent à la fin.
+   La méthode <span class="code">EventDay</span> permet d'afficher les �v�nements actuels, de d�cr�menter leur dur�e et de les suppimer s'ils arrivent � la fin.
    </div>
                       </td>
                     </tr>
@@ -410,7 +435,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La méthode <span class="code">faitPousser</span> parcourt chaque champs, puis appelle leur fonction fairePousser
+   La méthode <span class="code">faitPousser</span> parcourt chaque champs, puis appelle leur fonction fairePousser.
    </div>
                       </td>
                     </tr>
@@ -428,6 +453,15 @@
    </div>
                       </td>
                     </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-game.NextDay.getNbJour.htm">getNbJour</a>
+                      </td>
+                      <td />
+                    </tr>
                     <tr data="private;declared;notNetfw;">
                       <td>
                         <img src="../icons/privmethod.gif" alt="Private method" title="Private method" />
@@ -437,7 +471,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La méthode <span class="code">GetPlots</span> permet de récupérer les champs.
+   La méthode <span class="code">GetPlots</span> permet de r�cup�rer les champs.
    </div>
                       </td>
                     </tr>
@@ -450,7 +484,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La méthode <span class="code">OnMouseDown</span> permet lorsqu'on clique de passer au jour suivant
+   La méthode <span class="code">OnMouseDown</span> permet lorsqu'on clique de passer au jour suivant.
    </div>
                       </td>
                     </tr>
@@ -463,7 +497,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La méthode <span class="code">removeFromInventory</span> permet de supprimer un item instantanément
+   La méthode <span class="code">removeFromInventory</span> permet de supprimer un item instantan�ment
    </div>
                       </td>
                     </tr>
@@ -476,8 +510,8 @@
                       </td>
                       <td>
                         <div class="summary">
-   La méthode <span class="code">Start</span> est utilisée pour le démarrage. Etant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
-   qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
+   La méthode <span class="code">Start</span> Est utilisée pour le démarrage. Etant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
+   qui doivent persister tout au long de la vie du script, mais ne doivent étre configurés qu'immédiatement avant utilisation.
    Pour notre cas elle permet de récupérer les champs pour pouvoir les faire pousser après et initialise le nombre de jour.
    </div>
                       </td>
@@ -507,6 +541,15 @@
                         <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
                       </td>
                       <td>
+                        <a href="F-game.NextDay.classePopup.htm">classePopup</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+                      </td>
+                      <td>
                         <a href="F-game.NextDay.dayText.htm">dayText</a>
                       </td>
                       <td />
@@ -521,13 +564,12 @@
                       </td>
                       <td />
                     </tr>
-                    <tr data="public;static;declared;notNetfw;">
+                    <tr data="public;declared;notNetfw;">
                       <td>
                         <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
-                        <img src="../icons/static.gif" alt="Static member" title="Static member" />
                       </td>
                       <td>
-                        <a href="F-game.NextDay.gameLength.htm">gameLength</a>
+                        <a href="F-game.NextDay.game.htm">game</a>
                       </td>
                       <td />
                     </tr>
@@ -573,6 +615,15 @@
                       </td>
                       <td>
                         <a href="F-game.NextDay.plots.htm">plots</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+                      </td>
+                      <td>
+                        <a href="F-game.NextDay.render.htm">render</a>
                       </td>
                       <td />
                     </tr>
