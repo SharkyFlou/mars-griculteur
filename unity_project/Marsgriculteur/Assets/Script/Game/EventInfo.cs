@@ -5,17 +5,17 @@ using UnityEngine;
 namespace game
 {
     /// <summary>
-    /// La classe <c>EventInfo</c> permet de créer un événements avec toutes ses informations nécessaires.
+    /// La classe <c>EventInfo</c> permet de créer un événement avec toutes ses informations nécessaires.
     /// Les événments sont composés d'un code unique (leur nom), d'une description, d'une durée (combien de temps ils vont durer après leur apparition), de 2 multiplieurs (le premier pour rajouter
-    /// un simple multiplier au prix, par exemple *0.9 ou 1.1, multiplier fixe qui reste actif tant que l'évent l'est
-    /// et le deuxième est un multiplier qui atteint son pic de multiplication au milieu de sa durée, ex : il vaut 2, et l'évent dure 5, alors il oscilera un peu près comme ça : 1.33, 1.66, 2, 1.66, 1.33),
+    /// un simple multiplieur au prix, par exemple *0.9 ou 1.1, multiplieur fixe qui reste actif tant que l'évent l'est
+    /// et le deuxième est un multiplieur qui atteint son pic de multiplication au milieu de sa durée, ex : il vaut 2, et l'événement dure 5, alors il oscilera un peu près comme ça : 1.33, 1.66, 2, 1.66, 1.33),
     /// ensuite il y a 3 booléens (le premier pour savoir si l'événement atteint les plantes, le deuxième si il atteint les graines et le troisième si il atteint les outils.
     /// Ensuite il y a la liste des plantes (ou des graines, ça dépend ce que ça atteint) et la liste des outils, pour les outils atteint.
-    /// Les derniers paramètres sont : la probabilité d'apparition de l'événement, un événements ne peut qu'arriver à partir du xième jour,
-    /// l'image de l'événement et le dernier paramètres correspond au temps à partir duquel l'événement peut réapparaître après que celui-ci est commencé (ex : un event à une durée de 5, un cooldown de 10,
-    /// et un unlockAfter de 0, il peut arriver dès le 1er jour, et 10 jour après qu'il soit arrivé il peut re arriver).
+    /// Les derniers paramètres sont : la probabilité d'apparition de l'événement, un événement ne peut qu'arriver à partir du xième jour,
+    /// l'image de l'événement et le dernier paramètre correspond au temps à partir duquel l'événement peut réapparaître après que celui-ci est commencé (ex : un event à une durée de 5, un cooldown de 10,
+    /// et un unlockAfter de 0, il peut arriver dès le 1er jour, et 10 jours après qu'il soit arrivé, il peut réapparaître).
     /// Elle contient 2 constructeurs, un pour créer les événements et un en cas d'erreur.
-    /// De plus, elle contient 4 méthodes, pour obtenir son nom, sa durée, sa description et ce que l'événment affecte.
+    /// De plus, elle contient 5 méthodes, pour obtenir son nom, sa durée, sa description et ce que l'événement affecte.
     /// </summary>
     public class EventInfo
     {
@@ -35,13 +35,13 @@ namespace game
         public int cooldown;
 
         /// <summary>
-        /// Ce premier constructeur permet de créer un évenment.
+        /// Ce premier constructeur permet de créer un événement.
         /// </summary>
         /// <param name="namee">le nom de l'événement</param>
         /// <param name="description">la description de l'événement</param>
         /// <param name="lenght">la durée de l'événement</param>
-        /// <param name="mutliplier">simple multiplier au prix, multiplier fixe qui reste actif tant que l'évent l'est</param>
-        /// <param name="mutliplierProg">multiplier qui atteint son pic de multiplication au milieu de sa durée</param>
+        /// <param name="mutliplier">simple multiplieur au prix, multiplieur fixe qui reste actif tant que l'événement l'est</param>
+        /// <param name="mutliplierProg">multiplieur qui atteint son pic de multiplication au milieu de sa durée</param>
         /// <param name="targetPlant">savoir si l'événement atteint les plantes</param>
         /// <param name="targetSeed">savoir si l'événement atteint les graines</param>
         /// <param name="targetTool">savoir si l'événement atteint les outils</param>
@@ -50,7 +50,7 @@ namespace game
         /// <param name="probability">probabilité d'apparition de l'événement</param>
         /// <param name="unlockableAfter">un événements ne peut qu'arriver à partir du xième jour</param>
         /// <param name="imageLink">le lien de l'image de l'événement</param>
-        /// <param name="cooldown">temps à partir duquel l'événement peut réapparaître après que celui-ci est commencé</param>
+        /// <param name="cooldown">temps à partir duquel l'événement peut réapparaître après que celui-ci ai commencé</param>
         public EventInfo(string namee,
             string description,
             int lenght,
@@ -83,7 +83,7 @@ namespace game
         }
 
         /// <summary>
-        /// Ce deuxième constructeur permet de créer un événement error en cas d'erreur.
+        /// Ce deuxième constructeur permet de créer un événement "Error" en cas d'erreur.
         /// </summary>
         public EventInfo()
         {
@@ -113,7 +113,7 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>getLength</c> permet d'obtenir le durée de l'événement.
+        /// La méthode <c>getLength</c> permet d'obtenir la durée de l'événement.
         /// </summary>
         /// <returns>Elle retourne sa durée</returns>
         public int getLength()
@@ -149,6 +149,10 @@ namespace game
             return rtr;
         }
 
+        /// <summary>
+        /// La méthode <c>ifTarget</c> permet de savoir ce que l'événement atteint.
+        /// </summary>
+        /// <returns>Une chaine de caractères qui dit ce que ça atteint</returns>
         public string ifTarget()
         {
             if (this.targetSeed == true)

@@ -5,13 +5,11 @@ using UnityEngine;
 namespace game
 {
     /// <summary>
-    /// BasicItem est la classe parent de tout les objets du jeu les plantes, les graines, les outils (pas impl�ment�), les champs, ...
-    /// Elle poss�de les attributs suivant : id, itemName (nom de l'item), description, imageLink (lien de l'image), weight (le poids), price (le prix).
+    /// BasicItem est la classe parent de tous les objets du jeu, les plantes, les graines, les outils (pas implémenté), les champs, ...
+    /// Elle possède les attributs suivant : id, itemName (nom de l'item), description, imageLink (lien de l'image), weight (le poids), price (le prix).
     /// </summary>
     public abstract class BasicItem
     {
-        // Classe de tous les objets/item qui sont stockable dans un inventaire
-
         public int id;
         protected string itemName;
         protected string description;
@@ -20,7 +18,7 @@ namespace game
         protected int price;
 
         /// <summary>
-        /// Ce constructeur est l�, m�me s'il est vide, car sinon �a ne compilait pas.
+        /// Ce constructeur est là, même s'il est vide, car sinon ça ne compilait pas.
         /// </summary>
         public BasicItem()
         {
@@ -28,7 +26,7 @@ namespace game
         }
 
         /// <summary>
-        /// Le constructeur <c>BasicItem</c> permet de cr�er un objet grace � son ID, son nom, sa description et son image.
+        /// Le constructeur <c>BasicItem</c> permet de créer un objet grace à son ID, son nom, sa description et son image.
         /// </summary>
         /// <param name="paraId">l'id de l'item</param>
         /// <param name="paraName">le nom de l'item</param>
@@ -43,7 +41,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>getWeight</c> permet d'obtenir le poid de l'item (s'il en a un)
+        /// La méthode <c>getWeight</c> permet d'obtenir le poids de l'item (s'il en a un)
         /// </summary>
         /// <returns>Elle retourne son poids</returns>
         public int getWeight()
@@ -52,7 +50,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>getSprite</c> permet d'obtenir l'image de l'item
+        /// La méthode <c>getSprite</c> permet d'obtenir l'image de l'item
         /// </summary>
         /// <returns>Elle retourne son image</returns>
         public Sprite getSprite()
@@ -61,7 +59,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>getDesc</c> permet d'obtenir la description de l'item
+        /// La méthode <c>getDesc</c> permet d'obtenir la description de l'item
         /// </summary>
         /// <returns>Elle retourne sa description</returns>
         public string getDesc()
@@ -70,7 +68,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>getName</c> permet d'obtenir le nom de l'item
+        /// La méthode <c>getName</c> permet d'obtenir le nom de l'item
         /// </summary>
         /// <returns>Elle retourne son nom</returns>
         public string getName()
@@ -79,7 +77,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>getId</c> permet d'obtenir l'identifiant de l'item
+        /// La méthode <c>getId</c> permet d'obtenir l'identifiant de l'item
         /// </summary>
         /// <returns>Elle retourne son identifiant</returns>
         public int getId()
@@ -88,7 +86,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>getPrice</c> permet d'obtenir le prix de l'item
+        /// La méthode <c>getPrice</c> permet d'obtenir le prix de l'item
         /// </summary>
         /// <returns>Elle retourne son prix</returns>
         public int getPrice()

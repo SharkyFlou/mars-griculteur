@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 namespace game
 {
     /// <summary>
-    /// La classe <c>AllTools</c> s'occuper des outils (les créer, les lister et afficher leur détail en une chaîne de caractère.
+    /// La classe <c>AllTools</c> s'occupe des outils (les créer, les lister et afficher leur détail en une chaîne de caractère.
     /// Elle possède un dictionnaire qui regroupe tous les outils.
     /// </summary>
     [System.Serializable]
@@ -22,7 +22,7 @@ namespace game
         /// <summary>
         /// Le constructeur <c>AllTools</c> est utilisé pour instancier les différents outils avec un Json
         /// </summary>
-        /// <param name="tools">dictionnaire instancié par le JSON</param>
+        /// <param name="tools">Dictionnaire instancié par le JSON</param>
         [JsonConstructor]
         public AllTools(Dictionary<string, Tool> tools)
         {
@@ -80,7 +80,7 @@ namespace game
         /// <summary>
         /// La méthode <c>getAllTools</c> donne tous les noms des outils.
         /// </summary>
-        /// <returns>Elle retourne une liste des noms des outils.</returns>
+        /// <returns>Elle retourne une liste de nom d'outils.</returns>
         public List<string> getAllTools()
         {
             List<string> names = new List<string>();

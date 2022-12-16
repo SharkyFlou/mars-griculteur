@@ -7,7 +7,7 @@ namespace game
 {
     /// <summary>
     /// La classe <c>Notification</c> s'occupe d'afficher et supprimer les notifications.
-    /// Elle poss�de 4 attributs : nextDay, SlotNotif, slotPanel et slots (un dictionnaire qui contient les �v�nements)
+    /// Elle possède 4 attributs : nextDay, SlotNotif, slotPanel et slots (un dictionnaire qui contient les événements)
     /// </summary>
     public class Notification : MonoBehaviour
     {
@@ -20,11 +20,11 @@ namespace game
         public Transform slotPanel;
 
         //dictionnaire des items pour remplir le inventory des notifs
-        //si on ajoute un item on doit ajouter � ce dico pour l'afficher
+        //si on ajoute un item on doit ajouter à ce dico pour l'afficher
         public Dictionary<EventInfo, int> slots = new Dictionary<EventInfo, int>();
 
         /// <summary>
-        /// La m�thode <c>clearInventoryDisplay</c> permet de supprimer les notifications
+        /// La méthode <c>clearInventoryDisplay</c> permet de supprimer les notifications
         /// </summary>
         public void clearInventoryDisplay()
         {
@@ -33,7 +33,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>afficheInventory</c> permet d'afficher les notifications dans le panel
+        /// La méthode <c>afficheInventory</c> permet d'afficher les notifications dans le panel
         /// </summary>
         public void afficheInventory()
         {
@@ -44,7 +44,6 @@ namespace game
             {
                 for (int i = slots.Count - 1; i >= 0; i--)
                 {
-                    //Debug.Log("Name = " + slots.ElementAt(i).Key.getName() + "Value = " + slots.ElementAt(i).Value);
                     //on cree l'objet prefab slot
                     GameObject slot = (GameObject)Instantiate(SlotNotif, slotPanel); //, new Vector3(1,1,0)
 
