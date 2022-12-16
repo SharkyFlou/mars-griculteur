@@ -59,18 +59,6 @@ Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T23
 
 ## Captures d'écrans
 
-### UML
-
-<a name="uml"></a>
-
-<div align="center">
-    <img src="images/Mars_classe.svg" alt="Diagramme de classe">
-<h6 align="center">Diagramme de classe</h6>
-</div>
-
-Au début du projet, nous avons décidé de faire un UML pour voir comment allait être agencé le code, et comment étaient relié les classes.
-Ce diagramme de classe nous a permis de nous répartir le code des classes.
-
 ### MAP
 
 <a name="map"></a>
@@ -81,7 +69,7 @@ Ce diagramme de classe nous a permis de nous répartir le code des classes.
 </div>
 
 <div align="center">
-    <img src="images/Plots.jpeg" alt="Les champs">
+    <img src="images/Plots.jpeg" alt="Les champs" width="300" height="300"/>
 <h6 align="center">Les champs</h6>
 </div>
 
