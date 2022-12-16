@@ -12,7 +12,6 @@ namespace game
     public class Seed : BasicPlant
     {
         private int timeGrowth;
-        
         /// <summary>
         /// Ce constructeur est juste là pour la compilation.
         /// </summary>
@@ -51,7 +50,7 @@ namespace game
             CreateAllSeedPlant.dicoPlant.createSeed(seed);
         }*/
 
-        
+
         /// <summary>
         /// La méthode <c>getTimeGrowth</c> permet de connaître le temps de pousse de la graine.
         /// </summary>
