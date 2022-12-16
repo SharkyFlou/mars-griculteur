@@ -194,19 +194,24 @@ Pour télécharger le jeu, allez sur le site ___ et téléchargez le .zip qui co
 
 <a name="Windows"></a>
 
-Après téléchargement, veuillez dézipper le jeu (en faisant un right-click). Vous pourrez l'ouvrir en cliquant sur Marsgriculteur.exe <br>
-Si vous ne comptez pas avec un outil de dézippage, veuillez télécharger Winrar : https://www.win-rar.com/start.html?&L=10
+Ouvrez SetupMars'griculteur.exe puis suivez les étapes d'installation. <br> Après, ouvrez l'application créée sur votre Bureau.
 
 #### Sous Linux
 
 <a name="Linux"></a>
 
-Premièrement, veuillez installer la commande "unzip" avec 
+Si vous pouvez exécuter des fichiers .exe sur Linux, alors vous n'avez qu'à ouvrir SetupMars'griculteur.exe <br>
+
+Sinon, vous devrez faire quelques manipulations:
+- Allez sur votre 
+- Installez la commande "wine" avec
 ```
-sudo apt-get install unzip
+sudo apt-get install wine
 ```
-<br>
-Après téléchargement, accédez a votre terminal, tapez unzip /lien/Margscriculteur.zip <br> Après avoir dézippé le fichier, cliquez sur Marsgriculteur.exe
+- Lancez l'éxecutable avec 
+```
+wine SetupMars'griculteur.exe
+```
 
 #### Sous Mac
 
