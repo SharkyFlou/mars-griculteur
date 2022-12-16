@@ -649,7 +649,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -985,57 +984,13 @@ RectTransform:
   - {fileID: 832704297}
   - {fileID: 901415869}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &50431370
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 50431371}
-  - component: {fileID: 50431372}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &50431371
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50431370}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.59, y: -3.97, z: 89.7081}
-  m_LocalScale: {x: 10, y: 10, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &50431372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50431370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4d550ec3de87b04b8a53a82117bb727, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &61286907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,7 +1076,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -1356,7 +1310,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &125168332
 MonoBehaviour:
@@ -1849,7 +1803,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &153820474
 GameObject:
@@ -1936,7 +1890,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -8226,7 +8179,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -9021,7 +8973,7 @@ RectTransform:
   - {fileID: 538667776}
   - {fileID: 600634453}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10093,7 +10045,7 @@ RectTransform:
   m_GameObject: {fileID: 403678567}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 0.9, z: 1.0000969}
+  m_LocalScale: {x: 1, y: 0.9, z: 1.0000969}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 819271275}
@@ -10101,8 +10053,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: -62.01999}
-  m_SizeDelta: {x: -1440, y: 124.04}
+  m_AnchoredPosition: {x: 0, y: -62.01999}
+  m_SizeDelta: {x: 0, y: 124.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &403678569
 MonoBehaviour:
@@ -10625,7 +10577,7 @@ RectTransform:
   - {fileID: 1226107512}
   - {fileID: 374260328}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10696,7 +10648,7 @@ Transform:
   - {fileID: 914448415}
   - {fileID: 1863397343}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &486297909
 RectTransform:
@@ -33203,7 +33155,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -34253,7 +34204,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -34396,7 +34346,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -34775,7 +34724,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -34886,7 +34834,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -35323,7 +35270,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1392767070}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &723370557
 GameObject:
@@ -36706,7 +36653,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -36850,18 +36796,18 @@ RectTransform:
   m_GameObject: {fileID: 819271274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 403678568}
   - {fileID: 1524778109}
-  m_Father: {fileID: 1229624451}
-  m_RootOrder: 1
+  m_Father: {fileID: 1392767070}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -109.46997}
+  m_SizeDelta: {x: -1346.18, y: -218.94}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &819271276
 CanvasRenderer:
@@ -36887,7 +36833,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2147483647
 --- !u!114 &819271278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36925,12 +36871,12 @@ Canvas:
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
-  m_OverrideSorting: 0
+  m_OverrideSorting: 1
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1334583461
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!1 &827232421
 GameObject:
@@ -37471,7 +37417,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -37993,7 +37938,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -40042,7 +39986,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -41178,7 +41121,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -41466,7 +41408,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1289274441}
-  - {fileID: 819271275}
   m_Father: {fileID: 1345201615}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42455,7 +42396,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -42523,7 +42463,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1344872074
 GameObject:
@@ -42693,7 +42633,7 @@ RectTransform:
   - {fileID: 946882135}
   - {fileID: 1229624451}
   m_Father: {fileID: 1392767070}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -42737,7 +42677,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345201614}
-  m_CullTransparentMesh: 0
+  m_CullTransparentMesh: 1
 --- !u!1 &1350519762
 GameObject:
   m_ObjectHideFlags: 0
@@ -42904,7 +42844,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1392767070}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -43085,12 +43025,13 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 819271275}
   - {fileID: 1360655416}
   - {fileID: 1644583938}
   - {fileID: 1345201615}
   - {fileID: 722724847}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -43370,7 +43311,7 @@ RectTransform:
   - {fileID: 795317061}
   - {fileID: 1498189591}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -43468,7 +43409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3770879337e7f4ef4b71a696f7329c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryFunctions: {fileID: 50431372}
   StockedPlot: {fileID: 0}
 --- !u!1001 &1441482439
 PrefabInstance:
@@ -43836,7 +43776,7 @@ RectTransform:
   - {fileID: 297146751}
   - {fileID: 898446173}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -44099,7 +44039,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1509397197
 GameObject:
@@ -44272,8 +44212,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 0, y: -100}
+  m_AnchoredPosition: {x: 0, y: -62}
+  m_SizeDelta: {x: 0, y: -124}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524778110
 MonoBehaviour:
@@ -45012,7 +44952,7 @@ RectTransform:
   m_Children:
   - {fileID: 1283002889}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -45737,7 +45677,7 @@ RectTransform:
   - {fileID: 1173838435}
   - {fileID: 958711373}
   m_Father: {fileID: 1392767070}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -46293,6 +46233,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1524778109}
     m_Modifications:
+    - target: {fileID: 3404251739193361732, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404251739316029270, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3404251739316029271, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -46300,6 +46248,14 @@ PrefabInstance:
     - target: {fileID: 3404251739316029271, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404251739316029271, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404251740340426408, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3404251740340426409, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -46313,6 +46269,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: -17
       objectReference: {fileID: 0}
+    - target: {fileID: 3404251740437910364, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404251740798262440, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404251740798262440, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00002670288
+      objectReference: {fileID: 0}
     - target: {fileID: 3404251740798262442, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
       propertyPath: m_CellSize.x
       value: 280
@@ -46321,9 +46289,17 @@ PrefabInstance:
       propertyPath: m_CellSize.y
       value: 280
       objectReference: {fileID: 0}
+    - target: {fileID: 3404251740798262447, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3404251740878183161, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
       propertyPath: m_Name
       value: ScrollView
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404251740878183161, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3404251740878183162, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
       propertyPath: m_Pivot.x
@@ -46940,7 +46916,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -47199,7 +47174,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -47911,7 +47885,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -48022,7 +47995,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -48716,7 +48688,7 @@ RectTransform:
   - {fileID: 319808362}
   - {fileID: 827232424}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -48808,7 +48780,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -49663,7 +49634,6 @@ MonoBehaviour:
   PlotSupervisor: {fileID: 1420803189}
   InterfacePlantPanel: {fileID: 297146750}
   hidesPanel: {fileID: 898446174}
-  inventory: {fileID: 50431372}
   reafficheInvOnClick: {fileID: 1554571552}
   error: {fileID: 478522933}
   errorDislp: {fileID: 374260329}
@@ -49732,6 +49702,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3404251740340426409, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404251740798262440, guid: 1bca4ca2aec184ef68a3031bfbf6495a, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
