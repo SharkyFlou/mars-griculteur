@@ -21,7 +21,13 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
           <li><a href="#ecran-de-fin">Écran de fin</a></li>
       </ul>
     </li>
-    <li><a href="#lien-de-telechargement">Lien de téléchargement</a></li>
+    <li><li><a href="#developpement">Développement</a></li>
+
+        <ul>
+        <li><a href="#lien-de-telechargement">Lien de téléchargement</a></li>
+        <li><a href="#instructions">Instructions pour le développement</a></li>
+        </ul>
+    </li>
     <li><a href="#procedures-dinstallation-et-dexecution">Procédures d'installation et d'exécution</a>
         <ul>
             <li><a href="#procedures-dinstallation">Procédure d'installation</a></li>
@@ -168,13 +174,25 @@ Lien de la doc : [Site internet](/Help/index.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIEN DE TELECHARGEMENT -->
+<!-- DEVELOPPEMENT -->
 
 <a name="lien-de-telechargement"></a>
 
-## Lien de téléchargement
+## Développement
+
+### Lien de téléchargement
 
 Pour télécharger le jeu, allez sur le site ___ et téléchargez le .zip qui contient le jeu.
+
+### Instructions pour le développement
+
+Si vous êtes développeur et vous cherchez à implémenter des fonctionnalités pour Mars'griculteur, vous devez suivre les étapes suivantes : 
+
+- Installer Unity Hub depuis https://unity.com/download
+- Ouvrir le fichier /.../unity_project/Marsgriculteur
+- Codez !
+
+Les fonctionnalités/code se trouvent divisées selon les scènes utilisées. <br> Vous devez aller sur Assets/Scripts/ pour retrouver tous les scripts utilisés.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
