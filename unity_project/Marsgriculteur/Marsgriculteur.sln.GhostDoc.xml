@@ -17,7 +17,7 @@
     <CleanupOutputPath>true</CleanupOutputPath>
     <HelpFileName>Marsgriculteur</HelpFileName>
     <HelpFileNamingMethod>MemberName</HelpFileNamingMethod>
-    <ImageFolderPath />
+    <ImageFolderPath>..\..\..\icone</ImageFolderPath>
     <Theme>FlatGray</Theme>
     <HtmlFormats>
       <HtmlHelp>false</HtmlHelp>

@@ -8,9 +8,9 @@ namespace game
     /// <summary>
     /// La classe <c>SellScript</c> s'occupe de la vente d'une plante. Elle gère le curseur (<c>slider</c>) qui a une valeur de début et une valeur de fin (<c>endValue</c>).
     /// La valeur du curseur correspond à l'attribut <c>resValue</c>. Losqu'on vend, on peut choisir une plante (<c>plantChoosed</c>).
-    /// Les deux derniers attributs sont : market et transformRef.
+    /// Les deux derniers attributs sont : market et transformRef. 
     /// </summary>
-    public class SellScript : MonoBehaviour
+    public class SellScript : MonoBehaviour 
     {
         public PopUp classePopup;
         public TextMeshProUGUI endValue;
