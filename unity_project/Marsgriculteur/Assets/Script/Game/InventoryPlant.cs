@@ -14,10 +14,10 @@ namespace game
         public Dictionary<EnumTypePlant, int> PlantSlots = new Dictionary<EnumTypePlant, int>();
 
         /// <summary>
-        /// La méthode <c>getNbrSlots</c> permet d'avoir la quantité d'une plante donnée en paramètre
+        /// La méthode <c>getNbrSlots</c> permet d'avoir la quantité d'une plante donnée en paramètre.
         /// </summary>
-        /// <param name="item">le type de la plante</param>
-        /// <returns>Elle retourne la quantité de la plante</returns>
+        /// <param name="item">Le type de la plante.</param>
+        /// <returns>Elle retourne la quantité de la plante.</returns>
         public int getNbrSlots(EnumTypePlant item)
         {
             int number = -1;
@@ -35,8 +35,8 @@ namespace game
         /// <summary>
         /// La méthode <c>setNbrSlots</c> permet d'enlever de la quantité.
         /// </summary>
-        /// <param name="item">le type de la plante</param>
-        /// <param name="number">la quantité à enlever</param>
+        /// <param name="item">Le type de la plante.</param>
+        /// <param name="number">La quantité à enlever.</param>
         public void setNbrSlots(EnumTypePlant item, int number)
         {
             PlantSlots[item] -= number;

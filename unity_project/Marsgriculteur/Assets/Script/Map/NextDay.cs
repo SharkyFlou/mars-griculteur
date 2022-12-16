@@ -27,7 +27,7 @@ namespace game
         public PopUp classePopup;
         public Transform render;
 
-        //contient la liste des notifications avec leur dur�e d'apparition
+        //contient la liste des notifications avec leur durée d'apparition
         public static Dictionary<EventInfo, int> dicoPossessions = new Dictionary<EventInfo, int>();
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace game
                     }
                     catch //THIS NEVER RUNS
                     {
-                        //Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transforme.name + "\" n'a pas march�");
+                        //Debug.Log("Bug dans faire pousser, l'appel de la fonction de fairePousser avec \"" + transforme.name + "\" n'a pas marché");
                     }
                 }
                 else
@@ -107,9 +107,9 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>GetPlots</c> permet de r�cup�rer les champs.
+        /// La méthode <c>GetPlots</c> permet de récupérer les champs.
         /// </summary>
-        /// <param name="parent">l� o� se trouve les champs</param>
+        /// <param name="parent">là où se trouve les champs</param>
         private void GetPlots(Transform parent)
         {
             plotList = new List<Transform>();
@@ -121,10 +121,10 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>addToInventory</c> permet d'ajouter un �v�nement au dictionnaire
+        /// La méthode <c>addToInventory</c> permet d'ajouter un événement au dictionnaire
         /// </summary>
-        /// <param name="item">l'�v�nement</param>
-        /// <param name="duree">la dur�e de l'�v�nement</param>
+        /// <param name="item">l'événement</param>
+        /// <param name="duree">la durée de l'événement</param>
         public void addToInventory(EventInfo item, int duree)
         {
             bool trouve = false;
@@ -155,9 +155,9 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>removeFromInventory</c> permet de supprimer un item instantan�ment
+        /// La méthode <c>removeFromInventory</c> permet de supprimer un item instantanément
         /// </summary>
-        /// <param name="item">l'item � supprimer</param>
+        /// <param name="item">l'item à supprimer</param>
         public void removeFromInventory(EventInfo item)
         {
             foreach (EventInfo kvp in dicoPossessions.Keys)
@@ -173,7 +173,7 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>EventDay</c> permet d'afficher les �v�nements actuels, de d�cr�menter leur dur�e et de les suppimer s'ils arrivent � la fin.
+        /// La méthode <c>EventDay</c> permet d'afficher les événements actuels, de décrémenter leur durée et de les suppimer s'ils arrivent à la fin.
         /// </summary>
         /// <param name="nbrJour"></param>
         public void EventDay(int nbrJour)
@@ -194,11 +194,11 @@ namespace game
             notif.afficheInventory();
 
 
-            //Une liste pour retenir tous les events qui arrivent � la fin
+            //Une liste pour retenir tous les events qui arrivent à la fin
             List<EventInfo> item = new List<EventInfo>();
 
             //Debug.Log("Nombre d'event : "+ dicoPossessions.Count);
-            //parcours du dico des notifs pour voir si les events arrivent � la fin
+            //parcours du dico des notifs pour voir si les events arrivent à la fin
             for (int i = 0; i < dicoPossessions.Count; i++)
             {
                 EventInfo itemOfSlot = dicoPossessions.ElementAt(i).Key;

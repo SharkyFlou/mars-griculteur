@@ -51,8 +51,6 @@ namespace game
             this.imageLink = Resources.Load<Sprite>("Sprites/" + spriteLink);
             this.price = paraPrice;
         }
-
-        
     }
 
 }

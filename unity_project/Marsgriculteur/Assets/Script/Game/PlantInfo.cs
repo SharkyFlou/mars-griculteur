@@ -28,7 +28,6 @@ namespace game
         private List<int> basicPlantPrice;
         private int nbPlantCollect;
 
-        // Le contructeur utiliser pour instancier avec un Json
         /// <summary>
         /// Le constructeur <c>PlantInfo</c> permet de créer une plante à partir du JSON
         /// </summary>

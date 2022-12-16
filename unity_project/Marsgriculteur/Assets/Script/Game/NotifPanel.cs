@@ -8,8 +8,8 @@ using TMPro;
 namespace game
 {
     /// <summary>
-    /// La classe <c>NotifPanel</c> s'occupe d'ouvrir la fen�tre qui contient les notifications (et de la pr�remplir)
-    /// Elle poss�de 4 attributs : PanelInventory, PanelNotif, notif et dico (un dictionnaire qui contient les �v�nements)
+    /// La classe <c>NotifPanel</c> s'occupe d'ouvrir la fenêtre qui contient les notifications (et de la préremplir)
+    /// Elle possède 4 attributs : PanelInventory, PanelNotif, notif et dico (un dictionnaire qui contient les événements)
     /// </summary>
     public class NotifPanel : MonoBehaviour
     {
@@ -21,8 +21,8 @@ namespace game
         public Transform render;
 
         /// <summary>
-        /// La m�thode <c>Start</c> est utilis�e pour le d�marrage. �tant donn� que Start n'est appel�e qu'une seule fois, elle permet d'initialiser les �l�ments
-        /// qui doivent persister tout au long de la vie du script, mais ne doivent �tre configur�s qu'imm�diatement avant utilisation.
+        /// La méthode <c>Start</c> est utilisée pour le démarrage. Etant donné que Start n'est appelée qu'une seule fois, elle permet d'initialiser les éléments
+        /// qui doivent persister tout au long de la vie du script, mais ne doivent être configurés qu'immédiatement avant utilisation.
         /// Pour notre cas elle permet d'initialiser le panel des notifications (de le mettre invisible, etc).
         /// </summary>
         void Start()
@@ -37,7 +37,7 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>OpenPanel</c> permet d'ouvrir ou de fermer la fen�tre
+        /// La méthode <c>OpenPanel</c> permet d'ouvrir ou de fermer la fenêtre
         /// </summary>
         public void OpenPanel()
         {

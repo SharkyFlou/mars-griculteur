@@ -227,7 +227,17 @@
 </div>
 </div>
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.PopUp.htm" target="_self">PopUp Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.Seed.htm" target="_self">Seed Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -262,7 +272,27 @@
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="N-global.htm" target="_self">global Namespace</a>
 <div class="Hidden">
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ButtonWeight.htm" target="_self">ButtonWeight Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.BuyPlot.htm" target="_self">BuyPlot Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.CameraMovement.htm" target="_self">CameraMovement Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ChangeTextError.htm" target="_self">ChangeTextError Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.GameStats.htm" target="_self">GameStats Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -312,11 +342,6 @@
 <div class="Hidden">
 </div>
 </div>
-</div>
-</div>
-<div class="TreeNode">
-<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.SellScript.htm" target="_self">SellScript Class</a>
-<div class="Hidden">
 </div>
 </div>
 <div class="TreeNode">
@@ -397,7 +422,7 @@
                       </td>
                       <td>
                         <div class="summary">
-   La méthode <span class="code">GetChildren</span> permet d'obtenir les champs à partir d'un parent (la map)
+   La méthode <span class="code">GetChildren</span> permet d'obtenir les champs à partir d'un parent (l'empty 'Plots')
    </div>
                       </td>
                     </tr>
@@ -445,6 +470,19 @@
                         <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
                       </td>
                       <td>
+                        <a href="M-global.PlotEvents.openBuyPlot.htm">openBuyPlot</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   La méthode <span class="code">openBuyPlot</span> ouvre le menu d'achat du plot.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
                         <a href="M-global.PlotEvents.planteGraine.htm">planteGraine</a>
                       </td>
                       <td>
@@ -463,6 +501,19 @@
                       <td>
                         <div class="summary">
    La méthode <span class="code">recupPlante</span> permet de récupérer la plante.
+   </div>
+                      </td>
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubmethod.gif" alt="Public method" title="Public method" />
+                      </td>
+                      <td>
+                        <a href="M-global.PlotEvents.setPlotActive.htm">setPlotActive</a>
+                      </td>
+                      <td>
+                        <div class="summary">
+   La méthode <span class="code">setPlotActive</span> active le plot (le debloque), et change sa couleur.
    </div>
                       </td>
                     </tr>
@@ -501,12 +552,39 @@
                       <th class="nameColumn">Name</th>
                       <th class="descriptionColumn">Description</th>
                     </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+                      </td>
+                      <td>
+                        <a href="F-global.PlotEvents.buy.htm">buy</a>
+                      </td>
+                      <td />
+                    </tr>
                     <tr data="private;declared;notNetfw;">
                       <td>
                         <img src="../icons/privfield.gif" alt="Private field" title="Private field" />
                       </td>
                       <td>
                         <a href="F-global.PlotEvents.contientGraine.htm">contientGraine</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+                      </td>
+                      <td>
+                        <a href="F-global.PlotEvents.error.htm">error</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+                      </td>
+                      <td>
+                        <a href="F-global.PlotEvents.errorDislp.htm">errorDislp</a>
                       </td>
                       <td />
                     </tr>
@@ -552,6 +630,15 @@
                       </td>
                       <td>
                         <a href="F-global.PlotEvents.inventory.htm">inventory</a>
+                      </td>
+                      <td />
+                    </tr>
+                    <tr data="public;declared;notNetfw;">
+                      <td>
+                        <img src="../icons/pubfield.gif" alt="Public field" title="Public field" />
+                      </td>
+                      <td>
+                        <a href="F-global.PlotEvents.isDesactive.htm">isDesactive</a>
                       </td>
                       <td />
                     </tr>

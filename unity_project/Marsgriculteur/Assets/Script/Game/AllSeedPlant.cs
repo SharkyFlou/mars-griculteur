@@ -13,15 +13,15 @@ namespace game
     [System.Serializable]
     public class AllSeedPlant
     {
-        // Objet de r�f�rence instancier au lancement qui permet d'avoir toutes les infos en rapport avec les plantes
-        // permet aussi d'instancier/cr�er celle-ci
+        // Objet de référence instancier au lancement qui permet d'avoir toutes les infos en rapport avec les plantes
+        // permet aussi d'instancier/créer celle-ci
 
         private Dictionary<EnumTypePlant, PlantInfo> allPlantDico = new Dictionary<EnumTypePlant, PlantInfo>();
 
         /// <summary>
-        /// Le constructeur <c>AllSeedPlant</c> est utilisé pour instancier avec un Json
+        /// Le constructeur <c>AllSeedPlant</c> est utilisé pour instancier avec un JSON
         /// </summary>
-        /// <param name="allPlantDico"></param>
+        /// <param name="allPlantDico">Le dictionnaire qui va être remplie par le JSON</param>
         [JsonConstructor]
         public AllSeedPlant(Dictionary<EnumTypePlant, PlantInfo> allPlantDico)
         {
@@ -29,14 +29,12 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>createPlant</c> permet de créer les plantes (Plant) celles qui sont recoltées, et qui sont être vendu elles ont un seul sprite (image).
+        /// La méthode <c>createPlant</c> permet de créer les plantes (Plant), celles qui sont recoltées, et qui vont être vendu, elles ont un seul sprite (image).
         /// </summary>
-        /// <param name="typePlant"></param>
+        /// <param name="typePlant">Le type de la plante</param>
         /// <returns>Elle retourne la plante créée</returns>
         public Plant createPlant(EnumTypePlant typePlant)
         {
-            //Debug.Log("on rentre dans le constructor Plant");
-            //EnumTypePlant typePlante;
             if (allPlantDico.ContainsKey(typePlant))
             {
                 Plant pl = new Plant(typePlant,
@@ -57,7 +55,7 @@ namespace game
         /// <summary>
         /// La méthode <c>createSeed</c> permet de créer une graine.
         /// </summary>
-        /// <param name="typePlant"></param>
+        /// <param name="typePlant">Le type de la plante</param>
         /// <returns>Elle retourne la graine créée</returns>
         public Seed createSeed(EnumTypePlant typePlant)
         {
@@ -80,7 +78,7 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>createPlantedPlant</c> permet de créer les plantes qui sont mises dans un plot (champs), elles contienenet un temps de pousse, deux sprites, un quand elles ont pas poussé, un quand elles ont poussé.
+        /// La méthode <c>createPlantedPlant</c> permet de créer les plantes qui sont mises dans un plot (champs), elles contiennent un temps de pousse, deux sprites, un quand elles ont pas poussé, un quand elles ont poussé.
         /// </summary>
         /// <param name="typePlant">le type de plante</param>
         /// <returns>Elle retourne la plante (PlantedPlant) créée</returns>

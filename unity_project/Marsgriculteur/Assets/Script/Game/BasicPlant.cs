@@ -20,7 +20,7 @@ namespace game
         }
 
         /// <summary>
-        /// Le construceteur <c>BasicPlant</c> (avec un paramètre) permet de créer une plante (ou une graine) à partir d'un type de plante (ou de graine)
+        /// Le constructeur <c>BasicPlant</c> (avec un paramètre) permet de créer une plante (ou une graine) à partir d'un type de plante (ou de graine)
         /// </summary>
         /// <param name="paraTypePlant"></param>
         public BasicPlant(EnumTypePlant paraTypePlant){

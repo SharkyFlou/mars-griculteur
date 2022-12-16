@@ -29,7 +29,7 @@
       <MSHelp:Attr Name="Locale" Value="en-us" />
       <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
       <MSHelp:Attr Name="TopicType" Value="apiref" />
-      <MSHelp:Attr Name="Abstract" Value="La classe Market repr�sente le march� du joueur, il va pouvoir �tudier les graphiques et choisir un prix pour lequel il va vendre une quantit� souhait�e. Il poss�de 3 dictionnaires : un pour garder l'historique des prix, un pour les �v�nemen ..." />
+      <MSHelp:Attr Name="Abstract" Value="La classe Market représente le marché du joueur, il va pouvoir étudier les graphiques et choisir un prix pour lequel il va vendre une quantité souhaitée. Il possède 3 dictionnaires : un pour garder l'historique des prix, un pour les événemen ..." />
       <MSHelp:Attr Name="AssemblyVersion" Value="" />
     </xml>
   <link rel="stylesheet" href="../TOC.css"><script type="text/javascript" src="../TOC.js"></script></head>
@@ -245,7 +245,17 @@
 </div>
 </div>
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.PopUp.htm" target="_self">PopUp Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.Seed.htm" target="_self">Seed Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-game.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -280,7 +290,27 @@
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="N-global.htm" target="_self">global Namespace</a>
 <div class="Hidden">
 <div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ButtonWeight.htm" target="_self">ButtonWeight Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.BuyPlot.htm" target="_self">BuyPlot Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.CameraMovement.htm" target="_self">CameraMovement Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.ChangeTextError.htm" target="_self">ChangeTextError Class</a>
+<div class="Hidden">
+</div>
+</div>
+<div class="TreeNode">
+<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.GameStats.htm" target="_self">GameStats Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -316,11 +346,6 @@
 </div>
 <div class="TreeNode">
 <img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.PlotEvents.htm" target="_self">PlotEvents Class</a>
-<div class="Hidden">
-</div>
-</div>
-<div class="TreeNode">
-<img class="TreeNodeImg" onclick="javascript: Toggle(this);" src="../Collapsed.png"/><a class="UnselectedNode" onclick="javascript: return Expand(this);" href="T-global.SellScript.htm" target="_self">SellScript Class</a>
 <div class="Hidden">
 </div>
 </div>
@@ -361,10 +386,10 @@
             <div id="mainSection">
               <div id="mainBody">
                 <div class="summary">
-   La classe <span class="code">Market</span> repr�sente le march� du joueur, il va pouvoir �tudier les graphiques et choisir un prix pour lequel il va vendre une quantit� souhait�e.
-   Il poss�de 3 dictionnaires : un pour garder l'historique des prix, un pour les �v�nements actifs et un pour les �v�nements impossibles.
+   La classe <span class="code">Market</span> représente le marché du joueur, il va pouvoir étudier les graphiques et choisir un prix pour lequel il va vendre une quantité souhaitée.
+   Il possède 3 dictionnaires : un pour garder l'historique des prix, un pour les événements actifs et un pour les événements impossibles.
    Ensuite il a 2 attributs : actualDays et instance (l'instance de la classe market (design pattern du singleton)
-   La classe poss�de 19 m�thodes : Awake, Start, createMarket, nextActiveEvent, getActiveEvents, nextImpossibleEvents, generateNewHistoryDay,
+   La classe possède 19 méthodes : Awake, Start, createMarket, nextActiveEvent, getActiveEvents, nextImpossibleEvents, generateNewHistoryDay,
    plantByEvent, plantBasic, ezRound, normalise, nextDay, getHistory, getLastPricePlant, getLastPriceSeed, createNewEvent, last60Days, getDays, afficheEtatDebug
    </div>
                 <p />
