@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 /// <summary>
-/// La classe <c>Highlite</c> permet de surligner les items quand la souris les survole.
+/// La classe <c>Highlite</c> change de sprite lors du survol de la souris.
 /// </summary>
 public class Highlite : MonoBehaviour
 {
@@ -12,7 +10,7 @@ public class Highlite : MonoBehaviour
     public Sprite sprite;
 
     /// <summary>
-    /// La méthode <c>OnMouseOver</c> permet de surligner l'item quand la souris le survole.
+    /// La méthode <c>OnMouseOver</c> change de sprite lors du survol de la souris.
     /// </summary>
     void OnMouseOver()
     {
@@ -25,7 +23,7 @@ public class Highlite : MonoBehaviour
     }
 
     /// <summary>
-    /// La méthode <c>OnMouseExit</c> permet de ne plus surligner l'item quand la souris ne survole plus l'item
+    /// La méthode <c>OnMouseExit</c> remet le sprite initial lorsque la souris ne survol plus l'élément.
     /// </summary>
     void OnMouseExit()
     {
