@@ -75,7 +75,9 @@ namespace game
         /// </summary>
         public void sell()
         {
-            StartCoroutine(classePopup.message("VENDU!"));
+            classePopup.message("VENDU!");
+            //StartCoroutine(classePopup.message("VENDU!"));
+            
 
             BasicPlant plante = CreateAllSeedPlant.dicoPlant.createPlant(plantChoosed);
             CreateAllSeedPlant.mainInventory.SubstractFromInventory(plante, (int)Math.Round(slider.value));
