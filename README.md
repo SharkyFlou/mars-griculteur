@@ -61,7 +61,7 @@ Participants :
 
 Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T234/T3)
 
-Lien de la doc : [Site internet](/Help/index.html)
+Lien de la doc : [Site internet](t3doc.vercel.app)
 
 <!-- CAPTURE D'ECRAN -->
 
