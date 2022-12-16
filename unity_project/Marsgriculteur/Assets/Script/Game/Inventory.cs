@@ -41,7 +41,7 @@ namespace game
                 return;
             else
             {
-                //on parcourt chaque key pour acceder a son getId()
+                //on parcourt chaque key pour accéder à son getId()
                 foreach (BasicItem kvp in slots.Keys.ToList())
                 {
                     if (kvp.getId() == item.getId())
@@ -51,22 +51,17 @@ namespace game
                         break;
                     }
                 }
-                //si on le trouve pas on l'ajoute a notre 
+                //si on le trouve pas on l'ajoute à notre inventaire
                 if (!trouve)
                 {
                     slots.Add(item, qtt);
                 }
                 currentWeight += item.getWeight() * qtt;
             }
-
-            //displayInventory();
-
         }
 
-        //permet d'ajouter un slot au dictionnaire
-        //surcharge la methode addToInventory avec un seul argument
         /// <summary>
-        /// La méthode <c>addToInventory</c> permet d'ajouter un slot au dictionnaire, avec une surcharge de la methode addToInventory.
+        /// La méthode <c>addToInventory</c> permet d'ajouter un slot au dictionnaire, avec une surcharge de la méthode addToInventory.
         /// </summary>
         /// <param name="item">l'item qui sera ajouté à l'inventaire</param>
         /// <param name="qtt">la quantité de cet item</param>
@@ -79,7 +74,7 @@ namespace game
                 return;
             else
             {
-                //on parcourt chaque key pour acceder a son getId()
+                //on parcourt chaque key pour accéder à son getId()
                 foreach (BasicItem kvp in dico.Keys.ToList())
                 {
                     if (kvp.getId() == item.getId())
@@ -89,7 +84,7 @@ namespace game
                         break;
                     }
                 }
-                //si on le trouve pas on l'ajoute a notre 
+                //si on le trouve pas on l'ajoute à notre inventaire
                 if (!trouve)
                 {
                     dico.Add(item, qtt);
@@ -115,13 +110,12 @@ namespace game
                     break;
                 }
             }
-            //displayInventory();
         }
 
         // Il y a 2 fonctions surchargées, une où on envoie le dico comme paramètre, une où on utilise le dico global value.
 
         /// <summary>
-        /// La méthode <c>SubstractFromInventory</c> permet de soustraire une quantité à un item qui se trouve déjà dans notre inventory ou de l'éliliminer complètement.
+        /// La méthode <c>SubstractFromInventory</c> permet de soustraire une quantité à un item qui se trouve déjà dans notre inventaire ou de l'éliliminer complètement.
         /// </summary>
         /// <param name="item">l'item</param>
         /// <param name="qttToRemove">la quantité qui va être soustraite</param>
@@ -145,12 +139,10 @@ namespace game
                 }
                 currentWeight -= item.getWeight() * qttToRemove;
             }
-
-            //displayInventory();
         }
 
         /// <summary>
-        /// La méthode <c>SubstractFromInventory</c> avec comme paramètre le dicoASoustraire permet de soustraire une quantité à un item qui se trouve déjà dans notre inventory ou de l'éliliminer complètement.
+        /// La méthode <c>SubstractFromInventory</c> avec comme paramètre le <c>dicoASoustraire</c> permet de soustraire une quantité à un item qui se trouve déjà dans notre inventaire ou de l'éliliminer complètement.
         /// </summary>
         /// <param name="item">l'item</param>
         /// <param name="qttToRemove">la quantité qui va être soustraite</param>
@@ -175,12 +167,10 @@ namespace game
                 }
                 currentWeight -= item.getWeight() * qttToRemove;
             }
-
-            //displayInventory();
         }
 
         /// <summary>
-        /// La méthode <c>getInventory</c> permet d'obtenir l'inventory
+        /// La méthode <c>getInventory</c> permet d'obtenir l'inventaire
         /// </summary>
         /// <returns>Elle renvoie un dictionnaire (l'item avec sa quantité)</returns>
         public Dictionary<BasicItem, int> getInventory()
@@ -189,7 +179,7 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>getWeightMax</c> permet d'obtenir la capacité max de l'inventory
+        /// La méthode <c>getWeightMax</c> permet d'obtenir la capacité max de l'inventaire
         /// </summary>
         /// <returns>Elle retourne sa capacité max</returns>
         public int getWeightMax()
@@ -198,7 +188,7 @@ namespace game
         }
 
         /// <summary>
-        /// La méthode <c>getCurrentWeight</c> permet d'obtenir la capacité actuelle de l'inventory
+        /// La méthode <c>getCurrentWeight</c> permet d'obtenir la capacité actuelle de l'inventaire
         /// </summary>
         /// <returns>Elle retourne sa capacité actuelle</returns>
         public int getCurrentWeight()
@@ -209,7 +199,6 @@ namespace game
         public void boughtMoreSpace()
         {
             this.weightMax += 200;
-            //Debug.Log("current weight:" + weightMax);
         }
 
         /// <summary>
@@ -218,9 +207,6 @@ namespace game
         /// <returns>Elle retourne un booléen : false s'il n'est pas vide et true si c'est le cas</returns>
         public bool isDicoVide()
         {
-            //Debug.Log("nb slots : " + slots.Count);
-            //Debug.Log("nb slots THIS : " + this.slots.Count);
-
             if (slots.Count > 0)
             {
                 return false;
@@ -240,7 +226,7 @@ namespace game
         /// <summary>
         /// La méthode <c>ToString</c> permet d'afficher l'inventaire.
         /// </summary>
-        /// <returns>Elle retourne une chaîne de caractère avec son nom et sa quantité</returns>
+        /// <returns>Elle retourne une chaîne de caractères avec son nom et sa quantité</returns>
         override public string ToString()
         {
             string rtr = string.Empty;

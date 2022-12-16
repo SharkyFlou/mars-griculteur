@@ -14,7 +14,7 @@ namespace game
         /// <summary>
         /// La méthode <c>createPlot</c> permet de créer des champs.
         /// </summary>
-        /// <param name="typePlot">le type de champs qui doit être crée</param>
+        /// <param name="typePlot">le type de champs qui doit être créé</param>
         /// <param name="currentPlant">le type de plante</param>
         /// <returns>Elle retourne le champs créé</returns>
         public Plot createPlot(EnumTypePlot typePlot, EnumTypePlant currentPlant)

@@ -4,36 +4,35 @@ using UnityEngine;
 using System;
 
 /// <summary>
-/// The game namespace.
+/// Le namespace game
 /// </summary>
 namespace game
 {
     /// <summary>
-    /// La classe AllEvents permet de lister tous les �v�nements qui peuvent arriver pendant une partie.
-    /// Elle utilise son constructeur pour cr�er tous les �v�nements, et elle contient 2 m�thodes : <c>getRandomEvent</c> et <c>substractDico</c>.
-    /// Elle contient un dictionnaire qui contient les �v�nements.
+    /// La classe AllEvents permet de lister tous les événements qui peuvent arriver pendant une partie.
+    /// Elle utilise son constructeur pour créer tous les événements, et elle contient les méthodes suivantes: <c>getRandomEvent</c>, <c>substractDico</c>, <c>stringInDicoKeys</c>.
+    /// Elle contient un dictionnaire qui contient les événements.
     /// </summary>
     public class AllEvents
     {
 
-        //name in first, and YES it already exist in the info of eventInfo, but i dont car 
         public Dictionary<string, EventInfo> allEventDico = new Dictionary<string, EventInfo>();
 
         /// <summary>
-        /// Le constructeur <c>AllEvents</c> permet de cr�er les �v�nements. Il y a 2 types d'�v�nements : les �v�nements dit cools et les �v�nements dit pas cool.
-        /// Les �v�nments sont compos�s d'un code unique (leur nom), d'une description, d'une dur�e (combien de temps ils vont durer apr�s leur apparition), de 2 multiplieurs (le premier pour rajouter
-        /// un simple multiplier au prix, par exemple *0.9 ou 1.1, multiplier fixe qui reste actif tant que l'�vent l'est
-        /// et le deuxi�me est un multiplier qui atteint son pic de multiplication au milieu de sa dur�e, ex : il vaut 2, et l'�vent dure 5, alors il oscilera un peu pr�s comme �a : 1.33, 1.66, 2, 1.66, 1.33),
-        /// ensuite il y a 3 bool�ens (le premier pour savoir si l'�v�nement atteint les plantes, le deuxi�me si il atteint les graines et le troisi�me si il atteint les outils.
-        /// Ensuite il y a la liste des plantes (ou des graines, �a d�pend ce que �a atteint) et la liste des outils, pour les outils atteint.
-        /// Les derniers param�tres sont : la probabilit� d'apparition de l'�v�nement, un �v�nements ne peut qu'arriver � partir du xi�me jour,
-        /// l'image de l'�v�nement et le dernier param�tres correspond au temps � partir duquel l'�v�nement peut r�appara�tre apr�s que celui-ci est commenc� (ex : un event � une dur�e de 5, un cooldown de 10,
-        /// et un unlockAfter de 0, il peut arriver d�s le 1er jour, et 10 jour apr�s qu'il soit arriv� il peut re arriver).
+        /// Le constructeur <c>AllEvents</c> permet de créer les événements. Il y a 2 types d'événements : les événements dit "cool" et les événements dit "pas cool".
+        /// Les événements sont composés d'un code unique (leur nom), d'une description, d'une durée (combien de temps ils vont durer après leur apparition), de 2 multiplieurs (le premier pour rajouter
+        /// un simple multiplieur au prix, par exemple *0.9 ou 1.1, multiplieur fixe qui reste actif tant que l'événement l'est
+        /// et le deuxième est un multiplier qui atteint son pic de multiplication au milieu de sa durée, ex : il vaut 2, et l'événemnt dure 5, alors il oscilera à peu près comme ça : 1.33, 1.66, 2, 1.66, 1.33),
+        /// ensuite il y a 3 booléens (le premier pour savoir si l'événement atteint les plantes, le deuxième s'il atteint les graines et le troisième s'il atteint les outils.
+        /// Ensuite il y a la liste des plantes (ou des graines, ça dépend ce que ça atteint) et la liste des outils, pour les outils atteint.
+        /// Les derniers paramètres sont : la probabilité d'apparition de l'événement, un événement ne peut qu'arriver à partir du xième jour,
+        /// l'image de l'événement et le dernier paramètres correspond au temps à partir duquel l'événement peut réapparaître après que celui-ci ai commencé (ex : un événement à une durée de 5, un cooldown de 10,
+        /// et un unlockAfter de 0, il peut arriver dès le 1er jour, et 10 jours après qu'il soit arrivé il peut réapparaître).
         /// </summary>
         public AllEvents()
         {
             //********************************************************************
-            //************************* PLANT COOL *******************************
+            //************************* PLANTES "COOL" ***************************
             //********************************************************************
 
             List<EnumTypePlant> listAnim = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.OUNTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL };
@@ -125,7 +124,7 @@ namespace game
 
 
             //********************************************************************
-            //************************* PLANT NOT COOL ***************************
+            //************************* PLANTES "PAS COOL" ***********************
             //********************************************************************
 
             List<EnumTypePlant> listElbEgr = new List<EnumTypePlant>() { EnumTypePlant.ELB, EnumTypePlant.EGRO };
@@ -193,7 +192,7 @@ namespace game
                70));
 
             //********************************************************************
-            //*************************** GRAINES * ******************************
+            //*************************** GRAINES "COOL" *************************
             //********************************************************************
 
             allEventDico.Add("NouveauFournisseur", new EventInfo("NouveauFournisseur",
@@ -229,7 +228,7 @@ namespace game
 
 
             //********************************************************************
-            //*************************** GRAINES PAS COOL************************
+            //*************************** GRAINES "PAS COOL" *********************
             //********************************************************************
 
             allEventDico.Add("FournisseurCourageux", new EventInfo("FournisseurCourageux",
@@ -313,11 +312,11 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>getRandomEvent</c> permet de g�n�rer un nouvel �v�nement en fonction du jour et de l'�v�nement impossible.
+        /// La méthode <c>getRandomEvent</c> permet de générer un nouvel événement en fonction du jour et de l'événement impossible.
         /// </summary>
         /// <param name="day">le jour actuel</param>
-        /// <param name="impossibleEvents">le dictionnaire qui correspond aux �v�nements impossibles</param>
-        /// <returns>Elle renvoie un �v�nements.</returns>
+        /// <param name="impossibleEvents">le dictionnaire qui correspond aux événements impossibles</param>
+        /// <returns>Elle renvoie un événement.</returns>
         public EventInfo getRandomEvent(int day, Dictionary<EventInfo, int> impossibleEvents)
         {
             Dictionary<string, EventInfo> possibleEvents = substractDico(allEventDico, impossibleEvents);
@@ -364,11 +363,11 @@ namespace game
         }
 
         /// <summary>
-        /// La m�thode <c>substractDico</c> est utilis�e pour avoir les �v�nements possibles en fonction de tous les �v�nements et ceux qui sont impossibles.
+        /// La méthode <c>substractDico</c> est utilisée pour avoir les événements possibles en fonction de tous les événements et ceux qui sont impossibles.
         /// </summary>
-        /// <param name="dicoOrigin">dictionnaire qui contient tous les �v�nements</param>
-        /// <param name="dicoSubstract">dictionnaire qui contient les �v�nements impossibles</param>
-        /// <returns>Elle retourne un dictionnaire(cl� : String, valeur : EventInfo) d'�v�nements possibles</returns>
+        /// <param name="dicoOrigin">dictionnaire qui contient tous les événements</param>
+        /// <param name="dicoSubstract">dictionnaire qui contient les événements impossibles</param>
+        /// <returns>Elle retourne un dictionnaire(clé : String, valeur : EventInfo) d'événements possibles</returns>
         private Dictionary<string, EventInfo> substractDico(Dictionary<string, EventInfo> dicoOrigin, Dictionary<EventInfo, int> dicoSubstract)
         {
             Dictionary<string, EventInfo> newDico = new Dictionary<string, EventInfo>();
@@ -384,6 +383,12 @@ namespace game
             return newDico;
         }
 
+        /// <summary>
+        /// La méthode <c>stringInDicoKeys</c> permet de vérifier si un événement est dans l'inventaire.
+        /// </summary>
+        /// <param name="toCheck">l'événement à trouver dans l'inventaire</param>
+        /// <param name="dicoSubstract">L'inventaire</param>
+        /// <returns><c>true</c> si l'événement est dans l'inventaire, <c>false</c> sinon</returns>
         private bool stringInDicoKeys(string toCheck, Dictionary<EventInfo, int> dicoSubstract)
         {
             foreach (EventInfo evt in dicoSubstract.Keys)

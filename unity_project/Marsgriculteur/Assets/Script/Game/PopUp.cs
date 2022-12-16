@@ -12,6 +12,10 @@ using UnityEngine.EventSystems;
 
 namespace game
 {
+    /// <summary>
+    /// La classe <c>PopUp</c> permet d'afficher une petite notification quand le joueur n'a pas exemple plus d'argent.
+    /// Elle possède 3 attributs : text, coroutine, isExecuting
+    /// </summary>
     public class PopUp : MonoBehaviour
     {
         

@@ -10,9 +10,9 @@ namespace game
     public class InventorySlot : MonoBehaviour
     {
         /// <summary>
-        /// La méthode <c>createSlot</c> permet de créer un slot pour un inventaire
+        /// La méthode <c>createSlot</c> permet de créer un slot pour un inventaire.
         /// </summary>
-        /// <returns>Elle retourne un slot de type GameObject</returns>
+        /// <returns>Elle retourne un slot de type GameObject.</returns>
         public static GameObject createSlot()
         {
             return Instantiate<GameObject>(Resources.Load<GameObject>("Prefabs/ButtonInvSlot"));
