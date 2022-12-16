@@ -1,7 +1,6 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using game;
 using System;
 
 namespace game
@@ -46,8 +45,8 @@ namespace game
         public void changeMaxValue(int maxValue)
         {
             endValue.text = maxValue.ToString();
-            slider.value = 0;
             slider.maxValue = maxValue;
+            slider.value=maxValue;
         }
 
         /// <summary>
@@ -77,7 +76,6 @@ namespace game
         {
             classePopup.message("VENDU!");
             //StartCoroutine(classePopup.message("VENDU!"));
-            
 
             BasicPlant plante = CreateAllSeedPlant.dicoPlant.createPlant(plantChoosed);
             CreateAllSeedPlant.mainInventory.SubstractFromInventory(plante, (int)Math.Round(slider.value));

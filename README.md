@@ -8,7 +8,6 @@
 
 _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux changements de contexte
 
-
 <!-- SOMMAIRE -->
 <details>
   <summary>Sommaire</summary>
@@ -16,9 +15,10 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
     <li><a href="#projet-T3">Projet T3</a></li>
     <li><a href="#capture-decran">Captures d'écrans</a>
       <ul>
-          <li><a href="#uml">UML</a></li>
-          <li><a href="#map">MAP</a></li>
+          <li><a href="#menus">Menus</a></li>
+          <li><a href="#map">Éléments de la Map</a></li>
           <li><a href="#differentes-fenetres">Différentes fenêtres</a></li>
+          <li><a href="#ecran-de-fin">Écran de fin</a></li>
       </ul>
     </li>
     <li><a href="#lien-de-telechargement">Lien de téléchargement</a></li>
@@ -28,6 +28,7 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
                 <ul>
                     <li><a href="#windows">Sous Windows</a></li>
                     <li><a href="#linux">Sous Linux</a></li>
+                    <li><a href="#mac">Sous Mac</a></li>
                 </ul>            
             <li><a href="#procedures-dexecution">Procédure d'execution</a></li>
         </ul>
@@ -37,40 +38,43 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
   </ol>
 </details>
 
-
-
 <!-- PROJET T3 -->
+
 ## Projet T3
+
 <a name="projet-T3"></a>
 
 Nom du groupe : LE groupe  
 Code du groupe : PEC22-T3-A  
 Participants :
-* FLU Charly
-* HOOGLAND Paolo
-* MARQUE Elise
-* NIEDERBERGER Léo
+
+- FLU Charly
+- HOOGLAND Paolo
+- MARQUE Elise
+- NIEDERBERGER Léo
 
 Lien des consignes : [https://git.unistra.fr/T234/T3](https://git.unistra.fr/T234/T3)
 
-
-
 <!-- CAPTURE D'ECRAN -->
+
 <a name="capture-decran"></a>
 
 ## Captures d'écrans
-### UML
-<a name="uml"></a>
+
+### Menus
 
 <div align="center">
-    <img src="images/Mars_classe.svg" alt="Diagramme de classe">
-<h6 align="center">Diagramme de classe</h6>
+<img src="images/Menu.png" alt="Menu principal" width="600" height="300"/>
+<h6 align="center">Menu principal</h6>
 </div>
 
-Au début du projet, nous avons décidé de faire un UML pour voir comment allait être agencé le code, et comment étaient relié les classes.
-Ce diagramme de classe nous a permis de nous répartir le code des classes.
+<div align="center">
+<img src="images/Menu_choix.png" alt="Menu durée" width="600" height="300"/>
+<h6 align="center">Choix de la durée de la partie</h6>
+</div>
 
 ### MAP
+
 <a name="map"></a>
 
 <div align="center">
@@ -79,37 +83,37 @@ Ce diagramme de classe nous a permis de nous répartir le code des classes.
 </div>
 
 <div align="center">
-    <img src="#" alt="Les champs">
+    <img src="images/Plots.jpeg" alt="Les champs" width="300" height="300"/>
 <h6 align="center">Les champs</h6>
 </div>
 
 <div align="center">
-    <img src="#" alt="Le magasin">
+    <img src="images/Magasin.jpeg" alt="Le magasin">
 <h6 align="center">Le magasin</h6>
 </div>
 
 <div align="center">
-    <img src="#" alt="Le marché">
+    <img src="images/Market.jpeg" alt="Le marché">
 <h6 align="center">Le marché</h6>
 </div>
 
 <div align="center">
-    <img src="#" alt="L'inventaire des graines">
-<h6 align="center">L'inventaire des graines</h6>
+    <img src="images/Inventory.jpeg" alt="L'inventaire du joueur">
+<h6 align="center">L'inventaire du joueur</h6>
 </div>
 
 <div align="center">
-    <img src="#" alt="L'inventaire des plantes">
-<h6 align="center">L'inventaire des plantes</h6>
+    <img src="images/NextDay.jpeg" alt="La caravane du joueur">
+<h6 align="center">La caravane du joueur</h6>
 </div>
 
 <div align="center">
-    <img src="#" alt="Les notifications">
+    <img src="images/Notification.jpeg" alt="Les notifications">
 <h6 align="center">Les notifications</h6>
 </div>
 
 <div align="center">
-    <img src="#" alt="Les jours et l'argent du joueur">
+    <img src="images/Day_Money.jpeg" alt="Les jours et l'argent du joueur">
 <h6 align="center">Les jours et l'argent du joueur</h6>
 </div>
 
@@ -119,9 +123,11 @@ Ce diagramme de classe nous a permis de nous répartir le code des classes.
 </div>
 
 ### Différentes fenêtres
+
 <a name="differentes-fenetres"></a>
+
 <div align="center">
-    <img src="#" alt="Le magasin">
+    <img src="images/Magasin_interface.jpeg" alt="Le magasin">
 <h6 align="center">Le magasin</h6>
 </div>
 
@@ -131,136 +137,175 @@ Ce diagramme de classe nous a permis de nous répartir le code des classes.
 </div>
 
 <div align="center">
-    <img src="#" alt="L'inventaire des graines">
-<h6 align="center">L'inventaire des graines</h6>
+    <img src="images/Inventory_interface.jpeg" alt="L'inventaire du joueur">
+<h6 align="center">L'inventaire du joueur</h6>
 </div>
 
 <div align="center">
-    <img src="#" alt="L'inventaire des plantes">
-<h6 align="center">L'inventaire des plantes</h6>
+    <img src="images/Plant_interface.jpeg" alt="Les champs">
+<h6 align="center">Les champs</h6>
 </div>
 
 <div align="center">
-    <img src="#" alt="Les notifications">
+    <img src="images/Notification_interface.jpeg" alt="Les notifications">
 <h6 align="center">Les notifications</h6>
 </div>
 
 <div align="center">
-    <img src="#" alt="Demande au joueur s'il est sûr de quitter">
+    <img src="images/Quit.jpeg" alt="Demande au joueur s'il est sûr de quitter">
 <h6 align="center">Demande au joueur s'il est sûr de quitter</h6>
 </div>
 
+### Ecran de fin
+
+<div align="center">
+<img src="images/Score_fin.png" alt="Ecran de fin" width="600" height="300"/>
+<h6 align="center">Ecran de fin avec le score</h6>
+</div>
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-
-
-
 <!-- LIEN DE TELECHARGEMENT -->
+
 <a name="lien-de-telechargement"></a>
 
 ## Lien de téléchargement
 
+Pour télécharger le jeu, allez sur le site ___ et téléchargez le .zip qui contient le jeu.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-
-
 <!-- PROCEDURES D'INSTALLATION ET D'EXECUTION -->
+
 <a name="procedures-dinstallation-et-dexecution"></a>
 
 ## Procédures d'installation et d'exécution
+
 <a name="procedures-dinstallation"></a>
+
 ### Procédures d'installation
+
 <a name="procedures-dinstallation"></a>
+
 #### Sous Windows
-<a name="windows"></a>
+
+<a name="Windows"></a>
+
+Après téléchargement, veuillez dézipper le jeu (en faisant un right-click). Vous pourrez l'ouvrir en cliquant sur Marsgriculteur.exe <br>
+Si vous ne comptez pas avec un outil de dézippage, veuillez télécharger Winrar : https://www.win-rar.com/start.html?&L=10
+
 #### Sous Linux
+
 <a name="Linux"></a>
 
-<!-- Si besoin
-* unity
-  ```sh
-  apt install jesaispas
-  ```
+Premièrement, veuillez installer la commande "unzip" avec 
+```
+sudo apt-get install unzip
+```
+<br>
+Après téléchargement, accédez a votre terminal, tapez unzip /lien/Margscriculteur.zip <br> Après avoir dézippé le fichier, cliquez sur Marsgriculteur.exe
 
-1. blabla [https://example.com](https://example.com) -->
+#### Sous Mac
 
-  
+<a name="Mac"></a>
+
+Premièrement, veuillez installer Brew : installez-le avec 
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Par la suite, veuillez installer la commande "unzip" 
+
+```
+brew install unzip
+```
+
+Après téléchargement, accédez a votre terminal, tapez unzip /lien/Margscriculteur.zip <br> Après avoir dézippé le fichier, cliquez sur Marsgriculteur.exe
+
 ### Procédures d'exécution
+
 <a name="procedures-dexecution"></a>
+
+Lancez Marsgriculteur.exe que vous venez de dézipper.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-
-
 <!-- LICENCE -->
+
 <a name="licence"></a>
 
 ## Licence
+
 ### Unity
+
 Mars’griculteur est développé à partir de Unity.
 Nous utilisons la version « Unity Personal » qui nous donne tout les droits sur notre application (plus d’information ici), à partir du moment que notre application génère moins de 100 000$ / ans, ce qui est notre cas, car nous voulons que Mars’griculteur soit entièrement gratuit.
 Afin de garder la version « Unity Personal », nous ne devons pas non plus déployer notre logiciel sur des plateformes tels que : « Nintendo, PlayStation, ou Xbox » ce qui n’est pas non plus notre cas.
 Nous possédons donc les droits sur notre logiciel, et pouvons donc choisir la licence que nous souhaitons lui appliquer.
 
 ### Licence SAAS
-La licence SAAS (Software as a Service)  est une licence pour commercialiser un logiciel en tant qu’application accessible à distance comme un service, par internet. Ce qui n’est pas notre cas.
+
+La licence SAAS (Software as a Service) est une licence pour commercialiser un logiciel en tant qu’application accessible à distance comme un service, par internet. Ce qui n’est pas notre cas.
 
 ### Licences libres
+
 Mars’griculeur sera diffusé sous licence libre. Donc nous acceptons que l’utilisateur possède les droits suivant sur notre logiciel :
--	Pouvoir exécuter, copier et distribuer sans frais Mars’griculteur.
--	Pouvoir accéder au code source de Mars’griculteur, modifier le logiciel -sans barrière technique ou légale- afin de participer au développement de nouvelles fonctionnalités
-     Extrait de FUN MOOC, licences libres.
+
+- Pouvoir exécuter, copier et distribuer sans frais Mars’griculteur.
+- Pouvoir accéder au code source de Mars’griculteur, modifier le logiciel -sans barrière technique ou légale- afin de participer au développement de nouvelles fonctionnalités
+  Extrait de FUN MOOC, licences libres.
+
 #### Licences de type BSD
- Les licences de type BSD (Berkeley Software Distribution License) ne nous ont pas intéressé, car elles n’imposent que la citation de l’auteur lors de la redistribution, permettant alors à un utilisateur de diffuser un logiciel se basant sur le nôtre, et n’utilisant cette fois-ci pas de licence libre. 
- 
+
+Les licences de type BSD (Berkeley Software Distribution License) ne nous ont pas intéressé, car elles n’imposent que la citation de l’auteur lors de la redistribution, permettant alors à un utilisateur de diffuser un logiciel se basant sur le nôtre, et n’utilisant cette fois-ci pas de licence libre.
+
 #### Licences GNU GPL
- Les licences GNU GPL se caractérise notamment par le fait d’être copyleft soit : « Le copyleft est un cadre permettant de faire d’un programme un logiciel libre et d’exiger que les versions modifiées ou étendues deviennent elles aussi des logiciels libres. »
- Extrait de gnu.org, Licences.
- Nous avons convenu que la licence de Mars’griculteur sera copyleft.
- 
+
+Les licences GNU GPL se caractérise notamment par le fait d’être copyleft soit : « Le copyleft est un cadre permettant de faire d’un programme un logiciel libre et d’exiger que les versions modifiées ou étendues deviennent elles aussi des logiciels libres. »
+Extrait de gnu.org, Licences.
+Nous avons convenu que la licence de Mars’griculteur sera copyleft.
+
 #### Différentes licences compatible avec GNU GPL
- Il y a plusieurs licences de logiciel libre compatibles avec la GPL, nous allons en citer quelque unes, et expliquer pourquoi nous ne les avons pas retenu.
--	La licence Apache 2.0 ne sera pas sélectionnée car c’est pour les gros programmes et nous avons décidé que notre programme n’est pas très volumineux.
--	Licences de Python, ne nous concerne pas, nous n’utilisons pas de python.
--	Le domaine public, ce n’est techniquement pas une licence, mais nous ne voulons pas céder notre logiciel au domaine public.
--	Nous ne prenons pas les licences GNU qui concernent les bibliothèques.
--	…
+
+Il y a plusieurs licences de logiciel libre compatibles avec la GPL, nous allons en citer quelque unes, et expliquer pourquoi nous ne les avons pas retenu.
+
+- La licence Apache 2.0 ne sera pas sélectionnée car c’est pour les gros programmes et nous avons décidé que notre programme n’est pas très volumineux.
+- Licences de Python, ne nous concerne pas, nous n’utilisons pas de python.
+- Le domaine public, ce n’est techniquement pas une licence, mais nous ne voulons pas céder notre logiciel au domaine public.
+- Nous ne prenons pas les licences GNU qui concernent les bibliothèques.
+- …
 
 #### Licence GNU GPLv3
+
 La licence GNU GPLv3 est la dernière version de la licence publique générale GNU. C’est une licence de logiciel libre et d’un copyleft (très fort). Elle n’est pas compatible avec la GPLv2. Elle est approuvée par l’OSI (Open Source Initiative). Elle est pérenne, elle est durable. Elle n’est absolument pas permissive. Et elle a une persistance des 4 libertés pour les additions de code. (source : Wikipédia)
 
 #### Conclusion
+
 Suite à l’étude du site du GNU portant sur le GNU GPLv3, nous avons décidé de choisir la licence GNU GPLv3.
 
 (Voir `LICENCE.txt` pour plus d'information)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- META-TODO -->
+
 <a name="meta-todo"></a>
 
 ## Méta-Todo
-- [X] Mettre en place son GIT et préparer les milestones
-- [X] Acquérir le sujet et définir un objectif pédagogique
-- [X] Concevoir un poster qui décrit cet objectif pédagogique
-- [X] Définir le type de jeu et les mécanismes d'apprentissage (Septembre)
-- [X] Définir la liste des principales fonctionnalités
-- [X] Développer ces fonctionnalités
-- [X] Evaluation à mi-parcours (Octobre)
-- [ ] Tester et équilibrer
-- [X] Choisir la Licence (Novembre)
-- [ ] Faire les captures d'écrans + finir l'UML
-- [ ] Finaliser le git et produire la documentation
+
+- [x] Mettre en place son GIT et préparer les milestones
+- [x] Acquérir le sujet et définir un objectif pédagogique
+- [x] Concevoir un poster qui décrit cet objectif pédagogique
+- [x] Définir le type de jeu et les mécanismes d'apprentissage (Septembre)
+- [x] Définir la liste des principales fonctionnalités
+- [x] Développer ces fonctionnalités
+- [x] Evaluation à mi-parcours (Octobre)
+- [x] Tester et équilibrer
+- [x] Choisir la Licence (Novembre)
+- [x] Faire les captures d'écrans + finir l'UML
+- [x] Finaliser le git et produire la documentation
 - [ ] Présenter son jeu et le faire évaluer (Décembre)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
