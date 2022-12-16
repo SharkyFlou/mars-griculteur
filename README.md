@@ -210,24 +210,19 @@ sudo apt-get install wine
 ```
 - Lancez l'éxecutable avec 
 ```
-wine SetupMars'griculteur.exe
+wine SetupMars\'griculteur.exe
 ```
 
 #### Sous Mac
 
 <a name="Mac"></a>
 
-Premièrement, veuillez installer Brew : installez-le avec 
+Premièrement, vous devez installer un logiciel qui permette de lancer des .exe <br>
+Veuillez installer Wine Bottler pour MacOS <br>
+https://winebottler.kronenberg.org/download.php?f=WineBottlerCombo_1.8.6.dmg&m=d2luZWJvdHRsZXIua3JvbmVuYmVyZy5vcmcvY29tYm8vYnVpbGRz <br>
 
-```
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
 
-Par la suite, veuillez installer la commande "unzip" 
-
-```
-brew install unzip
-```
+Maintenant, allez à votre fichier .exe et lancez-le avec Wine Bottler<br>
 
 Après téléchargement, accédez a votre terminal, tapez unzip /lien/Margscriculteur.zip <br> Après avoir dézippé le fichier, cliquez sur Marsgriculteur.exe
 
