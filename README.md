@@ -15,7 +15,6 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
     <li><a href="#projet-T3">Projet T3</a></li>
     <li><a href="#capture-decran">Captures d'écrans</a>
       <ul>
-          <li><a href="#uml">UML</a></li>
           <li><a href="#map">MAP</a></li>
           <li><a href="#differentes-fenetres">Différentes fenêtres</a></li>
       </ul>

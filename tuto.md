@@ -143,4 +143,6 @@ Lorsque vous avez fini toutes vos actions pour la journée, vous n'avez qu'à cl
 <h6 align="center">La caravane du joueur</h6>
 </div>
 
+### C'est à vous de jouer, bonne Mars'griculture !!
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
