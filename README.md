@@ -60,6 +60,9 @@ Lien de la doc : [Site internet](https://t3doc.vercel.app)
 
 Avez-vous besoin d'aide? Contactez-nous : cflu@etu.unistra.fr
 
+Configurations matériels minimales (développement + lancement) : [https://docs.unity3d.com/2021.1/Documentation/Manual/system-requirements.html](https://docs.unity3d.com/2021.1/Documentation/Manual/system-requirements.html)
+
+
 <!-- CAPTURE D'ECRAN -->
 
 <a name="capture-decran"></a>
