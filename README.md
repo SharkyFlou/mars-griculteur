@@ -15,10 +15,10 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
     <li><a href="#projet-T3">Projet T3</a></li>
     <li><a href="#capture-decran">Captures d'écrans</a>
       <ul>
-          <li><a href="#menus">MENUS</a></li>
-          <li><a href="#map">MAP</a></li>
+          <li><a href="#menus">Menus</a></li>
+          <li><a href="#map">Éléments de la Map</a></li>
           <li><a href="#differentes-fenetres">Différentes fenêtres</a></li>
-          <li><a href="#ecran-de-fin">Ecran de fin</a></li>
+          <li><a href="#ecran-de-fin">Écran de fin</a></li>
       </ul>
     </li>
     <li><a href="#lien-de-telechargement">Lien de téléchargement</a></li>
@@ -28,7 +28,7 @@ _Projet_ : Producteurs et consommateurs : les mécanismes du marché face aux ch
                 <ul>
                     <li><a href="#windows">Sous Windows</a></li>
                     <li><a href="#linux">Sous Linux</a></li>
-                    <li><a href="#mac">Sous Linux</a></li>
+                    <li><a href="#mac">Sous Mac</a></li>
                 </ul>            
             <li><a href="#procedures-dexecution">Procédure d'execution</a></li>
         </ul>
@@ -215,21 +215,20 @@ Premièrement, veuillez installer Brew : installez-le avec
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-<br>
+
 Par la suite, veuillez installer la commande "unzip" 
 
 ```
 brew install unzip
 ```
 
-<br>
 Après téléchargement, accédez a votre terminal, tapez unzip /lien/Margscriculteur.zip <br> Après avoir dézippé le fichier, cliquez sur Marsgriculteur.exe
 
 ### Procédures d'exécution
 
-<a name="procedures-dexecution"></a`
+<a name="procedures-dexecution"></a>
 
-Lancez le .exe que vous venez de dézipper.
+Lancez Marsgriculteur.exe que vous venez de dézipper.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
