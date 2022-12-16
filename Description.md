@@ -76,8 +76,16 @@ Il devra donc comprendre et prévoir l'évolution de prix du marché afin de pou
 
 ## Informations que le jeu renvoie au joueur
 
-- [x] Afficher un message lorsque le joueur veut quitter la partie
-- [x] Afficher un message dès qu'on clique sur une plante qu'on vend
-- [x] Afficher un message quand on achète une graine
+- [x] Les produits/graines du joueur
+- [x] Le jour actuel
+- [x] L'argent du joueur
+- [x] Le/les événements en cours
+- [x] Message lorsque le joueur veut quitter la partie
+- [x] Message dès qu'on clique sur une plante qu'on vend
+- [x] Message quand on achète une graine
+- [x] Message d'erreur quand l'inventaire du joueur est plein
+- [x] Message d'erreur lorsque le joueur n'a pas l'argent suffisant pour l'achat
+- [x] Message qui explicite le passage d'une journée
+- [x] Graphe montrant l'évolution des prix de vente de chaque produit
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
