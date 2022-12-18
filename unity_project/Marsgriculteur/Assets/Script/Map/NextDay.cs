@@ -179,14 +179,14 @@ namespace game
         public void EventDay(int nbrJour)
         {
             //debug pour voir les events du premier jour (jour 0)
-            EventInfo evt = Market.instance.nextDay(nbrJour, true);
+            EventInfo evt = Market.instance.nextDay(nbrJour, false);
             if (evt == null)
             {
-                Debug.Log("Jour " + nbrJour + " : Pas d'event");
+                //Debug.Log("Jour " + nbrJour + " : Pas d'event");
             }
             else
             {
-                Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
+                //Debug.Log("Jour " + nbrJour + " Nouveau evt : " + evt.namee);
                 render.gameObject.SetActive(true);
             }
 

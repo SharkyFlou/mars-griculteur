@@ -73,9 +73,9 @@ namespace game
                 {
                     if (item.getId() is > 100 and <= 200)
                     {
-                        this.transform.root.GetComponentInChildren<SellScript>().changeMaxValue(qttSlot);
                         BasicPlant itemplante = (BasicPlant)item;
                         this.transform.root.GetComponentInChildren<SellScript>().changePlant(itemplante.getTypePlante());
+                        this.transform.root.GetComponentInChildren<SellScript>().changeMaxValue(qttSlot);
                         this.transform.root.GetComponentInChildren<SellScript>().slider.interactable = true;
                     }
                 }
