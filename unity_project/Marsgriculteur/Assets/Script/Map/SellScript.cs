@@ -37,6 +37,7 @@ namespace game
         public void changePlant(EnumTypePlant newPlant)
         {
             plantChoosed = newPlant;
+            slider.value = 0;
         }
 
         /// <summary>
@@ -47,7 +48,7 @@ namespace game
         {
             endValue.text = maxValue.ToString();
             slider.maxValue = maxValue;
-            slider.value=maxValue;
+            slider.value = slider.maxValue;
         }
 
         /// <summary>

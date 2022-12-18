@@ -184,8 +184,13 @@ namespace game
         {
             int monthPrice = plant.getPrice(month); //dernier mois
             int nextMonthPrice = plant.getPrice((month + 1) % 12); //prochain mois
-            int daysAfterActualMonth = days - month * 5; //nombre de jour après le dernier mois
+            int daysAfterActualMonth = (days - month * 5) % 5; //nombre de jour après le dernier mois
             int newValue = ezRound(monthPrice + (daysAfterActualMonth / 5.0) * (nextMonthPrice - monthPrice)); //nouveau prix de la plante, event pas encore appliqué
+
+            if (plant.getTypePlante() == EnumTypePlant.NIPAL)
+            {
+                Debug.Log("Prix jour " + days + " mois " + month+ " daysAfterActualMonth : "+ daysAfterActualMonth);
+            }
             return newValue;
         }
 
