@@ -24,7 +24,7 @@ public class GameStats : MonoBehaviour
     void Start()
     {
         objective.SetText("Votre objectif etait de rassembler " + game.Game.moneyObjective.ToString() + "$");
-        moneyGained.SetText("Vous avez gagner au total " + qttMoney + "$ durant votre partie.");
-        nbDays.SetText("Vous avez remplie l'objectif en " + nbDay + " jours.");
+        moneyGained.SetText("Vous avez gagne au total " + qttMoney + "$ durant votre partie.");
+        nbDays.SetText("Vous avez rempli l'objectif en " + nbDay + " jours.");
     }
 }
