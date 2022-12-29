@@ -61,6 +61,8 @@ package game{
             - stringInDicoKeys(toCheck : String, dicoSubstrac : Dictionary<EventInfo, Integer> ) : Boolean
         }
 
+        AllEvents *--> EventInfo
+
         class AllPlot{
             + createPlot(typePlot : EnumTypePlot, currentPlant : EnumTypePlant) : Plot
             + getAllPlot() : EnumTypePlot[*]
@@ -76,6 +78,8 @@ package game{
             + getAllPlantTypes() : EnumTypePlant[*]
             + ToString() : String
         }
+
+        AllSeedPlant *--> "allPlantDico \n*" PlantInfo : <<own>> >
 
         class AllTools{
             - dicoTools : Dictionary<String, Tool>
@@ -184,6 +188,12 @@ package game{
             + endGame()
         }
 
+        Game *-d-> "market \n1" Market : <<own>> >
+        Game *-d-> "notifcations \n*" Notification : <<own>> >
+        Game *-d-> "inventory \n1" Inventory : <<own>> >
+        Game *-d-> "shop \n1" Shop : <<own>> >
+        Game *-d-> CameraMovement : <<own>> >
+
         class Inventory{
             + panel : InventoryInterface
             - weightMax : Integer
@@ -260,6 +270,11 @@ package game{
             + afficheEtatDebug()
         }
 
+        Market ..> Plant : <<uses>> >
+        Market ..> Seed : <<uses>> >
+        Market ..>  "activeEvents\n*"AllEvents : <<affected by / create>> >
+        Market ..> AllSeedPlant : <<uses>> >
+        Market ..> AllPlot : <<uses>> >
         Market *-> "1\n{static} instace" Market : singleton
 
         class Notification{
@@ -271,6 +286,9 @@ package game{
             + clearInventoryDisplay()
             + afficheInventory()
         }
+        
+        Notification..> AllEvents : <<defined by>> >
+
 
         class NotifPanel{
             + PanelInventory : GameObject
@@ -291,6 +309,8 @@ package game{
             + Plant()
             + getPrice(month : Integer) : Integer
         }
+        
+        Plant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
 
         class PlantedPlant extends BasicPlant{
             - spriteLinks : Sprite[*]
@@ -305,6 +325,8 @@ package game{
             + getGrowthTime() : Integer
             getNbCollect() : Integer
         }
+
+        PlantedPlant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
 
         class PlantInfo{
             - id : Integer
@@ -355,6 +377,8 @@ package game{
             - changePlantSprite()
         }
 
+        Plot *--> EnumTypePlot : <<of type>> >
+
         class PopUp{
             + text : TextMeshProUGUI
             + coroutine : IEnumerator 
@@ -372,12 +396,18 @@ package game{
             + getTimeGrowth() : Integer
         }
 
+        Seed *--> "typePlante\n1" EnumTypePlant : <<type of>> >
+
         class Shop{
             + inventory : Inventory
             + slots : Dictionary<BasicItem,Integer>
 
             + Shop()
         }
+
+        Shop ..> BasicItem : <<uses>> >
+        Shop ..> AllSeedPlant : <<uses>> >
+        Shop ..> Market : <<interact>> >
 
         class Stand{
             - market : Market
@@ -404,6 +434,8 @@ package game{
             + Tool(paraPrice : Integer, name : String, id : Integer, description : String, imageLink : Sprite)
             + Tool(paraPrice : Integer, name : String, id : Integer, description : String, spriteLink : String)
         }
+
+        Tool *--> EnumTools : <<type of>> >
     }
 }
 
@@ -512,6 +544,8 @@ package MainMenu{
         + PlayGame()
         + QuitGame()
     }
+    MainMenu *-d-> Game
+
 }
 
 package Map{
@@ -660,44 +694,5 @@ package Map{
         - ClampCamera(targetPosition : Vector3) : Vector3
     }
 }
-
-MainMenu *-d-> Game
-Game *-d-> "market \n1" Market : <<own>> >
-Game *-d-> "notifcations \n*" Notification : <<own>> >
-Game *-d-> "inventory \n1" Inventory : <<own>> >
-Game *-d-> "shop \n1" Shop : <<own>> >
-Game *-d-> CameraMovement : <<own>> >
-
-
-
-Shop ..> BasicItem : <<uses>> >
-Shop ..> AllSeedPlant : <<uses>> >
-Shop ..> Market : <<interact>> >
-
-
-Notification..> AllEvents : <<defined by>> >
-
-
-Market ..> Plant : <<uses>> >
-Market ..> Seed : <<uses>> >
-Market ..>  "activeEvents\n*"AllEvents : <<affected by / create>> >
-Market ..> AllSeedPlant : <<uses>> >
-Market ..> AllPlot : <<uses>> >
-
-
-Seed *--> "typePlante\n1" EnumTypePlant : <<type of>> >
-
-Plant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
-
-Plot *--> EnumTypePlot : <<of type>> >
-
-Tool *--> EnumTools : <<type of>> >
-
-AllEvents *--> EventInfo
-
-
-AllSeedPlant *--> "allPlantDico \n*" PlantInfo : <<own>> >
-
-PlantedPlant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
 
 @enduml
