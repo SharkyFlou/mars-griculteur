@@ -112,6 +112,22 @@ package game{
             + getTypePlante() : EnumTypePlant
         }
 
+        class ButtonWeight{
+            + moneyStack : Game 
+
+            ~Start()
+        }
+
+        class BuyPlot{
+            - plot : PlotEvents
+            + money : Game
+            + popUp : PopUp
+
+            + open(plot : PlotEvents)
+            + setPlot(plo : PlotEvents)
+            + buyPlot()
+        }
+
         class CreateAllSeedPlant(){
             + JSONSeedPlant : TextAsset
             + JSONTool : TextAsset 
@@ -398,34 +414,11 @@ package HUD{
         - panel : InventoryPanel
         + panelAvecInfos : Transform
 
-        ~ Start()
-        + OpenPanel()
-        + Affiche()
-        + clearInventoryDisplay()
-    }
-
-    class ButtonWeight{
-        + moneyStack : Game 
-
-        ~Start()
-    }
-
-    class BuyPlot{
-        - plot : PlotEvents
-        + money : Game
-        + popUp : PopUp
-
-        + open(plot : PlotEvents)
-        + setPlot(plo : PlotEvents)
-        + buyPlot()
-    }
-
-    class ChangeTextError{
-        + textDesc : TextMeshProUGUI
-        + textTitle : TextMeshProUGUI
-
-        + changeText(title : String, desc : String)
-    }
+            ~ Start()
+            + OpenPanel()
+            + Affiche()
+            + Affiche(panelAvecInfos : Transform)
+        }
 
     class DropDownMarket{
         + dropdown : TMP_Dropdown
