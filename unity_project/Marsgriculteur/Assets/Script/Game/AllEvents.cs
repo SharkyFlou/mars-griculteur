@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 /// <summary>
 /// Le namespace game
@@ -223,7 +221,7 @@ namespace game
                 Game.getDefaultSprite(),
                 50));
 
-            
+
             allEventDico.Add("Guerre", new EventInfo("Guerre",
                 "C'est la guerre ! Les gens n'ont plus trop les moyens...",
                 20,

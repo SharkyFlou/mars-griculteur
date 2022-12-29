@@ -9,9 +9,9 @@ namespace game
     /// </summary>
     public class Stand
     {
-        Market market;
-        InventoryPlant inventory;
-        Game game;
+        private Market market;
+        private InventoryPlant inventory;
+        private Game game;
 
         /// <summary>
         /// La méthode <c>Stand</c> instancie un nouveau Stand

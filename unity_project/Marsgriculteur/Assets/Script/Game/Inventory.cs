@@ -1,9 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using System.Linq;
-using TMPro;
 
 
 namespace game
@@ -24,7 +20,6 @@ namespace game
         //dictionnaire des items pour remplir le inventory
         //si on ajoute un item on doit ajouter à ce dico pour le afficher
         private Dictionary<BasicItem, int> slots = new Dictionary<BasicItem, int>();
-
         private int currentWeight = 0;
 
 

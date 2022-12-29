@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using game;
 
 /// <summary>
 /// La classe <c>OpenCanvas</c> décide d'ouvrir le canvas ou non (utile pour le magasin par exemple)
