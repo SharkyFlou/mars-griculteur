@@ -85,33 +85,6 @@ public class CameraMovement : MonoBehaviour
 
     }
 
-    /// <summary>
-    /// La méthode <c>ZoomIn</c> permet de zoomer.
-    /// </summary>
-    public void ZoomIn()
-    {
-        //camOrtographicSize = hauteur de la camera depuis le centre de celle-ci
-        float newSize = cam.orthographicSize - zoom;
-        //clamp = limite la valeur aux deux parametres donnes
-        cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
-
-
-        cam.transform.position = ClampCamera(cam.transform.position);
-    }
-
-    /// <summary>
-    /// La méthode <c>ZoomOut</c> permet de dézoomer.
-    /// </summary>
-    public void ZoomOut()
-    {
-        //camOrtographicSize = hauteur de la camera depuis le centre de celle-ci
-        float newSize = cam.orthographicSize + zoom;
-        //clamp = limite la valeur aux deux parametres donnes
-        cam.orthographicSize = Mathf.Clamp(newSize, minCamSize, maxCamSize);
-
-        cam.transform.position = ClampCamera(cam.transform.position);
-
-    }
 
     /// <summary>
     /// La méthode <c>ClampCamera</c> sert a bouger la camera a la nouvelle position desirée.

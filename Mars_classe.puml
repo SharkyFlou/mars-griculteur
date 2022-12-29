@@ -31,16 +31,6 @@ package game{
             AJOS
             AZLOC
             SIAM
-            ZIR
-            NICIR
-            AONIUQ
-            OUCH
-            EVARETTEB
-            EUTIAL
-            TOCIRAH
-            LOSENRUOT
-            SIOP
-            NIPUL
             ECHAV
             ONTOUM
             ELUOP
@@ -66,8 +56,9 @@ package game{
             + allEventDico : Dictionary<String,EventInfo>
 
             + AllEvents()
-            + getRandomEvent(month : Integer, impossibleEvents : Dictionary<EventInfo, Integer>): EventInfo
+            + getRandomEvent(day : Integer, impossibleEvents : Dictionary<EventInfo, Integer>): EventInfo
             - substractDico(dicoOrigin : Dictionary<String, EventInfo>, dicoSubstract : Dictionary<EventInfo, Integer>) : Dictionary<String, EventInfo>
+            - stringInDicoKeys(toCheck : String, dicoSubstrac : Dictionary<EventInfo, Integer> ) : Boolean
         }
 
         class AllPlot{
@@ -83,18 +74,16 @@ package game{
             + createSeed(typePlant : EnumTypePlant) : Seed
             + createPlantedPlant(typePlant : EnumTypePlant) : PlantedPlant
             + getAllPlantTypes() : EnumTypePlant[*]
-            'pas sûre de ça : override de ToString()
-            + {methode} ToString() : String
+            + ToString() : String
         }
 
         class AllTools{
-            ~ dicoTools : Dictionary<String, Tool>
+            - dicoTools : Dictionary<String, Tool>
 
             + AllTools(tools : Dictionary<String, Tool>)
             + AllTools()
             + getAllTools() : String[*]
-            'pas sûre de ça : override de ToString()
-            + {methode} ToString() : String
+            + ToString() : String
         }
 
         abstract class BasicItem{
@@ -123,7 +112,25 @@ package game{
             + getTypePlante() : EnumTypePlant
         }
 
+        class ButtonWeight{
+            + moneyStack : Game 
+
+            ~Start()
+        }
+
+        class BuyPlot{
+            - plot : PlotEvents
+            + money : Game
+            + popUp : PopUp
+
+            + open(plot : PlotEvents)
+            + setPlot(plo : PlotEvents)
+            + buyPlot()
+        }
+
         class CreateAllSeedPlant(){
+            + JSONSeedPlant : TextAsset
+            + JSONTool : TextAsset 
             + {static} mainInventory : Inventory
             + {static} dicoPlant : AllSeedPlant
             + {static} dicoTool : AllTools
@@ -155,6 +162,7 @@ package game{
             + getLenght : Integer
             + getDescription : String
             + getTarget() : String
+            + ifTarget() : String
         }
 
         class Game{
@@ -162,45 +170,56 @@ package game{
             - shop : Shop
             - inventoryPlant : InventoryPlant
             - inventorySeed : InventorySeed
-            + money : Integer
+            - money : Integer
+            + {static} moneyObjective : Integer
+            - totalMoneyEarned : Integer
+            + moneyText : TextMeshProUGUI 
+            + classePopup : PopUp
 
-            + Start()
+            ~ Start()
             + {static} getDefaultSprite() : Sprite
             + AddMoney(price : Integer)
             + SubsMoney(price : Integer)
+            + testObjective()
+            + endGame()
         }
 
         class Inventory{
             + panel : InventoryInterface
             - weightMax : Integer
+            - slots : Dictionary<BasicItem, Integer>
             - currentWeight : Integer
 
             + addToInventory(item : BasicItem, qtt : Integer)
+            + addToInventory(item : BasicItem, qtt : Integer, dico Dictionary<BasicItem, Integer> )
             + removeFromInventory(item : BasicItem)
             + SubstractFromInventory(item : BasicItem, qttToRemove : Integer)
             + SubstractFromInventory((item : BasicItem, qttToRemove : Integer, dicoASoustraire : Dictionary<BasicItem, Integer>)
             + getInventory() : Dictionary<BasicItem, Integer>
             + getWeightMax() : Integer
             + getCurrentWeight() : Integer
+            + boughtMoreSpace()
             + isDicoVide() : Boolean
             + displayInventory()
-            'pas sûre de ça : override de ToString()
-            + {methode} ToString() : String
+            + ToString() : String
         }
 
         interface InventoryInterface{
             + afficheInventory(dico : Dictionary<BasicItem, Integer>)
         }
 
-        class InventoryPanel extends InventoryInterface{
-            'je suis pas sûre du Transform
+        class InventoryPanel implements InventoryInterface{
             + slotPanel : Transform
+            + moneyText : Transform
 
+            ~ Start()
             + InventoryPanel(slotPanel : Transform)
             + InventoryPanel(slotPanel : Transform, panelAvecInfos : Transform)
             + afficheInventory(dico : Dictionary<BasicItem, Integer>)
             + afficheInventory(dico : Dictionary<BasicItem, Integer>, panelAInitialiser : Transform)
             + clearInventoryDisplay()
+            + updateWeight(text : Transform)
+            + affiche()
         }
 
         class InventoryPlant extends Inventory{
@@ -219,7 +238,6 @@ package game{
             - activeEvents : Dictionary<EventInfo,Integer>
             - impossibleEvents : Dictionary<EventInfo,Integer>
             - actualDays : Integer
-            + {static} instance : Market
 
             ~ Awake()
             ~ Start()
@@ -242,6 +260,8 @@ package game{
             + afficheEtatDebug()
         }
 
+        Market *-> "1\n{static} instace" Market : singleton
+
         class Notification{
             + nextDay : NextDay
             + SlotNotif : GameObject
@@ -257,6 +277,8 @@ package game{
             + PanelNotif : GameObject
             + notif : Notification
             + dico : Dictionary<EventInfo, Integer>
+            + classePopup : PopUp 
+            + render : Transform 
 
             ~ Start()
             + OpenPanel()
@@ -274,12 +296,14 @@ package game{
             - spriteLinks : Sprite[*]
             - growthTime : Integer
             - typePlante : EnumTypePlant
+            - nbPlantCollect : Integer
 
             + PlantedPlant(paraTypePlant : EnumTypePlant, paraGrowthTime : Integer)
             + PlantedPlant(paraTypePlant : EnumTypePlant, paraId : Integer, paraName : String, paraDescription : String, paraImageLink : Sprite, paraSpriteLinks : Sprite[*], paraGrowthTime : Integer)
             + PlantedPlant()
             + getSpriteLinks() : Sprite[*]
             + getGrowthTime() : Integer
+            getNbCollect() : Integer
         }
 
         'bizarre d'avoir une classe juste pour ça + pas dans le namespace
@@ -301,8 +325,9 @@ package game{
             - basicSeedPrice : Integer
             'the list is 12 long
             - basicPlantPrice : Integer[*]
+            - nbPlantCollect : Integer
 
-            + PlantInfo(id : Integer, namePlant : EnumTypePlant, description : String, growthTime : Integer, SeedSpriteLink : String, PlantSpriteLink : String, PlantedPlantSpriteLink : String, seedWeight : Integer, plantWeight : Integer, basicSeedPrice : Integer, basicPlantPrice ; Integer[*])
+            + PlantInfo(id : Integer, namePlant : EnumTypePlant, description : String, growthTime : Integer, SeedSpriteLink : String, PlantSpriteLink : String, PlantedPlantSpriteLink : String, seedWeight : Integer, plantWeight : Integer, basicSeedPrice : Integer, basicPlantPrice : Integer[*], nbPlantCollect : Integer)
             + getId() : Integer
             + getEnum() : EnumTypePlant
             + getDesc() : String
@@ -314,12 +339,9 @@ package game{
             + getPlantWeight() : Integer
             + getSeedPrice() : Integer
             + getPlantPrice() : Integer[*]
+            + getNbCollect()
         }
 
-        'rien dedans!!!!
-        class PlayerInventory{
-
-        }
 
         class Plot extends BasicItem{
             - typePlot : EnumTypePlot
@@ -339,6 +361,15 @@ package game{
             - changePlantSprite()
         }
 
+        class PopUp{
+            + text : TextMeshProUGUI
+            + coroutine : IEnumerator 
+            + isExecuting : Boolean 
+
+            + setMessage(message : String)
+            + message(msg : String)
+        }
+
         class Seed extends BasicPlant{
             - timeGrowth : Integer
 
@@ -352,20 +383,26 @@ package game{
             + slots : Dictionary<BasicItem,Integer>
 
             + Shop()
-            ~ Start()
         }
 
         class Stand{
-            ~ market : Market
-            ~ inventory : Inventory
-            ~ game : Game
+            - market : Market
+            - inventory : Inventory
+            - game : Game
 
             + Stand(Xmarket : Market, Xinventory : InventoryPlant, Xgame : Game)
-            'je sais pas comment on fait la structure Item!!! -> pas objet!!!!
             - listeItem : Item[*]
             + stock_sale(Xitem_sale : EnumTypePlant, Xitem_number : Integer, Xitem_price : Integer)
             + sell_stock() : Integer
             + add_price(price : Integer)
+        }
+
+        Stand *-> "1\n struct Item" Item : Contains
+
+        class "struct Item" as Item{
+            + item_sale : EnumTypePlant
+            + item_number : Integer
+            + item_price : Integer
         }
 
         abstract Tool extends BasicItem{
@@ -391,10 +428,16 @@ package game{
             ~ Start()
             + OpenPanel()
             + Affiche()
-            + Affiche(panelAvecInfos : Transform)
+            + clearInventoryDisplay()
         }
 
-        'pas dans le namespace game
+        class ChangeTextError{
+            + textDesc : TextMeshProUGUI
+            + textTitle : TextMeshProUGUI
+
+            + changeText(title : String, desc : String)
+        }
+
         class DropDownMarket{
             + dropdown : TMP_Dropdown
             + market : Market
@@ -405,17 +448,22 @@ package game{
             + updateGraph(newIndex : Integer)
         }
 
-        'pas dans le namespace game
+        class GameStat{
+            + {static} qttMoney : String
+            + {static} nbDay : String
+            + objective : TextMeshProUGUI 
+            + moneyGained : TextMeshProUGUI 
+            + nbDays : TextMeshProUGUI 
+
+            ~ Start()
+        }
+
         class GerePlant{
             + inventoryFunctions : Inventory
-            + reafficheInv : ActivePanel
             + StockedPlot : PlotEvents
             - stockedItem : BasicItem
             - stockedQtt : Integer
-            - MAX_STOCKED_QTT : Integer
 
-            + sendInfoClick(item : BasicItem, qtt : Integer)
-            + Soustraits()
             + getStockedItem() : BasicItem
             + getStockedQtt() : Integer
         }
@@ -423,7 +471,6 @@ package game{
         class GraphMarket{
             - circleSprite : Sprite
             + graphContainer : RectTransform
-            'je sais pas si on doit mettre les textmeshpro
             + labelTemplateY : TextMeshProUGUI
             + labelTemplateX : TextMeshProUGUI
             + dashTemplateY : RectTransform
@@ -438,16 +485,15 @@ package game{
             - yMin : float
             - numberOfDays : Integer
             - monthList : String[*]
-            'je sais pas comment représenter la const
-            ~ mutlInvGraph = 2f
+            - mutlInvGraph = 2f
             - plantAct : EnumTypePlant
             + cam : CameraMovement
             + camZoom : Zoom
             - allChildsToSuppr : GameObject[*]
 
-            - Awake()
+            ~ Awake()
             + affiche()
-            + Update()
+            ~ Update()
             + changePlant(pl : EnumTypePlant)
             - CreateCircle(anchoredPosition : Vector2) : GameObject
             - ShowGraph(valueList : Integer[*])
@@ -456,18 +502,32 @@ package game{
             - clearGraph()
         }
 
+        class openCanvas{
+            + thingsToHide : Transform[*]
+            + thingsToShow : Transform[*]
+            + cam : CameraMovement
+            + camZoom : Zoom
+            + isShown : Boolean
+            + PanelPlotPlant : GameObject
+
+            + inverseAffichage()
+            + displayCanvasON(trans : Transform[*], state : Boolean)
+        }
+
         class SloInit{
             + item : BasicItem
             + qttSlot : Integer
             + panelInfosVente : Transform
 
-            - OnMouseDown()
+            ~ OnMouseDown()
+            + af(deuxInvs : ActivePanel[*], isStorage : Boolean)
         }
     }
 }
 
 package MainMenu{
     class MainMenu{
+        + mainMenu()
         + PlayGame()
         + QuitGame()
     }
@@ -487,12 +547,10 @@ package Map{
         - mapMaxY : float
         - canMoove : Boolean
 
-        - Awake()
+        ~ Awake()
         + playerCanMoove(state : Boolean)
-        - Update()
+        ~ Update()
         - PanCamera()
-        + ZoomIn()
-        + ZoomOut()
         - ClampCamera(targetPosition : Vector3) : Vector3
     }
 
@@ -509,25 +567,26 @@ package Map{
     }
 
     'on peut pas mettre game pour le namespace, donc je sais pas comment faire
-    package gamee{
-        class NextDay{
-            + dayText : TextMeshProUGUI
-            + notif : Notification
-            + plots : Transform
-            ~ plotList : Transform[*]
-            - nbrJour : Integer
-            + market : Market
-            + {static} dicoPossessions : Dictionary<EventInfo, Integer>
+    class NextDay{
+        + dayText : TextMeshProUGUI
+        + notif : Notification
+        + plots : Transform
+        - plotList : Transform[*]
+        - nbrJour : Integer
+        + market : Market
+        + {static} dicoPossessions : Dictionary<EventInfo, Integer>
+        + classePopup : PopUp 
+        + render : Transform
 
-            ~ Start()
-            + {static} getInventoryNotif() : Dictionary<EventInfo, Integer>
-            ~ OnMouseDown()
-            + faitPousser()
-            - GetPlots(parent : Transform)
-            + addToInventory(item : EventInfo, duree : Integer)
-            + removeFromInventory(item : EventInfo)
-            + EventDay(nbrJour : Integer)
-        }
+        ~ Start()
+        + {static} getInventoryNotif() : Dictionary<EventInfo, Integer>
+        ~ OnMouseDown()
+        + faitPousser()
+        - GetPlots(parent : Transform)
+        + addToInventory(item : EventInfo, duree : Integer)
+        + removeFromInventory(item : EventInfo)
+        + EventDay(nbrJour : Integer)
+        + getNbJour() : Integer
     }
 
 
@@ -535,18 +594,21 @@ package Map{
         + canvas : Canvas
         + graphContainer : Transform
         + openCanvasMarket : openCanvas
+        + reafficheInvOnClickMarket : InventoryPanel 
 
-        - OnMouseDown()
+        ~ OnMouseDown()
     }
 
     class OpenShop{
         + canvas : Canvas
         + openCanvasShop : openCanvas
+        + shop : InventoryPanel 
 
-        - OnMouseDown()
+        ~ OnMouseDown()
     }
 
     class PlotEvents{
+        + isDesactive : Boolean
         + plot_sprite : Sprite
         + plot_sprite_highlite : Sprite
         - seed_sprite : Sprite
@@ -561,43 +623,61 @@ package Map{
         - plantedPlant : PlantedPlant
         - contientGraine : Boolean
         - itemDansPlot : BasicItem
-        - qtt : Integer
+        + inventory : Inventory
+        + reafficheInvOnClick : InventoryPanel 
+        + error : ChangeTextError 
+        + errorDislp : OpenCanvas 
+        + buy : BuyPlot 
 
-        - Start()
-        + donnePlantedPlant(pl : PlantedPlant)
+        ~ Start()
         + fairePousser()
         + recupPlante()
         + planteGraine()
         ~ OnMouseDown()
-        ~ GetChildren(parent : Transform) : Transform[*]
+        - GetChildren(parent : Transform) : Transform[*]
+        + openBuyPlot()
+        + setPlotActive()
         ~ OnMouseOver()
         ~ OnMouseExit()
+        
     }
 
+    class SellScript{
+        + classePopup : PopUp
+        + endValue : TextMeshProUGUI 
+        + resValue : TextMeshProUGUI 
+        + slider : Slider 
+        - plantChoosed : EnumTypePlant 
+        + market : Market 
+        + transformRef : Transform 
+
+        ~ Start()
+        + changePlant(newPlant : EnumTypePlant)
+        + changeMaxValue(maxValue : Integer)
+        ~ valueChanged()
+        + totalPrice() : IInteger
+        + sell()
+    }
+
+
+
     class Zoom{
-        ~ cam : Camera
-        - tilemapRenderer : SpriteRenderer
+        - cam : Camera
         - zoom : float
         - minCamSize : float
         - maxCamSize : float
+        - tilemapRenderer : SpriteRender
         - mapMinX : float
         - mapMaxX : float
         - mapMinY : float
         - mapMaxY : float
-        - canZoom : Boolean
+        - canMoove : Boolean
 
-        - Awake()
+        ~ Awake()
+        + playerCanMoove(state : Boolean)
         ~ Update()
-        + playerCanZoom(state : Boolean)
-        - ClampCamera((targetPosition : Vector3) : Vector3
+        - ClampCamera(targetPosition : Vector3) : Vector3
     }
-}
-
-
-'pas de majuscule dans le code !!!!
-class MarketBase{
-    ~ market : Market
-    ~ Start()
 }
 
 MainMenu *-d-> Game

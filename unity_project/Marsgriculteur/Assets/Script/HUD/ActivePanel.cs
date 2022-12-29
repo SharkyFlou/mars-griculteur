@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -149,7 +147,7 @@ namespace game
         {
             if (PanelInventory.activeSelf == false)
             {
-                if (PanelNotif.activeSelf == true)
+                if (PanelNotif.activeSelf)
                 {
                     PanelNotif.SetActive(false);
                 }

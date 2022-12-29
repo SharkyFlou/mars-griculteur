@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
 using Newtonsoft.Json;
 
 namespace game
@@ -17,7 +13,7 @@ namespace game
         // Objet de référence instancier au lancement qui permet d'avoir toutes les infos en rapport avec les outils
         // permet aussi d'instancier/créer celle-ci
 
-        Dictionary<string, Tool> dicoTools = new Dictionary<string, Tool>();
+        private Dictionary<string, Tool> dicoTools = new Dictionary<string, Tool>();
 
         /// <summary>
         /// Le constructeur <c>AllTools</c> est utilisé pour instancier les différents outils avec un Json
@@ -28,7 +24,7 @@ namespace game
         {
             dicoTools = tools;
         }
-        
+
         /// <summary>
         /// Ce constructeur est l'ancienne façon d'instancier les outils.
         /// </summary>
