@@ -112,22 +112,6 @@ package game{
             + getTypePlante() : EnumTypePlant
         }
 
-        class ButtonWeight{
-            + moneyStack : Game 
-
-            ~Start()
-        }
-
-        class BuyPlot{
-            - plot : PlotEvents
-            + money : Game
-            + popUp : PopUp
-
-            + open(plot : PlotEvents)
-            + setPlot(plo : PlotEvents)
-            + buyPlot()
-        }
-
         class CreateAllSeedPlant(){
             + JSONSeedPlant : TextAsset
             + JSONTool : TextAsset 
@@ -306,12 +290,6 @@ package game{
             getNbCollect() : Integer
         }
 
-        'bizarre d'avoir une classe juste pour ça + pas dans le namespace
-        class PlanteGraine{
-            + InventoryPanel : Transform
-            + PlotPanel : Transform
-        }
-
         class PlantInfo{
             - id : Integer
             - namePlant : EnumTypePlant
@@ -410,118 +388,128 @@ package game{
             + Tool(paraPrice : Integer, name : String, id : Integer, description : String, imageLink : Sprite)
             + Tool(paraPrice : Integer, name : String, id : Integer, description : String, spriteLink : String)
         }
+    }
+}
 
-        'y a rien
-        class TypePlante{
+package HUD{
+    class ActivePanel{
+        + PanelInventory : GameObject
+        + PanelNotif : GameObject
+        - panel : InventoryPanel
+        + panelAvecInfos : Transform
 
-        }
-
+        ~ Start()
+        + OpenPanel()
+        + Affiche()
+        + clearInventoryDisplay()
     }
 
-    package HUD{
-        class ActivePanel{
-            + PanelInventory : GameObject
-            + PanelNotif : GameObject
-            - panel : InventoryPanel
-            + panelAvecInfos : Transform
+    class ButtonWeight{
+        + moneyStack : Game 
 
-            ~ Start()
-            + OpenPanel()
-            + Affiche()
-            + clearInventoryDisplay()
-        }
+        ~Start()
+    }
 
-        class ChangeTextError{
-            + textDesc : TextMeshProUGUI
-            + textTitle : TextMeshProUGUI
+    class BuyPlot{
+        - plot : PlotEvents
+        + money : Game
+        + popUp : PopUp
 
-            + changeText(title : String, desc : String)
-        }
+        + open(plot : PlotEvents)
+        + setPlot(plo : PlotEvents)
+        + buyPlot()
+    }
 
-        class DropDownMarket{
-            + dropdown : TMP_Dropdown
-            + market : Market
-            + ggraphMarket : GraphMarket
-            - plTypeList : EnumTypePlant[*]
+    class ChangeTextError{
+        + textDesc : TextMeshProUGUI
+        + textTitle : TextMeshProUGUI
 
-            ~ Start()
-            + updateGraph(newIndex : Integer)
-        }
+        + changeText(title : String, desc : String)
+    }
 
-        class GameStat{
-            + {static} qttMoney : String
-            + {static} nbDay : String
-            + objective : TextMeshProUGUI 
-            + moneyGained : TextMeshProUGUI 
-            + nbDays : TextMeshProUGUI 
+    class DropDownMarket{
+        + dropdown : TMP_Dropdown
+        + market : Market
+        + ggraphMarket : GraphMarket
+        - plTypeList : EnumTypePlant[*]
 
-            ~ Start()
-        }
+        ~ Start()
+        + updateGraph(newIndex : Integer)
+    }
 
-        class GerePlant{
-            + inventoryFunctions : Inventory
-            + StockedPlot : PlotEvents
-            - stockedItem : BasicItem
-            - stockedQtt : Integer
+    class GameStat{
+        + {static} qttMoney : String
+        + {static} nbDay : String
+        + objective : TextMeshProUGUI 
+        + moneyGained : TextMeshProUGUI 
+        + nbDays : TextMeshProUGUI 
 
-            + getStockedItem() : BasicItem
-            + getStockedQtt() : Integer
-        }
+        ~ Start()
+    }
 
-        class GraphMarket{
-            - circleSprite : Sprite
-            + graphContainer : RectTransform
-            + labelTemplateY : TextMeshProUGUI
-            + labelTemplateX : TextMeshProUGUI
-            + dashTemplateY : RectTransform
-            + dashTemplateX : RectTransform
-            + market : Market
-            + titre : TextMeshProUGUI
-            + lastValueText : TextMeshProUGUI
-            - yMaximum : float
-            - xSize : float
-            - xMaximum : float
-            - graphHeight : float
-            - yMin : float
-            - numberOfDays : Integer
-            - monthList : String[*]
-            - mutlInvGraph = 2f
-            - plantAct : EnumTypePlant
-            + cam : CameraMovement
-            + camZoom : Zoom
-            - allChildsToSuppr : GameObject[*]
+    class GerePlant{
+        + inventoryFunctions : Inventory
+        + StockedPlot : PlotEvents
+        - stockedItem : BasicItem
+        - stockedQtt : Integer
 
-            ~ Awake()
-            + affiche()
-            ~ Update()
-            + changePlant(pl : EnumTypePlant)
-            - CreateCircle(anchoredPosition : Vector2) : GameObject
-            - ShowGraph(valueList : Integer[*])
-            - CreateDotConnection(dotPositionA : Vector2, dotPositionB : Vector2)
-            - AngleBetweenVector2(vec1 : Vector2, vec2 : Vector2) : float
-            - clearGraph()
-        }
+        + getStockedItem() : BasicItem
+        + getStockedQtt() : Integer
+    }
 
-        class openCanvas{
-            + thingsToHide : Transform[*]
-            + thingsToShow : Transform[*]
-            + cam : CameraMovement
-            + camZoom : Zoom
-            + isShown : Boolean
-            + PanelPlotPlant : GameObject
+    class GraphMarket{
+        - circleSprite : Sprite
+        + graphContainer : RectTransform
+        + labelTemplateY : TextMeshProUGUI
+        + labelTemplateX : TextMeshProUGUI
+        + dashTemplateY : RectTransform
+        + dashTemplateX : RectTransform
+        + market : Market
+        + titre : TextMeshProUGUI
+        + lastValueText : TextMeshProUGUI
+        - yMaximum : float
+        - xSize : float
+        - xMaximum : float
+        - graphHeight : float
+        - yMin : float
+        - numberOfDays : Integer
+        - monthList : String[*]
+        - mutlInvGraph = 2f
+        - plantAct : EnumTypePlant
+        + cam : CameraMovement
+        + camZoom : Zoom
+        - allChildsToSuppr : GameObject[*]
 
-            + inverseAffichage()
-            + displayCanvasON(trans : Transform[*], state : Boolean)
-        }
+        ~ Awake()
+        + affiche()
+        ~ Update()
+        + changePlant(pl : EnumTypePlant)
+        - CreateCircle(anchoredPosition : Vector2) : GameObject
+        - ShowGraph(valueList : Integer[*])
+        - CreateDotConnection(dotPositionA : Vector2, dotPositionB : Vector2)
+        - AngleBetweenVector2(vec1 : Vector2, vec2 : Vector2) : float
+        - clearGraph()
+    }
 
-        class SloInit{
-            + item : BasicItem
-            + qttSlot : Integer
-            + panelInfosVente : Transform
+    class openCanvas{
+        + thingsToHide : Transform[*]
+        + thingsToShow : Transform[*]
+        + cam : CameraMovement
+        + camZoom : Zoom
+        + isShown : Boolean
+        + PanelPlotPlant : GameObject
 
-            ~ OnMouseDown()
-            + af(deuxInvs : ActivePanel[*], isStorage : Boolean)
-        }
+        + inverseAffichage()
+        + displayCanvasON(trans : Transform[*], state : Boolean)
+    }
+
+    class SloInit{
+        + item : BasicItem
+        + qttSlot : Integer
+        + panelInfosVente : Transform
+
+        ~ OnMouseDown()
+        + af(deuxInvs : ActivePanel[*], isStorage : Boolean)
     }
 }
 
