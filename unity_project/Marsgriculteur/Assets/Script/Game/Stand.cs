@@ -9,7 +9,6 @@ namespace game
     /// </summary>
     public class Stand
     {
-        private Market market;
         private InventoryPlant inventory;
         private Game game;
 
@@ -19,9 +18,8 @@ namespace game
         /// <param name="Xmarket">The market.</param>
         /// <param name="Xinventory">The inventory.</param>
         /// <param name="Xgame">The game.</param>
-        public Stand(Market Xmarket, InventoryPlant Xinventory, Game Xgame)
+        public Stand(InventoryPlant Xinventory, Game Xgame)
         {
-            market = Xmarket;
             inventory = Xinventory;
             game = Xgame;
         }

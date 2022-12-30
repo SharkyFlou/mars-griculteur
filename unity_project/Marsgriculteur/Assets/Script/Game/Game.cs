@@ -11,10 +11,6 @@ namespace game
     /// </summary>
     public class Game : MonoBehaviour
     {
-
-        private Market market;
-        private Shop shop;
-        private InventoryPlant inventoryPlant;
         public int money;
         public static int moneyObjective;
         private int totalMoneyEarned;

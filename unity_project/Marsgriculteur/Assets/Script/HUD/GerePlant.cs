@@ -5,10 +5,7 @@ using game;
 public class GerePlant : MonoBehaviour
 {
     public Inventory inventoryFunctions;
-    //public ActivePanel reafficheInv;
-
     public PlotEvents StockedPlot;
-
 
     private BasicItem stockedItem;
     private int stockedQtt;

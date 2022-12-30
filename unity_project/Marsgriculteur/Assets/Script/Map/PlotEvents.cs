@@ -30,9 +30,7 @@ public class PlotEvents : MonoBehaviour
     private PlantedPlant plantedPlant = null;
     private bool contientGraine = false;
     private BasicItem itemDansPlot = null;
-    //private int qtt = 0;
 
-    public Inventory inventory;
 
     public InventoryPanel reafficheInvOnClick;
 

@@ -61,7 +61,7 @@ package game{
             - stringInDicoKeys(toCheck : String, dicoSubstrac : Dictionary<EventInfo, Integer> ) : Boolean
         }
 
-        AllEvents *--> EventInfo
+        AllEvents *--> " + allEventDico \n*" EventInfo : <<own>> >
 
         class AllPlot{
             + createPlot(typePlot : EnumTypePlot, currentPlant : EnumTypePlant) : Plot
@@ -79,7 +79,8 @@ package game{
             + ToString() : String
         }
 
-        AllSeedPlant *--> "allPlantDico \n*" PlantInfo : <<own>> >
+        AllSeedPlant *--> " - allPlantDico \n*" PlantInfo : <<own>> >
+        AllSeedPlant *-u-> " - allPlantDico \n*" EnumTypePlant : <<of type>> >
 
         class AllTools{
             - dicoTools : Dictionary<String, Tool>
@@ -89,6 +90,8 @@ package game{
             + getAllTools() : String[*]
             + ToString() : String
         }
+
+        AllTools *--> " - dicoTools \n*" Tool : <<own>> >
 
         abstract class BasicItem{
             + id : Integer
@@ -109,39 +112,25 @@ package game{
         }
 
         abstract class BasicPlant extends BasicItem{
-            # typePlante : EnumTypePlant
-
             + BasicPlant()
             + BasicPlant(paraTypePlant : EnumTypePlant)
             + getTypePlante() : EnumTypePlant
         }
 
-        class ButtonWeight{
-            + moneyStack : Game 
+        BasicPlant *-u-> " # typePlante \n1" EnumTypePlant : <<of type>> >
 
-            ~Start()
-        }
-
-        class BuyPlot{
-            - plot : PlotEvents
-            + money : Game
-            + popUp : PopUp
-
-            + open(plot : PlotEvents)
-            + setPlot(plo : PlotEvents)
-            + buyPlot()
-        }
-
-        class CreateAllSeedPlant(){
+        class CreateAllSeedPlant{
             + JSONSeedPlant : TextAsset
             + JSONTool : TextAsset 
-            + {static} mainInventory : Inventory
-            + {static} dicoPlant : AllSeedPlant
-            + {static} dicoTool : AllTools
-            + {static} shopInv : Inventory
 
             ~ Awake()
         }
+
+        CreateAllSeedPlant *--> " + {static} mainInventory \n1" Inventory : <<fill>> >
+        CreateAllSeedPlant *--> " + {static} shopInv \n1" Inventory : <<fill>> >
+        CreateAllSeedPlant *--> " + {static} dicoPlant \n1" AllSeedPlant : <<fill>> >
+        CreateAllSeedPlant *--> " + {static} dicoTool \n1" AllTools : <<fill>> >
+        
 
         class EventInfo{
             + namee : String
@@ -170,15 +159,10 @@ package game{
         }
 
         class Game{
-            - market : Market
-            - shop : Shop
-            - inventoryPlant : InventoryPlant
-            - inventorySeed : InventorySeed
             - money : Integer
             + {static} moneyObjective : Integer
             - totalMoneyEarned : Integer
             + moneyText : TextMeshProUGUI 
-            + classePopup : PopUp
 
             ~ Start()
             + {static} getDefaultSprite() : Sprite
@@ -188,16 +172,10 @@ package game{
             + endGame()
         }
 
-        Game *-d-> "market \n1" Market : <<own>> >
-        Game *-d-> "notifcations \n*" Notification : <<own>> >
-        Game *-d-> "inventory \n1" Inventory : <<own>> >
-        Game *-d-> "shop \n1" Shop : <<own>> >
-        Game *-d-> CameraMovement : <<own>> >
+        Game o--> " + classePopup \n1" PopUp : <<call>> >
 
         class Inventory{
-            + panel : InventoryInterface
             - weightMax : Integer
-            - slots : Dictionary<BasicItem, Integer>
             - currentWeight : Integer
 
             + addToInventory(item : BasicItem, qtt : Integer)
@@ -213,6 +191,9 @@ package game{
             + displayInventory()
             + ToString() : String
         }
+
+        Inventory *--> " - slots \n*" BasicItem : <<own>> >
+        Inventory o--> " + panel \n1" InventoryInterface : <<call>> >
 
         interface InventoryInterface{
             + afficheInventory(dico : Dictionary<BasicItem, Integer>)
@@ -232,12 +213,16 @@ package game{
             + affiche()
         }
 
+        InventoryPanel ..> CreateAllSeedPlant : <<uses>> >
+
         class InventoryPlant extends Inventory{
             + PlantSlots : Dictionary<EnumTypePlant, Integer>
 
             + getNbrSlots(item : EnumTypePlant) : Integer
             + setNbrSlots(item : EnumTypePlant, number : Integer)
         }
+
+        InventoryPlant *--> " + PlantSlots \n*" EnumTypePlant : <<of type>> >
 
         class InventorySlot{
             + {static} createSlot() : GameObject
@@ -272,13 +257,16 @@ package game{
 
         Market ..> Plant : <<uses>> >
         Market ..> Seed : <<uses>> >
-        Market ..>  "activeEvents\n*"AllEvents : <<affected by / create>> >
+        Market ..>  "activeEvents\n*" AllEvents : <<uses>> >
         Market ..> AllSeedPlant : <<uses>> >
-        Market ..> AllPlot : <<uses>> >
+
+        Market *--> " - history\n*" EnumTypePlant : <<of type>> >
+        Market *--> " - activeEvents\n*" EventInfo : <<create>> >
+        Market *--> " - impossibleEvents\n*" EventInfo : <<create>> >
+
         Market *-> "1\n{static} instace" Market : singleton
 
         class Notification{
-            + nextDay : NextDay
             + SlotNotif : GameObject
             + slotPanel : Transform
             + slots : Dictionary<EventInfo, Integer>
@@ -287,20 +275,9 @@ package game{
             + afficheInventory()
         }
         
-        Notification..> AllEvents : <<defined by>> >
-
-
-        class NotifPanel{
-            + PanelInventory : GameObject
-            + PanelNotif : GameObject
-            + notif : Notification
-            + dico : Dictionary<EventInfo, Integer>
-            + classePopup : PopUp 
-            + render : Transform 
-
-            ~ Start()
-            + OpenPanel()
-        }
+        Notification o--> " + nextDay\n1" NextDay : <<call>> >
+        Notification o--> " - slots\n*" EventInfo : <<of type>> >
+        Notification ..> AllEvents : <<defined by>> >
 
         class Plant extends BasicPlant{
             + basicPlantPrice : Integer[*]
@@ -310,12 +287,11 @@ package game{
             + getPrice(month : Integer) : Integer
         }
         
-        Plant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
+        Plant *--> " - typePlante\n1" EnumTypePlant : <<of type>> >
 
         class PlantedPlant extends BasicPlant{
             - spriteLinks : Sprite[*]
             - growthTime : Integer
-            - typePlante : EnumTypePlant
             - nbPlantCollect : Integer
 
             + PlantedPlant(paraTypePlant : EnumTypePlant, paraGrowthTime : Integer)
@@ -323,14 +299,11 @@ package game{
             + PlantedPlant()
             + getSpriteLinks() : Sprite[*]
             + getGrowthTime() : Integer
-            getNbCollect() : Integer
+            + getNbCollect() : Integer
         }
-
-        PlantedPlant *--> "typePlante\n1" EnumTypePlant : <<type of>> >
 
         class PlantInfo{
             - id : Integer
-            - namePlant : EnumTypePlant
             - description : String
             - growthTime : Integer
             - seedSpriteLink : Sprite
@@ -358,11 +331,10 @@ package game{
             + getNbCollect()
         }
 
+        PlantInfo *--> " - namePlant\n1" EnumTypePlant : <<of type>> >
 
         class Plot extends BasicItem{
-            - typePlot : EnumTypePlot
             - isPlanted : Boolean
-            - currentPlant : EnumTypePlant
             - timeGrown : Integer
             - capacity : Integer
             - number : Integer
@@ -377,7 +349,8 @@ package game{
             - changePlantSprite()
         }
 
-        Plot *--> EnumTypePlot : <<of type>> >
+        Plot *--> " - currentPlant\n1" EnumTypePlant : <<of type>> >
+        Plot *--> " - typePlot\n1" EnumTypePlot : <<of type>> > 
 
         class PopUp{
             + text : TextMeshProUGUI
@@ -396,8 +369,6 @@ package game{
             + getTimeGrowth() : Integer
         }
 
-        Seed *--> "typePlante\n1" EnumTypePlant : <<type of>> >
-
         class Shop{
             + inventory : Inventory
             + slots : Dictionary<BasicItem,Integer>
@@ -405,29 +376,28 @@ package game{
             + Shop()
         }
 
-        Shop ..> BasicItem : <<uses>> >
+        Shop *..> " + slots\n*" BasicItem : <<own>> >
         Shop ..> AllSeedPlant : <<uses>> >
         Shop ..> Market : <<interact>> >
 
         class Stand{
-            - market : Market
-            - inventory : Inventory
-            - game : Game
-
-            + Stand(Xmarket : Market, Xinventory : InventoryPlant, Xgame : Game)
-            - listeItem : Item[*]
+            + Stand(Xinventory : InventoryPlant, Xgame : Game)
             + stock_sale(Xitem_sale : EnumTypePlant, Xitem_number : Integer, Xitem_price : Integer)
             + sell_stock() : Integer
             + add_price(price : Integer)
         }
 
-        Stand *-> "1\n struct Item" Item : Contains
+        Stand o-> " - inventory\n1" Inventory : <<call>> >
+        Stand o-> " - game\n1" Game : <<call>> >
 
-        class "struct Item" as Item{
-            + item_sale : EnumTypePlant
+        Stand *-> "1\n struct Item" struct_Item : <<uses / contains>> >
+
+        class struct_Item {
             + item_number : Integer
             + item_price : Integer
         }
+
+        struct_Item *--> " - item_sale\n1" EnumTypePlant : <<of type>> >
 
         abstract Tool extends BasicItem{
             + Tool()
@@ -435,32 +405,62 @@ package game{
             + Tool(paraPrice : Integer, name : String, id : Integer, description : String, spriteLink : String)
         }
 
-        Tool *--> EnumTools : <<type of>> >
+        Tool *--> EnumTools : <<of type>> >
     }
 }
-
+'folder HUD
 package HUD{
     class ActivePanel{
         + PanelInventory : GameObject
         + PanelNotif : GameObject
-        - panel : InventoryPanel
         + panelAvecInfos : Transform
 
-            ~ Start()
-            + OpenPanel()
-            + Affiche()
-            + Affiche(panelAvecInfos : Transform)
-        }
+        ~ Start()
+        + OpenPanel()
+        + Affiche()
+        + Affiche(panelAvecInfos : Transform)
+    }
+
+    ActivePanel *-> " - panel\n1" InventoryPanel : <<create>> >
+    ActivePanel .up.> CreateAllSeedPlant : <<uses>> >
+
+    class ButtonWeight{
+
+        ~Start()
+    }
+
+    ButtonWeight o-up-> " + moneyStack\n1" Game : <<call>> >
+    ButtonWeight .up.> CreateAllSeedPlant : <<uses>> >
+
+    class BuyPlot{
+
+
+        + open(plot : PlotEvents)
+        + setPlot(plo : PlotEvents)
+        + buyPlot()
+    }
+
+    BuyPlot o-up-> " + money\n1" Game : <<call>> >
+    BuyPlot o-up-> " - plot\n1" PlotEvents : <<call>> >
+    BuyPlot o-> " + popUp\n1" PopUp : <<call>> >
+
+    class ChangeTextError{
+        + textDesc : TextMeshProUGUI 
+        + textTitle : TextMeshProUGUI 
+        + changeText(title : String, desc : String)
+    }
 
     class DropDownMarket{
         + dropdown : TMP_Dropdown
-        + market : Market
-        + ggraphMarket : GraphMarket
-        - plTypeList : EnumTypePlant[*]
 
         ~ Start()
         + updateGraph(newIndex : Integer)
     }
+
+    DropDownMarket o-up-> " + market\n1" Market : <<call>> >
+    DropDownMarket o--> " + graphMarket\n1" GraphMarket : <<call>> >
+    DropDownMarket *-up-> " - plTypeList\n1" EnumTypePlant : <<get all of>> >
+    DropDownMarket .up.> CreateAllSeedPlant : <<uses>> >
 
     class GameStat{
         + {static} qttMoney : String
@@ -473,14 +473,16 @@ package HUD{
     }
 
     class GerePlant{
-        + inventoryFunctions : Inventory
-        + StockedPlot : PlotEvents
-        - stockedItem : BasicItem
         - stockedQtt : Integer
 
         + getStockedItem() : BasicItem
         + getStockedQtt() : Integer
     }
+
+    GerePlant o-up-> " + inventoryFunctions\n1" Inventory : <<own>> >
+    GerePlant o-up-> " + StockedPlot\n1" PlotEvents : <<own>> >
+    GerePlant o-up-> " - stockedItem\n1" BasicItem : <<own>> >
+    
 
     class GraphMarket{
         - circleSprite : Sprite
@@ -500,9 +502,6 @@ package HUD{
         - numberOfDays : Integer
         - monthList : String[*]
         - mutlInvGraph = 2f
-        - plantAct : EnumTypePlant
-        + cam : CameraMovement
-        + camZoom : Zoom
         - allChildsToSuppr : GameObject[*]
 
         ~ Awake()
@@ -516,17 +515,22 @@ package HUD{
         - clearGraph()
     }
 
-    class openCanvas{
+    GraphMarket *-up-> " - plantAct\n1" EnumTypePlant : <<currently displaying>> >
+    GraphMarket o--> " + cam\n1" CameraMovement : <<enable and disable>> >
+    GraphMarket o--> " + camZoom\n1" Zoom : <<enable and disable>> >
+
+    class OpenCanvas{
         + thingsToHide : Transform[*]
         + thingsToShow : Transform[*]
-        + cam : CameraMovement
-        + camZoom : Zoom
         + isShown : Boolean
         + PanelPlotPlant : GameObject
 
         + inverseAffichage()
         + displayCanvasON(trans : Transform[*], state : Boolean)
     }
+
+    OpenCanvas o--> " + cam\n1" CameraMovement : <<enable and disable>> >
+    OpenCanvas o--> " + camZoom\n1" Zoom : <<enable and disable>> >
 
     class SloInit{
         + item : BasicItem
@@ -536,18 +540,33 @@ package HUD{
         ~ OnMouseDown()
         + af(deuxInvs : ActivePanel[*], isStorage : Boolean)
     }
-}
 
+    SloInit .up.> CreateAllSeedPlant : <<uses>> >
+
+    class NotifPanel{
+        + PanelInventory : GameObject
+        + PanelNotif : GameObject
+        + dico : Dictionary<EventInfo, Integer>
+        + render : Transform 
+
+        ~ Start()
+        + OpenPanel()
+    }
+
+    NotifPanel o-up-> " + notif\n1" Notification : <<display>> >
+    NotifPanel *-up-> " + dico\n*"  EventInfo : <<get>> >
+}
+'folder MainMenu
 package MainMenu{
     class MainMenu{
         + mainMenu()
         + PlayGame()
         + QuitGame()
     }
+
     MainMenu *-d-> Game
-
 }
-
+'folder Map
 package Map{
     class CameraMovement{
         - cam : Camera
@@ -581,16 +600,12 @@ package Map{
         ~ OnMouseExit()
     }
 
-    'on peut pas mettre game pour le namespace, donc je sais pas comment faire
     class NextDay{
         + dayText : TextMeshProUGUI
-        + notif : Notification
         + plots : Transform
         - plotList : Transform[*]
         - nbrJour : Integer
-        + market : Market
         + {static} dicoPossessions : Dictionary<EventInfo, Integer>
-        + classePopup : PopUp 
         + render : Transform
 
         ~ Start()
@@ -604,23 +619,30 @@ package Map{
         + getNbJour() : Integer
     }
 
+    NextDay o--> " + market\n1" Market : <<update>> >
+    NextDay o--> " + notif\n1" Notification : <<update>> >
+    NextDay o--> " + classePopup\n1" PopUp : <<call>> >
+    NextDay *--> " + dicoPossessions\n*" EventInfo : <<current event>> >
+
 
     class OpenMarket{
         + canvas : Canvas
-        + graphContainer : Transform
-        + openCanvasMarket : openCanvas
-        + reafficheInvOnClickMarket : InventoryPanel 
+        + graphContainer : Transform 
 
         ~ OnMouseDown()
     }
+
+    OpenMarket o--> " + openCanvasMarket\n1" OpenCanvas : <<display>> >
+    OpenMarket o--> " + reafficheInvOnClickMarket\n1" InventoryPanel : <<start>> >
 
     class OpenShop{
         + canvas : Canvas
-        + openCanvasShop : openCanvas
-        + shop : InventoryPanel 
 
         ~ OnMouseDown()
     }
+
+    OpenShop o--> " + OpenCanvasShop\n1" OpenCanvas : <<display>> >
+    OpenShop o--> " + shop\n1" InventoryPanel : <<start>> >
 
     class PlotEvents{
         + isDesactive : Boolean
@@ -630,18 +652,11 @@ package Map{
         - seed_sprite_grown : Sprite
         + PlotSupervisor : GameObject
         + InterfacePlantPanel : GameObject
-        + hidesPanel : openCanvas
         - growthTime : Integer
         - growthStatus : Integer
         - plotImage : Transform
         - seedImage : Transform
-        - plantedPlant : PlantedPlant
         - contientGraine : Boolean
-        - itemDansPlot : BasicItem
-        + inventory : Inventory
-        + reafficheInvOnClick : InventoryPanel 
-        + error : ChangeTextError 
-        + errorDislp : OpenCanvas 
         + buy : BuyPlot 
 
         ~ Start()
@@ -657,13 +672,19 @@ package Map{
         
     }
 
+    PlotEvents o--> " + hidesPanel\n1" OpenCanvas : <<display>> >
+    PlotEvents *--> " - plantedPlant\n1" PlantedPlant : <<own>> >
+    PlotEvents *--> " - itemDansPlot\n1" BasicItem : <<own>> >
+    PlotEvents o--> " + error\n1" ChangeTextError : <<change text of>> >
+    PlotEvents o--> " + errorDislp\n1" OpenCanvas : <<display>> >
+    PlotEvents o--> " + reafficheInvOnClick\n1" InventoryPanel : <<start>> >
+    PlotEvents ..> CreateAllSeedPlant : <<uses>> >
+
     class SellScript{
-        + classePopup : PopUp
         + endValue : TextMeshProUGUI 
         + resValue : TextMeshProUGUI 
         + slider : Slider 
         - plantChoosed : EnumTypePlant 
-        + market : Market 
         + transformRef : Transform 
 
         ~ Start()
@@ -674,7 +695,9 @@ package Map{
         + sell()
     }
 
-
+    SellScript o--> " + classePopup\n1" PopUp : <<call>> >
+    SellScript o--> " + market\n1" Market : <<call>> >
+    SellScript ..> CreateAllSeedPlant : <<uses>> >
 
     class Zoom{
         - cam : Camera
