@@ -200,7 +200,7 @@ public class NextDay : MonoBehaviour
             int duree = dicoPossessions.ElementAt(i).Value;
 
             //Debug.Log("Name = " + itemOfSlot.getName() + "Value = " + duree);
-            dicoPossessions[dicoPossessions.ElementAt(i).Key]--;
+            //dicoPossessions[dicoPossessions.ElementAt(i).Key]--;
 
             duree = dicoPossessions.ElementAt(i).Value;
 
