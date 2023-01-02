@@ -13,6 +13,7 @@ public class OpenMarket : MonoBehaviour
     public Transform graphContainer;
     public OpenCanvas openCanvasMarket;
     public InventoryPanel reafficheInvOnClickMarket;
+    public SellScript sellScript;
 
     /// <summary>
     /// La méthode <c>OnMouseDown</c> permet, lors du click, d'afficher le stand, et l'inventaire.
@@ -25,6 +26,7 @@ public class OpenMarket : MonoBehaviour
         }
 
         openCanvasMarket.inverseAffichage();
+        sellScript.valueChanged();
         try
         {
             graphContainer.SendMessage("affiche");
