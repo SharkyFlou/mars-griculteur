@@ -34,6 +34,7 @@ namespace game
             //********************************************************************
 
             List<EnumTypePlant> listAnim = new List<EnumTypePlant>() { EnumTypePlant.EHCAV, EnumTypePlant.OUNTOUM, EnumTypePlant.ELUOP, EnumTypePlant.NIPAL };
+
             allEventDico.Add("QualiMeat", new EventInfo("QualiMeat",
                 "Une onde de radiation donne aux animaux un goût plus salé et très apprécié",
                 5,
