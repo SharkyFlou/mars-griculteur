@@ -36369,6 +36369,7 @@ MonoBehaviour:
   graphContainer: {fileID: 1610291185}
   openCanvasMarket: {fileID: 722724846}
   reafficheInvOnClickMarket: {fileID: 1678184613}
+  sellScript: {fileID: 1094475982}
 --- !u!114 &788824850
 MonoBehaviour:
   m_ObjectHideFlags: 0
