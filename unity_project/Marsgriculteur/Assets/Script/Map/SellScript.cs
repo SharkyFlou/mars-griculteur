@@ -56,7 +56,7 @@ public class SellScript : MonoBehaviour
     public void valueChanged()
     {
 
-        resValue.text = Math.Round(slider.value) + " : " + (totalPrice());
+        resValue.text = Math.Round(slider.value) + " : " + totalPrice() + "$";
     }
 
     /// <summary>
