@@ -1,14 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using System;
-using Unity.VisualScripting;
-
-using System.Threading;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using UnityEngine.EventSystems;
 
 namespace game
 {
@@ -18,7 +10,6 @@ namespace game
     /// </summary>
     public class PopUp : MonoBehaviour
     {
-        
         public TextMeshProUGUI text;
 
         public IEnumerator coroutine = null;
@@ -32,7 +23,6 @@ namespace game
         /// <returns>IEnumerator.</returns>
         private IEnumerator setMessage(string message)
         {
-            
             text.SetText(message);
             this.gameObject.SetActive(true);
             yield return new WaitForSeconds(3);
@@ -44,8 +34,8 @@ namespace game
         }
 
         /// <summary>
-        /// Quand le gameObject qui a commence un coroutine (avec StartCouroutine) est désactivé (SetActive(fals)) tous les coroutine ne exécution s'arrête
-        /// Ainsi cela permet à coupé un affichage actuelle et commencer le nouveau lors d'appels à intervalle < 3s
+        /// Quand le gameObject qui a commence un coroutine (avec StartCouroutine) est désactivé (SetActive(false)) tous les coroutines en exécution s'arrêtent
+        /// Ainsi cela permet à couper un affichage actuel et commencer le nouveau lors d'appels à intervalle < 3s
         /// </summary>
         /// <param name="msg">le message</param>
         public void message(string msg)

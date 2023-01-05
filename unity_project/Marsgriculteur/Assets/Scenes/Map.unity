@@ -9741,7 +9741,6 @@ MonoBehaviour:
   PanelInventory: {fileID: 319808361}
   PanelNotif: {fileID: 335311817}
   notif: {fileID: 1384967543}
-  classePopup: {fileID: 1283002892}
   render: {fileID: 901415869}
 --- !u!1 &374260327
 GameObject:
@@ -9852,7 +9851,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '0 : 0'
+  m_text: '0 : 0$'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
   m_sharedMaterial: {fileID: -1030402903651679000, guid: 25417fff2709b48e39240fc4cb56b67e, type: 2}
@@ -36370,6 +36369,7 @@ MonoBehaviour:
   graphContainer: {fileID: 1610291185}
   openCanvasMarket: {fileID: 722724846}
   reafficheInvOnClickMarket: {fileID: 1678184613}
+  sellScript: {fileID: 1094475982}
 --- !u!114 &788824850
 MonoBehaviour:
   m_ObjectHideFlags: 0

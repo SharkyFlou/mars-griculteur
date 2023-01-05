@@ -9,9 +9,8 @@ namespace game
     /// </summary>
     public class Stand
     {
-        Market market;
-        InventoryPlant inventory;
-        Game game;
+        private InventoryPlant inventory;
+        private Game game;
 
         /// <summary>
         /// La méthode <c>Stand</c> instancie un nouveau Stand
@@ -19,9 +18,8 @@ namespace game
         /// <param name="Xmarket">The market.</param>
         /// <param name="Xinventory">The inventory.</param>
         /// <param name="Xgame">The game.</param>
-        public Stand(Market Xmarket, InventoryPlant Xinventory, Game Xgame)
+        public Stand(InventoryPlant Xinventory, Game Xgame)
         {
-            market = Xmarket;
             inventory = Xinventory;
             game = Xgame;
         }

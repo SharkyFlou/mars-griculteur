@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Scripting;
-using UnityEngine.UI;
 using TMPro;
 
 namespace game
@@ -15,10 +11,6 @@ namespace game
     /// </summary>
     public class Game : MonoBehaviour
     {
-
-        private Market market;
-        private Shop shop;
-        private InventoryPlant inventoryPlant;
         public int money;
         public static int moneyObjective;
         private int totalMoneyEarned;

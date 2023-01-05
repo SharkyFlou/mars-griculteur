@@ -11,7 +11,6 @@ using UnityEngine.EventSystems;
 public class PlotEvents : MonoBehaviour
 {
     public bool isDesactive;
-    
     public Sprite plot_sprite;
     public Sprite plot_sprite_highlite;
     private Sprite seed_sprite;
@@ -31,9 +30,7 @@ public class PlotEvents : MonoBehaviour
     private PlantedPlant plantedPlant = null;
     private bool contientGraine = false;
     private BasicItem itemDansPlot = null;
-    //private int qtt = 0;
 
-    public Inventory inventory;
 
     public InventoryPanel reafficheInvOnClick;
 
@@ -192,7 +189,7 @@ public class PlotEvents : MonoBehaviour
     /// </summary>
     /// <param name="parent">le parent, sur lequel les champs sont disposés</param>
     /// <returns>la liste des champs</returns>
-    List<Transform> GetChildren(Transform parent)
+    private List<Transform> GetChildren(Transform parent)
     {
         List<Transform> children = new List<Transform>();
         foreach (Transform child in parent)
