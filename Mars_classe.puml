@@ -532,7 +532,7 @@ package HUD{
     OpenCanvas o--> " + cam\n1" CameraMovement : <<enable and disable>> >
     OpenCanvas o--> " + camZoom\n1" Zoom : <<enable and disable>> >
 
-    class SloInit{
+    class SlotInit{
         + item : BasicItem
         + qttSlot : Integer
         + panelInfosVente : Transform
@@ -541,7 +541,7 @@ package HUD{
         + af(deuxInvs : ActivePanel[*], isStorage : Boolean)
     }
 
-    SloInit .up.> CreateAllSeedPlant : <<uses>> >
+    SlotInit .up.> CreateAllSeedPlant : <<uses>> >
 
     class NotifPanel{
         + PanelInventory : GameObject
